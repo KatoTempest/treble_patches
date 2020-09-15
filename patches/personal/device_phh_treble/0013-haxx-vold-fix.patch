@@ -1,0 +1,22 @@
+From e039e263e3416e2cb10d0512140c0674b237ba50 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 15 Sep 2020 21:26:25 -0400
+Subject: [PATCH] haxx: vold fix
+
+---
+ sepolicy/vold.te | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/sepolicy/vold.te b/sepolicy/vold.te
+index 7cbd585..e72cbda 100644
+--- a/sepolicy/vold.te
++++ b/sepolicy/vold.te
+@@ -1,2 +1,5 @@
+ allow vold system_data_file:lnk_file { unlink };
+ allow mediaextractor sdcard_type:file read;
++# temp ugly haxx
++permissive fsck_untrusted;
++permissive vold;
+-- 
+2.17.1
+

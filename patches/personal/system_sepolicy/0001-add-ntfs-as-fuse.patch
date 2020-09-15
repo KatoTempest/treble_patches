@@ -1,0 +1,46 @@
+From 84736b92bd706c88fb5a5c467b07cb5122e84df2 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Sep 2020 18:42:43 -0400
+Subject: [PATCH] add ntfs* as fuse
+
+Change-Id: Ia4838ed6cab764b7e1a70d0f2907c626667c6acb
+---
+ prebuilts/api/29.0/private/genfs_contexts | 3 +++
+ private/genfs_contexts                    | 3 +++
+ 2 files changed, 6 insertions(+)
+
+diff --git a/prebuilts/api/29.0/private/genfs_contexts b/prebuilts/api/29.0/private/genfs_contexts
+index d9b24d0d..b81fba8d 100644
+--- a/prebuilts/api/29.0/private/genfs_contexts
++++ b/prebuilts/api/29.0/private/genfs_contexts
+@@ -290,8 +290,11 @@ genfscon debugfs /kcov								 u:object_r:debugfs_kcov:s0
+ genfscon inotifyfs / u:object_r:inotify:s0
+ genfscon vfat / u:object_r:vfat:s0
+ genfscon exfat / u:object_r:exfat:s0
++genfscon ntfs / u:object_r:fuse:s0
++genfscon ntfs-3g / u:object_r:fuse:s0
+ genfscon debugfs / u:object_r:debugfs:s0
+ genfscon fuse / u:object_r:fuse:s0
++genfscon fuseblk / u:object_r:fuse:s0
+ genfscon configfs / u:object_r:configfs:s0
+ genfscon sdcardfs / u:object_r:sdcardfs:s0
+ genfscon esdfs / u:object_r:sdcardfs:s0
+diff --git a/private/genfs_contexts b/private/genfs_contexts
+index d9b24d0d..b81fba8d 100644
+--- a/private/genfs_contexts
++++ b/private/genfs_contexts
+@@ -290,8 +290,11 @@ genfscon debugfs /kcov								 u:object_r:debugfs_kcov:s0
+ genfscon inotifyfs / u:object_r:inotify:s0
+ genfscon vfat / u:object_r:vfat:s0
+ genfscon exfat / u:object_r:exfat:s0
++genfscon ntfs / u:object_r:fuse:s0
++genfscon ntfs-3g / u:object_r:fuse:s0
+ genfscon debugfs / u:object_r:debugfs:s0
+ genfscon fuse / u:object_r:fuse:s0
++genfscon fuseblk / u:object_r:fuse:s0
+ genfscon configfs / u:object_r:configfs:s0
+ genfscon sdcardfs / u:object_r:sdcardfs:s0
+ genfscon esdfs / u:object_r:sdcardfs:s0
+-- 
+2.17.1
+

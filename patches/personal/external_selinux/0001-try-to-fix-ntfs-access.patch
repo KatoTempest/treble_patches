@@ -1,0 +1,26 @@
+From fe6c6e2369402bd6bf56ffb6dc68328bf37ae031 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Sep 2020 16:40:30 -0400
+Subject: [PATCH] try to fix ntfs access
+
+Change-Id: Ibfdd719c34408f1b58150183770c9a618570f01b
+---
+ libsepol/cil/src/cil_post.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libsepol/cil/src/cil_post.c b/libsepol/cil/src/cil_post.c
+index f97c65c1..7c8fad3a 100644
+--- a/libsepol/cil/src/cil_post.c
++++ b/libsepol/cil/src/cil_post.c
+@@ -488,7 +488,7 @@ int cil_post_genfscon_context_compare(const void *a, const void *b)
+ 		 */
+ 		if(strcmp(a_genfscon->path_str, "/devices/virtual/block/") == 0)
+ 			bypass = 1;
+-		if(strcmp(a_genfscon->fs_str, "exfat") == 0 || strcmp(a_genfscon->fs_str, "esdfs") == 0) {
++		if(strcmp(a_genfscon->fs_str, "exfat") == 0 || strcmp(a_genfscon->fs_str, "esdfs") == 0 || strcmp(a_genfscon->fs_str, "ntfs") == 0) {
+             if(strcmp(a_genfscon->path_str, "/") == 0)
+                 bypass = 1;
+         }
+-- 
+2.17.1
+
