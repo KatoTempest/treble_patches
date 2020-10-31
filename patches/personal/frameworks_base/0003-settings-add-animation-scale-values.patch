@@ -1,0 +1,77 @@
+From e8d09bdb2843f0908c474b91ede022d2599bf5de Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 23 Dec 2019 12:41:40 +0200
+Subject: [PATCH 03/55] settings: add animation scale values
+
+	modified:   packages/SettingsLib/res/values/arrays.xml
+---
+ packages/SettingsLib/res/values/arrays.xml | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/packages/SettingsLib/res/values/arrays.xml b/packages/SettingsLib/res/values/arrays.xml
+index c63cf06cf75..8b8c25c8e70 100644
+--- a/packages/SettingsLib/res/values/arrays.xml
++++ b/packages/SettingsLib/res/values/arrays.xml
+@@ -349,7 +349,9 @@
+     <!-- Titles for window animation scale preference. [CHAR LIMIT=35] -->
+     <string-array name="window_animation_scale_entries">
+         <item>Animation off</item>
++        <item>Animation scale .2x</item>
+         <item>Animation scale .5x</item>
++        <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+@@ -360,7 +362,9 @@
+     <!-- Values for window animation scale preference. -->
+     <string-array name="window_animation_scale_values" translatable="false" >
+         <item>0</item>
++        <item>.2</item>
+         <item>.5</item>
++        <item>.8</item>
+         <item>1</item>
+         <item>1.5</item>
+         <item>2</item>
+@@ -371,7 +375,9 @@
+     <!-- Titles for transition animation scale preference. [CHAR LIMIT=35] -->
+     <string-array name="transition_animation_scale_entries">
+         <item>Animation off</item>
++        <item>Animation scale .2x</item>
+         <item>Animation scale .5x</item>
++        <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+@@ -382,7 +388,9 @@
+     <!-- Values for transition animation scale preference. -->
+     <string-array name="transition_animation_scale_values" translatable="false" >
+         <item>0</item>
++        <item>.2</item>
+         <item>.5</item>
++        <item>.8</item>
+         <item>1</item>
+         <item>1.5</item>
+         <item>2</item>
+@@ -393,7 +401,9 @@
+     <!-- Titles for animator duration scale preference. [CHAR LIMIT=35] -->
+     <string-array name="animator_duration_scale_entries">
+         <item>Animation off</item>
++        <item>Animation scale .2x</item>
+         <item>Animation scale .5x</item>
++        <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+@@ -404,7 +414,9 @@
+     <!-- Values for animator duration scale preference. -->
+     <string-array name="animator_duration_scale_values" translatable="false" >
+         <item>0</item>
++        <item>.2</item>
+         <item>.5</item>
++        <item>.8</item>
+         <item>1</item>
+         <item>1.5</item>
+         <item>2</item>
+-- 
+2.17.1
+

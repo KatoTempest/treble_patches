@@ -1,7 +1,7 @@
-From 2b8fe341c640dc6fad33c275847039b0a2f50ac0 Mon Sep 17 00:00:00 2001
+From ea3558e89b08dfe79d4396b5551d429770fddf7c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 13:17:06 +0200
-Subject: [PATCH 2/7] selinux: allow system_app read selinux status (for
+Subject: [PATCH 2/9] selinux: allow system_app read selinux status (for
  getenforce)
 
 	new file:   sepolicy/getenforce.te

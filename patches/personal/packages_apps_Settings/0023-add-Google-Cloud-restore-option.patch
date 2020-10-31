@@ -1,0 +1,61 @@
+From 514cec7d56b947c4ce83a067329d07433f7121d6 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 9 Oct 2020 13:08:40 -0400
+Subject: [PATCH 23/24] add Google Cloud restore option
+
+Change-Id: I6a742b6a257235220aabe1332b005d3a74e5d662
+---
+ res/values-ru/strings.xml               |  3 +++
+ res/values/strings.xml                  |  4 ++++
+ res/xml/accounts_dashboard_settings.xml | 12 ++++++++++++
+ 3 files changed, 19 insertions(+)
+
+diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
+index af7a7660f2..e42874049c 100644
+--- a/res/values-ru/strings.xml
++++ b/res/values-ru/strings.xml
+@@ -5154,4 +5154,7 @@
+     <string name="theme_customization_darkui_title">Варианты тёмного оформления</string>
+     <string name="theme_customization_qsalpha_title">Прозрачность панели быстрых настроек</string>
+     <string name="theme_customization_speedui_title">Ускорение интерфейса/Энергосбережение</string>
++    <!-- Google backup restore -->
++    <string name="custom_google_sync_title">Восстановить резервную копию из Google Cloud</string>
++    <string name="custom_google_sync_summary">Запустить вручную восстановление резервной копии из Google Cloud\nПримечание: нужны com.google.android.apps.restore и вход в учётную запись</string>
+ </resources>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index ea212ecd31..7f6978985b 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -12195,4 +12195,8 @@
+     <string name="three_finger_gesture">Swipe to screenshot</string>
+     <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
+ 
++    <!-- Google backup restore -->
++    <string name="custom_google_sync_title">Restore Google Cloud backup</string>
++    <string name="custom_google_sync_summary">Manually launch Google Cloud backup restore action\nNote: need com.google.android.apps.restore and logging in to the Google account</string>
++
+ </resources>
+diff --git a/res/xml/accounts_dashboard_settings.xml b/res/xml/accounts_dashboard_settings.xml
+index d2affc7284..82f50bc88f 100644
+--- a/res/xml/accounts_dashboard_settings.xml
++++ b/res/xml/accounts_dashboard_settings.xml
+@@ -45,4 +45,16 @@
+         android:summary="@string/auto_sync_account_summary"
+         android:order="104"/>
+ 
++    <Preference
++        android:order="150"
++        android:title="@string/custom_google_sync_title"
++        android:summary="@string/custom_google_sync_summary">
++
++        <intent
++            android:action="android.intent.action.VIEW"
++            android:targetPackage="com.google.android.apps.restore"
++            android:targetClass="com.google.android.apps.pixelmigrate.cloudrestore.component.CloudRestoreFlowActivity" />
++
++    </Preference>
++
+ </PreferenceScreen>
+-- 
+2.17.1
+

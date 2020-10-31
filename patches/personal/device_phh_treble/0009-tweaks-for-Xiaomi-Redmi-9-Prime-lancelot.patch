@@ -1,36 +1,19 @@
-From 685f33c215a64838f7c60835b97915c1a9693c7f Mon Sep 17 00:00:00 2001
+From da2e21e1dc9166c4ad03f8ff028aa24c7724a35b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 21 Oct 2020 13:58:06 -0400
-Subject: [PATCH] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
+Subject: [PATCH 9/9] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
 
   from
   https://forum.xda-developers.com/showpost.php?p=83640257&postcount=365
 ---
- rw-system.sh | 8 ++++----
- 1 file changed, 4 insertions(+), 4 deletions(-)
+ rw-system.sh | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index a716163..886dafe 100644
+index d1c76af..cd8d34a 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -88,7 +88,7 @@ changeKeylayout() {
-         -e xiaomi/polaris -e xiaomi/sirius -e xiaomi/dipper \
-         -e xiaomi/wayne -e xiaomi/jasmine -e xiaomi/jasmine_sprout \
-         -e xiaomi/platina -e iaomi/perseus -e xiaomi/ysl -e Redmi/begonia\
--        -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
-+        -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda -e Redmi/lancelot \
-         -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc -e Redmi/merlin \
-         -e redmi/curtana -e redmi/picasso -e redmi/galahad; then
-         if [ ! -f /mnt/phh/keylayout/uinput-goodix.kl ]; then
-@@ -298,15 +298,15 @@ if grep -qF 'mkdir /data/.fps 0770 system fingerp' vendor/etc/init/hw/init.mmi.r
- fi
- 
- if getprop ro.vendor.build.fingerprint | grep -q -i \
--    -e xiaomi/clover -e xiaomi/wayne -e xiaomi/sakura \
-+    -e xiaomi/clover -e xiaomi/wayne -e xiaomi/sakura -e Redmi/lancelot \
-     -e xiaomi/nitrogen -e xiaomi/whyred -e xiaomi/platina -e Redmi/merlin \
-     -e xiaomi/ysl -e nubia/nx60 -e nubia/nx61 -e xiaomi/tulip -e Redmi/begonia\
-     -e xiaomi/lavender -e xiaomi/olive -e xiaomi/olivelite -e xiaomi/pine; then
+@@ -313,8 +313,8 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
      setprop persist.sys.qcom-brightness "$(cat /sys/class/leds/lcd-backlight/max_brightness)"
  fi
  

@@ -1,0 +1,32 @@
+From 128c7b5ac8d4d4d5714a3aed033e79690774eb00 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 18 Apr 2020 18:11:41 +0300
+Subject: [PATCH 31/55] UninstallAlertDialogFragment: Catch
+ IllegalArgumentException
+
+  * from
+  https://github.com/PixelExperience/frameworks_base/commit/1eb16de634eb52376ccce904e2c7f860c19cf0d1
+
+	modified:   packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java
+
+Change-Id: I2b339309df0ea324d206a8e31a5f5a37bfc6bff7
+---
+ .../packageinstaller/handheld/UninstallAlertDialogFragment.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java b/packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java
+index 99f6a92206b..6ce586463bb 100644
+--- a/packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java
++++ b/packages/PackageInstaller/src/com/android/packageinstaller/handheld/UninstallAlertDialogFragment.java
+@@ -68,7 +68,7 @@ public class UninstallAlertDialogFragment extends DialogFragment implements
+                     getContext().getPackageManager().getApplicationInfo(pkg, 0).storageUuid,
+                     pkg, user);
+             return stats.getDataBytes();
+-        } catch (PackageManager.NameNotFoundException | IOException e) {
++            } catch (PackageManager.NameNotFoundException | IOException | IllegalArgumentException e) {
+             Log.e(LOG_TAG, "Cannot determine amount of app data for " + pkg, e);
+         }
+ 
+-- 
+2.17.1
+
