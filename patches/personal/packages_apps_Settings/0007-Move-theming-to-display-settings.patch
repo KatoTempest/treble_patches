@@ -1,7 +1,7 @@
-From c7528029469ae3aabc4ae247fad7f4029972ad2b Mon Sep 17 00:00:00 2001
+From 296da9ca97a098716699be70f386d01fa0c23353 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
-Subject: [PATCH 07/24] Move theming to display settings
+Subject: [PATCH 07/23] Move theming to display settings
 
   * from
   https://github.com/neon-os/packages_apps_Settings/commit/ba07105ed23396f47d78bc3867bcd112ff1584bd

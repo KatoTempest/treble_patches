@@ -1,7 +1,7 @@
-From e971aa7d82351849d202552a0dc21c9a139afece Mon Sep 17 00:00:00 2001
+From 007dbc99a5eb1bc3332b7b5b3c427ee6ae86730b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 29 Oct 2020 08:12:00 -0400
-Subject: [PATCH 24/24] add System UI tuner option
+Subject: [PATCH 23/23] add System UI tuner option
 
 Change-Id: I419b5a661e0a1027998c73ed4787b710edc2841d
 ---
@@ -11,11 +11,11 @@ Change-Id: I419b5a661e0a1027998c73ed4787b710edc2841d
  3 files changed, 19 insertions(+), 1 deletion(-)
 
 diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
-index e42874049c..4e3e735530 100644
+index 4a96f55eed..0154a54937 100644
 --- a/res/values-ru/strings.xml
 +++ b/res/values-ru/strings.xml
-@@ -5135,7 +5135,7 @@
-     <string name="keywords_media_controls" msgid="8345490568291778638">"Медиа"</string>
+@@ -5119,7 +5119,7 @@
+     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
      <!-- Three-fingers-swipe to screenshot -->
      <string name="three_finger_gesture">Жест для сохранения снимка экрана</string>
 -    <string name="three_finger_gesture_summary">Проведите тремя пальцами вниз по экрану для сохранения его       снимка</string>
@@ -23,27 +23,31 @@ index e42874049c..4e3e735530 100644
      <!-- Vendor security -->
      <string name="security_patch_vendor">Дата обновления безопасности от производителя</string>
      <!-- SELinux state -->
-@@ -5157,4 +5157,7 @@
+@@ -5141,6 +5141,9 @@
      <!-- Google backup restore -->
      <string name="custom_google_sync_title">Восстановить резервную копию из Google Cloud</string>
      <string name="custom_google_sync_summary">Запустить вручную восстановление резервной копии из Google Cloud\nПримечание: нужны com.google.android.apps.restore и вход в учётную запись</string>
 +    <!-- SystemUI tuner -->
 +    <string name="custom_systemui_tuner">System UI тюнер</string>
 +    <string name="custom_systemui_tuner_summary">Открыть настройки старого SystemUI тюнера</string>
- </resources>
+     <string name="media_output_panel_stop_casting_button" msgid="6094875883164119035">"Прекратить трансляцию"</string>
+     <string name="volte_5G_limited_title" msgid="5908052268836750629">"Отключить VoLTE?"</string>
+     <string name="volte_5G_limited_text" msgid="7150583768725182345">"Сеть 5G также будет отключена.\nВо время голосового вызова Интернет недоступен и некоторые приложения могут не работать."</string>
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 7f6978985b..3836a44d22 100644
+index dabc70be67..9b91f9b980 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -12199,4 +12199,8 @@
+@@ -12180,6 +12180,10 @@
      <string name="custom_google_sync_title">Restore Google Cloud backup</string>
      <string name="custom_google_sync_summary">Manually launch Google Cloud backup restore action\nNote: need com.google.android.apps.restore and logging in to the Google account</string>
- 
+  
 +    <!-- SystemUI tuner -->
 +    <string name="custom_systemui_tuner">System UI Tuner</string>
 +    <string name="custom_systemui_tuner_summary">Open old SystemUI tuner\u2019s settings</string>
-+
- </resources>
++ 
+     <!-- Title for media control settings [CHAR LIMIT=50]-->
+     <string name="media_controls_title">Media</string>
+     <!-- Summary for media control settings [CHAR LIMIT=60]-->
 diff --git a/res/xml/display_settings.xml b/res/xml/display_settings.xml
 index 4780234ef7..87f3f79898 100644
 --- a/res/xml/display_settings.xml

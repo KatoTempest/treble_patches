@@ -1,7 +1,7 @@
-From ddec5ad2956c69e454477035c07337c1bd266602 Mon Sep 17 00:00:00 2001
+From 99372397d6bbc406f2c738ba4ae895cf88615ce2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 11 May 2020 20:18:14 +0300
-Subject: [PATCH 18/24] add system speedup tuning
+Subject: [PATCH 17/23] add system speedup tuning
 
 	modified:   res/values/strings.xml
 	modified:   res/xml/display_settings.xml
@@ -13,7 +13,7 @@ Subject: [PATCH 18/24] add system speedup tuning
  3 files changed, 7 insertions(+)
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 19a19f4c90..53e73134b3 100644
+index f99eb97b30..5195852957 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
 @@ -10663,6 +10663,8 @@

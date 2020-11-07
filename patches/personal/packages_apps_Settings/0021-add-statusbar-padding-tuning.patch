@@ -1,7 +1,7 @@
-From ada0865d70f83ee4808a7d32516dd8835dbc36c6 Mon Sep 17 00:00:00 2001
+From d686960f1962a78d6045c6708cbdf7755bb14ef5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Aug 2020 12:53:10 -0400
-Subject: [PATCH 22/24] add statusbar padding tuning
+Subject: [PATCH 21/23] add statusbar padding tuning
 
 Change-Id: Ib31c6505d431da4f4a72888a85894d27e857ff3b
 ---
@@ -24,7 +24,7 @@ index b9ecdfcf75..af7a7660f2 100644
      <string name="theme_customization_darkui_title">Варианты тёмного оформления</string>
      <string name="theme_customization_qsalpha_title">Прозрачность панели быстрых настроек</string>
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 53e73134b3..ea212ecd31 100644
+index 5195852957..50d9b67ab1 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
 @@ -10665,6 +10665,8 @@
