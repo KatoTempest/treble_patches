@@ -1,0 +1,25 @@
+From 3c6da0790dac0001686329b3a9c2221c06dfdc77 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 11 Nov 2020 13:31:05 -0500
+Subject: [PATCH 1/2] improve searchbar
+
+---
+ res/drawable/bg_all_apps_searchbox.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/res/drawable/bg_all_apps_searchbox.xml b/res/drawable/bg_all_apps_searchbox.xml
+index c3249279a..3686c6e4e 100644
+--- a/res/drawable/bg_all_apps_searchbox.xml
++++ b/res/drawable/bg_all_apps_searchbox.xml
+@@ -15,5 +15,5 @@
+ -->
+ <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+     <solid android:color="?attr/popupColorPrimary" />
+-    <corners android:radius="2dp" />
+-</shape>
+\ No newline at end of file
++    <corners android:radius="4dp" />
++</shape>
+-- 
+2.17.1
+

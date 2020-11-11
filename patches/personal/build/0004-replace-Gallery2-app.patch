@@ -1,0 +1,30 @@
+From edd735caf5c5a76be32c263a999a3bf605cca4de Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 29 Dec 2019 17:28:08 +0200
+Subject: [PATCH 4/9] replace Gallery2 app
+
+Change-Id: I6809a04c8c0d624c2c5f739fd93d2c0db57ed8e4
+---
+ target/product/handheld_product.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/target/product/handheld_product.mk b/target/product/handheld_product.mk
+index 8d3a618e1..ab9ad84cc 100644
+--- a/target/product/handheld_product.mk
++++ b/target/product/handheld_product.mk
+@@ -26,11 +26,11 @@ PRODUCT_PACKAGES += \
+     Camera2 \
+     Contacts \
+     DeskClock \
+-    Gallery2 \
+     LatinIME \
+     OneTimeInitializer \
+     preinstalled-packages-platform-handheld-product.xml \
+     SettingsIntelligence \
++    SimpleGallery \
+     frameworks-base-overlays
+ 
+ PRODUCT_PACKAGES_DEBUG += \
+-- 
+2.17.1
+

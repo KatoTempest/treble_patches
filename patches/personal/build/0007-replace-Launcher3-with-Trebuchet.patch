@@ -1,0 +1,28 @@
+From 92539db3423dcf1940df1851e88ae414e61f4b69 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 24 Sep 2020 12:31:33 -0400
+Subject: [PATCH 7/9] replace Launcher3 with Trebuchet
+
+Change-Id: I7a64c29ea2053eede493e306010a7accb5ee552c
+---
+ target/product/handheld_system_ext.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/target/product/handheld_system_ext.mk b/target/product/handheld_system_ext.mk
+index d935fbfdd..f5d3d9812 100644
+--- a/target/product/handheld_system_ext.mk
++++ b/target/product/handheld_system_ext.mk
+@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_system_ext.mk)
+ 
+ # /system_ext packages
+ PRODUCT_PACKAGES += \
+-    Launcher3QuickStep \
+     Provision \
+     Settings \
+     StorageManager \
+     SystemUI \
++    TrebuchetQuickStep \
+     WallpaperCropper \
+-- 
+2.17.1
+

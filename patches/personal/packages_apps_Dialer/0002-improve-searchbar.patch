@@ -1,0 +1,23 @@
+From 0a1de1356634159892bf1e0c7c195c61430d1840 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 11 Nov 2020 13:46:02 -0500
+Subject: [PATCH 2/2] improve searchbar
+
+---
+ .../res/drawable/search_bar_background_rounded_corners.xml      | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/java/com/android/dialer/main/impl/toolbar/res/drawable/search_bar_background_rounded_corners.xml b/java/com/android/dialer/main/impl/toolbar/res/drawable/search_bar_background_rounded_corners.xml
+index 88f5a04ca..ae444b720 100644
+--- a/java/com/android/dialer/main/impl/toolbar/res/drawable/search_bar_background_rounded_corners.xml
++++ b/java/com/android/dialer/main/impl/toolbar/res/drawable/search_bar_background_rounded_corners.xml
+@@ -17,5 +17,5 @@
+ <shape xmlns:android="http://schemas.android.com/apk/res/android"
+   android:shape="rectangle">
+   <solid android:color="?android:attr/colorBackgroundFloating"/>
+-  <corners android:radius="2dp"/>
++  <corners android:radius="4dp"/>
+ </shape>
+-- 
+2.17.1
+

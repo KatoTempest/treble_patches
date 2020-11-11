@@ -1,0 +1,28 @@
+From bbbb5c538d33d3b63b096c1526b411b8b54b4a75 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:30:02 -0500
+Subject: [PATCH] Skip screen on animation when wake and unlock via biometrics
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/32244a3d0207df4bbd834fb64b3538752380dbb4
+---
+ .../src/com/android/systemui/statusbar/phone/StatusBar.java    | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+index f125b7d1003..018bd0c3b31 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+@@ -4000,7 +4000,8 @@ public class StatusBar extends SystemUI implements DemoMode,
+ 
+         boolean launchingAffordanceWithPreview =
+                 mNotificationPanelViewController.isLaunchingAffordanceWithPreview();
+-        mScrimController.setLaunchingAffordanceWithPreview(launchingAffordanceWithPreview);
++        mScrimController.setLaunchingAffordanceWithPreview(launchingAffordanceWithPreview
++                || mBiometricUnlockController.isWakeAndUnlock());
+ 
+         if (mBouncerShowing) {
+             // Bouncer needs the front scrim when it's on top of an activity,
+-- 
+2.17.1
+

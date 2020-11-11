@@ -1,0 +1,25 @@
+From 9b458a513dc4ddcc71626100e37984f79eae67de Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 7 Nov 2020 07:56:56 -0500
+Subject: [PATCH] try to fix logging
+
+---
+ liblog/logger_write.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/liblog/logger_write.cpp b/liblog/logger_write.cpp
+index b1bed80e9..6c5bc9c1b 100644
+--- a/liblog/logger_write.cpp
++++ b/liblog/logger_write.cpp
+@@ -214,7 +214,7 @@ static int write_to_log(log_id_t log_id, struct iovec* vec, size_t nr) {
+   }
+ 
+   ret = LogdWrite(log_id, &ts, vec, nr);
+-  PmsgWrite(log_id, &ts, vec, nr);
++  //PmsgWrite(log_id, &ts, vec, nr);
+ 
+   return ret;
+ }
+-- 
+2.17.1
+

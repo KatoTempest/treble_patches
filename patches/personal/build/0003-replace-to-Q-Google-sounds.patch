@@ -1,0 +1,90 @@
+From 17adaea37bbe39ea3f8f03d662b6f813252cffb8 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 8 Feb 2020 16:39:09 +0200
+Subject: [PATCH 3/9] replace to Q Google sounds
+
+  * from
+  https://github.com/Havoc-OS/android_build/commit/8c8e17dce8164fa7e4bea0e2e4787e22bc62c1c9
+
+Change-Id: Idb6050e29d9d5d26dead9d8ec08d3733c0f07873
+---
+ target/product/aosp_product.mk    | 6 +++---
+ target/product/full_base.mk       | 6 +++---
+ target/product/handheld_system.mk | 4 ++--
+ target/product/mainline.mk        | 4 ++--
+ 4 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/target/product/aosp_product.mk b/target/product/aosp_product.mk
+index e3819e611..bc99a8209 100644
+--- a/target/product/aosp_product.mk
++++ b/target/product/aosp_product.mk
+@@ -19,12 +19,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_product.mk)
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
+ 
+ # Default AOSP sounds
+-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
++$(call inherit-product-if-exists, frameworks/base/data/sounds/Google.mk)
+ 
+ # Additional settings used in all AOSP builds
+ PRODUCT_PRODUCT_PROPERTIES += \
+-    ro.config.ringtone=Ring_Synth_04.ogg \
+-    ro.config.notification_sound=pixiedust.ogg \
++    ro.config.ringtone=The_big_adventure.ogg \
++    ro.config.notification_sound=Popcorn.ogg \
+     ro.com.android.dataroaming=true \
+ 
+ # More AOSP packages
+diff --git a/target/product/full_base.mk b/target/product/full_base.mk
+index ffd3cde11..8c7fdee87 100644
+--- a/target/product/full_base.mk
++++ b/target/product/full_base.mk
+@@ -44,14 +44,14 @@ PRODUCT_PACKAGES += \
+ 
+ # Additional settings used in all AOSP builds
+ PRODUCT_PROPERTY_OVERRIDES := \
+-    ro.config.ringtone=Ring_Synth_04.ogg \
+-    ro.config.notification_sound=pixiedust.ogg
++    ro.config.ringtone=The_big_adventure.ogg \
++    ro.config.notification_sound=Popcorn.ogg
+ 
+ # Put en_US first in the list, so make it default.
+ PRODUCT_LOCALES := en_US
+ 
+ # Get some sounds
+-$(call inherit-product-if-exists, frameworks/base/data/sounds/AllAudio.mk)
++$(call inherit-product-if-exists, frameworks/base/data/sounds/Google.mk)
+ 
+ # Get a list of languages.
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+diff --git a/target/product/handheld_system.mk b/target/product/handheld_system.mk
+index 77c103d7e..173cf5871 100644
+--- a/target/product/handheld_system.mk
++++ b/target/product/handheld_system.mk
+@@ -85,5 +85,5 @@ PRODUCT_COPY_FILES += \
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+     ro.carrier=unknown \
+-    ro.config.notification_sound=OnTheHunt.ogg \
+-    ro.config.alarm_alert=Alarm_Classic.ogg
++    ro.config.notification_sound=Popcorn.ogg \
++    ro.config.alarm_alert=Bright_morning.ogg
+diff --git a/target/product/mainline.mk b/target/product/mainline.mk
+index 22436e66b..b085db54b 100644
+--- a/target/product/mainline.mk
++++ b/target/product/mainline.mk
+@@ -26,10 +26,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_product.mk)
+ 
+-$(call inherit-product, frameworks/base/data/sounds/AllAudio.mk)
++$(call inherit-product, frameworks/base/data/sounds/Google.mk)
+ 
+ PRODUCT_PROPERTY_OVERRIDES += \
+-    ro.config.ringtone=Ring_Synth_04.ogg \
++    ro.config.ringtone=The_big_adventure.ogg \
+     ro.com.android.dataroaming=true \
+ 
+ PRODUCT_PACKAGES += \
+-- 
+2.17.1
+

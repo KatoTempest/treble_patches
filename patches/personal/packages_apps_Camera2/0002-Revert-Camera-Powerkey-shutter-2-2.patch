@@ -1,0 +1,234 @@
+From 95998cfa7de79339d748510f6ac626010916eec4 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 11:57:51 -0500
+Subject: [PATCH 2/2] Revert "Camera: Powerkey shutter (2/2)"
+
+This reverts commit 3643ddab0cb0c4e6b49d46a619822e5b5a2424ca.
+---
+ Android.mk                                    |  4 +--
+ AndroidManifest.xml                           |  1 -
+ res/values/cm_strings.xml                     |  2 --
+ res/xml/camera_preferences.xml                |  5 ----
+ src/com/android/camera/CameraActivity.java    | 27 +------------------
+ .../android/camera/settings/AppUpgrader.java  | 26 ++----------------
+ src/com/android/camera/settings/Keys.java     |  9 -------
+ 7 files changed, 4 insertions(+), 70 deletions(-)
+
+diff --git a/Android.mk b/Android.mk
+index d73eb26b0..2db7d5b96 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -33,10 +33,8 @@ LOCAL_AAPT_FLAGS := \
+ LOCAL_USE_AAPT2 := true
+ 
+ LOCAL_PACKAGE_NAME := Camera2
+-LOCAL_CERTIFICATE := platform
+ 
+-LOCAL_PRIVATE_PLATFORM_APIS := true
+-LOCAL_PRIVILEGED_MODULE := true
++LOCAL_SDK_VERSION := current
+ 
+ LOCAL_PRODUCT_MODULE := true
+ 
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 54885ae04..1fc9fa31b 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -28,7 +28,6 @@
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+     <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+-    <uses-permission android:name="lineage.permission.PREVENT_POWER_KEY" />
+ 
+     <supports-screens
+         android:anyDensity="true"
+diff --git a/res/values/cm_strings.xml b/res/values/cm_strings.xml
+index a42f411ee..d705c4995 100644
+--- a/res/values/cm_strings.xml
++++ b/res/values/cm_strings.xml
+@@ -15,8 +15,6 @@
+      limitations under the License.
+ -->
+ <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+-    <!-- More Settings screen, power button title -->
+-    <string name="pref_camera_power_shutter_title">Power shutter</string>
+     <!-- More Settings screen, max brightness title -->
+     <string name="pref_camera_max_brightness_title">Bright screen</string>
+ </resources>
+diff --git a/res/xml/camera_preferences.xml b/res/xml/camera_preferences.xml
+index ff97e2cf3..8ae5c9264 100644
+--- a/res/xml/camera_preferences.xml
++++ b/res/xml/camera_preferences.xml
+@@ -69,11 +69,6 @@
+         android:defaultValue="false"
+         android:key="pref_camera_exposure_compensation_key"
+         android:title="@string/pref_camera_exposure_compensation" />
+-    <!-- Power button shutter -->
+-    <com.android.camera.settings.ManagedSwitchPreference
+-        android:key="pref_power_shutter"
+-        android:defaultValue="false"
+-        android:title="@string/pref_camera_power_shutter_title" />
+     <!-- Max screen brightness -->
+     <com.android.camera.settings.ManagedSwitchPreference
+         android:key="pref_max_brightness"
+diff --git a/src/com/android/camera/CameraActivity.java b/src/com/android/camera/CameraActivity.java
+index af64c1091..5fef0c3dc 100644
+--- a/src/com/android/camera/CameraActivity.java
++++ b/src/com/android/camera/CameraActivity.java
+@@ -294,8 +294,6 @@ public class CameraActivity extends QuickActivity
+     /** First run dialog */
+     private FirstRunDialog mFirstRunDialog;
+ 
+-    // Keep track of powershutter state
+-    public boolean mPowerShutter;
+     // Keep track of max brightness state
+     public boolean mMaxBrightness;
+ 
+@@ -573,9 +571,7 @@ public class CameraActivity extends QuickActivity
+ 
+     @Override
+     public void onSettingChanged(SettingsManager settingsManager, String key) {
+-        if (key.equals(Keys.KEY_POWER_SHUTTER)) {
+-            initPowerShutter();
+-        } else if (key.equals(Keys.KEY_MAX_BRIGHTNESS)) {
++        if (key.equals(Keys.KEY_MAX_BRIGHTNESS)) {
+             initMaxBrightness();
+         }
+     }
+@@ -1515,7 +1511,6 @@ public class CameraActivity extends QuickActivity
+ 
+         mSettingsManager.addListener(this);
+ 
+-        initPowerShutter();
+         initMaxBrightness();
+ 
+         AppUpgrader appUpgrader = new AppUpgrader(this);
+@@ -2273,17 +2268,6 @@ public class CameraActivity extends QuickActivity
+         }
+     }
+ 
+-    protected void initPowerShutter() {
+-        mPowerShutter = Keys.isPowerShutterOn(mSettingsManager);
+-        if (mPowerShutter) {
+-            getWindow().addPrivateFlags(
+-                    WindowManager.LayoutParams.PRIVATE_FLAG_PREVENT_POWER_KEY);
+-        } else {
+-            getWindow().clearPrivateFlags(
+-                    WindowManager.LayoutParams.PRIVATE_FLAG_PREVENT_POWER_KEY);
+-        }
+-    }
+-
+     protected void initMaxBrightness() {
+         Window win = getWindow();
+         WindowManager.LayoutParams params = win.getAttributes();
+@@ -2301,11 +2285,6 @@ public class CameraActivity extends QuickActivity
+     @Override
+     public boolean onKeyDown(int keyCode, KeyEvent event) {
+         if (!mFilmstripVisible) {
+-            if (mPowerShutter && keyCode == KeyEvent.KEYCODE_POWER &&
+-                    event.getRepeatCount() == 0) {
+-                mCurrentModule.onShutterButtonFocus(true);
+-                return true;
+-            }
+             if (mCurrentModule.onKeyDown(keyCode, event)) {
+                 return true;
+             }
+@@ -2324,10 +2303,6 @@ public class CameraActivity extends QuickActivity
+     @Override
+     public boolean onKeyUp(int keyCode, KeyEvent event) {
+         if (!mFilmstripVisible) {
+-            if (mPowerShutter && keyCode == KeyEvent.KEYCODE_POWER) {
+-                mCurrentModule.onShutterButtonClick();
+-                return true;
+-            }
+             // If a module is in the middle of capture, it should
+             // consume the key event.
+             if (mCurrentModule.onKeyUp(keyCode, event)) {
+diff --git a/src/com/android/camera/settings/AppUpgrader.java b/src/com/android/camera/settings/AppUpgrader.java
+index 6d641b49a..176233359 100644
+--- a/src/com/android/camera/settings/AppUpgrader.java
++++ b/src/com/android/camera/settings/AppUpgrader.java
+@@ -85,21 +85,15 @@ public class AppUpgrader extends SettingsUpgrader {
+      * resolution size on the N5 since we stored it with a swapped width/height.
+      */
+     public static final int NEEDS_N5_16by9_RESOLUTION_SWAP = 7;
+-
+-    /**
+-     * With this version, port over power shutter settings.
+-     */
+-    private static final int CAMERA_SETTINGS_POWER_SHUTTER = 8;
+-
+     /**
+      * With this version, port over max brightness settings.
+      */
+-    private static final int CAMERA_SETTINGS_MAX_BRIGHTNESS = 9;
++    private static final int CAMERA_SETTINGS_MAX_BRIGHTNESS = 8;
+ 
+     /**
+      * Increment this value whenever new AOSP UpgradeSteps need to be executed.
+      */
+-    public static final int APP_UPGRADE_VERSION = 9;
++    public static final int APP_UPGRADE_VERSION = 8;
+ 
+     private final AppController mAppController;
+ 
+@@ -173,10 +167,6 @@ public class AppUpgrader extends SettingsUpgrader {
+             updateN516by9ResolutionIfNeeded(settingsManager);
+         }
+ 
+-        if (lastVersion < CAMERA_SETTINGS_POWER_SHUTTER) {
+-            upgradePowerShutter(settingsManager);
+-        }
+-
+         if (lastVersion < CAMERA_SETTINGS_MAX_BRIGHTNESS) {
+             upgradeMaxBrightness(settingsManager);
+         }
+@@ -451,18 +441,6 @@ public class AppUpgrader extends SettingsUpgrader {
+         }
+     }
+ 
+-    private void upgradePowerShutter(SettingsManager settingsManager) {
+-        SharedPreferences oldGlobalPreferences =
+-                settingsManager.openPreferences(OLD_GLOBAL_PREFERENCES_FILENAME);
+-        if (oldGlobalPreferences.contains(Keys.KEY_POWER_SHUTTER)) {
+-            String powerShutter = removeString(oldGlobalPreferences, Keys.KEY_POWER_SHUTTER);
+-            if (OLD_SETTINGS_VALUE_ON.equals(powerShutter)) {
+-                settingsManager.set(SettingsManager.SCOPE_GLOBAL, Keys.KEY_POWER_SHUTTER,
+-                        true);
+-            }
+-        }
+-    }
+-
+     private void upgradeMaxBrightness(SettingsManager settingsManager) {
+         SharedPreferences oldGlobalPreferences =
+                 settingsManager.openPreferences(OLD_GLOBAL_PREFERENCES_FILENAME);
+diff --git a/src/com/android/camera/settings/Keys.java b/src/com/android/camera/settings/Keys.java
+index f59591f84..52796d284 100644
+--- a/src/com/android/camera/settings/Keys.java
++++ b/src/com/android/camera/settings/Keys.java
+@@ -81,7 +81,6 @@ public class Keys {
+     public static final String KEY_SHOULD_SHOW_SETTINGS_BUTTON_CLING =
+             "pref_should_show_settings_button_cling";
+     public static final String KEY_HAS_SEEN_PERMISSIONS_DIALOGS = "pref_has_seen_permissions_dialogs";
+-    public static final String KEY_POWER_SHUTTER = "pref_power_shutter";
+     public static final String KEY_MAX_BRIGHTNESS = "pref_max_brightness";
+ 
+     /**
+@@ -226,14 +225,6 @@ public class Keys {
+                                           KEY_CAMERA_GRID_LINES);
+     }
+ 
+-    /**
+-     * Returns whether power shutter is set on.
+-     */
+-    public static boolean isPowerShutterOn(SettingsManager settingsManager) {
+-        return settingsManager.getBoolean(SettingsManager.SCOPE_GLOBAL,
+-                KEY_POWER_SHUTTER);
+-    }
+-
+     /**
+      * Returns whether max brightness is set on.
+      */
+-- 
+2.17.1
+
