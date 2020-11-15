@@ -18,7 +18,7 @@ index c3249279a..3686c6e4e 100644
 -    <corners android:radius="2dp" />
 -</shape>
 \ No newline at end of file
-+    <corners android:radius="4dp" />
++    <corners android:radius="6dp" />
 +</shape>
 -- 
 2.17.1

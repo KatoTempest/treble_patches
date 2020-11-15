@@ -1,0 +1,332 @@
+From cdf325fa189d3583b2d70a4b9c17ea9a653f8e2e Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 05:13:26 -0500
+Subject: [PATCH 72/95] add gestural navbar overlays
+
+  based on
+  https://github.com/LineageOS/android_packages_overlays_Lineage/commit/35fb8bae39e632c947e2fa65e2c9eca20ded5cd0
+  https://github.com/StatiXOS/android_vendor_statix/commit/8d881970bb94be00f9b4ccfe21e3dd97ef1aeeb4
+---
+ core/java/android/provider/Settings.java      |  6 +++++
+ packages/overlays/Android.mk                  |  3 +++
+ .../GestureHandleHideOverlay/Android.mk       | 27 +++++++++++++++++++
+ .../AndroidManifest.xml                       | 24 +++++++++++++++++
+ .../res/values/dimens.xml                     | 18 +++++++++++++
+ .../GestureHandleLongOverlay/Android.mk       | 27 +++++++++++++++++++
+ .../AndroidManifest.xml                       | 24 +++++++++++++++++
+ .../res/values/dimens.xml                     | 21 +++++++++++++++
+ .../GestureHandleMediumOverlay/Android.mk     | 27 +++++++++++++++++++
+ .../AndroidManifest.xml                       | 24 +++++++++++++++++
+ .../res/values/dimens.xml                     | 21 +++++++++++++++
+ 11 files changed, 222 insertions(+)
+ create mode 100644 packages/overlays/GestureHandleHideOverlay/Android.mk
+ create mode 100644 packages/overlays/GestureHandleHideOverlay/AndroidManifest.xml
+ create mode 100644 packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
+ create mode 100644 packages/overlays/GestureHandleLongOverlay/Android.mk
+ create mode 100644 packages/overlays/GestureHandleLongOverlay/AndroidManifest.xml
+ create mode 100644 packages/overlays/GestureHandleLongOverlay/res/values/dimens.xml
+ create mode 100644 packages/overlays/GestureHandleMediumOverlay/Android.mk
+ create mode 100644 packages/overlays/GestureHandleMediumOverlay/AndroidManifest.xml
+ create mode 100644 packages/overlays/GestureHandleMediumOverlay/res/values/dimens.xml
+
+diff --git a/core/java/android/provider/Settings.java b/core/java/android/provider/Settings.java
+index 8ce391efb17..4f93ff4169f 100755
+--- a/core/java/android/provider/Settings.java
++++ b/core/java/android/provider/Settings.java
+@@ -8892,6 +8892,12 @@ public final class Settings {
+         public static final String BACK_GESTURE_INSET_SCALE_RIGHT =
+                 "back_gesture_inset_scale_right";
+ 
++        /**
++         * Position of gesture bar tuning
++         * @hide
++         */
++        public static final String GESTURE_NAVBAR_TUNING = "gesture_navbar_tuning";
++
+         /**
+          * Current provider of proximity-based sharing services.
+          * Default value in @string/config_defaultNearbySharingComponent.
+diff --git a/packages/overlays/Android.mk b/packages/overlays/Android.mk
+index 963c8e70efa..988b883d494 100644
+--- a/packages/overlays/Android.mk
++++ b/packages/overlays/Android.mk
+@@ -72,6 +72,9 @@ LOCAL_REQUIRED_MODULES := \
+ 	FontViaodalibreOverlay \
+ 	FontVollkornOverlay \
+ 	FontZillaOverlay \
++	GestureHandleHideOverlay \
++	GestureHandleLongOverlay \
++	GestureHandleMediumOverlay \
+ 	IconPackCircularAndroidOverlay \
+ 	IconPackCircularLauncherOverlay \
+ 	IconPackCircularSettingsOverlay \
+diff --git a/packages/overlays/GestureHandleHideOverlay/Android.mk b/packages/overlays/GestureHandleHideOverlay/Android.mk
+new file mode 100644
+index 00000000000..1531214dfaa
+--- /dev/null
++++ b/packages/overlays/GestureHandleHideOverlay/Android.mk
+@@ -0,0 +1,27 @@
++#
++#  Copyright 2018, The Android Open Source Project
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++#
++
++LOCAL_PATH:= $(call my-dir)
++include $(CLEAR_VARS)
++
++LOCAL_RRO_THEME := GestureHandleHide
++
++LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
++
++LOCAL_PACKAGE_NAME := GestureHandleHideOverlay
++LOCAL_SDK_VERSION := current
++
++include $(BUILD_RRO_PACKAGE)
+diff --git a/packages/overlays/GestureHandleHideOverlay/AndroidManifest.xml b/packages/overlays/GestureHandleHideOverlay/AndroidManifest.xml
+new file mode 100644
+index 00000000000..d5de4699a66
+--- /dev/null
++++ b/packages/overlays/GestureHandleHideOverlay/AndroidManifest.xml
+@@ -0,0 +1,24 @@
++<!--
++/**
++ * Copyright (c) 2019, The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++-->
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.android.theme.navbar.hidehandle"
++    android:versionCode="1"
++    android:versionName="1.0">
++    <overlay android:targetPackage="android" android:category="android.theme.customization.navbar" android:priority="1"/>
++    <application android:label="Hide" android:hasCode="false"/>
++</manifest>
+diff --git a/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml b/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
+new file mode 100644
+index 00000000000..0c9414646c4
+--- /dev/null
++++ b/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++ * SPDX-License-Identifier: Apache-2.0
++ * Copyright (C) 2020 The LineageOS Project
++ * Copyright (C) 2020 The CAOS Project
++-->
++<resources>
++    <!-- Height of the bottom navigation / system bar. -->
++    <dimen name="navigation_bar_height">0dp</dimen>
++    <!-- Height of the bottom navigation bar in portrait; often the same as @dimen/navigation_bar_height -->
++    <dimen name="navigation_bar_height_landscape">0dp</dimen>
++    <!-- Width of the navigation bar when it is placed vertically on the screen -->
++    <dimen name="navigation_bar_width">0dp</dimen>
++    <!-- Height of the bottom navigation / system bar. -->
++    <dimen name="navigation_bar_frame_height">0dp</dimen>
++    <!-- The height of the bottom navigation gesture area. -->
++    <dimen name="navigation_bar_gesture_height">24dp</dimen>
++</resources>
+diff --git a/packages/overlays/GestureHandleLongOverlay/Android.mk b/packages/overlays/GestureHandleLongOverlay/Android.mk
+new file mode 100644
+index 00000000000..04378de5c2b
+--- /dev/null
++++ b/packages/overlays/GestureHandleLongOverlay/Android.mk
+@@ -0,0 +1,27 @@
++#
++#  Copyright 2018, The Android Open Source Project
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++#
++
++LOCAL_PATH:= $(call my-dir)
++include $(CLEAR_VARS)
++
++LOCAL_RRO_THEME := GestureHandleLong
++
++LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
++
++LOCAL_PACKAGE_NAME := GestureHandleLongOverlay
++LOCAL_SDK_VERSION := current
++
++include $(BUILD_RRO_PACKAGE)
+diff --git a/packages/overlays/GestureHandleLongOverlay/AndroidManifest.xml b/packages/overlays/GestureHandleLongOverlay/AndroidManifest.xml
+new file mode 100644
+index 00000000000..358a5e1df0b
+--- /dev/null
++++ b/packages/overlays/GestureHandleLongOverlay/AndroidManifest.xml
+@@ -0,0 +1,24 @@
++<!--
++/**
++ * Copyright (c) 2019, The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++-->
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.android.theme.navbar.longhandle"
++    android:versionCode="1"
++    android:versionName="1.0">
++    <overlay android:targetPackage="com.android.systemui" android:category="android.theme.customization.navbar" android:priority="1"/>
++    <application android:label="Long" android:hasCode="false"/>
++</manifest>
+diff --git a/packages/overlays/GestureHandleLongOverlay/res/values/dimens.xml b/packages/overlays/GestureHandleLongOverlay/res/values/dimens.xml
+new file mode 100644
+index 00000000000..96c0578fa5f
+--- /dev/null
++++ b/packages/overlays/GestureHandleLongOverlay/res/values/dimens.xml
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++ * Copyright (c) 2006, The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++*/
++-->
++<resources>
++    <!-- dimensions for the navigation bar handle -->
++    <dimen name="navigation_home_handle_width">140dp</dimen>
++</resources>
+diff --git a/packages/overlays/GestureHandleMediumOverlay/Android.mk b/packages/overlays/GestureHandleMediumOverlay/Android.mk
+new file mode 100644
+index 00000000000..e4c0a698c09
+--- /dev/null
++++ b/packages/overlays/GestureHandleMediumOverlay/Android.mk
+@@ -0,0 +1,27 @@
++#
++#  Copyright 2018, The Android Open Source Project
++#
++# Licensed under the Apache License, Version 2.0 (the "License");
++# you may not use this file except in compliance with the License.
++# You may obtain a copy of the License at
++#
++#     http://www.apache.org/licenses/LICENSE-2.0
++#
++# Unless required by applicable law or agreed to in writing, software
++# distributed under the License is distributed on an "AS IS" BASIS,
++# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++# See the License for the specific language governing permissions and
++# limitations under the License.
++#
++
++LOCAL_PATH:= $(call my-dir)
++include $(CLEAR_VARS)
++
++LOCAL_RRO_THEME := GestureHandleMedium
++
++LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
++
++LOCAL_PACKAGE_NAME := GestureHandleMediumOverlay
++LOCAL_SDK_VERSION := current
++
++include $(BUILD_RRO_PACKAGE)
+diff --git a/packages/overlays/GestureHandleMediumOverlay/AndroidManifest.xml b/packages/overlays/GestureHandleMediumOverlay/AndroidManifest.xml
+new file mode 100644
+index 00000000000..41bb8ca4d68
+--- /dev/null
++++ b/packages/overlays/GestureHandleMediumOverlay/AndroidManifest.xml
+@@ -0,0 +1,24 @@
++<!--
++/**
++ * Copyright (c) 2019, The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++-->
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++    package="com.android.theme.navbar.mediumhandle"
++    android:versionCode="1"
++    android:versionName="1.0">
++    <overlay android:targetPackage="com.android.systemui" android:category="android.theme.customization.navbar" android:priority="1"/>
++    <application android:label="Medium" android:hasCode="false"/>
++</manifest>
+diff --git a/packages/overlays/GestureHandleMediumOverlay/res/values/dimens.xml b/packages/overlays/GestureHandleMediumOverlay/res/values/dimens.xml
+new file mode 100644
+index 00000000000..e7b91239ee0
+--- /dev/null
++++ b/packages/overlays/GestureHandleMediumOverlay/res/values/dimens.xml
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++ * Copyright (c) 2006, The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *     http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++*/
++-->
++<resources>
++    <!-- dimensions for the navigation bar handle -->
++    <dimen name="navigation_home_handle_width">110dp</dimen>
++</resources>
+-- 
+2.17.1
+

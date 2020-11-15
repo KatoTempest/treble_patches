@@ -1,7 +1,7 @@
-From 6b3cc129d6f938bdd0efc22de9dc59d4c1a3f53f Mon Sep 17 00:00:00 2001
+From 46fc177506344f84587a3c3c2526be8c99d6b1f3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 9 Oct 2020 13:08:40 -0400
-Subject: [PATCH 22/23] add Google Cloud restore option
+Subject: [PATCH 22/32] add Google Cloud restore option
 
 Change-Id: I6a742b6a257235220aabe1332b005d3a74e5d662
 ---
@@ -77,7 +77,7 @@ index 50d9b67ab1..dabc70be67 100644
      <string name="media_controls_title">Media</string>
      <!-- Summary for media control settings [CHAR LIMIT=60]-->
 diff --git a/res/xml/accounts_dashboard_settings.xml b/res/xml/accounts_dashboard_settings.xml
-index d2affc7284..82f50bc88f 100644
+index d2affc7284..fe87b1aaf0 100644
 --- a/res/xml/accounts_dashboard_settings.xml
 +++ b/res/xml/accounts_dashboard_settings.xml
 @@ -45,4 +45,16 @@
@@ -92,7 +92,7 @@ index d2affc7284..82f50bc88f 100644
 +        <intent
 +            android:action="android.intent.action.VIEW"
 +            android:targetPackage="com.google.android.apps.restore"
-+            android:targetClass="com.google.android.apps.pixelmigrate.cloudrestore.component.CloudRestoreFlowActivity" />
++            android:targetClass="com.google.android.apps.pixelmigrate.component.FlowChoiceActivity" />
 +
 +    </Preference>
 +

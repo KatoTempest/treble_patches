@@ -1,0 +1,28 @@
+From def4cc1f0393581d5ea52a59f53725653c18a958 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:10:48 -0500
+Subject: [PATCH 61/95] Fix bug Device that can't support adoptable storage
+ cannot read the sdcard
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/0e12a3d67b966fd1f3aee66b196fa8d6734324fc
+---
+ .../core/java/com/android/server/StorageManagerService.java     | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/services/core/java/com/android/server/StorageManagerService.java b/services/core/java/com/android/server/StorageManagerService.java
+index e215889a73c..dd7f4560000 100644
+--- a/services/core/java/com/android/server/StorageManagerService.java
++++ b/services/core/java/com/android/server/StorageManagerService.java
+@@ -1528,6 +1528,8 @@ class StorageManagerService extends IStorageManager.Stub
+ 	    // Assume all SDs match this as well
+             if (vol.disk.isAdoptable() || vol.disk.isSd()) {
+                 vol.mountFlags |= VolumeInfo.MOUNT_FLAG_VISIBLE;
++            } else if (vol.disk.isSd()) {
++                vol.mountFlags |= VolumeInfo.MOUNT_FLAG_VISIBLE;
+             }
+ 
+             vol.mountUserId = mCurrentUserId;
+-- 
+2.17.1
+

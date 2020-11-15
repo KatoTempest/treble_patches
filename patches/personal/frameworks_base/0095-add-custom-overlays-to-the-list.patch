@@ -1,0 +1,232 @@
+From 28b30dddf792623d984f8ee041c2dbb35da38151 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 17 Nov 2020 08:26:19 -0500
+Subject: [PATCH 95/95] add custom overlays to the list
+
+---
+ ...reinstalled-packages-platform-overlays.xml | 211 ++++++++++++++++++
+ 1 file changed, 211 insertions(+)
+
+diff --git a/data/etc/preinstalled-packages-platform-overlays.xml b/data/etc/preinstalled-packages-platform-overlays.xml
+index 1724715b557..108fdef3b38 100644
+--- a/data/etc/preinstalled-packages-platform-overlays.xml
++++ b/data/etc/preinstalled-packages-platform-overlays.xml
+@@ -44,4 +44,215 @@
+     <install-in-user-type package="com.android.internal.systemui.navbar.twobutton">
+         <install-in user-type="FULL" />
+     </install-in-user-type>
++
++    <install-in-user-type package="com.android.theme.qsalpha50">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qsalpha60">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qsalpha70">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qsalpha80">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qsalpha90">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.blue">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.brown">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.cyan">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.deepgreen">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.deepurple">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.orange">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.pink">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.red">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.yellow">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.amber">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.color.gray">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.navbar.hidehandle">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.navbar.longhandle">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.navbar.mediumhandle">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level1">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level2">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level3">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level4">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level5">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level6">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.speedui.level7">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel32">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel33">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel34">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel42">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel43">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.qspanel55">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.padding12">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.padding16">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.padding20">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.padding24">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.padding28">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.statusbar1">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.statusbar2">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.statusbar3">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.darkui.amoled">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.darkui.charcoal">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.darkui.graydim">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.darkui.midnight">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.alegreyasans">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.arbutus">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.arsenal">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.arvo">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.caveat">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.comfortaa">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.cormorantinfant">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.cuprum">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.exo2">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.gabriela">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.inter">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.jura">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.lato">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.lobster">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.montserrat">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.notosans">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.notoserif">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.oswald">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.pacifico">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.philosopher">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.rubik">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.source">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.ubuntu">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.viaodalibre">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.vollkorn">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
++    <install-in-user-type package="com.android.theme.font.zilla">
++        <install-in user-type="FULL" />
++    </install-in-user-type>
+ </config>
+-- 
+2.17.1
+

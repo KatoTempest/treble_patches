@@ -1,7 +1,7 @@
-From e5484eeea3f5fe2326b8274f68da18c0bc28f4b6 Mon Sep 17 00:00:00 2001
+From 038f71a8bdaad033769c6ee28463fdd1247679c2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 12 May 2020 18:47:06 +0300
-Subject: [PATCH 19/23] add French translation
+Subject: [PATCH 19/32] add French translation
 
   * merci https://github.com/Aarqw12
 

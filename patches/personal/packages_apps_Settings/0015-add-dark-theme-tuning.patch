@@ -1,7 +1,7 @@
-From 5b979e5fc1ad2eba3a934b78253a76d90a70d7f5 Mon Sep 17 00:00:00 2001
+From b77aa69282d144bbec91315d10352f9be400db9c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 00:31:56 +0300
-Subject: [PATCH 15/23] add dark theme tuning
+Subject: [PATCH 15/32] add dark theme tuning
 
 	modified:   res/values/strings.xml
 	modified:   res/xml/display_settings.xml

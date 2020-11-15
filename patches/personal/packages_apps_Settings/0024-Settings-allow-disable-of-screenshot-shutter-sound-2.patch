@@ -1,0 +1,141 @@
+From 72b165be400b81c0fd408b2502d5b259b7dcfc20 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 04:47:10 -0500
+Subject: [PATCH 24/32] Settings: allow disable of screenshot shutter sound
+ [2/2]
+
+  from
+  https://github.com/StatiXOS/android_packages_apps_Settings/commit/091939e62984fc8d9c72ab46cda2d0512c169a11
+
+Change-Id: Ie6733b39f6869ecb63ed5807151c5e69234bb0d6
+---
+ res/values-ru/strings.xml                     |  3 ++
+ res/values/strings.xml                        |  3 ++
+ res/xml/sound_settings.xml                    |  5 +++
+ .../ScreenshotSoundPreferenceController.java  | 38 +++++++++++++++++++
+ .../settings/notification/SoundSettings.java  |  6 ++-
+ 5 files changed, 54 insertions(+), 1 deletion(-)
+ create mode 100644 src/com/android/settings/notification/ScreenshotSoundPreferenceController.java
+
+diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
+index 0154a54937..949a3223ca 100644
+--- a/res/values-ru/strings.xml
++++ b/res/values-ru/strings.xml
+@@ -5144,6 +5144,9 @@
+     <!-- SystemUI tuner -->
+     <string name="custom_systemui_tuner">System UI тюнер</string>
+     <string name="custom_systemui_tuner_summary">Открыть настройки старого SystemUI тюнера</string>
++    <!-- Screenshot shutter -->
++    <string name="screenshot_shutter_sound_title">Звук снимка экрана</string>
++
+     <string name="media_output_panel_stop_casting_button" msgid="6094875883164119035">"Прекратить трансляцию"</string>
+     <string name="volte_5G_limited_title" msgid="5908052268836750629">"Отключить VoLTE?"</string>
+     <string name="volte_5G_limited_text" msgid="7150583768725182345">"Сеть 5G также будет отключена.\nВо время голосового вызова Интернет недоступен и некоторые приложения могут не работать."</string>
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 9b91f9b980..9e6495b991 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -12183,6 +12183,9 @@
+     <!-- SystemUI tuner -->
+     <string name="custom_systemui_tuner">System UI Tuner</string>
+     <string name="custom_systemui_tuner_summary">Open old SystemUI tuner\u2019s settings</string>
++
++    <!-- Screenshot shutter -->
++    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+  
+     <!-- Title for media control settings [CHAR LIMIT=50]-->
+     <string name="media_controls_title">Media</string>
+diff --git a/res/xml/sound_settings.xml b/res/xml/sound_settings.xml
+index fc5c3e222a..e4a1233883 100644
+--- a/res/xml/sound_settings.xml
++++ b/res/xml/sound_settings.xml
+@@ -165,6 +165,11 @@
+           android:key="dial_pad_tones"
+           android:title="@string/dial_pad_tones_title"/>
+ 
++        <!-- Screenshot sound -->
++        <SwitchPreference
++          android:key="screenshot_shutter_sound"
++          android:title="@string/screenshot_shutter_sound_title" />
++
+         <!-- Screen locking sounds -->
+         <SwitchPreference
+           android:key="screen_locking_sounds"
+diff --git a/src/com/android/settings/notification/ScreenshotSoundPreferenceController.java b/src/com/android/settings/notification/ScreenshotSoundPreferenceController.java
+new file mode 100644
+index 0000000000..0df38bc422
+--- /dev/null
++++ b/src/com/android/settings/notification/ScreenshotSoundPreferenceController.java
+@@ -0,0 +1,38 @@
++/*
++ * Copyright (C) 2017 The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.settings.notification;
++
++import static com.android.settings.notification.SettingPref.TYPE_SYSTEM;
++
++import android.content.Context;
++
++import android.provider.Settings.System;
++import com.android.settings.SettingsPreferenceFragment;
++import com.android.settingslib.core.lifecycle.Lifecycle;
++
++public class ScreenshotSoundPreferenceController extends SettingPrefController {
++
++    private static final String KEY_SCREENSHOT_SOUNDS = "screenshot_shutter_sound";
++
++    public ScreenshotSoundPreferenceController(Context context, SettingsPreferenceFragment parent,
++            Lifecycle lifecycle) {
++        super(context, parent, lifecycle);
++        mPreference = new SettingPref(
++            TYPE_SYSTEM, KEY_SCREENSHOT_SOUNDS, System.SCREENSHOT_SHUTTER_SOUND, DEFAULT_ON);
++    }
++
++}
+diff --git a/src/com/android/settings/notification/SoundSettings.java b/src/com/android/settings/notification/SoundSettings.java
+index b088fe3596..c36a0a9298 100644
+--- a/src/com/android/settings/notification/SoundSettings.java
++++ b/src/com/android/settings/notification/SoundSettings.java
+@@ -262,6 +262,8 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
+                 new BootSoundPreferenceController(context);
+         final EmergencyTonePreferenceController emergencyTonePreferenceController =
+                 new EmergencyTonePreferenceController(context, fragment, lifecycle);
++        final ScreenshotSoundPreferenceController screenshotSoundPreferenceController =
++                new ScreenshotSoundPreferenceController(context, fragment, lifecycle);
+ 
+         controllers.add(dialPadTonePreferenceController);
+         controllers.add(screenLockSoundPreferenceController);
+@@ -272,6 +274,7 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
+         controllers.add(dockAudioMediaPreferenceController);
+         controllers.add(bootSoundPreferenceController);
+         controllers.add(emergencyTonePreferenceController);
++        controllers.add(screenshotSoundPreferenceController);
+         controllers.add(new PreferenceCategoryController(context,
+                 "other_sounds_and_vibrations_category").setChildren(
+                 Arrays.asList(dialPadTonePreferenceController,
+@@ -282,7 +285,8 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
+                         vibrateOnTouchPreferenceController,
+                         dockAudioMediaPreferenceController,
+                         bootSoundPreferenceController,
+-                        emergencyTonePreferenceController)));
++                        emergencyTonePreferenceController,
++                        screenshotSoundPreferenceController)));
+ 
+         return controllers;
+     }
+-- 
+2.17.1
+

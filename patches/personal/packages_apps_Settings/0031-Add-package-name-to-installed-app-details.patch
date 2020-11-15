@@ -1,0 +1,106 @@
+From e6e813faf63744927b3f01820935f2c684db8adc Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 17 Nov 2020 02:53:16 -0500
+Subject: [PATCH 31/32] Add package name to installed app details
+
+  from
+  https://github.com/ezio84/abc_packages_apps_Settings/commit/c0e5678f1d9bbd00c08e99d6bf573cc3f184d7b7
+
+Change-Id: I3ff922d50c8a5929cef7a62fa3d8b1669ccb4359
+---
+ res/values/strings.xml                        |  3 ++
+ res/xml/app_info_settings.xml                 |  8 +++++
+ .../appinfo/AppInfoDashboardFragment.java     |  1 +
+ .../AppPackageNamePreferenceController.java   | 35 +++++++++++++++++++
+ 4 files changed, 47 insertions(+)
+ create mode 100644 src/com/android/settings/applications/appinfo/AppPackageNamePreferenceController.java
+
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index 9f4eb74348..8b3e0e562c 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -12193,6 +12193,9 @@
+     <string name="hide_label">Hide</string>
+     <string name="long_label">Long</string>
+ 
++    <!-- Manage applications, package string displayed in app snippet -->
++    <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
++
+     <!-- Title for media control settings [CHAR LIMIT=50]-->
+     <string name="media_controls_title">Media</string>
+     <!-- Summary for media control settings [CHAR LIMIT=60]-->
+diff --git a/res/xml/app_info_settings.xml b/res/xml/app_info_settings.xml
+index a76f0d9420..eab64c7115 100644
+--- a/res/xml/app_info_settings.xml
++++ b/res/xml/app_info_settings.xml
+@@ -177,6 +177,14 @@
+         settings:controller="com.android.settings.applications.appinfo.AppSettingPreferenceController"
+         settings:allowDividerAbove="true" />
+ 
++    <Preference
++        android:key="app_package_name"
++        android:selectable="false"
++        android:order="9998"
++        settings:controller="com.android.settings.applications.appinfo.AppPackageNamePreferenceController"
++        settings:allowDividerAbove="true"
++        settings:enableCopying="true"/>
++
+     <Preference
+         android:key="app_version"
+         android:selectable="false"
+diff --git a/src/com/android/settings/applications/appinfo/AppInfoDashboardFragment.java b/src/com/android/settings/applications/appinfo/AppInfoDashboardFragment.java
+index 7aad2452b0..2813bd2464 100755
+--- a/src/com/android/settings/applications/appinfo/AppInfoDashboardFragment.java
++++ b/src/com/android/settings/applications/appinfo/AppInfoDashboardFragment.java
+@@ -162,6 +162,7 @@ public class AppInfoDashboardFragment extends DashboardFragment
+                 .setParentFragment(this);
+         use(AppStoragePreferenceController.class).setParentFragment(this);
+         use(AppVersionPreferenceController.class).setParentFragment(this);
++        use(AppPackageNamePreferenceController.class).setParentFragment(this);
+         use(InstantAppDomainsPreferenceController.class).setParentFragment(this);
+ 
+         final WriteSystemSettingsPreferenceController writeSystemSettings =
+diff --git a/src/com/android/settings/applications/appinfo/AppPackageNamePreferenceController.java b/src/com/android/settings/applications/appinfo/AppPackageNamePreferenceController.java
+new file mode 100644
+index 0000000000..c286ecaaa8
+--- /dev/null
++++ b/src/com/android/settings/applications/appinfo/AppPackageNamePreferenceController.java
+@@ -0,0 +1,35 @@
++/*
++ * Copyright (C) 2017 The Android Open Source Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.settings.applications.appinfo;
++
++import android.content.Context;
++import android.text.BidiFormatter;
++
++import com.android.settings.R;
++
++public class AppPackageNamePreferenceController extends AppInfoPreferenceControllerBase {
++
++    public AppPackageNamePreferenceController(Context context, String key) {
++        super(context, key);
++    }
++
++    @Override
++    public CharSequence getSummary() {
++        return mContext.getString(R.string.packagename_text,
++                BidiFormatter.getInstance().unicodeWrap(mParent.getPackageInfo().packageName));
++    }
++}
+-- 
+2.17.1
+

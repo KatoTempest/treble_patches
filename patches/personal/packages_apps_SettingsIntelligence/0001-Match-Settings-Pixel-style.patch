@@ -34,7 +34,7 @@ index 5f621cd..3f1c202 100644
 -            app:cardCornerRadius="2dp"
 -            app:cardBackgroundColor="?android:attr/colorBackground"
 +            app:cardBackgroundColor="@color/search_panel_background"
-+            app:cardCornerRadius="4dp"
++            app:cardCornerRadius="6dp"
              app:cardElevation="2dp">
              <Toolbar
                  android:id="@+id/search_toolbar"
