@@ -1,34 +1,31 @@
-From e6e813faf63744927b3f01820935f2c684db8adc Mon Sep 17 00:00:00 2001
+From 91c5ac6afad83ee82894a643b01909df0ab66332 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:53:16 -0500
-Subject: [PATCH 31/32] Add package name to installed app details
+Subject: [PATCH 31/38] Add package name to installed app details
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/c0e5678f1d9bbd00c08e99d6bf573cc3f184d7b7
 
 Change-Id: I3ff922d50c8a5929cef7a62fa3d8b1669ccb4359
 ---
- res/values/strings.xml                        |  3 ++
+ res/values/custom_strings.xml                 |  2 ++
  res/xml/app_info_settings.xml                 |  8 +++++
  .../appinfo/AppInfoDashboardFragment.java     |  1 +
  .../AppPackageNamePreferenceController.java   | 35 +++++++++++++++++++
- 4 files changed, 47 insertions(+)
+ 4 files changed, 46 insertions(+)
  create mode 100644 src/com/android/settings/applications/appinfo/AppPackageNamePreferenceController.java
 
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 9f4eb74348..8b3e0e562c 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -12193,6 +12193,9 @@
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 94e3ddb786..5f1d8492f2 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -50,4 +50,6 @@
+     <string name="gesture_handle_title">Handle view</string>
      <string name="hide_label">Hide</string>
      <string name="long_label">Long</string>
- 
 +    <!-- Manage applications, package string displayed in app snippet -->
 +    <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
-+
-     <!-- Title for media control settings [CHAR LIMIT=50]-->
-     <string name="media_controls_title">Media</string>
-     <!-- Summary for media control settings [CHAR LIMIT=60]-->
+ </resources>
 diff --git a/res/xml/app_info_settings.xml b/res/xml/app_info_settings.xml
 index a76f0d9420..eab64c7115 100644
 --- a/res/xml/app_info_settings.xml

@@ -1,7 +1,7 @@
-From 40704a8e3ed6ead03c2a51065ba5f62b01cd71cb Mon Sep 17 00:00:00 2001
+From 3286cab7c6664f050afb3d58ee329f11dee8535a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 08:23:44 -0400
-Subject: [PATCH 49/95] android.view: Speed things up!!
+Subject: [PATCH 049/129] android.view: Speed things up!!
 
   from
   https://github.com/BootleggersROM/frameworks_base/commit/507f7de1f4cb6dca77ab8ea7d076fbadd637b5fe

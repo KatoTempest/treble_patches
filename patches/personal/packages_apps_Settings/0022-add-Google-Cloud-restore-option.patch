@@ -1,83 +1,41 @@
-From 46fc177506344f84587a3c3c2526be8c99d6b1f3 Mon Sep 17 00:00:00 2001
+From 4965f934c4db524ff94f892dca6ebe2c980599a9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 9 Oct 2020 13:08:40 -0400
-Subject: [PATCH 22/32] add Google Cloud restore option
+Subject: [PATCH 22/38] add Google Cloud restore option
 
 Change-Id: I6a742b6a257235220aabe1332b005d3a74e5d662
 ---
- res/values-ru/strings.xml               | 35 ++++++++++++++-----------
- res/values/strings.xml                  |  4 +++
- res/xml/accounts_dashboard_settings.xml | 12 +++++++++
- 3 files changed, 35 insertions(+), 16 deletions(-)
+ res/values-ru/custom_strings.xml        |  3 +++
+ res/values/custom_strings.xml           |  3 +++
+ res/xml/accounts_dashboard_settings.xml | 12 ++++++++++++
+ 3 files changed, 18 insertions(+)
 
-diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
-index af7a7660f2..4a96f55eed 100644
---- a/res/values-ru/strings.xml
-+++ b/res/values-ru/strings.xml
-@@ -5117,22 +5117,6 @@
-     <string name="rtt_settings_no_visible" msgid="7440356831140948382"></string>
-     <string name="rtt_settings_visible_during_call" msgid="7866181103286073700"></string>
-     <string name="rtt_settings_always_visible" msgid="2364173070088756238"></string>
--    <string name="media_output_panel_stop_casting_button" msgid="6094875883164119035">"Прекратить трансляцию"</string>
--    <string name="volte_5G_limited_title" msgid="5908052268836750629">"Отключить VoLTE?"</string>
--    <string name="volte_5G_limited_text" msgid="7150583768725182345">"Сеть 5G также будет отключена.\nВо время голосового вызова Интернет недоступен и некоторые приложения могут не работать."</string>
--    <string name="no_5g_in_dsds_text" product="default" msgid="772747677303920132">"При одновременном использовании двух SIM-карт подключение на этом телефоне будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
--    <string name="no_5g_in_dsds_text" product="tablet" msgid="4757328474425714624">"При одновременном использовании двух SIM-карт подключение на этом планшете будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
--    <string name="no_5g_in_dsds_text" product="device" msgid="6983783505032683314">"При одновременном использовании двух SIM-карт подключение на этом устройстве будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
--    <string name="cached_apps_freezer" msgid="1057519579761550350">"Приостановить работу кешированных приложений"</string>
--    <string name="overlay_settings_title" msgid="1032863083496396365">"Разрешить экранный оверлей в настройках"</string>
--    <string name="overlay_settings_summary" msgid="2745336273786148166">"Разрешить приложениям, которые могут показываться поверх других, накладываться на экраны настроек"</string>
--    <string name="media_controls_title" msgid="403271085636252597">"Медиа"</string>
--    <string name="media_controls_summary" msgid="5032071475867165587">"Скрывать проигрыватель по окончании мультимедийного сеанса"</string>
--    <string name="media_controls_resume_description" msgid="2333689676163363582">"С помощью проигрывателя вы можете восстанавливать мультимедийный сеанс на панели быстрых настроек"</string>
--    <string name="media_controls_hide_player" msgid="2751439192580884015">"Проигрыватель скрыт"</string>
--    <string name="media_controls_show_player" msgid="8504571042365814021">"Проигрыватель показан"</string>
--    <string name="media_controls_no_players" msgid="3493023121892175946">"Нет доступных проигрывателей"</string>
--    <string name="keywords_media_controls" msgid="8345490568291778638">"Медиа"</string>
-     <!-- Three-fingers-swipe to screenshot -->
-     <string name="three_finger_gesture">Жест для сохранения снимка экрана</string>
-     <string name="three_finger_gesture_summary">Проведите тремя пальцами вниз по экрану для сохранения его       снимка</string>
-@@ -5154,4 +5138,23 @@
-     <string name="theme_customization_darkui_title">Варианты тёмного оформления</string>
-     <string name="theme_customization_qsalpha_title">Прозрачность панели быстрых настроек</string>
-     <string name="theme_customization_speedui_title">Ускорение интерфейса/Энергосбережение</string>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index 52c05ccf6b..9ce964a80b 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -43,4 +43,7 @@
+     <string name="theme_customization_icon_shape_title">Закругление иконок</string>
+     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar start and end padding (e.g. set 12dp paddings) -->
+     <string name="theme_customization_padding_title">Отступы строки состояния</string>
 +    <!-- Google backup restore -->
 +    <string name="custom_google_sync_title">Восстановить резервную копию из Google Cloud</string>
 +    <string name="custom_google_sync_summary">Запустить вручную восстановление резервной копии из Google Cloud\nПримечание: нужны com.google.android.apps.restore и вход в учётную запись</string>
-+    <string name="media_output_panel_stop_casting_button" msgid="6094875883164119035">"Прекратить трансляцию"</string>
-+    <string name="volte_5G_limited_title" msgid="5908052268836750629">"Отключить VoLTE?"</string>
-+    <string name="volte_5G_limited_text" msgid="7150583768725182345">"Сеть 5G также будет отключена.\nВо время голосового вызова Интернет недоступен и некоторые приложения могут не работать."</string>
-+    <string name="no_5g_in_dsds_text" product="default" msgid="772747677303920132">"При одновременном использовании двух SIM-карт подключение на этом телефоне будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
-+    <string name="no_5g_in_dsds_text" product="tablet" msgid="4757328474425714624">"При одновременном использовании двух SIM-карт подключение на этом планшете будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
-+    <string name="no_5g_in_dsds_text" product="device" msgid="6983783505032683314">"При одновременном использовании двух SIM-карт подключение на этом устройстве будет ограничено сетями 4G. "<annotation id="url">"Подробнее…"</annotation></string>
-+    <string name="cached_apps_freezer" msgid="1057519579761550350">"Приостановить работу кешированных приложений"</string>
-+    <string name="overlay_settings_title" msgid="1032863083496396365">"Разрешить экранный оверлей в настройках"</string>
-+    <string name="overlay_settings_summary" msgid="2745336273786148166">"Разрешить приложениям, которые могут показываться поверх других, накладываться на экраны настроек"</string>
-+    <string name="media_controls_title" msgid="403271085636252597">"Медиа"</string>
-+    <string name="media_controls_summary" msgid="5032071475867165587">"Скрывать проигрыватель по окончании мультимедийного сеанса"</string>
-+    <string name="media_controls_resume_description" msgid="2333689676163363582">"С помощью проигрывателя вы можете восстанавливать мультимедийный сеанс на панели быстрых настроек"</string>
-+    <string name="media_controls_hide_player" msgid="2751439192580884015">"Проигрыватель скрыт"</string>
-+    <string name="media_controls_show_player" msgid="8504571042365814021">"Проигрыватель показан"</string>
-+    <string name="media_controls_no_players" msgid="3493023121892175946">"Нет доступных проигрывателей"</string>
-+    <string name="keywords_media_controls" msgid="8345490568291778638">"Медиа"</string>
  </resources>
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 50d9b67ab1..dabc70be67 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -12176,6 +12176,10 @@
-     <!-- Summary for allowing screen overlays on Settings app. [CHAR LIMIT=NONE]-->
-     <string name="overlay_settings_summary">Allow apps that can display over other apps to overlay Settings screens</string>
- 
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 51362ab45e..4c1442a407 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -37,4 +37,7 @@
+     <string name="theme_customization_speedui_title">UI Speed up/Powersaving</string>
+     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar start and end padding (e.g. set 12dp paddings) -->
+     <string name="theme_customization_padding_title">Status Bar padding</string>
 +    <!-- Google backup restore -->
 +    <string name="custom_google_sync_title">Restore Google Cloud backup</string>
 +    <string name="custom_google_sync_summary">Manually launch Google Cloud backup restore action\nNote: need com.google.android.apps.restore and logging in to the Google account</string>
-+ 
-     <!-- Title for media control settings [CHAR LIMIT=50]-->
-     <string name="media_controls_title">Media</string>
-     <!-- Summary for media control settings [CHAR LIMIT=60]-->
+ </resources>
 diff --git a/res/xml/accounts_dashboard_settings.xml b/res/xml/accounts_dashboard_settings.xml
-index d2affc7284..fe87b1aaf0 100644
+index d2affc7284..82f50bc88f 100644
 --- a/res/xml/accounts_dashboard_settings.xml
 +++ b/res/xml/accounts_dashboard_settings.xml
 @@ -45,4 +45,16 @@
@@ -92,7 +50,7 @@ index d2affc7284..fe87b1aaf0 100644
 +        <intent
 +            android:action="android.intent.action.VIEW"
 +            android:targetPackage="com.google.android.apps.restore"
-+            android:targetClass="com.google.android.apps.pixelmigrate.component.FlowChoiceActivity" />
++            android:targetClass="com.google.android.apps.pixelmigrate.cloudrestore.component.CloudRestoreFlowActivity" />
 +
 +    </Preference>
 +

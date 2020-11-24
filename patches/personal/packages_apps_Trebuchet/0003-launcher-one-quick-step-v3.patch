@@ -1,7 +1,7 @@
-From f552fd5a6b547513e22a9dc3011781b3dbf31e16 Mon Sep 17 00:00:00 2001
+From 1b660d0ed43753dd0ece991e633920317df95590 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 12 Mar 2020 23:26:15 +0200
-Subject: [PATCH] launcher one quick step v3
+Subject: [PATCH 3/4] launcher one quick step v3
 
 	modified:   res/anim/no_anim.xml
 	modified:   res/anim/task_open_enter.xml

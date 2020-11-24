@@ -16,7 +16,7 @@ index 510d1e911..3074d62b9 100644
  import /system/etc/init/hw/init.usb.configfs.rc
  import /system/etc/init/hw/init.${ro.zygote}.rc
  
-+service gsicharger /charger
++service gsicharger /bin/charger
 +    class gsicharger
 +    group system shell input graphics
 +    seclabel u:r:charger:s0

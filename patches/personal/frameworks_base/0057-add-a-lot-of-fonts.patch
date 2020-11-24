@@ -1,7 +1,7 @@
-From 8f89d9662cc1c4cff7097cd9bc2a8412c4372140 Mon Sep 17 00:00:00 2001
+From fe99961c76ac65ca3eab1e87a8dfe745db282e6a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Nov 2020 16:23:11 -0500
-Subject: [PATCH 57/95] add a lot of fonts
+Subject: [PATCH 057/129] add a lot of fonts
 
 ---
  data/fonts/fonts.xml                          | 207 +++++++++++++++++-

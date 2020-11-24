@@ -1,0 +1,96 @@
+From 36eb84a4a7b453612f2d6a7de189b5287b810ae6 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:41:09 -0500
+Subject: [PATCH 092/129] improve scrolling
+
+  from
+  https://github.com/BlissRoms/platform_frameworks_base/commit/8deacbf2abf81a662bb319b4d51e421aac426542
+  https://github.com/BlissRoms/platform_frameworks_base/commit/e9e393a29ffbee84d423ca6a30158623a9fe58bd
+---
+ core/java/android/widget/AbsListView.java | 17 +++++++++++++++--
+ core/java/android/widget/ScrollView.java  |  1 +
+ 2 files changed, 16 insertions(+), 2 deletions(-)
+
+diff --git a/core/java/android/widget/AbsListView.java b/core/java/android/widget/AbsListView.java
+index 16e87f8bca9..1e0a245dc01 100644
+--- a/core/java/android/widget/AbsListView.java
++++ b/core/java/android/widget/AbsListView.java
+@@ -659,6 +659,7 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+     private int mMinimumVelocity;
+     @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.P, trackingBug = 124051740)
+     private int mMaximumVelocity;
++    private int mDecacheThreshold;
+     private float mVelocityScale = 1.0f;
+ 
+     final boolean[] mIsScrap = new boolean[1];
+@@ -924,6 +925,7 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+         mVerticalScrollFactor = configuration.getScaledVerticalScrollFactor();
+         mMinimumVelocity = configuration.getScaledMinimumFlingVelocity();
+         mMaximumVelocity = configuration.getScaledMaximumFlingVelocity();
++        mDecacheThreshold = mMaximumVelocity / 2;
+         mOverscrollDistance = configuration.getScaledOverscrollDistance();
+         mOverflingDistance = configuration.getScaledOverflingDistance();
+ 
+@@ -4656,7 +4658,7 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+                     // Keep the fling alive a little longer
+                     postDelayed(this, FLYWHEEL_TIMEOUT);
+                 } else {
+-                    endFling();
++                    endFling(false); // Don't disable the scrolling cache right after it was enabled
+                     mTouchMode = TOUCH_MODE_SCROLL;
+                     reportScrollStateChange(OnScrollListener.SCROLL_STATE_TOUCH_SCROLL);
+                 }
+@@ -4667,11 +4669,17 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+ 
+         FlingRunnable() {
+             mScroller = new OverScroller(getContext());
++            mScroller.setFriction(0.006f);
+         }
+ 
+         // Use AbsListView#fling(int) instead
+         @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.P)
+         void start(int initialVelocity) {
++            if (Math.abs(initialVelocity) > mDecacheThreshold) {
++                // For long flings, scrolling cache causes stutter, so don't use it
++                clearScrollingCache();
++            }
++
+             int initialY = initialVelocity < 0 ? Integer.MAX_VALUE : 0;
+             mLastFlingY = initialY;
+             mScroller.setInterpolator(null);
+@@ -4751,6 +4759,10 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+         // To interrupt a fling early you should use smoothScrollBy(0,0) instead
+         @UnsupportedAppUsage(maxTargetSdk = Build.VERSION_CODES.P)
+         void endFling() {
++            endFling(true);
++        }
++
++        void endFling(boolean clearCache) {
+             mTouchMode = TOUCH_MODE_REST;
+ 
+             removeCallbacks(this);
+@@ -4759,7 +4771,8 @@ public abstract class AbsListView extends AdapterView<ListAdapter> implements Te
+             if (!mSuppressIdleStateChangeCall) {
+                 reportScrollStateChange(OnScrollListener.SCROLL_STATE_IDLE);
+             }
+-            clearScrollingCache();
++            if (clearCache)
++                clearScrollingCache();
+             mScroller.abortAnimation();
+ 
+             if (mFlingStrictSpan != null) {
+diff --git a/core/java/android/widget/ScrollView.java b/core/java/android/widget/ScrollView.java
+index 3847d6b2a61..4d19a2f1f4e 100644
+--- a/core/java/android/widget/ScrollView.java
++++ b/core/java/android/widget/ScrollView.java
+@@ -343,6 +343,7 @@ public class ScrollView extends FrameLayout {
+ 
+     private void initScrollView() {
+         mScroller = new OverScroller(getContext());
++        mScroller.setFriction(0.006f);
+         setFocusable(true);
+         setDescendantFocusability(FOCUS_AFTER_DESCENDANTS);
+         setWillNotDraw(false);
+-- 
+2.17.1
+

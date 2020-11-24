@@ -1,7 +1,7 @@
-From d4aa1aa3e19515b53c73fbb6ccfb537f69b4439b Mon Sep 17 00:00:00 2001
+From 79a3c43d29c121494194e68230026981c65be303 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 04:38:19 +0300
-Subject: [PATCH 23/95] rework systemUI for statusbar overlays
+Subject: [PATCH 023/129] rework systemUI for statusbar overlays
 
 	modified:   core/res/res/values/dimens.xml
 	modified:   packages/SystemUI/res/drawable/stat_sys_alarm.xml

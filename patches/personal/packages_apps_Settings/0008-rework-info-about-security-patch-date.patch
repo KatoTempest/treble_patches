@@ -1,36 +1,55 @@
-From f740de75b189867779da76afa1b48c790ccbfce2 Mon Sep 17 00:00:00 2001
+From e408fe95d4298abfabcdbc9e265a747b8c161882 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 5 Feb 2020 14:33:45 +0200
-Subject: [PATCH 08/32] rework info about security patch date
+Subject: [PATCH 08/38] rework info about security patch date
 
   * based on
   https://github.com/LineageOS/android_packages_apps_Settings/commit/2fe6f351f98cb9456359182bcf902546b3dc638b#diff-fc3d9d607f2fdcc77bb9e90ba41e7389
 
-	modified:   res/values/strings.xml
-	modified:   res/xml/firmware_version.xml
-	modified:   src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchLevelPreferenceController.java
-	new file:   src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchVendorPreferenceController.java
+Change-Id: Ib47d94a49e65d6ae90f93c80b263ba23aaeb7668
 ---
- res/values/strings.xml                        |  2 +
+ res/values-fr/custom_strings.xml              |  2 +
+ res/values-ru/custom_strings.xml              |  2 +
+ res/values/custom_strings.xml                 |  2 +
  res/xml/firmware_version.xml                  |  9 +--
  ...ecurityPatchLevelPreferenceController.java | 60 ++++++++-------
  ...curityPatchVendorPreferenceController.java | 73 +++++++++++++++++++
- 4 files changed, 108 insertions(+), 36 deletions(-)
+ 6 files changed, 112 insertions(+), 36 deletions(-)
  create mode 100644 src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchVendorPreferenceController.java
 
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 3fb83dcd2a..25102b10cc 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -3052,6 +3052,8 @@
-     <string name="firmware_version">Android version</string>
-     <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
-     <string name="security_patch">Android security update</string>
+diff --git a/res/values-fr/custom_strings.xml b/res/values-fr/custom_strings.xml
+index 9af1eded6b..7eaa8e45df 100644
+--- a/res/values-fr/custom_strings.xml
++++ b/res/values-fr/custom_strings.xml
+@@ -23,4 +23,6 @@
+     <string name="selinux_status_disabled">Désactivé</string>
+     <string name="selinux_status_permissive">Permissif</string>
+     <string name="selinux_status_enforcing">Strict</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="security_patch_vendor">Patch de sécurité du vendor</string>
+ </resources>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index 4f856b1d5c..d8152dc70d 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -23,4 +23,6 @@
+     <string name="selinux_status_disabled">Отсутствует</string>
+     <string name="selinux_status_permissive">Отключена</string>
+     <string name="selinux_status_enforcing">Включена</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="security_patch_vendor">Дата обновления безопасности от производителя</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 988f116a72..487fcf913f 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -21,4 +21,6 @@
+     <string name="selinux_status_disabled">Disabled</string>
+     <string name="selinux_status_permissive">Permissive</string>
+     <string name="selinux_status_enforcing">Enforcing</string>
 +    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
 +    <string name="security_patch_vendor">Vendor security patch level</string>
-     <!-- About phone screen, status item label  [CHAR LIMIT=40] -->
-     <string name="model_info">Model</string>
-     <!-- About phone screen, dialog title for showing hardware information such as model, serial number, etc.[CHAR LIMIT=60] -->
+ </resources>
 diff --git a/res/xml/firmware_version.xml b/res/xml/firmware_version.xml
 index 9793318986..02463266b3 100644
 --- a/res/xml/firmware_version.xml

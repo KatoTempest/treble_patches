@@ -1,30 +1,50 @@
-From b77aa69282d144bbec91315d10352f9be400db9c Mon Sep 17 00:00:00 2001
+From 2ea80728f47e37e5e82f5da485b53d9bf0514c37 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 00:31:56 +0300
-Subject: [PATCH 15/32] add dark theme tuning
+Subject: [PATCH 15/38] add dark theme tuning
 
-	modified:   res/values/strings.xml
-	modified:   res/xml/display_settings.xml
-	modified:   src/com/android/settings/DisplaySettings.java
+Change-Id: I2e6517e97eb8b5b4579544f35be4a4e5e8dc97cd
 ---
- res/values/strings.xml                        | 2 ++
+ res/values-fr/custom_strings.xml              | 2 ++
+ res/values-ru/custom_strings.xml              | 2 ++
+ res/values/custom_strings.xml                 | 2 ++
  res/xml/display_settings.xml                  | 3 +++
  src/com/android/settings/DisplaySettings.java | 2 ++
- 3 files changed, 7 insertions(+)
+ 5 files changed, 11 insertions(+)
 
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index ed44136d9f..8ea87212d9 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -10661,6 +10661,8 @@
-     <string name="theme_customization_icon_pack_title">Icon style</string>
-     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the      adaptive icon shape (e.g. launcher and quick settings icons). -->
-     <string name="theme_customization_icon_shape_title">Icon shape</string>
+diff --git a/res/values-fr/custom_strings.xml b/res/values-fr/custom_strings.xml
+index 4439d89f0c..64116e2cce 100644
+--- a/res/values-fr/custom_strings.xml
++++ b/res/values-fr/custom_strings.xml
+@@ -31,4 +31,6 @@
+     <string name="theme_customization_qspanel_title">disposition des panneaux dans la dalle</string>
+     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icons spacing (e.g. set 2dp paddings) -->
+     <string name="theme_customization_statusbar_title">espacement de la barre de statut</string>
++    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the dark mode colors -->
++    <string name="theme_customization_darkui_title">themes noir</string>
+ </resources>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index 0dda2d0b71..d216766ed8 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -31,4 +31,6 @@
+     <string name="theme_customization_qspanel_title">Сетка быстрых настроек</string>
+     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icons spacing (e.g. set 2dp paddings) -->
+     <string name="theme_customization_statusbar_title">Разделение иконок в строке состояния</string>
++    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the dark mode colors -->
++    <string name="theme_customization_darkui_title">Варианты тёмного оформления</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 83ebd788d7..210708aa29 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -29,4 +29,6 @@
+     <string name="theme_customization_qspanel_title">QS Panel layout</string>
+     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icons spacing (e.g. set 2dp paddings) -->
+     <string name="theme_customization_statusbar_title">Status Bar spacing</string>
 +    <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the dark mode colors -->
 +    <string name="theme_customization_darkui_title">Dark themes</string>
-     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the statusbar icons spacing (e.g. set 2dp paddings). -->
-     <string name="theme_customization_statusbar_title">Status Bar spacing</string>
-     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the QS Panel layout (e.g. set 3x3 icons). -->
+ </resources>
 diff --git a/res/xml/display_settings.xml b/res/xml/display_settings.xml
 index 020d1b5369..579f04be33 100644
 --- a/res/xml/display_settings.xml

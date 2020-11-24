@@ -1,7 +1,7 @@
-From 4a118bd85adafc41e2464ee7c8c94d0aacdf5170 Mon Sep 17 00:00:00 2001
+From b4d33274e43f20e1f9ce034ad26634400762725a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 26 Feb 2020 21:14:52 +0200
-Subject: [PATCH 12/95] rework Gray accent overlay v2
+Subject: [PATCH 012/129] rework Gray accent overlay v2
 
 	modified:   packages/overlays/AccentColorGrayOverlay/res/values/colors_device_defaults.xml
 ---

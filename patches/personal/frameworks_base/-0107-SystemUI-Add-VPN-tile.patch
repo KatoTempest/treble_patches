@@ -1,0 +1,748 @@
+From e2d02853b8e0ba9c2db0472bad02539c38bd2af3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 05:56:51 -0500
+Subject: [PATCH 107/128] SystemUI: Add VPN tile
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/b06fbeffd2f37332a1ce6b8128d8dd4732a94b4c
+---
+ .../android/net/IConnectivityManager.aidl     |   3 +
+ packages/SystemUI/res/drawable/ic_qs_vpn.xml  |  27 ++
+ .../res/layout/vpn_credentials_dialog.xml     |  51 ++++
+ .../SystemUI/res/values-ru/custom_strings.xml |   6 +
+ packages/SystemUI/res/values/config.xml       |   2 +-
+ .../SystemUI/res/values/custom_strings.xml    |   7 +
+ .../systemui/qs/tileimpl/QSFactoryImpl.java   |   8 +-
+ .../android/systemui/qs/tiles/VpnTile.java    | 274 ++++++++++++++++++
+ .../statusbar/policy/SecurityController.java  |   9 +
+ .../policy/SecurityControllerImpl.java        |  86 +++++-
+ .../utils/leaks/FakeSecurityController.java   |  26 ++
+ .../android/server/ConnectivityService.java   |  20 ++
+ 12 files changed, 516 insertions(+), 3 deletions(-)
+ create mode 100644 packages/SystemUI/res/drawable/ic_qs_vpn.xml
+ create mode 100644 packages/SystemUI/res/layout/vpn_credentials_dialog.xml
+ create mode 100644 packages/SystemUI/src/com/android/systemui/qs/tiles/VpnTile.java
+
+diff --git a/core/java/android/net/IConnectivityManager.aidl b/core/java/android/net/IConnectivityManager.aidl
+index 69a47f24a0a..216b5c6960b 100644
+--- a/core/java/android/net/IConnectivityManager.aidl
++++ b/core/java/android/net/IConnectivityManager.aidl
+@@ -232,4 +232,7 @@ interface IConnectivityManager
+ 
+     void simulateDataStall(int detectionMethod, long timestampMillis, in Network network,
+                 in PersistableBundle extras);
++
++    // Lineage custom API
++    VpnProfile[] getAllLegacyVpns();
+ }
+diff --git a/packages/SystemUI/res/drawable/ic_qs_vpn.xml b/packages/SystemUI/res/drawable/ic_qs_vpn.xml
+new file mode 100644
+index 00000000000..d06a270681f
+--- /dev/null
++++ b/packages/SystemUI/res/drawable/ic_qs_vpn.xml
+@@ -0,0 +1,27 @@
++<!--
++Copyright (C) 2014 The Android Open Source Project
++
++   Licensed under the Apache License, Version 2.0 (the "License");
++    you may not use this file except in compliance with the License.
++    You may obtain a copy of the License at
++
++         http://www.apache.org/licenses/LICENSE-2.0
++
++    Unless required by applicable law or agreed to in writing, software
++    distributed under the License is distributed on an "AS IS" BASIS,
++    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++    See the License for the specific language governing permissions and
++    limitations under the License.
++-->
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++        android:width="48dp"
++        android:height="48dp"
++        android:viewportWidth="24.0"
++        android:viewportHeight="24.0">
++    <path
++        android:fillColor="#FFFFFFFF"
++        android:pathData="M12.09,9C11.11,7.5 9.43,6.5 7.5,6.5C4.46,6.5 2,8.96 2,12c0,3.04 2.46,5.5 5.5,5.5c1.93,0 3.61,-1 4.59,-2.5H14v3h6v-3h2V9H12.09zM20,13h-2v3h-2v-3h-5.16c-0.43,1.44 -1.76,2.5 -3.34,2.5C5.57,15.5 4,13.93 4,12c0,-1.93 1.57,-3.5 3.5,-3.5c1.58,0 2.9,1.06 3.34,2.5H20V13z"/>
++    <path
++        android:fillColor="#FFFFFFFF"
++        android:pathData="M7.5,12m-1.5,0a1.5,1.5 0,1 1,3 0a1.5,1.5 0,1 1,-3 0"/>
++</vector>
+diff --git a/packages/SystemUI/res/layout/vpn_credentials_dialog.xml b/packages/SystemUI/res/layout/vpn_credentials_dialog.xml
+new file mode 100644
+index 00000000000..71c96ecb18f
+--- /dev/null
++++ b/packages/SystemUI/res/layout/vpn_credentials_dialog.xml
+@@ -0,0 +1,51 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- Copyright (C) 2019 The LineageOS Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:orientation="vertical"
++        android:padding="16dp">
++
++    <TextView android:id="@+id/hint"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginBottom="8dp"
++            android:textColor="?android:attr/textColorPrimary"
++            android:textAppearance="?android:attr/textAppearanceSmall" />
++
++    <TextView
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:text="@string/vpn_credentials_username" />
++
++    <EditText android:id="@+id/username"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:singleLine="true" />
++
++    <TextView
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:text="@string/vpn_credentials_password" />
++
++    <EditText android:id="@+id/password"
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:password="true"
++            android:singleLine="true" />
++
++</LinearLayout>
+diff --git a/packages/SystemUI/res/values-ru/custom_strings.xml b/packages/SystemUI/res/values-ru/custom_strings.xml
+index 707267fbc62..d0182dbdb65 100644
+--- a/packages/SystemUI/res/values-ru/custom_strings.xml
++++ b/packages/SystemUI/res/values-ru/custom_strings.xml
+@@ -37,4 +37,10 @@
+     <string name="accessibility_quick_settings_ambient_display_on">Индикация событий экраном включена</string>
+     <string name="accessibility_quick_settings_ambient_display_changed_off">Индикация событий экраном была отключена</string>
+     <string name="accessibility_quick_settings_ambient_display_changed_on">Индикация событий экраном была включена</string>
++    <!-- VPN QS tile -->
++    <string name="quick_settings_vpn_connect_dialog_title">Подключиться к\u2026</string>
++    <string name="vpn_credentials_hint">Пожалуйста, введите ваши учетные данные для подключения к <xliff:g id="name">%s</xliff:g></string>
++    <string name="vpn_credentials_username">Имя пользователя</string>
++    <string name="vpn_credentials_password">Пароль</string>
++    <string name="vpn_credentials_dialog_connect">Подключиться</string>
+ </resources>
+diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
+index 79962f78667..4187c7af104 100644
+--- a/packages/SystemUI/res/values/config.xml
++++ b/packages/SystemUI/res/values/config.xml
+@@ -114,7 +114,7 @@
+ 
+     <!-- Tiles native to System UI. Order should match "quick_settings_tiles_default" -->
+     <string name="quick_settings_tiles_stock" translatable="false">
+-        wifi,cell,battery,dnd,flashlight,rotation,bt,airplane,nfc,location,hotspot,inversion,saver,dark,work,cast,night,screenrecord,reverse,heads_up,volume_panel,usb_tether,ambient_display
++        wifi,cell,battery,dnd,flashlight,rotation,bt,airplane,nfc,location,hotspot,inversion,saver,dark,work,cast,night,screenrecord,reverse,heads_up,volume_panel,usb_tether,ambient_display,vpn
+     </string>
+ 
+     <!-- The tiles to display in QuickSettings -->
+diff --git a/packages/SystemUI/res/values/custom_strings.xml b/packages/SystemUI/res/values/custom_strings.xml
+index 5d571c5dc1f..f4b8f73583c 100644
+--- a/packages/SystemUI/res/values/custom_strings.xml
++++ b/packages/SystemUI/res/values/custom_strings.xml
+@@ -35,4 +35,11 @@
+     <string name="accessibility_quick_settings_ambient_display_on">Ambient display on</string>
+     <string name="accessibility_quick_settings_ambient_display_changed_off">Ambient display turned off</string>
+     <string name="accessibility_quick_settings_ambient_display_changed_on">Ambient display turned on</string>
++    <!-- VPN QS tile -->
++    <string name="quick_settings_vpn_label">VPN</string>
++    <string name="quick_settings_vpn_connect_dialog_title">Connect to\u2026</string>
++    <string name="vpn_credentials_hint">Please enter your credentials for connecting to <xliff:g id="name">%s</xliff:g></string>
++    <string name="vpn_credentials_username">Username</string>
++    <string name="vpn_credentials_password">Password</string>
++    <string name="vpn_credentials_dialog_connect">Connect</string>
+ </resources>
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/tileimpl/QSFactoryImpl.java b/packages/SystemUI/src/com/android/systemui/qs/tileimpl/QSFactoryImpl.java
+index b4d778c9f48..88bf379015c 100644
+--- a/packages/SystemUI/src/com/android/systemui/qs/tileimpl/QSFactoryImpl.java
++++ b/packages/SystemUI/src/com/android/systemui/qs/tileimpl/QSFactoryImpl.java
+@@ -47,6 +47,7 @@ import com.android.systemui.qs.tiles.UiModeNightTile;
+ import com.android.systemui.qs.tiles.UsbTetherTile;
+ import com.android.systemui.qs.tiles.UserTile;
+ import com.android.systemui.qs.tiles.VolumeTile;
++import com.android.systemui.qs.tiles.VpnTile;
+ import com.android.systemui.qs.tiles.WifiTile;
+ import com.android.systemui.qs.tiles.WorkModeTile;
+ import com.android.systemui.util.leak.GarbageMonitor;
+@@ -86,6 +87,7 @@ public class QSFactoryImpl implements QSFactory {
+     private final Provider<HeadsUpTile> mHeadsUpTileProvider;
+     private final Provider<UsbTetherTile> mUsbTetherTileProvider;
+     private final Provider<VolumeTile> mVolumeTileProvider;
++    private final Provider<VpnTile> mVpnTileProvider;
+ 
+     private final Lazy<QSHost> mQsHostLazy;
+ 
+@@ -114,7 +116,8 @@ public class QSFactoryImpl implements QSFactory {
+             Provider<AmbientDisplayTile> ambientDisplayTileProvider,
+             Provider<HeadsUpTile> headsUpTileProvider,
+             Provider<UsbTetherTile> usbTetherTileProvider,
+-            Provider<VolumeTile> volumeTileProvider) {
++            Provider<VolumeTile> volumeTileProvider,
++            Provider<VpnTile> vpnTileProvider) {
+         mQsHostLazy = qsHostLazy;
+         mWifiTileProvider = wifiTileProvider;
+         mBluetoothTileProvider = bluetoothTileProvider;
+@@ -140,6 +143,7 @@ public class QSFactoryImpl implements QSFactory {
+         mHeadsUpTileProvider = headsUpTileProvider;
+         mUsbTetherTileProvider = usbTetherTileProvider;
+         mVolumeTileProvider = volumeTileProvider;
++        mVpnTileProvider = vpnTileProvider;
+     }
+ 
+     public QSTile createTile(String tileSpec) {
+@@ -199,6 +203,8 @@ public class QSFactoryImpl implements QSFactory {
+                 return mUsbTetherTileProvider.get();
+             case "volume_panel":
+                 return mVolumeTileProvider.get();
++            case "vpn":
++                return mVpnTileProvider.get();
+         }
+ 
+         // Custom tiles
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/tiles/VpnTile.java b/packages/SystemUI/src/com/android/systemui/qs/tiles/VpnTile.java
+new file mode 100644
+index 00000000000..f960da02ce2
+--- /dev/null
++++ b/packages/SystemUI/src/com/android/systemui/qs/tiles/VpnTile.java
+@@ -0,0 +1,274 @@
++/*
++ * Copyright (C) 2019-2020 The LineageOS Project
++ *
++ * Licensed under the Apache License, Version 2.0 (the "License");
++ * you may not use this file except in compliance with the License.
++ * You may obtain a copy of the License at
++ *
++ *      http://www.apache.org/licenses/LICENSE-2.0
++ *
++ * Unless required by applicable law or agreed to in writing, software
++ * distributed under the License is distributed on an "AS IS" BASIS,
++ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++ * See the License for the specific language governing permissions and
++ * limitations under the License.
++ */
++
++package com.android.systemui.qs.tiles;
++
++import android.app.AlertDialog;
++import android.app.Dialog;
++import android.content.Intent;
++import android.content.pm.PackageManager;
++import android.provider.Settings;
++import android.service.quicksettings.Tile;
++import android.text.Editable;
++import android.text.TextWatcher;
++import android.util.Log;
++import android.view.LayoutInflater;
++import android.view.View;
++import android.view.WindowManager.LayoutParams;
++import android.widget.Button;
++import android.widget.EditText;
++import android.widget.TextView;
++
++import com.android.internal.net.VpnConfig;
++import com.android.internal.net.VpnProfile;
++import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
++import com.android.systemui.R;
++import com.android.systemui.plugins.ActivityStarter;
++import com.android.systemui.plugins.qs.QSTile.BooleanState;
++import com.android.systemui.qs.QSHost;
++import com.android.systemui.qs.tileimpl.QSTileImpl;
++import com.android.systemui.statusbar.phone.SystemUIDialog;
++import com.android.systemui.statusbar.policy.KeyguardStateController;
++import com.android.systemui.statusbar.policy.SecurityController;
++
++import java.util.List;
++import java.util.Set;
++import javax.inject.Inject;
++
++/** Quick settings tile: VPN **/
++public class VpnTile extends QSTileImpl<BooleanState> {
++    private final SecurityController mController;
++    private final KeyguardStateController mKeyguard;
++    private final Callback mCallback = new Callback();
++    private final ActivityStarter mActivityStarter;
++
++    @Inject
++    public VpnTile(QSHost host, SecurityController securityController,
++            KeyguardStateController keyguardStateController, ActivityStarter activityStarter) {
++        super(host);
++        mController = securityController;
++        mKeyguard = keyguardStateController;
++        mActivityStarter = activityStarter;
++    }
++
++    @Override
++    public BooleanState newTileState() {
++        return new BooleanState();
++    }
++
++    @Override
++    public void handleSetListening(boolean listening) {
++        if (DEBUG) Log.d(TAG, "handleSetListening " + listening);
++        if (listening) {
++            mController.addCallback(mCallback);
++            mKeyguard.addCallback(mCallback);
++        } else {
++            mController.removeCallback(mCallback);
++            mKeyguard.removeCallback(mCallback);
++        }
++    }
++
++    @Override
++    protected void handleUserSwitch(int newUserId) {
++        super.handleUserSwitch(newUserId);
++        mController.onUserSwitched(newUserId);
++    }
++
++    @Override
++    public Intent getLongClickIntent() {
++        return new Intent(Settings.ACTION_VPN_SETTINGS);
++    }
++
++    @Override
++    protected void handleSecondaryClick() {
++        handleClick();
++    }
++
++    @Override
++    protected void handleClick() {
++        if (mKeyguard.isMethodSecure() && !mKeyguard.canDismissLockScreen()) {
++            mActivityStarter.postQSRunnableDismissingKeyguard(() -> {
++                showConnectDialogOrDisconnect();
++            });
++        } else {
++            showConnectDialogOrDisconnect();
++        }
++    }
++
++    private void showConnectDialogOrDisconnect() {
++        if (mController.isVpnRestricted()) {
++            return;
++        }
++        if (mController.isVpnEnabled()) {
++            mController.disconnectPrimaryVpn();
++            return;
++        }
++        final List<VpnProfile> profiles = mController.getConfiguredLegacyVpns();
++        final List<String> vpnApps = mController.getVpnAppPackageNames();
++        if (profiles.isEmpty() && vpnApps.isEmpty()) {
++            return;
++        } else if (profiles.isEmpty() && vpnApps.size() == 1) {
++            mController.launchVpnApp(vpnApps.get(0));
++            return;
++        } else if (vpnApps.isEmpty() && profiles.size() == 1) {
++            connectVpnOrAskForCredentials(profiles.get(0));
++            return;
++        }
++
++        mUiHandler.post(() -> {
++            CharSequence[] labels = new CharSequence[profiles.size() + vpnApps.size()];
++            int profileCount = profiles.size();
++            for (int i = 0; i < profileCount; i++) {
++                labels[i] = profiles.get(i).name;
++            }
++            for (int i = 0; i < vpnApps.size(); i++) {
++                try {
++                    labels[profileCount + i] = VpnConfig.getVpnLabel(mContext, vpnApps.get(i));
++                } catch (PackageManager.NameNotFoundException e) {
++                    labels[profileCount + i] = vpnApps.get(i);
++                }
++            }
++
++            Dialog dialog = new AlertDialog.Builder(mContext)
++                    .setTitle(R.string.quick_settings_vpn_connect_dialog_title)
++                    .setItems(labels, (dlg, which) -> {
++                        if (which < profileCount) {
++                            connectVpnOrAskForCredentials(profiles.get(which));
++                        } else {
++                            mController.launchVpnApp(vpnApps.get(which - profileCount));
++                        }
++                    })
++                    .setNegativeButton(android.R.string.cancel, null)
++                    .create();
++            prepareAndShowDialog(dialog);
++            mHost.collapsePanels();
++        });
++    }
++
++    @Override
++    public CharSequence getTileLabel() {
++        return mContext.getString(R.string.quick_settings_vpn_label);
++    }
++
++    @Override
++    protected void handleUpdateState(BooleanState state, Object arg) {
++        state.label = mContext.getString(R.string.quick_settings_vpn_label);
++        state.value = mController.isVpnEnabled();
++        state.secondaryLabel = mController.getPrimaryVpnName();
++        state.contentDescription = state.label;
++        state.icon = ResourceIcon.get(R.drawable.ic_qs_vpn);
++        boolean hasAnyVpn = mController.getConfiguredLegacyVpns().size() > 0
++                || mController.getVpnAppPackageNames().size() > 0;
++        if (mController.isVpnRestricted() || !hasAnyVpn) {
++            state.state = Tile.STATE_UNAVAILABLE;
++        } else if (state.value) {
++            state.state = Tile.STATE_ACTIVE;
++        } else {
++            state.state = Tile.STATE_INACTIVE;
++        }
++    }
++
++    @Override
++    public int getMetricsCategory() {
++        return MetricsEvent.VPN;
++    }
++
++    private void connectVpnOrAskForCredentials(VpnProfile profile) {
++        if (profile.saveLogin) {
++            mController.connectLegacyVpn(profile);
++            return;
++        }
++
++        final LayoutInflater inflater = LayoutInflater.from(mContext);
++        final View dialogView = inflater.inflate(R.layout.vpn_credentials_dialog, null);
++        final EditText userNameEditor = dialogView.findViewById(R.id.username);
++        final EditText passwordEditor = dialogView.findViewById(R.id.password);
++        final TextView hint = dialogView.findViewById(R.id.hint);
++
++        hint.setText(mContext.getString(R.string.vpn_credentials_hint, profile.name));
++
++        AlertDialog dialog = new AlertDialog.Builder(mContext)
++                .setView(dialogView)
++                .setPositiveButton(R.string.vpn_credentials_dialog_connect, (dlg, which) -> {
++                    profile.username = userNameEditor.getText().toString();
++                    profile.password = passwordEditor.getText().toString();
++                    mController.connectLegacyVpn(profile);
++                })
++                .setNegativeButton(android.R.string.cancel, null)
++                .create();
++
++        prepareAndShowDialog(dialog);
++        mHost.collapsePanels();
++        mUiHandler.post(() -> {
++            TextWatcher watcher = new UsernameAndPasswordWatcher(userNameEditor, passwordEditor,
++                    dialog.getButton(AlertDialog.BUTTON_POSITIVE));
++            userNameEditor.addTextChangedListener(watcher);
++            passwordEditor.addTextChangedListener(watcher);
++        });
++    }
++
++    private void prepareAndShowDialog(Dialog dialog) {
++        dialog.getWindow().setType(LayoutParams.TYPE_KEYGUARD_DIALOG);
++        SystemUIDialog.setShowForAllUsers(dialog, true);
++        SystemUIDialog.registerDismissListener(dialog);
++        SystemUIDialog.setWindowOnTop(dialog);
++        mUiHandler.post(() -> dialog.show());
++    }
++
++    private static final class UsernameAndPasswordWatcher implements TextWatcher {
++        private final Button mOkButton;
++        private final EditText mUserNameEditor;
++        private final EditText mPasswordEditor;
++
++        public UsernameAndPasswordWatcher(EditText userName, EditText password, Button okButton) {
++            mUserNameEditor = userName;
++            mPasswordEditor = password;
++            mOkButton = okButton;
++            updateOkButtonState();
++        }
++
++        @Override
++        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
++        }
++
++        @Override
++        public void onTextChanged(CharSequence s, int start, int before, int count) {
++        }
++
++        @Override
++        public void afterTextChanged(Editable s) {
++            updateOkButtonState();
++        }
++
++        private void updateOkButtonState() {
++            mOkButton.setEnabled(mUserNameEditor.getText().length() > 0
++                    && mPasswordEditor.getText().length() > 0);
++        }
++    }
++
++    private final class Callback implements
++            SecurityController.SecurityControllerCallback, KeyguardStateController.Callback {
++        @Override
++        public void onStateChanged() {
++            refreshState();
++        }
++
++        @Override
++        public void onKeyguardShowingChanged() {
++            refreshState();
++        }
++    };
++}
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityController.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityController.java
+index 79d264ca457..063ccac82a3 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityController.java
+@@ -15,9 +15,12 @@
+  */
+ package com.android.systemui.statusbar.policy;
+ 
++import com.android.internal.net.VpnProfile;
+ import com.android.systemui.Dumpable;
+ import com.android.systemui.statusbar.policy.SecurityController.SecurityControllerCallback;
+ 
++import java.util.List;
++
+ public interface SecurityController extends CallbackController<SecurityControllerCallback>,
+         Dumpable {
+     /** Whether the device has device owner, even if not on this user. */
+@@ -41,6 +44,12 @@ public interface SecurityController extends CallbackController<SecurityControlle
+     boolean hasCACertInWorkProfile();
+     void onUserSwitched(int newUserId);
+ 
++    List<VpnProfile> getConfiguredLegacyVpns();
++    List<String> getVpnAppPackageNames();
++    void connectLegacyVpn(VpnProfile profile);
++    void launchVpnApp(String packageName);
++    void disconnectPrimaryVpn();
++
+     public interface SecurityControllerCallback {
+         void onStateChanged();
+     }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java
+index 309d4b04ebb..efa69475b12 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/SecurityControllerImpl.java
+@@ -16,6 +16,7 @@
+ package com.android.systemui.statusbar.policy;
+ 
+ import android.app.ActivityManager;
++import android.app.AppOpsManager;
+ import android.app.admin.DevicePolicyManager;
+ import android.content.BroadcastReceiver;
+ import android.content.Context;
+@@ -45,6 +46,7 @@ import android.util.SparseArray;
+ import com.android.internal.annotations.GuardedBy;
+ import com.android.internal.net.LegacyVpnInfo;
+ import com.android.internal.net.VpnConfig;
++import com.android.internal.net.VpnProfile;
+ import com.android.systemui.R;
+ import com.android.systemui.broadcast.BroadcastDispatcher;
+ import com.android.systemui.dagger.qualifiers.Background;
+@@ -52,8 +54,10 @@ import com.android.systemui.settings.CurrentUserTracker;
+ 
+ import java.io.FileDescriptor;
+ import java.io.PrintWriter;
++import java.util.Arrays;
+ import java.util.ArrayList;
+ import java.util.concurrent.Executor;
++import java.util.List;
+ 
+ import javax.inject.Inject;
+ import javax.inject.Singleton;
+@@ -79,6 +83,7 @@ public class SecurityControllerImpl extends CurrentUserTracker implements Securi
+     private static final int CA_CERT_LOADING_RETRY_TIME_IN_MS = 30_000;
+ 
+     private final Context mContext;
++    private final AppOpsManager mAppOpsManager;
+     private final ConnectivityManager mConnectivityManager;
+     private final IConnectivityManager mConnectivityManagerService;
+     private final DevicePolicyManager mDevicePolicyManager;
+@@ -108,6 +113,8 @@ public class SecurityControllerImpl extends CurrentUserTracker implements Securi
+     ) {
+         super(broadcastDispatcher);
+         mContext = context;
++        mAppOpsManager = (AppOpsManager)
++                context.getSystemService(Context.APP_OPS_SERVICE);
+         mDevicePolicyManager = (DevicePolicyManager)
+                 context.getSystemService(Context.DEVICE_POLICY_SERVICE);
+         mConnectivityManager = (ConnectivityManager)
+@@ -192,6 +199,82 @@ public class SecurityControllerImpl extends CurrentUserTracker implements Securi
+         }
+     }
+ 
++    @Override
++    public List<VpnProfile> getConfiguredLegacyVpns() {
++        try {
++            return Arrays.asList(mConnectivityManagerService.getAllLegacyVpns());
++        } catch (RemoteException e) {
++            Log.e(TAG, "Failed to connect", e);
++            return new ArrayList<VpnProfile>();
++        }
++    }
++
++    @Override
++    public List<String> getVpnAppPackageNames() {
++        List<String> result = new ArrayList<>();
++        List<AppOpsManager.PackageOps> apps = mAppOpsManager.getPackagesForOps(
++                new int[] {AppOpsManager.OP_ACTIVATE_VPN});
++        if (apps != null) {
++            for (AppOpsManager.PackageOps pkg : apps) {
++                if (mVpnUserId != UserHandle.getUserId(pkg.getUid())) {
++                    continue;
++                }
++                // Look for a MODE_ALLOWED permission to activate VPN.
++                boolean allowed = false;
++                for (AppOpsManager.OpEntry op : pkg.getOps()) {
++                    if (op.getOp() == AppOpsManager.OP_ACTIVATE_VPN &&
++                            op.getMode() == AppOpsManager.MODE_ALLOWED) {
++                        allowed = true;
++                        break;
++                    }
++                }
++                if (allowed) {
++                    result.add(pkg.getPackageName());
++                }
++            }
++        }
++
++        return result;
++    }
++
++    @Override
++    public void connectLegacyVpn(VpnProfile profile) {
++        try {
++            mConnectivityManagerService.startLegacyVpn(profile);
++        } catch (IllegalStateException | RemoteException e) {
++            Log.e(TAG, "Failed to connect", e);
++        }
++    }
++
++    @Override
++    public void launchVpnApp(String packageName) {
++        try {
++            UserHandle user = UserHandle.of(mCurrentUserId);
++            Context userContext = mContext.createPackageContextAsUser(
++                    mContext.getPackageName(), 0 /* flags */, user);
++            PackageManager pm = userContext.getPackageManager();
++            Intent appIntent = pm.getLaunchIntentForPackage(packageName);
++            if (appIntent != null) {
++                userContext.startActivityAsUser(appIntent, user);
++            }
++        } catch (NameNotFoundException nnfe) {
++            Log.w(TAG, "VPN provider does not exist: " + packageName, nnfe);
++        }
++    }
++
++    @Override
++    public void disconnectPrimaryVpn() {
++        VpnConfig cfg = mCurrentVpns.get(mVpnUserId);
++        if (cfg != null) {
++            final String user = cfg.legacy ? VpnConfig.LEGACY_VPN : cfg.user;
++            try {
++                mConnectivityManagerService.prepareVpn(user, VpnConfig.LEGACY_VPN, mVpnUserId);
++            } catch (RemoteException e) {
++                Log.e(TAG, "Failed to disconnect", e);
++            }
++        }
++    }
++
+     private int getWorkProfileUserId(int userId) {
+         for (final UserInfo userInfo : mUserManager.getProfiles(userId)) {
+             if (userInfo.isManagedProfile()) {
+@@ -326,7 +409,8 @@ public class SecurityControllerImpl extends CurrentUserTracker implements Securi
+ 
+     private String getNameForVpnConfig(VpnConfig cfg, UserHandle user) {
+         if (cfg.legacy) {
+-            return mContext.getString(R.string.legacy_vpn_name);
++            return cfg.session != null
++                    ? cfg.session : mContext.getString(R.string.legacy_vpn_name);
+         }
+         // The package name for an active VPN is stored in the 'user' field of its VpnConfig
+         final String vpnPackage = cfg.user;
+diff --git a/packages/SystemUI/tests/src/com/android/systemui/utils/leaks/FakeSecurityController.java b/packages/SystemUI/tests/src/com/android/systemui/utils/leaks/FakeSecurityController.java
+index e8911a2f5d4..f708aa2037e 100644
+--- a/packages/SystemUI/tests/src/com/android/systemui/utils/leaks/FakeSecurityController.java
++++ b/packages/SystemUI/tests/src/com/android/systemui/utils/leaks/FakeSecurityController.java
+@@ -16,9 +16,13 @@ package com.android.systemui.utils.leaks;
+ 
+ import android.testing.LeakCheck;
+ 
++import com.android.internal.net.VpnProfile;
+ import com.android.systemui.statusbar.policy.SecurityController;
+ import com.android.systemui.statusbar.policy.SecurityController.SecurityControllerCallback;
+ 
++import java.util.ArrayList;
++import java.util.List;
++
+ public class FakeSecurityController extends BaseLeakChecker<SecurityControllerCallback>
+         implements SecurityController {
+     public FakeSecurityController(LeakCheck test) {
+@@ -109,4 +113,26 @@ public class FakeSecurityController extends BaseLeakChecker<SecurityControllerCa
+     public void onUserSwitched(int newUserId) {
+ 
+     }
++
++    @Override
++    public List<VpnProfile> getConfiguredLegacyVpns() {
++        return new ArrayList<>();
++    }
++
++    @Override
++    public List<String> getVpnAppPackageNames() {
++        return new ArrayList<>();
++    }
++
++    @Override
++    public void connectLegacyVpn(VpnProfile profile) {
++    }
++
++    @Override
++    public void launchVpnApp(String packageName) {
++    }
++
++    @Override
++    public void disconnectPrimaryVpn() {
++    }
+ }
+diff --git a/services/core/java/com/android/server/ConnectivityService.java b/services/core/java/com/android/server/ConnectivityService.java
+index 03c31a6971a..aee3a4eca03 100644
+--- a/services/core/java/com/android/server/ConnectivityService.java
++++ b/services/core/java/com/android/server/ConnectivityService.java
+@@ -4571,6 +4571,26 @@ public class ConnectivityService extends IConnectivityManager.Stub
+         }
+     }
+ 
++    @Override
++    public VpnProfile[] getAllLegacyVpns() {
++        NetworkStack.checkNetworkStackPermission(mContext);
++
++        final ArrayList<VpnProfile> result = new ArrayList<>();
++        final long token = Binder.clearCallingIdentity();
++        try {
++            for (String key : mKeyStore.list(Credentials.VPN)) {
++                final VpnProfile profile = VpnProfile.decode(key,
++                        mKeyStore.get(Credentials.VPN + key));
++                if (profile != null) {
++                    result.add(profile);
++                }
++            }
++        } finally {
++            Binder.restoreCallingIdentity(token);
++        }
++        return result.toArray(new VpnProfile[result.size()]);
++    }
++
+     /**
+      * Stores the given VPN profile based on the provisioning package name.
+      *
+-- 
+2.17.1
+

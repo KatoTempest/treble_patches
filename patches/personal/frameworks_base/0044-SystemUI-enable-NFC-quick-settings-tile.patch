@@ -1,7 +1,7 @@
-From 326afda6dc78d5ccd65e6ef23eb2d3bcc6c924f1 Mon Sep 17 00:00:00 2001
+From a99398e9eea3bfdef0fc62044605d3de673965f9 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Sun, 17 Mar 2019 19:11:12 -0400
-Subject: [PATCH 44/95] SystemUI: enable NFC quick settings tile
+Subject: [PATCH 044/129] SystemUI: enable NFC quick settings tile
 
 ---
  packages/SystemUI/res/values/config.xml | 2 +-

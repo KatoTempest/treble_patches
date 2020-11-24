@@ -1,7 +1,7 @@
-From c1b405d638dffc58e2ac548eb6e3ba06511a8e0d Mon Sep 17 00:00:00 2001
+From b557490f527902a08989e2e8dbe2425fb6ceb3d4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 22:42:57 +0300
-Subject: [PATCH 20/95] dynamic QS Panel columns
+Subject: [PATCH 020/129] dynamic QS Panel columns
 
 	modified:   packages/SystemUI/src/com/android/systemui/qs/customize/QSCustomizer.java
 	modified:   packages/SystemUI/src/com/android/systemui/qs/customize/TileAdapter.java

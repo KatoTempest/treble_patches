@@ -1,4 +1,4 @@
-From 4698c777feaf32a3afbbddf5079387e33b4cef9f Mon Sep 17 00:00:00 2001
+From 41b77978ca66b0b03829359e6f693f6370ae02ab Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 Feb 2020 03:37:47 +0200
 Subject: [PATCH 1/2] fix HAL3 green artefacts with Xiaomi vendor

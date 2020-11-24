@@ -1,7 +1,7 @@
-From 18f40580d13f31d60b727dad01dd2b81270c30d2 Mon Sep 17 00:00:00 2001
+From c3324bdc9ae25578737dd6d1d6d4d9f18447276e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Sep 2020 08:59:25 -0400
-Subject: [PATCH 42/95] replace logo mask
+Subject: [PATCH 042/129] replace logo mask
 
 	based on
 	https://github.com/GrapheneOS/platform_frameworks_base/commit/4944a86dd023ada1d9a494d8dae1727cb8ad26b4

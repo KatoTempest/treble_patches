@@ -1,43 +1,38 @@
-From 260c6108cf9b94b87d915ee1cce8cb9bb85d5245 Mon Sep 17 00:00:00 2001
+From 6f6de4add63ab32bf840c10473b27afe55415eae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 03:52:40 -0500
-Subject: [PATCH 32/32] add ROM type info
+Subject: [PATCH 32/38] add ROM type info
 
 Change-Id: Iae053e3680c90fff3e29a8cbbfda46657ad725cd
 ---
- res/values-ru/strings.xml    | 2 ++
- res/values/strings.xml       | 4 ++++
- res/xml/firmware_version.xml | 7 +++++++
- 3 files changed, 13 insertions(+)
+ res/values-ru/custom_strings.xml | 2 ++
+ res/values/custom_strings.xml    | 3 +++
+ res/xml/firmware_version.xml     | 7 +++++++
+ 3 files changed, 12 insertions(+)
 
-diff --git a/res/values-ru/strings.xml b/res/values-ru/strings.xml
-index 83f7ff67a2..7ec30bf6f3 100644
---- a/res/values-ru/strings.xml
-+++ b/res/values-ru/strings.xml
-@@ -5151,6 +5151,8 @@
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index da6fbcb56c..c779f908f3 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -56,4 +56,6 @@
      <string name="gesture_handle_title">Полоса жестов</string>
      <string name="hide_label">Скрыть</string>
      <string name="long_label">Длинная</string>
 +    <!-- ROM type -->
 +    <string name="rom_maintainer">Сопровождающий: eternityson\nТип сборки: phh-GSI</string>
- 
-     <string name="media_output_panel_stop_casting_button" msgid="6094875883164119035">"Прекратить трансляцию"</string>
-     <string name="volte_5G_limited_title" msgid="5908052268836750629">"Отключить VoLTE?"</string>
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 8b3e0e562c..71bc859287 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -12193,6 +12193,10 @@
-     <string name="hide_label">Hide</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 5f1d8492f2..61a6071b6b 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -52,4 +52,7 @@
      <string name="long_label">Long</string>
- 
+     <!-- Manage applications, package string displayed in app snippet -->
+     <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
 +    <!-- ROM type -->
 +    <string name="rom_type_title">CAOS R 300i</string>
 +    <string name="rom_maintainer">Maintainer: eternityson\nType: phh-GSI</string>
-+
-     <!-- Manage applications, package string displayed in app snippet -->
-     <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
- 
+ </resources>
 diff --git a/res/xml/firmware_version.xml b/res/xml/firmware_version.xml
 index 02463266b3..6840a90917 100644
 --- a/res/xml/firmware_version.xml

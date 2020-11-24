@@ -1,45 +1,117 @@
-From 447cb595a4ff3b20963e4014bc95ac34fc09fa18 Mon Sep 17 00:00:00 2001
+From 4ff6d1a560589ad06f5cc6aebd0a10b7d667f411 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 20:49:53 +0200
-Subject: [PATCH 05/32] Add back SELinux info
+Subject: [PATCH 05/38] Add back SELinux info
 
   * based on https://github.com/Evolution-X/packages_apps_Settings/commit/d1dc320beb1b6d0c8d5c04f69951f903d841a183
 
-	modified:   res/values/strings.xml
-	modified:   res/xml/firmware_version.xml
-	new file:   src/com/android/settings/deviceinfo/firmwareversion/SelinuxStatusPreferenceController.java
+Change-Id: I38621bbfcd4feab37779d99c373f082df236f39f
 ---
- res/values/strings.xml                        |  7 ++
+ res/values-fr/custom_strings.xml              | 26 +++++++
+ res/values-ru/custom_strings.xml              | 26 +++++++
+ res/values/custom_strings.xml                 | 24 +++++++
  res/xml/firmware_version.xml                  |  7 ++
  .../SelinuxStatusPreferenceController.java    | 70 +++++++++++++++++++
- 3 files changed, 84 insertions(+)
+ 5 files changed, 153 insertions(+)
+ create mode 100644 res/values-fr/custom_strings.xml
+ create mode 100644 res/values-ru/custom_strings.xml
+ create mode 100644 res/values/custom_strings.xml
  create mode 100644 src/com/android/settings/deviceinfo/firmwareversion/SelinuxStatusPreferenceController.java
 
-diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 331c6a03d6..13ad009216 100644
---- a/res/values/strings.xml
-+++ b/res/values/strings.xml
-@@ -3068,6 +3068,8 @@
-     <string name="build_number">Build number</string>
-     <!-- About phone screen, tapping this button will take user to a seperate UI to check Google Play system update [CHAR LIMIT=60] -->
-     <string name="module_version">Google Play system update</string>
-+    <!-- About phone screen,  setting option name  [CHAR LIMIT=40] -->
-+    <string name="selinux_status">SELinux status</string>
- 
-     <!-- About phone screen, show when a value of some status item is unavailable. -->
-     <string name="device_info_not_available">Not available</string>
-@@ -6907,6 +6909,11 @@
-     from their cell phone carrier. The use of the string is similar to the string
-     "system_update_settings_list_item_title" in this project. [CHAR LIMIT=25] -->
-     <string name="additional_system_update_settings_list_item_title">Additional system updates</string>
+diff --git a/res/values-fr/custom_strings.xml b/res/values-fr/custom_strings.xml
+new file mode 100644
+index 0000000000..9af1eded6b
+--- /dev/null
++++ b/res/values-fr/custom_strings.xml
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!--  Copyright (C) 2007 The Android Open Source Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++ -->
++
++<resources xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <!-- About phone screen, setting option name  [CHAR LIMIT=40] -->
++    <string name="selinux_status">Le status SELinux</string>
 +    <!-- These statuses are displayed when a device was built with SE Android supoprt.
-+    These are displayed by the settings app in the about section. -->
++    These are displayed by the settings app in the about section -->
++    <string name="selinux_status_disabled">Désactivé</string>
++    <string name="selinux_status_permissive">Permissif</string>
++    <string name="selinux_status_enforcing">Strict</string>
++</resources>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+new file mode 100644
+index 0000000000..4f856b1d5c
+--- /dev/null
++++ b/res/values-ru/custom_strings.xml
+@@ -0,0 +1,26 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<!--  Copyright (C) 2007 The Android Open Source Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++ -->
++
++<resources xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <!-- About phone screen, setting option name  [CHAR LIMIT=40] -->
++    <string name="selinux_status">Состояние SELinux защиты</string>
++    <!-- These statuses are displayed when a device was built with SE Android supoprt.
++    These are displayed by the settings app in the about section -->
++    <string name="selinux_status_disabled">Отсутствует</string>
++    <string name="selinux_status_permissive">Отключена</string>
++    <string name="selinux_status_enforcing">Включена</string>
++</resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+new file mode 100644
+index 0000000000..988f116a72
+--- /dev/null
++++ b/res/values/custom_strings.xml
+@@ -0,0 +1,24 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!-- Copyright (C) 2007 The Android Open Source Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <!-- About phone screen, setting option name  [CHAR LIMIT=40] -->
++    <string name="selinux_status">SELinux status</string>
++    <!-- These statuses are displayed when a device was built with SE Android supoprt.
++    These are displayed by the settings app in the about section -->
 +    <string name="selinux_status_disabled">Disabled</string>
 +    <string name="selinux_status_permissive">Permissive</string>
 +    <string name="selinux_status_enforcing">Enforcing</string>
- 
-     <!-- Notification of installed CA Certs --> <skip/>
- 
++</resources>
 diff --git a/res/xml/firmware_version.xml b/res/xml/firmware_version.xml
 index 41f7733cfb..9793318986 100644
 --- a/res/xml/firmware_version.xml

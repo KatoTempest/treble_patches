@@ -1,7 +1,7 @@
-From 1b299843fc0b32e179042d43dc3f58ae881845b1 Mon Sep 17 00:00:00 2001
+From 1be83eb8c59ac5ab7b77c93a0fe25ba6424e75f2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Nov 2020 16:06:05 -0500
-Subject: [PATCH 56/95] Pixel style
+Subject: [PATCH 056/129] Pixel style
 
   based on
   https://github.com/Havoc-OS/android_frameworks_base/commit/9f98b8ef947fcc6f7eea6690fd524807495367fb

@@ -1,6 +1,6 @@
-From 95998cfa7de79339d748510f6ac626010916eec4 Mon Sep 17 00:00:00 2001
+From 1fac541d1f4a24eac33ec1b778f45f355ca8f977 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
-Date: Fri, 13 Nov 2020 11:57:51 -0500
+Date: Wed, 25 Nov 2020 07:17:14 -0500
 Subject: [PATCH 2/2] Revert "Camera: Powerkey shutter (2/2)"
 
 This reverts commit 3643ddab0cb0c4e6b49d46a619822e5b5a2424ca.
@@ -10,12 +10,12 @@ This reverts commit 3643ddab0cb0c4e6b49d46a619822e5b5a2424ca.
  res/values/cm_strings.xml                     |  2 --
  res/xml/camera_preferences.xml                |  5 ----
  src/com/android/camera/CameraActivity.java    | 27 +------------------
- .../android/camera/settings/AppUpgrader.java  | 26 ++----------------
+ .../android/camera/settings/AppUpgrader.java  | 22 ---------------
  src/com/android/camera/settings/Keys.java     |  9 -------
- 7 files changed, 4 insertions(+), 70 deletions(-)
+ 7 files changed, 2 insertions(+), 68 deletions(-)
 
 diff --git a/Android.mk b/Android.mk
-index d73eb26b0..2db7d5b96 100644
+index 36ff2b77c..69cd229fe 100644
 --- a/Android.mk
 +++ b/Android.mk
 @@ -33,10 +33,8 @@ LOCAL_AAPT_FLAGS := \
@@ -28,7 +28,7 @@ index d73eb26b0..2db7d5b96 100644
 -LOCAL_PRIVILEGED_MODULE := true
 +LOCAL_SDK_VERSION := current
  
- LOCAL_PRODUCT_MODULE := true
+ LOCAL_SYSTEM_EXT_MODULE := true
  
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
 index 54885ae04..1fc9fa31b 100644
@@ -145,10 +145,10 @@ index af64c1091..5fef0c3dc 100644
              // consume the key event.
              if (mCurrentModule.onKeyUp(keyCode, event)) {
 diff --git a/src/com/android/camera/settings/AppUpgrader.java b/src/com/android/camera/settings/AppUpgrader.java
-index 6d641b49a..176233359 100644
+index 6d641b49a..bbb7484db 100644
 --- a/src/com/android/camera/settings/AppUpgrader.java
 +++ b/src/com/android/camera/settings/AppUpgrader.java
-@@ -85,21 +85,15 @@ public class AppUpgrader extends SettingsUpgrader {
+@@ -85,12 +85,6 @@ public class AppUpgrader extends SettingsUpgrader {
       * resolution size on the N5 since we stored it with a swapped width/height.
       */
      public static final int NEEDS_N5_16by9_RESOLUTION_SWAP = 7;
@@ -161,17 +161,6 @@ index 6d641b49a..176233359 100644
      /**
       * With this version, port over max brightness settings.
       */
--    private static final int CAMERA_SETTINGS_MAX_BRIGHTNESS = 9;
-+    private static final int CAMERA_SETTINGS_MAX_BRIGHTNESS = 8;
- 
-     /**
-      * Increment this value whenever new AOSP UpgradeSteps need to be executed.
-      */
--    public static final int APP_UPGRADE_VERSION = 9;
-+    public static final int APP_UPGRADE_VERSION = 8;
- 
-     private final AppController mAppController;
- 
 @@ -173,10 +167,6 @@ public class AppUpgrader extends SettingsUpgrader {
              updateN516by9ResolutionIfNeeded(settingsManager);
          }

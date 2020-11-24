@@ -1,0 +1,41 @@
+From 54b8398e2bddf6536094fcc53604ae2e1b831a15 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 08:18:41 -0500
+Subject: [PATCH] merge Russian translation
+
+  from
+  https://github.com/LineageOS/android_packages_apps_Contacts/blob/lineage-17.1/res/values-ru/lineage_strings.xml
+---
+ res/values-ru/lineage_strings.xml | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 res/values-ru/lineage_strings.xml
+
+diff --git a/res/values-ru/lineage_strings.xml b/res/values-ru/lineage_strings.xml
+new file mode 100644
+index 000000000..b02d944ee
+--- /dev/null
++++ b/res/values-ru/lineage_strings.xml
+@@ -0,0 +1,20 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright (C) 2018 The LineageOS Project
++
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++
++          http://www.apache.org/licenses/LICENSE-2.0
++
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <string name="menu_emergency_information_txt">Данные для экстренных случаев</string>
++    <string name="call_via_template">Позвонить через <xliff:g id="account">%1$s</xliff:g></string>
++</resources>
+-- 
+2.17.1
+
