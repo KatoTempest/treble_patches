@@ -1,7 +1,7 @@
-From 22a6cafffabe58514c8e971c1c702220fd9e4a55 Mon Sep 17 00:00:00 2001
+From caeb73de559a9a092dea9c915ae6fb75234a2f7b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:03:04 -0500
-Subject: [PATCH 34/38] Settings: Add hotspot setting to allow VPN upstreams
+Subject: [PATCH 34/45] Settings: Add hotspot setting to allow VPN upstreams
 
   based on
   https://github.com/Evolution-X/packages_apps_Settings/commit/bb38444775985ee07667086e704608b72da8f4a8
@@ -32,12 +32,12 @@ index c779f908f3..b008dd637c 100644
 +    <string name="tethering_allow_vpn_upstreams_summary">Разрешает клиентам использовать VPN-соединение этого устройства для выхода в интернет</string>
  </resources>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
-index 61a6071b6b..2c567f66df 100644
+index 21dfd439bf..a2c670f92c 100644
 --- a/res/values/custom_strings.xml
 +++ b/res/values/custom_strings.xml
 @@ -55,4 +55,7 @@
      <!-- ROM type -->
-     <string name="rom_type_title">CAOS R 300i</string>
+     <string name="rom_type_title">CAOS R 300j</string>
      <string name="rom_maintainer">Maintainer: eternityson\nType: phh-GSI</string>
 +    <!-- Hotspot VPN sharing -->
 +    <string name="tethering_allow_vpn_upstreams_title">Allow clients to use VPNs</string>

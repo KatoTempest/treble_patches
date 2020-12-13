@@ -1,0 +1,32 @@
+From db049084df0c8e035480f164ae4fb56f3377c398 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 13 Dec 2020 16:55:04 -0500
+Subject: [PATCH] FIX: 0120e02c3a4
+
+---
+ .../src/com/android/systemui/screenshot/GlobalScreenshot.java   | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+index 3050f7b6b40..810b0606c7d 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+@@ -28,6 +28,7 @@ import android.animation.ValueAnimator;
+ import android.annotation.Nullable;
+ import android.annotation.SuppressLint;
+ import android.app.ActivityManager;
++import android.app.ActivityOptions;
+ import android.app.ActivityTaskManager;
+ import android.app.Notification;
+ import android.app.PendingIntent;
+@@ -86,6 +87,7 @@ import com.android.internal.logging.UiEventLogger;
+ import com.android.systemui.R;
+ import com.android.systemui.dagger.qualifiers.Main;
+ import com.android.systemui.dagger.qualifiers.UiBackground;
++import com.android.systemui.shared.system.ActivityManagerWrapper;
+ import com.android.systemui.shared.system.TaskStackChangeListener;
+ import com.android.systemui.shared.system.QuickStepContract;
+ 
+-- 
+2.17.1
+

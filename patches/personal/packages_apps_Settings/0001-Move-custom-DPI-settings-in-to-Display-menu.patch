@@ -1,7 +1,7 @@
-From 45c9834a43a69146e412d48a156fa0f927e4beac Mon Sep 17 00:00:00 2001
+From 54317145e558ef745f9ee86b144fcabe67078d16 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:20:39 +0200
-Subject: [PATCH 01/38] Move custom DPI settings in to Display menu
+Subject: [PATCH 01/45] Move custom DPI settings in to Display menu
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_Settings/commit/ae0244c957ec115822da526d54ee3665488e50ef
@@ -46,10 +46,10 @@ index 30dad01749..7de4c5bc21 100644
          android:key="show_operator_name"
          android:title="@string/show_operator_name_title"
 diff --git a/src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java b/src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java
-index f2d60f1981..3ffd82f48e 100644
+index 8eb5c4f6c1..ac778849e5 100644
 --- a/src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java
 +++ b/src/com/android/settings/development/DevelopmentSettingsDashboardFragment.java
-@@ -521,7 +521,6 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
+@@ -558,7 +558,6 @@ public class DevelopmentSettingsDashboardFragment extends RestrictedDashboardFra
          controllers.add(new DefaultLaunchPreferenceController(context, "feature_flags_dashboard"));
          controllers.add(
              new DefaultLaunchPreferenceController(context, "default_usb_configuration"));

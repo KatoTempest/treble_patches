@@ -1,4 +1,4 @@
-From 9b1eabdcabea3eff1e69dff04f639cb12e9ba941 Mon Sep 17 00:00:00 2001
+From 5a31190e21c30e46b9dac361dadaefc60893d667 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 10 Jan 2020 21:26:13 +0200
 Subject: [PATCH 2/3] fix widget's cropped font
@@ -22,5 +22,5 @@ index 3be07eca7..43b847fef 100644
              mLargestClockFontSizePx = largestClockFontSizePx;
              mSmallestClockFontSizePx = 1;
 -- 
-2.17.1
+2.25.1
 

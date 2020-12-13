@@ -1,7 +1,7 @@
-From 187c57cf4be010345c345dbf9ada7d4db400fc7d Mon Sep 17 00:00:00 2001
+From c89d3470ba20080173b92c54aa4d15446ad0b6ea Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 21:21:37 +0200
-Subject: [PATCH 007/129] add Gray accent overlay
+Subject: [PATCH 007/135] add Gray accent overlay
 
 	new file:   packages/overlays/AccentColorGrayOverlay/Android.mk
 	new file:   packages/overlays/AccentColorGrayOverlay/AndroidManifest.xml

@@ -1,7 +1,7 @@
-From 0edc739bc9cbe58f15c957bd15cc80f09cdbc72c Mon Sep 17 00:00:00 2001
+From 77841541bec66dacfdb0f389d9c0764a878a4350 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 36/38] Settings: Reset battery stats [2/2]
+Subject: [PATCH 36/45] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918
@@ -15,7 +15,7 @@ Change-Id: Icf9816140f59f206003825c2c81666e39ce031ae
  4 files changed, 33 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 2f53cc1e7c..3cbc438b71 100644
+index de4ae39e84..a4036ef57c 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -50,6 +50,7 @@
@@ -39,7 +39,7 @@ index ddef315ac2..0778296760 100644
 +    <string name="battery_stats_message">Статистика батареи будет сброшена</string>
  </resources>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
-index f10c4d816a..ec95fc50e0 100644
+index dccc5b23d3..c8afe60238 100644
 --- a/res/values/custom_strings.xml
 +++ b/res/values/custom_strings.xml
 @@ -65,4 +65,7 @@

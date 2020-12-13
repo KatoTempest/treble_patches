@@ -1,7 +1,7 @@
-From 7d06ac4f885538583ee4c1b6ea346050a7c694ab Mon Sep 17 00:00:00 2001
+From 2c05918fa97d4e06de08cffa79fb388870df9633 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Oct 2020 02:40:31 -0400
-Subject: [PATCH 4/5] import OnePlus 8 Pro (instantnoodlep) overlay
+Subject: [PATCH 4/9] import OnePlus 8 Pro 'instantnoodlep' overlay
 
   from https://github.com/luk1337/android_device_oneplus_instantnoodlep
 ---
@@ -36,7 +36,7 @@ index 0000000..54dd8f2
 +include $(BUILD_PACKAGE)
 diff --git a/OnePlus/OP8Pro-SystemUI/AndroidManifest.xml b/OnePlus/OP8Pro-SystemUI/AndroidManifest.xml
 new file mode 100644
-index 0000000..11908eb
+index 0000000..1d5d55c
 --- /dev/null
 +++ b/OnePlus/OP8Pro-SystemUI/AndroidManifest.xml
 @@ -0,0 +1,9 @@
@@ -45,9 +45,9 @@ index 0000000..11908eb
 +        android:versionCode="1"
 +        android:versionName="1.0">
 +        <overlay android:targetPackage="com.android.systemui"
-+                android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
-+                android:requiredSystemPropertyValue="+OnePlus/OnePlus8Pro/OnePlus8Pro*"
-+		android:priority="60" />
++                 android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
++                 android:requiredSystemPropertyValue="+OnePlus/OnePlus8Pro/OnePlus8Pro*"
++                 android:priority="61" />
 +</manifest>
 diff --git a/OnePlus/OP8Pro-SystemUI/res/values/dimens.xml b/OnePlus/OP8Pro-SystemUI/res/values/dimens.xml
 new file mode 100644
@@ -100,7 +100,7 @@ index 0000000..e533101
 +include $(BUILD_PACKAGE)
 diff --git a/OnePlus/OP8Pro/AndroidManifest.xml b/OnePlus/OP8Pro/AndroidManifest.xml
 new file mode 100644
-index 0000000..3cf2e84
+index 0000000..a31444b
 --- /dev/null
 +++ b/OnePlus/OP8Pro/AndroidManifest.xml
 @@ -0,0 +1,10 @@
@@ -109,10 +109,10 @@ index 0000000..3cf2e84
 +        android:versionCode="1"
 +        android:versionName="1.0">
 +        <overlay android:targetPackage="android"
-+                android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
-+		android:requiredSystemPropertyValue="+OnePlus/OnePlus8Pro/OnePlus8Pro*"
-+		android:priority="74"
-+		android:isStatic="true" />
++                 android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
++                 android:requiredSystemPropertyValue="+OnePlus/OnePlus8Pro/OnePlus8Pro*"
++                 android:priority="168"
++                 android:isStatic="true" />
 +</manifest>
 diff --git a/OnePlus/OP8Pro/res/values/config.xml b/OnePlus/OP8Pro/res/values/config.xml
 new file mode 100644
@@ -664,10 +664,10 @@ index 0000000..d5742da
 +    </array>
 +</device>
 diff --git a/overlay.mk b/overlay.mk
-index c5eec8b..40368a6 100644
+index 4b3156d..6e14519 100644
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -73,6 +73,8 @@ PRODUCT_PACKAGES += \
+@@ -76,6 +76,8 @@ PRODUCT_PACKAGES += \
  	treble-overlay-oneplus-op6 \
  	treble-overlay-oneplus-op6t \
  	treble-overlay-oneplus-op6t-systemui \

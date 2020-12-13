@@ -1,0 +1,301 @@
+From e08b79a801cdfe51836eeb182ebdc15353ea9942 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 13 Dec 2020 04:59:51 -0500
+Subject: [PATCH 7/9] added Nokia 5.1 overlay
+
+  from
+  https://github.com/phhusson/vendor_hardware_overlay/commit/8c5846a42f0e583b1b7b8a281b1f2c33662467f1
+---
+ Nokia/PDA_sprout-5.1Plus-X5/Android.mk        |  8 ++
+ .../PDA_sprout-5.1Plus-X5/AndroidManifest.xml | 10 +++
+ .../res/values-land/notch.xml                 | 22 +++++
+ .../res/values/config.xml                     | 75 +++++++++++++++++
+ .../res/values/notch.xml                      | 29 +++++++
+ .../res/xml/power_profile.xml                 | 80 +++++++++++++++++++
+ overlay.mk                                    |  1 +
+ 7 files changed, 225 insertions(+)
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/Android.mk
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/AndroidManifest.xml
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/res/values-land/notch.xml
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/res/values/config.xml
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/res/values/notch.xml
+ create mode 100644 Nokia/PDA_sprout-5.1Plus-X5/res/xml/power_profile.xml
+
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/Android.mk b/Nokia/PDA_sprout-5.1Plus-X5/Android.mk
+new file mode 100644
+index 0000000..7a89882
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/Android.mk
+@@ -0,0 +1,8 @@
++LOCAL_PATH := $(call my-dir)
++include $(CLEAR_VARS)
++LOCAL_MODULE_TAGS := optional
++LOCAL_PACKAGE_NAME := treble-overlay-nokia-pda_sprout-5.1plus-x5
++LOCAL_MODULE_PATH := $(TARGET_OUT_PRODUCT)/overlay
++LOCAL_IS_RUNTIME_RESOURCE_OVERLAY := true
++LOCAL_PRIVATE_PLATFORM_APIS := true
++include $(BUILD_PACKAGE)
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/AndroidManifest.xml b/Nokia/PDA_sprout-5.1Plus-X5/AndroidManifest.xml
+new file mode 100644
+index 0000000..def2ec9
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/AndroidManifest.xml
+@@ -0,0 +1,10 @@
++<manifest xmlns:android="http://schemas.android.com/apk/res/android"
++        package="me.phh.treble.overlay.nokia.pda_sprout_5_1plus_x5"
++        android:versionCode="1"
++        android:versionName="1.0">
++        <overlay android:targetPackage="android"
++                 android:requiredSystemPropertyName="ro.vendor.build.fingerprint"
++                 android:requiredSystemPropertyValue="+Nokia/Panda_00WW*"
++                 android:priority="171"
++                 android:isStatic="true" />
++</manifest>
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/res/values-land/notch.xml b/Nokia/PDA_sprout-5.1Plus-X5/res/values-land/notch.xml
+new file mode 100644
+index 0000000..7e9d1fc
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/res/values-land/notch.xml
+@@ -0,0 +1,22 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++/*
++** Copyright 2017, The Android Open Source Project
++**
++** Licensed under the Apache License, Version 2.0 (the "License");
++** you may not use this file except in compliance with the License.
++** You may obtain a copy of the License at
++**
++**     http://www.apache.org/licenses/LICENSE-2.0
++**
++** Unless required by applicable law or agreed to in writing, software
++** distributed under the License is distributed on an "AS IS" BASIS,
++** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++** See the License for the specific language governing permissions and
++** limitations under the License.
++*/
++-->
++<resources>
++    <!-- Height of the status bar -->
++    <dimen name="status_bar_height">24dp</dimen>
++</resources>
+\ No newline at end of file
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/res/values/config.xml b/Nokia/PDA_sprout-5.1Plus-X5/res/values/config.xml
+new file mode 100644
+index 0000000..11fbd0d
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/res/values/config.xml
+@@ -0,0 +1,75 @@
++<?xml version="1.0" encoding="utf-8"?>
++<resources>
++    <bool name="config_supportDoubleTapWake">true</bool>
++    <bool name="config_dozePulsePickup">true</bool>
++
++    <integer-array name="config_autoBrightnessLcdBacklightValues">
++        <item>2</item>
++        <item>2</item>
++        <item>3</item>
++        <item>3</item>
++        <item>8</item>
++        <item>10</item>
++        <item>12</item>
++        <item>15</item>
++        <item>17</item>
++        <item>24</item>
++        <item>30</item>
++        <item>30</item>
++        <item>44</item>
++        <item>45</item>
++        <item>48</item>
++        <item>55</item>
++        <item>64</item>
++        <item>66</item>
++        <item>69</item>
++        <item>84</item>
++        <item>93</item>
++        <item>105</item>
++        <item>200</item>
++        <item>240</item>
++        <item>255</item>
++    </integer-array>
++    <integer-array name="config_autoBrightnessLevels">
++        <item>1</item>
++        <item>2</item>
++        <item>4</item>
++        <item>5</item>
++        <item>8</item>
++        <item>13</item>
++        <item>17</item>
++        <item>21</item>
++        <item>26</item>
++        <item>30</item>
++        <item>34</item>
++        <item>39</item>
++        <item>60</item>
++        <item>140</item>
++        <item>310</item>
++        <item>400</item>
++        <item>500</item>
++        <item>600</item>
++        <item>1000</item>
++        <item>1200</item>
++        <item>1500</item>
++        <item>3000</item>
++        <item>3500</item>
++        <item>4000</item>
++    </integer-array>
++    <bool name="config_automatic_brightness_available">true</bool>
++    <bool name="config_device_volte_available">true</bool>
++    <bool name="config_carrier_volte_available">true</bool>
++    <bool name="config_wifi_dual_band_support">true</bool>
++    <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
++    <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
++    <bool name="config_displayBlanksAfterDoze">true</bool>
++    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">false</bool>
++    <fraction name="config_autoBrightnessAdjustmentMaxGamma">299.99695%</fraction>
++    <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
++    <integer name="config_autoBrightnessDarkeningLightDebounce">4000</integer>
++    <integer name="config_screenBrightnessDoze">17</integer>
++    <integer name="config_screenBrightnessSettingDefault">66</integer>
++    <integer name="config_screenBrightnessSettingMaximum">255</integer>
++    <integer name="config_screenBrightnessSettingMinimum">1</integer>
++
++</resources>
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/res/values/notch.xml b/Nokia/PDA_sprout-5.1Plus-X5/res/values/notch.xml
+new file mode 100644
+index 0000000..94cc51b
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/res/values/notch.xml
+@@ -0,0 +1,29 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++/*
++** Copyright 2017, The Android Open Source Project
++**
++** Licensed under the Apache License, Version 2.0 (the "License");
++** you may not use this file except in compliance with the License.
++** You may obtain a copy of the License at
++**
++**     http://www.apache.org/licenses/LICENSE-2.0
++**
++** Unless required by applicable law or agreed to in writing, software
++** distributed under the License is distributed on an "AS IS" BASIS,
++** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++** See the License for the specific language governing permissions and
++** limitations under the License.
++*/
++-->
++<resources>
++    <!-- Height of the status bar in portrait -->
++    <dimen name="status_bar_height_portrait">62px</dimen>
++    <!-- Height of the status bar -->
++    <dimen name="status_bar_height">62px</dimen>
++    <!-- Height of the status bar in landscape -->
++    <dimen name="status_bar_height_landscape">24dp</dimen>
++	<string translatable="false" name="config_mainBuiltInDisplayCutout">M -190,0 L -190,62 L 190,62 L 190,0 Z</string>
++    <!-- Radius of the software rounded corners. -->
++    <dimen name="rounded_corner_radius">54px</dimen>
++</resources>
+\ No newline at end of file
+diff --git a/Nokia/PDA_sprout-5.1Plus-X5/res/xml/power_profile.xml b/Nokia/PDA_sprout-5.1Plus-X5/res/xml/power_profile.xml
+new file mode 100644
+index 0000000..a94abd3
+--- /dev/null
++++ b/Nokia/PDA_sprout-5.1Plus-X5/res/xml/power_profile.xml
+@@ -0,0 +1,80 @@
++<?xml version="1.0" encoding="utf-8"?>
++<device name="Android">
++    <item name="none">0</item>
++    <item name="screen.on">63</item>
++    <item name="screen.full">261</item>
++    <item name="bluetooth.active">10</item>
++    <item name="bluetooth.on">0.1</item>
++    <item name="wifi.on">0.6</item>
++    <item name="wifi.active">64</item>
++    <item name="wifi.scan">24</item>
++    <item name="dsp.audio">10</item>
++    <item name="dsp.video">50</item>
++    <item name="camera.flashlight">160</item>
++    <item name="camera.avg">550</item>
++    <item name="gps.on">45</item>
++    <item name="radio.active">200</item>
++    <item name="radio.scanning">90</item>
++    <array name="radio.on">
++        <value>3</value>
++        <value>2.5</value>
++    </array>
++    <item name="modem.controller.idle">0</item>
++    <item name="modem.controller.rx">0</item>
++    <item name="modem.controller.tx">0</item>
++    <item name="modem.controller.voltage">0</item>
++    <array name="cpu.clusters.cores">
++        <value>4</value>
++        <value>4</value>
++    </array>
++    <array name="cpu.speeds.cluster0">
++        <value>633000</value>
++        <value>902000</value>
++        <value>1113000</value>
++        <value>1401000</value>
++        <value>1536000</value>
++        <value>1747000</value>
++        <value>1843000</value>
++    </array>
++    <array name="cpu.active.cluster0">
++        <value>34</value>
++        <value>60</value>
++        <value>85</value>
++        <value>128</value>
++        <value>163</value>
++        <value>202</value>
++        <value>253</value>
++    </array>
++    <array name="cpu.speeds.cluster1">
++        <value>1113000</value>
++        <value>1401000</value>
++        <value>1747000</value>
++        <value>1958000</value>
++        <value>2150000</value>
++    </array>
++    <array name="cpu.active.cluster1">
++        <value>226</value>
++        <value>331</value>
++        <value>497</value>
++        <value>614</value>
++        <value>777</value>
++    </array>
++    <item name="cpu.awake">1.6</item>
++    <item name="cpu.idle">0.1</item>
++    <item name="battery.capacity">3060</item>
++    <item name="wifi.controller.idle">0</item>
++    <item name="wifi.controller.rx">0</item>
++    <item name="wifi.controller.tx">0</item>
++    <item name="bluetooth.controller.idle">0</item>
++    <item name="bluetooth.controller.rx">0</item>
++    <item name="bluetooth.controller.tx">0</item>
++    <array name="wifi.controller.tx_levels" />
++    <item name="wifi.controller.voltage">0</item>
++    <array name="wifi.batchedscan">
++        <value>.0002</value>
++        <value>.002</value>
++        <value>.02</value>
++        <value>.2</value>
++        <value>2</value>
++    </array>
++</device>
+\ No newline at end of file
+diff --git a/overlay.mk b/overlay.mk
+index 1f15d71..05a0ed0 100644
+--- a/overlay.mk
++++ b/overlay.mk
+@@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \
+ 	treble-overlay-nokia-b2n-7plus \
+ 	treble-overlay-nokia-ctl-7-1 \
+ 	treble-overlay-nokia-drg-6.1plus-x6 \
++	treble-overlay-nokia-pda_sprout-5.1plus-x5 \
+ 	treble-overlay-nokia-nokia_4_2 \
+ 	treble-overlay-nokia-pl2-6.1 \
+ 	treble-overlay-nokia-pnx-8.1-x7 \
+-- 
+2.17.1
+

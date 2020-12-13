@@ -1,7 +1,7 @@
-From 8171ddc19615bd701017438f33bfae7238326613 Mon Sep 17 00:00:00 2001
+From 2e2edbb06c8aabe337975e2b8516be466ede58de Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Mar 2020 22:28:12 +0200
-Subject: [PATCH 11/38] Use global fonts in styles
+Subject: [PATCH 11/45] Use global fonts in styles
 
   * from
   https://github.com/i-o-n/packages_apps_Settings/commit/0947c3c4cccce3cc6f3b483791cddfdc6571ee93
@@ -12,7 +12,7 @@ Subject: [PATCH 11/38] Use global fonts in styles
  1 file changed, 5 insertions(+), 5 deletions(-)
 
 diff --git a/res/values/styles.xml b/res/values/styles.xml
-index c74a1a2268..40604f0c94 100644
+index 1be8ba0e0b..2fc8a43cb5 100644
 --- a/res/values/styles.xml
 +++ b/res/values/styles.xml
 @@ -324,7 +324,7 @@

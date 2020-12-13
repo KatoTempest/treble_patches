@@ -1,7 +1,7 @@
-From 684409b3bda42eeda8c10c701b143741ea024c24 Mon Sep 17 00:00:00 2001
+From 17e983de4454d2a8791371714a08977641faf260 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
-Subject: [PATCH 07/38] Move theming to display settings
+Subject: [PATCH 07/45] Move theming to display settings
 
   * from
   https://github.com/neon-os/packages_apps_Settings/commit/ba07105ed23396f47d78bc3867bcd112ff1584bd
@@ -21,10 +21,10 @@ Subject: [PATCH 07/38] Move theming to display settings
  rename src/com/android/settings/{development => display}/OverlayCategoryPreferenceController.java (92%)
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 331c6a03d6..83e65de68e 100644
+index d27cdbdae8..5923d7161d 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -10642,6 +10642,14 @@
+@@ -10649,6 +10649,14 @@
      <!-- Notification log debug tool: the word 'none' -->
      <string name="notification_log_details_ranking_none">Ranking object doesn\'t contain this key.</string>
  

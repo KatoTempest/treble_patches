@@ -1,0 +1,93 @@
+From 2e2da3ec065b91f94d8c1ba8846fea443be57c77 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 25 Nov 2020 05:23:33 -0500
+Subject: [PATCH 094/135] Allow adjusting screen density to smaller sizes
+
+  * from
+  https://github.com/ezio84/abc_frameworks_base/commit/27b7a6a0f6f786ebf5e668abe246710986066f6e
+---
+ .../res/values-it/custom_strings.xml          | 19 +++++++++++++++++++
+ .../res/values-ru/custom_strings.xml          |  4 ++++
+ .../SettingsLib/res/values/custom_strings.xml |  4 ++++
+ .../display/DisplayDensityUtils.java          |  6 ++++--
+ 4 files changed, 31 insertions(+), 2 deletions(-)
+ create mode 100644 packages/SettingsLib/res/values-it/custom_strings.xml
+
+diff --git a/packages/SettingsLib/res/values-it/custom_strings.xml b/packages/SettingsLib/res/values-it/custom_strings.xml
+new file mode 100644
+index 00000000000..0656534a2e5
+--- /dev/null
++++ b/packages/SettingsLib/res/values-it/custom_strings.xml
+@@ -0,0 +1,19 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!--
++     Copyright (C) 2015 The Android Open Source Project
++     Licensed under the Apache License, Version 2.0 (the "License");
++     you may not use this file except in compliance with the License.
++     You may obtain a copy of the License at
++          http://www.apache.org/licenses/LICENSE-2.0
++     Unless required by applicable law or agreed to in writing, software
++     distributed under the License is distributed on an "AS IS" BASIS,
++     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++     See the License for the specific language governing permissions and
++     limitations under the License.
++-->
++<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
++    <!-- Description for the screen zoom level that makes interface elements smaller. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smaller">Più piccolo</string>
++    <!-- Description for the screen zoom level that makes interface elements smallest. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smallest">Piccolissimo</string>
++</resources>
+diff --git a/packages/SettingsLib/res/values-ru/custom_strings.xml b/packages/SettingsLib/res/values-ru/custom_strings.xml
+index 4d870d87c45..4287e72bcca 100644
+--- a/packages/SettingsLib/res/values-ru/custom_strings.xml
++++ b/packages/SettingsLib/res/values-ru/custom_strings.xml
+@@ -21,4 +21,8 @@
+ <resources xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <string name="status_deep_sleep">(Время сна: %1$d%2$s)</string>
++    <!-- Description for the screen zoom level that makes interface elements smaller. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smaller">Мельче</string>
++    <!-- Description for the screen zoom level that makes interface elements smallest. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smallest">Мельчайший</string>
+ </resources>
+diff --git a/packages/SettingsLib/res/values/custom_strings.xml b/packages/SettingsLib/res/values/custom_strings.xml
+index fab17bbbd96..61d74b5c7a2 100644
+--- a/packages/SettingsLib/res/values/custom_strings.xml
++++ b/packages/SettingsLib/res/values/custom_strings.xml
+@@ -19,4 +19,8 @@
+ -->
+ <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+     <string name="status_deep_sleep">(Deep sleep: %1$d%2$s)</string>
++    <!-- Description for the screen zoom level that makes interface elements smaller. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smaller">Smaller</string>
++    <!-- Description for the screen zoom level that makes interface elements smallest. [CHAR LIMIT=24] -->
++    <string name="screen_zoom_summary_smallest">Smallest</string>
+ </resources>
+diff --git a/packages/SettingsLib/src/com/android/settingslib/display/DisplayDensityUtils.java b/packages/SettingsLib/src/com/android/settingslib/display/DisplayDensityUtils.java
+index a38091debb6..b2d6425b7a9 100644
+--- a/packages/SettingsLib/src/com/android/settingslib/display/DisplayDensityUtils.java
++++ b/packages/SettingsLib/src/com/android/settingslib/display/DisplayDensityUtils.java
+@@ -42,7 +42,7 @@ public class DisplayDensityUtils {
+     private static final float MIN_SCALE_INTERVAL = 0.09f;
+ 
+     /** Minimum density scale. This is available on all devices. */
+-    private static final float MIN_SCALE = 0.85f;
++    private static final float MIN_SCALE = 0.70f;
+ 
+     /** Maximum density scale. The actual scale used depends on the device. */
+     private static final float MAX_SCALE = 1.50f;
+@@ -58,7 +58,9 @@ public class DisplayDensityUtils {
+      * largest.
+      */
+     private static final int[] SUMMARIES_SMALLER = new int[] {
+-            R.string.screen_zoom_summary_small
++            R.string.screen_zoom_summary_small,
++            R.string.screen_zoom_summary_smaller,
++            R.string.screen_zoom_summary_smallest
+     };
+ 
+     /**
+-- 
+2.17.1
+

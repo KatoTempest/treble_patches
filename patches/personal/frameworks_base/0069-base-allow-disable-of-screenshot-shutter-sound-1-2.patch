@@ -1,0 +1,70 @@
+From c9c4b5575b4f040d6eaf21c5d987720e92b6a9b3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 04:36:27 -0500
+Subject: [PATCH 069/135] base: allow disable of screenshot shutter sound [1/2]
+
+  from
+  https://github.com/StatiXOS/android_frameworks_base/commit/654e14f72ecac22c68dadc96d341997aa3a9cb26
+---
+ core/java/android/provider/Settings.java           |  5 +++++
+ .../systemui/screenshot/GlobalScreenshot.java      | 14 +++++++++++---
+ 2 files changed, 16 insertions(+), 3 deletions(-)
+
+diff --git a/core/java/android/provider/Settings.java b/core/java/android/provider/Settings.java
+index b07dabd4bb3..39e023b6b8e 100755
+--- a/core/java/android/provider/Settings.java
++++ b/core/java/android/provider/Settings.java
+@@ -4777,6 +4777,11 @@ public final class Settings {
+          */
+         public static final String MULTI_AUDIO_FOCUS_ENABLED = "multi_audio_focus_enabled";
+ 
++        /**
++         * @hide
++         */
++        public static final String SCREENSHOT_SHUTTER_SOUND = "screenshot_shutter_sound";
++
+         /**
+          * IMPORTANT: If you add a new public settings you also have to add it to
+          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+index c558bcf61fc..5d50226f367 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+@@ -57,6 +57,7 @@ import android.os.Handler;
+ import android.os.Looper;
+ import android.os.Message;
+ import android.os.RemoteException;
++import android.os.UserHandle;
+ import android.provider.Settings;
+ import android.util.DisplayMetrics;
+ import android.util.Log;
+@@ -663,7 +664,11 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+     private void saveScreenshotAndToast(Consumer<Uri> finisher) {
+         // Play the shutter sound to notify that we've taken a screenshot
+         mScreenshotHandler.post(() -> {
+-            mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
++            if (Settings.System.getIntForUser(mContext.getContentResolver(),
++                Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
++                    // Play the shutter sound to notify that we've taken a screenshot
++                    mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
++            }
+         });
+ 
+         saveScreenshotInWorkerThread(finisher, new ActionsReadyListener() {
+@@ -718,8 +723,11 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+                     }
+                 });
+ 
+-                // Play the shutter sound to notify that we've taken a screenshot
+-                mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
++                if (Settings.System.getIntForUser(mContext.getContentResolver(),
++                    Settings.System.SCREENSHOT_SHUTTER_SOUND, 1, UserHandle.USER_CURRENT) == 1) {
++                       // Play the shutter sound to notify that we've taken a screenshot
++                       mCameraSound.play(MediaActionSound.SHUTTER_CLICK);
++                }
+ 
+                 mScreenshotPreview.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+                 mScreenshotPreview.buildLayer();
+-- 
+2.17.1
+

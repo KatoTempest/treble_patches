@@ -1,7 +1,7 @@
-From e277ae41b0243ee0023f97dd9ff8e2bfe5ff4b02 Mon Sep 17 00:00:00 2001
+From d60fc30778572f6b8f0c4d6155f1999ab6bbf39e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 17:41:58 -0500
-Subject: [PATCH 37/38] expand menus
+Subject: [PATCH 37/45] expand menus
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/b0418ff6dd397a230047e1cec912b07bd8698db1
@@ -27,7 +27,7 @@ index 95c7f5687b..d59e613c3e 100644
          <SwitchPreference
              android:key="silent_icons"
 diff --git a/res/xml/network_and_internet.xml b/res/xml/network_and_internet.xml
-index eaa7808335..f638427689 100644
+index 6bf6dbaccf..60f88ba719 100644
 --- a/res/xml/network_and_internet.xml
 +++ b/res/xml/network_and_internet.xml
 @@ -18,8 +18,7 @@

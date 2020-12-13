@@ -1,7 +1,7 @@
-From 6c94a04e6d125c28330b886a03694bcecd259a56 Mon Sep 17 00:00:00 2001
+From e8651b05d79edbdc0b58f370dcf982ffbc308841 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 2 Mar 2020 13:42:28 +0200
-Subject: [PATCH 10/38] disable auto dark mode on battery saver
+Subject: [PATCH 10/45] disable auto dark mode on battery saver
 
 	modified:   src/com/android/settings/display/DarkUIPreferenceController.java
 ---

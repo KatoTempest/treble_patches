@@ -1,7 +1,7 @@
-From d33478d9b79b2f16bbb134dba622e75e7d8b9019 Mon Sep 17 00:00:00 2001
+From 55b0f4926df4cf9890b04b745806e9405619db46 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 29 Dec 2019 22:53:03 +0200
-Subject: [PATCH 005/129] update wallpapers
+Subject: [PATCH 005/135] update wallpapers
 
 	modified:   core/res/res/drawable-nodpi/default_wallpaper.png
 	modified:   core/res/res/drawable-sw600dp-nodpi/default_wallpaper.png

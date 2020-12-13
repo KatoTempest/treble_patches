@@ -1,7 +1,7 @@
-From 9b9088a6f93df1a1d3560f1307c07047e65d4ad2 Mon Sep 17 00:00:00 2001
+From 9038046542e8a13178fe688e898b8473365879b0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:43:19 -0500
-Subject: [PATCH 35/38] Settings: per-app cellular data, vpn and wifi
+Subject: [PATCH 35/45] Settings: per-app cellular data, vpn and wifi
  restrictions
 
   from
@@ -33,7 +33,7 @@ index b008dd637c..ddef315ac2 100644
 +    <string name="data_usage_app_restrict_wifi_summary">Разрешить использование Wi\u2011Fi</string>
  </resources>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
-index 2c567f66df..f10c4d816a 100644
+index a2c670f92c..dccc5b23d3 100644
 --- a/res/values/custom_strings.xml
 +++ b/res/values/custom_strings.xml
 @@ -58,4 +58,11 @@

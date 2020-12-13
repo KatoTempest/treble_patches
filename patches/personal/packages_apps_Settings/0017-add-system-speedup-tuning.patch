@@ -1,7 +1,7 @@
-From 7f15beb1beae5a5e003e3477a076f116e160243f Mon Sep 17 00:00:00 2001
+From ef4dfdb864c09d8d6c5f08cb6cdf6af93f32daac Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 11 May 2020 20:18:14 +0300
-Subject: [PATCH 17/38] add system speedup tuning
+Subject: [PATCH 17/45] add system speedup tuning
 
 Change-Id: I9ea05c0e7219d36df58ce825e33a921d499d756e
 ---
