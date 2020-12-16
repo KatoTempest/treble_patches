@@ -1,0 +1,56 @@
+From da0a2f3307282f4dce03a3a9b9d5b369eadaf00b Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 17 Nov 2020 03:52:40 -0500
+Subject: [PATCH 33/51] add ROM type info
+
+Change-Id: Iae053e3680c90fff3e29a8cbbfda46657ad725cd
+---
+ res/values-ru/custom_strings.xml | 2 ++
+ res/values/custom_strings.xml    | 3 +++
+ res/xml/firmware_version.xml     | 7 +++++++
+ 3 files changed, 12 insertions(+)
+
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index da6fbcb56c..c779f908f3 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -56,4 +56,6 @@
+     <string name="gesture_handle_title">Полоса жестов</string>
+     <string name="hide_label">Скрыть</string>
+     <string name="long_label">Длинная</string>
++    <!-- ROM type -->
++    <string name="rom_maintainer">Сопровождающий: eternityson\nТип сборки: phh-GSI</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 5f1d8492f2..21dfd439bf 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -52,4 +52,7 @@
+     <string name="long_label">Long</string>
+     <!-- Manage applications, package string displayed in app snippet -->
+     <string name="packagename_text">"<xliff:g id="package_name">%1$s</xliff:g>"</string>
++    <!-- ROM type -->
++    <string name="rom_type_title">CAOS R 300j</string>
++    <string name="rom_maintainer">Maintainer: eternityson\nType: phh-GSI</string>
+ </resources>
+diff --git a/res/xml/firmware_version.xml b/res/xml/firmware_version.xml
+index 02463266b3..6840a90917 100644
+--- a/res/xml/firmware_version.xml
++++ b/res/xml/firmware_version.xml
+@@ -30,6 +30,13 @@
+         settings:searchable="false"
+         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
+ 
++    <!-- ROM type -->
++    <Preference
++        android:key="aosp_rom_type"
++        android:title="@string/rom_type_title"
++        android:summary="@string/rom_maintainer"
++        settings:enableCopying="true"/>
++
+     <!-- Security patch -->
+     <Preference
+         android:key="security_key"
+-- 
+2.17.1
+

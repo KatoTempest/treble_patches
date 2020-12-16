@@ -1,0 +1,65 @@
+From 808696d3a98f17cf590dd8d30ac64b4773d10403 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 13 Dec 2020 07:41:41 -0500
+Subject: [PATCH 128/193] DisplayManager: Fix synchronization issue
+
+  from
+  https://github.com/omnirom/android_frameworks_base/commit/cd10eb6ff679daf60b2bbee9a80ae54541d64e9e
+---
+ .../server/display/DisplayManagerService.java | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+
+diff --git a/services/core/java/com/android/server/display/DisplayManagerService.java b/services/core/java/com/android/server/display/DisplayManagerService.java
+index 852868616af..4e2dc9ecfc0 100644
+--- a/services/core/java/com/android/server/display/DisplayManagerService.java
++++ b/services/core/java/com/android/server/display/DisplayManagerService.java
+@@ -322,6 +322,13 @@ public final class DisplayManagerService extends SystemService {
+     // Receives notifications about changes to Settings.
+     private SettingsObserver mSettingsObserver;
+ 
++    // The synchronization root for the display dumpsys.
++    private final SyncRoot mSyncDump = new SyncRoot();
++
++    // Whether dump is inprogress or not.
++    @GuardedBy("mSyncDump")
++    private boolean mDumpInProgress;
++
+     public DisplayManagerService(Context context) {
+         this(context, new Injector());
+     }
+@@ -355,6 +362,7 @@ public final class DisplayManagerService extends SystemService {
+         mWideColorSpace = colorSpaces[1];
+ 
+         mSystemReady = false;
++        mDumpInProgress = false;
+     }
+ 
+     public void setupSchedulerPolicies() {
+@@ -1683,6 +1691,14 @@ public final class DisplayManagerService extends SystemService {
+     }
+ 
+     private void dumpInternal(PrintWriter pw) {
++        synchronized (mSyncDump) {
++            if (mDumpInProgress) {
++                pw.println("One dump is in service already.");
++                return;
++            }
++            mDumpInProgress = true;
++        }
++
+         pw.println("DISPLAY MANAGER (dumpsys display)");
+ 
+         synchronized (mSyncRoot) {
+@@ -1744,6 +1760,9 @@ public final class DisplayManagerService extends SystemService {
+             pw.println();
+             mPersistentDataStore.dump(pw);
+         }
++        synchronized (mSyncDump) {
++            mDumpInProgress = false;
++        }
+     }
+ 
+     private static float[] getFloatArray(TypedArray array) {
+-- 
+2.17.1
+

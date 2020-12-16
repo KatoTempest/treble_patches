@@ -1,0 +1,27 @@
+From 4620d685943c8ef841c2020d5dc0e148e6737cad Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Dec 2020 14:33:48 -0500
+Subject: [PATCH 138/193] Disable overfling bounce
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/ae01b61dc7a67bbcdc4eb46d37a75ee021fa3712
+---
+ core/java/android/view/ViewConfiguration.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/java/android/view/ViewConfiguration.java b/core/java/android/view/ViewConfiguration.java
+index 99206965aee..081acb1e014 100644
+--- a/core/java/android/view/ViewConfiguration.java
++++ b/core/java/android/view/ViewConfiguration.java
+@@ -254,7 +254,7 @@ public class ViewConfiguration {
+     /**
+      * Max distance in dips to overfling for edge effects
+      */
+-    private static final int OVERFLING_DISTANCE = 6;
++    private static final int OVERFLING_DISTANCE = 0;
+ 
+     /**
+      * Amount to scroll in response to a horizontal {@link MotionEvent#ACTION_SCROLL} event,
+-- 
+2.17.1
+

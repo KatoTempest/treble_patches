@@ -1,7 +1,7 @@
-From 2c05918fa97d4e06de08cffa79fb388870df9633 Mon Sep 17 00:00:00 2001
+From 24acf7dc276734a41a50a50713e2f97543d6a681 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Oct 2020 02:40:31 -0400
-Subject: [PATCH 4/9] import OnePlus 8 Pro 'instantnoodlep' overlay
+Subject: [PATCH 04/10] import OnePlus 8 Pro 'instantnoodlep' overlay
 
   from https://github.com/luk1337/android_device_oneplus_instantnoodlep
 ---
@@ -664,7 +664,7 @@ index 0000000..d5742da
 +    </array>
 +</device>
 diff --git a/overlay.mk b/overlay.mk
-index 4b3156d..6e14519 100644
+index d5ab03f..878b34b 100644
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -76,6 +76,8 @@ PRODUCT_PACKAGES += \

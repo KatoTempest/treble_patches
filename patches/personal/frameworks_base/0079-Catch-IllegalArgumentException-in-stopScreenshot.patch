@@ -1,0 +1,32 @@
+From dfb59d0c7a2727767bb698db0606534e4c2715ed Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 15:50:05 -0500
+Subject: [PATCH 079/193] Catch IllegalArgumentException in stopScreenshot()
+
+  from
+  https://github.com/ezio84/abc_frameworks_base/commit/5e9dcb0bdf4989380e29333a98c0bd92915bbecf
+---
+ .../com/android/systemui/screenshot/GlobalScreenshot.java  | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+index 5d50226f367..810b0606c7d 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+@@ -426,8 +426,11 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+     void stopScreenshot() {
+         // If the selector layer still presents on screen, we remove it and resets its state.
+         if (mScreenshotSelectorView.getSelectionRect() != null) {
+-            mWindowManager.removeView(mScreenshotLayout);
+-            mScreenshotSelectorView.stopSelection();
++            try {
++                mWindowManager.removeView(mScreenshotLayout);
++                mScreenshotSelectorView.stopSelection();
++            } catch (IllegalArgumentException ignored) {
++            }
+         }
+     }
+ 
+-- 
+2.17.1
+

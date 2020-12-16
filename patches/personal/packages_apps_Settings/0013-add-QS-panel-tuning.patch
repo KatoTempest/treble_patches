@@ -1,17 +1,16 @@
-From a8ce26e520bdeeadb9d366cd101141c8be3a2aae Mon Sep 17 00:00:00 2001
+From ff8216ad69237dbec07f719d642c57908b16c5fb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 22:30:52 +0300
-Subject: [PATCH 13/45] add QS panel tuning
+Subject: [PATCH 13/51] add QS panel tuning
 
 Change-Id: I28a8d7a27d4caf4bf63d4aa5cdd5ddbdd7469540
 ---
- res/values-fr/custom_strings.xml                          | 2 ++
- res/values-ru/custom_strings.xml                          | 2 ++
- res/values/custom_strings.xml                             | 2 ++
- res/xml/display_settings.xml                              | 3 +++
- src/com/android/settings/DisplaySettings.java             | 2 ++
- .../display/OverlayCategoryPreferenceController.java      | 8 ++++++++
- 6 files changed, 19 insertions(+)
+ res/values-fr/custom_strings.xml              | 2 ++
+ res/values-ru/custom_strings.xml              | 2 ++
+ res/values/custom_strings.xml                 | 2 ++
+ res/xml/display_settings.xml                  | 3 +++
+ src/com/android/settings/DisplaySettings.java | 2 ++
+ 5 files changed, 11 insertions(+)
 
 diff --git a/res/values-fr/custom_strings.xml b/res/values-fr/custom_strings.xml
 index d6a894d97b..4f5a0b784b 100644
@@ -61,7 +60,7 @@ index eb7c0fe000..42bd476ddd 100644
  
  </PreferenceScreen>
 diff --git a/src/com/android/settings/DisplaySettings.java b/src/com/android/settings/DisplaySettings.java
-index 1e2a3c2924..238aa9157e 100644
+index 435f6e5f06..66b08e5bdc 100644
 --- a/src/com/android/settings/DisplaySettings.java
 +++ b/src/com/android/settings/DisplaySettings.java
 @@ -99,6 +99,8 @@ public class DisplaySettings extends DashboardFragment {
@@ -73,37 +72,6 @@ index 1e2a3c2924..238aa9157e 100644
          return controllers;
      }
  
-diff --git a/src/com/android/settings/display/OverlayCategoryPreferenceController.java b/src/com/android/settings/display/OverlayCategoryPreferenceController.java
-index 1bd9bc67df..536b5fb466 100644
---- a/src/com/android/settings/display/OverlayCategoryPreferenceController.java
-+++ b/src/com/android/settings/display/OverlayCategoryPreferenceController.java
-@@ -53,6 +53,7 @@ public class OverlayCategoryPreferenceController extends AbstractPreferenceContr
-     @VisibleForTesting
-     static final String PACKAGE_DEVICE_DEFAULT = "package_device_default";
-     private static final String OVERLAY_TARGET_PACKAGE = "android";
-+    private static final String OVERLAY_TARGET_PACKAGE_UI = "com.android.systemui";
-     private static final Comparator<OverlayInfo> OVERLAY_INFO_COMPARATOR =
-             Comparator.comparingInt(a -> a.priority);
-     private final IOverlayManager mOverlayManager;
-@@ -183,11 +184,18 @@ public class OverlayCategoryPreferenceController extends AbstractPreferenceContr
-         try {
-             List<OverlayInfo> overlayInfos = mOverlayManager
-                     .getOverlayInfosForTarget(OVERLAY_TARGET_PACKAGE, USER_SYSTEM);
-+            List<OverlayInfo> overlayInfosUI = mOverlayManager
-+                    .getOverlayInfosForTarget(OVERLAY_TARGET_PACKAGE_UI, USER_SYSTEM);
-             for (OverlayInfo overlayInfo : overlayInfos) {
-                 if (mCategory.equals(overlayInfo.category)) {
-                     filteredInfos.add(overlayInfo);
-                 }
-             }
-+            for (OverlayInfo overlayInfo : overlayInfosUI) {
-+                if (mCategory.equals(overlayInfo.category)) {
-+                    filteredInfos.add(overlayInfo);
-+                }
-+            }
-         } catch (RemoteException re) {
-             throw re.rethrowFromSystemServer();
-         }
 -- 
 2.17.1
 

@@ -1,0 +1,28 @@
+From da5a35da4219e410aa74b2404c646e9c9a27800f Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 17 Nov 2020 02:49:42 -0500
+Subject: [PATCH 31/51] Disable notification channel warnings by default [2/2]
+
+  from
+  https://github.com/ezio84/abc_packages_apps_Settings/commit/129e77ed5ab09e8b628d0404e3fe1288e8e454d7
+
+Change-Id: I64676881a4b29b6db5af87907f9b975844f9698e
+---
+ .../NotificationChannelWarningsPreferenceController.java        | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/com/android/settings/development/NotificationChannelWarningsPreferenceController.java b/src/com/android/settings/development/NotificationChannelWarningsPreferenceController.java
+index 775b70871f..104fcde17d 100644
+--- a/src/com/android/settings/development/NotificationChannelWarningsPreferenceController.java
++++ b/src/com/android/settings/development/NotificationChannelWarningsPreferenceController.java
+@@ -80,6 +80,6 @@ public class NotificationChannelWarningsPreferenceController extends
+ 
+     @VisibleForTesting
+     boolean isDebuggable() {
+-        return Build.IS_DEBUGGABLE;
++        return Build.IS_ENG;
+     }
+ }
+-- 
+2.17.1
+

@@ -1,0 +1,31 @@
+From 9ac4213c616f92e8ddf4a0bd16076b3ecc017b30 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 01:45:09 -0500
+Subject: [PATCH 148/193] SettingsLib: mutate drawable before tinting for
+ buildBtRainbowDrawable
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/12289f14826c73f6125016859d23779bf15004ee
+---
+ .../com/android/settingslib/bluetooth/BluetoothUtils.java    | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SettingsLib/src/com/android/settingslib/bluetooth/BluetoothUtils.java b/packages/SettingsLib/src/com/android/settingslib/bluetooth/BluetoothUtils.java
+index 95e916b9871..b6499fe9fa0 100644
+--- a/packages/SettingsLib/src/com/android/settingslib/bluetooth/BluetoothUtils.java
++++ b/packages/SettingsLib/src/com/android/settingslib/bluetooth/BluetoothUtils.java
+@@ -162,8 +162,9 @@ public class BluetoothUtils {
+ 
+         // get color index based on mac address
+         final int index = Math.abs(hashCode % iconBgColors.length);
+-        drawable.setTint(iconFgColors[index]);
+-        final Drawable adaptiveIcon = new AdaptiveIcon(context, drawable);
++        Drawable d = drawable.mutate();
++        d.setTint(iconFgColors[index]);
++        final Drawable adaptiveIcon = new AdaptiveIcon(context, d);
+         ((AdaptiveIcon) adaptiveIcon).setBackgroundColor(iconBgColors[index]);
+ 
+         return adaptiveIcon;
+-- 
+2.17.1
+

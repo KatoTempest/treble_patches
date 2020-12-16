@@ -1,0 +1,24 @@
+From 6e2bd2c1ed02f6db2024d3546473188a4438b436 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 21 Dec 2020 04:13:13 -0500
+Subject: [PATCH 5/5] adaptation for enhanced root
+
+---
+ rootdir/Android.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/rootdir/Android.mk b/rootdir/Android.mk
+index 56b0d5b5b..f909a7b06 100644
+--- a/rootdir/Android.mk
++++ b/rootdir/Android.mk
+@@ -79,6 +79,7 @@ endif
+ LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
+     sbin dev proc sys system data data_mirror odm oem acct config storage mnt apex debug_ramdisk \
+     linkerconfig $(BOARD_ROOT_EXTRA_FOLDERS)); \
++    mkdir -p $(TARGET_OUT)/xbin; \
+     ln -sf /system/bin $(TARGET_ROOT_OUT)/bin; \
+     ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
+     ln -sf /data/user_de/0/com.android.shell/files/bugreports $(TARGET_ROOT_OUT)/bugreports; \
+-- 
+2.17.1
+

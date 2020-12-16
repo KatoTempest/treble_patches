@@ -1,0 +1,183 @@
+From 800f0aab89c7c9a17b4ce6d878c83f264d2b85a7 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 08:41:19 -0500
+Subject: [PATCH 27/51] fix hide handle overlay
+
+  based on
+  https://github.com/Evolution-X/packages_apps_Settings/commit/da8841dedff98d845af46f7e3005f9930699daf0
+
+Change-Id: Ide643dab75028f144a9bb0817c80e67cb079b6eb
+---
+ res/values-ru/custom_strings.xml                |  3 ++-
+ res/values/custom_strings.xml                   |  5 +++--
+ res/xml/gesture_navigation_settings.xml         | 11 +++++++++--
+ .../GestureNavigationSettingsFragment.java      | 13 +++++++++----
+ .../SystemNavigationGestureSettings.java        | 17 ++++++++++++-----
+ 5 files changed, 35 insertions(+), 14 deletions(-)
+
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index c267925f82..da6fbcb56c 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -52,7 +52,8 @@
+     <!-- Screenshot shutter -->
+     <string name="screenshot_shutter_sound_title">Звук снимка экрана</string>
+     <!-- Gesture Navbar tuning -->
++    <string name="navbar_tuning_title">Внешний вид</string>
+     <string name="gesture_handle_title">Полоса жестов</string>
+     <string name="hide_label">Скрыть</string>
+-    <string name="def_label">Обычная</string>
++    <string name="long_label">Длинная</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index b0105fbaa3..94e3ddb786 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -46,7 +46,8 @@
+     <!-- Screenshot shutter -->
+     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+     <!-- Gesture Navbar tuning -->
+-    <string name="gesture_handle_title">Gesture handle</string>
++    <string name="navbar_tuning_title">Navbar tuning</string>
++    <string name="gesture_handle_title">Handle view</string>
+     <string name="hide_label">Hide</string>
+-    <string name="def_label">Normal</string>
++    <string name="long_label">Long</string>
+ </resources>
+diff --git a/res/xml/gesture_navigation_settings.xml b/res/xml/gesture_navigation_settings.xml
+index fe670da04e..b44ba09bb8 100644
+--- a/res/xml/gesture_navigation_settings.xml
++++ b/res/xml/gesture_navigation_settings.xml
+@@ -45,13 +45,20 @@
+             settings:textEnd="@string/high_label"/>
+     </PreferenceCategory>
+ 
++    <PreferenceCategory
++        android:key="gesture_navbar_category"
++        android:persistent="false"
++        android:title="@string/navbar_tuning_title">
++
+     <com.android.settings.widget.LabeledSeekBarPreference
+         android:key="gesture_navbar_tuning"
+         android:title="@string/gesture_handle_title"
+         android:max="3"
++        android:defaultValue="1"
+         android:selectable="true"
+-        settings:textStart="@string/def_label"
+-        settings:textEnd="@string/hide_label"/>
++        settings:textStart="@string/hide_label"
++        settings:textEnd="@string/long_label"/>
++    </PreferenceCategory>
+ 
+ </PreferenceScreen>
+ 
+diff --git a/src/com/android/settings/gestures/GestureNavigationSettingsFragment.java b/src/com/android/settings/gestures/GestureNavigationSettingsFragment.java
+index 25a35a410d..2753f7edc4 100644
+--- a/src/com/android/settings/gestures/GestureNavigationSettingsFragment.java
++++ b/src/com/android/settings/gestures/GestureNavigationSettingsFragment.java
+@@ -16,6 +16,7 @@
+ 
+ package com.android.settings.gestures;
+ 
++import static android.view.WindowManagerPolicyConstants.NAV_BAR_MODE_GESTURAL_OVERLAY;
+ import static android.os.UserHandle.USER_CURRENT;
+ 
+ import android.app.settings.SettingsEnums;
+@@ -186,7 +187,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
+                 switch((int) v) {
+                     case 0:
+                         try {
+-                            mOverlayService.setEnabled(HIDE_OVERLAY_PKG, false, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(HIDE_OVERLAY_PKG, USER_CURRENT);
+                             mOverlayService.setEnabled(LONG_OVERLAY_PKG, false, USER_CURRENT);
+                             mOverlayService.setEnabled(MEDIUM_OVERLAY_PKG, false, USER_CURRENT);
+                         } catch (RemoteException re) {
+@@ -195,21 +196,25 @@ public class GestureNavigationSettingsFragment extends DashboardFragment {
+                         break;
+                     case 1:
+                         try {
+-                            mOverlayService.setEnabledExclusiveInCategory(MEDIUM_OVERLAY_PKG, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, USER_CURRENT);
++                            mOverlayService.setEnabled(LONG_OVERLAY_PKG, false, USER_CURRENT);
++                            mOverlayService.setEnabled(MEDIUM_OVERLAY_PKG, false, USER_CURRENT);
+                         } catch (RemoteException re) {
+                             throw re.rethrowFromSystemServer();
+                         }
+                         break;
+                     case 2:
+                         try {
+-                            mOverlayService.setEnabledExclusiveInCategory(LONG_OVERLAY_PKG, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(MEDIUM_OVERLAY_PKG, USER_CURRENT);
+                         } catch (RemoteException re) {
+                             throw re.rethrowFromSystemServer();
+                         }
+                         break;
+                     case 3:
+                         try {
+-                            mOverlayService.setEnabledExclusiveInCategory(HIDE_OVERLAY_PKG, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(NAV_BAR_MODE_GESTURAL_OVERLAY, USER_CURRENT);
++                            mOverlayService.setEnabledExclusiveInCategory(LONG_OVERLAY_PKG, USER_CURRENT);
+                         } catch (RemoteException re) {
+                             throw re.rethrowFromSystemServer();
+                         }
+diff --git a/src/com/android/settings/gestures/SystemNavigationGestureSettings.java b/src/com/android/settings/gestures/SystemNavigationGestureSettings.java
+index bed14a8172..e39eb1ce15 100644
+--- a/src/com/android/settings/gestures/SystemNavigationGestureSettings.java
++++ b/src/com/android/settings/gestures/SystemNavigationGestureSettings.java
+@@ -74,6 +74,8 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
+     public static final String PREF_KEY_SUGGESTION_COMPLETE =
+             "pref_system_navigation_suggestion_complete";
+ 
++    private static final String HIDE_OVERLAY_PKG = "com.android.theme.navbar.hidehandle";
++
+     private IOverlayManager mOverlayManager;
+ 
+     private VideoPreference mVideoPreference;
+@@ -190,7 +192,7 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
+ 
+     @Override
+     protected boolean setDefaultKey(String key) {
+-        setCurrentSystemNavigationMode(mOverlayManager, key);
++        setCurrentSystemNavigationMode(mOverlayManager, key, false);
+         setIllustrationVideo(mVideoPreference, key);
+         if (TextUtils.equals(KEY_SYSTEM_NAV_GESTURAL, key) && (
+                 isAnyServiceSupportAccessibilityButton() || isNavBarMagnificationEnabled())) {
+@@ -208,13 +210,18 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
+         }
+ 
+         OverlayInfo info = null;
++
++        boolean hidden = Settings.Secure.getFloat(context.getContentResolver(),
++                Settings.Secure.GESTURE_NAVBAR_TUNING, 1.0f) == 0.0f;
++
+         try {
+-            info = overlayManager.getOverlayInfo(NAV_BAR_MODE_GESTURAL_OVERLAY, USER_CURRENT);
++            info = overlayManager.getOverlayInfo(hidden ? HIDE_OVERLAY_PKG :
++                                                  NAV_BAR_MODE_GESTURAL_OVERLAY, USER_CURRENT);
+         } catch (RemoteException e) { /* Do nothing */ }
+         if (info != null && !info.isEnabled()) {
+             // Enable the default gesture nav overlay. Back sensitivity for left and right are
+             // stored as separate settings values, and other gesture nav overlays are deprecated.
+-            setCurrentSystemNavigationMode(overlayManager, KEY_SYSTEM_NAV_GESTURAL);
++            setCurrentSystemNavigationMode(overlayManager, KEY_SYSTEM_NAV_GESTURAL, hidden);
+             Settings.Secure.putFloat(context.getContentResolver(),
+                     Settings.Secure.BACK_GESTURE_INSET_SCALE_LEFT, 1.0f);
+             Settings.Secure.putFloat(context.getContentResolver(),
+@@ -234,11 +241,11 @@ public class SystemNavigationGestureSettings extends RadioButtonPickerFragment i
+     }
+ 
+     @VisibleForTesting
+-    static void setCurrentSystemNavigationMode(IOverlayManager overlayManager, String key) {
++    static void setCurrentSystemNavigationMode(IOverlayManager overlayManager, String key, boolean hidden) {
+         String overlayPackage = NAV_BAR_MODE_GESTURAL_OVERLAY;
+         switch (key) {
+             case KEY_SYSTEM_NAV_GESTURAL:
+-                overlayPackage = NAV_BAR_MODE_GESTURAL_OVERLAY;
++                overlayPackage = hidden ? HIDE_OVERLAY_PKG : NAV_BAR_MODE_GESTURAL_OVERLAY;
+                 break;
+             case KEY_SYSTEM_NAV_2BUTTONS:
+                 overlayPackage = NAV_BAR_MODE_2BUTTON_OVERLAY;
+-- 
+2.17.1
+

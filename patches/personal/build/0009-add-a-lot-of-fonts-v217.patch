@@ -1,7 +1,7 @@
-From c3acc8831064f161c51acde65f13a0d417825b0b Mon Sep 17 00:00:00 2001
+From c3d6eb621486858832ad1fe1891f5f212f46dcc5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 05:32:23 +0300
-Subject: [PATCH 9/9] add a lot of fonts v217
+Subject: [PATCH 09/10] add a lot of fonts v217
 
 ---
  target/product/handheld_system.mk | 18 ++++++++++++++++++

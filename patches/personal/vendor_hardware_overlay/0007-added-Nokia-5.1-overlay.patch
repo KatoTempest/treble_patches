@@ -1,7 +1,7 @@
-From e08b79a801cdfe51836eeb182ebdc15353ea9942 Mon Sep 17 00:00:00 2001
+From 72b698bcd8aebb86156f534dd74919f4b238e1b4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:59:51 -0500
-Subject: [PATCH 7/9] added Nokia 5.1 overlay
+Subject: [PATCH 07/10] added Nokia 5.1 overlay
 
   from
   https://github.com/phhusson/vendor_hardware_overlay/commit/8c5846a42f0e583b1b7b8a281b1f2c33662467f1
@@ -285,7 +285,7 @@ index 0000000..a94abd3
 +</device>
 \ No newline at end of file
 diff --git a/overlay.mk b/overlay.mk
-index 1f15d71..05a0ed0 100644
+index cab09b0..d9adba7 100644
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -68,6 +68,7 @@ PRODUCT_PACKAGES += \

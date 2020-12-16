@@ -1,7 +1,7 @@
-From c1487cbd82dc516cbfb1adf5e0066a6f98ba3431 Mon Sep 17 00:00:00 2001
+From c1550300eec171075c3db4685bdf9141d04925fa Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 7 Jul 2020 21:01:41 +0300
-Subject: [PATCH 6/9] replace Calendar with Etar
+Subject: [PATCH 06/10] replace Calendar with Etar
 
 ---
  target/product/handheld_product.mk | 2 +-

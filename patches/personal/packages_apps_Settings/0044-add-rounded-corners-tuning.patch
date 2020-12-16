@@ -1,7 +1,7 @@
-From 8b67ae11f426c1ab0f50d67043e7005934417530 Mon Sep 17 00:00:00 2001
+From 69c4f3877825f670f5cee563413bd139cb408a4e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:20:42 -0500
-Subject: [PATCH 44/45] add rounded corners tuning
+Subject: [PATCH 44/51] add rounded corners tuning
 
 Change-Id: I6b7ea055ac2b0458ad90b5284a6b11789b783703
 ---
@@ -51,7 +51,7 @@ index 87f3f79898..1bfed6fb24 100644
              android:key="android.theme.customization.statusbar"
              android:title="@string/theme_customization_statusbar_title"/>
 diff --git a/src/com/android/settings/DisplaySettings.java b/src/com/android/settings/DisplaySettings.java
-index 3c10680084..42b86eaedf 100644
+index 0984fd7d68..73f37ff9d4 100644
 --- a/src/com/android/settings/DisplaySettings.java
 +++ b/src/com/android/settings/DisplaySettings.java
 @@ -111,6 +111,8 @@ public class DisplaySettings extends DashboardFragment {

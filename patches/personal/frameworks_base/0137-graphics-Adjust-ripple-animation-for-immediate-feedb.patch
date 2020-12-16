@@ -1,0 +1,37 @@
+From 8cb79e660cd48271eee82446c41ec433892467d2 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Dec 2020 14:31:49 -0500
+Subject: [PATCH 137/193] graphics: Adjust ripple animation for immediate
+ feedback
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/50272434bb9932da5ff607f50e8ea4201c6d2aa8
+---
+ .../java/android/graphics/drawable/RippleForeground.java  | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/graphics/java/android/graphics/drawable/RippleForeground.java b/graphics/java/android/graphics/drawable/RippleForeground.java
+index 0f376957c8f..4f24a4357e6 100644
+--- a/graphics/java/android/graphics/drawable/RippleForeground.java
++++ b/graphics/java/android/graphics/drawable/RippleForeground.java
+@@ -44,13 +44,13 @@ class RippleForeground extends RippleComponent {
+             new PathInterpolator(0.4f, 0f, 0.2f, 1f);
+ 
+     // Time it takes for the ripple to expand
+-    private static final int RIPPLE_ENTER_DURATION = 225;
++    private static final int RIPPLE_ENTER_DURATION = 0;
+     // Time it takes for the ripple to slide from the touch to the center point
+-    private static final int RIPPLE_ORIGIN_DURATION = 225;
++    private static final int RIPPLE_ORIGIN_DURATION = 0;
+ 
+-    private static final int OPACITY_ENTER_DURATION = 75;
++    private static final int OPACITY_ENTER_DURATION = 0;
+     private static final int OPACITY_EXIT_DURATION = 150;
+-    private static final int OPACITY_HOLD_DURATION = OPACITY_ENTER_DURATION + 150;
++    private static final int OPACITY_HOLD_DURATION = 225;
+ 
+     // Parent-relative values for starting position.
+     private float mStartingX;
+-- 
+2.17.1
+

@@ -1,7 +1,7 @@
-From 0ae9d58de85eb1c09650d6234c326eb1f83f88d7 Mon Sep 17 00:00:00 2001
+From 039c75492dd05bf4ccd88d81ad0d6ac12cfff17e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 05:05:13 -0500
-Subject: [PATCH 8/9] add umidigi a3s overlay
+Subject: [PATCH 08/10] add umidigi a3s overlay
 
   from
   https://github.com/phhusson/vendor_hardware_overlay/commit/420d53633adb6b34916e9c1ebd67600454422217
@@ -293,12 +293,12 @@ index 0000000..742512d
 +    <item name="gps.voltage">0</item>
 +</device>
 diff --git a/overlay.mk b/overlay.mk
-index 05a0ed0..280f778 100644
+index d9adba7..3fca1f2 100644
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -108,6 +108,7 @@ PRODUCT_PACKAGES += \
- 	treble-overlay-telephony-mtk-ims \
+@@ -109,6 +109,7 @@ PRODUCT_PACKAGES += \
  	treble-overlay-telephony-slsi-ims \
+ 	treble-overlay-telephony-sprd-ims \
  	treble-overlay-tethering \
 +	treble-overlay-umidigi-A3S \
  	treble-overlay-umidigi-power \

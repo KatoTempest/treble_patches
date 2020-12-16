@@ -1,7 +1,7 @@
-From 6c730a2c63d456229a33b4200fbddfe22d99481a Mon Sep 17 00:00:00 2001
+From 17ad4a7bbccc735a687ed8d272559f7575c127a6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 12 Dec 2020 04:52:24 -0500
-Subject: [PATCH 6/9] initial overlay for Redmi Note 9S 'curtana'
+Subject: [PATCH 06/10] initial overlay for Redmi Note 9S 'curtana'
 
   -wip-
 ---
@@ -422,10 +422,10 @@ index 0000000..a26a899
 +</device>
 \ No newline at end of file
 diff --git a/overlay.mk b/overlay.mk
-index a0b3940..1f15d71 100644
+index 81eede9..cab09b0 100644
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -143,5 +143,6 @@ PRODUCT_PACKAGES += \
+@@ -144,5 +144,6 @@ PRODUCT_PACKAGES += \
  	treble-overlay-xiaomi-redminote7 \
  	treble-overlay-xiaomi-redminote8pro \
  	treble-overlay-xiaomi-redminote9pro \

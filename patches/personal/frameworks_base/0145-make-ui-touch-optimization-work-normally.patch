@@ -1,0 +1,68 @@
+From ad7190e79b4dabf1cfe2443184dd25063f5ba3f5 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Dec 2020 14:58:39 -0500
+Subject: [PATCH 145/193] make ui touch optimization work normally
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/ebd66cde29ba7de9ac593fd89d383ea0d50e8ecf
+---
+ core/java/android/view/Choreographer.java | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+
+diff --git a/core/java/android/view/Choreographer.java b/core/java/android/view/Choreographer.java
+index ecd8f90d03f..5a92c7497c1 100644
+--- a/core/java/android/view/Choreographer.java
++++ b/core/java/android/view/Choreographer.java
+@@ -192,6 +192,7 @@ public final class Choreographer {
+     private boolean mConsumedMove = false;
+     private boolean mConsumedDown = false;
+     private boolean mIsVsyncScheduled = false;
++    private long mLastTouchOptTimeNanos = 0;
+     /**
+      * Contains information about the current frame for jank-tracking,
+      * mainly timings of key events along with a bit of metadata about
+@@ -647,31 +648,36 @@ public final class Choreographer {
+         if (!mFrameScheduled) {
+             mFrameScheduled = true;
+             if (OPTS_INPUT) {
+-                if ((!mIsVsyncScheduled) &&
+-                    ((System.nanoTime() - mLastFrameTimeNanos) > mFrameIntervalNanos)) {
++                if (!mIsVsyncScheduled) {
++                    long curr = System.nanoTime();
++                    boolean skipFlag = curr - mLastTouchOptTimeNanos < mFrameIntervalNanos;
+                     Trace.traceBegin(Trace.TRACE_TAG_VIEW, "scheduleFrameLocked-mMotionEventType:"
+                                      + mMotionEventType + " mTouchMoveNum:" + mTouchMoveNum
+                                      + " mConsumedDown:" + mConsumedDown + " mConsumedMove:"
+-                                     + mConsumedMove);
++                                     + mConsumedMove + " skip:" + skipFlag
++                                     + " diff:" + (curr - mLastTouchOptTimeNanos));
+                     Trace.traceEnd(Trace.TRACE_TAG_VIEW);
+                     synchronized(this) {
+                         switch(mMotionEventType) {
+                             case MOTION_EVENT_ACTION_DOWN:
+                                 mConsumedMove = false;
+-                                if (!mConsumedDown) {
++                                if (!mConsumedDown && !skipFlag) {
+                                     Message msg = mHandler.obtainMessage(MSG_DO_FRAME);
+                                     msg.setAsynchronous(true);
+                                     mHandler.sendMessageAtFrontOfQueue(msg);
++                                    mLastTouchOptTimeNanos = System.nanoTime();
+                                     mConsumedDown = true;
+                                     return;
+                                 }
+                                 break;
+                             case MOTION_EVENT_ACTION_MOVE:
+                                 mConsumedDown = false;
+-                                if ((mTouchMoveNum == 1) && !mConsumedMove) {
++                                //if ((mTouchMoveNum == 1) && !mConsumedMove && !skipFlag) {
++                                if (!mConsumedMove && !skipFlag) {
+                                     Message msg = mHandler.obtainMessage(MSG_DO_FRAME);
+                                     msg.setAsynchronous(true);
+                                     mHandler.sendMessageAtFrontOfQueue(msg);
++                                    mLastTouchOptTimeNanos = System.nanoTime();
+                                     mConsumedMove = true;
+                                     return;
+                                 }
+-- 
+2.17.1
+

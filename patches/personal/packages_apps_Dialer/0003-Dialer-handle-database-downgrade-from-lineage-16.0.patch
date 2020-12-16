@@ -1,0 +1,53 @@
+From 4adcd81b01dd8c3c082b488f88da583b6e74bcb0 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 21 Dec 2020 04:32:23 -0500
+Subject: [PATCH 3/3] Dialer: handle database downgrade from lineage-16.0
+
+  from
+  https://github.com/LineageOS/android_packages_apps_Dialer/commit/06a730400ca3ef7b13c17bdab7cc1f1a85fb680f
+---
+ .../dialer/database/DialerDatabaseHelper.java | 28 +++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+
+diff --git a/java/com/android/dialer/database/DialerDatabaseHelper.java b/java/com/android/dialer/database/DialerDatabaseHelper.java
+index 719492e69..41d3f3577 100644
+--- a/java/com/android/dialer/database/DialerDatabaseHelper.java
++++ b/java/com/android/dialer/database/DialerDatabaseHelper.java
+@@ -280,6 +280,34 @@ public class DialerDatabaseHelper extends SQLiteOpenHelper {
+     db.execSQL("ALTER TABLE smartdial_table ADD carrier_presence INTEGER NOT NULL DEFAULT 0");
+   }
+ 
++  @Override
++  public void onDowngrade(SQLiteDatabase db, int oldNumber, int newNumber) {
++    // Disregard the old version and new versions provided by SQLiteOpenHelper, we will read
++    // our own from the database
++
++    int oldVersion;
++
++    oldVersion = getPropertyAsInt(db, DATABASE_VERSION_PROPERTY, 0);
++
++    if (oldVersion == 0) {
++      LogUtil.e(
++          "DialerDatabaseHelper.onDowngrade", "malformed database version..recreating database");
++      setupTables(db);
++      return;
++    }
++
++    if (oldVersion == 70011) {
++      oldVersion = 10;
++    }
++
++    if (oldVersion != DATABASE_VERSION) {
++      throw new IllegalStateException(
++          "error downgrading the database to version " + DATABASE_VERSION);
++    }
++
++    setProperty(db, DATABASE_VERSION_PROPERTY, String.valueOf(DATABASE_VERSION));
++  }
++
+   /** Stores a key-value pair in the {@link Tables#PROPERTIES} table. */
+   public void setProperty(String key, String value) {
+     setProperty(getWritableDatabase(), key, value);
+-- 
+2.17.1
+

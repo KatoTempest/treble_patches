@@ -1,0 +1,44 @@
+From 594f02f1aea3c200d4918ed68c7001df0c33fb2a Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 02:03:40 -0500
+Subject: [PATCH 156/193] Don't send interaction hint for unnecessary events
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/ad19bcda2409e8545df707308c84adde963ea450
+---
+ .../java/com/android/server/power/PowerManagerService.java    | 4 +++-
+ .../core/jni/com_android_server_power_PowerManagerService.cpp | 3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/services/core/java/com/android/server/power/PowerManagerService.java b/services/core/java/com/android/server/power/PowerManagerService.java
+index 07808f705d3..664cb8f3a99 100644
+--- a/services/core/java/com/android/server/power/PowerManagerService.java
++++ b/services/core/java/com/android/server/power/PowerManagerService.java
+@@ -1613,7 +1613,9 @@ public final class PowerManagerService extends SystemService
+ 
+         Trace.traceBegin(Trace.TRACE_TAG_POWER, "userActivity");
+         try {
+-            if (eventTime > mLastInteractivePowerHintTime) {
++            if (eventTime > mLastInteractivePowerHintTime &&
++                    event != PowerManager.USER_ACTIVITY_EVENT_OTHER &&
++                    event != PowerManager.USER_ACTIVITY_EVENT_TOUCH) {
+                 powerHintInternal(PowerHint.INTERACTION, 0);
+                 mLastInteractivePowerHintTime = eventTime;
+             }
+diff --git a/services/core/jni/com_android_server_power_PowerManagerService.cpp b/services/core/jni/com_android_server_power_PowerManagerService.cpp
+index 2ebff05d6c5..729d6663f74 100644
+--- a/services/core/jni/com_android_server_power_PowerManagerService.cpp
++++ b/services/core/jni/com_android_server_power_PowerManagerService.cpp
+@@ -344,7 +344,8 @@ void android_server_PowerManagerService_userActivity(nsecs_t eventTime, int32_t
+         // Throttle calls into user activity by event type.
+         // We're a little conservative about argument checking here in case the caller
+         // passes in bad data which could corrupt system state.
+-        if (eventType >= 0 && eventType <= USER_ACTIVITY_EVENT_LAST) {
++        if (eventType >= 0 && eventType <= USER_ACTIVITY_EVENT_LAST &&
++                eventType != USER_ACTIVITY_EVENT_TOUCH) {
+             nsecs_t now = systemTime(SYSTEM_TIME_MONOTONIC);
+             if (eventTime > now) {
+                 eventTime = now;
+-- 
+2.17.1
+
