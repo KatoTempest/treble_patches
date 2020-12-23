@@ -1,0 +1,34 @@
+From 75452b6e900c37f8f5a1b14b0bacb182d2b5d7eb Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 23 Dec 2020 14:28:37 -0500
+Subject: [PATCH 52/54] ThemePicker in Settings/Display
+
+  from
+  https://github.com/LineageOS/android_vendor_lineage/commit/e5df0f0c7efc168ae62ce7e32ca6c913a1d7fc87
+
+Change-Id: Idddd25cf596b11b3517d0f5ee730209b74855521
+---
+ res/values/config.xml | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/res/values/config.xml b/res/values/config.xml
+index c0c9ed43e8..782b5b9a47 100755
+--- a/res/values/config.xml
++++ b/res/values/config.xml
+@@ -45,10 +45,10 @@
+     <string name="config_featureFactory" translatable="false">com.android.settings.overlay.FeatureFactoryImpl</string>
+ 
+     <!-- Package name and fully-qualified class name for the wallpaper picker activity. -->
+-    <string name="config_wallpaper_picker_package" translatable="false">com.android.settings</string>
+-    <string name="config_wallpaper_picker_class" translatable="false">com.android.settings.Settings$WallpaperSettingsActivity</string>
++    <string name="config_wallpaper_picker_package" translatable="false">com.android.wallpaper</string>
++    <string name="config_wallpaper_picker_class" translatable="false">com.android.wallpaper.picker.CategoryPickerActivity</string>
+     <!-- Fully-qualified class name for the styles & wallpaper picker activity. -->
+-    <string name="config_styles_and_wallpaper_picker_class" translatable="false"></string>
++    <string name="config_styles_and_wallpaper_picker_class" translatable="false">com.android.customization.picker.CustomizationPickerActivity</string>
+ 
+     <!-- Manufacturer backup settings to launch -->
+     <string name="config_backup_settings_intent" translatable="false"></string>
+-- 
+2.17.1
+

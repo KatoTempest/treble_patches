@@ -1,7 +1,7 @@
-From d88ff082e574578e2f6ba0d1a459425699a878cb Mon Sep 17 00:00:00 2001
+From b67724755f0d6ae89e4bb5f79f279a4f6cfc9156 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:33:50 -0500
-Subject: [PATCH 072/193] Force disable PlayServices OTA checks
+Subject: [PATCH 072/191] Force disable PlayServices OTA checks
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/2cf1ace03b7beb1355f00efbd2aa80873baf017c

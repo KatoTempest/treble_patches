@@ -1,0 +1,43 @@
+From c025ab992bb8d620475486d38106157657ca16d6 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 25 Nov 2020 05:14:51 -0500
+Subject: [PATCH 090/191] config: Add conversation notification allowlist for
+ older apps
+
+  * from
+  https://github.com/LineageOS/android_vendor_lineage/commit/6d21e6a735ba974c068e884592017bbad9cb5025
+---
+ core/res/res/values/config.xml | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+
+diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
+index 9d87a74ae3d..36faddae464 100644
+--- a/core/res/res/values/config.xml
++++ b/core/res/res/values/config.xml
+@@ -4237,7 +4237,22 @@
+ 
+     <!-- List of packages that can use the Conversation space for their category messages
+     notifications until they target R -->
+-    <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false"/>
++    <string-array name="config_notificationMsgPkgsAllowedAsConvos" translatable="false">
++        <item>com.facebook.orca</item>
++        <item>com.instagram.android</item>
++        <item>com.whatsapp</item>
++        <item>com.snapchat.android</item>
++        <item>jp.naver.line.android</item>
++        <item>com.kakao.talk</item>
++        <item>com.discord</item>
++        <item>org.thoughtcrime.securesms</item>
++        <item>com.groupme.android</item>
++        <item>org.telegram.messenger</item>
++        <item>com.twitter.android</item>
++        <item>com.viber.voip</item>
++        <item>com.linkedin.android</item>
++        <item>com.tencent.mm</item>
++    </string-array>
+ 
+     <!-- Sharesheet: define a max number of targets per application for new shortcuts-based direct share introduced in Q -->
+     <integer name="config_maxShortcutTargetsPerApp">3</integer>
+-- 
+2.17.1
+

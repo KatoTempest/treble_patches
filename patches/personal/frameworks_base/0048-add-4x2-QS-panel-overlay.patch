@@ -1,7 +1,7 @@
-From 9d9acf4feb5a101725eae3a21cb03f8f80bd2014 Mon Sep 17 00:00:00 2001
+From cfb9f9d84951be7768d60559a1986e4f4b4562bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 8 Oct 2020 15:10:16 -0400
-Subject: [PATCH 048/193] add 4x2 QS panel overlay
+Subject: [PATCH 048/191] add 4x2 QS panel overlay
 
 Change-Id: Ibaaee7732c84473c5b25fa7570943d73b7b0831f
 ---

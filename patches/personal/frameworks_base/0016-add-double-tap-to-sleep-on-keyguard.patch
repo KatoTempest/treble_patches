@@ -1,7 +1,7 @@
-From 60f6ad1ab2c3754e8d3353114df1656192f40b27 Mon Sep 17 00:00:00 2001
+From 53277203e4ecb645878e5a5c8b60453dc20e9aeb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Apr 2020 20:29:00 +0300
-Subject: [PATCH 016/193] add double-tap-to-sleep on keyguard
+Subject: [PATCH 016/191] add double-tap-to-sleep on keyguard
 
   * based on
   https://github.com/crdroidandroid/android_frameworks_base/commit/fee2c57f5150f5bdaee70cf3ee8b8a672c9d1e88

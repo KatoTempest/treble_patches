@@ -1,7 +1,7 @@
-From aa2bb97196333c5292496aa4595a2466720df63e Mon Sep 17 00:00:00 2001
+From 5865485681d37e90112acb93b99478586ab7aff2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 05:42:57 -0500
-Subject: [PATCH 26/51] add gestural navbar's handle tuning
+Subject: [PATCH 26/54] add gestural navbar's handle tuning
 
   based on
   https://github.com/StatiXOS/android_packages_apps_Settings/commit/3346cb7276465d6a33075fe75433689dc6274148

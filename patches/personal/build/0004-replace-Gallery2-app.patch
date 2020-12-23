@@ -1,7 +1,7 @@
-From be539914e7116818510e5405d58f5ea992ce7e61 Mon Sep 17 00:00:00 2001
+From 9c40a819e647c17fcbfd6cf9c241855aff824f01 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 29 Dec 2019 17:28:08 +0200
-Subject: [PATCH 04/10] replace Gallery2 app
+Subject: [PATCH 04/13] replace Gallery2 app
 
 Change-Id: I6809a04c8c0d624c2c5f739fd93d2c0db57ed8e4
 ---

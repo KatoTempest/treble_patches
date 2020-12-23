@@ -1,7 +1,7 @@
-From 24acf7dc276734a41a50a50713e2f97543d6a681 Mon Sep 17 00:00:00 2001
+From ec23ac9532f284e69a1d12ea376bfcf66c6a8c69 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Oct 2020 02:40:31 -0400
-Subject: [PATCH 04/10] import OnePlus 8 Pro 'instantnoodlep' overlay
+Subject: [PATCH 04/11] import OnePlus 8 Pro 'instantnoodlep' overlay
 
   from https://github.com/luk1337/android_device_oneplus_instantnoodlep
 ---

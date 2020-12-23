@@ -1,0 +1,43 @@
+From 0bf0f69ed554cad254ba269ef0494f94966e97a7 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 24 Dec 2020 13:04:22 -0500
+Subject: [PATCH] adapt for themestub
+
+---
+ res/values/override.xml | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+diff --git a/res/values/override.xml b/res/values/override.xml
+index a070dbe..55309fb 100644
+--- a/res/values/override.xml
++++ b/res/values/override.xml
+@@ -16,7 +16,7 @@
+      limitations under the License.
+ -->
+ <resources>
+-    <string name="themes_stub_package" translatable="false"/>
++    <string name="themes_stub_package" translatable="false">me.caos.themes</string>
+     <string name="clocks_stub_package" translatable="false"/>
+     <!-- Authority of a provider in System UI that will provide preview info for available clockfaces. -->
+     <string name="clocks_provider_authority" translatable="false">com.android.keyguard.clock</string>
+@@ -26,11 +26,11 @@
+     <!-- List of packages whose icons are used to preview the icon shape for a theme. These are
+         typically GMS apps so they should be available in GMS devices. -->
+     <array name="icon_shape_preview_packages">
+-        <item>com.google.android.gm</item>
+-        <item>com.google.android.googlequicksearchbox</item>
+-        <item>com.google.android.apps.photos</item>
+-        <item>com.google.android.apps.docs</item>
+-        <item>com.google.android.youtube</item>
+-        <item>com.android.vending</item>
++        <item>com.android.launcher3</item>
++        <item>com.android.documentsui</item>
++        <item>com.android.settings</item>
++        <item>com.android.messaging</item>
++        <item>com.android.dialer</item>
++        <item>com.android.contacts</item>
+     </array>
+ </resources>
+-- 
+2.17.1
+

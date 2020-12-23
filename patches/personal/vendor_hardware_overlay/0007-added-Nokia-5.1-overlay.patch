@@ -1,7 +1,7 @@
-From 72b698bcd8aebb86156f534dd74919f4b238e1b4 Mon Sep 17 00:00:00 2001
+From 7c3b3e1c147aac6107bbdfd975a45c60c9976bae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:59:51 -0500
-Subject: [PATCH 07/10] added Nokia 5.1 overlay
+Subject: [PATCH 07/11] added Nokia 5.1 overlay
 
   from
   https://github.com/phhusson/vendor_hardware_overlay/commit/8c5846a42f0e583b1b7b8a281b1f2c33662467f1

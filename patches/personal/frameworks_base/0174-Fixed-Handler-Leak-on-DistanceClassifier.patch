@@ -1,0 +1,35 @@
+From 6b1ebaca67a81f58ad009eeb453efcd2056c9048 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 14:22:37 -0500
+Subject: [PATCH 174/191] Fixed Handler Leak on DistanceClassifier
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/714de553878017b4d924b9ea50f6f755db02ab0c
+---
+ .../systemui/classifier/brightline/DistanceClassifier.java     | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/classifier/brightline/DistanceClassifier.java b/packages/SystemUI/src/com/android/systemui/classifier/brightline/DistanceClassifier.java
+index 0329183e604..9fa2557c231 100644
+--- a/packages/SystemUI/src/com/android/systemui/classifier/brightline/DistanceClassifier.java
++++ b/packages/SystemUI/src/com/android/systemui/classifier/brightline/DistanceClassifier.java
+@@ -112,7 +112,6 @@ class DistanceClassifier extends FalsingClassifier {
+ 
+     private DistanceVectors calculateDistances() {
+         // This code assumes that there will be no missed DOWN or UP events.
+-        VelocityTracker velocityTracker = VelocityTracker.obtain();
+         List<MotionEvent> motionEvents = getRecentMotionEvents();
+ 
+         if (motionEvents.size() < 3) {
+@@ -120,6 +119,8 @@ class DistanceClassifier extends FalsingClassifier {
+             return new DistanceVectors(0, 0, 0, 0);
+         }
+ 
++        VelocityTracker velocityTracker = VelocityTracker.obtain();
++
+         for (MotionEvent motionEvent : motionEvents) {
+             velocityTracker.addMovement(motionEvent);
+         }
+-- 
+2.17.1
+

@@ -1,7 +1,7 @@
-From 2a400afdb9587d52066b05a2fb414dcfb56da848 Mon Sep 17 00:00:00 2001
+From d0103d2c59365e54fbdff9d1b43faaa519f53657 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 14 Aug 2018 21:48:19 +0200
-Subject: [PATCH 51/51] Act as usb device when there is no hal, but we believe
+Subject: [PATCH 51/54] Act as usb device when there is no hal, but we believe
  we are a device
 
 Change-Id: I036090738525fd8cc63534d52d02ab1852950a7d

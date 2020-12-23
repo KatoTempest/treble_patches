@@ -1,0 +1,53 @@
+From efbe0c409a156c6cbf9c384dd1f72fc4e2ab1b16 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Dec 2020 14:37:59 -0500
+Subject: [PATCH 139/191] Overscroll: modified velocitytracker
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/b9dddecec16a018380a126bd4d6a5695a9341a0f
+---
+ core/java/android/widget/ScrollView.java | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/core/java/android/widget/ScrollView.java b/core/java/android/widget/ScrollView.java
+index 4d19a2f1f4e..7879bb5d149 100644
+--- a/core/java/android/widget/ScrollView.java
++++ b/core/java/android/widget/ScrollView.java
+@@ -89,7 +89,7 @@ public class ScrollView extends FrameLayout {
+ 
+     private final Rect mTempRect = new Rect();
+     @UnsupportedAppUsage
+-    private OverScroller mScroller;
++    private static OverScroller mScroller;
+     /**
+      * Tracks the state of the top edge glow.
+      *
+@@ -142,7 +142,7 @@ public class ScrollView extends FrameLayout {
+      * Determines speed during touch scrolling
+      */
+     @UnsupportedAppUsage
+-    private VelocityTracker mVelocityTracker;
++    private static VelocityTracker mVelocityTracker;
+ 
+     /**
+      * When set to true, the scroll view measure its child to make it fill the currently
+@@ -221,7 +221,6 @@ public class ScrollView extends FrameLayout {
+                 attrs, a, defStyleAttr, defStyleRes);
+ 
+         setFillViewport(a.getBoolean(R.styleable.ScrollView_fillViewport, false));
+-
+         a.recycle();
+ 
+         if (context.getResources().getConfiguration().uiMode == Configuration.UI_MODE_TYPE_WATCH) {
+@@ -568,7 +567,7 @@ public class ScrollView extends FrameLayout {
+         }
+     }
+ 
+-    private void recycleVelocityTracker() {
++    private static void recycleVelocityTracker() {
+         if (mVelocityTracker != null) {
+             mVelocityTracker.recycle();
+             mVelocityTracker = null;
+-- 
+2.17.1
+

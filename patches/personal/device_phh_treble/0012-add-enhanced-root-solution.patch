@@ -1,15 +1,17 @@
-From 3b6744b8a21ee8b30c40cfd5736c6684920b8914 Mon Sep 17 00:00:00 2001
+From f0c4a2545b61e9804b08a60ce3253c6bb749f39a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 12/13] add enhanced root solution
+Subject: [PATCH 12/16] add enhanced root solution
 
+  last changes:
+  23.12.2020, bugfixes small issues (like race condition and perms)
 ---
  base.mk             |   3 +++
  phh-add-secure.sh   |  23 +++++++++++++++++++++++
- phh-prop-handler.sh |  21 +++++++++++++++++++++
+ phh-prop-handler.sh |  20 ++++++++++++++++++++
  phh.superuser.apk   | Bin 0 -> 1007563 bytes
  vndk.rc             |   3 +++
- 5 files changed, 50 insertions(+)
+ 5 files changed, 49 insertions(+)
  create mode 100644 phh-add-secure.sh
  create mode 100644 phh.superuser.apk
 
@@ -57,10 +59,10 @@ index 0000000..b7d7177
 +mount -o remount,ro $MOUNTPOINT
 +#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 952618e..05b55e7 100644
+index 952618e..8b73d7c 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -169,3 +169,24 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
+@@ -169,3 +169,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
      echo "$prop_value" > /sys/devices/platform/soc/soc:ap-apb/70800000.i2c/i2c-3/3-0038/fts_gesture_mode
      exit
  fi
@@ -72,9 +74,8 @@ index 952618e..05b55e7 100644
 +    fi
 +
 +    if [[ "$prop_value" == "true" ]]; then
-+        if ! mount |grep -q "/system/xbin type ext4"; then
-+          mount /system/phh/xbin /system/xbin
-+        fi
++        umount -nfl /system/xbin
++        mount /system/phh/xbin /system/xbin
 +        setprop ctl.start zerodaemon
 +        pm install -r /system/phh/phh.superuser.apk
 +    else

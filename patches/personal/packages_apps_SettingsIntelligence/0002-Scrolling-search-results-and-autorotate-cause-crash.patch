@@ -1,0 +1,35 @@
+From 44fef324e8b3389364fc37352c42679b3884f0ca Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 23 Dec 2020 14:51:46 -0500
+Subject: [PATCH 2/4] Scrolling search results and autorotate cause crash
+
+  from
+  https://github.com/ezio84/abc_packages_apps_SettingsIntelligence/commit/c03f2c93b9b3846d7575eab20a47cb2b38f6a572
+
+Change-Id: I94b74fef08fc591a543efac316a3c46c5cbc24d2
+---
+ .../settings/intelligence/search/SearchFragment.java      | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/src/com/android/settings/intelligence/search/SearchFragment.java b/src/com/android/settings/intelligence/search/SearchFragment.java
+index 4642b16..c76eda3 100644
+--- a/src/com/android/settings/intelligence/search/SearchFragment.java
++++ b/src/com/android/settings/intelligence/search/SearchFragment.java
+@@ -344,9 +344,11 @@ public class SearchFragment extends Fragment implements SearchView.OnQueryTextLi
+         final Activity activity = getActivity();
+         if (activity != null) {
+             View view = activity.getCurrentFocus();
+-            InputMethodManager imm = (InputMethodManager)
+-                    activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
++            if (view != null) {
++                InputMethodManager imm = (InputMethodManager)
++                        activity.getSystemService(Context.INPUT_METHOD_SERVICE);
++                imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
++            }
+         }
+ 
+         if (mResultsRecyclerView != null) {
+-- 
+2.17.1
+

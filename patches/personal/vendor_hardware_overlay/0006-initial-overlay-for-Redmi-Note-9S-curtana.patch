@@ -1,7 +1,7 @@
-From 17ad4a7bbccc735a687ed8d272559f7575c127a6 Mon Sep 17 00:00:00 2001
+From 9c35d43260c8b15b2c72d8a33d2fdd94fceea164 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 12 Dec 2020 04:52:24 -0500
-Subject: [PATCH 06/10] initial overlay for Redmi Note 9S 'curtana'
+Subject: [PATCH 06/11] initial overlay for Redmi Note 9S 'curtana'
 
   -wip-
 ---

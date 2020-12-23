@@ -1,0 +1,50 @@
+From 4580ab339c16cea8fe99fbdb85b1b2b19dd29059 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 23 Dec 2020 14:53:01 -0500
+Subject: [PATCH 3/4] Normalize dynamic search result in Japanese
+
+  from
+  https://github.com/ezio84/abc_packages_apps_SettingsIntelligence/commit/1e5b9ff4672c2d193ec301fbbb863dda4be6979b
+
+Change-Id: If6a9694728b223b14c31fb3dd3e50886c0ba5a08
+---
+ .../intelligence/search/query/SearchQueryUtils.java    | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/src/com/android/settings/intelligence/search/query/SearchQueryUtils.java b/src/com/android/settings/intelligence/search/query/SearchQueryUtils.java
+index d7011ee..96611c6 100644
+--- a/src/com/android/settings/intelligence/search/query/SearchQueryUtils.java
++++ b/src/com/android/settings/intelligence/search/query/SearchQueryUtils.java
+@@ -18,6 +18,10 @@ package com.android.settings.intelligence.search.query;
+ 
+ import android.text.TextUtils;
+ 
++import com.android.settings.intelligence.search.indexing.IndexData;
++
++import java.util.Locale;
++
+ /**
+  * Utils for Query-time operations.
+  */
+@@ -40,12 +44,18 @@ public class SearchQueryUtils {
+      * resultName: Abcde, query: bc, Returns NAME_NO_MATCH
+      * resultName: Abcde, query: xyz, Returns NAME_NO_MATCH
+      * resultName: Abc de, query: de, Returns 4
++     *
++     * In Japanese, normalize resultName to match normalized query
+      */
+     public static int getWordDifference(String resultName, String query) {
+         if (TextUtils.isEmpty(resultName) || TextUtils.isEmpty(query)) {
+             return NAME_NO_MATCH;
+         }
+ 
++        if (Locale.getDefault().equals(Locale.JAPAN)) {
++            resultName = IndexData.normalizeJapaneseString(resultName);
++        }
++
+         final char[] queryTokens = query.toLowerCase().toCharArray();
+         final char[] resultTokens = resultName.toLowerCase().toCharArray();
+         final int resultLength = resultTokens.length;
+-- 
+2.17.1
+

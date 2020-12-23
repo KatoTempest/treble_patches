@@ -1,7 +1,7 @@
-From 32ee8faf2bbc1343462b19e597b5494de5345516 Mon Sep 17 00:00:00 2001
+From 9141bc1cb24ac5463af1d42d609cd557a7bc7ff4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:32:30 +0300
-Subject: [PATCH 032/193] hide lock icon
+Subject: [PATCH 032/191] hide lock icon
 
   based on
   https://github.com/BlissRoms/platform_frameworks_base/commit/a7cece1d33365fd6f1f1a3482e496691306f4805

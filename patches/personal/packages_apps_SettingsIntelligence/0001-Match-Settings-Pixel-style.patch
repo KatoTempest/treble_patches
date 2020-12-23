@@ -1,7 +1,7 @@
-From aecfdd2179d7f3c538d6fc8b617d4ae7d9ab57fc Mon Sep 17 00:00:00 2001
+From 0cc8349a58332acecda21ef89237f8601e195c36 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 28 Dec 2019 19:08:14 +0200
-Subject: [PATCH] Match Settings Pixel style
+Subject: [PATCH 1/4] Match Settings Pixel style
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_SettingsIntelligence/commit/eaad8c26fd2d098c6aa38bc667c1d55d80294538
@@ -16,7 +16,7 @@ Change-Id: I9615b39d964711db3e99770a376b997ad48623d0
  create mode 100644 res/values-night/colors.xml
 
 diff --git a/res/layout/search_panel.xml b/res/layout/search_panel.xml
-index 5f621cd..3f1c202 100644
+index 5f621cd..f639e61 100644
 --- a/res/layout/search_panel.xml
 +++ b/res/layout/search_panel.xml
 @@ -25,15 +25,15 @@

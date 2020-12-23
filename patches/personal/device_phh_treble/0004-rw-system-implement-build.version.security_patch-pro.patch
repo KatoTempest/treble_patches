@@ -1,7 +1,7 @@
-From 45fca8c10e87e3c157e559854192ed5a6ad2505f Mon Sep 17 00:00:00 2001
+From 7092bc63db08ba4697761d671bd1e710c8cf7edd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 5 Feb 2020 15:41:12 +0200
-Subject: [PATCH 04/13] rw-system: implement build.version.security_patch prop
+Subject: [PATCH 04/16] rw-system: implement build.version.security_patch prop
 
 	modified:   rw-system.sh
 ---

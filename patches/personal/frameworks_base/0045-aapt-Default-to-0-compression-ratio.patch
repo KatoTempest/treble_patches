@@ -1,7 +1,7 @@
-From aecf90b1ffe734089acb7c057cce2ceac06fa922 Mon Sep 17 00:00:00 2001
+From 20c9a7827141621b106fad55cb1eef9c9d735ede Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 08:19:40 -0400
-Subject: [PATCH 045/193] aapt: Default to 0 compression ratio
+Subject: [PATCH 045/191] aapt: Default to 0 compression ratio
 
   from
   https://github.com/BootleggersROM/frameworks_base/commit/8421525187f17bf217fab51f28eef6a5efb9505f

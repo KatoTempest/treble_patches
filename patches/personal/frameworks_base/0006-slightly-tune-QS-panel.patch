@@ -1,7 +1,7 @@
-From 5681917e1e86b940f8e26ce63a55b5550fbad8cf Mon Sep 17 00:00:00 2001
+From d3ba7663d1c8c537475bf61cb0331c5382031c4d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 18:55:45 +0200
-Subject: [PATCH 006/193] slightly tune QS panel
+Subject: [PATCH 006/191] slightly tune QS panel
 
 	modified:   packages/SystemUI/res/values/config.xml
 ---

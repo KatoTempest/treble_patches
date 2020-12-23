@@ -1,7 +1,7 @@
-From 69c4f3877825f670f5cee563413bd139cb408a4e Mon Sep 17 00:00:00 2001
+From ed89db20b81aed679dde180ae83bde485db61fde Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:20:42 -0500
-Subject: [PATCH 44/51] add rounded corners tuning
+Subject: [PATCH 44/54] add rounded corners tuning
 
 Change-Id: I6b7ea055ac2b0458ad90b5284a6b11789b783703
 ---

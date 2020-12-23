@@ -1,7 +1,7 @@
-From 6168444f4029e51a9f97d5f2b2def572ed2a3f13 Mon Sep 17 00:00:00 2001
+From e355e5d0d2bdd6975d67a02c2db73cb7d84f6570 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:47:55 +0300
-Subject: [PATCH 034/193] set 0.8x amination scale as default
+Subject: [PATCH 034/191] set 0.8x amination scale as default
 
   from
   https://github.com/BlissRoms/platform_frameworks_base/commit/e3cdd07ebb181086c4a32d91a2a06fd24f6d2235

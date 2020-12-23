@@ -1,7 +1,7 @@
-From 4b8efd44cbd5740dce7dcf8442fe9341318eb7d2 Mon Sep 17 00:00:00 2001
+From 2e58f863948f2dbff67d7d24641289605337dec6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 08/13] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 08/16] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)

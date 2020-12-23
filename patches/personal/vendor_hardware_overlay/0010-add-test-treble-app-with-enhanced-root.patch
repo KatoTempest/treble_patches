@@ -1,7 +1,7 @@
-From a4d62efdf09c2690143c532199d19a0ad9c09dad Mon Sep 17 00:00:00 2001
+From 8cb65657c802329bc57cc4db816123f3ca33c209 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 09:45:14 -0500
-Subject: [PATCH 10/10] add test treble app with enhanced root
+Subject: [PATCH 10/11] add test treble app with enhanced root
 
 ---
  TrebleApp/app.apk | Bin 2323850 -> 2323850 bytes

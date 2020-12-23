@@ -1,7 +1,7 @@
-From d3c0269e143ba0e00e4af8692527b3599f31a3f5 Mon Sep 17 00:00:00 2001
+From 74c4dd9c5ad50fd16a202741ef019c80452eeee2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 23:32:22 +0300
-Subject: [PATCH 018/193] add QS Panel overlays
+Subject: [PATCH 018/191] add QS Panel overlays
 
 	modified:   packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayManager.java
 	modified:   packages/overlays/Android.mk

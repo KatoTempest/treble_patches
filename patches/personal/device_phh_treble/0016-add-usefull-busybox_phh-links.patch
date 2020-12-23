@@ -1,0 +1,56 @@
+From 10117df6347022b0da220c2c59426069399245d6 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 25 Dec 2020 07:17:39 -0500
+Subject: [PATCH 16/16] add usefull busybox_phh links
+
+---
+ base.mk                  |  4 ++++
+ busybox_links/Android.mk | 21 +++++++++++++++++++++
+ 2 files changed, 25 insertions(+)
+ create mode 100644 busybox_links/Android.mk
+
+diff --git a/base.mk b/base.mk
+index 27859b1..ac6a1ae 100644
+--- a/base.mk
++++ b/base.mk
+@@ -75,6 +75,10 @@ PRODUCT_PACKAGES += \
+ 	bootctl \
+ 	vintf \
+ 
++# add usefull symlinks
++PRODUCT_PACKAGES += \
++	busybox-links
++
+ # Fix Offline Charging on Huawmeme
+ PRODUCT_PACKAGES += \
+ 	huawei-charger
+diff --git a/busybox_links/Android.mk b/busybox_links/Android.mk
+new file mode 100644
+index 0000000..6782b84
+--- /dev/null
++++ b/busybox_links/Android.mk
+@@ -0,0 +1,21 @@
++include $(CLEAR_VARS)
++
++LOCAL_MODULE := busybox-links
++LOCAL_MODULE_TAGS := optional
++
++LOCAL_POST_INSTALL_CMD := \
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/vi ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/vim ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/xzcat ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/unxz ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/xz ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/arp ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/getty ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/wget ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/telnet ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/traceroute ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/sendmail ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/less ;\
++	ln -sf busybox_phh $(PRODUCT_OUT)/system/bin/fdisk
++
++include $(BUILD_PHONY_PACKAGE)
+-- 
+2.17.1
+

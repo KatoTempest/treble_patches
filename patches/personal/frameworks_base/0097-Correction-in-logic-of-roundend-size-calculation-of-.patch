@@ -1,0 +1,34 @@
+From 85a6027d860038d0446ad8037331f886447c2501 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 26 Nov 2020 14:03:55 -0500
+Subject: [PATCH 097/191] Correction in logic of roundend size calculation of
+ SD card
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/a88aa30a63c797d374b3803d2fb2c76f99427e3e
+---
+ core/java/android/os/FileUtils.java | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/core/java/android/os/FileUtils.java b/core/java/android/os/FileUtils.java
+index 87e70431bd1..27f1d489d49 100644
+--- a/core/java/android/os/FileUtils.java
++++ b/core/java/android/os/FileUtils.java
+@@ -1266,11 +1266,13 @@ public final class FileUtils {
+     public static long roundStorageSize(long size) {
+         long val = 1;
+         long pow = 1;
+-        while ((val * pow) < size) {
++        long pow1024 = 1;
++        while ((val * pow1024) < size) {
+             val <<= 1;
+             if (val > 512) {
+                 val = 1;
+                 pow *= 1000;
++                pow1024 *= 1024;
+             }
+         }
+         return val * pow;
+-- 
+2.17.1
+

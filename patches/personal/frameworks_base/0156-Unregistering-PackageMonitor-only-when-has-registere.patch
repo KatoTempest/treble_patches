@@ -1,0 +1,28 @@
+From 8f2c6ec5f534b1efc58e93acdb2a69b5b1b0df0a Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 02:13:11 -0500
+Subject: [PATCH 156/191] Unregistering PackageMonitor only when has registered
+ it
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/78549f3c80124f08551c1107e597db4fc769436d
+---
+ core/java/com/android/internal/app/ResolverActivity.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/java/com/android/internal/app/ResolverActivity.java b/core/java/com/android/internal/app/ResolverActivity.java
+index 233231cfcfd..16991b47203 100644
+--- a/core/java/com/android/internal/app/ResolverActivity.java
++++ b/core/java/com/android/internal/app/ResolverActivity.java
+@@ -1281,7 +1281,7 @@ public class ResolverActivity extends Activity implements
+     private void safelyStartActivityInternal(TargetInfo cti) {
+         // If the target is suspended, the activity will not be successfully launched.
+         // Do not unregister from package manager updates in this case
+-        if (!cti.isSuspended()) {
++        if (!cti.isSuspended() && mRegistered) {
+             if (mPersonalPackageMonitor != null) {
+                 mPersonalPackageMonitor.unregister();
+             }
+-- 
+2.17.1
+

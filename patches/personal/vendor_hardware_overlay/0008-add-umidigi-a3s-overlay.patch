@@ -1,7 +1,7 @@
-From 039c75492dd05bf4ccd88d81ad0d6ac12cfff17e Mon Sep 17 00:00:00 2001
+From d8bc4e96fcbdb9da51ab48c2f97c25525806f327 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 05:05:13 -0500
-Subject: [PATCH 08/10] add umidigi a3s overlay
+Subject: [PATCH 08/11] add umidigi a3s overlay
 
   from
   https://github.com/phhusson/vendor_hardware_overlay/commit/420d53633adb6b34916e9c1ebd67600454422217

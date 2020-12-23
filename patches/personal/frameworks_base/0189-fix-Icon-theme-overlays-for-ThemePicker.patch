@@ -1,0 +1,76 @@
+From 6b439956f593fde8ac19fcd60cfa326acd035ccf Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 24 Dec 2020 13:58:38 -0500
+Subject: [PATCH 189/191] fix Icon theme overlays for ThemePicker
+
+---
+ .../IconPackCircularThemePickerOverlay/AndroidManifest.xml      | 2 +-
+ .../IconPackFilledThemePickerOverlay/AndroidManifest.xml        | 2 +-
+ .../overlays/IconPackKaiThemePickerOverlay/AndroidManifest.xml  | 2 +-
+ .../overlays/IconPackSamThemePickerOverlay/AndroidManifest.xml  | 2 +-
+ .../IconPackVictorThemePickerOverlay/AndroidManifest.xml        | 2 +-
+ 5 files changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/packages/overlays/IconPackCircularThemePickerOverlay/AndroidManifest.xml b/packages/overlays/IconPackCircularThemePickerOverlay/AndroidManifest.xml
+index f7c5b550b19..eae7de8f528 100644
+--- a/packages/overlays/IconPackCircularThemePickerOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackCircularThemePickerOverlay/AndroidManifest.xml
+@@ -19,6 +19,6 @@
+     package="com.android.theme.icon_pack.circular.themepicker"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
++    <overlay android:targetPackage="com.android.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
+     <application android:label="Circular" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackFilledThemePickerOverlay/AndroidManifest.xml b/packages/overlays/IconPackFilledThemePickerOverlay/AndroidManifest.xml
+index 503a063ac86..35023ab9653 100644
+--- a/packages/overlays/IconPackFilledThemePickerOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackFilledThemePickerOverlay/AndroidManifest.xml
+@@ -19,6 +19,6 @@
+     package="com.android.theme.icon_pack.filled.themepicker"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
++    <overlay android:targetPackage="com.android.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
+     <application android:label="Filled" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackKaiThemePickerOverlay/AndroidManifest.xml b/packages/overlays/IconPackKaiThemePickerOverlay/AndroidManifest.xml
+index 83b89858e8c..d33f4bb991b 100644
+--- a/packages/overlays/IconPackKaiThemePickerOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackKaiThemePickerOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.kai.themepicker"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
++    <overlay android:targetPackage="com.android.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
+     <application android:label="Kai" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackSamThemePickerOverlay/AndroidManifest.xml b/packages/overlays/IconPackSamThemePickerOverlay/AndroidManifest.xml
+index 67446b2014c..bdec2eea93a 100644
+--- a/packages/overlays/IconPackSamThemePickerOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackSamThemePickerOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.sam.themepicker"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
++    <overlay android:targetPackage="com.android.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
+     <application android:label="Sam" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackVictorThemePickerOverlay/AndroidManifest.xml b/packages/overlays/IconPackVictorThemePickerOverlay/AndroidManifest.xml
+index 9635febfd54..ee6a93d8e10 100644
+--- a/packages/overlays/IconPackVictorThemePickerOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackVictorThemePickerOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.victor.themepicker"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
++    <overlay android:targetPackage="com.android.wallpaper" android:category="android.theme.customization.icon_pack.themepicker" android:priority="1"/>
+     <application android:label="Victor" android:hasCode="false"/>
+ </manifest>
+-- 
+2.17.1
+

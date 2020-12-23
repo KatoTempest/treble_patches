@@ -1,7 +1,7 @@
-From dfb59d0c7a2727767bb698db0606534e4c2715ed Mon Sep 17 00:00:00 2001
+From 54b924d658572a852cda9fa933ddb1244a99695b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:50:05 -0500
-Subject: [PATCH 079/193] Catch IllegalArgumentException in stopScreenshot()
+Subject: [PATCH 079/191] Catch IllegalArgumentException in stopScreenshot()
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/5e9dcb0bdf4989380e29333a98c0bd92915bbecf
