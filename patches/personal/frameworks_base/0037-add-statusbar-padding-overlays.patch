@@ -1,4 +1,4 @@
-From 43da1230c885857a2edbc5e4bba07b68ed73b254 Mon Sep 17 00:00:00 2001
+From 6af31f8b7ac975ccf68879d1b7a00b554a108626 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Aug 2020 12:44:27 -0400
 Subject: [PATCH 037/191] add statusbar padding overlays

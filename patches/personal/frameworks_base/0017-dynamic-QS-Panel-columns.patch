@@ -1,4 +1,4 @@
-From 63c0a61975a1009193afffb449236470948309f9 Mon Sep 17 00:00:00 2001
+From 3b5e18572d8b01c6faff5f92967d3604c35f9bae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 22:42:57 +0300
 Subject: [PATCH 017/191] dynamic QS Panel columns

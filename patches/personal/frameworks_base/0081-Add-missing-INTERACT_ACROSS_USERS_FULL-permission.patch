@@ -1,4 +1,4 @@
-From 4b522fe405163611a405e6bc978cc31d4902f2e6 Mon Sep 17 00:00:00 2001
+From 205561e39df4c233e61b52f901b41b317c778e68 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:55:44 -0500
 Subject: [PATCH 081/191] Add missing INTERACT_ACROSS_USERS_FULL permission

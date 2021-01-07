@@ -1,4 +1,4 @@
-From 99c88a85fd90cbf2876117f240a4bbfbee93dd29 Mon Sep 17 00:00:00 2001
+From 4d0cb08df166c95f15446813b574ebec5d851d47 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:25:27 -0500
 Subject: [PATCH 061/191] Sanitize Bluetooth device names without regex

@@ -1,7 +1,7 @@
-From 1b660d0ed43753dd0ece991e633920317df95590 Mon Sep 17 00:00:00 2001
+From d9349afe27eb021d3ceeed8aaea16a257c50aff8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 12 Mar 2020 23:26:15 +0200
-Subject: [PATCH 3/4] launcher one quick step v3
+Subject: [PATCH 3/5] launcher one quick step v3
 
 	modified:   res/anim/no_anim.xml
 	modified:   res/anim/task_open_enter.xml
@@ -109,7 +109,7 @@ index f02ebdbac..2e3af6933 100644
          android:propertyName="progress"
          android:valueTo="1f"
 diff --git a/res/values/config.xml b/res/values/config.xml
-index a9cace9c7..3a0d1d987 100644
+index e5f9b4a4c..8556575f5 100644
 --- a/res/values/config.xml
 +++ b/res/values/config.xml
 @@ -35,7 +35,7 @@

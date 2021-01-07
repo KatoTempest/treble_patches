@@ -1,4 +1,4 @@
-From 7adb82b0034723c3c8178af01274034a108aafdb Mon Sep 17 00:00:00 2001
+From 3fc38ff009a521065cfa37e07e259b8f64c932c1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 18 Apr 2020 18:11:41 +0300
 Subject: [PATCH 026/191] UninstallAlertDialogFragment: Catch

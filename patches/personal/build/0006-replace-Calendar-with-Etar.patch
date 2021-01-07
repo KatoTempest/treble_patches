@@ -1,4 +1,4 @@
-From 4cc33b941b1d47753b4512975376b894721761a2 Mon Sep 17 00:00:00 2001
+From 402ac0e63078bd03f732a911e6393e4d5fde7b8b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 7 Jul 2020 21:01:41 +0300
 Subject: [PATCH 06/13] replace Calendar with Etar

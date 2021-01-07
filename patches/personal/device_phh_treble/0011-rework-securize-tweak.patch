@@ -1,14 +1,14 @@
-From 6265a4d8ed916ade6d6053e4ea4d3327b17c6b0a Mon Sep 17 00:00:00 2001
+From efe1149ac6c331dd042bc58f523e1905623b5b8d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 05:34:34 -0500
-Subject: [PATCH 11/16] rework securize tweak
+Subject: [PATCH 11/17] rework securize tweak
 
 ---
  rw-system.sh | 71 ++++++++++++++++++++++++++--------------------------
  1 file changed, 36 insertions(+), 35 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 11c3f37..bc124c2 100644
+index f0e127c..1864b2b 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -582,42 +582,41 @@ if getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && [ "$vndk" -ge

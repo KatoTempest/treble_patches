@@ -1,4 +1,4 @@
-From 7573a7a276f9e1ef300956a28bac7ecddaf341bb Mon Sep 17 00:00:00 2001
+From 21531031237ee07a8e2778f6147f2d66498fe556 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:42:16 -0500
 Subject: [PATCH 083/191] Package installer: show current and new version on

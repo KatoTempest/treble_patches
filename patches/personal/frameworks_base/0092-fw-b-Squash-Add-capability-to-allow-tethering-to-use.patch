@@ -1,4 +1,4 @@
-From cd379aef7af5f4b5651e8776d8f77300283b88a2 Mon Sep 17 00:00:00 2001
+From ba08cc3ad1f2fe35ea3c17bfc399e39aea971309 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:19:29 -0500
 Subject: [PATCH 092/191] fw/b: [Squash] Add capability to allow tethering to

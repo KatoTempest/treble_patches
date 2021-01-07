@@ -1,4 +1,4 @@
-From 049a855b9bd59abcb27c529a39405373054ec5f2 Mon Sep 17 00:00:00 2001
+From 77e0bde44782e409e56aa378ca8b8de519bca9a3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:45:29 -0500
 Subject: [PATCH 076/191] base: add more notification channels to blockable

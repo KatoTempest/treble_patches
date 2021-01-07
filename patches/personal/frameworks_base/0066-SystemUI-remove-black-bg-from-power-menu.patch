@@ -1,4 +1,4 @@
-From 55fe24de94f638e0b15a1d829a52e222be24350b Mon Sep 17 00:00:00 2001
+From 4c5f0254bf101033d38272193a2b6007d377168a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:30:39 -0500
 Subject: [PATCH 066/191] SystemUI: remove black bg from power menu

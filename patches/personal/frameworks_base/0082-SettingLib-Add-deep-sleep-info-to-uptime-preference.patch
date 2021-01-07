@@ -1,4 +1,4 @@
-From b2ccbe070a52c0e703239e4cc763c7e8064837d7 Mon Sep 17 00:00:00 2001
+From 5cc2cb04bdbcb9b8afb5a3279ea2f1982b6300b5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:33:50 -0500
 Subject: [PATCH 082/191] SettingLib: Add deep sleep info to uptime preference

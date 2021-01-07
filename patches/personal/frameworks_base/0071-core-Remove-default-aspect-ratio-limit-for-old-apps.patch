@@ -1,4 +1,4 @@
-From bd9f204c5d3585cfe3248114bee8b908770c5404 Mon Sep 17 00:00:00 2001
+From 9e3e5cf4f8dc5ebd7aa6d26b472d58ba5db1c280 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:28:36 -0500
 Subject: [PATCH 071/191] core: Remove default aspect ratio limit for old apps

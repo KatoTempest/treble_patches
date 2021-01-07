@@ -1,4 +1,4 @@
-From 7a6cf88be5b72b2e10f91db8127260987d8b4c1c Mon Sep 17 00:00:00 2001
+From c70edcb3700fb88754b652753cd74a391fca88d2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:10:45 -0500
 Subject: [PATCH 089/191] PackageManager: allow build-time disabling of
@@ -87,10 +87,10 @@ index 82f44125a11..78180dd8d7d 100644
 +    <java-symbol type="array" name="config_forceEnabledComponents" />
  </resources>
 diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
-index 71c3d9b2c30..50612762866 100644
+index de2f24ce23e..0a9aad8d600 100644
 --- a/services/core/java/com/android/server/pm/PackageManagerService.java
 +++ b/services/core/java/com/android/server/pm/PackageManagerService.java
-@@ -1476,6 +1476,8 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -1477,6 +1477,8 @@ public class PackageManagerService extends IPackageManager.Stub
                          filter.hasDataScheme(IntentFilter.SCHEME_HTTPS));
      }
  
@@ -99,7 +99,7 @@ index 71c3d9b2c30..50612762866 100644
      // Set of pending broadcasts for aggregating enable/disable of components.
      @VisibleForTesting(visibility = Visibility.PACKAGE)
      public static class PendingPackageBroadcasts {
-@@ -3493,6 +3495,17 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -3494,6 +3496,17 @@ public class PackageManagerService extends IPackageManager.Stub
                  Slog.i(TAG, "Deferred reconcileAppsData finished " + count + " packages");
              }, "prepareAppData");
  
@@ -117,7 +117,7 @@ index 71c3d9b2c30..50612762866 100644
              // If this is first boot after an OTA, and a normal boot, then
              // we need to clear code cache directories.
              // Note that we do *not* clear the application profiles. These remain valid
-@@ -3659,6 +3672,29 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -3660,6 +3673,29 @@ public class PackageManagerService extends IPackageManager.Stub
          Slog.i(TAG, "Fix for b/169414761 is applied");
      }
  
@@ -147,7 +147,7 @@ index 71c3d9b2c30..50612762866 100644
      /**
       * Uncompress and install stub applications.
       * <p>In order to save space on the system partition, some applications are shipped in a
-@@ -20941,6 +20977,12 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -20957,6 +20993,12 @@ public class PackageManagerService extends IPackageManager.Stub
      public void setComponentEnabledSetting(ComponentName componentName,
              int newState, int flags, int userId) {
          if (!mUserManager.exists(userId)) return;

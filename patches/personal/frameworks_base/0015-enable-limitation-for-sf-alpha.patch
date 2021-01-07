@@ -1,4 +1,4 @@
-From da84c1ea2cb7ef2f8f88470afab359b829ba947e Mon Sep 17 00:00:00 2001
+From db4fd45e8ffd4d2f227ba4125c27eb94dbce23c3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Apr 2020 19:18:12 +0300
 Subject: [PATCH 015/191] enable limitation for sf alpha

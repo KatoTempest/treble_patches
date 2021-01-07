@@ -1,4 +1,4 @@
-From c3e665bf299b30b5a09adb61eabf547773b6efd6 Mon Sep 17 00:00:00 2001
+From ef3b2c50486ef7ef36342b3b0a90a679fd9b88bc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:41:40 +0200
 Subject: [PATCH 003/191] settings: add animation scale values

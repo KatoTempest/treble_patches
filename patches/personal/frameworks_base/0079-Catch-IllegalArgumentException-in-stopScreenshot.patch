@@ -1,4 +1,4 @@
-From 54b924d658572a852cda9fa933ddb1244a99695b Mon Sep 17 00:00:00 2001
+From ef3158296d11ed04f03e45d2a488789d84dc06a0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:50:05 -0500
 Subject: [PATCH 079/191] Catch IllegalArgumentException in stopScreenshot()

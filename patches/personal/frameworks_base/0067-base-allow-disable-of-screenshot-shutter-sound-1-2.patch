@@ -1,4 +1,4 @@
-From 49dafb051477d19dce507710747b5565fc725485 Mon Sep 17 00:00:00 2001
+From 8b9b743291b14690ef0eaae85550e64719137070 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:36:27 -0500
 Subject: [PATCH 067/191] base: allow disable of screenshot shutter sound [1/2]

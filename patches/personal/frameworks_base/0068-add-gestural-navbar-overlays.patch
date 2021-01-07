@@ -1,4 +1,4 @@
-From 492c1e20c7b12a3883f16308912b8b0d3086494b Mon Sep 17 00:00:00 2001
+From 7e5104a7da185c5f7fc60d7e48acc6491ce5b7b2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 05:13:26 -0500
 Subject: [PATCH 068/191] add gestural navbar overlays

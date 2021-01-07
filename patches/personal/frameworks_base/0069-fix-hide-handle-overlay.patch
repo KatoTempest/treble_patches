@@ -1,4 +1,4 @@
-From 7b1c5ce80a57e28f8fa69b56adbfa9d17cf3e32e Mon Sep 17 00:00:00 2001
+From 61a884d10b1a721139eb8c315dc22aca3a9e5c99 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 14:14:13 -0500
 Subject: [PATCH 069/191] fix hide handle overlay
@@ -91,7 +91,7 @@ index 00000000000..8ecfc381681
 +    <bool name="config_navBarTapThrough">true</bool>
 +</resources>
 diff --git a/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml b/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
-index 0c9414646c4..3499cb33ae6 100644
+index 0c9414646c4..a27190d2723 100644
 --- a/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
 +++ b/packages/overlays/GestureHandleHideOverlay/res/values/dimens.xml
 @@ -1,18 +1,26 @@
@@ -128,7 +128,7 @@ index 0c9414646c4..3499cb33ae6 100644
 -    <dimen name="navigation_bar_gesture_height">24dp</dimen>
 +    <dimen name="config_backGestureInset">24.0dip</dimen>
 +    <dimen name="navigation_bar_frame_height">0.0dip</dimen>
-+    <dimen name="navigation_bar_gesture_height">18.0dip</dimen>
++    <dimen name="navigation_bar_gesture_height">12.0dip</dimen>
 +    <dimen name="navigation_bar_height">0.0dip</dimen>
 +    <dimen name="navigation_bar_height_landscape">0.0dip</dimen>
 +    <dimen name="navigation_bar_width">0.0dip</dimen>

@@ -1,0 +1,27 @@
+From 9436fbc52f5a479c25ae6c442f1030beee462578 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 02:05:15 -0500
+Subject: [PATCH 146/191] Add synchronization for invokeForAllObservers call
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/16389e5ef29f914f3339558788dc35092d3786fa
+---
+ .../core/java/com/android/server/NetworkManagementService.java  | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/services/core/java/com/android/server/NetworkManagementService.java b/services/core/java/com/android/server/NetworkManagementService.java
+index c0a425d813d..8322db096b4 100644
+--- a/services/core/java/com/android/server/NetworkManagementService.java
++++ b/services/core/java/com/android/server/NetworkManagementService.java
+@@ -444,7 +444,7 @@ public class NetworkManagementService extends INetworkManagementService.Stub {
+         public void sendCallback(INetworkManagementEventObserver o) throws RemoteException;
+     }
+ 
+-    private void invokeForAllObservers(NetworkManagementEventCallback eventCallback) {
++    private synchronized void invokeForAllObservers(NetworkManagementEventCallback eventCallback) {
+         final int length = mObservers.beginBroadcast();
+         try {
+             for (int i = 0; i < length; i++) {
+-- 
+2.17.1
+

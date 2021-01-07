@@ -1,7 +1,7 @@
-From 0a7f7c6c5a2a5b660b0d29c565077b9ec99a6fdf Mon Sep 17 00:00:00 2001
+From 7c9ebed803666543ffa6b3b7bed8c97b1050ef7c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:43:19 -0500
-Subject: [PATCH 36/54] Settings: per-app cellular data, vpn and wifi
+Subject: [PATCH 36/55] Settings: per-app cellular data, vpn and wifi
  restrictions
 
   from

@@ -1,4 +1,4 @@
-From d3ba7663d1c8c537475bf61cb0331c5382031c4d Mon Sep 17 00:00:00 2001
+From d4f1c3b981c9bb0d6f91ca3c36b71b32c147ac91 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 18:55:45 +0200
 Subject: [PATCH 006/191] slightly tune QS panel

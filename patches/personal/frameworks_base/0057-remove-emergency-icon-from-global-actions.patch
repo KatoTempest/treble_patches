@@ -1,4 +1,4 @@
-From 2936fd8f510448379dd46327d8b70e9b060cfbd4 Mon Sep 17 00:00:00 2001
+From 3b062255f1e65dac38152cf83b88f61b350ef019 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:09:13 -0500
 Subject: [PATCH 057/191] remove emergency icon from global actions

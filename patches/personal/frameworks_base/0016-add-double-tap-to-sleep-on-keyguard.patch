@@ -1,4 +1,4 @@
-From 53277203e4ecb645878e5a5c8b60453dc20e9aeb Mon Sep 17 00:00:00 2001
+From 6c2637935f30b5593abd35ca704a611dac34fc7e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Apr 2020 20:29:00 +0300
 Subject: [PATCH 016/191] add double-tap-to-sleep on keyguard

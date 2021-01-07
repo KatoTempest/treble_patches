@@ -1,0 +1,25 @@
+From 36f9e1aab29a5bfd26892883a7574e4eb1e16474 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 25 Dec 2020 02:26:33 -0500
+Subject: [PATCH 11/13] add FOSS Browser
+
+Change-Id: I0b8d18a560a5e66bfc5850d1febdcb8f34b78efc
+---
+ target/product/handheld_product.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/target/product/handheld_product.mk b/target/product/handheld_product.mk
+index dc7ddba15..2ddebb9c1 100644
+--- a/target/product/handheld_product.mk
++++ b/target/product/handheld_product.mk
+@@ -25,6 +25,7 @@ PRODUCT_PACKAGES += \
+     Etar \
+     Camera2 \
+     Contacts \
++    FOSSBrowser \
+     DeskClock \
+     ExactCalculator \
+     LatinIME \
+-- 
+2.17.1
+

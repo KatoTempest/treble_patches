@@ -1,4 +1,4 @@
-From 22d747cef20f5aeb54bd82f9dcf0a3964c25d121 Mon Sep 17 00:00:00 2001
+From 52d477406745c9ae43f88add03ec2e4739c83f94 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 04:38:19 +0300
 Subject: [PATCH 020/191] rework systemUI for statusbar overlays

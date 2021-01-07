@@ -1,4 +1,4 @@
-From d3187cef0a0bae3424fd10d1b24c33a611e28266 Mon Sep 17 00:00:00 2001
+From 63e1ec19d3ecc07fc8d68f93739c13cd0d94836e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 02:40:56 +0300
 Subject: [PATCH 023/191] add QS Alpha overlays

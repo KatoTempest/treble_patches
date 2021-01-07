@@ -1,4 +1,4 @@
-From 23e80c8a15c44220b52888ee2f302ca4e25880e7 Mon Sep 17 00:00:00 2001
+From 8abf77cc4cd8c7dce39033118dbdc75a91df16be Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Dec 2019 09:03:53 +0200
 Subject: [PATCH 056/191] add recovery in power menu

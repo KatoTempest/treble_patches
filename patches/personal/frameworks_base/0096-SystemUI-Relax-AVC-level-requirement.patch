@@ -1,4 +1,4 @@
-From 498218be607b344cc3c1844d1175fd798d04d427 Mon Sep 17 00:00:00 2001
+From 2801eb2071ad05e0aa6e687dacc8f69b40d3f3bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 26 Nov 2020 13:57:59 -0500
 Subject: [PATCH 096/191] SystemUI: Relax AVC level requirement

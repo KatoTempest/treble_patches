@@ -1,7 +1,7 @@
-From 0c16f1673f71a6b2fa5b58735e0cfa05cc7b33b6 Mon Sep 17 00:00:00 2001
+From 5e9f51eef07431752f1c226293b9f59c78cf7591 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:56:43 -0500
-Subject: [PATCH 43/54] Settings: display fstype for mounted volumes
+Subject: [PATCH 43/55] Settings: display fstype for mounted volumes
 
   from
   https://github.com/omnirom/android_packages_apps_Settings/commit/fbd49f386dab103f133df3814d0d9db66ee01c08

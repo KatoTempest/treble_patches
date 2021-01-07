@@ -1,4 +1,4 @@
-From 30d0e515bb90abe21ac08ca0629af2e4303a16b6 Mon Sep 17 00:00:00 2001
+From 401f0bebe9cf345f6eb23cccb495cd68fe982600 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 18 Dec 2019 14:52:32 +0200
 Subject: [PATCH 002/191] enable SystemNavigationKeys

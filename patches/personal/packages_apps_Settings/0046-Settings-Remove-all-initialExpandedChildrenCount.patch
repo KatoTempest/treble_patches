@@ -1,7 +1,7 @@
-From 750c9de6578b6bceb9a1cf09f6d3a58efcfa13cf Mon Sep 17 00:00:00 2001
+From c7cadde88dfa5d5056c1c3104d69fd786bf8b4c1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:52:15 -0500
-Subject: [PATCH 46/54] Settings: Remove all initialExpandedChildrenCount
+Subject: [PATCH 46/55] Settings: Remove all initialExpandedChildrenCount
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/ef2a6dc9a10671288910c7696aeb35a6ae903e24

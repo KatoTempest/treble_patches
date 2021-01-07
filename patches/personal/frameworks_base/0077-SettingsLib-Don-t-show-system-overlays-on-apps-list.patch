@@ -1,4 +1,4 @@
-From 2f74ca018a756e56c20e5cd59715c58612f2d96e Mon Sep 17 00:00:00 2001
+From d9371bccafc02ef9714f7155bad3b68afde91547 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:47:08 -0500
 Subject: [PATCH 077/191] SettingsLib: Don't show system overlays on apps list

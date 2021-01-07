@@ -1,7 +1,7 @@
-From 689a2ab430a5d6b84d6b18288a7231160c612428 Mon Sep 17 00:00:00 2001
+From d94c7bccde6a46ebc627e4fefbfb2464b2e398ec Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Mar 2020 22:28:12 +0200
-Subject: [PATCH 11/54] Use global fonts in styles
+Subject: [PATCH 11/55] Use global fonts in styles
 
   * from
   https://github.com/i-o-n/packages_apps_Settings/commit/0947c3c4cccce3cc6f3b483791cddfdc6571ee93

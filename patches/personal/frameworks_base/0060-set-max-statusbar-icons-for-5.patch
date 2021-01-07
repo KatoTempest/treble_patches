@@ -1,4 +1,4 @@
-From f4d8753116991ca97df01f15d6bf4ecf1587bcac Mon Sep 17 00:00:00 2001
+From 8ece4be6b3d3d48657741d7c8c52639306d5110d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:23:33 -0500
 Subject: [PATCH 060/191] set max statusbar icons for 5

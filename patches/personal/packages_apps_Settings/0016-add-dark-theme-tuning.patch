@@ -1,7 +1,7 @@
-From 199587424c6509c5568b733ec647eca03713a02b Mon Sep 17 00:00:00 2001
+From 105b23ba0970c6941d3dea5f81c7db5dde55d7f0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 00:31:56 +0300
-Subject: [PATCH 16/54] add dark theme tuning
+Subject: [PATCH 16/55] add dark theme tuning
 
 Change-Id: I2e6517e97eb8b5b4579544f35be4a4e5e8dc97cd
 ---

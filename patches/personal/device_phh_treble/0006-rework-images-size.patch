@@ -1,7 +1,7 @@
-From 8a5277190582e2d8b900a62c2e14529848b6bbd8 Mon Sep 17 00:00:00 2001
+From 6993a501125d95850b629c187269ec5ea6bb5d85 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 7 Jul 2020 16:21:34 +0300
-Subject: [PATCH 06/16] rework images size
+Subject: [PATCH 06/17] rework images size
 
 ---
  phhgsi_a64_a/BoardConfig.mk    | 3 ++-

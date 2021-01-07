@@ -1,4 +1,4 @@
-From f1141fd6ee58f6e4e36a5f0c3e428dfb53ec42f2 Mon Sep 17 00:00:00 2001
+From fd1d78597add6c9334669a9f3d80c66d90e5b824 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:48:06 -0500
 Subject: [PATCH 078/191] SystemUI: Fix MediaProjection cast crash

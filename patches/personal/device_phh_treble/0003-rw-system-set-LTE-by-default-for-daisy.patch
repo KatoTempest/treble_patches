@@ -1,7 +1,7 @@
-From a58be3d1141e4d617e1824a991b0d64962dcf605 Mon Sep 17 00:00:00 2001
+From a80ed342f8666741655f964aa593ace6a0b4e4a4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 17:31:17 +0200
-Subject: [PATCH 03/16] rw-system: set LTE by default for 'daisy'
+Subject: [PATCH 03/17] rw-system: set LTE by default for 'daisy'
 
 	modified:   rw-system.sh
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 03/16] rw-system: set LTE by default for 'daisy'
  1 file changed, 3 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 5e417bc..19259ec 100644
+index 07ebbb5..b94c187 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -461,6 +461,9 @@ fi

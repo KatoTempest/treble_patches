@@ -1,0 +1,50 @@
+From 9d547c3981539e4b99ee7f442a839ec3c99dcd8a Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 01:51:59 -0500
+Subject: [PATCH 142/191] TelephonyRegistry: Avoid adding duplicate listener
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/c7147bd0e4241aa557bee8fe941665996d63f3d7
+---
+ .../android/telephony/TelephonyRegistryManager.java   | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+
+diff --git a/core/java/android/telephony/TelephonyRegistryManager.java b/core/java/android/telephony/TelephonyRegistryManager.java
+index 0854452e688..f09947e156d 100644
+--- a/core/java/android/telephony/TelephonyRegistryManager.java
++++ b/core/java/android/telephony/TelephonyRegistryManager.java
+@@ -105,6 +105,10 @@ public class TelephonyRegistryManager {
+     public void addOnSubscriptionsChangedListener(
+             @NonNull SubscriptionManager.OnSubscriptionsChangedListener listener,
+             @NonNull Executor executor) {
++        if (mSubscriptionChangedListenerMap.get(listener) != null) {
++            Log.d(TAG, "addOnSubscriptionsChangedListener listener already present");
++            return;
++        }
+         IOnSubscriptionsChangedListener callback = new IOnSubscriptionsChangedListener.Stub() {
+             @Override
+             public void onSubscriptionsChanged () {
+@@ -155,6 +159,10 @@ public class TelephonyRegistryManager {
+     public void addOnOpportunisticSubscriptionsChangedListener(
+             @NonNull SubscriptionManager.OnOpportunisticSubscriptionsChangedListener listener,
+             @NonNull Executor executor) {
++        if (mOpportunisticSubscriptionChangedListenerMap.get(listener) != null) {
++            Log.d(TAG, "addOnOpportunisticSubscriptionsChangedListener listener already present");
++            return;
++        }
+         /**
+          * The callback methods need to be called on the executor thread where
+          * this object was created.  If the binder did that for us it'd be nice.
+@@ -190,6 +198,9 @@ public class TelephonyRegistryManager {
+      */
+     public void removeOnOpportunisticSubscriptionsChangedListener(
+             @NonNull SubscriptionManager.OnOpportunisticSubscriptionsChangedListener listener) {
++        if (mOpportunisticSubscriptionChangedListenerMap.get(listener) == null) {
++            return;
++        }
+         try {
+             sRegistry.removeOnSubscriptionsChangedListener(mContext.getOpPackageName(),
+                     mOpportunisticSubscriptionChangedListenerMap.get(listener));
+-- 
+2.17.1
+

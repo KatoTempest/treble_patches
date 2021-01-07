@@ -1,4 +1,4 @@
-From d3cbe1388c40debc81774fa40f0eb948c41e4787 Mon Sep 17 00:00:00 2001
+From d675940afe6a894051204c8ef94191bca86aae15 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:25:34 -0500
 Subject: [PATCH 070/191] core: Remove old app target SDK dialog

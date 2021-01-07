@@ -1,4 +1,4 @@
-From 20c9a7827141621b106fad55cb1eef9c9d735ede Mon Sep 17 00:00:00 2001
+From a5100ddd4ff65e3072c38cc1299898d12a458833 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 08:19:40 -0400
 Subject: [PATCH 045/191] aapt: Default to 0 compression ratio

@@ -1,4 +1,4 @@
-From c1e38fb46815256313fe20a7668d1b80df0e72af Mon Sep 17 00:00:00 2001
+From 7bffb42eb9b138ac2fdc20fcdaf9b21e23285624 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 19:40:56 +0300
 Subject: [PATCH 022/191] fix QS Panel background (and other forced black)

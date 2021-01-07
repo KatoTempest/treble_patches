@@ -1,4 +1,4 @@
-From cb1bbf13b292714ba5fd059a0221b03096d91e4a Mon Sep 17 00:00:00 2001
+From 87c0b47066aaf7d2fdbbd2b6004545dd5f1aed29 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 20 Dec 2019 02:39:13 +0200
 Subject: [PATCH 055/191] decrease vertical dividers

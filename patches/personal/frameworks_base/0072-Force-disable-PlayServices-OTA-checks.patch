@@ -1,4 +1,4 @@
-From b67724755f0d6ae89e4bb5f79f279a4f6cfc9156 Mon Sep 17 00:00:00 2001
+From 8d3e031a8c605f020bc8f4727834a5f58f007f1c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:33:50 -0500
 Subject: [PATCH 072/191] Force disable PlayServices OTA checks

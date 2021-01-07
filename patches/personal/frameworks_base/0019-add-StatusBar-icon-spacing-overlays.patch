@@ -1,4 +1,4 @@
-From 3b0cde8e5dc0b03bde427708ade8d7dc83ef6725 Mon Sep 17 00:00:00 2001
+From 996650a7bbf2b6809defdd2896cc849802bea486 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 02:59:51 +0300
 Subject: [PATCH 019/191] add StatusBar icon spacing overlays

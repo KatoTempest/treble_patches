@@ -1,4 +1,4 @@
-From 87b96829a5577b967b6b414a77001fa2174adcf3 Mon Sep 17 00:00:00 2001
+From 49b23ad340338478f9fd7999a8e5c78a2319e27f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:49:06 -0500
 Subject: [PATCH 094/191] frameworks: Reset battery stats [1/2]

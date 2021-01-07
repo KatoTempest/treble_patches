@@ -1,4 +1,4 @@
-From 43a4cf1aabbfc21f1af3d2d62de6ef6cba03f5cd Mon Sep 17 00:00:00 2001
+From cce5d8bca267b88aa00f01c3cf5af4ab857f3d87 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 14 Dec 2019 14:14:32 +0200
 Subject: [PATCH 001/191] tuning statusbar looking

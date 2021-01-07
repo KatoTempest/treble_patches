@@ -1,0 +1,25 @@
+From d525f9ad28c19ad9d052d26bb26402d51d8bbd94 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 24 Dec 2020 13:13:38 -0500
+Subject: [PATCH 13/13] add CAOS Theme stub
+
+Change-Id: I09d75f116bdbc7c49f1d1320ab6aa26e4ffd6315
+---
+ target/product/handheld_product.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/target/product/handheld_product.mk b/target/product/handheld_product.mk
+index afbee6ac6..0c4509ba6 100644
+--- a/target/product/handheld_product.mk
++++ b/target/product/handheld_product.mk
+@@ -24,6 +24,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/media_product.mk)
+ PRODUCT_PACKAGES += \
+     Etar \
+     Camera2 \
++    CaosThemeStub \
+     Contacts \
+     FOSSBrowser \
+     DeskClock \
+-- 
+2.17.1
+

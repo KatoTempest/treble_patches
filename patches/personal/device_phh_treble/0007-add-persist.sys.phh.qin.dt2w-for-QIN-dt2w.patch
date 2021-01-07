@@ -1,7 +1,7 @@
-From 833229eb9ed48fbcbe328ba31b49ec55c8284c56 Mon Sep 17 00:00:00 2001
+From 17a49ec96907e0edf018987bdc55dc5dd92ab89e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 6 Oct 2020 14:26:50 -0400
-Subject: [PATCH 07/16] add persist.sys.phh.qin.dt2w for QIN dt2w
+Subject: [PATCH 07/17] add persist.sys.phh.qin.dt2w for QIN dt2w
 
 ---
  phh-prop-handler.sh | 9 +++++++++
@@ -26,7 +26,7 @@ index 42b40c9..952618e 100644
 +    exit
 +fi
 diff --git a/vndk.rc b/vndk.rc
-index 001e8dd..699f803 100644
+index 4adfe9e..4066e14 100644
 --- a/vndk.rc
 +++ b/vndk.rc
 @@ -50,6 +50,9 @@ on property:persist.sys.phh.backlight.scale=*

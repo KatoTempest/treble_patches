@@ -1,14 +1,14 @@
-From b57c6b5c374b26a2fe99fc6b67f3afb88aa653db Mon Sep 17 00:00:00 2001
+From 1fa5b68312e08ff280713451e837b16651896b5a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 07:14:51 -0500
-Subject: [PATCH 14/16] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
+Subject: [PATCH 14/17] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
 
 ---
  rw-system.sh | 6 +++---
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index bc124c2..723eada 100644
+index 1864b2b..7d4fc2f 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -101,7 +101,7 @@ changeKeylayout() {

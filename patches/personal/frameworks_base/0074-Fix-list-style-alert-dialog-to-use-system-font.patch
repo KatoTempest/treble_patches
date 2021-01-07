@@ -1,4 +1,4 @@
-From 6bc54a8a412edb06dddd8d1753ed17fbfda5740a Mon Sep 17 00:00:00 2001
+From 0e5222d27125079ddfb32ac9504745655207e68a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:42:45 -0500
 Subject: [PATCH 074/191] Fix list style alert dialog to use system font

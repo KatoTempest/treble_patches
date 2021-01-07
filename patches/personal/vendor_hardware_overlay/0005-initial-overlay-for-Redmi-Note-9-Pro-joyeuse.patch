@@ -1,7 +1,7 @@
-From 6acf49369ae13256a1da78ef771b254f1b96a1b3 Mon Sep 17 00:00:00 2001
+From 807429fa98b3a587684a782b4f5bb9ac2ff957a3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 9 Dec 2020 15:07:43 -0500
-Subject: [PATCH 05/11] initial overlay for Redmi Note 9 Pro 'joyeuse'
+Subject: [PATCH 5/7] initial overlay for Redmi Note 9 Pro 'joyeuse'
 
   -wip-
 ---
@@ -422,10 +422,10 @@ index 0000000..a26a899
 +</device>
 \ No newline at end of file
 diff --git a/overlay.mk b/overlay.mk
-index 878b34b..81eede9 100644
+index 3a7e9cc..b5cb590 100644
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -143,5 +143,6 @@ PRODUCT_PACKAGES += \
+@@ -145,5 +145,6 @@ PRODUCT_PACKAGES += \
  	treble-overlay-xiaomi-redminote6pro-systemui \
  	treble-overlay-xiaomi-redminote7 \
  	treble-overlay-xiaomi-redminote8pro \

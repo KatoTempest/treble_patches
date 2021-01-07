@@ -1,0 +1,25 @@
+From e4e7753dd586d9ac6dfba0ffa2a45362b800fa17 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 23 Dec 2020 14:57:35 -0500
+Subject: [PATCH 12/13] include ThemePicker to the build
+
+Change-Id: Ibe1b1e472fd81760349ad411bf5bf53884a2d7e6
+---
+ target/product/handheld_product.mk | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/target/product/handheld_product.mk b/target/product/handheld_product.mk
+index 2ddebb9c1..afbee6ac6 100644
+--- a/target/product/handheld_product.mk
++++ b/target/product/handheld_product.mk
+@@ -33,6 +33,7 @@ PRODUCT_PACKAGES += \
+     preinstalled-packages-platform-handheld-product.xml \
+     SettingsIntelligence \
+     SimpleGallery \
++    ThemePicker \
+     frameworks-base-overlays
+ 
+ PRODUCT_PACKAGES_DEBUG += \
+-- 
+2.17.1
+
