@@ -1,7 +1,7 @@
-From 9b08d71d2bd8f595f2575b5058e7d504aa220fc4 Mon Sep 17 00:00:00 2001
+From 9822a63ff6d1cc36a618a130fdfd611292489d0e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:45:09 -0500
-Subject: [PATCH 138/191] SettingsLib: mutate drawable before tinting for
+Subject: [PATCH 138/193] SettingsLib: mutate drawable before tinting for
  buildBtRainbowDrawable
 
   from

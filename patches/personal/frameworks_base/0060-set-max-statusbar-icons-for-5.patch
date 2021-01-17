@@ -1,7 +1,7 @@
-From 8ece4be6b3d3d48657741d7c8c52639306d5110d Mon Sep 17 00:00:00 2001
+From 7262eecbcf8c6a32192412a5ce1a237aa815c6ff Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:23:33 -0500
-Subject: [PATCH 060/191] set max statusbar icons for 5
+Subject: [PATCH 060/193] set max statusbar icons for 5
 
   based on
   https://github.com/LineageOS/android_frameworks_base/commit/94c9b70fca33000851b9e83fd666d1af59fd4830

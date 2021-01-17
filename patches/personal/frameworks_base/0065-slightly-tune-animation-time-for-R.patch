@@ -1,7 +1,7 @@
-From 6f02c5322544b184637fd790b2385cb0a4470154 Mon Sep 17 00:00:00 2001
+From 82fff56adba2c379c5cea25faa386110aa8607f4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:50:43 -0500
-Subject: [PATCH 065/191] slightly tune animation time for R
+Subject: [PATCH 065/193] slightly tune animation time for R
 
 ---
  core/res/res/anim/recents_fade_in.xml  | 2 +-

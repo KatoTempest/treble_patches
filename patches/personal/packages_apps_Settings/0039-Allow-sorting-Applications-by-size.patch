@@ -1,7 +1,7 @@
-From 4fbb369b33875bdb5193aac3b57432663cee9b63 Mon Sep 17 00:00:00 2001
+From b7e997a7604ad0c32628f348b6d2153cc09d162e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:14:03 -0500
-Subject: [PATCH 39/55] Allow sorting Applications by size
+Subject: [PATCH 39/57] Allow sorting Applications by size
 
   from
   https://github.com/LineageOS/android_packages_apps_Settings/commit/07f53bc2121b7b2610f48b21357656413de0c27a

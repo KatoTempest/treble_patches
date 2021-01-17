@@ -1,7 +1,7 @@
-From 90991cdf3b38ec42208609d0035bbcc4c76669f2 Mon Sep 17 00:00:00 2001
+From 641bad0039e9059a77473345292c3e827ea7a91c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:13:34 -0500
-Subject: [PATCH 131/191] screenrec: Save recordings in ScreenRecords
+Subject: [PATCH 131/193] screenrec: Save recordings in ScreenRecords
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/9624d81d6d6f19a69019679987a8bfede6b9b477

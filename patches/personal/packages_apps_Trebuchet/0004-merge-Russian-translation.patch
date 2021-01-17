@@ -1,7 +1,7 @@
 From 5f932cb2615b4eb0bddca66b7891c9db0cc036ef Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 08:20:45 -0500
-Subject: [PATCH 4/5] merge Russian translation
+Subject: [PATCH 4/6] merge Russian translation
 
   from
   https://github.com/LineageOS/android_packages_apps_Trebuchet/blob/lineage-17.1/res/values-ru/lineage_strings.xml

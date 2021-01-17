@@ -1,7 +1,7 @@
-From dd195ac18045f2b8684e9e22ee3e9739e0358414 Mon Sep 17 00:00:00 2001
+From e8a83682eab6db3e9a1402f49f3257bb71bc8a5f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:55:40 -0500
-Subject: [PATCH 10/17] tweaks for Xiaomi Redmi 'angelican' and 'dandelion'
+Subject: [PATCH 10/20] tweaks for Xiaomi Redmi 'angelican' and 'dandelion'
 
 ---
  rw-system.sh | 4 ++--

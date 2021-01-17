@@ -1,7 +1,7 @@
-From d89e4b313ab2d7bc77f59d1eb2c171eb629b2cb4 Mon Sep 17 00:00:00 2001
+From d4e9fcdc5a54c87d8c00a7d7fd9cda144f769972 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 07:17:39 -0500
-Subject: [PATCH 16/17] add usefull busybox_phh links
+Subject: [PATCH 16/20] add usefull busybox_phh links
 
 ---
  base.mk                  |  4 ++++

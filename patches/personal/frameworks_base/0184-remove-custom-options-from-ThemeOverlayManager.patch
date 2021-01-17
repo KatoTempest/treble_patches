@@ -1,7 +1,7 @@
-From 3d573d5da8bca4575d56a07b616d4f1ddb800481 Mon Sep 17 00:00:00 2001
+From df4c381dfa8ae80dc686ee49a2bac6780765e5e7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 16:20:26 -0500
-Subject: [PATCH 184/191] remove custom options from ThemeOverlayManager
+Subject: [PATCH 184/193] remove custom options from ThemeOverlayManager
 
 ---
  .../systemui/theme/ThemeOverlayManager.java   | 50 ++-----------------

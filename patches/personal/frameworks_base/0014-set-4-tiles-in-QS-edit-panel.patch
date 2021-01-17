@@ -1,7 +1,7 @@
-From 8c3e02659df59293c4c49a58bd39387a46192bcc Mon Sep 17 00:00:00 2001
+From b038e6930aa02f4775b36046f806c0f306db5051 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Mar 2020 12:06:15 +0200
-Subject: [PATCH 014/191] set 4 tiles in QS edit panel
+Subject: [PATCH 014/193] set 4 tiles in QS edit panel
 
 Change-Id: I351ca8f0993150e632becfe039dd77f2d9de2354
 

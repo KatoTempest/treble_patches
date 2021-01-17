@@ -1,7 +1,7 @@
-From 31608ad29c81a0630f3be17a9ad073b4b841cf0c Mon Sep 17 00:00:00 2001
+From 2b5e7a7ec5a9df1929fab41a40ff74c8815b805b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:41:09 -0500
-Subject: [PATCH 088/191] improve scrolling
+Subject: [PATCH 088/193] improve scrolling
 
   from
   https://github.com/BlissRoms/platform_frameworks_base/commit/8deacbf2abf81a662bb319b4d51e421aac426542

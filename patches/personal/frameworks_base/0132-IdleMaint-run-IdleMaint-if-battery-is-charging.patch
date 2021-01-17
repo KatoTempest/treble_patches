@@ -1,7 +1,7 @@
-From 94b3cb684fa7bc11adccf881b016ddd808e1bcde Mon Sep 17 00:00:00 2001
+From e204f7c767e8470729172d49a69ccbbfd152b579 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:18:29 -0500
-Subject: [PATCH 132/191] IdleMaint: run IdleMaint if battery is charging
+Subject: [PATCH 132/193] IdleMaint: run IdleMaint if battery is charging
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/04703d4232a91cd829d773b469d95a18f30ffeb4

@@ -1,7 +1,7 @@
-From 62c92c6fbd646ba9cb7de9a9fe5aa7307b241011 Mon Sep 17 00:00:00 2001
+From d2f857784e725025fad06ec143ffceca8b062727 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:56:04 -0500
-Subject: [PATCH 143/191] Fix SystemUI crash of BatteryStatsHelper
+Subject: [PATCH 143/193] Fix SystemUI crash of BatteryStatsHelper
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/08dfa97168a4a71a277ef61871b218b1c1ada827

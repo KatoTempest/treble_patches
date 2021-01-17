@@ -1,7 +1,7 @@
-From 5102c14764dbec7fad1d2fbdd92c61987c06b2ce Mon Sep 17 00:00:00 2001
+From 4509f400d6192966ab83eb99fd12abddcfe23d25 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:17:10 -0500
-Subject: [PATCH 151/191] Fix NetworkPolicyManagerService deadlock
+Subject: [PATCH 151/193] Fix NetworkPolicyManagerService deadlock
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/c886d648cfeff13a291cffddf1692e273d95d89c

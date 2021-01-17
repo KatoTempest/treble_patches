@@ -1,7 +1,7 @@
-From 9436fbc52f5a479c25ae6c442f1030beee462578 Mon Sep 17 00:00:00 2001
+From a2015175255284d2169f42dc3af9e1e53e55180e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:05:15 -0500
-Subject: [PATCH 146/191] Add synchronization for invokeForAllObservers call
+Subject: [PATCH 146/193] Add synchronization for invokeForAllObservers call
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/16389e5ef29f914f3339558788dc35092d3786fa

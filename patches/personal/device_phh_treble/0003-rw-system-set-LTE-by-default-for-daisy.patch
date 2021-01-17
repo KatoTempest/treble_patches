@@ -1,7 +1,7 @@
-From a80ed342f8666741655f964aa593ace6a0b4e4a4 Mon Sep 17 00:00:00 2001
+From ec3b0e23e63783c58e0ed073b13a3f568571a7cb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 17:31:17 +0200
-Subject: [PATCH 03/17] rw-system: set LTE by default for 'daisy'
+Subject: [PATCH 03/20] rw-system: set LTE by default for 'daisy'
 
 	modified:   rw-system.sh
 ---

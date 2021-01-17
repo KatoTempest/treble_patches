@@ -1,7 +1,7 @@
-From f789f081d4bc1b4b1e2a2fdf1889f201d0d53ad1 Mon Sep 17 00:00:00 2001
+From 898ebcbab7fc109a5c29503e4a62a413b501a7c1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:25:07 -0500
-Subject: [PATCH 155/191] SystemUI: Name Cellular Tile based on carrier
+Subject: [PATCH 155/193] SystemUI: Name Cellular Tile based on carrier
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/19f33d7ed485bc60c77ca493157d8ecc0e1436ba

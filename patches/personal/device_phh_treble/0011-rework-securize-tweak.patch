@@ -1,7 +1,7 @@
-From efe1149ac6c331dd042bc58f523e1905623b5b8d Mon Sep 17 00:00:00 2001
+From 54eded8c0168ecbecdb66018e5d660f66bd0a834 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 05:34:34 -0500
-Subject: [PATCH 11/17] rework securize tweak
+Subject: [PATCH 11/20] rework securize tweak
 
 ---
  rw-system.sh | 71 ++++++++++++++++++++++++++--------------------------

@@ -1,7 +1,7 @@
-From aac309563b019d62d24c3ede335740c5a9bd1482 Mon Sep 17 00:00:00 2001
+From 945053244882f87030c13e47b1d8085b0839d70a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 12/17] add enhanced root solution
+Subject: [PATCH 12/20] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)

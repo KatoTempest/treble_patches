@@ -1,7 +1,7 @@
-From b4ccd7ada427028d8af613db730a4d06e433b6ec Mon Sep 17 00:00:00 2001
+From 2363e2e0bfa60d64e4a6dada5535de1b65463514 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:23:00 -0500
-Subject: [PATCH 188/191] SystemUI: Fix issue with Bluetooth tile
+Subject: [PATCH 188/193] SystemUI: Fix issue with Bluetooth tile
 
   from
   https://gitlab.com/CalyxOS/platform_frameworks_base/-/commit/9b87a5dfce5b6a8070c3b90604d4720fae5425a2

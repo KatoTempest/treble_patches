@@ -1,7 +1,7 @@
-From 0bb2d22e96a6a31b19003100714eef23b25f9372 Mon Sep 17 00:00:00 2001
+From 780986aed168b7d2851adcecddfb7b8e7cf0efdd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 13:58:38 -0500
-Subject: [PATCH 182/191] fix Icon theme overlays for ThemePicker
+Subject: [PATCH 182/193] fix Icon theme overlays for ThemePicker
 
 ---
  .../IconPackCircularThemePickerOverlay/AndroidManifest.xml      | 2 +-

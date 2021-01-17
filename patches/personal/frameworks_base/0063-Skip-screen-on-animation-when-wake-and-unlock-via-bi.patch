@@ -1,7 +1,7 @@
-From 3211cbee9aa7447772eeed573b5785e1520c939b Mon Sep 17 00:00:00 2001
+From f08379316610b7652653258124307722365f413f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:30:02 -0500
-Subject: [PATCH 063/191] Skip screen on animation when wake and unlock via
+Subject: [PATCH 063/193] Skip screen on animation when wake and unlock via
  biometrics
 
   from

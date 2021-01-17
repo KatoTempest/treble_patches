@@ -1,7 +1,7 @@
-From 096ac0b224d74d3be439356ee46db5de56f155ef Mon Sep 17 00:00:00 2001
+From 900acf693c8cbf6af0f97f43fc4c15bd1bae9719 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:44:45 -0500
-Subject: [PATCH 175/191] data: Update permissions whitelist for
+Subject: [PATCH 175/193] data: Update permissions whitelist for
  PackageInstaller
 
   from

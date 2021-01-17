@@ -1,7 +1,7 @@
-From 9d547c3981539e4b99ee7f442a839ec3c99dcd8a Mon Sep 17 00:00:00 2001
+From 04dc0825726cc510c13af94b7dd101188b9cbfba Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:51:59 -0500
-Subject: [PATCH 142/191] TelephonyRegistry: Avoid adding duplicate listener
+Subject: [PATCH 142/193] TelephonyRegistry: Avoid adding duplicate listener
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/c7147bd0e4241aa557bee8fe941665996d63f3d7

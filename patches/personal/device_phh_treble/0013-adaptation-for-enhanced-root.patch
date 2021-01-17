@@ -1,7 +1,7 @@
-From 810aef9162f09567e202480dbb99222669551872 Mon Sep 17 00:00:00 2001
+From a18df3065f68788c9ba0ab7bb0690db11a301c6e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 09:38:07 -0500
-Subject: [PATCH 13/17] adaptation for enhanced root
+Subject: [PATCH 13/20] adaptation for enhanced root
 
 ---
  generate.sh              |   6 +++++-

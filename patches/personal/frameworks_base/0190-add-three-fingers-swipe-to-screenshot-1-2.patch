@@ -1,7 +1,7 @@
-From 0dc1a7ff9de6a3b2fedb95999bb3d3a81d9eae47 Mon Sep 17 00:00:00 2001
+From df9fbd96056589d0aa19ca62ed222b2777b18168 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Mar 2020 19:45:55 +0200
-Subject: [PATCH 190/191] add three-fingers-swipe to screenshot [1/2]
+Subject: [PATCH 190/193] add three-fingers-swipe to screenshot [1/2]
 
   * based on
   https://github.com/nitrogen-project/android_frameworks_base/commit/7e3a1db9cbabe7ff851c542725fb36548ef25e7b

@@ -1,7 +1,7 @@
-From 9b74f9b362619fe741faec135b3e1c2bf92697ba Mon Sep 17 00:00:00 2001
+From 0f9b6e9178a06bd321b5b2e477cae78137225998 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:27:07 -0500
-Subject: [PATCH 093/191] fw/b: Squash of app fw restriction commits
+Subject: [PATCH 093/193] fw/b: Squash of app fw restriction commits
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/86c28d0da0497ba17211cba10339340d1aa03e62

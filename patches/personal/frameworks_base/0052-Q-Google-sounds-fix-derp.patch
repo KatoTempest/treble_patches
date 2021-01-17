@@ -1,7 +1,7 @@
-From f7797c19fdc93d7eaa1580896b6bdb782ca072f6 Mon Sep 17 00:00:00 2001
+From 8f33eafda3eedf6de8d121271c2db4e16f864a23 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 8 Feb 2020 21:47:28 +0200
-Subject: [PATCH 052/191] Q Google sounds: fix derp
+Subject: [PATCH 052/193] Q Google sounds: fix derp
 
 	modified:   data/sounds/google/alarms/A_real_hoot.ogg
 	modified:   data/sounds/google/alarms/Bright_morning.ogg

@@ -1,0 +1,32 @@
+From 39ac1c9595d3f439d5460463dd86f49676031eaa Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 17 Jan 2021 05:35:04 -0500
+Subject: [PATCH] Bluetooth string: removed id="sender" in bt_sm_2_1
+
+  from
+  https://github.com/GrapheneOS/platform_packages_apps_Bluetooth/commit/59da1d0699ddb64063b5ec34326a081eaeaf4b5a
+
+Change-Id: Ia82f8fa08545cb2bb9c84c1c0f7165f8779200b8
+---
+ res/values/strings.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/res/values/strings.xml b/res/values/strings.xml
+index f59e78389..4e3bea564 100644
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -176,9 +176,9 @@
+     <string name="bt_toast_6">Stopped sending file to \u0022<xliff:g id="recipient">%1$s</xliff:g>\u0022</string>
+ 
+     <!-- Bluetooth System Messages [CHAR LIMIT=NONE] -->
+-    <string name="bt_sm_2_1_nosdcard">There isn\'t enough space in USB storage to save the file from \u0022<xliff:g id="sender">%1$s</xliff:g>\u0022</string>
++    <string name="bt_sm_2_1_nosdcard">There isn\'t enough space in USB storage to save the file.</string>
+     <!-- Bluetooth System Messages -->
+-    <string name="bt_sm_2_1_default">There isn\'t enough space on the SD card to save the file from \u0022<xliff:g id="sender">%1$s</xliff:g>\u0022</string>
++    <string name="bt_sm_2_1_default">There isn\'t enough space on the SD card to save the file.</string>
+     <string name="bt_sm_2_2">Space needed: <xliff:g id="size">%1$s</xliff:g></string>
+ 
+     <string name="ErrorTooManyRequests">Too many requests are being processed. Try again later.</string>
+-- 
+2.17.1
+

@@ -1,7 +1,7 @@
-From 274569ee27d7087d222611c9467784315b8cbc8d Mon Sep 17 00:00:00 2001
+From 1fa843bb5641b62467d26137c8225d1b07d273de Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 11 May 2020 20:12:55 +0300
-Subject: [PATCH 029/191] add speed UI overlays
+Subject: [PATCH 029/193] add speed UI overlays
 
 	modified:   packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayManager.java
 	modified:   packages/overlays/Android.mk

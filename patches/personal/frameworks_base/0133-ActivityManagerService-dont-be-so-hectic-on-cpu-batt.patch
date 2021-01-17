@@ -1,7 +1,7 @@
-From 06801130ae6b997eea1ab07d35695ba823cc5bce Mon Sep 17 00:00:00 2001
+From a00a5659f4ed2c27282777cb2a7a390b04d7b486 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:23:00 -0500
-Subject: [PATCH 133/191] ActivityManagerService: dont be so hectic on cpu
+Subject: [PATCH 133/193] ActivityManagerService: dont be so hectic on cpu
  battery stats
 
   from

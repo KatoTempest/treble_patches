@@ -1,7 +1,7 @@
-From 46f288642a268969d3a46a74f4b3e151e7aad85f Mon Sep 17 00:00:00 2001
+From d2de07608eb2d2fc4bfac087195dee79d6a4e7a5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:28:30 -0500
-Subject: [PATCH 152/191] NPMS lock improvement
+Subject: [PATCH 152/193] NPMS lock improvement
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/2b898717eb0ae02173c36e180136825975034d3a

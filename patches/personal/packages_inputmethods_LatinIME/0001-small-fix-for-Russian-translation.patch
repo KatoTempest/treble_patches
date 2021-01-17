@@ -1,7 +1,7 @@
-From e82032add57065480f6fd47e5ba69b890b694470 Mon Sep 17 00:00:00 2001
+From a2ce6f55c7d41d8b201224dbcd649eda206a2bd7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 28 Sep 2020 18:10:32 -0400
-Subject: [PATCH] small fix for Russian translation
+Subject: [PATCH 1/2] small fix for Russian translation
 
 ---
  java/res/values-ru/strings.xml | 2 ++

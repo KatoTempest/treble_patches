@@ -1,7 +1,7 @@
-From 53dbdd2655153e30ff59fab25936748532d986a3 Mon Sep 17 00:00:00 2001
+From 430d58652a37b18a2081df6cf9614e0842b53ed4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:09:04 -0500
-Subject: [PATCH 149/191] DragSurface: destroy surfacecontrol in view site
+Subject: [PATCH 149/193] DragSurface: destroy surfacecontrol in view site
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/52249e8ab68dbd34ff1792f3965e28c921fdc382

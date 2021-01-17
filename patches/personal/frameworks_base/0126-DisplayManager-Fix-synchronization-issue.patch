@@ -1,7 +1,7 @@
-From 7ec9960ce478640aa775881d1b62b17d7288aafb Mon Sep 17 00:00:00 2001
+From 5ad4da5c74e69d6b46f79fe32efafa3370879c2e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:41:41 -0500
-Subject: [PATCH 126/191] DisplayManager: Fix synchronization issue
+Subject: [PATCH 126/193] DisplayManager: Fix synchronization issue
 
   from
   https://github.com/omnirom/android_frameworks_base/commit/cd10eb6ff679daf60b2bbee9a80ae54541d64e9e

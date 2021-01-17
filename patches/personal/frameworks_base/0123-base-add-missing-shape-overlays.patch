@@ -1,7 +1,7 @@
-From 05af639bf24282f38b7f8b7f2f5b112b4cf2cbd5 Mon Sep 17 00:00:00 2001
+From d0470b3568730b8d175476c84fa5137514cb5308 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:24:48 -0500
-Subject: [PATCH 123/191] base: add missing shape overlays
+Subject: [PATCH 123/193] base: add missing shape overlays
 
   from
   https://github.com/omnirom/android_frameworks_base/commit/70a976d9b46bf2b57d327c0612a1758f688c35e5

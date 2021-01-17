@@ -1,7 +1,7 @@
-From 7e5104a7da185c5f7fc60d7e48acc6491ce5b7b2 Mon Sep 17 00:00:00 2001
+From 0d4c0be5e344ca43c96f12f84b224a6f110d0763 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 05:13:26 -0500
-Subject: [PATCH 068/191] add gestural navbar overlays
+Subject: [PATCH 068/193] add gestural navbar overlays
 
   based on
   https://github.com/LineageOS/android_packages_overlays_Lineage/commit/35fb8bae39e632c947e2fa65e2c9eca20ded5cd0

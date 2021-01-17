@@ -1,7 +1,7 @@
-From 1fa4c377e9d1315c946a800e4108f52403972a17 Mon Sep 17 00:00:00 2001
+From 88a9cbc4e5e053d7f746b03df78a7147773d5866 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:37:29 -0500
-Subject: [PATCH 114/191] require unlocking to use cellular quick tile
+Subject: [PATCH 114/193] require unlocking to use cellular quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/dd8996354f4e67b8d2f1ed82e172f5498ea4e391

@@ -1,7 +1,7 @@
-From 6bcaa47a3a11039f996a8d076a07c4c1ccb50750 Mon Sep 17 00:00:00 2001
+From a370f21090e86b80fbb0cb7268ae05f8c91b5541 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 12:59:51 -0400
-Subject: [PATCH 102/191] use Cloudflare DNS as the default fallback
+Subject: [PATCH 102/193] use Cloudflare DNS as the default fallback
 
 Cloudflare DNS has a better privacy policy than Google Public DNS while
 still supporting DNS over TLS.

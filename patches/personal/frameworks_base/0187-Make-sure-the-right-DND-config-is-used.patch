@@ -1,7 +1,7 @@
-From 4d77bf4d12597f61d0fa5cc74e9d77e2d3a0454f Mon Sep 17 00:00:00 2001
+From 664a219ab5580f6886eb9d0388bdb893d0bc21d6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:18:08 -0500
-Subject: [PATCH 187/191] Make sure the right DND config is used
+Subject: [PATCH 187/193] Make sure the right DND config is used
 
   from
   https://gitlab.com/CalyxOS/platform_frameworks_base/-/commit/61b27f685b3a18c6c215629aa2e107d67476687f

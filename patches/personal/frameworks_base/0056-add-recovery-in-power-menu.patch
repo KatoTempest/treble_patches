@@ -1,7 +1,7 @@
-From 8abf77cc4cd8c7dce39033118dbdc75a91df16be Mon Sep 17 00:00:00 2001
+From 8f04d7ee70563dedec4144118c35184f3c61ee23 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Dec 2019 09:03:53 +0200
-Subject: [PATCH 056/191] add recovery in power menu
+Subject: [PATCH 056/193] add recovery in power menu
 
 ---
  core/java/android/os/IPowerManager.aidl       |  1 +

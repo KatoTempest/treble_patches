@@ -1,7 +1,7 @@
-From c70edcb3700fb88754b652753cd74a391fca88d2 Mon Sep 17 00:00:00 2001
+From 773f5617e0e4af1ae6cf75b78a707afe07f752f5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:10:45 -0500
-Subject: [PATCH 089/191] PackageManager: allow build-time disabling of
+Subject: [PATCH 089/193] PackageManager: allow build-time disabling of
  components
 
   * based on

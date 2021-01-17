@@ -1,7 +1,7 @@
-From 44b9b6c80998ba69e7524289d0ac82c19296b550 Mon Sep 17 00:00:00 2001
+From 3f6a38eadfb7664813d32465caca47a99e681e02 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:35:30 -0500
-Subject: [PATCH 172/191] Fixed a race contidion in StorageManagerService
+Subject: [PATCH 172/193] Fixed a race contidion in StorageManagerService
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/f33849a0dbf35f9e15791a381ffc7fcc3fdd2773

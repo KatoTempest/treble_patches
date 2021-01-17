@@ -1,7 +1,7 @@
-From 0c164954c6309b63b37616bf1e6c3a2625cb46ac Mon Sep 17 00:00:00 2001
+From e38998f1291454d528c434ec1de18387a3229347 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Jan 2017 18:51:57 -0500
-Subject: [PATCH 042/191] hide sensitive information while locked by default
+Subject: [PATCH 042/193] hide sensitive information while locked by default
 
 ---
  packages/SettingsProvider/res/values/defaults.xml | 2 +-

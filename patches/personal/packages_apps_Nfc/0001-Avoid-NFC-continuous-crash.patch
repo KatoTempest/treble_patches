@@ -1,0 +1,28 @@
+From 20c506f4052adecc25124d2cf3cfa4d3c17dc624 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 17 Jan 2021 05:37:42 -0500
+Subject: [PATCH] Avoid NFC continuous crash
+
+  from
+  https://github.com/GrapheneOS/platform_packages_apps_Nfc/commit/eca88e7486adefc6ffc6d664c27b065ccf79f0c5
+
+Change-Id: I5061497fc9a854a096344e6b6d39e6aa29b4690d
+---
+ src/com/android/nfc/NfcRootActivity.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/com/android/nfc/NfcRootActivity.java b/src/com/android/nfc/NfcRootActivity.java
+index cc216f2e..b0b340f5 100644
+--- a/src/com/android/nfc/NfcRootActivity.java
++++ b/src/com/android/nfc/NfcRootActivity.java
+@@ -37,6 +37,7 @@ public class NfcRootActivity extends Activity {
+                 try {
+                     startActivityAsUser(launchIntent, UserHandle.CURRENT);
+                 } catch (ActivityNotFoundException e) {
++                } catch (SecurityException e) {
+                 }
+             }
+         }
+-- 
+2.17.1
+

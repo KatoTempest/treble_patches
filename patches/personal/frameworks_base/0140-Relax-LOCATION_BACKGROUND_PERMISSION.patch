@@ -1,7 +1,7 @@
-From 9ebf32348fb4fa2139a964fb0b797e8bfef73e15 Mon Sep 17 00:00:00 2001
+From 30a2500cb92ae1adceef43d940cf59db1ff06b81 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:48:32 -0500
-Subject: [PATCH 140/191] Relax LOCATION_BACKGROUND_PERMISSION
+Subject: [PATCH 140/193] Relax LOCATION_BACKGROUND_PERMISSION
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/43b3a83a0d7b99a7605421214827f4d2993fd064

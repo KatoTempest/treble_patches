@@ -1,7 +1,7 @@
-From c59896b40ac6cb6f0472916183ba265015486d10 Mon Sep 17 00:00:00 2001
+From 020255895c606191dd994ece57509c5b9f367599 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:39:31 -0500
-Subject: [PATCH 173/191] Avoid to hold wakelock for long time
+Subject: [PATCH 173/193] Avoid to hold wakelock for long time
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/4aae24bd8ba4f07cd58057ef4727f3622f676217

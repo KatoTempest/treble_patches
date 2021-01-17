@@ -1,7 +1,7 @@
-From 6064e4788ab948aa458be11449e63ba38f4a159f Mon Sep 17 00:00:00 2001
+From 4b47c8a58bf8851e03ff797ed3656f905ecc5f19 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:26:31 -0500
-Subject: [PATCH 156/191] Fix NullPointerException of AMS
+Subject: [PATCH 156/193] Fix NullPointerException of AMS
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/e42a60774615dbe151a17326673573cd3e4e63dc

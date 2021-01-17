@@ -1,7 +1,7 @@
-From c0ca6bbaeb52235bec5fc58c016c3f4282705bf9 Mon Sep 17 00:00:00 2001
+From 57ae5874eb02c6d81b58a045d31584044667e668 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:32:09 -0500
-Subject: [PATCH 170/191] Fix renaming file and moving file issue in MTP
+Subject: [PATCH 170/193] Fix renaming file and moving file issue in MTP
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/6194d2a455465aea765e19f642389788119771c7

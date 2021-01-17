@@ -1,7 +1,7 @@
-From 7ae01d761d006e4e07d1dbc3dff103497125104b Mon Sep 17 00:00:00 2001
+From dbaa7d481bcb503f31e61221bcda606176face6b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:57:22 -0500
-Subject: [PATCH 47/55] DevelopmentSettings: Hide OEM unlock by default
+Subject: [PATCH 47/57] DevelopmentSettings: Hide OEM unlock by default
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/c992a1f46f7301c6c747942105b7f498c6396e2f

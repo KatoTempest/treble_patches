@@ -1,7 +1,7 @@
-From bbd37ecbe98da11af5982b573959c171e2019c75 Mon Sep 17 00:00:00 2001
+From dfca79b675426feab6cb4d5d81d713aa6f6e71bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:22:37 -0500
-Subject: [PATCH 168/191] Fixed Handler Leak on DistanceClassifier
+Subject: [PATCH 168/193] Fixed Handler Leak on DistanceClassifier
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/714de553878017b4d924b9ea50f6f755db02ab0c

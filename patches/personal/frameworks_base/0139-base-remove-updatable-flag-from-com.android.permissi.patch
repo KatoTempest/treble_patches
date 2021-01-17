@@ -1,7 +1,7 @@
-From 595fca8ad19d92d6d0b7dabaf1a1a43022422e3f Mon Sep 17 00:00:00 2001
+From 19e6386e423e06713ff39217cd4a62572b9b6d8c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:46:11 -0500
-Subject: [PATCH 139/191] base: remove updatable flag from
+Subject: [PATCH 139/193] base: remove updatable flag from
  com.android.permission
 
   from

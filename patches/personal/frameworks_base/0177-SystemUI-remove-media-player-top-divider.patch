@@ -1,7 +1,7 @@
-From 30c8570f0910cca094a15a6675a28a11097f710c Mon Sep 17 00:00:00 2001
+From 8812bb97b50512b0b871d304fa6d50431af0716c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:50:16 -0500
-Subject: [PATCH 177/191] SystemUI: remove media player top divider
+Subject: [PATCH 177/193] SystemUI: remove media player top divider
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/55639dbeef86e89edde7650a6549bc7c0f68e8d6
