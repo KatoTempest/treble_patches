@@ -1,7 +1,7 @@
-From 9e048ed33555cd454a4c798221c752c912e850ea Mon Sep 17 00:00:00 2001
+From feaf8f10d3e9f88fdf1dd773e2c85ebb8bcd3d43 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Mar 2020 23:31:14 +0200
-Subject: [PATCH 12/57] disable dashboards conditions and suggestions
+Subject: [PATCH 12/58] disable dashboards conditions and suggestions
 
   * based on
   https://github.com/i-o-n/packages_apps_Settings/commit/b40fd09b2051e0a5d55615f163ad8d2ab2686ee6

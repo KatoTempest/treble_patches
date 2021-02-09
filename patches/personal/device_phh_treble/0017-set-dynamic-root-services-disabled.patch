@@ -1,0 +1,20 @@
+From 61e3b97b035d39b2ca65d2b77c548744e3982d10 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 16 Jan 2021 14:34:41 -0500
+Subject: [PATCH 17/22] set dynamic root services disabled
+
+---
+ zerodaemon/zerodaemon.rc | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/zerodaemon/zerodaemon.rc b/zerodaemon/zerodaemon.rc
+index 3efeee7..0916a00 100644
+--- a/zerodaemon/zerodaemon.rc
++++ b/zerodaemon/zerodaemon.rc
+@@ -1,2 +1,3 @@
+ service zerodaemon /system/bin/zerodaemon --daemon
+     class main
++    disabled
+-- 
+2.17.1
+

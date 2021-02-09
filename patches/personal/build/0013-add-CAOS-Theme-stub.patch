@@ -1,7 +1,7 @@
-From d525f9ad28c19ad9d052d26bb26402d51d8bbd94 Mon Sep 17 00:00:00 2001
+From 10bab7a107db7dd54e451bb1ff14fc4ef5929e3b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 13:13:38 -0500
-Subject: [PATCH 13/13] add CAOS Theme stub
+Subject: [PATCH 13/14] add CAOS Theme stub
 
 Change-Id: I09d75f116bdbc7c49f1d1320ab6aa26e4ffd6315
 ---

@@ -1,7 +1,7 @@
-From d7c0d13bae39f568b114ebddad9fa81be85586fb Mon Sep 17 00:00:00 2001
+From e024d48bea8582ef78c358db48542cfcc6d32fc6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Mar 2020 23:23:07 +0200
-Subject: [PATCH 013/193] remove linking battery saver with dark mode tile
+Subject: [PATCH 013/187] remove linking battery saver with dark mode tile
 
 	modified:   packages/SystemUI/src/com/android/systemui/qs/tiles/UiModeNightTile.java
 ---

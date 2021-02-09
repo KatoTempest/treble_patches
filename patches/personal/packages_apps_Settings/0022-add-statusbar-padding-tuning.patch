@@ -1,7 +1,7 @@
-From 64b214db1cb373631f749f61e250a3db1e881678 Mon Sep 17 00:00:00 2001
+From d597da49226790e7464768e5b6702df9363b0ab9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Aug 2020 12:53:10 -0400
-Subject: [PATCH 22/57] add statusbar padding tuning
+Subject: [PATCH 22/58] add statusbar padding tuning
 
 Change-Id: Ib31c6505d431da4f4a72888a85894d27e857ff3b
 ---

@@ -1,0 +1,30 @@
+From 333f111ceb731084a7268efb24e403a736371c1b Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 7 Feb 2021 22:28:02 -0500
+Subject: [PATCH 20/22] sepolicy/init: fix adb in some cases
+
+  logs:
+  02-06 17:28:44.560     1     1 I auditd  : type=1400
+  audit(0.0:11): avc: denied { read } for comm="init"
+  name="adbd" dev="mmcblk0p31" ino=11 scontext=u:r:init:s0
+  tcontext=u:object_r:adbd_exec:s0 tclass=lnk_file permissive=0
+
+  thanks HamiDo for hotfix
+---
+ sepolicy/init.te | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/sepolicy/init.te b/sepolicy/init.te
+index 7fb7079..42f5bf5 100644
+--- a/sepolicy/init.te
++++ b/sepolicy/init.te
+@@ -8,3 +8,6 @@ allow init userdata_block_device:lnk_file relabelto;
+ allow vendor_init vendor_init:capability { sys_module };
+ 
+ allow init system_file:lnk_file create_file_perms;
++
++#fix adb in some cases
++allow init adbd_exec:lnk_file read;
+-- 
+2.17.1
+

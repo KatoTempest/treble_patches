@@ -1,7 +1,7 @@
-From 24943a2314e2734e96d08b1a0cd677203ffc92c6 Mon Sep 17 00:00:00 2001
+From 38f8956d8d623531d52af33d7aac4622f87d6659 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 7 Dec 2019 16:38:50 +0200
-Subject: [PATCH 02/13] remove some apps
+Subject: [PATCH 02/14] remove some apps
 
 	modified:   target/product/handheld_product.mk
 	modified:   target/product/mainline_arm64.mk

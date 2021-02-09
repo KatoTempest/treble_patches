@@ -1,7 +1,7 @@
-From dd490800efbfd95f760ada10c9b11e33954489b2 Mon Sep 17 00:00:00 2001
+From 62510b2478bfaab9f75a3aa7d4312d30c7fecdd2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:39:08 -0500
-Subject: [PATCH 30/57] Remove the "About phone" avatar
+Subject: [PATCH 30/58] Remove the "About phone" avatar
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/b86c9d087bd22bded90deca374edee7c2031e53c

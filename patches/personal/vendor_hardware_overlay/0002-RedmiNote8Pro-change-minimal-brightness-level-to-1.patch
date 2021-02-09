@@ -1,4 +1,4 @@
-From 98047180978ce4e63a3d0a9a4bebdd3acbe2766f Mon Sep 17 00:00:00 2001
+From 61af7524daa1f9fa5be38af0a29fc78d9a54f072 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 07:53:50 -0400
 Subject: [PATCH 2/9] RedmiNote8Pro: change minimal brightness level to 1

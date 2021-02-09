@@ -1,7 +1,7 @@
-From da5d5f63f5f949af56da99d2009d833529511033 Mon Sep 17 00:00:00 2001
+From c06d4cc2d44b0d7dfc52372d31b7bb71c3121552 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 29 Oct 2020 08:12:00 -0400
-Subject: [PATCH 24/57] add System UI tuner option
+Subject: [PATCH 24/58] add System UI tuner option
 
 Change-Id: I419b5a661e0a1027998c73ed4787b710edc2841d
 ---
