@@ -1,7 +1,7 @@
-From 82b5e735a0c642f3b670e0fd35599eda98301c98 Mon Sep 17 00:00:00 2001
+From 529f8241718b8cb580af58fbfb00d9e6a6fe9eae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:36:27 -0500
-Subject: [PATCH 066/187] base: allow disable of screenshot shutter sound [1/2]
+Subject: [PATCH 066/189] base: allow disable of screenshot shutter sound [1/2]
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/654e14f72ecac22c68dadc96d341997aa3a9cb26

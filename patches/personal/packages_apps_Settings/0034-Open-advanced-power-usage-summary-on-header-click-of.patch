@@ -1,7 +1,7 @@
-From 32e3be7229126a0762125562b66f3f74e220c6d6 Mon Sep 17 00:00:00 2001
+From 2181985a1d6199dfe069ed671edb5625e464214e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:33:58 -0500
-Subject: [PATCH 34/58] Open advanced power usage summary on header click of
+Subject: [PATCH 34/61] Open advanced power usage summary on header click of
  battery
 
   * from

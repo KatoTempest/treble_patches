@@ -1,7 +1,7 @@
-From 06d0e5285f2be585a12ddc83825ecf34206f4dd2 Mon Sep 17 00:00:00 2001
+From a0ed4d8d1ae56bc8409ef6e58be3f44d4444e6f2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:42:16 -0500
-Subject: [PATCH 082/187] Package installer: show current and new version on
+Subject: [PATCH 082/189] Package installer: show current and new version on
  apk installation
 
   from

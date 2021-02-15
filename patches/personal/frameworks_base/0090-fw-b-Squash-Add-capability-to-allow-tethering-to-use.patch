@@ -1,7 +1,7 @@
-From a0f5163c075912de83ae5d2043e209440cc8d7af Mon Sep 17 00:00:00 2001
+From 7060db94e051b58d67bf37efaedc9764b05681c4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:19:29 -0500
-Subject: [PATCH 090/187] fw/b: [Squash] Add capability to allow tethering to
+Subject: [PATCH 090/189] fw/b: [Squash] Add capability to allow tethering to
  use VPN upstreams
 
   from

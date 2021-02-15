@@ -1,7 +1,7 @@
-From d78b214a5bc143e8954733c395dbd1ac3ec928d4 Mon Sep 17 00:00:00 2001
+From 8b1818310647318faf211bcf31f19eab79eb0705 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:25:34 -0500
-Subject: [PATCH 069/187] core: Remove old app target SDK dialog
+Subject: [PATCH 069/189] core: Remove old app target SDK dialog
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/99218e8d7e90b79d27a5831b9f2bf59f0bbc720b

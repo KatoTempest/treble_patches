@@ -1,4 +1,4 @@
-From fc6e63bd5feaeef25a5545c9d8926a2e819a385f Mon Sep 17 00:00:00 2001
+From 19b2b5e17d9d057f8dc4b33094bc003edaff7f31 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
 Subject: [PATCH 8/9] add Auto brightness overlay

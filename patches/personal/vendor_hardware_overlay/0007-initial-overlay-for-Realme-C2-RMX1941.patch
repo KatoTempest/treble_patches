@@ -1,4 +1,4 @@
-From 027c7dd468bff20388cc5bf1555bd3ffadbe89fc Mon Sep 17 00:00:00 2001
+From 1e236ef25ecebdc20f7bf47c918e8daabe07fed2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 12:39:33 -0500
 Subject: [PATCH 7/9] initial overlay for Realme C2 (RMX1941)

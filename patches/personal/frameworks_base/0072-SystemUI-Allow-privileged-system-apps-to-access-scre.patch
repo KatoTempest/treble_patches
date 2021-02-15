@@ -1,7 +1,7 @@
-From 9271daa463b59541ac8079def43c6e2fa43d6966 Mon Sep 17 00:00:00 2001
+From d0f4376cdbfcf0f1ef753526a06980790b8b1468 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:41:16 -0500
-Subject: [PATCH 072/187] SystemUI: Allow privileged system apps to access
+Subject: [PATCH 072/189] SystemUI: Allow privileged system apps to access
  screenshot service
 
   from

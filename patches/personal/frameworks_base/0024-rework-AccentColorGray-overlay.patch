@@ -1,7 +1,7 @@
-From cf562d24a1ac860ce522756f68dafbdc9f68bbe9 Mon Sep 17 00:00:00 2001
+From f056058f2fb9c8a2d1c588d6b75971193a709fcf Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 13 Apr 2020 02:39:04 +0300
-Subject: [PATCH 024/187] rework AccentColorGray overlay
+Subject: [PATCH 024/189] rework AccentColorGray overlay
 
 ---
  .../res/values/colors_device_defaults.xml                       | 2 +-

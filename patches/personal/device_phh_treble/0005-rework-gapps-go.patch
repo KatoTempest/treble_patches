@@ -1,7 +1,7 @@
-From e9d6dadc9d04616a5f2cb933a70e7b2aa352642b Mon Sep 17 00:00:00 2001
+From 12b478cd83bfc704bbe4523f2a1b62b861284597 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 27 May 2020 05:57:53 +0300
-Subject: [PATCH 05/22] rework gapps & go
+Subject: [PATCH 05/21] rework gapps & go
 
 ---
  gapps.mk             |  1 -
@@ -9,7 +9,7 @@ Subject: [PATCH 05/22] rework gapps & go
  2 files changed, 14 insertions(+), 1 deletion(-)
 
 diff --git a/gapps.mk b/gapps.mk
-index 15e12a9..744cf31 100644
+index 8b87f82..f476230 100644
 --- a/gapps.mk
 +++ b/gapps.mk
 @@ -9,7 +9,6 @@ PRODUCT_PACKAGES := $(filter-out GoogleContacts, $(PRODUCT_PACKAGES))

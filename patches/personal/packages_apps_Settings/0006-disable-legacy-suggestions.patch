@@ -1,7 +1,7 @@
-From 885902fd6c74b762ef0cc20b9930d4770d188ff1 Mon Sep 17 00:00:00 2001
+From 9a7e5a92f65b757c9f1687f557fdd26b32bf8a3e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 2 Feb 2020 17:27:20 +0200
-Subject: [PATCH 06/58] disable legacy suggestions
+Subject: [PATCH 06/61] disable legacy suggestions
 
 	modified:   res/values/config.xml
 ---

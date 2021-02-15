@@ -1,7 +1,7 @@
-From e86779099bfddfa782f786e72b7dd6ed6580baaf Mon Sep 17 00:00:00 2001
+From 4e39b73e68c1d7c7cfc24a566c01a003998514e9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:48:06 -0500
-Subject: [PATCH 077/187] SystemUI: Fix MediaProjection cast crash
+Subject: [PATCH 077/189] SystemUI: Fix MediaProjection cast crash
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/c64cdf7bac57103f595c2061040c5a822503c8d0

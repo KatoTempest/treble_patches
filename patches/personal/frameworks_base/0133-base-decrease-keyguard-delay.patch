@@ -1,0 +1,28 @@
+From a93d3e02056ba68ea4a76555a52cf039c4ded6eb Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 16 Dec 2020 15:04:34 -0500
+Subject: [PATCH 133/189] base: decrease keyguard delay
+
+  from https://github.com/syberia-project/platform_frameworks_base/commit/10e03595552854e04c4b37c232a9c0cd42231355
+---
+ .../src/com/android/systemui/statusbar/phone/StatusBar.java   | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+index d55520a6234..81a61817e1e 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+@@ -301,8 +301,8 @@ public class StatusBar extends SystemUI implements DemoMode,
+             .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+             .build();
+ 
+-    public static final int FADE_KEYGUARD_START_DELAY = 100;
+-    public static final int FADE_KEYGUARD_DURATION = 300;
++    public static final int FADE_KEYGUARD_START_DELAY = 50;
++    public static final int FADE_KEYGUARD_DURATION = 150;
+     public static final int FADE_KEYGUARD_DURATION_PULSING = 96;
+ 
+     /** If true, the system is in the half-boot-to-decryption-screen state.
+-- 
+2.17.1
+

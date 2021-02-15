@@ -1,7 +1,7 @@
-From 89f55f9b52b99ab1baa12f6d5e8991578821da29 Mon Sep 17 00:00:00 2001
+From 8041378147b92ac6bf9c7a49e57d585fb907910f Mon Sep 17 00:00:00 2001
 From: Rusty Bird <rustybird@net-c.com>
 Date: Wed, 22 Apr 2020 18:28:33 +0000
-Subject: [PATCH 044/187] disable safe volume everywhere, not just the US
+Subject: [PATCH 044/189] disable safe volume everywhere, not just the US
 
 Safe Volume has many false alarms. And if overridden by the user, at
 every 20 hours of accumulated(!) audio playback it will intentionally

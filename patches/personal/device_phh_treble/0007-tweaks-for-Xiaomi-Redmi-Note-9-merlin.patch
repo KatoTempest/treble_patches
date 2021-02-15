@@ -1,7 +1,7 @@
-From e2f600432b9c2cdcee708fbeb63dd550fc3003a7 Mon Sep 17 00:00:00 2001
+From 20d9beb4f6f0ba2178aa32d07c1ea62cf327b89e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 07/22] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 07/21] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)
@@ -10,15 +10,15 @@ Subject: [PATCH 07/22] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 89eb8f2..88c56b3 100644
+index b130895..ac3e114 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -144,7 +144,7 @@ changeKeylayout() {
          -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
          -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc \
          -e redmi/curtana -e redmi/picasso -e Redmi/lancelot \
--        -e Redmi/galahad -e xiaomi/olive -e Redmi/angelica ; then
-+        -e Redmi/galahad -e xiaomi/olive -e Redmi/merlin ; then
+-        -e Redmi/galahad -e xiaomi/olive -e Redmi/angelica -e Redmi/joyeuse ; then
++        -e Redmi/galahad -e xiaomi/olive  -e Redmi/merlin -e Redmi/joyeuse ; then
          if [ ! -f /mnt/phh/keylayout/uinput-goodix.kl ]; then
            cp /system/phh/empty /mnt/phh/keylayout/uinput-goodix.kl
            chmod 0644 /mnt/phh/keylayout/uinput-goodix.kl

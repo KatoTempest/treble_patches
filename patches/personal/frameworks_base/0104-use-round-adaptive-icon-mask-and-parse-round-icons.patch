@@ -1,0 +1,36 @@
+From badbe3ff0ff6f96a7824e3f504645a408882a8df Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 07:00:25 -0500
+Subject: [PATCH 104/189] use round adaptive icon mask and parse round icons
+
+  from
+  https://github.com/GrapheneOS/platform_frameworks_base/commit/4435f0efe4fb8165ec55fc2ec0f30aa0e5cd8cb7
+---
+ core/res/res/values/config.xml | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
+index c2fa27e7b47..269c412744b 100644
+--- a/core/res/res/values/config.xml
++++ b/core/res/res/values/config.xml
+@@ -3411,7 +3411,7 @@
+     <integer name="config_keepPreloadsMinDays">7</integer>
+ 
+     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
+-    <bool name="config_useRoundIcon">false</bool>
++    <bool name="config_useRoundIcon">true</bool>
+ 
+     <!-- Flag indicating whether the assist disclosure can be disabled using
+          ASSIST_DISCLOSURE_ENABLED. -->
+@@ -3508,7 +3508,7 @@
+     <bool name="config_allow3rdPartyAppOnInternal">true</bool>
+ 
+     <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
+-    <string name="config_icon_mask" translatable="false">"M50,0L92,0C96.42,0 100,4.58 100 8L100,92C100, 96.42 96.42 100 92 100L8 100C4.58, 100 0 96.42 0 92L0 8 C 0 4.42 4.42 0 8 0L50 0Z"</string>
++    <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
+ 
+     <!-- The component name, flattened to a string, for the default accessibility service to be
+          enabled by the accessibility shortcut. This service must be trusted, as it can be activated
+-- 
+2.17.1
+

@@ -1,7 +1,7 @@
-From a9c9fb05085bc03e1769e9fbe74680737d779737 Mon Sep 17 00:00:00 2001
+From 491d767a84c323840fa4069de66e0e6517075c37 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH 15/22] new variant for SafetyNet helper
+Subject: [PATCH 15/21] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-
@@ -14,10 +14,10 @@ Subject: [PATCH 15/22] new variant for SafetyNet helper
  create mode 100644 secure.sh
 
 diff --git a/base.mk b/base.mk
-index fd09292..9964860 100644
+index a2b50b0..0ebf699 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -59,7 +59,7 @@ PRODUCT_COPY_FILES += \
+@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
  	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
  	device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
  	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \

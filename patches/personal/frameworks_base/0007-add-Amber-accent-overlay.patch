@@ -1,7 +1,7 @@
-From 1c5d728cb70ee1d0f5998625296af28d130c8981 Mon Sep 17 00:00:00 2001
+From d2ab68dda1acb144d01e768993bf80dc7747872a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 26 Feb 2020 17:48:16 +0200
-Subject: [PATCH 007/187] add Amber accent overlay
+Subject: [PATCH 007/189] add Amber accent overlay
 
 	new file:   packages/overlays/AccentColorAmberOverlay/Android.mk
 	new file:   packages/overlays/AccentColorAmberOverlay/AndroidManifest.xml

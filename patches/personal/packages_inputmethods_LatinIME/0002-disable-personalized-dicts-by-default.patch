@@ -1,7 +1,7 @@
-From d380db93f8fce18bdd8a472f4caa35f9f5d46ea2 Mon Sep 17 00:00:00 2001
+From df0fd7fc09b35e5fdcb6bc7b57f93a9d59cee2f9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 17 Jan 2021 05:40:34 -0500
-Subject: [PATCH 2/2] disable personalized dicts by default
+Subject: [PATCH 2/3] disable personalized dicts by default
 
   from
   https://github.com/GrapheneOS/platform_packages_inputmethods_LatinIME/commit/8cfece6ef083e379eaa7b8d7b3f0db5cf9d1b110
