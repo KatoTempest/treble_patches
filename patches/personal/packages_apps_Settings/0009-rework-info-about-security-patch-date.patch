@@ -1,27 +1,67 @@
-From 8639d889267d31e7ae500fbbf5235629e6042b3e Mon Sep 17 00:00:00 2001
+From 4e6c12f1d94b9083261cede6f72c536ab1c25b6b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
-Date: Mon, 10 Feb 2020 16:33:15 +0200
-Subject: [PATCH 09/30] rework info about security patch date
+Date: Wed, 5 Feb 2020 14:33:45 +0200
+Subject: [PATCH 09/46] rework info about security patch date
 
-	modified:   res/xml/firmware_version.xml
-	modified:   src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchLevelPreferenceController.java
-	new file:   src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchVendorPreferenceController.java
+  * based on
+  https://github.com/LineageOS/android_packages_apps_Settings/commit/2fe6f351f98cb9456359182bcf902546b3dc638b#diff-fc3d9d607f2fdcc77bb9e90ba41e7389
 
-Change-Id: Icf527265c090b22799d7c4ff3963020a81094e06
+Change-Id: Ib47d94a49e65d6ae90f93c80b263ba23aaeb7668
 ---
- res/xml/firmware_version.xml                  | 10 +--
+ res/values-fr/custom_strings.xml              |  2 +
+ res/values-ru/custom_strings.xml              |  2 +
+ res/values/custom_strings.xml                 |  2 +
+ res/xml/firmware_version.xml                  | 14 +---
  ...ecurityPatchLevelPreferenceController.java | 60 ++++++++-------
  ...curityPatchVendorPreferenceController.java | 73 +++++++++++++++++++
- 3 files changed, 103 insertions(+), 40 deletions(-)
+ 6 files changed, 111 insertions(+), 42 deletions(-)
  create mode 100644 src/com/android/settings/deviceinfo/firmwareversion/SecurityPatchVendorPreferenceController.java
 
+diff --git a/res/values-fr/custom_strings.xml b/res/values-fr/custom_strings.xml
+index 9af1eded6b..7eaa8e45df 100644
+--- a/res/values-fr/custom_strings.xml
++++ b/res/values-fr/custom_strings.xml
+@@ -23,4 +23,6 @@
+     <string name="selinux_status_disabled">Désactivé</string>
+     <string name="selinux_status_permissive">Permissif</string>
+     <string name="selinux_status_enforcing">Strict</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="security_patch_vendor">Patch de sécurité du vendor</string>
+ </resources>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index 4f856b1d5c..d8152dc70d 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -23,4 +23,6 @@
+     <string name="selinux_status_disabled">Отсутствует</string>
+     <string name="selinux_status_permissive">Отключена</string>
+     <string name="selinux_status_enforcing">Включена</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="security_patch_vendor">Дата обновления безопасности от производителя</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 988f116a72..487fcf913f 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -21,4 +21,6 @@
+     <string name="selinux_status_disabled">Disabled</string>
+     <string name="selinux_status_permissive">Permissive</string>
+     <string name="selinux_status_enforcing">Enforcing</string>
++    <!-- About phone screen, status item label  [CHAR LIMIT=60] -->
++    <string name="security_patch_vendor">Vendor security patch level</string>
+ </resources>
 diff --git a/res/xml/firmware_version.xml b/res/xml/firmware_version.xml
-index 7a456c7884..825a46b1d3 100644
+index 42fb91290c..e536d6b5ff 100644
 --- a/res/xml/firmware_version.xml
 +++ b/res/xml/firmware_version.xml
-@@ -58,15 +58,7 @@
-         android:key="vendor_security_key"
-         android:title="@*lineageos.platform:string/lineage_vendor_security_patch"
+@@ -55,18 +55,10 @@
+ 
+     <!-- Vendor security patch -->
+     <Preference
+-        android:key="vendor_security_key"
+-        android:title="@*lineageos.platform:string/lineage_vendor_security_patch"
++        android:key="security_key_vendor"
++        android:title="@string/security_patch_vendor"
          settings:enableCopying="true"
 -        settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVendorSecurityPatchLevelPreferenceController"/>
 -

@@ -1,0 +1,26 @@
+From 9be07c77e8670a529e3e775e2d7e7378b19e2042 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 9 Feb 2021 13:53:27 -0500
+Subject: [PATCH 10/10] HAXFIX: for some bank apps
+
+Change-Id: I2d8a6943fbe4c61c466d41764c3f7ff2d6abbe95
+---
+ tools/buildinfo.sh | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tools/buildinfo.sh b/tools/buildinfo.sh
+index 954a01fb2..552e92d71 100755
+--- a/tools/buildinfo.sh
++++ b/tools/buildinfo.sh
+@@ -21,7 +21,7 @@ echo "ro.build.date.utc=`$DATE +%s`"
+ echo "ro.build.type=$TARGET_BUILD_TYPE"
+ echo "ro.build.user=$BUILD_USERNAME"
+ echo "ro.build.host=$BUILD_HOSTNAME"
+-echo "ro.build.tags=$BUILD_VERSION_TAGS"
++echo "ro.build.tags=release-keys"
+ echo "ro.build.flavor=$TARGET_BUILD_FLAVOR"
+ if [ -n "$BOARD_BUILD_SYSTEM_ROOT_IMAGE" ] ; then
+   echo "ro.build.system_root_image=$BOARD_BUILD_SYSTEM_ROOT_IMAGE"
+-- 
+2.17.1
+

@@ -1,4 +1,4 @@
-From c69abcffc8e0fecf8eed9075da00d4a44dc1435e Mon Sep 17 00:00:00 2001
+From 820a50aec20750e520ab120246f1e150ff821c14 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 20 Feb 2020 09:44:51 +0200
 Subject: [PATCH] make app deactivable
@@ -7,22 +7,22 @@ Subject: [PATCH] make app deactivable
 
 Change-Id: I30b0f964b814223827e4649f7ede357ff33c1b02
 ---
- Android.mk | 2 +-
+ Android.bp | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/Android.mk b/Android.mk
-index b44c503..1c04a7f 100644
---- a/Android.mk
-+++ b/Android.mk
-@@ -24,7 +24,7 @@ LOCAL_PRIVATE_PLATFORM_APIS := true
+diff --git a/Android.bp b/Android.bp
+index 3ae5d0b..6f559af 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -29,7 +29,7 @@ android_app {
  
- LOCAL_PRIVILEGED_MODULE := true
+     platform_apis: true,
+     privileged: true,
+-    certificate: "platform",
++    certificate: "shared",
  
--LOCAL_CERTIFICATE := platform
-+LOCAL_CERTIFICATE := shared
- 
- LOCAL_REQUIRED_MODULES := privapp_whitelist_org.lineageos.audiofx.xml
- 
+     optimize: {
+         enabled: false,
 -- 
-2.25.1
+2.17.1
 

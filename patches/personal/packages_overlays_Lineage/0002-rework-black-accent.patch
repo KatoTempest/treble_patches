@@ -1,4 +1,4 @@
-From 6cfc47c142dd4a60baab6bd5cf5c3e88fa32b958 Mon Sep 17 00:00:00 2001
+From b534b65cf12c493b7a3897f682ce042a800c7e3c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Mar 2020 09:55:41 +0200
 Subject: [PATCH 2/3] rework black accent
@@ -22,5 +22,5 @@ index 2abf156..38fe46a 100644
 +    <color name="accent_device_default_dark">#555555</color>
  </resources>
 -- 
-2.25.1
+2.17.1
 

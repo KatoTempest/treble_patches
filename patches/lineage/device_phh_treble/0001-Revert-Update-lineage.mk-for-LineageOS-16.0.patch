@@ -1,7 +1,7 @@
-From 322430f39e2b838aeea828f895c33044c2c17432 Mon Sep 17 00:00:00 2001
+From be5559560c70fe05221125c506734b20be84de30 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
-Date: Fri, 29 May 2020 14:53:47 +0300
-Subject: [PATCH 01/11] Revert "Update lineage.mk for LineageOS 16.0"
+Date: Sat, 20 Feb 2021 03:17:22 -0500
+Subject: [PATCH 01/24] Revert "Update lineage.mk for LineageOS 16.0"
 
 This reverts commit 82b15278bad816632dcaeaed623b569978e9840d.
 ---

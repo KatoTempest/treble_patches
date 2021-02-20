@@ -23,7 +23,7 @@ index 82b1e11..1078803 100644
 -            app:cardCornerRadius="@*android:dimen/config_dialogCornerRadius"
 -            app:cardElevation="3dp">
 +            app:cardBackgroundColor="@color/search_panel_background"
-+            app:cardCornerRadius="24dp"
++            app:cardCornerRadius="6dp"
 +            app:cardElevation="2dp">
              <Toolbar
                  android:id="@+id/search_toolbar"

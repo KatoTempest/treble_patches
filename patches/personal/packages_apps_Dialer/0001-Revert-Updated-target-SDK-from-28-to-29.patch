@@ -1,0 +1,252 @@
+From 4d900049fc2ee4d604a16336e389b55a06fe95be Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 15 Nov 2020 15:25:58 -0500
+Subject: [PATCH 1/3] Revert "Updated target SDK from 28 to 29."
+
+This reverts commit 03409a448d43c11a76171f96ceca7d9d19793830.
+---
+ AndroidManifest.xml                             |  2 +-
+ assets/quantum/AndroidManifest.xml              |  2 +-
+ .../compat/telecom/TelecomManagerCompat.java    | 17 ++++++-----------
+ java/com/android/dialer/app/AndroidManifest.xml |  2 +-
+ .../dialer/assisteddialing/AndroidManifest.xml  |  2 +-
+ .../assisteddialing/ui/AndroidManifest.xml      |  2 +-
+ .../dialer/binary/google/AndroidManifest.xml    |  2 +-
+ .../android/dialer/calllog/AndroidManifest.xml  |  2 +-
+ .../dialer/calllog/config/AndroidManifest.xml   |  2 +-
+ .../dialer/promotion/impl/AndroidManifest.xml   |  2 +-
+ .../dialer/shortcuts/AndroidManifest.xml        |  2 +-
+ .../dialer/spannable/AndroidManifest.xml        |  2 +-
+ java/com/android/incallui/AndroidManifest.xml   |  2 +-
+ .../incallui/autoresizetext/AndroidManifest.xml |  2 +-
+ .../incallui/video/protocol/AndroidManifest.xml |  2 +-
+ java/com/android/voicemail/AndroidManifest.xml  |  2 +-
+ 16 files changed, 21 insertions(+), 26 deletions(-)
+
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index 9e944389f..d96d27629 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -21,7 +21,7 @@
+ 
+   <uses-sdk
+     android:minSdkVersion="24"
+-    android:targetSdkVersion="29"/>
++    android:targetSdkVersion="28"/>
+ 
+   <uses-permission android:name="android.permission.CALL_PHONE"/>
+   <uses-permission android:name="android.permission.READ_CONTACTS"/>
+diff --git a/assets/quantum/AndroidManifest.xml b/assets/quantum/AndroidManifest.xml
+index 4cfcd97b7..f57466507 100644
+--- a/assets/quantum/AndroidManifest.xml
++++ b/assets/quantum/AndroidManifest.xml
+@@ -16,6 +16,6 @@
+   -->
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.google.android.assets.quantum">
+-  <uses-sdk android:targetSdkVersion="29" />
++  <uses-sdk android:targetSdkVersion="28" />
+   <application/>
+ </manifest>
+diff --git a/java/com/android/contacts/common/compat/telecom/TelecomManagerCompat.java b/java/com/android/contacts/common/compat/telecom/TelecomManagerCompat.java
+index a1dc89d75..ca8ed29ec 100644
+--- a/java/com/android/contacts/common/compat/telecom/TelecomManagerCompat.java
++++ b/java/com/android/contacts/common/compat/telecom/TelecomManagerCompat.java
+@@ -15,8 +15,6 @@
+  */
+ package com.android.contacts.common.compat.telecom;
+ 
+-import android.os.Build.VERSION;
+-import android.os.Build.VERSION_CODES;
+ import android.support.annotation.Nullable;
+ import android.telecom.PhoneAccountHandle;
+ import android.telecom.TelecomManager;
+@@ -52,16 +50,13 @@ public class TelecomManagerCompat {
+     return null;
+   }
+ 
+-  /** Returns true if the Android version supports Handover. */
++  /**
++   * Handovers are supported from Android O-DR onward. Since there is no API bump from O to O-DR, we
++   * need to use reflection to check the existence of TelecomManager.EXTRA_IS_HANDOVER in
++   * http://cs/android/frameworks/base/telecomm/java/android/telecom/TelecomManager.java.
++   */
+   public static boolean supportsHandover() {
+-    // Starting with Android P, handover is supported via a public API.
+-    if (VERSION.SDK_INT >= VERSION_CODES.P) {
+-      return true;
+-    }
+-    // Handovers are supported from Android O-DR onward. Since there is no API
+-    // bump from O to O-DR, we need to use reflection to check the existence
+-    // of TelecomManager.EXTRA_IS_HANDOVER in
+-    // http://cs/android/frameworks/base/telecomm/java/android/telecom/TelecomManager.java.
++    //
+     try {
+       Field field = TelecomManager.class.getDeclaredField("EXTRA_IS_HANDOVER");
+       return "android.telecom.extra.IS_HANDOVER".equals(field.get(null /* obj (static field) */));
+diff --git a/java/com/android/dialer/app/AndroidManifest.xml b/java/com/android/dialer/app/AndroidManifest.xml
+index 29eacf99e..78b50b668 100644
+--- a/java/com/android/dialer/app/AndroidManifest.xml
++++ b/java/com/android/dialer/app/AndroidManifest.xml
+@@ -56,7 +56,7 @@
+ 
+   <uses-sdk
+     android:minSdkVersion="24"
+-    android:targetSdkVersion="29"/>
++    android:targetSdkVersion="28"/>
+ 
+   <application>
+ 
+diff --git a/java/com/android/dialer/assisteddialing/AndroidManifest.xml b/java/com/android/dialer/assisteddialing/AndroidManifest.xml
+index 0c2302bba..3825c507d 100644
+--- a/java/com/android/dialer/assisteddialing/AndroidManifest.xml
++++ b/java/com/android/dialer/assisteddialing/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+ </manifest>
+diff --git a/java/com/android/dialer/assisteddialing/ui/AndroidManifest.xml b/java/com/android/dialer/assisteddialing/ui/AndroidManifest.xml
+index 63d13fb12..b0a1011d1 100644
+--- a/java/com/android/dialer/assisteddialing/ui/AndroidManifest.xml
++++ b/java/com/android/dialer/assisteddialing/ui/AndroidManifest.xml
+@@ -17,7 +17,7 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+   <application>
+     <activity
+diff --git a/java/com/android/dialer/binary/google/AndroidManifest.xml b/java/com/android/dialer/binary/google/AndroidManifest.xml
+index d504d21d1..051556b27 100644
+--- a/java/com/android/dialer/binary/google/AndroidManifest.xml
++++ b/java/com/android/dialer/binary/google/AndroidManifest.xml
+@@ -21,7 +21,7 @@
+ 
+   <uses-sdk
+     android:minSdkVersion="24"
+-    android:targetSdkVersion="29"/>
++    android:targetSdkVersion="28"/>
+ 
+   <uses-permission android:name="android.permission.CALL_PHONE"/>
+   <uses-permission android:name="android.permission.READ_CONTACTS"/>
+diff --git a/java/com/android/dialer/calllog/AndroidManifest.xml b/java/com/android/dialer/calllog/AndroidManifest.xml
+index a48723355..27e11a0f9 100644
+--- a/java/com/android/dialer/calllog/AndroidManifest.xml
++++ b/java/com/android/dialer/calllog/AndroidManifest.xml
+@@ -18,7 +18,7 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+   <application>
+ 
+diff --git a/java/com/android/dialer/calllog/config/AndroidManifest.xml b/java/com/android/dialer/calllog/config/AndroidManifest.xml
+index 73a0f1f99..2d447af03 100644
+--- a/java/com/android/dialer/calllog/config/AndroidManifest.xml
++++ b/java/com/android/dialer/calllog/config/AndroidManifest.xml
+@@ -18,7 +18,7 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+   <application>
+ 
+diff --git a/java/com/android/dialer/promotion/impl/AndroidManifest.xml b/java/com/android/dialer/promotion/impl/AndroidManifest.xml
+index 209072bd8..c938b9a37 100644
+--- a/java/com/android/dialer/promotion/impl/AndroidManifest.xml
++++ b/java/com/android/dialer/promotion/impl/AndroidManifest.xml
+@@ -18,6 +18,6 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+ </manifest>
+diff --git a/java/com/android/dialer/shortcuts/AndroidManifest.xml b/java/com/android/dialer/shortcuts/AndroidManifest.xml
+index 826ad9c28..c0f07bf01 100644
+--- a/java/com/android/dialer/shortcuts/AndroidManifest.xml
++++ b/java/com/android/dialer/shortcuts/AndroidManifest.xml
+@@ -18,7 +18,7 @@
+ 
+   <uses-sdk
+     android:minSdkVersion="24"
+-    android:targetSdkVersion="29"/>
++    android:targetSdkVersion="28"/>
+ 
+   <application>
+ 
+diff --git a/java/com/android/dialer/spannable/AndroidManifest.xml b/java/com/android/dialer/spannable/AndroidManifest.xml
+index afc1675a7..0b0514477 100644
+--- a/java/com/android/dialer/spannable/AndroidManifest.xml
++++ b/java/com/android/dialer/spannable/AndroidManifest.xml
+@@ -18,5 +18,5 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ </manifest>
+diff --git a/java/com/android/incallui/AndroidManifest.xml b/java/com/android/incallui/AndroidManifest.xml
+index 0234f3a04..8e69c0dd9 100644
+--- a/java/com/android/incallui/AndroidManifest.xml
++++ b/java/com/android/incallui/AndroidManifest.xml
+@@ -19,7 +19,7 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+   <uses-permission android:name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+   <!-- We use this to disable the status bar buttons of home, back and recent
+diff --git a/java/com/android/incallui/autoresizetext/AndroidManifest.xml b/java/com/android/incallui/autoresizetext/AndroidManifest.xml
+index 9bff6f20d..f6eb34b9e 100644
+--- a/java/com/android/incallui/autoresizetext/AndroidManifest.xml
++++ b/java/com/android/incallui/autoresizetext/AndroidManifest.xml
+@@ -19,7 +19,7 @@
+ 
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ 
+   <application />
+ </manifest>
+diff --git a/java/com/android/incallui/video/protocol/AndroidManifest.xml b/java/com/android/incallui/video/protocol/AndroidManifest.xml
+index c73ce10b3..f58284eb1 100644
+--- a/java/com/android/incallui/video/protocol/AndroidManifest.xml
++++ b/java/com/android/incallui/video/protocol/AndroidManifest.xml
+@@ -18,5 +18,5 @@
+     package="com.android.incallui.video.protocol">
+   <uses-sdk
+       android:minSdkVersion="24"
+-      android:targetSdkVersion="29"/>
++      android:targetSdkVersion="28"/>
+ </manifest>
+diff --git a/java/com/android/voicemail/AndroidManifest.xml b/java/com/android/voicemail/AndroidManifest.xml
+index ccd89a9a5..d39dfee83 100644
+--- a/java/com/android/voicemail/AndroidManifest.xml
++++ b/java/com/android/voicemail/AndroidManifest.xml
+@@ -18,7 +18,7 @@
+ 
+   <uses-sdk
+     android:minSdkVersion="24"
+-    android:targetSdkVersion="29"/>
++    android:targetSdkVersion="28"/>
+ 
+   <!-- Applications using this module should merge these permissions using android_manifest_merge -->
+ 
+-- 
+2.17.1
+

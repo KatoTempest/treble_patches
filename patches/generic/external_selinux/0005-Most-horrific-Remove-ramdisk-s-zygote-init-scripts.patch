@@ -1,7 +1,7 @@
-From cdbcdfd5a55d190ff78d0e8591a7c48bd10ae12c Mon Sep 17 00:00:00 2001
+From 37d5e860031c84803c2533d940847dc214cb2597 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Thu, 12 Sep 2019 20:34:28 +0200
-Subject: [PATCH 5/8] Most horrific: Remove ramdisk's zygote init scripts
+Subject: [PATCH 05/10] Most horrific: Remove ramdisk's zygote init scripts
 
 This is needed because:
 - only secilc is run soon enough in /system to
@@ -15,7 +15,7 @@ Change-Id: I8be31ceb9ef2124d04994d9fb08fc8012a2f819e
  1 file changed, 7 insertions(+)
 
 diff --git a/secilc/secilc.c b/secilc/secilc.c
-index 631b4b0a..3dd6e7ce 100644
+index 1e550ab4..375320e6 100644
 --- a/secilc/secilc.c
 +++ b/secilc/secilc.c
 @@ -34,6 +34,8 @@
@@ -27,7 +27,7 @@ index 631b4b0a..3dd6e7ce 100644
  #ifdef ANDROID
  #include <cil/cil.h>
  #else
-@@ -121,6 +123,11 @@ int main(int argc, char *argv[])
+@@ -124,6 +126,11 @@ int main(int argc, char *argv[])
  	};
  	int i;
  
@@ -37,8 +37,8 @@ index 631b4b0a..3dd6e7ce 100644
 +	unlink("/init.zygote32_64.rc");
 +
  	while (1) {
- 		opt_char = getopt_long(argc, argv, "o:f:U:hvt:M:PDmNc:GX:", long_opts, &opt_index);
+ 		opt_char = getopt_long(argc, argv, "o:f:U:hvt:M:PDmNOc:GX:n", long_opts, &opt_index);
  		if (opt_char == -1) {
 -- 
-2.25.1
+2.17.1
 

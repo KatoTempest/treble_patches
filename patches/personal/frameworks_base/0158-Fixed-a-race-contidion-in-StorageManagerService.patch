@@ -1,0 +1,34 @@
+From 564260922e977b61611886a7e0779d780f42fc38 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 14:35:30 -0500
+Subject: [PATCH 158/181] Fixed a race contidion in StorageManagerService
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/f33849a0dbf35f9e15791a381ffc7fcc3fdd2773
+---
+ .../core/java/com/android/server/StorageManagerService.java  | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/services/core/java/com/android/server/StorageManagerService.java b/services/core/java/com/android/server/StorageManagerService.java
+index 826fec71b27..9a200671885 100644
+--- a/services/core/java/com/android/server/StorageManagerService.java
++++ b/services/core/java/com/android/server/StorageManagerService.java
+@@ -1392,12 +1392,13 @@ class StorageManagerService extends IStorageManager.Stub
+                     final int oldState = vol.state;
+                     final int newState = state;
+                     vol.state = newState;
++                    final VolumeInfo vInfo = vol.clone();
+                     final SomeArgs args = SomeArgs.obtain();
+-                    args.arg1 = vol;
++                    args.arg1 = vInfo;
+                     args.arg2 = oldState;
+                     args.arg3 = newState;
+                     mHandler.obtainMessage(H_VOLUME_STATE_CHANGED, args).sendToTarget();
+-                    onVolumeStateChangedLocked(vol, oldState, newState);
++                    onVolumeStateChangedLocked(vInfo, oldState, newState);
+                 }
+             }
+         }
+-- 
+2.17.1
+

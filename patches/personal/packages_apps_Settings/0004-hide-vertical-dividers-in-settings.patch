@@ -1,0 +1,26 @@
+From 71bf59f44d4e81d14a3783779ca55a08f5b70918 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 23 Dec 2019 13:08:27 +0200
+Subject: [PATCH 04/46] hide vertical dividers in settings
+
+	modified:   res/values/colors.xml
+---
+ res/values/colors.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/res/values/colors.xml b/res/values/colors.xml
+index 4904160b9e..83adccc0a2 100644
+--- a/res/values/colors.xml
++++ b/res/values/colors.xml
+@@ -21,7 +21,7 @@
+     <color name="crypt_keeper_clock_am_pm">#ff9a9a9a</color>
+     <color name="crypt_keeper_password_background">#70606060</color>
+ 
+-    <color name="divider_color">#20ffffff</color>
++    <color name="divider_color">#00ffffff</color>
+     <color name="title_color">@android:color/holo_blue_light</color>
+     <color name="setup_lock_pattern_view_regular_color_light">
+         @color/lock_pattern_view_regular_color
+-- 
+2.17.1
+

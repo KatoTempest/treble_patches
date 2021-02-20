@@ -1,0 +1,26 @@
+From e4af2a7f2c2db80c2727141e3e491367645fe5cc Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:23:33 -0500
+Subject: [PATCH 101/181] set max statusbar icons for 5 (lir)
+
+Change-Id: I879cb216705a0a87c9d2be6328e0008132762364
+---
+ packages/SystemUI/res/values/lineage_config.xml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/res/values/lineage_config.xml b/packages/SystemUI/res/values/lineage_config.xml
+index 8fa6fbecb53..defe5b96091 100644
+--- a/packages/SystemUI/res/values/lineage_config.xml
++++ b/packages/SystemUI/res/values/lineage_config.xml
+@@ -16,7 +16,7 @@
+ -->
+ <resources>
+     <!-- Max visible notification icons -->
+-    <integer name="config_maxVisibleNotificationIcons">4</integer>
++    <integer name="config_maxVisibleNotificationIcons">5</integer>
+     <integer name="config_maxVisibleNotificationIconsOnLock">5</integer>
+ 
+     <!-- Should we listen for fingerprints when the screen is off?  Devices
+-- 
+2.17.1
+
