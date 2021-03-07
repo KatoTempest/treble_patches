@@ -1,4 +1,4 @@
-From c6193e096792ccaa07087ed7dfcb68701cd620d6 Mon Sep 17 00:00:00 2001
+From 8ab4c90ca2c884e55bab28c70c5bf42c82044a99 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 21:04:29 +0200
 Subject: [PATCH 05/14] add ExactCalculator

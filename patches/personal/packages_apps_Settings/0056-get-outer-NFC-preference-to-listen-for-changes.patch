@@ -1,7 +1,7 @@
-From 249c2dcf8eac43bd3a2f0bbc6c488f5da3528688 Mon Sep 17 00:00:00 2001
+From f64e312eeac0eb156c5cbc96bc444640a71c1d95 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:11:51 -0500
-Subject: [PATCH 56/61] get outer NFC preference to listen for changes
+Subject: [PATCH 56/63] get outer NFC preference to listen for changes
 
   from
   https://github.com/LineageOS/android_packages_apps_Settings/commit/4df62dfa2a16f4f5f7e900d1081c3a6cd37a66fe

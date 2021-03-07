@@ -1,0 +1,166 @@
+From 3d7020e66065764201916a3f846da1ec6e751098 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:16:50 -0500
+Subject: [PATCH 056/197] Screenshot: Append app name to filename
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/299dc3ae8b378c52fd49adb5fe26219a0e7e8c1b
+---
+ .../systemui/screenshot/GlobalScreenshot.java | 52 ++++++++++++++++++-
+ .../screenshot/SaveImageInBackgroundTask.java | 13 ++++-
+ 2 files changed, 63 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+index c3c947bc40a..c558bcf61fc 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+@@ -28,10 +28,14 @@ import android.animation.ValueAnimator;
+ import android.annotation.Nullable;
+ import android.annotation.SuppressLint;
+ import android.app.ActivityManager;
++import android.app.ActivityOptions;
++import android.app.ActivityTaskManager;
+ import android.app.Notification;
+ import android.app.PendingIntent;
+ import android.content.ComponentName;
+ import android.content.Context;
++import android.content.pm.ActivityInfo;
++import android.content.pm.PackageManager;
+ import android.content.res.Configuration;
+ import android.content.res.Resources;
+ import android.graphics.Bitmap;
+@@ -81,10 +85,14 @@ import android.widget.Toast;
+ import com.android.internal.logging.UiEventLogger;
+ import com.android.systemui.R;
+ import com.android.systemui.dagger.qualifiers.Main;
++import com.android.systemui.dagger.qualifiers.UiBackground;
++import com.android.systemui.shared.system.ActivityManagerWrapper;
++import com.android.systemui.shared.system.TaskStackChangeListener;
+ import com.android.systemui.shared.system.QuickStepContract;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
++import java.util.concurrent.Executor;
+ import java.util.function.Consumer;
+ 
+ import javax.inject.Inject;
+@@ -104,6 +112,7 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+         public Consumer<Uri> finisher;
+         public GlobalScreenshot.ActionsReadyListener mActionsReadyListener;
+         public int errorMsgResId;
++        public String appLabel;
+ 
+         void clearImage() {
+             image = null;
+@@ -236,7 +245,7 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+             Context context, @Main Resources resources,
+             ScreenshotSmartActions screenshotSmartActions,
+             ScreenshotNotificationsController screenshotNotificationsController,
+-            UiEventLogger uiEventLogger) {
++            UiEventLogger uiEventLogger, @UiBackground Executor uiBgExecutor) {
+         mContext = context;
+         mScreenshotSmartActions = screenshotSmartActions;
+         mNotificationsController = screenshotNotificationsController;
+@@ -276,6 +285,18 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+         // Setup the Camera shutter sound
+         mCameraSound = new MediaActionSound();
+         mCameraSound.load(MediaActionSound.SHUTTER_CLICK);
++
++        // Store UI background executor
++        mUiBgExecutor = uiBgExecutor;
++
++        // Grab PackageManager
++        mPm = mContext.getPackageManager();
++
++        // Register task stack listener
++        ActivityManagerWrapper.getInstance().registerTaskStackListener(mTaskListener);
++
++        // Initialize current foreground package name
++        mTaskListener.onTaskStackChanged();
+     }
+ 
+     @Override // ViewTreeObserver.OnComputeInternalInsetsListener
+@@ -329,6 +350,34 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+         }
+     }
+ 
++    private ComponentName mTaskComponentName;
++    private PackageManager mPm;
++
++    private final Executor mUiBgExecutor;
++    private final TaskStackChangeListener mTaskListener = new TaskStackChangeListener() {
++        @Override
++        public void onTaskStackChanged() {
++            mUiBgExecutor.execute(() -> {
++                try {
++                    final ActivityManager.StackInfo focusedStack =
++                            ActivityTaskManager.getService().getFocusedStackInfo();
++                    if (focusedStack != null && focusedStack.topActivity != null) {
++                        mTaskComponentName = focusedStack.topActivity;
++                    }
++                } catch (Exception e) {}
++            });
++        }
++    };
++
++    private String getForegroundAppLabel() {
++        try {
++            final ActivityInfo ai = mPm.getActivityInfo(mTaskComponentName, 0);
++            return ai.applicationInfo.loadLabel(mPm).toString();
++        } catch (PackageManager.NameNotFoundException e) {
++             return null;
++        }
++    }
++
+     /**
+      * Displays a screenshot selector
+      */
+@@ -688,6 +737,7 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+         data.image = mScreenBitmap;
+         data.finisher = finisher;
+         data.mActionsReadyListener = actionsReadyListener;
++        data.appLabel = getForegroundAppLabel();
+ 
+         if (mSaveInBgTask != null) {
+             // just log success/failure for the pre-existing screenshot
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java b/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
+index df1d78953f4..4d768397913 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
+@@ -17,6 +17,7 @@
+ package com.android.systemui.screenshot;
+ 
+ import android.app.ActivityTaskManager;
++import android.app.KeyguardManager;
+ import android.app.Notification;
+ import android.app.PendingIntent;
+ import android.content.ClipData;
+@@ -77,6 +78,7 @@ class SaveImageInBackgroundTask extends AsyncTask<Void, Void, Void> {
+     private static final String TAG = "SaveImageInBackgroundTask";
+ 
+     private static final String SCREENSHOT_FILE_NAME_TEMPLATE = "Screenshot_%s.png";
++    private static final String SCREENSHOT_FILE_NAME_TEMPLATE_APPNAME = "Screenshot_%s_%s.png";
+     private static final String SCREENSHOT_ID_TEMPLATE = "Screenshot_%s";
+     private static final String SCREENSHOT_SHARE_SUBJECT_TEMPLATE = "Screenshot (%s)";
+ 
+@@ -101,7 +103,16 @@ class SaveImageInBackgroundTask extends AsyncTask<Void, Void, Void> {
+         mParams = data;
+         mImageTime = System.currentTimeMillis();
+         String imageDate = new SimpleDateFormat("yyyyMMdd-HHmmss").format(new Date(mImageTime));
+-        mImageFileName = String.format(SCREENSHOT_FILE_NAME_TEMPLATE, imageDate);
++        boolean onKeyguard = context.getSystemService(KeyguardManager.class).isKeyguardLocked();
++        if (!onKeyguard && data.appLabel != null) {
++            // Replace all spaces and special chars with an underscore
++            String appNameString = data.appLabel.toString().replaceAll("[\\\\/:*?\"<>|\\s]+", "_");
++            mImageFileName = String.format(SCREENSHOT_FILE_NAME_TEMPLATE_APPNAME,
++                    imageDate, appNameString);
++        } else {
++            mImageFileName = String.format(SCREENSHOT_FILE_NAME_TEMPLATE, imageDate);
++        }
++
+         mScreenshotId = String.format(SCREENSHOT_ID_TEMPLATE, UUID.randomUUID());
+ 
+         // Initialize screenshot notification smart actions provider.
+-- 
+2.17.1
+

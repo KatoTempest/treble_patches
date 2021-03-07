@@ -1,4 +1,4 @@
-From 007b388b4b1df3cef70a6721e227151466179427 Mon Sep 17 00:00:00 2001
+From 76c5ab465194539bad468ba77ce38f1695290f53 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:57:35 -0500
 Subject: [PATCH 12/14] include ThemePicker to the build

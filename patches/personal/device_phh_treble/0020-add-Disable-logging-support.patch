@@ -1,7 +1,7 @@
-From 1935a29b5b67f6279c251975f40fc3d41a85599e Mon Sep 17 00:00:00 2001
+From 6f75e7e646b83a3bc915686cbf987e76c19e52bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:06:02 -0500
-Subject: [PATCH 20/21] add Disable logging support
+Subject: [PATCH 20/23] add Disable logging support
 
 ---
  phh-prop-handler.sh | 18 ++++++++++++++++++
@@ -9,7 +9,7 @@ Subject: [PATCH 20/21] add Disable logging support
  2 files changed, 21 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 6ab3af6..7900f4b 100644
+index 2aad32b..7f0aa73 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -217,3 +217,21 @@ if [ "$1" == "persist.sys.phh.autorun" ]; then

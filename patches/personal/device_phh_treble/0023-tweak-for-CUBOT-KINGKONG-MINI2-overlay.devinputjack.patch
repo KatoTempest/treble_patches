@@ -1,0 +1,34 @@
+From a9c18d3c5a4e9662360670d87ee707066d0d7033 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 8 Mar 2021 04:50:14 -0500
+Subject: [PATCH 23/23] tweak for CUBOT KINGKONG MINI2 (overlay.devinputjack)
+
+---
+ rw-system.sh | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index 6a08172..a99c19f 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -365,11 +365,16 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel
+     setprop persist.sys.overlay.devinputjack true
+ fi
+ 
+-# UMIDIGI/A3X & UMIDIGI/A9
++# UMIDIGI A3X & A9
+ if getprop ro.vendor.build.fingerprint |grep -qi -e UMIDIGI/A3X -e UMIDIGI/A9; then
+     setprop persist.sys.overlay.devinputjack true
+ fi
+ 
++# CUBOT KINGKONG MINI2
++if getprop ro.vendor.build.fingerprint |grep -qi -e CUBOT/KINGKONG_MINI2; then
++    setprop persist.sys.overlay.devinputjack true
++fi
++
+ #Realme 6
+ if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151;then
+     setprop persist.sys.phh.fingerprint.nocleanup true
+-- 
+2.17.1
+

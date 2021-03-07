@@ -1,0 +1,86 @@
+From 600f5ac08dece0ae015223ed12e9688cf6d609c3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 12:49:38 -0500
+Subject: [PATCH 117/197] WifiDisplayController: handle preexisting p2p
+ connection status
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/59b14ef302fe58a72d0b1e043a35107d9209c4ce
+---
+ .../server/display/WifiDisplayController.java | 46 +++++++++++++++++++
+ 1 file changed, 46 insertions(+)
+
+diff --git a/services/core/java/com/android/server/display/WifiDisplayController.java b/services/core/java/com/android/server/display/WifiDisplayController.java
+index 1360e5496aa..441295b2e97 100644
+--- a/services/core/java/com/android/server/display/WifiDisplayController.java
++++ b/services/core/java/com/android/server/display/WifiDisplayController.java
+@@ -548,6 +548,10 @@ final class WifiDisplayController implements DumpUtils.Dump {
+             return;
+         }
+ 
++        if (handlePreExistingConnection(device)) {
++            Slog.i(TAG, "Already handle the preexisting P2P connection status");
++            return;
++        }
+         mDesiredDevice = device;
+         mConnectionRetriesLeft = CONNECT_MAX_RETRIES;
+         updateConnection();
+@@ -929,6 +933,12 @@ final class WifiDisplayController implements DumpUtils.Dump {
+                 disconnect();
+             }
+ 
++            if (mDesiredDevice != null) {
++                Slog.i(TAG, "Reconnect new device: " + mDesiredDevice.deviceName);
++                updateConnection();
++                return;
++            }
++
+             // After disconnection for a group, for some reason we have a tendency
+             // to get a peer change notification with an empty list of peers.
+             // Perform a fresh scan.
+@@ -1046,6 +1056,42 @@ final class WifiDisplayController implements DumpUtils.Dump {
+                 mAdvertisedDisplayFlags);
+     }
+ 
++    private boolean handlePreExistingConnection(final WifiP2pDevice device) {
++        if (mNetworkInfo == null || !mNetworkInfo.isConnected() || mWifiDisplayCertMode) {
++            return false;
++        }
++        if (DEBUG) Slog.i(TAG, "Handle the preexisting P2P connection status");
++        mWifiP2pManager.requestGroupInfo(mWifiP2pChannel, new GroupInfoListener() {
++            @Override
++            public void onGroupInfoAvailable(WifiP2pGroup info) {
++                if (info == null) {
++                    return;
++                }
++                if (contains(info, device)) {
++                    if (DEBUG) Slog.i(TAG, "Already connected to the desired device: "
++                            + device.deviceName);
++                    updateConnection();
++                    handleConnectionChanged(mNetworkInfo);
++                } else {
++                    mWifiP2pManager.removeGroup(mWifiP2pChannel, new ActionListener() {
++                        @Override
++                        public void onSuccess() {
++                            Slog.i(TAG, "Disconnect the old device");
++                        }
++
++                        @Override
++                        public void onFailure(int reason) {
++                            Slog.w(TAG, "Failed to disconnect the old device: reason=" + reason);
++                        }
++                    });
++                }
++            }
++        });
++        mDesiredDevice = device;
++        mConnectionRetriesLeft = CONNECT_MAX_RETRIES;
++        return true;
++    }
++
+     private static Inet4Address getInterfaceAddress(WifiP2pGroup info) {
+         NetworkInterface iface;
+         try {
+-- 
+2.17.1
+

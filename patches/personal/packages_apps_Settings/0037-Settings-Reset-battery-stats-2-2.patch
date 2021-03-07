@@ -1,7 +1,7 @@
-From ae8697482b4a67a94d228738c0339078ccbe6dbf Mon Sep 17 00:00:00 2001
+From a8924808dae015998f531c649ff26e52de38c965 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 37/61] Settings: Reset battery stats [2/2]
+Subject: [PATCH 37/63] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918
@@ -15,7 +15,7 @@ Change-Id: Icf9816140f59f206003825c2c81666e39ce031ae
  4 files changed, 33 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index de4ae39e84..a4036ef57c 100644
+index 0b4b75f440..3911f2aaea 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -50,6 +50,7 @@
@@ -51,7 +51,7 @@ index dccc5b23d3..c8afe60238 100644
 +    <string name="battery_stats_message">Battery history stats are going to be reset</string>
  </resources>
 diff --git a/src/com/android/settings/fuelgauge/PowerUsageSummary.java b/src/com/android/settings/fuelgauge/PowerUsageSummary.java
-index c6e3d1d448..b11c086020 100644
+index 8763976e36..911cd2462c 100644
 --- a/src/com/android/settings/fuelgauge/PowerUsageSummary.java
 +++ b/src/com/android/settings/fuelgauge/PowerUsageSummary.java
 @@ -22,6 +22,8 @@ import android.app.settings.SettingsEnums;
@@ -71,7 +71,7 @@ index c6e3d1d448..b11c086020 100644
      public static final int DEBUG_INFO_LOADER = 3;
  
      @VisibleForTesting
-@@ -271,11 +274,30 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
+@@ -273,11 +276,30 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
  
      @Override
      public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
@@ -103,7 +103,7 @@ index c6e3d1d448..b11c086020 100644
      @Override
      public int getHelpResource() {
          return R.string.help_url_battery;
-@@ -284,6 +306,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
+@@ -286,6 +308,9 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
      @Override
      public boolean onOptionsItemSelected(MenuItem item) {
          switch (item.getItemId()) {

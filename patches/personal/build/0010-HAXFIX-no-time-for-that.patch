@@ -1,4 +1,4 @@
-From c410828a0d48e23b70681ccf6db1d5bc1b11e87b Mon Sep 17 00:00:00 2001
+From 75a2524b9053feea38d0483be981fad73ffb6dc9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 10:12:40 -0500
 Subject: [PATCH 10/14] HAXFIX: no time for that!
@@ -12,7 +12,7 @@ Change-Id: Ia30e92df22e343f9dd61850aefaa573fbcb3b825
  1 file changed, 3 deletions(-)
 
 diff --git a/core/Makefile b/core/Makefile
-index 45ad60f41..996b8fb47 100644
+index 3e748eb2d..f1020e957 100644
 --- a/core/Makefile
 +++ b/core/Makefile
 @@ -14,9 +14,6 @@ LOCAL_PATH := $(BUILD_SYSTEM)

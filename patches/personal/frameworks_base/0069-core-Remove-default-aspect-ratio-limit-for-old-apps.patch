@@ -1,0 +1,49 @@
+From 5b1fb346631ddb892d01c71ed72160cfbb78fecb Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 16 Nov 2020 15:28:36 -0500
+Subject: [PATCH 069/197] core: Remove default aspect ratio limit for old apps
+
+  from
+  https://github.com/Evolution-X/frameworks_base/commit/70296885fca94f6d80bf079634f155236a4cb9b7
+---
+ core/java/android/content/pm/PackageParser.java             | 6 ++----
+ .../android/content/pm/parsing/ParsingPackageUtils.java     | 6 ++----
+ 2 files changed, 4 insertions(+), 8 deletions(-)
+
+diff --git a/core/java/android/content/pm/PackageParser.java b/core/java/android/content/pm/PackageParser.java
+index a4d8941d1e5..f836009475f 100644
+--- a/core/java/android/content/pm/PackageParser.java
++++ b/core/java/android/content/pm/PackageParser.java
+@@ -4663,10 +4663,8 @@ public class PackageParser {
+      * ratio set.
+      */
+     private void setMaxAspectRatio(Package owner) {
+-        // Default to (1.86) 16.7:9 aspect ratio for pre-O apps and unset for O and greater.
+-        // NOTE: 16.7:9 was the max aspect ratio Android devices can support pre-O per the CDD.
+-        float maxAspectRatio = owner.applicationInfo.targetSdkVersion < O
+-                ? DEFAULT_PRE_O_MAX_ASPECT_RATIO : 0;
++        // Start at an unlimited aspect ratio unless we get a more restrictive one
++        float maxAspectRatio = 0;
+ 
+         if (owner.applicationInfo.maxAspectRatio != 0) {
+             // Use the application max aspect ration as default if set.
+diff --git a/core/java/android/content/pm/parsing/ParsingPackageUtils.java b/core/java/android/content/pm/parsing/ParsingPackageUtils.java
+index ab0ed51fb90..27016e8e3f0 100644
+--- a/core/java/android/content/pm/parsing/ParsingPackageUtils.java
++++ b/core/java/android/content/pm/parsing/ParsingPackageUtils.java
+@@ -2295,10 +2295,8 @@ public class ParsingPackageUtils {
+      * ratio set.
+      */
+     private static void setMaxAspectRatio(ParsingPackage pkg) {
+-        // Default to (1.86) 16.7:9 aspect ratio for pre-O apps and unset for O and greater.
+-        // NOTE: 16.7:9 was the max aspect ratio Android devices can support pre-O per the CDD.
+-        float maxAspectRatio = pkg.getTargetSdkVersion() < O
+-                ? PackageParser.DEFAULT_PRE_O_MAX_ASPECT_RATIO : 0;
++        // Start at an unlimited aspect ratio unless we get a more restrictive one
++        float maxAspectRatio = 0;
+ 
+         float packageMaxAspectRatio = pkg.getMaxAspectRatio();
+         if (packageMaxAspectRatio != 0) {
+-- 
+2.17.1
+

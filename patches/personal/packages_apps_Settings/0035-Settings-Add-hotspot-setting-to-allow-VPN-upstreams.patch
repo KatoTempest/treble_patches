@@ -1,7 +1,7 @@
-From 6ecf0235d1cc6c325c377563179b72d618a76a06 Mon Sep 17 00:00:00 2001
+From 66b1c811c948b2ac85d06b0a2d663219d1c4d74d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:03:04 -0500
-Subject: [PATCH 35/61] Settings: Add hotspot setting to allow VPN upstreams
+Subject: [PATCH 35/63] Settings: Add hotspot setting to allow VPN upstreams
 
   based on
   https://github.com/Evolution-X/packages_apps_Settings/commit/bb38444775985ee07667086e704608b72da8f4a8

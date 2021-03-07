@@ -1,7 +1,7 @@
-From 05c5907239a55b57d9737918c0c0da108dff7611 Mon Sep 17 00:00:00 2001
+From a9a8ecb976b2054bb7c61f79534787a7e0f2135d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 26 Feb 2020 07:23:44 +0200
-Subject: [PATCH 4/5] fix offline charger v7
+Subject: [PATCH 4/6] fix offline charger v7
 
 	modified:   rootdir/init.rc
 ---

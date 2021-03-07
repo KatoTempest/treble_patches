@@ -1,7 +1,7 @@
-From e09ef31d2b1c6a97e819dddbe6b50e4a4acd2914 Mon Sep 17 00:00:00 2001
+From 7b6bf0721cb292b6e5cc1782efe842d4d97b6090 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 03:52:40 -0500
-Subject: [PATCH 33/61] add ROM type info
+Subject: [PATCH 33/63] add ROM type info
 
 Change-Id: Iae053e3680c90fff3e29a8cbbfda46657ad725cd
 ---

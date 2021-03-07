@@ -1,7 +1,7 @@
-From 0ddaf7f2c4ce4e8aea6bc9b599a2bd8ae0c6bb6f Mon Sep 17 00:00:00 2001
+From 7da1a920d2c62828333b801ad46c688c8a31f0e2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 11/21] add enhanced root solution
+Subject: [PATCH 11/23] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)
@@ -16,7 +16,7 @@ Subject: [PATCH 11/21] add enhanced root solution
  create mode 100644 phh.superuser.apk
 
 diff --git a/base.mk b/base.mk
-index 109dae3..a2b50b0 100644
+index c2c9a2a..efae81d 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -60,6 +60,9 @@ PRODUCT_COPY_FILES += \
@@ -59,7 +59,7 @@ index 0000000..b7d7177
 +mount -o remount,ro $MOUNTPOINT
 +#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 952618e..8b73d7c 100644
+index 9987af2..f345a5e 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -169,3 +169,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then

@@ -1,7 +1,7 @@
-From 20d9beb4f6f0ba2178aa32d07c1ea62cf327b89e Mon Sep 17 00:00:00 2001
+From fab08ff718991488cba803f5efa523358925b328 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 07/21] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 07/23] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)
@@ -10,7 +10,7 @@ Subject: [PATCH 07/21] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index b130895..ac3e114 100644
+index e2a0eef..772e889 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -144,7 +144,7 @@ changeKeylayout() {
@@ -37,7 +37,7 @@ index b130895..ac3e114 100644
 +fi
 +
  #Realme 6
- if getprop ro.vendor.product.device |grep -iq -e RMX2001;then
+ if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151;then
      setprop persist.sys.phh.fingerprint.nocleanup true
 -- 
 2.17.1

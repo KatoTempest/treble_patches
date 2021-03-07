@@ -1,7 +1,7 @@
-From eb15f9b087b7013bb9de23e6d4f79c3b644aeb74 Mon Sep 17 00:00:00 2001
+From 57c78173db852a2bbfaea7c699bc32b112b4db8c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 17:41:58 -0500
-Subject: [PATCH 38/61] expand menus
+Subject: [PATCH 38/63] expand menus
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/b0418ff6dd397a230047e1cec912b07bd8698db1

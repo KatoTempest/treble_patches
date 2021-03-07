@@ -1,0 +1,53 @@
+From 667b84bd156b9f6d12ed9b90d4a5789631463fa0 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 13 Dec 2020 07:35:12 -0500
+Subject: [PATCH 119/197] base: fix targetPackage for new icon pack launcher
+ overlays
+
+  from
+  https://github.com/omnirom/android_frameworks_base/commit/fe016774732131e487bfd74239828fcc0c628617
+---
+ .../overlays/IconPackKaiLauncherOverlay/AndroidManifest.xml     | 2 +-
+ .../overlays/IconPackSamLauncherOverlay/AndroidManifest.xml     | 2 +-
+ .../overlays/IconPackVictorLauncherOverlay/AndroidManifest.xml  | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/packages/overlays/IconPackKaiLauncherOverlay/AndroidManifest.xml b/packages/overlays/IconPackKaiLauncherOverlay/AndroidManifest.xml
+index 184a046cd29..5513bb9b6a3 100644
+--- a/packages/overlays/IconPackKaiLauncherOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackKaiLauncherOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.kai.launcher"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.nexuslauncher" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
++    <overlay android:targetPackage="com.android.launcher3" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
+     <application android:label="Kai" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackSamLauncherOverlay/AndroidManifest.xml b/packages/overlays/IconPackSamLauncherOverlay/AndroidManifest.xml
+index 2efa010da50..5f34ec6a91f 100644
+--- a/packages/overlays/IconPackSamLauncherOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackSamLauncherOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.sam.launcher"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.nexuslauncher" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
++    <overlay android:targetPackage="com.android.launcher3" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
+     <application android:label="Sam" android:hasCode="false"/>
+ </manifest>
+diff --git a/packages/overlays/IconPackVictorLauncherOverlay/AndroidManifest.xml b/packages/overlays/IconPackVictorLauncherOverlay/AndroidManifest.xml
+index a7122eb8770..fc58ea068ac 100644
+--- a/packages/overlays/IconPackVictorLauncherOverlay/AndroidManifest.xml
++++ b/packages/overlays/IconPackVictorLauncherOverlay/AndroidManifest.xml
+@@ -17,6 +17,6 @@
+     package="com.android.theme.icon_pack.victor.launcher"
+     android:versionCode="1"
+     android:versionName="1.0">
+-    <overlay android:targetPackage="com.google.android.apps.nexuslauncher" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
++    <overlay android:targetPackage="com.android.launcher3" android:category="android.theme.customization.icon_pack.launcher" android:priority="1"/>
+     <application android:label="Victor" android:hasCode="false"/>
+ </manifest>
+-- 
+2.17.1
+

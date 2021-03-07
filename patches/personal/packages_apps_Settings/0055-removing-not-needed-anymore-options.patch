@@ -1,7 +1,7 @@
-From c5cc3ca9f0f3f214b12d5d7549b36d5e194e6409 Mon Sep 17 00:00:00 2001
+From 6bff33abed0a0b84bd86352f7cdcd6bc6b62f0c1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 16:14:09 -0500
-Subject: [PATCH 55/61] removing not needed anymore options
+Subject: [PATCH 55/63] removing not needed anymore options
 
 Change-Id: I09a893abf8f72b75ae4bca3bb9583cabf906ecf4
 ---

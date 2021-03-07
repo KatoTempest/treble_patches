@@ -1,7 +1,7 @@
-From c9814e6e7a6a4f435e473eb6e2fd545f77313b07 Mon Sep 17 00:00:00 2001
+From 1a42564fd06aee2e936ad82bb5812ef1096ffee3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 8 Mar 2020 15:26:13 +0200
-Subject: [PATCH 012/189] play with QS
+Subject: [PATCH 012/197] play with QS
 
 	modified:   packages/SystemUI/res/values/config.xml
 	modified:   packages/SystemUI/res/values/dimens.xml
@@ -64,7 +64,7 @@ index 0384c003d02..bc4785f35ce 100644
      <!-- The number of columns that the top level tiles span in the QuickSettings -->
      <integer name="quick_settings_user_time_settings_tile_span">1</integer>
 diff --git a/packages/SystemUI/res/values/dimens.xml b/packages/SystemUI/res/values/dimens.xml
-index 6a88f721280..987b9a096e8 100644
+index 2c7832b34a2..0191d392762 100644
 --- a/packages/SystemUI/res/values/dimens.xml
 +++ b/packages/SystemUI/res/values/dimens.xml
 @@ -528,7 +528,7 @@

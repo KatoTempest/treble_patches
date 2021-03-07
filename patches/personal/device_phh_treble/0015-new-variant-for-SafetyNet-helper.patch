@@ -1,20 +1,20 @@
-From 491d767a84c323840fa4069de66e0e6517075c37 Mon Sep 17 00:00:00 2001
+From 6ad301ab9c2577807a6ed75d647075f76324b133 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH 15/21] new variant for SafetyNet helper
+Subject: [PATCH] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-
  phh-add-secure.sh   | 23 -----------------------
  phh-prop-handler.sh | 14 ++++++++++++++
- secure.sh           | 18 ++++++++++++++++++
+ secure.sh           | 16 ++++++++++++++++
  vndk.rc             |  3 +++
- 5 files changed, 36 insertions(+), 24 deletions(-)
+ 5 files changed, 34 insertions(+), 24 deletions(-)
  delete mode 100644 phh-add-secure.sh
  create mode 100644 secure.sh
 
 diff --git a/base.mk b/base.mk
-index a2b50b0..0ebf699 100644
+index efae81d..81ca7ca 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
@@ -56,7 +56,7 @@ index b7d7177..0000000
 -mount -o remount,ro $MOUNTPOINT
 -#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 8b73d7c..4fb05a0 100644
+index f345a5e..1bace1f 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -189,3 +189,17 @@ if [ "$1" == "persist.sys.phh.root" ]; then
@@ -79,28 +79,26 @@ index 8b73d7c..4fb05a0 100644
 +fi
 diff --git a/secure.sh b/secure.sh
 new file mode 100644
-index 0000000..a401092
+index 0000000..98027e7
 --- /dev/null
 +++ b/secure.sh
-@@ -0,0 +1,18 @@
+@@ -0,0 +1,16 @@
 +(getprop ro.vendor.build.security_patch; getprop ro.keymaster.xxx.security_patch) |sort |tail -n 1 |while read v;do
-+    [ -n "$v" ] && resetprop ro.build.version.security_patch "$v"
++    [ -n "$v" ] && resetprop_phh ro.build.version.security_patch "$v"
 +done
-+resetprop ro.build.tags release-keys
-+resetprop ro.boot.vbmeta.device_state locked
-+resetprop ro.boot.verifiedbootstate green
-+resetprop ro.boot.flash.locked 1
-+resetprop ro.boot.veritymode enforcing
-+resetprop ro.boot.warranty_bit 0
-+resetprop ro.warranty_bit 0
-+resetprop ro.debuggable 0
-+resetprop ro.secure 1
-+resetprop ro.build.type user
-+resetprop ro.build.selinux 0
-+resetprop ro.adb.secure 1
++resetprop_phh ro.build.tags release-keys
++resetprop_phh ro.boot.vbmeta.device_state locked
++resetprop_phh ro.boot.verifiedbootstate green
++resetprop_phh ro.boot.flash.locked 1
++resetprop_phh ro.boot.veritymode enforcing
++resetprop_phh ro.boot.warranty_bit 0
++resetprop_phh ro.warranty_bit 0
++resetprop_phh ro.debuggable 0
++resetprop_phh ro.secure 1
++resetprop_phh ro.build.type user
++resetprop_phh ro.build.selinux 0
++resetprop_phh ro.adb.secure 1
 +setprop ctl.restart adbd
-+setprop ctl.stop console
-+dmesg -n 1
 diff --git a/vndk.rc b/vndk.rc
 index 2bc1c6b..0894a3f 100644
 --- a/vndk.rc

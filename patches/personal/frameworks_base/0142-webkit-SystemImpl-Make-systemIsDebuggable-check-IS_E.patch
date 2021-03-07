@@ -1,0 +1,28 @@
+From db022455ee15498f7e9c5d261284fe23c9558400 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 02:33:46 -0500
+Subject: [PATCH 142/197] webkit: SystemImpl: Make systemIsDebuggable() check
+ IS_ENG as well
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/437e775b685f70873ea5f157ba49d47c81567dc2
+---
+ services/core/java/com/android/server/webkit/SystemImpl.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/services/core/java/com/android/server/webkit/SystemImpl.java b/services/core/java/com/android/server/webkit/SystemImpl.java
+index 201894049b0..39f25d41e88 100644
+--- a/services/core/java/com/android/server/webkit/SystemImpl.java
++++ b/services/core/java/com/android/server/webkit/SystemImpl.java
+@@ -232,7 +232,7 @@ public class SystemImpl implements SystemInterface {
+ 
+     @Override
+     public boolean systemIsDebuggable() {
+-        return Build.IS_DEBUGGABLE;
++        return Build.IS_DEBUGGABLE && Build.IS_ENG;
+     }
+ 
+     @Override
+-- 
+2.17.1
+

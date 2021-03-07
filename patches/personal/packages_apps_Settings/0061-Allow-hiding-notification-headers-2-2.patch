@@ -1,0 +1,56 @@
+From ddefc4c071e9ca8ab6f717b05aa88e2378ce07e6 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 3 Mar 2021 08:04:36 -0500
+Subject: [PATCH 61/63] Allow hiding notification headers [2/2]
+
+  based on https://github.com/SuperiorOS/android_packages_apps_SuperiorSettings/commit/c803b14329437b82334fb1c825c8c8d43c7f1218
+---
+ res/values-ru/custom_strings.xml | 3 +++
+ res/values/custom_strings.xml    | 3 +++
+ res/xml/display_settings.xml     | 6 ++++++
+ 3 files changed, 12 insertions(+)
+
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index e1a68e4738..55ce0cfce3 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -82,4 +82,7 @@
+     <!-- Torch Power button gestures -->
+     <string name="power_button_torch_title">Фонарик</string>
+     <string name="power_button_torch_summary">Длительным зажатием кнопки питания включать фонарик</string>
++    <!-- Notification headers -->
++    <string name="notification_headers_title">Заголовки уведомлений</string>
++    <string name="notification_headers_summary">Показывать заголовки в списке уведомлений\nТребуется перезапуск SystemUI</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 669e1b401d..aa55a48175 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -80,4 +80,7 @@
+     <!-- Torch Power button gestures -->
+     <string name="power_button_torch_title">Quick torch</string>
+     <string name="power_button_torch_summary">When the screen is off, long-pressing power button will enable torch</string>
++    <!-- Notification headers -->
++    <string name="notification_headers_title">Notification Headers</string>
++    <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
+ </resources>
+diff --git a/res/xml/display_settings.xml b/res/xml/display_settings.xml
+index 0d2e1e2a6f..a1e59ca781 100644
+--- a/res/xml/display_settings.xml
++++ b/res/xml/display_settings.xml
+@@ -169,6 +169,12 @@
+         android:title="@string/display_vr_pref_title"
+         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
+ 
++    <com.caos.settings.preference.SystemSettingSwitchPreference
++        android:key="notification_headers"
++        android:title="@string/notification_headers_title"
++        android:summary="@string/notification_headers_summary"
++        android:defaultValue="true" />
++
+     <PreferenceCategory
+         android:key="theme_customization_category"
+         android:title="@string/theme_customization_category"
+-- 
+2.17.1
+

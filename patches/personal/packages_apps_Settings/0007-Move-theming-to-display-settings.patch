@@ -1,7 +1,7 @@
-From c793a7a40934c668af830c586300630d9100af7b Mon Sep 17 00:00:00 2001
+From 98398fd73c0d86301e4f501833b1d407cedf72af Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
-Subject: [PATCH 07/61] Move theming to display settings
+Subject: [PATCH 07/63] Move theming to display settings
 
   * from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/9356e92c7998684e1139bc7c8411bf39120125c4
@@ -14,10 +14,10 @@ Change-Id: If9486aa9ff7c72c368f75d83241ecc23a10e6586
  3 files changed, 31 insertions(+)
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index d27cdbdae8..5923d7161d 100644
+index dabbc8dbe6..738dd34da5 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -10649,6 +10649,14 @@
+@@ -10662,6 +10662,14 @@
      <!-- Notification log debug tool: the word 'none' -->
      <string name="notification_log_details_ranking_none">Ranking object doesn\'t contain this key.</string>
  

@@ -1,7 +1,7 @@
-From 4a9be05459b8f5d4c0e6f8362fa9b421a5a299f2 Mon Sep 17 00:00:00 2001
+From bce4af8067bb1cd439ecd4eaa2dd86c2d8cea46f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:44:23 -0500
-Subject: [PATCH 5/5] MTP: Fix crash when no storages are available
+Subject: [PATCH 5/9] MTP: Fix crash when no storages are available
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/16747d6a5f47ea853328fddc70a3e315958ab694

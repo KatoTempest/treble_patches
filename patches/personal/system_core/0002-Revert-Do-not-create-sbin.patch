@@ -1,7 +1,7 @@
-From eb2be89bdd64222d17840769ffecfccd3960d64b Mon Sep 17 00:00:00 2001
+From af3d0ff8910d6d9cda61f00c97d81a5590a4974a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 06:03:33 -0500
-Subject: [PATCH 2/5] Revert "Do not create /sbin"
+Subject: [PATCH 2/6] Revert "Do not create /sbin"
 
 This reverts commit 3ec821fcfb092adb5bf1606d8261435f19543ff5.
 ---
@@ -23,7 +23,7 @@ index 0a534a2bd..81150a0fa 100644
  $(call add-clean-step, rm -rf $(PRODUCT_OUT)/product_services.img)
  $(call add-clean-step, rm -rf $(PRODUCT_OUT)/system/product_services)
 diff --git a/rootdir/Android.mk b/rootdir/Android.mk
-index a9d0ed08a..56b0d5b5b 100644
+index 7d383f522..6d518dcb3 100644
 --- a/rootdir/Android.mk
 +++ b/rootdir/Android.mk
 @@ -77,7 +77,7 @@ endif
@@ -32,7 +32,7 @@ index a9d0ed08a..56b0d5b5b 100644
  LOCAL_POST_INSTALL_CMD := mkdir -p $(addprefix $(TARGET_ROOT_OUT)/, \
 -    dev proc sys system data data_mirror odm oem acct config storage mnt apex debug_ramdisk \
 +    sbin dev proc sys system data data_mirror odm oem acct config storage mnt apex debug_ramdisk \
-     linkerconfig $(BOARD_ROOT_EXTRA_FOLDERS)); \
+     linkerconfig postinstall $(BOARD_ROOT_EXTRA_FOLDERS)); \
      ln -sf /system/bin $(TARGET_ROOT_OUT)/bin; \
      ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
 -- 

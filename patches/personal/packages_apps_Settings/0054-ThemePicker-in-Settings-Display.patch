@@ -1,7 +1,7 @@
-From e4d95692162dac1b5808895fbff2671ea3344c6c Mon Sep 17 00:00:00 2001
+From e3fe0669abecbbd67872dfe5f03eda1aa3cc4721 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:28:37 -0500
-Subject: [PATCH 54/61] ThemePicker in Settings/Display
+Subject: [PATCH 54/63] ThemePicker in Settings/Display
 
   from
   https://github.com/LineageOS/android_vendor_lineage/commit/e5df0f0c7efc168ae62ce7e32ca6c913a1d7fc87

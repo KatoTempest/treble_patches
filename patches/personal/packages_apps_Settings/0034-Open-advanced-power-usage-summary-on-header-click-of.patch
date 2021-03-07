@@ -1,7 +1,7 @@
-From 2181985a1d6199dfe069ed671edb5625e464214e Mon Sep 17 00:00:00 2001
+From 31d636bacb3834e2c8efe65825dc77d2b3f94aef Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:33:58 -0500
-Subject: [PATCH 34/61] Open advanced power usage summary on header click of
+Subject: [PATCH 34/63] Open advanced power usage summary on header click of
  battery
 
   * from
@@ -27,7 +27,7 @@ index 005ce17f36..5be7170bb9 100644
          settings:controller="com.android.settings.fuelgauge.BatteryHeaderPreferenceController" />
  
 diff --git a/src/com/android/settings/fuelgauge/PowerUsageSummary.java b/src/com/android/settings/fuelgauge/PowerUsageSummary.java
-index 3a5f0ba8d2..c6e3d1d448 100644
+index 57949db473..8763976e36 100644
 --- a/src/com/android/settings/fuelgauge/PowerUsageSummary.java
 +++ b/src/com/android/settings/fuelgauge/PowerUsageSummary.java
 @@ -37,6 +37,7 @@ import androidx.annotation.VisibleForTesting;
@@ -38,7 +38,7 @@ index 3a5f0ba8d2..c6e3d1d448 100644
  
  import com.android.settings.R;
  import com.android.settings.SettingsActivity;
-@@ -240,6 +241,19 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
+@@ -242,6 +243,19 @@ public class PowerUsageSummary extends PowerUsageBase implements OnLongClickList
          super.onPause();
      }
  

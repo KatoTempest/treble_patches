@@ -1,7 +1,7 @@
-From 47c62e172ada9bd7a3196d8922a93ee5a221ce62 Mon Sep 17 00:00:00 2001
+From 7d2a66ffdcdbdb50006d0d5d80b7ee6b0f0417f4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:20:39 +0200
-Subject: [PATCH 01/61] Move custom DPI settings in to Display menu
+Subject: [PATCH 01/63] Move custom DPI settings in to Display menu
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_Settings/commit/ae0244c957ec115822da526d54ee3665488e50ef

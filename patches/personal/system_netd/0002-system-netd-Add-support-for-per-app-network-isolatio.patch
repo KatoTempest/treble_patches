@@ -1,0 +1,213 @@
+From 80565009507468e2771e296bf1a3e6a115a1e04f Mon Sep 17 00:00:00 2001
+From: Sam Mortimer <sam@mortimer.me.uk>
+Date: Wed, 27 May 2020 13:31:48 -0700
+Subject: [PATCH 2/3] system/netd: Add support for per app network isolation
+
+* Add a new firewall chain fw_isolated that blocks all network access.
+
+* Legacy ipchains and bpf are both supported.
+
+Change-Id: Iab892d8d3d1803fe2626b2a5966e5646cb8b4922
+Signed-off-by: Joey Huab <joey@evolution-x.org>
+---
+ bpf_progs/netd.c                                     |  3 +++
+ libnetdbpf/include/netdbpf/bpf_shared.h              |  1 +
+ server/FirewallController.cpp                        | 12 +++++++++++-
+ server/FirewallController.h                          |  2 ++
+ server/TrafficController.cpp                         |  9 +++++++++
+ server/aidl_api/netd_aidl_interface/5/.hash          |  2 +-
+ .../netd_aidl_interface/5/android/net/INetd.aidl     |  1 +
+ .../current/android/net/INetd.aidl                   |  1 +
+ server/binder/android/net/INetd.aidl                 |  4 ++++
+ 9 files changed, 33 insertions(+), 2 deletions(-)
+
+diff --git a/bpf_progs/netd.c b/bpf_progs/netd.c
+index 642110a9..5689c197 100644
+--- a/bpf_progs/netd.c
++++ b/bpf_progs/netd.c
+@@ -206,6 +206,9 @@ static inline int bpf_owner_match(struct __sk_buff* skb, uint32_t uid, int direc
+         if ((enabledRules & POWERSAVE_MATCH) && !(uidRules & POWERSAVE_MATCH)) {
+             return BPF_DROP;
+         }
++        if ((enabledRules & ISOLATED_MATCH) && (uidRules & ISOLATED_MATCH)) {
++            return BPF_DROP;
++        }
+     }
+     if (direction == BPF_INGRESS && (uidRules & IIF_MATCH)) {
+         // Drops packets not coming from lo nor the whitelisted interface
+diff --git a/libnetdbpf/include/netdbpf/bpf_shared.h b/libnetdbpf/include/netdbpf/bpf_shared.h
+index 022c3786..d9136539 100644
+--- a/libnetdbpf/include/netdbpf/bpf_shared.h
++++ b/libnetdbpf/include/netdbpf/bpf_shared.h
+@@ -119,6 +119,7 @@ enum UidOwnerMatchType {
+     POWERSAVE_MATCH = (1 << 4),
+     IIF_MATCH = (1 << 5),
+     IF_BLACKLIST = (1 << 6),
++    ISOLATED_MATCH = (1 << 7),
+ };
+ 
+ enum BpfPermissionMatch {
+diff --git a/server/FirewallController.cpp b/server/FirewallController.cpp
+index 3c070ce9..5797772a 100644
+--- a/server/FirewallController.cpp
++++ b/server/FirewallController.cpp
+@@ -73,6 +73,7 @@ const char* FirewallController::LOCAL_FORWARD = "fw_FORWARD";
+ const char* FirewallController::LOCAL_DOZABLE = "fw_dozable";
+ const char* FirewallController::LOCAL_STANDBY = "fw_standby";
+ const char* FirewallController::LOCAL_POWERSAVE = "fw_powersave";
++const char* FirewallController::LOCAL_ISOLATED = "fw_isolated";
+ 
+ // ICMPv6 types that are required for any form of IPv6 connectivity to work. Note that because the
+ // fw_dozable chain is called from both INPUT and OUTPUT, this includes both packets that we need
+@@ -101,6 +102,7 @@ int FirewallController::setupIptablesHooks(void) {
+     res |= createChain(LOCAL_DOZABLE, getFirewallType(DOZABLE));
+     res |= createChain(LOCAL_STANDBY, getFirewallType(STANDBY));
+     res |= createChain(LOCAL_POWERSAVE, getFirewallType(POWERSAVE));
++    res |= createChain(LOCAL_ISOLATED, getFirewallType(ISOLATED));
+     return res;
+ }
+ 
+@@ -155,6 +157,9 @@ int FirewallController::enableChildChains(ChildChain chain, bool enable) {
+         case POWERSAVE:
+             name = LOCAL_POWERSAVE;
+             break;
++        case ISOLATED:
++            name = LOCAL_ISOLATED;
++            break;
+         default:
+             return res;
+     }
+@@ -219,6 +224,8 @@ FirewallType FirewallController::getFirewallType(ChildChain chain) {
+             return BLACKLIST;
+         case POWERSAVE:
+             return WHITELIST;
++        case ISOLATED:
++            return BLACKLIST;
+         case NONE:
+             return mFirewallType;
+         default:
+@@ -235,7 +242,7 @@ int FirewallController::setUidRule(ChildChain chain, int uid, FirewallRule rule)
+         // When adding, insert RETURN rules at the front, before the catch-all DROP at the end.
+         op = (rule == ALLOW)? "-I" : "-D";
+     } else { // BLACKLIST mode
+-        target = "DROP";
++        target = (chain == ISOLATED) ? "REJECT" : "DROP";
+         // When adding, append DROP rules at the end, after the RETURN rule that matches TCP RSTs.
+         op = (rule == DENY)? "-A" : "-D";
+     }
+@@ -251,6 +258,9 @@ int FirewallController::setUidRule(ChildChain chain, int uid, FirewallRule rule)
+         case POWERSAVE:
+             chainNames = { LOCAL_POWERSAVE };
+             break;
++        case ISOLATED:
++            chainNames = { LOCAL_ISOLATED };
++            break;
+         case NONE:
+             chainNames = { LOCAL_INPUT, LOCAL_OUTPUT };
+             break;
+diff --git a/server/FirewallController.h b/server/FirewallController.h
+index 620f1969..072e81ed 100644
+--- a/server/FirewallController.h
++++ b/server/FirewallController.h
+@@ -43,6 +43,7 @@ enum ChildChain {
+     DOZABLE = INetd::FIREWALL_CHAIN_DOZABLE,
+     STANDBY = INetd::FIREWALL_CHAIN_STANDBY,
+     POWERSAVE = INetd::FIREWALL_CHAIN_POWERSAVE,
++    ISOLATED = INetd::FIREWALL_CHAIN_ISOLATED,
+     INVALID_CHAIN
+ };
+ 
+@@ -85,6 +86,7 @@ public:
+     static const char* LOCAL_DOZABLE;
+     static const char* LOCAL_STANDBY;
+     static const char* LOCAL_POWERSAVE;
++    static const char* LOCAL_ISOLATED;
+ 
+     static const char* ICMPV6_TYPES[];
+ 
+diff --git a/server/TrafficController.cpp b/server/TrafficController.cpp
+index 7ef6a3ee..7badb9fc 100644
+--- a/server/TrafficController.cpp
++++ b/server/TrafficController.cpp
+@@ -102,6 +102,7 @@ const std::string uidMatchTypeToString(uint8_t match) {
+     FLAG_MSG_TRANS(matchType, POWERSAVE_MATCH, match);
+     FLAG_MSG_TRANS(matchType, IIF_MATCH, match);
+     FLAG_MSG_TRANS(matchType, IF_BLACKLIST, match);
++    FLAG_MSG_TRANS(matchType, ISOLATED_MATCH, match);
+     if (match) {
+         return StringPrintf("Unknown match: %u", match);
+     }
+@@ -670,6 +671,9 @@ int TrafficController::changeUidOwnerRule(ChildChain chain, uid_t uid, FirewallR
+         case POWERSAVE:
+             res = updateOwnerMapEntry(POWERSAVE_MATCH, uid, rule, type);
+             break;
++        case ISOLATED:
++            res = updateOwnerMapEntry(ISOLATED_MATCH, uid, rule, type);
++            break;
+         case NONE:
+         default:
+             return -EINVAL;
+@@ -794,6 +798,8 @@ int TrafficController::replaceUidOwnerMap(const std::string& name, bool isWhitel
+         res = replaceRulesInMap(STANDBY_MATCH, uids);
+     } else if (!name.compare(FirewallController::LOCAL_POWERSAVE)) {
+         res = replaceRulesInMap(POWERSAVE_MATCH, uids);
++    } else if (!name.compare(FirewallController::LOCAL_ISOLATED)) {
++        res = replaceRulesInMap(ISOLATED_MATCH, uids);
+     } else {
+         ALOGE("unknown chain name: %s", name.c_str());
+         return -EINVAL;
+@@ -827,6 +833,9 @@ int TrafficController::toggleUidOwnerMap(ChildChain chain, bool enable) {
+         case POWERSAVE:
+             match = POWERSAVE_MATCH;
+             break;
++        case ISOLATED:
++            match = ISOLATED_MATCH;
++            break;
+         default:
+             return -EINVAL;
+     }
+diff --git a/server/aidl_api/netd_aidl_interface/5/.hash b/server/aidl_api/netd_aidl_interface/5/.hash
+index dd162ef8..61707175 100644
+--- a/server/aidl_api/netd_aidl_interface/5/.hash
++++ b/server/aidl_api/netd_aidl_interface/5/.hash
+@@ -1 +1 @@
+-00d97856cb8c0bbd218bcd6592e5367e7f0dae16
++c161af6a2c962c968f732ab18f5bf99b9ce7caab
+diff --git a/server/aidl_api/netd_aidl_interface/5/android/net/INetd.aidl b/server/aidl_api/netd_aidl_interface/5/android/net/INetd.aidl
+index 59ee5ee1..8f6c8dc9 100644
+--- a/server/aidl_api/netd_aidl_interface/5/android/net/INetd.aidl
++++ b/server/aidl_api/netd_aidl_interface/5/android/net/INetd.aidl
+@@ -163,4 +163,5 @@ interface INetd {
+   const String IF_FLAG_POINTOPOINT = "point-to-point";
+   const String IF_FLAG_RUNNING = "running";
+   const String IF_FLAG_MULTICAST = "multicast";
++  const int FIREWALL_CHAIN_ISOLATED = 4;
+ }
+diff --git a/server/aidl_api/netd_aidl_interface/current/android/net/INetd.aidl b/server/aidl_api/netd_aidl_interface/current/android/net/INetd.aidl
+index 59ee5ee1..8f6c8dc9 100644
+--- a/server/aidl_api/netd_aidl_interface/current/android/net/INetd.aidl
++++ b/server/aidl_api/netd_aidl_interface/current/android/net/INetd.aidl
+@@ -163,4 +163,5 @@ interface INetd {
+   const String IF_FLAG_POINTOPOINT = "point-to-point";
+   const String IF_FLAG_RUNNING = "running";
+   const String IF_FLAG_MULTICAST = "multicast";
++  const int FIREWALL_CHAIN_ISOLATED = 4;
+ }
+diff --git a/server/binder/android/net/INetd.aidl b/server/binder/android/net/INetd.aidl
+index 7cb9ca26..cf0dae63 100644
+--- a/server/binder/android/net/INetd.aidl
++++ b/server/binder/android/net/INetd.aidl
+@@ -1061,6 +1061,10 @@ interface INetd {
+     const String IF_FLAG_RUNNING = "running";
+     const String IF_FLAG_MULTICAST = "multicast";
+ 
++    // Specify ISOLATED chain (fw_isolated) which is used to unconditionally block all app
++    // network access.
++    const int FIREWALL_CHAIN_ISOLATED = 4;
++
+    /**
+     * Get interface configuration
+     *
+-- 
+2.17.1
+

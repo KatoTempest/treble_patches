@@ -1,7 +1,7 @@
-From 5bb423c6ee3d4ba900e3b815369aa22ec1782b9f Mon Sep 17 00:00:00 2001
+From 0fd41fb99a50f6748f33da93fb8fd931d8aef950 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 14:42:14 +0200
-Subject: [PATCH 04/61] Move IMEI information to Sim status
+Subject: [PATCH 04/63] Move IMEI information to Sim status
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_Settings/commit/3741d37c0639883cdc6855bb371fce259ffc0775#diff-8e0314d48f88bb73a3b9ebce6165548d
@@ -110,10 +110,10 @@ index 27d12a8cb1..9383499689 100644
      </LinearLayout>
  </ScrollView>
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 2e52996861..d27cdbdae8 100644
+index 8bc30d8c0d..dabbc8dbe6 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
-@@ -7473,7 +7473,7 @@
+@@ -7486,7 +7486,7 @@
      <!-- SIM status title  [CHAR LIMIT=40] -->
      <string name="sim_status_title">SIM status</string>
      <!-- SIM status title  [CHAR LIMIT=40] -->
@@ -252,7 +252,7 @@ index 4af5d79c37..f963e9e2ce 100644
          controllers.add(new UptimePreferenceController(context, lifecycle));
          return controllers;
 diff --git a/src/com/android/settings/deviceinfo/simstatus/SimStatusDialogController.java b/src/com/android/settings/deviceinfo/simstatus/SimStatusDialogController.java
-index 370bdfb686..1671152326 100644
+index 61f0ad6021..202857e215 100644
 --- a/src/com/android/settings/deviceinfo/simstatus/SimStatusDialogController.java
 +++ b/src/com/android/settings/deviceinfo/simstatus/SimStatusDialogController.java
 @@ -49,12 +49,18 @@ import android.telephony.euicc.EuiccManager;
@@ -296,7 +296,7 @@ index 370bdfb686..1671152326 100644
  
      @VisibleForTesting
      static final int MAX_PHONE_COUNT_SINGLE_SIM = 1;
-@@ -148,6 +169,7 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
+@@ -149,6 +170,7 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
      private final SubscriptionManager mSubscriptionManager;
      private final CarrierConfigManager mCarrierConfigManager;
      private final EuiccManager mEuiccManager;
@@ -304,7 +304,7 @@ index 370bdfb686..1671152326 100644
      private final Resources mRes;
      private final Context mContext;
  
-@@ -205,6 +227,7 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
+@@ -206,6 +228,7 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
      public SimStatusDialogController(@NonNull SimStatusDialogFragment dialog, Lifecycle lifecycle,
              int slotId) {
          mDialog = dialog;
@@ -312,7 +312,7 @@ index 370bdfb686..1671152326 100644
          mContext = dialog.getContext();
          mSlotIndex = slotId;
          mSubscriptionInfo = getPhoneSubscriptionInfo(slotId);
-@@ -246,6 +269,12 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
+@@ -247,6 +270,12 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
          updateRoamingStatus(serviceState);
          updateIccidNumber();
          updateImsRegistrationState();
@@ -325,7 +325,7 @@ index 370bdfb686..1671152326 100644
      }
  
      /**
-@@ -698,6 +727,40 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
+@@ -702,6 +731,40 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
          imsMmTelMgr.unregisterImsRegistrationCallback(mImsRegStateCallback);
      }
  
@@ -366,7 +366,7 @@ index 370bdfb686..1671152326 100644
      private SubscriptionInfo getPhoneSubscriptionInfo(int slotId) {
          return SubscriptionManager.from(mContext).getActiveSubscriptionInfoForSimSlotIndex(slotId);
      }
-@@ -812,4 +875,30 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
+@@ -817,4 +880,30 @@ public class SimStatusDialogController implements LifecycleObserver, OnResume, O
                  return "UNKNOWN";
          }
      }

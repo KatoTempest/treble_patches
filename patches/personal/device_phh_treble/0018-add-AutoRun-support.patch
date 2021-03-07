@@ -1,7 +1,7 @@
-From 9c4e7a934923ec3b24dbf2418110478d3d4c5296 Mon Sep 17 00:00:00 2001
+From 1ee527adfc24fc1ca50bb42386499e291073a7a0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 14:45:26 -0500
-Subject: [PATCH 18/21] add AutoRun support
+Subject: [PATCH 18/23] add AutoRun support
 
 ---
  phh-prop-handler.sh | 14 ++++++++++++++
@@ -9,7 +9,7 @@ Subject: [PATCH 18/21] add AutoRun support
  2 files changed, 17 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 4fb05a0..6ab3af6 100644
+index 1bace1f..2aad32b 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -203,3 +203,17 @@ if [ "$1" == "persist.sys.phh.safetynet" ]; then

@@ -1,4 +1,4 @@
-From 19b2b5e17d9d057f8dc4b33094bc003edaff7f31 Mon Sep 17 00:00:00 2001
+From 0cd62c3ccf5c8c29cbba9a4dee58d6757714642d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
 Subject: [PATCH 8/9] add Auto brightness overlay
@@ -54,7 +54,7 @@ index 0000000..83ae4fb
 +    <bool name="config_useDevInputEventForAudioJack">true</bool>
 +</resources>
 diff --git a/overlay.mk b/overlay.mk
-index 5721dcc..9ee2634 100644
+index 51e807f..64ff06f 100755
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \

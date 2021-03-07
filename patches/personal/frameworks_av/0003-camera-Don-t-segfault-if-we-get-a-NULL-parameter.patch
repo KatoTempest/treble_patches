@@ -1,7 +1,7 @@
-From 3177dca8c8c02d2dd73840760febd728e01f7a24 Mon Sep 17 00:00:00 2001
+From 23f5889d70347d157fe1562c4826c518cad1bd44 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:42:53 -0500
-Subject: [PATCH 3/5] camera: Don't segfault if we get a NULL parameter
+Subject: [PATCH 3/9] camera: Don't segfault if we get a NULL parameter
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/ea46a8409447b949cd355a9ef42fe385bad00674

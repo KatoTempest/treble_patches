@@ -1,7 +1,7 @@
-From 84d82d35e6d0029a15cec14426ea650a44b2e476 Mon Sep 17 00:00:00 2001
+From 6d5912167031053adc5736dc391c9689f42f6d08 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 00:02:12 -0500
-Subject: [PATCH 57/61] CAOS: up to v300m
+Subject: [PATCH 57/63] CAOS: up to v300m
 
 Change-Id: Ic61076db154043f4fad9134e064c395928682065
 ---

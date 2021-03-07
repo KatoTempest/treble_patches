@@ -1,7 +1,7 @@
-From 1382e57d00a58e2633607169eaf0fc2f10955f20 Mon Sep 17 00:00:00 2001
+From 24ddefa9bca0e2e9cafe4c25f23331f5b3ad9ff0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 08:16:22 -0500
-Subject: [PATCH 2/3] merge massive Russian translation
+Subject: [PATCH 2/6] merge massive Russian translation
 
   from
   https://github.com/LineageOS/android_packages_apps_Dialer/tree/lineage-17.1

@@ -1,0 +1,31 @@
+From 29d2e74e6b73461649422f262ebbf813f7dffaaa Mon Sep 17 00:00:00 2001
+From: Oliver Scott <olivercscott@gmail.com>
+Date: Wed, 6 Jan 2021 15:54:02 -0500
+Subject: [PATCH 3/3] system/netd: add missing override keyword
+
+Change-Id: I5ce309f47d9b37dd359d39419fe185feacad7e13
+Signed-off-by: Joey Huab <joey@evolution-x.org>
+---
+ server/NetdNativeService.h | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/server/NetdNativeService.h b/server/NetdNativeService.h
+index f40a8afc..440cbf5b 100644
+--- a/server/NetdNativeService.h
++++ b/server/NetdNativeService.h
+@@ -63,10 +63,10 @@ class NetdNativeService : public BinderService<NetdNativeService>, public BnNetd
+     binder::Status bandwidthRemoveNiceApp(int32_t uid) override;
+     binder::Status bandwidthAddRestrictAppOnInterface(const std::string& usecase,
+                                                       const std::string& ifName,
+-                                                      int32_t uid);
++                                                      int32_t uid) override;
+     binder::Status bandwidthRemoveRestrictAppOnInterface(const std::string& usecase,
+                                                          const std::string& ifName,
+-                                                         int32_t uid);
++                                                         int32_t uid) override;
+ 
+     // Network and routing commands.
+     binder::Status networkCreatePhysical(int32_t netId, int32_t permission) override;
+-- 
+2.17.1
+

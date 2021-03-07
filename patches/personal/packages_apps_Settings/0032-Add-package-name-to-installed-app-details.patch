@@ -1,7 +1,7 @@
-From aa05199a61d52ad5689c558eeb539c76bd46d9ce Mon Sep 17 00:00:00 2001
+From 7a9e77da4037797de3eb58ecf53dbe1f52e94c3c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:53:16 -0500
-Subject: [PATCH 32/61] Add package name to installed app details
+Subject: [PATCH 32/63] Add package name to installed app details
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/c0e5678f1d9bbd00c08e99d6bf573cc3f184d7b7
