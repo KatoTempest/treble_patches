@@ -1,7 +1,7 @@
-From 5de5225f354828d8b4612921fc5343df1a224526 Mon Sep 17 00:00:00 2001
+From f7af2d493077e0e6dcab545900fee9c4c7d0e17d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 Feb 2020 22:25:00 +0200
-Subject: [PATCH 2/6] Add double tap to sleep gesture
+Subject: [PATCH 2/5] Add double tap to sleep gesture
 
   * based on
   https://github.com/crdroidandroid/android_packages_apps_Launcher3/commit/1ced8c431b3a8ccb397199f68e1dd1ac401a90d4
@@ -73,7 +73,7 @@ index e3daddc2a..50c730691 100644
  LOCAL_SYSTEM_EXT_MODULE := true
  LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3 Launcher3QuickStep
 diff --git a/AndroidManifest-common.xml b/AndroidManifest-common.xml
-index 4e4ebf993..b74d16e73 100644
+index 2d4e1cfff..92b8a6741 100644
 --- a/AndroidManifest-common.xml
 +++ b/AndroidManifest-common.xml
 @@ -19,7 +19,9 @@
@@ -97,7 +97,7 @@ index 4e4ebf993..b74d16e73 100644
      <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
      
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index d370d5d0a..9530ec82b 100644
+index fcad766ae..bd9eb5a9f 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -20,7 +20,9 @@
@@ -136,7 +136,7 @@ index 935bb40fb..1c2693ee3 100644
 +    <string name="pref_sleep_gesture_summary">Double tap on empty space for power-off screen</string>
  </resources>
 diff --git a/res/xml/launcher_preferences.xml b/res/xml/launcher_preferences.xml
-index b9801fe4d..bc028c63e 100644
+index 36eb21363..c95f6def4 100644
 --- a/res/xml/launcher_preferences.xml
 +++ b/res/xml/launcher_preferences.xml
 @@ -45,6 +45,13 @@

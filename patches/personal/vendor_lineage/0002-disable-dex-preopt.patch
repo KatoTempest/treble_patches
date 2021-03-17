@@ -1,4 +1,4 @@
-From f570af8b74f3895d33173b436918b2e179d78027 Mon Sep 17 00:00:00 2001
+From 9600e7e2ee1c685f8f78ded156f795c973522a7f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 22 Apr 2020 21:53:50 +0300
 Subject: [PATCH 2/5] disable dex preopt
@@ -10,10 +10,10 @@ Change-Id: I5ef831bea3bf292128711ead1453a811873f7fe3
  2 files changed, 10 deletions(-)
 
 diff --git a/config/common.mk b/config/common.mk
-index 05859db9..538923dc 100644
+index ee5e50e6..99f3cb93 100644
 --- a/config/common.mk
 +++ b/config/common.mk
-@@ -181,10 +181,6 @@ PRODUCT_PACKAGES += \
+@@ -183,10 +183,6 @@ PRODUCT_PACKAGES += \
  endif
  endif
  

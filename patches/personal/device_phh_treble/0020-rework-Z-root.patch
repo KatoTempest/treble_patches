@@ -1,0 +1,48 @@
+From 5860efea5a20406acc824116473b301f0f0f9226 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 3 Mar 2021 06:29:07 -0500
+Subject: [PATCH 20/23] rework Z root
+
+---
+ base.mk             | 2 +-
+ phh-prop-handler.sh | 6 +++---
+ 2 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/base.mk b/base.mk
+index 9facbba..6f42839 100644
+--- a/base.mk
++++ b/base.mk
+@@ -68,7 +68,7 @@ PRODUCT_COPY_FILES += \
+ 	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \
+ 	device/phh/treble/secure.sh:system/phh/secure.sh \
+ 	device/phh/treble/phh.superuser.apk:system/phh/phh.superuser.apk \
+-	device/phh/treble/su/su:system/phh/xbin/su \
++	device/phh/treble/su/su:system/phh/zbin/su \
+ 	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
+ 
+ PRODUCT_COPY_FILES += \
+diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
+index 7f0aa73..8cda15b 100644
+--- a/phh-prop-handler.sh
++++ b/phh-prop-handler.sh
+@@ -177,14 +177,14 @@ if [ "$1" == "persist.sys.phh.root" ]; then
+     fi
+ 
+     if [[ "$prop_value" == "true" ]]; then
+-        umount -nfl /system/xbin
+-        mount /system/phh/xbin /system/xbin
++        umount -nfl /system/zbin
++        mount /system/phh/zbin /system/zbin
+         setprop ctl.start zerodaemon
+         pm install -r /system/phh/phh.superuser.apk
+     else
+         pm uninstall -k me.phh.superuser
+         setprop ctl.stop zerodaemon
+-        umount -nfl /system/xbin
++        umount -nfl /system/zbin
+         rm -rf /data/su
+     fi
+     exit
+-- 
+2.17.1
+

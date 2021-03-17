@@ -1,4 +1,4 @@
-From c1ccb433badede868ab164e0b74d942fa6341559 Mon Sep 17 00:00:00 2001
+From 2f4320dd45483c9cc4252e8afdc5f992eb8eb449 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 11 Mar 2020 14:02:35 +0100
 Subject: [PATCH 6/6] Every voldmanaged storage is adoptable

@@ -1,0 +1,45 @@
+From 1ff46b1935fc7961e19e12f611dc9a908a68bbb2 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 24 Dec 2020 07:14:51 -0500
+Subject: [PATCH 13/23] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
+
+---
+ rw-system.sh | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index 90e6414..3d92111 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -139,8 +139,8 @@ changeKeylayout() {
+     if getprop ro.vendor.build.fingerprint | grep -iq \
+         -e xiaomi/polaris -e xiaomi/sirius -e xiaomi/dipper \
+         -e xiaomi/wayne -e xiaomi/jasmine -e xiaomi/jasmine_sprout \
+-        -e xiaomi/platina -e iaomi/perseus -e xiaomi/ysl -e Redmi/begonia\
+-        -e redmi/angelica -e redmi/angelican \
++        -e xiaomi/platina -e iaomi/perseus -e xiaomi/ysl -e Redmi/begonia \
++        -e redmi/angelica -e redmi/angelican -e redmi/joyeuse \
+         -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
+         -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc \
+         -e redmi/curtana -e redmi/picasso -e Redmi/lancelot \
+@@ -393,7 +393,7 @@ if getprop ro.vendor.build.fingerprint | grep -iq \
+     -e motorola/hannah -e motorola/james -e motorola/pettyl -e xiaomi/cepheus \
+     -e xiaomi/grus -e xiaomi/cereus -e xiaomi/cactus -e xiaomi/raphael -e xiaomi/davinci \
+     -e xiaomi/ginkgo -e xiaomi/laurel_sprout -e xiaomi/andromeda \
+-    -e redmi/curtana -e redmi/picasso ; then
++    -e redmi/curtana -e redmi/joyeuse -e redmi/picasso ; then
+     mount -o bind /mnt/phh/empty_dir /vendor/lib64/soundfx
+     mount -o bind /mnt/phh/empty_dir /vendor/lib/soundfx
+     setprop  ro.audio.ignore_effects true
+@@ -871,7 +871,7 @@ if getprop ro.vendor.build.fingerprint |grep -iq xiaomi/cepheus;then
+     setprop ro.netflix.bsp_rev Q855-16947-1
+ fi
+ 
+-if getprop ro.vendor.build.fingerprint |grep -qi redmi/curtana;then
++if getprop ro.vendor.build.fingerprint |grep -qi -e redmi/curtana -e redmi/joyeuse; then
+     setprop ro.netflix.bsp_rev Q6250-19132-1
+ fi
+ 
+-- 
+2.17.1
+

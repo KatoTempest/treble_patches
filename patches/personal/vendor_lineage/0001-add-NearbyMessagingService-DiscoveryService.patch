@@ -1,4 +1,4 @@
-From 1a320b0db40cf19009417bf5a4ce59f776ecc510 Mon Sep 17 00:00:00 2001
+From 99033051bde443180b99744fef6d76375881e43b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 25 Jul 2020 10:59:33 -0400
 Subject: [PATCH 1/5] add NearbyMessagingService & DiscoveryService
