@@ -1,7 +1,7 @@
-From 5664b89f69531967de11b61dd4f545ee4bdadbe7 Mon Sep 17 00:00:00 2001
+From b43967f640383c8bc7aa9c100f8f11393329d32f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 06:29:07 -0500
-Subject: [PATCH 21/23] rework Z root
+Subject: [PATCH 21/27] rework Z root
 
 ---
  base.mk             | 2 +-
@@ -9,7 +9,7 @@ Subject: [PATCH 21/23] rework Z root
  2 files changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/base.mk b/base.mk
-index 535899f..c638f94 100644
+index 7517743..682e4e0 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -62,7 +62,7 @@ PRODUCT_COPY_FILES += \

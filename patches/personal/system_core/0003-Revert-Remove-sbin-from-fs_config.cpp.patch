@@ -1,7 +1,7 @@
-From 87ee199d9b99f9a01e49229d8cd47d2ff1c0f0e7 Mon Sep 17 00:00:00 2001
+From 29a91a6904c1c0cb1835db14c44f4c0dac2daf31 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 06:05:51 -0500
-Subject: [PATCH 3/6] Revert "Remove sbin from fs_config.cpp"
+Subject: [PATCH 3/7] Revert "Remove sbin from fs_config.cpp"
 
 This reverts commit 2f74a26a2dbe092d63f1e46e6471369d4a19adce.
 ---

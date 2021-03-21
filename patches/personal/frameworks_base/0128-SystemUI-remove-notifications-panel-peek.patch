@@ -1,7 +1,7 @@
-From 8e7df9f3c300b6309bd15b552169ccaadf74ba97 Mon Sep 17 00:00:00 2001
+From 93dfb5549aca15f0c80b83d5ad58fd6203712744 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:39:57 -0500
-Subject: [PATCH 128/197] SystemUI: remove notifications panel peek
+Subject: [PATCH 128/211] SystemUI: remove notifications panel peek
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/42cc266530dd26f5a5ef3cf58334f67d06296684

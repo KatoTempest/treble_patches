@@ -1,7 +1,7 @@
-From 88e7af8fa52593dcae5d04b89a050d97683b80a6 Mon Sep 17 00:00:00 2001
+From 3f9774c8e298d3f1408c430fc0814292275a7c80 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:31:38 -0500
-Subject: [PATCH 107/197] require unlocking to use work mode tile
+Subject: [PATCH 107/211] require unlocking to use work mode tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/dee3d3a75f685bf9859eac46e31de3799d7983ff

@@ -1,7 +1,7 @@
-From a6ee829c43be9e1a62ba8a01b4084b902c86ae24 Mon Sep 17 00:00:00 2001
+From c65837bd51e5d8159b54d35780dc7179c6478f3f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 15:25:58 -0500
-Subject: [PATCH 1/6] Revert "Updated target SDK from 28 to 29."
+Subject: [PATCH 1/7] Revert "Updated target SDK from 28 to 29."
 
 This reverts commit 03409a448d43c11a76171f96ceca7d9d19793830.
 ---

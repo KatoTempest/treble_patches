@@ -1,4 +1,4 @@
-From 3b5d6f6901b614ec60c7a6a6a39bae476a17be20 Mon Sep 17 00:00:00 2001
+From 304847e14501f683097e16e8c1b86dbbbed14377 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:53:03 -0500
 Subject: [PATCH 40/63] Settings: disable all bugreport settings

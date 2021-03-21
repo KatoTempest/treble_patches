@@ -1,4 +1,4 @@
-From 9013c84c95202d9857f735f35f9f35912287d042 Mon Sep 17 00:00:00 2001
+From 64c2f5682557c44339b29b830a81a9e6af6d6244 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:36:24 -0500
 Subject: [PATCH 29/63] Remove the Automatic ota check option

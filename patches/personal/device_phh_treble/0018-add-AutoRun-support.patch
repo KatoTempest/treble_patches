@@ -1,7 +1,7 @@
-From 1ee527adfc24fc1ca50bb42386499e291073a7a0 Mon Sep 17 00:00:00 2001
+From 73138419d04b9daa2b03ddb1f0e09cee7cb8167f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 14:45:26 -0500
-Subject: [PATCH 18/23] add AutoRun support
+Subject: [PATCH 18/27] add AutoRun support
 
 ---
  phh-prop-handler.sh | 14 ++++++++++++++

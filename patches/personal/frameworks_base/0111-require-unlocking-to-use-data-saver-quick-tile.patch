@@ -1,7 +1,7 @@
-From f2e1565159db789300a88a9126ae166d9c6033d9 Mon Sep 17 00:00:00 2001
+From 43f291e1e843f472932591d10ead5edb35bb7fb9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:42:29 -0500
-Subject: [PATCH 111/197] require unlocking to use data saver quick tile
+Subject: [PATCH 111/211] require unlocking to use data saver quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/6a33ff5c84493f4697b2a4760a344a9fcd384e57

@@ -1,7 +1,7 @@
-From 6ad301ab9c2577807a6ed75d647075f76324b133 Mon Sep 17 00:00:00 2001
+From 9f22ed908149ffa0ef9854affd13030cd4774056 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH] new variant for SafetyNet helper
+Subject: [PATCH 15/27] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-
@@ -14,7 +14,7 @@ Subject: [PATCH] new variant for SafetyNet helper
  create mode 100644 secure.sh
 
 diff --git a/base.mk b/base.mk
-index efae81d..81ca7ca 100644
+index cffbc57..e4c5919 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \

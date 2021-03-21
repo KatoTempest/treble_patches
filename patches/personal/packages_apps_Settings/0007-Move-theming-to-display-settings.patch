@@ -1,4 +1,4 @@
-From 98398fd73c0d86301e4f501833b1d407cedf72af Mon Sep 17 00:00:00 2001
+From a04c38a73a507c3971da7f80d2f93f237b9db42f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
 Subject: [PATCH 07/63] Move theming to display settings

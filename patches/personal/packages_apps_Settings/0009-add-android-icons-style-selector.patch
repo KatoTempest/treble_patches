@@ -1,4 +1,4 @@
-From 14688b0cd19c8f28fd1b126c7e56e16022a27700 Mon Sep 17 00:00:00 2001
+From 4c2a9f0860451f207ab76043e2ba0e78b9e80663 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 7 Feb 2020 04:14:40 +0200
 Subject: [PATCH 09/63] add android icons style selector

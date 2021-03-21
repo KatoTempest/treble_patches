@@ -1,7 +1,7 @@
-From f0fbbbb25855f8f094b18264377a9ff253ff418b Mon Sep 17 00:00:00 2001
+From 7387bb8744d0b96d663c9b477b2b3ef1a28fb8fc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:52:44 -0500
-Subject: [PATCH 078/197] Add missing STORAGE_INTERNAL permission for
+Subject: [PATCH 078/211] Add missing STORAGE_INTERNAL permission for
  BackupRestoreConfirmation
 
   from

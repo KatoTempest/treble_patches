@@ -1,7 +1,7 @@
-From d9fa136373d3ff7335cfca6dc7fe97ae255ee7fb Mon Sep 17 00:00:00 2001
+From 2aaecc7615e987e80e8b0b4d2f9f751130087afb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 05:27:40 -0500
-Subject: [PATCH 183/197] add Reboot tile
+Subject: [PATCH 183/211] add Reboot tile
 
   from
   https://github.com/crdroidandroid/android_frameworks_base/commit/b9f1e9f5a385f26b84b083341240e95e6c399566

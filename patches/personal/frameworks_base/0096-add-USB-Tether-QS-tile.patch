@@ -1,7 +1,7 @@
-From 2b50dedd8da40039f7f660f13e04dc7ba4a5d137 Mon Sep 17 00:00:00 2001
+From 7f4826634b2ae143ac0ceb080c7f50e66baf4c26 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 21 Jul 2020 03:10:58 +0300
-Subject: [PATCH 096/197] add USB Tether QS tile
+Subject: [PATCH 096/211] add USB Tether QS tile
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/70df4efb80cd3326ac659eee35c6b51af92308b0

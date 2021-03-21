@@ -1,7 +1,7 @@
-From ced91730fd18d65b65d844d049767e071d64558d Mon Sep 17 00:00:00 2001
+From 4e9739e7510078818ff8c173e5cb2ac6a0aabf1e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Nov 2020 13:31:05 -0500
-Subject: [PATCH 1/6] improve searchbar
+Subject: [PATCH 1/5] improve searchbar
 
 ---
  res/drawable/bg_all_apps_searchbox.xml | 4 ++--

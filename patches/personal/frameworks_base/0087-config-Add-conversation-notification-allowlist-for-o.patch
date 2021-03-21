@@ -1,7 +1,7 @@
-From 78ed82ded37276563c2ab1edeeebb6332bd64323 Mon Sep 17 00:00:00 2001
+From ba9da63ede8b600f00d748bf6500e529afe3c003 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:14:51 -0500
-Subject: [PATCH 087/197] config: Add conversation notification allowlist for
+Subject: [PATCH 087/211] config: Add conversation notification allowlist for
  older apps
 
   * from

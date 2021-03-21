@@ -1,7 +1,7 @@
-From 162b747d17244e51b9214dd8bb3a70d931d2cde4 Mon Sep 17 00:00:00 2001
+From 2ef6dcc19719b2944bfabfd7982f3031e6df3612 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:43:15 -0500
-Subject: [PATCH 149/197] overlays: Fix background colouring for settings
+Subject: [PATCH 149/211] overlays: Fix background colouring for settings
  themed icons
 
   from

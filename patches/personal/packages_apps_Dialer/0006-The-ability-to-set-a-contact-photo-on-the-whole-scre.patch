@@ -1,7 +1,7 @@
-From f413f4e0be8bd0ca23dfe99c33c940032ce6368b Mon Sep 17 00:00:00 2001
+From e864451564deae6edf898604b8c032c3ea66e162 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 4 Apr 2020 00:46:52 +0300
-Subject: [PATCH 6/6] The ability to set a contact photo on the whole screen
+Subject: [PATCH 6/7] The ability to set a contact photo on the whole screen
 
   * from
   https://github.com/syberia-project/platform_packages_apps_Dialer/commit/1bb45c8769a3780c6a85135d96d8e0426b39d4cb

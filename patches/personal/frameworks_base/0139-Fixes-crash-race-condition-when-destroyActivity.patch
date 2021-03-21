@@ -1,7 +1,7 @@
-From 0e662a534b6ac1aec74a4f7a2823c681207aefd5 Mon Sep 17 00:00:00 2001
+From 2611e6adc15777238e48002d05defe78b5de35c2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:06:14 -0500
-Subject: [PATCH 139/197] Fixes crash/race condition when destroyActivity
+Subject: [PATCH 139/211] Fixes crash/race condition when destroyActivity
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/a5a4384a973bc1065792026fa66f3a42d02d16e8

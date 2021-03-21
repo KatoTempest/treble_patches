@@ -1,14 +1,14 @@
-From 6b3e1aefb757504ab86e02b28d37f84fdc530214 Mon Sep 17 00:00:00 2001
+From e9cb88e290f5e6d4749564de2635cf6ad6af57f5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:55:40 -0500
-Subject: [PATCH 09/23] tweaks for Xiaomi Redmi 'angelican' and 'dandelion'
+Subject: [PATCH 09/27] tweaks for Xiaomi Redmi 'angelican' and 'dandelion'
 
 ---
  rw-system.sh | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 6f63429..2a6a359 100644
+index fe56bae..5d8de97 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -356,12 +356,12 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \

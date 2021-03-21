@@ -1,4 +1,4 @@
-From fcda6f3540937c13420db4493a94804a9b5da3eb Mon Sep 17 00:00:00 2001
+From d0f476f9fd68998976d5a341b6f2d09cb7d4ebc4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:47:40 -0500
 Subject: [PATCH 52/63] Settings: Disable system update preference

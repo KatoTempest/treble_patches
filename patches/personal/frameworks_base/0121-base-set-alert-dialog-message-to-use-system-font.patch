@@ -1,7 +1,7 @@
-From a9eff5dfb564965461ec0170bae8747eb2cf1529 Mon Sep 17 00:00:00 2001
+From b357638146a7d5154b5ab41e51e70f48966601a9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:47:13 -0500
-Subject: [PATCH 121/197] base: set alert dialog message to use system font
+Subject: [PATCH 121/211] base: set alert dialog message to use system font
 
   from
   https://github.com/omnirom/android_frameworks_base/commit/301ad6eaa007d8d9356896260165be8b7266f9e3

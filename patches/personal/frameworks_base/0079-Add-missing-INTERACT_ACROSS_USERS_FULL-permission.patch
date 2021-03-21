@@ -1,7 +1,7 @@
-From 89c0ec5954765d2a9170bd9cf4b3a79729e4339c Mon Sep 17 00:00:00 2001
+From 3fb6bce5ef56d4dad370e134adde275c8cb51893 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:55:44 -0500
-Subject: [PATCH 079/197] Add missing INTERACT_ACROSS_USERS_FULL permission
+Subject: [PATCH 079/211] Add missing INTERACT_ACROSS_USERS_FULL permission
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/1d6d443f6def01cabac1212d73c96df1771a4810

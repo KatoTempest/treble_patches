@@ -1,7 +1,7 @@
-From 7c18ab535cd6ade0aff90e8ea76b170ffbe372d1 Mon Sep 17 00:00:00 2001
+From 4e0164b89b4051ae30686574dcd7a598f344fcf9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:29:49 -0500
-Subject: [PATCH 147/197] BatteryStats: Fix Another SystemUI crash
+Subject: [PATCH 147/211] BatteryStats: Fix Another SystemUI crash
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/282c3a76a63955fa198970c3b073beac29e4e5e6

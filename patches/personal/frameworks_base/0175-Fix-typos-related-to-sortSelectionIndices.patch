@@ -1,7 +1,7 @@
-From ef1c4551c454a2fc5e3d617a0515d538e26ed201 Mon Sep 17 00:00:00 2001
+From b66113b46b830ffa0c9d81c1e6e8bfaca44a10f3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:23:54 -0500
-Subject: [PATCH 175/197] Fix typos related to sortSelectionIndices
+Subject: [PATCH 175/211] Fix typos related to sortSelectionIndices
 
   from
   https://gitlab.com/CalyxOS/platform_frameworks_base/-/commit/0d9e5e703e467b2cade939471d3470fd99b3ba0e

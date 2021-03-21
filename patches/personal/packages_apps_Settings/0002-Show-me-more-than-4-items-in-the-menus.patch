@@ -1,4 +1,4 @@
-From 4c0eb1da17178547ccd182eecc3f7a9e69cec11a Mon Sep 17 00:00:00 2001
+From 7d629d0b4db6eb7438093c3342bec7c3f289c4be Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:51:06 +0200
 Subject: [PATCH 02/63] Show me more than 4 items in the menus!

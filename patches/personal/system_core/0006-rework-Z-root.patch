@@ -1,7 +1,7 @@
-From 0a78198ec7151b050ddb865c70c6f9e7645a7c8c Mon Sep 17 00:00:00 2001
+From 39764081aa6cac021ebf96fe91f19d8038f10409 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 06:31:17 -0500
-Subject: [PATCH 6/6] rework Z root
+Subject: [PATCH 6/7] rework Z root
 
 ---
  libcutils/fs_config.cpp    | 2 +-

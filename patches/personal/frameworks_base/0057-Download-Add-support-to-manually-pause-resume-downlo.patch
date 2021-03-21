@@ -1,7 +1,7 @@
-From 4159d0c4d473802db43b46879f7e05799bc471c3 Mon Sep 17 00:00:00 2001
+From 4f210a18b2f7db54a40bede09f4588cd80c7c123 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:21:33 -0500
-Subject: [PATCH 057/197] Download: Add support to manually pause/resume
+Subject: [PATCH 057/211] Download: Add support to manually pause/resume
  download
 
   from

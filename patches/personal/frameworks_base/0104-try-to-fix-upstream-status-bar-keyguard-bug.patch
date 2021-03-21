@@ -1,7 +1,7 @@
-From 96e32336b69102ff32e943c2a2a57fb612b5ad4e Mon Sep 17 00:00:00 2001
+From b7f5d2f5f072e372eff08de1d8f0745fc7e26ef8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:01:45 -0500
-Subject: [PATCH 104/197] try to fix upstream status bar+keyguard bug
+Subject: [PATCH 104/211] try to fix upstream status bar+keyguard bug
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/ae6375cbc136354b3acc49f501916a2f4ea443fc

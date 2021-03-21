@@ -1,4 +1,4 @@
-From 3236a3c6081ad60faf4faf102b2eb1ce5604a301 Mon Sep 17 00:00:00 2001
+From 110d28cd4bc09bb85d80f4c8dd4611bd244b9de3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 05:42:57 -0500
 Subject: [PATCH 26/63] add gestural navbar's handle tuning

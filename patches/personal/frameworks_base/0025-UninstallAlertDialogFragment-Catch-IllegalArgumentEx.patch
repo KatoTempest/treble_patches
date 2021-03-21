@@ -1,7 +1,7 @@
-From a4ce80d316ec5e6941c10bcb38dd29450024cc53 Mon Sep 17 00:00:00 2001
+From 2254b57188caae7cfd9b77b44778ad1262365d3b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 18 Apr 2020 18:11:41 +0300
-Subject: [PATCH 025/197] UninstallAlertDialogFragment: Catch
+Subject: [PATCH 025/211] UninstallAlertDialogFragment: Catch
  IllegalArgumentException
 
   * from

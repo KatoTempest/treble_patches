@@ -1,7 +1,7 @@
-From 727df44e68d0bde0897df518adf2de585c978987 Mon Sep 17 00:00:00 2001
+From 9661f6ef07052ba2821a47a8e0800b5bbb34feaf Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 12 May 2020 20:15:52 +0300
-Subject: [PATCH 094/197] add headsup QS tile
+Subject: [PATCH 094/211] add headsup QS tile
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/7d687f5b144a60eb15a5c1f2f21e82c3e9cf70b4

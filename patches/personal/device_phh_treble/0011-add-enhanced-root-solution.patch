@@ -1,7 +1,7 @@
-From 7da1a920d2c62828333b801ad46c688c8a31f0e2 Mon Sep 17 00:00:00 2001
+From 33b597455ee5e446fbfe0459dd8435965a5a6aed Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 11/23] add enhanced root solution
+Subject: [PATCH 11/27] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)
@@ -16,7 +16,7 @@ Subject: [PATCH 11/23] add enhanced root solution
  create mode 100644 phh.superuser.apk
 
 diff --git a/base.mk b/base.mk
-index c2c9a2a..efae81d 100644
+index ce40b97..cffbc57 100644
 --- a/base.mk
 +++ b/base.mk
 @@ -60,6 +60,9 @@ PRODUCT_COPY_FILES += \

@@ -1,7 +1,7 @@
-From dc2fa052fa44045fc8b470ade3a70d90871fe1f8 Mon Sep 17 00:00:00 2001
+From 5dfd44ccc3ee1c14a172c6d323deb69b03645be7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:00:25 -0500
-Subject: [PATCH 103/197] use round adaptive icon mask and parse round icons
+Subject: [PATCH 103/211] use round adaptive icon mask and parse round icons
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/4435f0efe4fb8165ec55fc2ec0f30aa0e5cd8cb7

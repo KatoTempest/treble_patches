@@ -1,7 +1,7 @@
-From e5ef2483b18a95b6d2b278c50414dd4c5e3f82bf Mon Sep 17 00:00:00 2001
+From b3474d5b58641e2566c2628a882ee774aa861a8d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 09:38:07 -0500
-Subject: [PATCH 12/23] adaptation for enhanced root
+Subject: [PATCH 12/27] adaptation for enhanced root
 
 ---
  generate.sh              |   6 +++++-
@@ -15,7 +15,7 @@ Subject: [PATCH 12/23] adaptation for enhanced root
  create mode 100644 zerodaemon/zerodaemon.rc
 
 diff --git a/generate.sh b/generate.sh
-index 304d4cd..73b3e6e 100644
+index c1494c7..59b2aa2 100644
 --- a/generate.sh
 +++ b/generate.sh
 @@ -17,7 +17,7 @@ echo 'PRODUCT_MAKEFILES := \' > AndroidProducts.mk

@@ -1,4 +1,4 @@
-From 7d2a66ffdcdbdb50006d0d5d80b7ee6b0f0417f4 Mon Sep 17 00:00:00 2001
+From 79ffe142ff8849d00d2b9627605ecf24eba859ec Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:20:39 +0200
 Subject: [PATCH 01/63] Move custom DPI settings in to Display menu

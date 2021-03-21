@@ -1,7 +1,7 @@
-From 19021a60573308e598e9f17d6c4d1a4c8eca4dc4 Mon Sep 17 00:00:00 2001
+From d63e9c3283f6d848303615e6407795fb430cf261 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:49:47 -0500
-Subject: [PATCH 167/197] Restore one-click to add/remove tiles
+Subject: [PATCH 167/211] Restore one-click to add/remove tiles
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/e63e8e39ab141b8ba9ef37994b9ababc5647232b

@@ -1,7 +1,7 @@
-From 0cd62c3ccf5c8c29cbba9a4dee58d6757714642d Mon Sep 17 00:00:00 2001
+From ff061695f76b7e83b207b9b08b2f5e0f39eebe29 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
-Subject: [PATCH 8/9] add Auto brightness overlay
+Subject: [PATCH 08/11] add Auto brightness overlay
 
 ---
  AutoBrightOverlay/Android.mk            |  8 ++++++++
@@ -45,16 +45,16 @@ index 0000000..f251f14
 +</manifest>
 diff --git a/AutoBrightOverlay/res/values/config.xml b/AutoBrightOverlay/res/values/config.xml
 new file mode 100644
-index 0000000..83ae4fb
+index 0000000..8abe291
 --- /dev/null
 +++ b/AutoBrightOverlay/res/values/config.xml
 @@ -0,0 +1,4 @@
 +<?xml version="1.0" encoding="utf-8"?>
 +<resources>
-+    <bool name="config_useDevInputEventForAudioJack">true</bool>
++    <bool name="config_automatic_brightness_available">true</bool>
 +</resources>
 diff --git a/overlay.mk b/overlay.mk
-index 51e807f..64ff06f 100755
+index 3aac8ce..05ad6f5 100755
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \

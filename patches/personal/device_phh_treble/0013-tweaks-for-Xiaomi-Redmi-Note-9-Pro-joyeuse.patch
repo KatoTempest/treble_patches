@@ -1,14 +1,14 @@
-From efd7a1caf2ddaf0373473db800017d9d424c2886 Mon Sep 17 00:00:00 2001
+From 22729d39f565fe0a33f4ab76d6d52833af059b62 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 07:14:51 -0500
-Subject: [PATCH 13/23] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
+Subject: [PATCH 13/27] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
 
 ---
  rw-system.sh | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 52bdd6b..9e62b35 100644
+index 90e6414..3d92111 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -139,8 +139,8 @@ changeKeylayout() {
@@ -31,7 +31,7 @@ index 52bdd6b..9e62b35 100644
      mount -o bind /mnt/phh/empty_dir /vendor/lib64/soundfx
      mount -o bind /mnt/phh/empty_dir /vendor/lib/soundfx
      setprop  ro.audio.ignore_effects true
-@@ -865,7 +865,7 @@ if getprop ro.vendor.build.fingerprint |grep -iq xiaomi/cepheus;then
+@@ -871,7 +871,7 @@ if getprop ro.vendor.build.fingerprint |grep -iq xiaomi/cepheus;then
      setprop ro.netflix.bsp_rev Q855-16947-1
  fi
  

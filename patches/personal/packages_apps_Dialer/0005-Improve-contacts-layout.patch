@@ -1,7 +1,7 @@
-From 319b8a9a1d5c2b4dc5602e7cbef45650a11134ac Mon Sep 17 00:00:00 2001
+From 5d90036bb803bf193dd9da4950103118a68617ac Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 4 Apr 2020 00:41:25 +0300
-Subject: [PATCH 5/6] Improve contacts layout
+Subject: [PATCH 5/7] Improve contacts layout
 
   * from
   https://github.com/syberia-project/platform_packages_apps_Dialer/commit/6a16fe03e00421b96072a2827e80a1d5bd8746ff#diff-87c01bc5ec891fe03f23f1209501725a

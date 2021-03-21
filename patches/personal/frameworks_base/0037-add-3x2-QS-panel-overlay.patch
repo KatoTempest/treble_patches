@@ -1,7 +1,7 @@
-From 99e524d2118cbad4c97f00426100610f6a75c988 Mon Sep 17 00:00:00 2001
+From 10142e95158d7d91711e407ad7351eef2f209e36 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 15 Sep 2020 12:39:12 -0400
-Subject: [PATCH 037/197] add 3x2 QS panel overlay
+Subject: [PATCH 037/211] add 3x2 QS panel overlay
 
 Change-Id: I4629aa9ab488753eff80cb7c5856f3d04a56af3a
 ---

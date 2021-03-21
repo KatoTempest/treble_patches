@@ -1,7 +1,7 @@
-From ebaaedb022883d97184be4fe833a41f3cf57af78 Mon Sep 17 00:00:00 2001
+From c3e1412fc5a30459d910340c3d0c4f7fada070db Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 05:39:51 -0500
-Subject: [PATCH 184/197] require unlocking to use Reboot quick tile
+Subject: [PATCH 184/211] require unlocking to use Reboot quick tile
 
 ---
  .../android/systemui/qs/tiles/RebootTile.java | 41 +++++++++++++++++--

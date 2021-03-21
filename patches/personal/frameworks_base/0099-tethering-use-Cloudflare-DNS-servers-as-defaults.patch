@@ -1,7 +1,7 @@
-From 1ae8a6c69ba6c03e89d9a7ea97914044410702a4 Mon Sep 17 00:00:00 2001
+From 405e53b0b767dc1e68b1498c88ca87a746233f46 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 12:55:28 -0400
-Subject: [PATCH 099/197] tethering: use Cloudflare DNS servers as defaults
+Subject: [PATCH 099/211] tethering: use Cloudflare DNS servers as defaults
 
 Cloudflare DNS has a better privacy policy than Google Public DNS while
 still supporting DNS over TLS.

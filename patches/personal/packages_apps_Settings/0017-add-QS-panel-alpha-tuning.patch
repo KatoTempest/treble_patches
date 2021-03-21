@@ -1,4 +1,4 @@
-From 91dd8a81099c7c05c6727dfa9f2c4ddb1fd3af50 Mon Sep 17 00:00:00 2001
+From 57660cb3ff345817427863c1a13b191612960a40 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 02:45:14 +0300
 Subject: [PATCH 17/63] add QS panel alpha tuning

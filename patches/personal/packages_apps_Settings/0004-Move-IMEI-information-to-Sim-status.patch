@@ -1,4 +1,4 @@
-From 0fd41fb99a50f6748f33da93fb8fd931d8aef950 Mon Sep 17 00:00:00 2001
+From 56fa3662686fdf2ec93e8a51d5c2fa9a7dec9b49 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 14:42:14 +0200
 Subject: [PATCH 04/63] Move IMEI information to Sim status

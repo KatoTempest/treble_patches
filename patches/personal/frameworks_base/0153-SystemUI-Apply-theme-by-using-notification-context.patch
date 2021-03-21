@@ -1,7 +1,7 @@
-From c482d5603eb45f812c99ceb282415458de183589 Mon Sep 17 00:00:00 2001
+From c67ab3bacf03b3524a9dd56bdd402355bcbf1f4b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:17:21 -0500
-Subject: [PATCH 153/197] SystemUI: Apply theme by using notification context
+Subject: [PATCH 153/211] SystemUI: Apply theme by using notification context
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/e4d4c16609500739261e67a43a0e791c7175ee03

@@ -1,7 +1,7 @@
-From 4fa2060076d2a36114dffc1cda687dfb54deed87 Mon Sep 17 00:00:00 2001
+From 37264a1a98440bdf4d323165ecf3db9de4888946 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:02:17 -0500
-Subject: [PATCH 177/197] SystemUI: have NfcTile get an NfcAdapter directly
+Subject: [PATCH 177/211] SystemUI: have NfcTile get an NfcAdapter directly
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/a346ffd71694baa26aaf4c28806cf52c64f70908

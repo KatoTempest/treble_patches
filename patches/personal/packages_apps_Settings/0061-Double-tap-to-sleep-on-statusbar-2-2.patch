@@ -1,0 +1,61 @@
+From 4fdeae3fbc81fb9d89821c282813259930a71cb1 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 7 Mar 2021 02:37:39 -0500
+Subject: [PATCH 61/63] Double tap to sleep on statusbar [2/2]
+
+  based on
+  https://github.com/ArrowOS/android_packages_apps_Settings/commit/7a4cf76d470a02465fee08ad34a0562f31b1d9a2
+
+Change-Id: I391dfb542bf58f665b3a0ed2c4757aea2190e107
+---
+ res/values-ru/custom_strings.xml | 2 ++
+ res/values/custom_strings.xml    | 2 ++
+ res/xml/gestures.xml             | 7 +++++++
+ 3 files changed, 11 insertions(+)
+
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index 55ce0cfce3..cf49bbc570 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -85,4 +85,6 @@
+     <!-- Notification headers -->
+     <string name="notification_headers_title">Заголовки уведомлений</string>
+     <string name="notification_headers_summary">Показывать заголовки в списке уведомлений\nТребуется перезапуск SystemUI</string>
++    <!--Double Tap to Sleep Statusbar-->
++    <string name="double_tap_sleep_gesture_title">Двойное касание статусбара для перехода в сон</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 14a3927b18..505a632ee8 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -83,4 +83,6 @@
+     <!-- Notification headers -->
+     <string name="notification_headers_title">Notification Headers</string>
+     <string name="notification_headers_summary">Show headers in the notification shade\nRequires a SystemUI restart</string>
++    <!--Double Tap to Sleep Statusbar-->
++    <string name="double_tap_sleep_gesture_title">Double tap to sleep on status bar</string>
+ </resources>
+diff --git a/res/xml/gestures.xml b/res/xml/gestures.xml
+index 4cfc331da6..97a6c2cf7d 100644
+--- a/res/xml/gestures.xml
++++ b/res/xml/gestures.xml
+@@ -93,9 +93,16 @@
+         android:summary="@string/three_finger_gesture_summary"
+         android:defaultValue="false" />
+ 
++    <com.caos.settings.preference.SystemSettingSwitchPreference
++        android:key="double_tap_sleep_gesture"
++        android:title="@string/double_tap_sleep_gesture_title"
++        android:defaultValue="true" />
++
+     <Preference
+         android:key="power_button_torch_summary"
+         android:title="@string/power_button_torch_title"
+         android:fragment="com.android.settings.gestures.PowerButtonTorchSettings"
+         settings:controller="com.android.settings.gestures.PowerButtonTorchGesturePreferenceController" />
++
++
+ </PreferenceScreen>
+-- 
+2.17.1
+

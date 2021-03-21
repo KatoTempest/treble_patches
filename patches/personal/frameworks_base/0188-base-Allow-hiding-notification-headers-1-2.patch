@@ -1,7 +1,7 @@
-From 623b9173a9b9e296c648924e41c8f9284f9dd7c2 Mon Sep 17 00:00:00 2001
+From 56d97aa52fa90a5d6d368f2e5d23877eaf30451e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 08:17:12 -0500
-Subject: [PATCH 188/197] base: Allow hiding notification headers [1/2]
+Subject: [PATCH 188/211] base: Allow hiding notification headers [1/2]
 
   from
   https://github.com/SuperiorOS/android_frameworks_base/commit/6e2ce3b03373c61d9950b760e2d5df9bf4d2afda

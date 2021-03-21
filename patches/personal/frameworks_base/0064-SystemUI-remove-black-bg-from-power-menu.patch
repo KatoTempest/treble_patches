@@ -1,7 +1,7 @@
-From f772ac9016ad1c1b109c5bfbb2d98825b5fc58be Mon Sep 17 00:00:00 2001
+From 082af92f9f10c47e519cf6dc19a8eafd4becf9d6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:30:39 -0500
-Subject: [PATCH 064/197] SystemUI: remove black bg from power menu
+Subject: [PATCH 064/211] SystemUI: remove black bg from power menu
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/e132c4f16d086e88856465eb2d00ddc3d4bf6cbb

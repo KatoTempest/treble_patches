@@ -1,0 +1,25 @@
+From bcefc604548044a447d9f9463bf9d3023598fb4d Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 18 Mar 2021 13:08:59 -0400
+Subject: [PATCH 24/27] add tweaks for curtana/joyeuse (ui performance)
+
+---
+ rw-system.sh | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index 40d6724..6d4d7fb 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -883,6 +883,8 @@ fi
+ 
+ if getprop ro.vendor.build.fingerprint |grep -qi -e redmi/curtana -e redmi/joyeuse; then
+     setprop ro.netflix.bsp_rev Q6250-19132-1
++    setprop debug.sf.latch_unsignaled 1
++    setprop sys.use_fifo_ui 1
+ fi
+ 
+ # Set props for Vsmart Live's fod
+-- 
+2.17.1
+
