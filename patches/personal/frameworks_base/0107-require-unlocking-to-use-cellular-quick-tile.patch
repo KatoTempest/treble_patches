@@ -1,0 +1,100 @@
+From 382e5cdd2c352f3b43eb6503eab9020b017be5fc Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 07:37:29 -0500
+Subject: [PATCH 107/203] require unlocking to use cellular quick tile
+
+  from
+  https://github.com/GrapheneOS/platform_frameworks_base/commit/dd8996354f4e67b8d2f1ed82e172f5498ea4e391
+---
+ .../systemui/qs/tiles/CellularTile.java       | 40 ++++++++++++++++---
+ 1 file changed, 35 insertions(+), 5 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/tiles/CellularTile.java b/packages/SystemUI/src/com/android/systemui/qs/tiles/CellularTile.java
+index 59597ac29e0..5d52754688d 100644
+--- a/packages/SystemUI/src/com/android/systemui/qs/tiles/CellularTile.java
++++ b/packages/SystemUI/src/com/android/systemui/qs/tiles/CellularTile.java
+@@ -47,6 +47,7 @@ import com.android.systemui.qs.QSHost;
+ import com.android.systemui.qs.SignalTileView;
+ import com.android.systemui.qs.tileimpl.QSTileImpl;
+ import com.android.systemui.statusbar.phone.SystemUIDialog;
++import com.android.systemui.statusbar.policy.KeyguardStateController;
+ import com.android.systemui.statusbar.policy.NetworkController;
+ import com.android.systemui.statusbar.policy.NetworkController.IconState;
+ import com.android.systemui.statusbar.policy.NetworkController.SignalCallback;
+@@ -64,15 +65,26 @@ public class CellularTile extends QSTileImpl<SignalState> {
+     private final CellSignalCallback mSignalCallback = new CellSignalCallback();
+     private final ActivityStarter mActivityStarter;
+ 
++    private final KeyguardStateController mKeyguard;
++
+     @Inject
+     public CellularTile(QSHost host, NetworkController networkController,
+-            ActivityStarter activityStarter) {
++            ActivityStarter activityStarter, KeyguardStateController keyguardStateController) {
+         super(host);
+         mController = networkController;
+         mActivityStarter = activityStarter;
+         mDataController = mController.getMobileDataController();
+         mDetailAdapter = new CellularDetailAdapter();
+         mController.observe(getLifecycle(), mSignalCallback);
++
++        mKeyguard = keyguardStateController;
++        final KeyguardStateController.Callback callback = new KeyguardStateController.Callback() {
++            @Override
++            public void onKeyguardShowingChanged() {
++                refreshState();
++            }
++        };
++        mKeyguard.observe(this, callback);
+     }
+ 
+     @Override
+@@ -98,16 +110,27 @@ public class CellularTile extends QSTileImpl<SignalState> {
+         return getCellularSettingIntent();
+     }
+ 
++    private void handleClickInner() {
++        if (mDataController.isMobileDataEnabled()) {
++            maybeShowDisableDialog();
++        } else {
++            mDataController.setMobileDataEnabled(true);
++        }
++    }
++
+     @Override
+     protected void handleClick() {
+         if (getState().state == Tile.STATE_UNAVAILABLE) {
+             return;
+         }
+-        if (mDataController.isMobileDataEnabled()) {
+-            maybeShowDisableDialog();
+-        } else {
+-            mDataController.setMobileDataEnabled(true);
++        if (mKeyguard.isMethodSecure() && mKeyguard.isShowing()) {
++            mActivityStarter.postQSRunnableDismissingKeyguard(() -> {
++                mHost.openPanels();
++                handleClickInner();
++            });
++            return;
+         }
++        handleClickInner();
+     }
+ 
+     private void maybeShowDisableDialog() {
+@@ -142,6 +165,13 @@ public class CellularTile extends QSTileImpl<SignalState> {
+     @Override
+     protected void handleSecondaryClick() {
+         if (mDataController.isMobileDataSupported()) {
++            if (mKeyguard.isMethodSecure() && mKeyguard.isShowing()) {
++                mActivityStarter.postQSRunnableDismissingKeyguard(() -> {
++                    mHost.openPanels();
++                    showDetail(true);
++                });
++                return;
++            }
+             showDetail(true);
+         } else {
+             mActivityStarter
+-- 
+2.17.1
+

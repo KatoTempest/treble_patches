@@ -1,4 +1,4 @@
-From 4e9739e7510078818ff8c173e5cb2ac6a0aabf1e Mon Sep 17 00:00:00 2001
+From a004972b92e5cb240e4c3fc14ce634de7ff6fa4b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Nov 2020 13:31:05 -0500
 Subject: [PATCH 1/5] improve searchbar

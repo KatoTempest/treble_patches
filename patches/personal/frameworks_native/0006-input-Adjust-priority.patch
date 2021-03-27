@@ -1,0 +1,137 @@
+From 87bc9c913926591a0221be7cf7b9d4643d33eb66 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 27 Mar 2021 03:32:06 -0400
+Subject: [PATCH 6/7] input: Adjust priority
+
+  from
+  https://github.com/LineageOS/android_frameworks_native/commit/7e654fcc223f6d191528028b7781bb23254115d7
+---
+ services/inputflinger/Android.bp                         | 1 +
+ services/inputflinger/InputThread.cpp                    | 8 ++++++--
+ services/surfaceflinger/Android.bp                       | 1 +
+ services/surfaceflinger/Scheduler/DispSync.cpp           | 3 +++
+ services/surfaceflinger/Scheduler/EventControlThread.cpp | 3 +++
+ services/surfaceflinger/Scheduler/EventThread.cpp        | 3 +++
+ 6 files changed, 17 insertions(+), 2 deletions(-)
+
+diff --git a/services/inputflinger/Android.bp b/services/inputflinger/Android.bp
+index 42defc860..8ce6f28b5 100644
+--- a/services/inputflinger/Android.bp
++++ b/services/inputflinger/Android.bp
+@@ -109,6 +109,7 @@ cc_defaults {
+     srcs: [":libinputflinger_base_sources"],
+     shared_libs: [
+         "libbase",
++        "libbfqio",
+         "libcutils",
+         "libinput",
+         "liblog",
+diff --git a/services/inputflinger/InputThread.cpp b/services/inputflinger/InputThread.cpp
+index b87f7a124..1ddbe5bb9 100644
+--- a/services/inputflinger/InputThread.cpp
++++ b/services/inputflinger/InputThread.cpp
+@@ -16,6 +16,8 @@
+ 
+ #include "InputThread.h"
+ 
++#include <bfqio/bfqio.h>
++
+ namespace android {
+ 
+ namespace {
+@@ -42,7 +44,9 @@ private:
+ InputThread::InputThread(std::string name, std::function<void()> loop, std::function<void()> wake)
+       : mName(name), mThreadWake(wake) {
+     mThread = new InputThreadImpl(loop);
+-    mThread->run(mName.c_str(), ANDROID_PRIORITY_URGENT_DISPLAY);
++    mThread->run(mName.c_str(), ANDROID_PRIORITY_URGENT_DISPLAY + ANDROID_PRIORITY_MORE_FAVORABLE);
++
++    android_set_rt_ioprio(mThread->getTid(), 1);
+ }
+ 
+ InputThread::~InputThread() {
+@@ -57,4 +61,4 @@ bool InputThread::isCallingThread() {
+     return gettid() == mThread->getTid();
+ }
+ 
+-} // namespace android
+\ No newline at end of file
++} // namespace android
+diff --git a/services/surfaceflinger/Android.bp b/services/surfaceflinger/Android.bp
+index 477d2cbc4..47ef2ea45 100644
+--- a/services/surfaceflinger/Android.bp
++++ b/services/surfaceflinger/Android.bp
+@@ -37,6 +37,7 @@ cc_defaults {
+         "android.hardware.power@1.3",
+         "android.hardware.power-cpp",
+         "libbase",
++        "libbfqio",
+         "libbinder",
+         "libbufferhubqueue",
+         "libcutils",
+diff --git a/services/surfaceflinger/Scheduler/DispSync.cpp b/services/surfaceflinger/Scheduler/DispSync.cpp
+index ff91bf7bc..f90ed3e06 100644
+--- a/services/surfaceflinger/Scheduler/DispSync.cpp
++++ b/services/surfaceflinger/Scheduler/DispSync.cpp
+@@ -29,6 +29,7 @@
+ #include <algorithm>
+ 
+ #include <android-base/stringprintf.h>
++#include <bfqio/bfqio.h>
+ #include <cutils/properties.h>
+ #include <log/log.h>
+ #include <utils/Thread.h>
+@@ -504,6 +505,8 @@ DispSync::DispSync(const char* name, bool hasSyncFramework)
+         ALOGE("Couldn't set SCHED_FIFO for DispSyncThread");
+     }
+ 
++    android_set_rt_ioprio(mThread->getTid(), 1);
++
+     beginResync();
+ 
+     if (mTraceDetailedInfo && kEnableZeroPhaseTracer) {
+diff --git a/services/surfaceflinger/Scheduler/EventControlThread.cpp b/services/surfaceflinger/Scheduler/EventControlThread.cpp
+index 7f9db9ca2..753081aeb 100644
+--- a/services/surfaceflinger/Scheduler/EventControlThread.cpp
++++ b/services/surfaceflinger/Scheduler/EventControlThread.cpp
+@@ -22,6 +22,7 @@
+ #include <sched.h>
+ #include <sys/resource.h>
+ 
++#include <bfqio/bfqio.h>
+ #include <cutils/sched_policy.h>
+ #include <log/log.h>
+ #include <system/thread_defs.h>
+@@ -41,6 +42,8 @@ EventControlThread::EventControlThread(EventControlThread::SetVSyncEnabledFuncti
+     pid_t tid = pthread_gettid_np(mThread.native_handle());
+     setpriority(PRIO_PROCESS, tid, ANDROID_PRIORITY_URGENT_DISPLAY);
+     set_sched_policy(tid, SP_FOREGROUND);
++
++    android_set_rt_ioprio(tid, 1);
+ }
+ 
+ EventControlThread::~EventControlThread() {
+diff --git a/services/surfaceflinger/Scheduler/EventThread.cpp b/services/surfaceflinger/Scheduler/EventThread.cpp
+index 845bf50ad..8a0d51442 100644
+--- a/services/surfaceflinger/Scheduler/EventThread.cpp
++++ b/services/surfaceflinger/Scheduler/EventThread.cpp
+@@ -31,6 +31,7 @@
+ 
+ #include <android-base/stringprintf.h>
+ 
++#include <bfqio/bfqio.h>
+ #include <cutils/compiler.h>
+ #include <cutils/sched_policy.h>
+ 
+@@ -189,6 +190,8 @@ EventThread::EventThread(std::unique_ptr<VSyncSource> vsyncSource,
+     }
+ 
+     set_sched_policy(tid, SP_FOREGROUND);
++
++    android_set_rt_ioprio(tid, 1);
+ }
+ 
+ EventThread::~EventThread() {
+-- 
+2.17.1
+

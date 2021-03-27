@@ -1,0 +1,134 @@
+From 4012b6bf9d2f11d623490fc381821078a9b42475 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 27 Mar 2021 03:37:06 -0400
+Subject: [PATCH 7/7] SF: handle long waiting Layer sync point
+
+  from
+  https://github.com/LineageOS/android_frameworks_native/commit/c02140b857db4dab853a596accf9c96b85ee3198
+---
+ services/surfaceflinger/Layer.cpp |  7 +++--
+ services/surfaceflinger/Layer.h   | 43 ++++++++++++++++++++++++++++---
+ 2 files changed, 44 insertions(+), 6 deletions(-)
+
+diff --git a/services/surfaceflinger/Layer.cpp b/services/surfaceflinger/Layer.cpp
+index e9965d471..55af849b7 100644
+--- a/services/surfaceflinger/Layer.cpp
++++ b/services/surfaceflinger/Layer.cpp
+@@ -793,7 +793,9 @@ void Layer::pushPendingState() {
+             // to be applied as per normal (no synchronization).
+             mCurrentState.barrierLayer_legacy = nullptr;
+         } else {
+-            auto syncPoint = std::make_shared<SyncPoint>(mCurrentState.frameNumber_legacy, this);
++            auto syncPoint = std::make_shared<SyncPoint>(mCurrentState.frameNumber_legacy,
++                                                         this,
++                                                         barrierLayer);
+             if (barrierLayer->addSyncPoint(syncPoint)) {
+                 std::stringstream ss;
+                 ss << "Adding sync point " << mCurrentState.frameNumber_legacy;
+@@ -818,7 +820,7 @@ void Layer::popPendingState(State* stateToCommit) {
+     ATRACE_CALL();
+     *stateToCommit = mPendingStates[0];
+ 
+-    mPendingStates.removeAt(0);
++    mPendingStates.pop_front();
+     ATRACE_INT(mTransactionName.c_str(), mPendingStates.size());
+ }
+ 
+@@ -857,6 +859,7 @@ bool Layer::applyPendingStates(State* stateToCommit) {
+                 mRemoteSyncPoints.pop_front();
+             } else {
+                 ATRACE_NAME("!frameIsAvailable");
++                mRemoteSyncPoints.front()->checkTimeoutAndLog();
+                 break;
+             }
+         } else {
+diff --git a/services/surfaceflinger/Layer.h b/services/surfaceflinger/Layer.h
+index 2c90c92f6..fb66a3d63 100644
+--- a/services/surfaceflinger/Layer.h
++++ b/services/surfaceflinger/Layer.h
+@@ -35,6 +35,7 @@
+ #include <utils/RefBase.h>
+ #include <utils/Timers.h>
+ 
++#include <chrono>
+ #include <cstdint>
+ #include <list>
+ #include <optional>
+@@ -881,11 +882,14 @@ protected:
+ 
+     class SyncPoint {
+     public:
+-        explicit SyncPoint(uint64_t frameNumber, wp<Layer> requestedSyncLayer)
++        explicit SyncPoint(uint64_t frameNumber,
++                           wp<Layer> requestedSyncLayer,
++                           wp<Layer> barrierLayer_legacy)
+               : mFrameNumber(frameNumber),
+                 mFrameIsAvailable(false),
+                 mTransactionIsApplied(false),
+-                mRequestedSyncLayer(requestedSyncLayer) {}
++                mRequestedSyncLayer(requestedSyncLayer),
++                mBarrierLayer_legacy(barrierLayer_legacy) {}
+ 
+         uint64_t getFrameNumber() const { return mFrameNumber; }
+ 
+@@ -899,11 +903,42 @@ protected:
+ 
+         sp<Layer> getRequestedSyncLayer() { return mRequestedSyncLayer.promote(); }
+ 
++        sp<Layer> getBarrierLayer() const { return mBarrierLayer_legacy.promote(); }
++
++        bool isTimeout() const {
++            using namespace std::chrono_literals;
++            static constexpr std::chrono::nanoseconds TIMEOUT_THRESHOLD = 1s;
++
++            return std::chrono::steady_clock::now() - mCreateTimeStamp > TIMEOUT_THRESHOLD;
++        }
++
++        void checkTimeoutAndLog() {
++            using namespace std::chrono_literals;
++            static constexpr std::chrono::nanoseconds LOG_PERIOD = 1s;
++
++            if (!frameIsAvailable() && isTimeout()) {
++                const auto now = std::chrono::steady_clock::now();
++                if (now - mLastLogTime > LOG_PERIOD) {
++                    mLastLogTime = now;
++                    sp<Layer> requestedSyncLayer = getRequestedSyncLayer();
++                    sp<Layer> barrierLayer = getBarrierLayer();
++                    ALOGW("[%s] sync point %" PRIu64 " wait timeout %lld for %s",
++                          requestedSyncLayer ? requestedSyncLayer->getDebugName() : "Removed",
++                          mFrameNumber, (now - mCreateTimeStamp).count(),
++                          barrierLayer ? barrierLayer->getDebugName() : "Removed");
++                }
++            }
++        }
++
+     private:
+         const uint64_t mFrameNumber;
+         std::atomic<bool> mFrameIsAvailable;
+         std::atomic<bool> mTransactionIsApplied;
+         wp<Layer> mRequestedSyncLayer;
++        wp<Layer> mBarrierLayer_legacy;
++        const std::chrono::time_point<std::chrono::steady_clock> mCreateTimeStamp =
++            std::chrono::steady_clock::now();
++        std::chrono::time_point<std::chrono::steady_clock> mLastLogTime;
+     };
+ 
+     // SyncPoints which will be signaled when the correct frame is at the head
+@@ -984,12 +1019,12 @@ protected:
+     State mDrawingState;
+     // Store a copy of the pending state so that the drawing thread can access the
+     // states without a lock.
+-    Vector<State> mPendingStatesSnapshot;
++    std::deque<State> mPendingStatesSnapshot;
+ 
+     // these are protected by an external lock (mStateLock)
+     State mCurrentState;
+     std::atomic<uint32_t> mTransactionFlags{0};
+-    Vector<State> mPendingStates;
++    std::deque<State> mPendingStates;
+ 
+     // Timestamp history for UIAutomation. Thread safe.
+     FrameTracker mFrameTracker;
+-- 
+2.17.1
+

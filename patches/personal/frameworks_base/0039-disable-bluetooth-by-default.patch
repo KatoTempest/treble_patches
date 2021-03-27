@@ -1,7 +1,7 @@
-From cee481b9d80d000a9332525735876acb6bcdbf49 Mon Sep 17 00:00:00 2001
+From 78cf5d00d74521139976bf9f080eae1f2d0f39ea Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Tue, 4 Dec 2018 00:34:24 -0500
-Subject: [PATCH 039/211] disable bluetooth by default
+Subject: [PATCH 039/203] disable bluetooth by default
 
 	and location too
 ---

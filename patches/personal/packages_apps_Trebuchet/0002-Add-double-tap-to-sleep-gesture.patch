@@ -1,4 +1,4 @@
-From e35ca8ad4212378a5adc07b3c347cb7892d5e6de Mon Sep 17 00:00:00 2001
+From 301aa70f33e055cb85e2ab0ada895d7a0cfb87f8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 Feb 2020 22:25:00 +0200
 Subject: [PATCH 2/5] Add double tap to sleep gesture

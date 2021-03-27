@@ -1,7 +1,7 @@
-From c95b63ac49cd16d42c26afd994a5070c48a980d7 Mon Sep 17 00:00:00 2001
+From 56d5c3a6c7b12885ef4ff03d39d5f1b65ec4be4d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 02:40:56 +0300
-Subject: [PATCH 022/211] add QS Alpha overlays
+Subject: [PATCH 022/203] add QS Alpha overlays
 
 ---
  .../SystemUI/res/color/qs_background_dark.xml |  2 +-

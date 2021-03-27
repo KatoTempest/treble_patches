@@ -12,7 +12,7 @@ fi
 pushd "$1"
 
 repo init -u https://android.googlesource.com/platform/manifest -b android-11.0.0_r32
-git clone --single-branch https://github.com/eremitein/treble_manifest_caos -b v302+ .repo/local_manifests
+git clone --single-branch https://github.com/eremitein/treble_manifest_caos -b v303 .repo/local_manifests
 repo sync -j${para} -c -q --force-sync --no-tags --no-clone-bundle --optimized-fetch --prune ||exit
 bash ${rund}/apply-patches.sh ${rund}
 cd device/phh/treble

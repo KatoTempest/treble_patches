@@ -1,0 +1,26 @@
+From 0cd27d75c524fe01073f17864648b9f3ac99995b Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 7 Jan 2021 14:23:00 -0500
+Subject: [PATCH 172/203] SystemUI: Fix issue with Bluetooth tile
+
+  from
+  https://gitlab.com/CalyxOS/platform_frameworks_base/-/commit/9b87a5dfce5b6a8070c3b90604d4720fae5425a2
+---
+ .../src/com/android/systemui/qs/tiles/BluetoothTile.java         | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/tiles/BluetoothTile.java b/packages/SystemUI/src/com/android/systemui/qs/tiles/BluetoothTile.java
+index cee9392bb75..d3d48e3d161 100644
+--- a/packages/SystemUI/src/com/android/systemui/qs/tiles/BluetoothTile.java
++++ b/packages/SystemUI/src/com/android/systemui/qs/tiles/BluetoothTile.java
+@@ -280,6 +280,7 @@ public class BluetoothTile extends QSTileImpl<BooleanState> {
+             refreshState();
+             if (isShowingDetail()) {
+                 mDetailAdapter.updateItems();
++                mDetailAdapter.setItemsVisible(true);
+                 fireToggleStateChanged(mDetailAdapter.getToggleState());
+             }
+         }
+-- 
+2.17.1
+
