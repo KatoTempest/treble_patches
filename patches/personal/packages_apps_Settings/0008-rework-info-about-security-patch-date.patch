@@ -1,4 +1,4 @@
-From a9923449de9c0a7ca0718ce703756723c9269277 Mon Sep 17 00:00:00 2001
+From bffe45e3696b50961234c50dcc32c69d38b49674 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 5 Feb 2020 14:33:45 +0200
 Subject: [PATCH 08/63] rework info about security patch date

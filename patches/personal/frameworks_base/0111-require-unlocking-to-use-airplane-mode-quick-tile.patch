@@ -1,7 +1,7 @@
-From 0a9c74f2d57ab95a11b5ddf82eeb72d94a968112 Mon Sep 17 00:00:00 2001
+From 048f8d01263fe1eeb8acea15f6548b0afb2e4d6f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:47:16 -0500
-Subject: [PATCH 111/203] require unlocking to use airplane mode quick tile
+Subject: [PATCH 111/208] require unlocking to use airplane mode quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/30060d040f34d73b7637d7f67f034c860631b2a4

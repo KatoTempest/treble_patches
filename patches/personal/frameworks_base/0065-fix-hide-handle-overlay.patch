@@ -1,7 +1,7 @@
-From d762d499e17f079b6e0c3ba84b1bf7b555bb2287 Mon Sep 17 00:00:00 2001
+From d0c805bfdc93f385c62a27ac743ef4cbf8f441db Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 14:14:13 -0500
-Subject: [PATCH 065/203] fix hide handle overlay
+Subject: [PATCH 065/208] fix hide handle overlay
 
   based on
   https://github.com/Evolution-X/frameworks_base/commit/5dae6c827b308e35794a0d0d73e4e2a8a57344b5

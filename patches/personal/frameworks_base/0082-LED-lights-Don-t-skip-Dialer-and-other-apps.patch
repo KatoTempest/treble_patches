@@ -1,7 +1,7 @@
-From 993a8acf306a7ef8e8f11f06c101773bf9d062ae Mon Sep 17 00:00:00 2001
+From e36a755fd30468cde266435966dd9724ca0819a8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:50:11 -0500
-Subject: [PATCH 082/203] LED lights: Don't skip Dialer and other apps
+Subject: [PATCH 082/208] LED lights: Don't skip Dialer and other apps
 
   from
   https://github.com/Corvus-ROM/android_frameworks_base/commit/ac0ed966eb4fe01dc286d2082ea01c84846774b3

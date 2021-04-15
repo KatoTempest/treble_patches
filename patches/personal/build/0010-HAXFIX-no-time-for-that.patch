@@ -1,7 +1,7 @@
-From 75a2524b9053feea38d0483be981fad73ffb6dc9 Mon Sep 17 00:00:00 2001
+From 5fc46d43b2f93a4300089614a9f1dce2c1e808c1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 10:12:40 -0500
-Subject: [PATCH 10/14] HAXFIX: no time for that!
+Subject: [PATCH 10/15] HAXFIX: no time for that!
 
   Prebuilt apk found in PRODUCT_COPY_FILES: $(1), use BUILD_PREBUILT
   instead blablabla

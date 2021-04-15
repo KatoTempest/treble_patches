@@ -1,7 +1,7 @@
-From 9f517dbf344eda85c7a7e2375d61fb8bae6d6573 Mon Sep 17 00:00:00 2001
+From 7cf8af6525821e9eacc1acfde1d0024035f761d8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 9 Dec 2020 15:07:43 -0500
-Subject: [PATCH 05/11] initial overlay for Redmi Note 9 Pro 'joyeuse'
+Subject: [PATCH 05/13] initial overlay for Redmi Note 9 Pro 'joyeuse'
 
   -wip-
 ---

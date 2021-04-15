@@ -1,0 +1,26 @@
+From b9921009b47fccf8f373598528659761c9bd2066 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 17 Feb 2021 15:37:37 -0500
+Subject: [PATCH 183/208] NfcTile: Don't create an error when editing tiles
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/dae817851caa7efa2a8c5e3cdfc7b649f55ee540
+---
+ packages/SystemUI/src/com/android/systemui/qs/tiles/NfcTile.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/qs/tiles/NfcTile.java b/packages/SystemUI/src/com/android/systemui/qs/tiles/NfcTile.java
+index 258ba0b5ead..d2ad3de2024 100644
+--- a/packages/SystemUI/src/com/android/systemui/qs/tiles/NfcTile.java
++++ b/packages/SystemUI/src/com/android/systemui/qs/tiles/NfcTile.java
+@@ -73,6 +73,7 @@ public class NfcTile extends QSTileImpl<BooleanState> {
+     @Override
+     public void handleSetListening(boolean listening) {
+         super.handleSetListening(listening);
++        if (mListening == listening) return;
+         mListening = listening;
+         if (mListening) {
+             mBroadcastDispatcher.registerReceiver(mNfcReceiver,
+-- 
+2.17.1
+

@@ -1,4 +1,4 @@
-From a04c38a73a507c3971da7f80d2f93f237b9db42f Mon Sep 17 00:00:00 2001
+From 7b0f146637235676d2a724d11f4d18fb0ac08e49 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
 Subject: [PATCH 07/63] Move theming to display settings
@@ -14,7 +14,7 @@ Change-Id: If9486aa9ff7c72c368f75d83241ecc23a10e6586
  3 files changed, 31 insertions(+)
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index dabbc8dbe6..738dd34da5 100644
+index 5b1ea50810..d7c9bdd68a 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
 @@ -10662,6 +10662,14 @@

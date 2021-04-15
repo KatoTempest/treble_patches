@@ -1,7 +1,7 @@
-From 76c5ab465194539bad468ba77ce38f1695290f53 Mon Sep 17 00:00:00 2001
+From 38e46e2d3cf2eade022c5b81206bc8c6d0658cb6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:57:35 -0500
-Subject: [PATCH 12/14] include ThemePicker to the build
+Subject: [PATCH 12/15] include ThemePicker to the build
 
 Change-Id: Ibe1b1e472fd81760349ad411bf5bf53884a2d7e6
 ---

@@ -1,7 +1,7 @@
-From 1eb15262bf33efcfa3bb0c0696ac2c7639e2ba01 Mon Sep 17 00:00:00 2001
+From a56c6f5bc41a2f68a82b32e3e3dc015f18ffd8ca Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:35:12 -0500
-Subject: [PATCH 117/203] base: fix targetPackage for new icon pack launcher
+Subject: [PATCH 117/208] base: fix targetPackage for new icon pack launcher
  overlays
 
   from

@@ -1,4 +1,4 @@
-From 908bb459f0206827a75f0dacd1563cf0780afb80 Mon Sep 17 00:00:00 2001
+From 61d970c0df5cfe55e44645b59df9967ed2230e29 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 08:39:05 -0500
 Subject: [PATCH 59/63] Gestures: Add "longpress power button" to toggle

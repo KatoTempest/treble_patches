@@ -1,7 +1,7 @@
-From e9961c213adb0bbd67efe267580ce6e0605e33d9 Mon Sep 17 00:00:00 2001
+From eb17fb1110d0ca2d1d188ddedfabccdbf154329a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 12 Mar 2020 23:26:15 +0200
-Subject: [PATCH 5/5] launcher one quick step v7
+Subject: [PATCH 5/6] launcher one quick step v7
 
 Change-Id: If8a97815abf1a65216cc8718799a366343a48583
 ---

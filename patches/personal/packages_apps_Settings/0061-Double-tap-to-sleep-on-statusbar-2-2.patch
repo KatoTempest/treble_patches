@@ -1,4 +1,4 @@
-From 4fdeae3fbc81fb9d89821c282813259930a71cb1 Mon Sep 17 00:00:00 2001
+From b1250f5dbafe356ff934c40f89cf864a0d832199 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 7 Mar 2021 02:37:39 -0500
 Subject: [PATCH 61/63] Double tap to sleep on statusbar [2/2]

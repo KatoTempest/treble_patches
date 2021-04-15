@@ -1,4 +1,4 @@
-From 90d931d99126107a56c512582eb5414f0a0ca591 Mon Sep 17 00:00:00 2001
+From ea2edc6db1d090c58625e98ee96dc91174937cb0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:11:51 -0500
 Subject: [PATCH 56/63] get outer NFC preference to listen for changes

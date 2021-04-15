@@ -1,4 +1,4 @@
-From e68bbd4e138ce19e65f8783e9ee94e6904b9a1d7 Mon Sep 17 00:00:00 2001
+From 9fab75cf385a1d7c3445d9351abeae52c7be62e5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 13:08:27 +0200
 Subject: [PATCH 03/63] hide vertical dividers in settings

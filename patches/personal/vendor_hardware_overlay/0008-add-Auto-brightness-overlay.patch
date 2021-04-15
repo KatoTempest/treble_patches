@@ -1,7 +1,7 @@
-From ff061695f76b7e83b207b9b08b2f5e0f39eebe29 Mon Sep 17 00:00:00 2001
+From 15d2094b6d38dcf01cc011ed85ddf812afc18088 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
-Subject: [PATCH 08/11] add Auto brightness overlay
+Subject: [PATCH 08/13] add Auto brightness overlay
 
 ---
  AutoBrightOverlay/Android.mk            |  8 ++++++++

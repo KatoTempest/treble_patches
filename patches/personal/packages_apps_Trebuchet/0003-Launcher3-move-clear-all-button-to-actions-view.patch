@@ -1,7 +1,7 @@
-From faa6e89e9f2e6f7709a2fd73087d2b9413730e03 Mon Sep 17 00:00:00 2001
+From bdb670ef602a03fe7517be156fe4897f6f74dac1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 8 Jan 2021 16:33:55 -0500
-Subject: [PATCH 3/5] Launcher3: move clear all button to actions view
+Subject: [PATCH 3/6] Launcher3: move clear all button to actions view
 
   from
   https://github.com/nitrogen-project/android_packages_apps_Launcher3/commit/e408325b2223edb4576247442aa127510e0abc33

@@ -1,0 +1,27 @@
+From 131e312df9ad76bcee192cc0615f76c8cd3c13b1 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 19 Apr 2021 08:03:22 -0400
+Subject: [PATCH] some magic?
+
+Change-Id: I87d2f40fb9e126f298169521a3b9aee7734a4d30
+---
+ Android.mk | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/Android.mk b/Android.mk
+index 33a08eed0..02e255f01 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -87,9 +87,6 @@ endif
+ 
+ NEVERALLOW_ARG :=
+ ifeq ($(SELINUX_IGNORE_NEVERALLOWS),true)
+-ifeq ($(TARGET_BUILD_VARIANT),user)
+-$(error SELINUX_IGNORE_NEVERALLOWS := true cannot be used in user builds)
+-endif
+ $(warning Be careful when using the SELINUX_IGNORE_NEVERALLOWS flag. \
+           It does not work in user builds and using it will \
+           not stop you from failing CTS.)
+-- 
+2.17.1
+

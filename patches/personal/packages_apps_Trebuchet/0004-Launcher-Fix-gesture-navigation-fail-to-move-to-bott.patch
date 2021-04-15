@@ -1,7 +1,7 @@
-From 6621db28b1f9d9ecd9ab3e976a0e81750d28bcfe Mon Sep 17 00:00:00 2001
+From 13d303b3ba245622d2405a5f3aaa2e1b1c974da4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 12 Jan 2021 06:07:37 -0500
-Subject: [PATCH 4/5] Launcher: Fix gesture navigation fail to move to bottom
+Subject: [PATCH 4/6] Launcher: Fix gesture navigation fail to move to bottom
 
   from
   https://github.com/crdroidandroid/android_packages_apps_Launcher3/commit/f84a826929d64485fdf16296019a0e4db0adb153

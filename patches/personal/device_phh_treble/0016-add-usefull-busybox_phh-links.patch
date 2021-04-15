@@ -1,7 +1,7 @@
-From 88b52faf6f9144b6244a3ca1b333255d9f63fc50 Mon Sep 17 00:00:00 2001
+From 6831e46185b8c83aecf2cb693aa8a11ede2fd45c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 07:17:39 -0500
-Subject: [PATCH 16/27] add usefull busybox_phh links
+Subject: [PATCH 16/31] add usefull busybox_phh links
 
 	sadly, but this way not works
 ---
@@ -11,10 +11,10 @@ Subject: [PATCH 16/27] add usefull busybox_phh links
  create mode 100644 busybox_links/Android.mk
 
 diff --git a/base.mk b/base.mk
-index e4c5919..7517743 100644
+index fdcbc4c..d56b61c 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -76,6 +76,10 @@ PRODUCT_PACKAGES += \
+@@ -83,6 +83,10 @@ PRODUCT_PACKAGES += \
  	bootctl \
  	vintf \
  

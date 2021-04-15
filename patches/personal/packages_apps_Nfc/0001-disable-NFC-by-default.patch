@@ -1,0 +1,29 @@
+From b7775df8d9064d214cb2743ec16e70d1518bd457 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 17 Apr 2021 03:54:46 -0400
+Subject: [PATCH] disable NFC by default
+
+  from
+  https://github.com/GrapheneOS/platform_packages_apps_Nfc/commit/d5df003b69fceb96349bd035b8a11051bac3f409
+
+Change-Id: I71a7ee232187c6b5bc2953472b0dbb58973245fa
+---
+ src/com/android/nfc/NfcService.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/com/android/nfc/NfcService.java b/src/com/android/nfc/NfcService.java
+index 837940cf..75c01791 100644
+--- a/src/com/android/nfc/NfcService.java
++++ b/src/com/android/nfc/NfcService.java
+@@ -123,7 +123,7 @@ public class NfcService implements DeviceHostListener {
+     public static final String PREF = "NfcServicePrefs";
+ 
+     static final String PREF_NFC_ON = "nfc_on";
+-    static final boolean NFC_ON_DEFAULT = true;
++    static final boolean NFC_ON_DEFAULT = false;
+     static final String PREF_NDEF_PUSH_ON = "ndef_push_on";
+     static final boolean NDEF_PUSH_ON_DEFAULT = false;
+     static final String PREF_SECURE_NFC_ON = "secure_nfc_on";
+-- 
+2.17.1
+

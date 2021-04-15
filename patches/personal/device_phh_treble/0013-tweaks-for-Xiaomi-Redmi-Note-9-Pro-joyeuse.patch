@@ -1,14 +1,14 @@
-From 22729d39f565fe0a33f4ab76d6d52833af059b62 Mon Sep 17 00:00:00 2001
+From 9e7a9025f6264d7ca231913fbf5a682fc0f48092 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 07:14:51 -0500
-Subject: [PATCH 13/27] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
+Subject: [PATCH 13/31] tweaks for Xiaomi Redmi Note 9 Pro 'joyeuse'
 
 ---
  rw-system.sh | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 90e6414..3d92111 100644
+index 8dad05c..dcf5647 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -139,8 +139,8 @@ changeKeylayout() {
@@ -22,7 +22,7 @@ index 90e6414..3d92111 100644
          -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
          -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc \
          -e redmi/curtana -e redmi/picasso -e Redmi/lancelot \
-@@ -393,7 +393,7 @@ if getprop ro.vendor.build.fingerprint | grep -iq \
+@@ -412,7 +412,7 @@ if getprop ro.vendor.build.fingerprint | grep -iq \
      -e motorola/hannah -e motorola/james -e motorola/pettyl -e xiaomi/cepheus \
      -e xiaomi/grus -e xiaomi/cereus -e xiaomi/cactus -e xiaomi/raphael -e xiaomi/davinci \
      -e xiaomi/ginkgo -e xiaomi/laurel_sprout -e xiaomi/andromeda \
@@ -31,7 +31,7 @@ index 90e6414..3d92111 100644
      mount -o bind /mnt/phh/empty_dir /vendor/lib64/soundfx
      mount -o bind /mnt/phh/empty_dir /vendor/lib/soundfx
      setprop  ro.audio.ignore_effects true
-@@ -871,7 +871,7 @@ if getprop ro.vendor.build.fingerprint |grep -iq xiaomi/cepheus;then
+@@ -890,7 +890,7 @@ if getprop ro.vendor.build.fingerprint |grep -iq xiaomi/cepheus;then
      setprop ro.netflix.bsp_rev Q855-16947-1
  fi
  

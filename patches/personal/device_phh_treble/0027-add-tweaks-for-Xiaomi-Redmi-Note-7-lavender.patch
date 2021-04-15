@@ -1,0 +1,43 @@
+From 17441edf66874bf156c16cdeb906c7060457bdf3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 28 Mar 2021 11:24:18 -0400
+Subject: [PATCH 27/31] add tweaks for Xiaomi Redmi Note 7 'lavender'
+
+---
+ rw-system.sh | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index 0a7e714..5df067f 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -142,7 +142,7 @@ changeKeylayout() {
+         -e xiaomi/platina -e iaomi/perseus -e xiaomi/ysl -e Redmi/begonia \
+         -e redmi/angelica -e redmi/angelican -e redmi/joyeuse \
+         -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
+-        -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc \
++        -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc -e xiaomi/lavender \
+         -e redmi/curtana -e redmi/picasso -e Redmi/lancelot \
+         -e Redmi/galahad -e xiaomi/olive -e Redmi/merlin -e Redmi/joyeuse \
+ 	-e POCO/citrus; then
+@@ -537,12 +537,16 @@ fi
+ 
+ if getprop ro.vendor.build.fingerprint | grep -iq -e xiaomi/daisy; then
+     setprop debug.sf.latch_unsignaled 1
+-    setprop debug.sf.enable_hwc_vds 1
+     setprop ro.telephony.default_network 9,9
+     setprop persist.vendor.radio.block_allow_data 0
+     setprop telephony.lteOnGsmDevice 1
+ fi
+ 
++if getprop ro.vendor.build.fingerprint | grep -iq -e xiaomi/lavender; then
++    setprop debug.sf.latch_unsignaled 1
++    setprop ro.netflix.bsp_rev Q660-13149-1
++fi
++
+ if getprop ro.vendor.build.fingerprint | grep -iq -E -e 'huawei|honor' || getprop persist.sys.overlay.huawei | grep -iq -E -e 'true'; then
+     p=/product/etc/nfc/libnfc_nxp_*_*.conf
+     mount -o bind "$p" /system/etc/libnfc-nxp.conf ||
+-- 
+2.17.1
+

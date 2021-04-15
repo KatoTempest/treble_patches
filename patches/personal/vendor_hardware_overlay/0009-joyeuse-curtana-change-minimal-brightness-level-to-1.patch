@@ -1,7 +1,7 @@
-From 519627e37e55f806b88abd3852ab3eab3e68b89c Mon Sep 17 00:00:00 2001
+From c1ad2484536cba1468e1a16474cff5dfc985e1fb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 17 Mar 2021 01:47:39 -0400
-Subject: [PATCH 09/11] joyeuse,curtana: change minimal brightness level to 17
+Subject: [PATCH 09/13] joyeuse,curtana: change minimal brightness level to 17
 
 ---
  Xiaomi/RedmiNote9Pro/res/values/config.xml | 4 ++--

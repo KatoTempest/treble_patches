@@ -1,7 +1,7 @@
-From 6ac74f93d780051ee86b7d85ce90c2930b5b6b1d Mon Sep 17 00:00:00 2001
+From 448beb744f591e4f547aabf78818e69e996e20c6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 6 Oct 2020 14:26:50 -0400
-Subject: [PATCH 06/27] add persist.sys.phh.qin.dt2w for QIN dt2w
+Subject: [PATCH 06/31] add persist.sys.phh.qin.dt2w for QIN dt2w
 
 ---
  phh-prop-handler.sh | 9 +++++++++
@@ -9,10 +9,10 @@ Subject: [PATCH 06/27] add persist.sys.phh.qin.dt2w for QIN dt2w
  2 files changed, 12 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 5a66742..9987af2 100644
+index 251f390..c1810b5 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -160,3 +160,12 @@ if [ "$1" == "persist.sys.phh.backlight.scale" ];then
+@@ -164,3 +164,12 @@ if [ "$1" == "persist.sys.phh.backlight.scale" ];then
      fi
      exit
  fi

@@ -1,4 +1,4 @@
-From d9622d107b453ed1c14697184f04f6d5feb6d206 Mon Sep 17 00:00:00 2001
+From 98ff121d41ba2e06672e15f1a4d851b8759c5cdd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:59:06 -0500
 Subject: [PATCH 48/63] Settings: Fix bluetooth pan memory leakage

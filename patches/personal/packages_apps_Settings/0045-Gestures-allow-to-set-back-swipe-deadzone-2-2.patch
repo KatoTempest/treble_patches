@@ -1,4 +1,4 @@
-From 07e708c71be8c59f3c449d6c0fab2671a0d4ddf8 Mon Sep 17 00:00:00 2001
+From d245d8050c54a3d341db159c0dbc74228f053ab7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:49:30 -0500
 Subject: [PATCH 45/63] Gestures: allow to set back swipe deadzone [2/2]

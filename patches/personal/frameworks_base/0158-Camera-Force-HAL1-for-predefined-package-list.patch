@@ -1,7 +1,7 @@
-From c54f77cf71354bb53223ef88060d94b311314b9d Mon Sep 17 00:00:00 2001
+From 382b96fc47d73506184a20731910a5f9554e1102 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:42:22 -0500
-Subject: [PATCH 158/203] Camera: Force HAL1 for predefined package list
+Subject: [PATCH 158/208] Camera: Force HAL1 for predefined package list
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/13a89184749bdf4e05da5e48b50a116fe380de81

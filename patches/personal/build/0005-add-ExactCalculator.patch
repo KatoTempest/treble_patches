@@ -1,7 +1,7 @@
-From 8ab4c90ca2c884e55bab28c70c5bf42c82044a99 Mon Sep 17 00:00:00 2001
+From cb575bde34e001c3c3b1319d18307f848741e7f8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 21:04:29 +0200
-Subject: [PATCH 05/14] add ExactCalculator
+Subject: [PATCH 05/15] add ExactCalculator
 
 	modified:   target/product/handheld_product.mk
 ---

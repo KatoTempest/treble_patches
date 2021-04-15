@@ -1,7 +1,7 @@
-From 180550844cf2c60bbcf1ec08dc2f633a06f4863d Mon Sep 17 00:00:00 2001
+From 6ed59ba918f1fef7a748244ab429ee277142ab52 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Dec 2019 09:03:53 +0200
-Subject: [PATCH 053/203] add recovery in power menu
+Subject: [PATCH 053/208] add recovery in power menu
 
 ---
  core/java/android/os/IPowerManager.aidl       |  1 +
@@ -270,7 +270,7 @@ index ff25439a5f9..ada39bb3484 100644
      final class RestartAction extends SinglePressAction implements LongPressAction {
          private RestartAction() {
 diff --git a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsImpl.java b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsImpl.java
-index b55b29a8041..5086928ffbb 100644
+index b55b29a8041..8398c05ef54 100644
 --- a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsImpl.java
 +++ b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsImpl.java
 @@ -180,7 +180,8 @@ public class GlobalActionsImpl implements GlobalActions, CommandQueue.Callbacks
@@ -278,8 +278,8 @@ index b55b29a8041..5086928ffbb 100644
              return mContext.getString(R.string.reboot_to_update_title);
          } else if (reason != null && reason.equals(PowerManager.REBOOT_RECOVERY)) {
 -            return mContext.getString(R.string.reboot_to_reset_title);
-+						// dirty hack, need find a normal variant
-+            return mContext.getString(R.string.global_action_recovery);
++            // dirty hack, need find a normal variant
++            return null;
          } else {
              return null;
          }
@@ -296,10 +296,10 @@ index b9431a6968f..5cc8a7d1759 100644
  
          /**
 diff --git a/services/core/java/com/android/server/power/PowerManagerService.java b/services/core/java/com/android/server/power/PowerManagerService.java
-index 4ad0877124e..7016ac2042f 100644
+index b5117834f64..b00480dfda7 100644
 --- a/services/core/java/com/android/server/power/PowerManagerService.java
 +++ b/services/core/java/com/android/server/power/PowerManagerService.java
-@@ -5150,6 +5150,22 @@ public final class PowerManagerService extends SystemService
+@@ -5166,6 +5166,22 @@ public final class PowerManagerService extends SystemService
              }
          }
  
@@ -323,7 +323,7 @@ index 4ad0877124e..7016ac2042f 100644
           * Reboots the device into safe mode
           *
 diff --git a/services/core/java/com/android/server/power/ShutdownThread.java b/services/core/java/com/android/server/power/ShutdownThread.java
-index bc722f18165..1c0eeb33878 100644
+index bc722f18165..3a050372856 100644
 --- a/services/core/java/com/android/server/power/ShutdownThread.java
 +++ b/services/core/java/com/android/server/power/ShutdownThread.java
 @@ -237,6 +237,24 @@ public final class ShutdownThread extends Thread {
@@ -360,7 +360,7 @@ index bc722f18165..1c0eeb33878 100644
 -                pd.setMessage(context.getText(
 -                            com.android.internal.R.string.reboot_to_reset_message));
 +                // dirty hack, need find a normal variant
-+                pd.setTitle(context.getText(com.android.internal.R.string.global_action_recovery));
++                //pd.setTitle(context.getText(com.android.internal.R.string.global_action_recovery));
 +                pd.setMessage(context.getText(com.android.internal.R.string.reboot_to_reset_message));
                  pd.setIndeterminate(true);
              }

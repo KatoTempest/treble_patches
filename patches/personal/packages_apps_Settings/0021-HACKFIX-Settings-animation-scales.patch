@@ -1,4 +1,4 @@
-From 2f07e5372b7961f86e13a0317af41fe027409ca5 Mon Sep 17 00:00:00 2001
+From 1323256aa4cfb7a3a87722e2f53c135867e61913 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 8 Aug 2020 05:46:22 -0400
 Subject: [PATCH 21/63] HACKFIX: Settings: animation scales

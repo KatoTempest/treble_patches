@@ -1,7 +1,7 @@
-From 8d2aaa9828d3e1b43ae8839261bed3c244bdf797 Mon Sep 17 00:00:00 2001
+From c7c5062967d12c02a3ccc26e7c7a4c46c2a21d97 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 7 Oct 2020 09:07:56 -0400
-Subject: [PATCH 03/11] initial Redmi9 'galahad' overlay
+Subject: [PATCH 03/13] initial Redmi9 'galahad' overlay
 
   -wip-
 ---

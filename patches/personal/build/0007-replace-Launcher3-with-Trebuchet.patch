@@ -1,7 +1,7 @@
-From f2711e9bc4b724c87d553fee37fa92a8faa06266 Mon Sep 17 00:00:00 2001
+From ca9dd5b2318fc7b49978a207d0f61531bfab1e48 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Sep 2020 12:31:33 -0400
-Subject: [PATCH 07/14] replace Launcher3 with Trebuchet
+Subject: [PATCH 07/15] replace Launcher3 with Trebuchet
 
 Change-Id: I7a64c29ea2053eede493e306010a7accb5ee552c
 ---

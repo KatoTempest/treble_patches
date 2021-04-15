@@ -1,4 +1,4 @@
-From a1879a03c53f67cea23ad3b439d5d6186cfb440f Mon Sep 17 00:00:00 2001
+From a6fb7605b2b560cfc93f990d9e46ea1922ab1de0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 2 Mar 2020 13:42:28 +0200
 Subject: [PATCH 10/63] disable auto dark mode on battery saver

@@ -1,7 +1,7 @@
-From 020723867e958e1e2d07ba3ec85cea8ca10349a4 Mon Sep 17 00:00:00 2001
+From 10513561b2216b47695cc2aea267c34c1b230a84 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:58:25 -0500
-Subject: [PATCH 134/203] Fix deadlock between AppOpsService and
+Subject: [PATCH 134/208] Fix deadlock between AppOpsService and
  HistoricalRegistry
 
   from
@@ -11,7 +11,7 @@ Subject: [PATCH 134/203] Fix deadlock between AppOpsService and
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/services/core/java/com/android/server/appop/AppOpsService.java b/services/core/java/com/android/server/appop/AppOpsService.java
-index 4e194e2e495..b0a476cd342 100644
+index 902b2e2228f..2bd23e93407 100644
 --- a/services/core/java/com/android/server/appop/AppOpsService.java
 +++ b/services/core/java/com/android/server/appop/AppOpsService.java
 @@ -1795,9 +1795,8 @@ public class AppOpsService extends IAppOpsService.Stub {

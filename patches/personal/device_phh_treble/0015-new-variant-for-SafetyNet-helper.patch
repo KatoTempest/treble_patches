@@ -1,7 +1,7 @@
-From 9f22ed908149ffa0ef9854affd13030cd4774056 Mon Sep 17 00:00:00 2001
+From 8864a84bf961b1415ad1273a7ace79a9121ac5a6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH 15/27] new variant for SafetyNet helper
+Subject: [PATCH 15/31] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-
@@ -14,10 +14,10 @@ Subject: [PATCH 15/27] new variant for SafetyNet helper
  create mode 100644 secure.sh
 
 diff --git a/base.mk b/base.mk
-index cffbc57..e4c5919 100644
+index 9c39f07..fdcbc4c 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -60,7 +60,7 @@ PRODUCT_COPY_FILES += \
+@@ -67,7 +67,7 @@ PRODUCT_COPY_FILES += \
  	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
  	device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
  	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \
@@ -56,10 +56,10 @@ index b7d7177..0000000
 -mount -o remount,ro $MOUNTPOINT
 -#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index f345a5e..1bace1f 100644
+index 83008d5..d0a9fc0 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -189,3 +189,17 @@ if [ "$1" == "persist.sys.phh.root" ]; then
+@@ -193,3 +193,17 @@ if [ "$1" == "persist.sys.phh.root" ]; then
      fi
      exit
  fi

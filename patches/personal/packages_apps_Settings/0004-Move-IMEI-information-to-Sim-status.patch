@@ -1,4 +1,4 @@
-From 56fa3662686fdf2ec93e8a51d5c2fa9a7dec9b49 Mon Sep 17 00:00:00 2001
+From c8e7ba9186bdc12dfb03194cf7b5b5f0bb06050f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 14:42:14 +0200
 Subject: [PATCH 04/63] Move IMEI information to Sim status
@@ -110,7 +110,7 @@ index 27d12a8cb1..9383499689 100644
      </LinearLayout>
  </ScrollView>
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 8bc30d8c0d..dabbc8dbe6 100644
+index 226398ea5e..5b1ea50810 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
 @@ -7486,7 +7486,7 @@

@@ -1,7 +1,7 @@
-From b52949196a54fba37df67b716fb1848a30f9585b Mon Sep 17 00:00:00 2001
+From 538f017519173832f2419c645e8c92c486cad204 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 7 Mar 2021 01:53:42 -0500
-Subject: [PATCH 14/14] Use 'release-keys' for build tag
+Subject: [PATCH 14/15] Use 'release-keys' for build tag
 
   from
   https://github.com/crdroidandroid/android_build/commit/356372a341cd73d6e34c4f3464ef73bc0f6fb78e

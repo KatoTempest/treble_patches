@@ -1,7 +1,7 @@
-From ffa0e5ee14b9bdd99b856c60a00517caee1ae0a9 Mon Sep 17 00:00:00 2001
+From fb3b38bd3f2cd33358542e84b219841049cb5bc5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:28:36 -0500
-Subject: [PATCH 067/203] core: Remove default aspect ratio limit for old apps
+Subject: [PATCH 067/208] core: Remove default aspect ratio limit for old apps
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/70296885fca94f6d80bf079634f155236a4cb9b7

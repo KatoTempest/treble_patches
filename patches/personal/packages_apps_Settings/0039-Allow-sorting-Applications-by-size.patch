@@ -1,4 +1,4 @@
-From c5e3e2012bc6b6d024eb87606ae8c96f6b47aac7 Mon Sep 17 00:00:00 2001
+From 6a64f22b097a81abac968da55e623d5dae73c52b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:14:03 -0500
 Subject: [PATCH 39/63] Allow sorting Applications by size

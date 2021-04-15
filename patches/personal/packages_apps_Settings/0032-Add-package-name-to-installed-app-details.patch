@@ -1,4 +1,4 @@
-From 03e1bdfc5c656634f21448115c1e327939c6ebe8 Mon Sep 17 00:00:00 2001
+From 00b619a3524311802047c781fe268d91dce16f22 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:53:16 -0500
 Subject: [PATCH 32/63] Add package name to installed app details

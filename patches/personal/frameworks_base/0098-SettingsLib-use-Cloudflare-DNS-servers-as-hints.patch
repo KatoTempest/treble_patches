@@ -1,7 +1,7 @@
-From c61fd9393ead9c25dae7066d5efbcc01d5102a85 Mon Sep 17 00:00:00 2001
+From 648fbe3c479c356f0c944c9d1ad25c6b82803100 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 10:37:46 -0400
-Subject: [PATCH 098/203] SettingsLib: use Cloudflare DNS servers as hints
+Subject: [PATCH 098/208] SettingsLib: use Cloudflare DNS servers as hints
 
 Cloudflare DNS has a better privacy policy than Google Public DNS while
 still supporting DNS over TLS.

@@ -1,7 +1,7 @@
-From 1276290f86d1637a916df1abd9c4de1d1ee6bba2 Mon Sep 17 00:00:00 2001
+From a0938465cdf9d5ee8750bed5cc7e6ad7bcb05b92 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 18 Mar 2021 05:49:00 -0400
-Subject: [PATCH 10/11] rework curtana/joyeuse overlays
+Subject: [PATCH 10/13] rework curtana/joyeuse overlays
 
 ---
  Xiaomi/RedmiNote9Pro/res/values/config.xml | 271 +++++++++++++--------

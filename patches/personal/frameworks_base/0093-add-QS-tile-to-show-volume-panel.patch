@@ -1,7 +1,7 @@
-From b575788b22a8788a55d56d0d882eac39f180bd41 Mon Sep 17 00:00:00 2001
+From 5040136793b242e93cc59ad56383fc6ae8a63c0a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 21 Jul 2020 03:03:30 +0300
-Subject: [PATCH 093/203] add QS tile to show volume panel
+Subject: [PATCH 093/208] add QS tile to show volume panel
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/4ac0ff666e2ffbe28103d550a6d77f7a7a3fddbe

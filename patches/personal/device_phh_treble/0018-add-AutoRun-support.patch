@@ -1,7 +1,7 @@
-From 73138419d04b9daa2b03ddb1f0e09cee7cb8167f Mon Sep 17 00:00:00 2001
+From bb30a43afc839fb2d4d687a3bcf3f36dfd09774f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 14:45:26 -0500
-Subject: [PATCH 18/27] add AutoRun support
+Subject: [PATCH 18/31] add AutoRun support
 
 ---
  phh-prop-handler.sh | 14 ++++++++++++++
@@ -9,10 +9,10 @@ Subject: [PATCH 18/27] add AutoRun support
  2 files changed, 17 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 1bace1f..2aad32b 100644
+index d0a9fc0..e9d4c9f 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -203,3 +203,17 @@ if [ "$1" == "persist.sys.phh.safetynet" ]; then
+@@ -207,3 +207,17 @@ if [ "$1" == "persist.sys.phh.safetynet" ]; then
      /system/bin/sh /sdcard/phh/secure
      exit
  fi

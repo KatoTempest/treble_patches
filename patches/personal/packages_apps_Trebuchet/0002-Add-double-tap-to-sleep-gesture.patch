@@ -1,7 +1,7 @@
-From 301aa70f33e055cb85e2ab0ada895d7a0cfb87f8 Mon Sep 17 00:00:00 2001
+From acb90ecdefbd0d91fe810dde297483781dd6de5a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 Feb 2020 22:25:00 +0200
-Subject: [PATCH 2/5] Add double tap to sleep gesture
+Subject: [PATCH 2/6] Add double tap to sleep gesture
 
   * based on
   https://github.com/crdroidandroid/android_packages_apps_Launcher3/commit/1ced8c431b3a8ccb397199f68e1dd1ac401a90d4
@@ -73,7 +73,7 @@ index e3daddc2a..50c730691 100644
  LOCAL_SYSTEM_EXT_MODULE := true
  LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3 Launcher3QuickStep
 diff --git a/AndroidManifest-common.xml b/AndroidManifest-common.xml
-index 2d4e1cfff..92b8a6741 100644
+index 2ba068f58..2b0dc8e6f 100644
 --- a/AndroidManifest-common.xml
 +++ b/AndroidManifest-common.xml
 @@ -19,7 +19,9 @@
@@ -154,7 +154,7 @@ index 36eb21363..c95f6def4 100644
          android:key="pref_allowRotation"
          android:title="@string/allow_rotation_title"
 diff --git a/src/com/android/launcher3/Utilities.java b/src/com/android/launcher3/Utilities.java
-index c9a8270a7..8decefe9a 100644
+index b32b39618..4201b535a 100644
 --- a/src/com/android/launcher3/Utilities.java
 +++ b/src/com/android/launcher3/Utilities.java
 @@ -140,6 +140,9 @@ public final class Utilities {

@@ -1,7 +1,7 @@
-From 7069e312cdf32483c6cb3661f35981b25d8a00b0 Mon Sep 17 00:00:00 2001
+From 85ab79243794d0ec5d3e09a1784611b0f5a7331b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 12:49:38 -0500
-Subject: [PATCH 115/203] WifiDisplayController: handle preexisting p2p
+Subject: [PATCH 115/208] WifiDisplayController: handle preexisting p2p
  connection status
 
   from

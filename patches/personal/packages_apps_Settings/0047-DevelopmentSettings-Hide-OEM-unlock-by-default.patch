@@ -1,4 +1,4 @@
-From f12d48a20f78360c2518b0329bdb52948944b427 Mon Sep 17 00:00:00 2001
+From b62f1ef56a2e754657677f93569a5a8adb4a0d6a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:57:22 -0500
 Subject: [PATCH 47/63] DevelopmentSettings: Hide OEM unlock by default

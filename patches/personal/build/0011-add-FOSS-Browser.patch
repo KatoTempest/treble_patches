@@ -1,7 +1,7 @@
-From b15d6cda70f7903de8c5f51168037b49694f135c Mon Sep 17 00:00:00 2001
+From 276a78e13c6ca4f3d223ed95e7c8d87913c5f95a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 02:26:33 -0500
-Subject: [PATCH 11/14] add FOSS Browser
+Subject: [PATCH 11/15] add FOSS Browser
 
 Change-Id: I0b8d18a560a5e66bfc5850d1febdcb8f34b78efc
 ---
