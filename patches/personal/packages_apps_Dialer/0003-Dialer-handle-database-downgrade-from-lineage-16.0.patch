@@ -1,7 +1,7 @@
-From eb631d2037dd00102df80dc2e60fa12d1a4075d2 Mon Sep 17 00:00:00 2001
+From bc2c92fc02d7ab21f75b30ceefb43fcc071bf56e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 21 Dec 2020 04:32:23 -0500
-Subject: [PATCH 3/6] Dialer: handle database downgrade from lineage-16.0
+Subject: [PATCH 3/7] Dialer: handle database downgrade from lineage-16.0
 
   from
   https://github.com/LineageOS/android_packages_apps_Dialer/commit/06a730400ca3ef7b13c17bdab7cc1f1a85fb680f

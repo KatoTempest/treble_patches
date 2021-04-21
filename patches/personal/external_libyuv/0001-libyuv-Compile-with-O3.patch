@@ -1,0 +1,28 @@
+From 5d26adc01458bcb7c5ce76fe66a9a7216f2deabd Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 8 Mar 2021 07:11:26 -0500
+Subject: [PATCH] libyuv: Compile with -O3
+
+  from
+  https://github.com/crdroidandroid/android_external_libyuv/commit/f5c70058ff146128516fbc6eb9cf9e4abe153858
+
+Change-Id: I2ecf4a348c56e6ea94f99b067b9e40352b0b6703
+---
+ files/Android.bp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/files/Android.bp b/files/Android.bp
+index 6ef6e8d..c763bfd 100644
+--- a/files/Android.bp
++++ b/files/Android.bp
+@@ -59,6 +59,7 @@ cc_library {
+         "-Wno-unused-parameter",
+         "-fexceptions",
+         "-DHAVE_JPEG",
++        "-O3",
+     ],
+ 
+     shared_libs: ["libjpeg"],
+-- 
+2.17.1
+

@@ -1,7 +1,7 @@
-From dd6631a3f7b9034bbb49c055e00de758fb35f507 Mon Sep 17 00:00:00 2001
+From 15d2094b6d38dcf01cc011ed85ddf812afc18088 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
-Subject: [PATCH 08/11] add Auto brightness overlay
+Subject: [PATCH 08/13] add Auto brightness overlay
 
 ---
  AutoBrightOverlay/Android.mk            |  8 ++++++++
@@ -45,7 +45,7 @@ index 0000000..f251f14
 +</manifest>
 diff --git a/AutoBrightOverlay/res/values/config.xml b/AutoBrightOverlay/res/values/config.xml
 new file mode 100644
-index 0000000..83ae4fb
+index 0000000..8abe291
 --- /dev/null
 +++ b/AutoBrightOverlay/res/values/config.xml
 @@ -0,0 +1,4 @@
@@ -54,7 +54,7 @@ index 0000000..83ae4fb
 +    <bool name="config_automatic_brightness_available">true</bool>
 +</resources>
 diff --git a/overlay.mk b/overlay.mk
-index 18f1cf3..040190b 100755
+index 3aac8ce..05ad6f5 100755
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \

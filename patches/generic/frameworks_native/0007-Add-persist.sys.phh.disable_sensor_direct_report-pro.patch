@@ -1,4 +1,4 @@
-From 3b9c00e6ad9c87141d9ac8dfe819c3e2b79a90a1 Mon Sep 17 00:00:00 2001
+From 22997e246f5d15473feb92026cd5b3176b6289fc Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 30 Sep 2020 22:51:37 +0200
 Subject: [PATCH 07/12] Add persist.sys.phh.disable_sensor_direct_report

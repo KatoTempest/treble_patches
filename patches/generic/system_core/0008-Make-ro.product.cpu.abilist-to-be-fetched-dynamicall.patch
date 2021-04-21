@@ -1,7 +1,7 @@
-From a07c0e7389764e9be0db555d85b240702afaa3d0 Mon Sep 17 00:00:00 2001
+From fd2a7cfec374346a62d3ee83dde44dae2650ad5a Mon Sep 17 00:00:00 2001
 From: SzuWei Lin <szuweilin@google.com>
 Date: Thu, 31 Dec 2020 16:52:39 +0800
-Subject: [PATCH 08/11] Make ro.product.cpu.abilist* to be fetched dynamically
+Subject: [PATCH 8/8] Make ro.product.cpu.abilist* to be fetched dynamically
 
 Basically, ro.product.cpu.abilist* are defined by
 ro.vendor.cpu.abilist*. And they can be overried by
@@ -18,10 +18,10 @@ Change-Id: I01ae01af099a4ec8fe3d4525edecc233a477ff60
  1 file changed, 64 insertions(+)
 
 diff --git a/init/property_service.cpp b/init/property_service.cpp
-index cdabbbde2..9afb78b5a 100644
+index cc5f58957..019955b16 100644
 --- a/init/property_service.cpp
 +++ b/init/property_service.cpp
-@@ -875,6 +875,69 @@ static void property_derive_build_fingerprint() {
+@@ -873,6 +873,69 @@ static void property_derive_build_fingerprint() {
      }
  }
  
@@ -91,7 +91,7 @@ index cdabbbde2..9afb78b5a 100644
  void PropertyLoadBootDefaults() {
      // TODO(b/117892318): merge prop.default and build.prop files into one
      // We read the properties and their values into a map, in order to always allow properties
-@@ -922,6 +985,7 @@ void PropertyLoadBootDefaults() {
+@@ -914,6 +977,7 @@ void PropertyLoadBootDefaults() {
  
      property_initialize_ro_product_props();
      property_derive_build_fingerprint();

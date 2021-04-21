@@ -1,0 +1,27 @@
+From 299c04019746ac3b0fda244be8dddcba06af147c Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 24 Mar 2021 16:36:59 -0400
+Subject: [PATCH 25/31] add fix for Sony Xperia X notifications led
+
+---
+ rw-system.sh | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index a08f171..0a7e714 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -654,6 +654,10 @@ if getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && [ "$vndk" -ge
+     fi
+ fi
+ 
++if getprop ro.vendor.build.fingerprint | grep -q -e Sony/aosp_f5121/suzu; then
++    chown system:system /sys/class/leds/*/breath
++fi
++
+ # For Nubia Red Magic 6 audio policy configuration
+ if getprop ro.vendor.build.fingerprint | grep -q -e nubia/NX669; then
+     umount /vendor/etc/audio
+-- 
+2.17.1
+

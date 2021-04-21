@@ -1,7 +1,7 @@
-From d9efcdad5de14bc6a7cf61f23676d28d2f222346 Mon Sep 17 00:00:00 2001
+From d8f467fba9a59c4ccd4842955cd3bc61d65546c8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 10 Feb 2020 22:35:26 +0200
-Subject: [PATCH 002/153] los statusbar fix spacing
+Subject: [PATCH 002/164] los statusbar fix spacing
 
 	modified:   packages/SystemUI/src/com/android/systemui/statusbar/StatusBarIconView.java
 ---

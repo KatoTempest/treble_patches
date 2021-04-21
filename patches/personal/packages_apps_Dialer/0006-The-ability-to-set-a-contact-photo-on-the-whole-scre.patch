@@ -1,7 +1,7 @@
-From 7552f81e4d5b9ffc82e556f8e446757cfe288a0e Mon Sep 17 00:00:00 2001
+From e864451564deae6edf898604b8c032c3ea66e162 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 4 Apr 2020 00:46:52 +0300
-Subject: [PATCH 6/6] The ability to set a contact photo on the whole screen
+Subject: [PATCH 6/7] The ability to set a contact photo on the whole screen
 
   * from
   https://github.com/syberia-project/platform_packages_apps_Dialer/commit/1bb45c8769a3780c6a85135d96d8e0426b39d4cb
@@ -95,10 +95,10 @@ index 000000000..4047dc437
 +        android:defaultValue="false" />
 +</PreferenceScreen>
 diff --git a/java/com/android/dialer/app/settings/DialerSettingsActivity.java b/java/com/android/dialer/app/settings/DialerSettingsActivity.java
-index 6ffa62a44..f066f1be5 100644
+index cdea6faa5..54c66381b 100644
 --- a/java/com/android/dialer/app/settings/DialerSettingsActivity.java
 +++ b/java/com/android/dialer/app/settings/DialerSettingsActivity.java
-@@ -179,6 +179,11 @@ public class DialerSettingsActivity extends AppCompatPreferenceActivity {
+@@ -173,6 +173,11 @@ public class DialerSettingsActivity extends AppCompatPreferenceActivity {
        target.add(assistedDialingSettingsHeader);
      }
  

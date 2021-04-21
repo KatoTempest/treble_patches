@@ -1,0 +1,24 @@
+From f28340f163bf6998f25355038eafd06fd39d2519 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 21 Feb 2021 05:50:38 -0500
+Subject: [PATCH 4/4] add new QS tiles
+
+Change-Id: I1bc810d624dd4b9992bf2a0f2ed146d680edb941
+---
+ .../org/lineageos/internal/logging/LineageMetricsLogger.java    | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/sdk/src/java/org/lineageos/internal/logging/LineageMetricsLogger.java b/sdk/src/java/org/lineageos/internal/logging/LineageMetricsLogger.java
+index 31c75e44..9bc14dba 100644
+--- a/sdk/src/java/org/lineageos/internal/logging/LineageMetricsLogger.java
++++ b/sdk/src/java/org/lineageos/internal/logging/LineageMetricsLogger.java
+@@ -74,4 +74,6 @@ public class LineageMetricsLogger extends MetricsLogger {
+     public static final int TILE_AOD = BASE + 46;
+     public static final int TILE_POWERSHARE = BASE + 47;
+     public static final int TILE_ANTI_FLICKER = BASE + 48;
++    public static final int TILE_REBOOT = BASE + 49;
++    public static final int TILE_DATASWITCH = BASE + 50;
+ }
+-- 
+2.17.1
+

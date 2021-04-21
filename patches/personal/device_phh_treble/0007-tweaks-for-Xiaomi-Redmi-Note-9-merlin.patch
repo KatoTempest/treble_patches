@@ -1,7 +1,7 @@
-From 04d89338cd4ac0f5405f2307cd9188758e07a74e Mon Sep 17 00:00:00 2001
+From 407b606e94982128c55165643ec966540acecf2a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 07/23] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 07/31] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)
@@ -10,19 +10,19 @@ Subject: [PATCH 07/23] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index bc87585..133a25e 100644
+index 4d919f8..37d77dd 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -144,7 +144,7 @@ changeKeylayout() {
          -e xiaomi/nitrogen -e xiaomi/sakura -e xiaomi/andromeda \
          -e xiaomi/whyred -e xiaomi/tulip -e xiaomi/onc \
          -e redmi/curtana -e redmi/picasso -e Redmi/lancelot \
--        -e Redmi/galahad -e xiaomi/olive -e Redmi/angelica -e Redmi/joyeuse ; then
-+        -e Redmi/galahad -e xiaomi/olive  -e Redmi/merlin -e Redmi/joyeuse ; then
+-        -e Redmi/galahad -e xiaomi/olive -e Redmi/angelica -e Redmi/joyeuse \
++        -e Redmi/galahad -e xiaomi/olive -e Redmi/merlin -e Redmi/joyeuse \
+ 	-e POCO/citrus; then
          if [ ! -f /mnt/phh/keylayout/uinput-goodix.kl ]; then
            cp /system/phh/empty /mnt/phh/keylayout/uinput-goodix.kl
-           chmod 0644 /mnt/phh/keylayout/uinput-goodix.kl
-@@ -356,10 +356,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
+@@ -375,10 +375,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
      -e xiaomi/nitrogen -e xiaomi/whyred -e xiaomi/platina \
      -e xiaomi/ysl -e nubia/nx60 -e nubia/nx61 -e xiaomi/tulip -e Redmi/begonia\
      -e xiaomi/lavender -e xiaomi/olive -e xiaomi/olivelite -e xiaomi/pine \

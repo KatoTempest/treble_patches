@@ -1,7 +1,7 @@
 From dea70eff7feddd902dea97c6d1c7b5f221f0b2ef Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 20 Feb 2021 03:23:42 -0500
-Subject: [PATCH 01/20] Revert "camera: Allow devices to load custom
+Subject: [PATCH] Revert "camera: Allow devices to load custom
  CameraParameter code"
 
 This reverts commit 5a5606dbd92f01de322c797a7128fce69902d067.

@@ -1,7 +1,7 @@
-From 637d58524bb9635130e893d7962fecb58e9b178f Mon Sep 17 00:00:00 2001
+From bcd5b48fa59d630375fc7e5048e39d9667a7f85e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 21 Oct 2020 13:58:06 -0400
-Subject: [PATCH 08/23] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
+Subject: [PATCH 08/31] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
 
   from
   https://forum.xda-developers.com/showpost.php?p=83640257&postcount=365
@@ -10,10 +10,10 @@ Subject: [PATCH 08/23] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 133a25e..fe56bae 100644
+index 37d77dd..fe1add2 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -360,8 +360,8 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
+@@ -379,8 +379,8 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
      setprop persist.sys.qcom-brightness "$(cat /sys/class/leds/lcd-backlight/max_brightness)"
  fi
  

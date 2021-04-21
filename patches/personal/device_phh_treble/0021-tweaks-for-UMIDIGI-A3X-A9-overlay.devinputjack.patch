@@ -1,17 +1,17 @@
-From 7f29408f50a77591a104646dfaf5eb84073d2653 Mon Sep 17 00:00:00 2001
+From f776c414923e148a43320d5d7daf005191a3bb93 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:46:57 -0500
-Subject: [PATCH 21/23] tweaks for UMIDIGI A3X & A9 (overlay.devinputjack)
+Subject: [PATCH 21/31] tweaks for UMIDIGI A3X & A9 (overlay.devinputjack)
 
 ---
  rw-system.sh | 5 +++++
  1 file changed, 5 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 3d92111..1c9f263 100644
+index dcf5647..fe4876a 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -365,6 +365,11 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel
+@@ -384,6 +384,11 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel
      setprop persist.sys.overlay.devinputjack true
  fi
  

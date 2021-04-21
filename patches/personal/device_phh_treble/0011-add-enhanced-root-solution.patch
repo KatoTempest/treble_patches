@@ -1,7 +1,7 @@
-From 83ea671d447069f3cf85b12a090f6618cfd53750 Mon Sep 17 00:00:00 2001
+From f452fc214a3f1639e3d544436d27826b07e44c38 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 11/23] add enhanced root solution
+Subject: [PATCH 11/31] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)
@@ -16,10 +16,10 @@ Subject: [PATCH 11/23] add enhanced root solution
  create mode 100644 phh.superuser.apk
 
 diff --git a/base.mk b/base.mk
-index 1ef65b0..c87aa6d 100644
+index 5d16dbe..9c39f07 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -66,6 +66,9 @@ PRODUCT_COPY_FILES += \
+@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
  	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
  	device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
  	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \
@@ -59,10 +59,10 @@ index 0000000..b7d7177
 +mount -o remount,ro $MOUNTPOINT
 +#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 9987af2..f345a5e 100644
+index c1810b5..83008d5 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -169,3 +169,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
+@@ -173,3 +173,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
      echo "$prop_value" > /sys/devices/platform/soc/soc:ap-apb/70800000.i2c/i2c-3/3-0038/fts_gesture_mode
      exit
  fi
