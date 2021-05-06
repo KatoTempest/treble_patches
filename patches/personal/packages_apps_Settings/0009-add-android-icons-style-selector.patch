@@ -1,7 +1,7 @@
-From 42190cfa4ece6753eb9a19548e6e7fc369bbc3a8 Mon Sep 17 00:00:00 2001
+From 771746f6d275795d6ee66a0413b8728b61436bd0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 7 Feb 2020 04:14:40 +0200
-Subject: [PATCH 09/63] add android icons style selector
+Subject: [PATCH 09/62] add android icons style selector
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/ffc55319646d0fba65d65177c1a1ddbbc290de24

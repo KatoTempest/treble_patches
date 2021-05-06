@@ -1,7 +1,7 @@
-From be2c820b4a02ba2fa33c28cb35f025b6dd7f3a39 Mon Sep 17 00:00:00 2001
+From dfc0b5f20ea3ccf2e098535865ff8963b89db463 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:55:28 -0500
-Subject: [PATCH 42/63] Developer opts: set default notification channel
+Subject: [PATCH 42/62] Developer opts: set default notification channel
  warnings
 
   from

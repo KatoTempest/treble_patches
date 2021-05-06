@@ -1,7 +1,7 @@
-From 87bc9c913926591a0221be7cf7b9d4643d33eb66 Mon Sep 17 00:00:00 2001
+From 3238db17c63adf427f55e9f873a8e7428012293b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:32:06 -0400
-Subject: [PATCH 6/7] input: Adjust priority
+Subject: [PATCH 6/9] input: Adjust priority
 
   from
   https://github.com/LineageOS/android_frameworks_native/commit/7e654fcc223f6d191528028b7781bb23254115d7

@@ -1,7 +1,7 @@
-From d9da163e76a5ba32485f2157b6b2db2fd6a6ab95 Mon Sep 17 00:00:00 2001
+From 45f22fca9107a9e38261980a6e4dbcdc65fbc9de Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 05:43:20 -0500
-Subject: [PATCH 095/208] SystemUI: Add AmbientDisplay tile
+Subject: [PATCH 095/210] SystemUI: Add AmbientDisplay tile
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/78e8bfc0268cdc70a7b338e187d235579cebbaa4

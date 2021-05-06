@@ -1,7 +1,7 @@
-From 40f371eef37559ee9afaff3adee731d3400664f8 Mon Sep 17 00:00:00 2001
+From 2ef06d37f430adaab86dbe6772039662cf6ea4af Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:24:45 -0400
-Subject: [PATCH 4/7] surfaceflinger: switch to -O3
+Subject: [PATCH 4/9] surfaceflinger: switch to -O3
 
 ---
  libs/nativedisplay/Android.bp      | 1 +

@@ -1,7 +1,7 @@
-From 1bf5fe2fd06706af2da9fa2b142318d494a98ae5 Mon Sep 17 00:00:00 2001
+From 4159c45d100d3ab7b56c2ca2de68e983411420a6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:21:36 -0400
-Subject: [PATCH 3/7] libs: gui: switch to -O3
+Subject: [PATCH 3/9] libs: gui: switch to -O3
 
 ---
  libs/gui/Android.bp | 5 +++++

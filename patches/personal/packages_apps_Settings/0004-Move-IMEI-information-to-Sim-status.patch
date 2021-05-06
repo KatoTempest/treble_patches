@@ -1,7 +1,7 @@
-From c8e7ba9186bdc12dfb03194cf7b5b5f0bb06050f Mon Sep 17 00:00:00 2001
+From 3dbddc476c9c016ace71f1d775514548a0816a9d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 14:42:14 +0200
-Subject: [PATCH 04/63] Move IMEI information to Sim status
+Subject: [PATCH 04/62] Move IMEI information to Sim status
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_Settings/commit/3741d37c0639883cdc6855bb371fce259ffc0775#diff-8e0314d48f88bb73a3b9ebce6165548d

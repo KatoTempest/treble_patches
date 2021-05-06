@@ -1,7 +1,7 @@
-From 9c177c674276517e816dac7b34bc91392c5efa1b Mon Sep 17 00:00:00 2001
+From 00c8a8f2c9416d12ca791bab188429e2dcda4af4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 06:48:59 -0500
-Subject: [PATCH 100/208] fix SystemUI crash from null stored in non-nullable
+Subject: [PATCH 100/210] fix SystemUI crash from null stored in non-nullable
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/645b62334fe5d1421adcf4304155bcbda2b42645

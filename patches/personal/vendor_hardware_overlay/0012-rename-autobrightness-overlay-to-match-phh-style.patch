@@ -1,4 +1,4 @@
-From 6f55936196305f0fdd4e0c97a87ef6eaa973216f Mon Sep 17 00:00:00 2001
+From cbd59187782d884ad34dd5941403419ea815ee3c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 00:33:37 -0400
 Subject: [PATCH 12/13] rename autobrightness overlay to match phh style
@@ -34,7 +34,7 @@ index f251f14..5919d1a 100644
          android:versionName="1.0">
          <overlay android:targetPackage="android"
 diff --git a/overlay.mk b/overlay.mk
-index 05ad6f5..17477dd 100755
+index de6ae81..9907b80 100755
 --- a/overlay.mk
 +++ b/overlay.mk
 @@ -12,7 +12,6 @@ PRODUCT_PACKAGES += \
@@ -42,10 +42,10 @@ index 05ad6f5..17477dd 100755
  	treble-overlay-asus-zenfonemaxm2 \
  	treble-overlay-asus-zenfonemaxshot \
 -	treble-overlay-autobright \
+ 	treble-overlay-blackview-bv6900 \
  	treble-overlay-blackview-bv9500plus \
  	treble-overlay-bq-jeice \
- 	treble-overlay-caf-ims \
-@@ -54,6 +53,7 @@ PRODUCT_PACKAGES += \
+@@ -55,6 +54,7 @@ PRODUCT_PACKAGES += \
  	treble-overlay-lg-velvet \
  	treble-overlay-misc-aod \
  	treble-overlay-misc-aod-systemui \

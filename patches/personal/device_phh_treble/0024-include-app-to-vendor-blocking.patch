@@ -1,7 +1,7 @@
-From 5ff5d62586b07ba69123d80e08d9ded6feee6afc Mon Sep 17 00:00:00 2001
+From 70f7391744863bfb4e4ba56bf24acd3378d94345 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Mar 2021 07:52:26 -0400
-Subject: [PATCH 24/31] include 'app' to vendor blocking
+Subject: [PATCH 24/33] include 'app' to vendor blocking
 
 ---
  phh-on-data.sh | 11 ++++++-----

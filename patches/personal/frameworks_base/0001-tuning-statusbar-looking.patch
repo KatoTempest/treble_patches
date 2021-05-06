@@ -1,7 +1,7 @@
-From 1dfc57984920b28d769ae19c94de6d63e6e190e5 Mon Sep 17 00:00:00 2001
+From 6ef5130595bc73cd30425b3e4dac296071860cec Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 14 Dec 2019 14:14:32 +0200
-Subject: [PATCH 001/208] tuning statusbar looking
+Subject: [PATCH 001/210] tuning statusbar looking
 
 	modified:   core/res/res/values/dimens.xml
 	modified:   packages/SystemUI/res/drawable/stat_sys_alarm.xml
@@ -51,7 +51,7 @@ Subject: [PATCH 001/208] tuning statusbar looking
  20 files changed, 79 insertions(+), 75 deletions(-)
 
 diff --git a/core/res/res/values/dimens.xml b/core/res/res/values/dimens.xml
-index ebaf85c64a1..2a5acb06d8b 100644
+index d165930d3c9..7b518d4cbc1 100644
 --- a/core/res/res/values/dimens.xml
 +++ b/core/res/res/values/dimens.xml
 @@ -74,12 +74,12 @@

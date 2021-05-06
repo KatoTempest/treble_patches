@@ -1,7 +1,7 @@
-From eec5242156a8a5f06bad15e2450da1c894d27686 Mon Sep 17 00:00:00 2001
+From b637909ef623ebc36de78601416ec468cb2a22fc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:18:04 -0400
-Subject: [PATCH 200/208] add treble app to the allow-in-power-save list
+Subject: [PATCH 200/210] add treble app to the allow-in-power-save list
 
 ---
  data/etc/platform.xml | 2 ++

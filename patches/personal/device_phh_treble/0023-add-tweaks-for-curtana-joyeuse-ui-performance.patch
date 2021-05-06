@@ -1,17 +1,17 @@
-From cbe5c9e538f16ee933e986460ae4fea3e9337974 Mon Sep 17 00:00:00 2001
+From fcd25e405edcf4d73d1cb1049f2b647e3db1e3f1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 18 Mar 2021 13:08:59 -0400
-Subject: [PATCH 23/31] add tweaks for curtana/joyeuse (ui performance)
+Subject: [PATCH 23/33] add tweaks for curtana/joyeuse (ui performance)
 
 ---
  rw-system.sh | 2 ++
  1 file changed, 2 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 6553480..a08f171 100644
+index fa9f8bf..180fe70 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -902,6 +902,8 @@ fi
+@@ -893,6 +893,8 @@ fi
  
  if getprop ro.vendor.build.fingerprint |grep -qi -e redmi/curtana -e redmi/joyeuse; then
      setprop ro.netflix.bsp_rev Q6250-19132-1

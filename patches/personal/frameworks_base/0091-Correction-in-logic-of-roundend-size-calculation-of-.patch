@@ -1,7 +1,7 @@
-From c52670dad342de27eb2d5f7f55eaae52a80b77db Mon Sep 17 00:00:00 2001
+From 90296b0b59c6b0ef36eaa0d8597c3dee24579ffa Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 26 Nov 2020 14:03:55 -0500
-Subject: [PATCH 091/208] Correction in logic of roundend size calculation of
+Subject: [PATCH 091/210] Correction in logic of roundend size calculation of
  SD card
 
   from

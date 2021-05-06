@@ -1,4 +1,4 @@
-From a0938465cdf9d5ee8750bed5cc7e6ad7bcb05b92 Mon Sep 17 00:00:00 2001
+From 97465329afed27aa5b2ddf8ad0ad6dc74d6d59c9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 18 Mar 2021 05:49:00 -0400
 Subject: [PATCH 10/13] rework curtana/joyeuse overlays

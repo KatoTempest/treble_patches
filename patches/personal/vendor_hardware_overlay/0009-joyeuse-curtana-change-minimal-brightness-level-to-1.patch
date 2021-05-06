@@ -1,4 +1,4 @@
-From c1ad2484536cba1468e1a16474cff5dfc985e1fb Mon Sep 17 00:00:00 2001
+From af2ff120451615e0fd7db09913a27fde0d9defb9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 17 Mar 2021 01:47:39 -0400
 Subject: [PATCH 09/13] joyeuse,curtana: change minimal brightness level to 17

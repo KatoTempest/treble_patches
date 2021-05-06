@@ -1,7 +1,7 @@
-From 04a9b75b5a0143d6ef22e27402a1d6bd45a8894f Mon Sep 17 00:00:00 2001
+From 36738126bb2937a99be6d848899e0d086d4a2ed0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:47:55 +0300
-Subject: [PATCH 033/208] set 0.8x animation scale as default
+Subject: [PATCH 033/210] set 0.8x animation scale as default
 
   from
   https://github.com/BlissRoms/platform_frameworks_base/commit/e3cdd07ebb181086c4a32d91a2a06fd24f6d2235

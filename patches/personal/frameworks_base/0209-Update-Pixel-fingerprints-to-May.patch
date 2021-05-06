@@ -1,0 +1,25 @@
+From 9a3be1ae1d219d1ce5109735de021b25d8cb074b Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 6 May 2021 13:45:57 -0400
+Subject: [PATCH 209/210] Update Pixel fingerprints to May
+
+---
+ core/java/com/android/internal/util/custom/PixelPropsUtils.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/java/com/android/internal/util/custom/PixelPropsUtils.java b/core/java/com/android/internal/util/custom/PixelPropsUtils.java
+index 55cef8e646d..d5cfc52c583 100644
+--- a/core/java/com/android/internal/util/custom/PixelPropsUtils.java
++++ b/core/java/com/android/internal/util/custom/PixelPropsUtils.java
+@@ -51,7 +51,7 @@ public class PixelPropsUtils {
+         propsToChange.put("DEVICE", "redfin");
+         propsToChange.put("PRODUCT", "redfin");
+         propsToChange.put("MODEL", "Pixel 5");
+-        propsToChange.put("FINGERPRINT", "google/redfin/redfin:11/RQ2A.210405.005/7181113:user/release-keys");
++        propsToChange.put("FINGERPRINT", "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys");
+     }
+ 
+     public static void setProps(String packageName) {
+-- 
+2.17.1
+

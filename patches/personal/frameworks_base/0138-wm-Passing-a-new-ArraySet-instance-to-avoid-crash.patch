@@ -1,7 +1,7 @@
-From 53e159d15ac1913eee5dc79949af377ee684509e Mon Sep 17 00:00:00 2001
+From 1429b5d0c0e455d620315e21a7b5939138c1cf65 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:07:18 -0500
-Subject: [PATCH 138/208] wm: Passing a new ArraySet instance to avoid crash
+Subject: [PATCH 138/210] wm: Passing a new ArraySet instance to avoid crash
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/8715e4b2ab69f44812b64b9c040d30b431771640

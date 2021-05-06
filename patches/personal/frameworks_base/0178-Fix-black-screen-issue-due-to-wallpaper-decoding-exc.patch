@@ -1,7 +1,7 @@
-From 5f8b79d73155692298ecb2b3cf3391a32f568870 Mon Sep 17 00:00:00 2001
+From 6b90f7f2b9875f3bff618aca2f74d5b57d78a8c7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 07:17:51 -0500
-Subject: [PATCH 178/208] Fix black screen issue due to wallpaper decoding
+Subject: [PATCH 178/210] Fix black screen issue due to wallpaper decoding
  exceptions
 
   from

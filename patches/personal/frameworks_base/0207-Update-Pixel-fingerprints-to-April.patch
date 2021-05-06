@@ -1,7 +1,7 @@
-From b89abe5d8c3781f1bfb77cd03386205311aa5e41 Mon Sep 17 00:00:00 2001
+From 2683d6e48e0dc0ed6a8fcd323290f16b809c888e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 23 Apr 2021 05:59:34 -0400
-Subject: [PATCH 207/208] Update Pixel fingerprints to April
+Subject: [PATCH 207/210] Update Pixel fingerprints to April
 
   from
   https://github.com/PixelExtended/frameworks_base/commit/16dfd169df1180d315deef166cc038e24abe16d6

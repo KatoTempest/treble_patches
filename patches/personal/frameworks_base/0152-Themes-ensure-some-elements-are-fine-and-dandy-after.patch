@@ -1,7 +1,7 @@
-From 6f4fdf1ce358c34ff117a9a4e30c2920ffd48734 Mon Sep 17 00:00:00 2001
+From ff7b210c890d3410a9ee99f2e48aade52d2300ad Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:20:05 -0500
-Subject: [PATCH 152/208] Themes: ensure some elements are fine and dandy after
+Subject: [PATCH 152/210] Themes: ensure some elements are fine and dandy after
  overlay
 
   from

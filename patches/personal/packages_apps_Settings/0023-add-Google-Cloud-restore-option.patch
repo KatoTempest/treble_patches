@@ -1,7 +1,7 @@
-From 706aa7bde28f96cd75ce72c17080dfce5682e47b Mon Sep 17 00:00:00 2001
+From ee82bff2554e5b07ffed842b0754a43765c72394 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 9 Oct 2020 13:08:40 -0400
-Subject: [PATCH 23/63] add Google Cloud restore option
+Subject: [PATCH 23/62] add Google Cloud restore option
 
 Change-Id: I6a742b6a257235220aabe1332b005d3a74e5d662
 ---

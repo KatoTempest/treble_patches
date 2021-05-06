@@ -1,7 +1,7 @@
-From c4d9215303a4de32b2b990757109c8840e96cbf8 Mon Sep 17 00:00:00 2001
+From 3c54a7863b53c06faeec80fde6093ff2a2a67b90 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 07:16:10 -0500
-Subject: [PATCH 177/208] Screenshot: Add delete action chip intent
+Subject: [PATCH 177/210] Screenshot: Add delete action chip intent
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/765636b2114a11517aed3ffa99e091436f111c28

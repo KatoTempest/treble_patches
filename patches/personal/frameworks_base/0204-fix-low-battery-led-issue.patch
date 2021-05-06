@@ -1,7 +1,7 @@
-From 5a2ed46a9a30151d0e93dace452b30f5822bf8b5 Mon Sep 17 00:00:00 2001
+From d104d7f28b7163100a95aa9cdd98f6013d5bd599 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 3 Apr 2021 06:45:49 -0400
-Subject: [PATCH 204/208] fix low battery led issue
+Subject: [PATCH 204/210] fix low battery led issue
 
 ---
  services/core/java/com/android/server/BatteryService.java | 3 +++

@@ -1,7 +1,7 @@
-From 21f0c9ff0dec23a95f590d7601acfb9e2223b847 Mon Sep 17 00:00:00 2001
+From 3b04abbd7c6658b136fa8b36c628aa1cfe7420a0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 22:30:52 +0300
-Subject: [PATCH 13/63] add QS panel tuning
+Subject: [PATCH 13/62] add QS panel tuning
 
 Change-Id: I28a8d7a27d4caf4bf63d4aa5cdd5ddbdd7469540
 ---

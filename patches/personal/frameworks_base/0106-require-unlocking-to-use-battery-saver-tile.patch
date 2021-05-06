@@ -1,7 +1,7 @@
-From d86c3609ac1034462fe08b7641da2337dc7496d0 Mon Sep 17 00:00:00 2001
+From e6698efe137e0fe69065ee45c7904bbc524537cb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:34:29 -0500
-Subject: [PATCH 106/208] require unlocking to use battery saver tile
+Subject: [PATCH 106/210] require unlocking to use battery saver tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/ba389c9fdd2244d2cc275944ed1000ba70a80195

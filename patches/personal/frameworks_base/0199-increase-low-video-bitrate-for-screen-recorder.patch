@@ -1,7 +1,7 @@
-From 156488848adfcd37d3f9837df03f43fd6a201f70 Mon Sep 17 00:00:00 2001
+From f0e18d67251f1d7f70ace213fbba8ccc6b44b285 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 19:18:57 -0400
-Subject: [PATCH 199/208] increase low video bitrate for screen recorder
+Subject: [PATCH 199/210] increase low video bitrate for screen recorder
 
 ---
  .../com/android/systemui/screenrecord/ScreenMediaRecorder.java  | 2 +-

@@ -1,7 +1,7 @@
-From 9192d976b8c74cd9219d13bb7f12579c2ad39642 Mon Sep 17 00:00:00 2001
+From 0aa0b320d39556405713bd73312032480294378e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:17:15 -0400
-Subject: [PATCH 2/7] libgui: Enable ThinLTO
+Subject: [PATCH 2/9] libgui: Enable ThinLTO
 
   from
   https://github.com/crdroidandroid/android_frameworks_native/commit/ede73f17482616dd8906bfd0b71e069d287209a5

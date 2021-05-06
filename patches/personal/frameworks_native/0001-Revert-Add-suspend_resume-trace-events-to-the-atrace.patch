@@ -1,7 +1,7 @@
-From 5764ff30f3e81d2499cb3b866d9209a3d847a300 Mon Sep 17 00:00:00 2001
+From 9a710c542c5c724f15ce745956ec28aa24540e6c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 18 Apr 2020 21:22:26 +0300
-Subject: [PATCH 1/7] Revert "Add suspend_resume trace events to the atrace
+Subject: [PATCH 1/9] Revert "Add suspend_resume trace events to the atrace
  'freq' category."
 
 This reverts commit 581c22f979af05e48ad4843cdfa9605186d286da.

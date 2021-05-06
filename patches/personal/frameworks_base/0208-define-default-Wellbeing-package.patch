@@ -1,7 +1,7 @@
-From 802a3a3f73fa2c7c9e8e1f688bdf5bf4f18cbe0b Mon Sep 17 00:00:00 2001
+From 235662f55009c972b69679062da1d7d464ad5f54 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 23 Apr 2021 17:30:37 -0400
-Subject: [PATCH 208/208] define default Wellbeing package
+Subject: [PATCH 208/210] define default Wellbeing package
 
   from
   https://github.com/crdroidandroid/android_vendor_crdroid/commit/9809469844c660d3bed1b86b52975364bb65223c

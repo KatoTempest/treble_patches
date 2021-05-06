@@ -1,7 +1,7 @@
-From f3e4148f40bb045f154e496e82fbf80c99667d25 Mon Sep 17 00:00:00 2001
+From 338c8053415716ee9ed31121c9b7a01b94419882 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 14 Mar 2021 09:43:12 -0400
-Subject: [PATCH 191/208] add PixelPropsUtils
+Subject: [PATCH 191/210] add PixelPropsUtils
 
   based on
   https://github.com/PixelExperience/frameworks_base/blob/eleven/core/java/com/android/internal/util/custom/PixelPropsUtils.java

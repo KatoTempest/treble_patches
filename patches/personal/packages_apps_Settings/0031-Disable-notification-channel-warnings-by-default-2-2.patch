@@ -1,7 +1,7 @@
-From c0009c08bed9d01334f54ee1223214efcbed67ab Mon Sep 17 00:00:00 2001
+From 23415d7e82f8eef90c911e65ffe7915bddbce86b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:49:42 -0500
-Subject: [PATCH 31/63] Disable notification channel warnings by default [2/2]
+Subject: [PATCH 31/62] Disable notification channel warnings by default [2/2]
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/129e77ed5ab09e8b628d0404e3fe1288e8e454d7

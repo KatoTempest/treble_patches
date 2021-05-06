@@ -1,7 +1,7 @@
-From 25cf1c5349fab9b43cb6d6fca6a34d947b4b1e3f Mon Sep 17 00:00:00 2001
+From 8ded96599fabfe262a119e2ee262abf922e1d552 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:12:09 -0500
-Subject: [PATCH 104/208] enable screenshot action for 3 button nav too
+Subject: [PATCH 104/210] enable screenshot action for 3 button nav too
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/aa33bfdb52753a2b4c287a5d6f0d10edcfefb942

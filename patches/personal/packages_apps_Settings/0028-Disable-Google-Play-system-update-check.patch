@@ -1,7 +1,7 @@
-From e388d429a8ba8751fc06d5d884ef442e10a669aa Mon Sep 17 00:00:00 2001
+From 5933099b70d2800e1185b550d1e851d4b4b7b8cc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:31:43 -0500
-Subject: [PATCH 28/63] Disable Google Play system update check
+Subject: [PATCH 28/62] Disable Google Play system update check
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/5a9d29938d3fa6b57248dd27aaa03fca08a8a5eb

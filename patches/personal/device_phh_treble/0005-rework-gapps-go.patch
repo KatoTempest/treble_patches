@@ -1,7 +1,7 @@
-From ea7e13dbc38c0200a758658c2a02cb39d27cec87 Mon Sep 17 00:00:00 2001
+From 738e4cfcb300fdaa425f6a1d9392d53e987e38a6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 27 May 2020 05:57:53 +0300
-Subject: [PATCH 05/31] rework gapps & go
+Subject: [PATCH 05/33] rework gapps & go
 
 ---
  gapps.mk             |  1 -

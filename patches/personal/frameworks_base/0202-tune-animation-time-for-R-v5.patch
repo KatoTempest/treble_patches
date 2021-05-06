@@ -1,7 +1,7 @@
-From eca68dd7f03faf08a8131af407815c506c3d5cc7 Mon Sep 17 00:00:00 2001
+From c26cb3b57b426d13e24d17afa1664be8146e361a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 18:12:44 -0400
-Subject: [PATCH 202/208] tune animation time for R v5
+Subject: [PATCH 202/210] tune animation time for R v5
 
   based on
   https://github.com/BootleggersROM/frameworks_base/commit/507f7de1f4cb6dca77ab8ea7d076fbadd637b5fe

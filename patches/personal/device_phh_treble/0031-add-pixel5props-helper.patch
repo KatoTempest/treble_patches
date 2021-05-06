@@ -1,7 +1,7 @@
-From 20298839efea419c0ca861a8de5711070b10ce7a Mon Sep 17 00:00:00 2001
+From 36b676b51682a39423bd34ccbeea38aadc70b951 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 23 Apr 2021 16:01:39 -0400
-Subject: [PATCH 31/31] add pixel5props helper
+Subject: [PATCH 31/33] add pixel5props helper
 
 ---
  phh-prop-handler.sh | 12 ++++++++++++
@@ -9,7 +9,7 @@ Subject: [PATCH 31/31] add pixel5props helper
  2 files changed, 15 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 589aa55..e31c92b 100644
+index db97169..14e2b58 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -210,6 +210,18 @@ if [ "$1" == "persist.sys.phh.safetynet" ]; then
