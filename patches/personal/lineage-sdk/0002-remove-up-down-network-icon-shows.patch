@@ -1,4 +1,4 @@
-From 197714a0f7b9895b30b5e455c0ebbc3b834d84ba Mon Sep 17 00:00:00 2001
+From 85cf7a906c67dc83928b6ecc5535298b8ab50420 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 23:05:23 +0200
 Subject: [PATCH 2/4] remove up+down network icon shows

@@ -1,4 +1,4 @@
-From 39f5c302195859b205c897ff64df12bbfbf80638 Mon Sep 17 00:00:00 2001
+From c0e569f3759b6b32f16d2690f76031d16dbfbea8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Oct 2020 02:40:31 -0400
 Subject: [PATCH 04/13] import OnePlus 8 Pro 'instantnoodlep' overlay
@@ -664,10 +664,10 @@ index 0000000..d5742da
 +    </array>
 +</device>
 diff --git a/overlay.mk b/overlay.mk
-index b639bc2..ae97b48 100755
+index 1a4ba8c..5507e65 100755
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -82,6 +82,8 @@ PRODUCT_PACKAGES += \
+@@ -83,6 +83,8 @@ PRODUCT_PACKAGES += \
  	treble-overlay-oneplus-op6 \
  	treble-overlay-oneplus-op6t \
  	treble-overlay-oneplus-op6t-systemui \

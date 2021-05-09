@@ -1,7 +1,7 @@
-From c4308773f25296f5efb518ab23feadf836e6175d Mon Sep 17 00:00:00 2001
+From 44e2299155d2c6b77ad10f710b8f3f9e9f66d9bb Mon Sep 17 00:00:00 2001
 From: Wonsik Kim <wonsik@google.com>
 Date: Tue, 5 Jan 2021 18:58:15 -0800
-Subject: [PATCH 16/26] CCodec: store flushed config as work items
+Subject: [PATCH 16/25] CCodec: store flushed config as work items
 
 Store flushed config as work items and queue them to the component
 directly, instead of going through MediaCodecBuffer.

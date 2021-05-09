@@ -1,7 +1,7 @@
-From c5df44806e73a3e3d1171a853210ffc44ca56f96 Mon Sep 17 00:00:00 2001
+From ef556d8047692668b8b206731deb5a090e46597f Mon Sep 17 00:00:00 2001
 From: Artem Borisov <dedsa2002@gmail.com>
 Date: Tue, 25 Sep 2018 12:39:22 +0300
-Subject: [PATCH 04/26] CameraService: Support calling addStates in
+Subject: [PATCH 04/25] CameraService: Support calling addStates in
  enumerateProviders
 
 Some pre-P camera HALs trigger onDeviceStatusChange callback during HAL init.

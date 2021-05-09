@@ -1,7 +1,7 @@
-From a55afdeffd8d184ff3b05a8f6b84e822b687724c Mon Sep 17 00:00:00 2001
+From 8109782b1027b815b5d011823b6073269dbbc6a5 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 19 Aug 2018 22:59:06 +0200
-Subject: [PATCH 02/26] Kirin:: Remove lock to prevent self-lock
+Subject: [PATCH 02/25] Kirin:: Remove lock to prevent self-lock
 
 With Huawei Camera HAL, we get the following call order:
 cameraserver CameraService::enumerateProviders (*)

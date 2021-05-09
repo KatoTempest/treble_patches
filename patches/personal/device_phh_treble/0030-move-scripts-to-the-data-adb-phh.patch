@@ -1,7 +1,7 @@
-From dea52349a93325ff6e0489336ea550a2bbf0abcf Mon Sep 17 00:00:00 2001
+From 8ece14e3dd626a70cbced40e18ca5b2517b377b1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 09:06:32 -0400
-Subject: [PATCH 30/31] move scripts to the /data/adb/phh
+Subject: [PATCH 30/33] move scripts to the /data/adb/phh
 
   for security reason
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 30/31] move scripts to the /data/adb/phh
  1 file changed, 8 insertions(+), 8 deletions(-)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index d03260a..589aa55 100644
+index e62bb50..db97169 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
 @@ -202,11 +202,11 @@ if [ "$1" == "persist.sys.phh.safetynet" ]; then

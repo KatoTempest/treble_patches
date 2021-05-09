@@ -1,0 +1,27 @@
+From 623156a00c5e2a8af402c1d37c4a811ec2cd7d98 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 07:01:45 -0500
+Subject: [PATCH 074/170] try to fix upstream status bar+keyguard bug
+
+  from
+  https://github.com/GrapheneOS/platform_frameworks_base/commit/ae6375cbc136354b3acc49f501916a2f4ea443fc
+---
+ .../src/com/android/systemui/statusbar/phone/StatusBar.java     | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+index b55d6a55bca..2fadfe11a2d 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+@@ -3820,6 +3820,8 @@ public class StatusBar extends SystemUI implements DemoMode,
+             // the closing
+             mNotificationShadeWindowController.setNotificationShadeFocusable(true);
+         }
++        // It's closed; no need to leave it open.
++        mStatusBarStateController.setLeaveOpenOnKeyguardHide(false);
+     }
+ 
+     public void onUnlockHintStarted() {
+-- 
+2.17.1
+

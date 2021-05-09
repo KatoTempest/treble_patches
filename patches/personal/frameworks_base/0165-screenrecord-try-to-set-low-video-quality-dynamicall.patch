@@ -1,0 +1,39 @@
+From 617ac2ed215cd21f9858b2a0efc647b054a310fa Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 9 May 2021 07:10:42 -0400
+Subject: [PATCH 165/170] screenrecord: try to set low video quality
+ dynamically
+
+Change-Id: I03cc5e2985d5786b8aaad848d7560d18d0f26d43
+---
+ .../systemui/screenrecord/ScreenMediaRecorder.java        | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java b/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java
+index c0418d515c3..913f108d7a7 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java
++++ b/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java
+@@ -128,14 +128,18 @@ public class ScreenMediaRecorder {
+ 
+         mMediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+ 
+-
+         // Set up video
+         DisplayMetrics metrics = new DisplayMetrics();
+         WindowManager wm = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+         wm.getDefaultDisplay().getRealMetrics(metrics);
+         int screenWidth = metrics.widthPixels;
+         int screenHeight = metrics.heightPixels;
+-        int refereshRate = mLowQuality? LOW_VIDEO_FRAME_RATE : (int) wm.getDefaultDisplay().getRefreshRate();
++        int refereshRate = (int) wm.getDefaultDisplay().getRefreshRate();
++        if (mLowQuality) {
++            screenWidth = (int)screenWidth / 2;
++            screenHeight = (int)screenHeight / 2;
++            refereshRate = (int)refereshRate / 2;
++        }
+         // TODO: make low quality bitrate scalable per device, like the default one
+         int vidBitRate = mLowQuality ? LOW_VIDEO_BIT_RATE :
+                 screenHeight * screenWidth * refereshRate / VIDEO_FRAME_RATE
+-- 
+2.17.1
+

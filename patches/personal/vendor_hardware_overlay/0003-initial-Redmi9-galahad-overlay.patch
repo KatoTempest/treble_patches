@@ -1,4 +1,4 @@
-From c7c5062967d12c02a3ccc26e7c7a4c46c2a21d97 Mon Sep 17 00:00:00 2001
+From 6cda47238371b9ce185f8ec21b4e994bbc8f2e73 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 7 Oct 2020 09:07:56 -0400
 Subject: [PATCH 03/13] initial Redmi9 'galahad' overlay
@@ -573,10 +573,10 @@ index 0000000..89420e7
 +    <item name="gps.voltage">0</item>
 +</device>
 diff --git a/overlay.mk b/overlay.mk
-index 98f75c5..b639bc2 100755
+index bd6adc3..1a4ba8c 100755
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -146,6 +146,7 @@ PRODUCT_PACKAGES += \
+@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
  	treble-overlay-xiaomi-redmi7onc \
  	treble-overlay-xiaomi-redmi8 \
  	treble-overlay-xiaomi-redmi8a \
