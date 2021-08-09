@@ -1,4 +1,4 @@
-From 22a972053bd02026eb2f2dfee96c5deced990247 Mon Sep 17 00:00:00 2001
+From 9bf8cf0d1833258604c05a45fc1f66c7b2e78d9d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
 Subject: [PATCH 29/45] Settings: Reset battery stats [2/2]

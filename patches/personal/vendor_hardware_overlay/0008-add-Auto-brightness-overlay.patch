@@ -1,4 +1,4 @@
-From c23d556e5120f6b0e0241d134560cdffe58f3a5d Mon Sep 17 00:00:00 2001
+From 0ff58840a4aeb302527fe6bda3061779a5fe160f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:26:06 -0500
 Subject: [PATCH 08/13] add Auto brightness overlay
@@ -54,10 +54,10 @@ index 0000000..8abe291
 +    <bool name="config_automatic_brightness_available">true</bool>
 +</resources>
 diff --git a/overlay.mk b/overlay.mk
-index 553229f..de6ae81 100755
+index e0fc14e..dd2e98d 100755
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \
+@@ -13,6 +13,7 @@ PRODUCT_PACKAGES += \
  	treble-overlay-asus-zenfonelivel1za550kl \
  	treble-overlay-asus-zenfonemaxm2 \
  	treble-overlay-asus-zenfonemaxshot \
@@ -66,5 +66,5 @@ index 553229f..de6ae81 100755
  	treble-overlay-blackview-bv9500plus \
  	treble-overlay-bq-jeice \
 -- 
-2.17.1
+2.30.2
 

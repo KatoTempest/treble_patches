@@ -1,7 +1,7 @@
-From 670f7ce5f3f7b813d164c7fad86c0c9d2b0b365e Mon Sep 17 00:00:00 2001
+From dbb133ab5b15d937ab086386f694fdb0ae9ab546 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:09:01 -0500
-Subject: [PATCH 075/170] add 2 button navigation overlay
+Subject: [PATCH 075/169] add 2 button navigation overlay
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/e6fbb2cbe299cf89e7f9327227ff3742f3c695c8
@@ -22,5 +22,5 @@ index df286251891..23600682559 100644
  	NavigationBarModeGesturalOverlay \
  	NavigationBarModeGesturalOverlayNarrowBack \
 -- 
-2.17.1
+2.30.2
 

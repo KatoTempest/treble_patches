@@ -1,4 +1,4 @@
-From 4cf8a5d5f221b84c03b2bba8fb3a84d9b8fb9359 Mon Sep 17 00:00:00 2001
+From 95ad2dfb7c8e7511d394cdc658e6124c3b0e4343 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 8 Aug 2020 05:46:22 -0400
 Subject: [PATCH 21/45] HACKFIX: Settings: animation scales
@@ -14,10 +14,10 @@ Subject: [PATCH 21/45] HACKFIX: Settings: animation scales
  7 files changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/res/xml/development_settings.xml b/res/xml/development_settings.xml
-index d77deb55d5..4e39f17ec6 100644
+index be3ca0f5c0..7f9abb8446 100644
 --- a/res/xml/development_settings.xml
 +++ b/res/xml/development_settings.xml
-@@ -452,19 +452,19 @@
+@@ -441,19 +441,19 @@
          <ListPreference
              android:key="window_animation_scale"
              android:title="@string/window_animation_scale_title"

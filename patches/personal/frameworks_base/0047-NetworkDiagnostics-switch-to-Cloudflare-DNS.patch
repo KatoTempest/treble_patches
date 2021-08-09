@@ -1,7 +1,7 @@
-From 6d1f18ae83877bd1d42bc5f29a3d56fa2b681257 Mon Sep 17 00:00:00 2001
+From e99fd4141c73c9ddbff695207aad0ce621bcda7c Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 13:06:33 -0400
-Subject: [PATCH 047/170] NetworkDiagnostics: switch to Cloudflare DNS
+Subject: [PATCH 047/169] NetworkDiagnostics: switch to Cloudflare DNS
 
 Cloudflare DNS has a better privacy policy than Google Public DNS while
 still supporting DNS over TLS.
@@ -26,5 +26,5 @@ index 49c16ad96eb..a25fd65a25b 100644
      // For brevity elsewhere.
      private static final long now() {
 -- 
-2.17.1
+2.30.2
 

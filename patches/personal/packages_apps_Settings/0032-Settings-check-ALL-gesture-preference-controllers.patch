@@ -1,4 +1,4 @@
-From 4802cb2b3bc975b952917dc78fddab26888f54d6 Mon Sep 17 00:00:00 2001
+From 7c2aeec6903d50d8a7e943fcec389b24fa9cfae3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:54:16 -0500
 Subject: [PATCH 32/45] Settings: check ALL gesture preference controllers

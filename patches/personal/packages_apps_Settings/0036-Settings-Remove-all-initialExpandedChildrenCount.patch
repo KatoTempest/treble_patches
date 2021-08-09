@@ -1,4 +1,4 @@
-From 0701a1ccf17079a77574d2a952c787d5407d6f8e Mon Sep 17 00:00:00 2001
+From fb90402442a43f61744ce91f6e1c60e0825a3cbe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:52:15 -0500
 Subject: [PATCH 36/45] Settings: Remove all initialExpandedChildrenCount

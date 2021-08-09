@@ -1,4 +1,4 @@
-From 96962546f8de356849456d91be711b033d0aac29 Mon Sep 17 00:00:00 2001
+From fc7d5c7ea48234c69987786a023d420c2dfcf439 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
 Subject: [PATCH 07/33] tweaks for Xiaomi Redmi Note 9 'merlin'
@@ -10,7 +10,7 @@ Subject: [PATCH 07/33] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 913a7b6..3f6d45e 100644
+index 0441635..16f5c0d 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -367,10 +367,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
@@ -28,7 +28,7 @@ index 913a7b6..3f6d45e 100644
 +fi
 +
  #Realme 6
- if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151;then
+ if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151 -e RMX2111 -e RMX2111L1;then
      setprop persist.sys.phh.fingerprint.nocleanup true
 -- 
 2.17.1

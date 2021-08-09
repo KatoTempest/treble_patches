@@ -1,7 +1,7 @@
-From acb90ecdefbd0d91fe810dde297483781dd6de5a Mon Sep 17 00:00:00 2001
+From 7eae12319512493a7b4b33f6a33f4fbef40e7caf Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 Feb 2020 22:25:00 +0200
-Subject: [PATCH 2/6] Add double tap to sleep gesture
+Subject: [PATCH 2/7] Add double tap to sleep gesture
 
   * based on
   https://github.com/crdroidandroid/android_packages_apps_Launcher3/commit/1ced8c431b3a8ccb397199f68e1dd1ac401a90d4
@@ -245,5 +245,5 @@ index 4fa658e7d..500a94c77 100644
          int action = ev.getActionMasked();
          if (action == ACTION_DOWN) {
 -- 
-2.17.1
+2.30.2
 

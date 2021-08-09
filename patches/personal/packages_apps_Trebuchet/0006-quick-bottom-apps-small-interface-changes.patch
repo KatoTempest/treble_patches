@@ -1,7 +1,7 @@
-From 678f0ae4a8cb4a9f830c2870561ae73629fff7e2 Mon Sep 17 00:00:00 2001
+From 7a0db639a6bdc66bca272ba7fd9378202368b6b7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 08:29:21 -0400
-Subject: [PATCH 6/6] quick bottom apps: small interface changes
+Subject: [PATCH 6/7] quick bottom apps: small interface changes
 
 ---
  res/values/dimens.xml | 8 ++++----
@@ -38,5 +38,5 @@ index 8f968bf10..d4faa760d 100644
      <dimen name="workspace_page_indicator_overlap_workspace">0dp</dimen>
  
 -- 
-2.17.1
+2.30.2
 

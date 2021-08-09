@@ -1,7 +1,7 @@
-From a685ba7622fb630319d4339b81d9809a153c999a Mon Sep 17 00:00:00 2001
+From 870100819cd0defb3b5fbd0ac69a24ecde829469 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:33:50 -0500
-Subject: [PATCH 067/170] SettingLib: Add deep sleep info to uptime preference
+Subject: [PATCH 067/169] SettingLib: Add deep sleep info to uptime preference
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/d8fa20ef971712a4222c045baf0e91208e7320fe
@@ -104,5 +104,5 @@ index 5f722696969..51cff414f2d 100644
  
      private static class MyHandler extends Handler {
 -- 
-2.17.1
+2.30.2
 

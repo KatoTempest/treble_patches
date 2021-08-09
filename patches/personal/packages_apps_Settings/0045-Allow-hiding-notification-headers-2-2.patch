@@ -1,4 +1,4 @@
-From 8f0edfcfdfbd2eff34498da320bd5406cc92f253 Mon Sep 17 00:00:00 2001
+From 9a56c44377cbd7df8732f930436c374157516ebc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 08:04:36 -0500
 Subject: [PATCH 45/45] Allow hiding notification headers [2/2]

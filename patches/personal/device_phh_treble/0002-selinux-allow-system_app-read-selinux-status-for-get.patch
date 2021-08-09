@@ -1,4 +1,4 @@
-From 6dc168565bc1ae01ca1c6e81e8a537e8fb8fb629 Mon Sep 17 00:00:00 2001
+From 0d368dad44e7e02f96c5701a253878bb1731ddc8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 13:17:06 +0200
 Subject: [PATCH 02/33] selinux: allow system_app read selinux status (for

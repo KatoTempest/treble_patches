@@ -1,7 +1,7 @@
-From 77be598fbab20adae7c4c4ecadf622722ec7bdbf Mon Sep 17 00:00:00 2001
+From 534bb717c39a86250832cf2a790386f6a48d3048 Mon Sep 17 00:00:00 2001
 From: Rusty Bird <rustybird@net-c.com>
 Date: Wed, 22 Apr 2020 18:28:33 +0000
-Subject: [PATCH 051/170] disable safe volume everywhere, not just the US
+Subject: [PATCH 051/169] disable safe volume everywhere, not just the US
 
 Safe Volume has many false alarms. And if overridden by the user, at
 every 20 hours of accumulated(!) audio playback it will intentionally
@@ -18,7 +18,7 @@ Signed-off-by: Rusty Bird <rustybird@net-c.com>
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index 953ab5e02fe..46df7901bf2 100644
+index 6c2ecbe0594..8ab160060d7 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -2427,7 +2427,7 @@
@@ -31,5 +31,5 @@ index 953ab5e02fe..46df7901bf2 100644
      <!-- Whether safe headphone volume warning dialog is disabled on Vol+ (operator specific). -->
      <bool name="config_safe_media_disable_on_volume_up">true</bool>
 -- 
-2.17.1
+2.30.2
 

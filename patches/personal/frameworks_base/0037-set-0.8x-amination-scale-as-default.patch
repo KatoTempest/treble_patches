@@ -1,7 +1,7 @@
-From 51241bb9f35f50c0c5afd248b3064b79d47b6654 Mon Sep 17 00:00:00 2001
+From edda6cc8e92fe49815c560999b91c4d00fbd0d08 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:47:55 +0300
-Subject: [PATCH 037/170] set 0.8x amination scale as default
+Subject: [PATCH 037/169] set 0.8x amination scale as default
 
   from
   https://github.com/BlissRoms/platform_frameworks_base/commit/e3cdd07ebb181086c4a32d91a2a06fd24f6d2235
@@ -26,7 +26,7 @@ index 51f69a95e16..a3eb4d37c70 100644
  
      <bool name="def_bluetooth_on">true</bool>
 diff --git a/services/core/java/com/android/server/wm/WindowManagerService.java b/services/core/java/com/android/server/wm/WindowManagerService.java
-index a3fcda9c0c8..811adf57020 100644
+index 355a531496f..916df31092e 100644
 --- a/services/core/java/com/android/server/wm/WindowManagerService.java
 +++ b/services/core/java/com/android/server/wm/WindowManagerService.java
 @@ -937,9 +937,9 @@ public class WindowManagerService extends IWindowManager.Stub
@@ -43,5 +43,5 @@ index a3fcda9c0c8..811adf57020 100644
      boolean mPointerLocationEnabled = false;
  
 -- 
-2.17.1
+2.30.2
 

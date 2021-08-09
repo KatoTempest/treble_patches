@@ -1,4 +1,4 @@
-From 3632dd16384a0f65e3ce039f0887897db1250e72 Mon Sep 17 00:00:00 2001
+From bb2e65db8d99a14045f930206580c22b5164b1a6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:31:43 -0500
 Subject: [PATCH 25/45] Disable Google Play system update check

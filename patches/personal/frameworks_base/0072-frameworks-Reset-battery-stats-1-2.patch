@@ -1,7 +1,7 @@
-From f725b041d787034bc5bc0354f1bc5191471f04fe Mon Sep 17 00:00:00 2001
+From 997548d65986627b51b7c5f135dc58925ce2c8ec Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:49:06 -0500
-Subject: [PATCH 072/170] frameworks: Reset battery stats [1/2]
+Subject: [PATCH 072/169] frameworks: Reset battery stats [1/2]
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/6d69bf8143dd8de290e2d63a59d924e1b980ebde
@@ -63,10 +63,10 @@ index b131ab83cc7..da4021a3cac 100644
          try {
              ParcelFileDescriptor pfd = service.getStatisticsStream();
 diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
-index 1c1759e0cf0..309ec62b90f 100644
+index 542b11a65ed..52c0250b703 100644
 --- a/core/res/AndroidManifest.xml
 +++ b/core/res/AndroidManifest.xml
-@@ -4200,6 +4200,11 @@
+@@ -4210,6 +4210,11 @@
      <permission android:name="android.permission.REGISTER_STATS_PULL_ATOM"
                  android:protectionLevel="signature|privileged" />
  
@@ -113,5 +113,5 @@ index 090ac5467c6..3441d8ff58e 100644
          synchronized (mStats) {
              long time = mStats.computeBatteryTimeRemaining(SystemClock.elapsedRealtime());
 -- 
-2.17.1
+2.30.2
 

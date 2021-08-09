@@ -1,4 +1,4 @@
-From cc47933884b2b77204e349673f8a69c9a65d5151 Mon Sep 17 00:00:00 2001
+From 1cf0a1db34453b877542dc38fd176e1efc1ab467 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 03:28:37 -0500
 Subject: [PATCH 14/45] Settings: Improve OverlayCategoryPreferenceController

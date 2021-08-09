@@ -1,7 +1,7 @@
-From fa8951c45bd47b5edd71b792bd245fdcd6da0d52 Mon Sep 17 00:00:00 2001
+From 8370e14ae7c5aa92f7273a24ce043e9fba986e91 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 19:20:17 +0200
-Subject: [PATCH 009/170] add Pixel accent overlay
+Subject: [PATCH 009/169] add Pixel accent overlay
 
 	new file:   packages/overlays/AccentColorPixelOverlay/Android.mk
 	new file:   packages/overlays/AccentColorPixelOverlay/AndroidManifest.xml
@@ -158,5 +158,5 @@ index 999ab080246..f2bd7e0702d 100644
  	AccentColorPaletteOverlay \
  	AccentColorCarbonOverlay \
 -- 
-2.17.1
+2.30.2
 

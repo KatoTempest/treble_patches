@@ -1,7 +1,7 @@
-From 2ee1e13b75b09758ffa1105faee9926c26248633 Mon Sep 17 00:00:00 2001
+From 0480ec6ccf7894872b1810a292384c9cbb5da1c7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Nov 2020 16:06:05 -0500
-Subject: [PATCH 006/170] Pixel style
+Subject: [PATCH 006/169] Pixel style
 
   based on
   https://github.com/Havoc-OS/android_frameworks_base/commit/9f98b8ef947fcc6f7eea6690fd524807495367fb
@@ -144,5 +144,5 @@ index 47a0e7d071f..d47ce49a88c 100644
          <!-- AlertDialog attributes -->
          <item name="alertDialogTheme">@style/Theme.Dialog.Alert</item>
 -- 
-2.17.1
+2.30.2
 

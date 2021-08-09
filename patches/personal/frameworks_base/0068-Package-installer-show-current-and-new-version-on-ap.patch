@@ -1,7 +1,7 @@
-From aaf5a36d77010d5e7024f5bba2fa64886dda315d Mon Sep 17 00:00:00 2001
+From 512128c289d568743e7ed0cf15faa912c0f73a68 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:42:16 -0500
-Subject: [PATCH 068/170] Package installer: show current and new version on
+Subject: [PATCH 068/169] Package installer: show current and new version on
  apk installation
 
   from
@@ -201,7 +201,7 @@ index 00000000000..bb99ab0c2e3
 +    <string name="new_version_number">To be installed: <xliff:g id="new_version">%1$s</xliff:g></string>
 +</resources>
 diff --git a/packages/PackageInstaller/src/com/android/packageinstaller/PackageInstallerActivity.java b/packages/PackageInstaller/src/com/android/packageinstaller/PackageInstallerActivity.java
-index 5675c9986ac..5cd39ff8e19 100644
+index 665d262d806..ed2be59f479 100644
 --- a/packages/PackageInstaller/src/com/android/packageinstaller/PackageInstallerActivity.java
 +++ b/packages/PackageInstaller/src/com/android/packageinstaller/PackageInstallerActivity.java
 @@ -46,6 +46,7 @@ import android.provider.Settings;
@@ -272,5 +272,5 @@ index 5675c9986ac..5cd39ff8e19 100644
  
      void setPmResult(int pmResult) {
 -- 
-2.17.1
+2.30.2
 

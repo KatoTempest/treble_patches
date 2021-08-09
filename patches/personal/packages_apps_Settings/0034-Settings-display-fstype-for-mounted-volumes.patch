@@ -1,4 +1,4 @@
-From 37264d4fa4b48a8551d96bbd16052dec3be37d2f Mon Sep 17 00:00:00 2001
+From 512d63729d4495ef10b79572f699158e3b5e7524 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:56:43 -0500
 Subject: [PATCH 34/45] Settings: display fstype for mounted volumes

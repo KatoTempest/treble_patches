@@ -1,7 +1,7 @@
-From bdb670ef602a03fe7517be156fe4897f6f74dac1 Mon Sep 17 00:00:00 2001
+From 27085130846317889ddf641423e9f2df57396604 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 8 Jan 2021 16:33:55 -0500
-Subject: [PATCH 3/6] Launcher3: move clear all button to actions view
+Subject: [PATCH 3/7] Launcher3: move clear all button to actions view
 
   from
   https://github.com/nitrogen-project/android_packages_apps_Launcher3/commit/e408325b2223edb4576247442aa127510e0abc33
@@ -179,10 +179,10 @@ index fd74357f3..000000000
 -    }
 -}
 diff --git a/quickstep/recents_ui_overrides/src/com/android/quickstep/views/RecentsView.java b/quickstep/recents_ui_overrides/src/com/android/quickstep/views/RecentsView.java
-index 0130cae47..bfdd79e5f 100644
+index 23941fadc..08309fba5 100644
 --- a/quickstep/recents_ui_overrides/src/com/android/quickstep/views/RecentsView.java
 +++ b/quickstep/recents_ui_overrides/src/com/android/quickstep/views/RecentsView.java
-@@ -85,6 +85,7 @@ import android.view.ViewGroup;
+@@ -84,6 +84,7 @@ import android.view.ViewGroup;
  import android.view.accessibility.AccessibilityEvent;
  import android.view.accessibility.AccessibilityNodeInfo;
  import android.view.animation.Interpolator;
@@ -190,7 +190,7 @@ index 0130cae47..bfdd79e5f 100644
  import android.widget.ListView;
  
  import androidx.annotation.Nullable;
-@@ -268,8 +269,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -267,8 +268,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
      private final float mFastFlingVelocity;
      private final RecentsModel mModel;
      private final int mTaskTopMargin;
@@ -200,7 +200,7 @@ index 0130cae47..bfdd79e5f 100644
      private final Rect mTaskViewDeadZoneRect = new Rect();
  
      private final ScrollState mScrollState = new ScrollState();
-@@ -442,9 +442,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -441,9 +441,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
          mModel = RecentsModel.INSTANCE.get(context);
          mIdp = InvariantDeviceProfile.INSTANCE.get(context);
  
@@ -210,7 +210,7 @@ index 0130cae47..bfdd79e5f 100644
          mTaskViewPool = new ViewPool<>(context, this, R.layout.task, 20 /* max size */,
                  10 /* initial size */);
  
-@@ -550,6 +547,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -549,6 +546,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
      public void init(OverviewActionsView actionsView) {
          mActionsView = actionsView;
          mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
@@ -219,7 +219,7 @@ index 0130cae47..bfdd79e5f 100644
      }
  
      @Override
-@@ -620,7 +619,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -619,7 +618,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
      }
  
      private void updateTaskStartIndex(View affectingView) {
@@ -228,7 +228,7 @@ index 0130cae47..bfdd79e5f 100644
              int childCount = getChildCount();
  
              mTaskViewStartIndex = 0;
-@@ -674,7 +673,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -673,7 +672,7 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
       * button fully visible, center page is Clear All button.
       */
      public boolean isClearAllHidden() {
@@ -237,7 +237,7 @@ index 0130cae47..bfdd79e5f 100644
      }
  
      @Override
-@@ -732,11 +731,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -731,11 +730,8 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
                          mTouchDownToStartHome = true;
                      } else {
                          updateDeadZoneRects();
@@ -250,7 +250,7 @@ index 0130cae47..bfdd79e5f 100644
                                  && !mTaskViewDeadZoneRect.contains(x + getScrollX(), y)) {
                              mTouchDownToStartHome = true;
                          }
-@@ -783,18 +779,12 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -782,18 +778,12 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
  
          final int requiredTaskCount = tasks.size();
          if (getTaskViewCount() != requiredTaskCount) {
@@ -269,7 +269,7 @@ index 0130cae47..bfdd79e5f 100644
          }
  
          // Rebind and reset all task views
-@@ -834,16 +824,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -833,16 +823,10 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
          for (int i = getTaskViewCount() - 1; i >= 0; i--) {
              removeView(getTaskViewAt(i));
          }
@@ -286,7 +286,7 @@ index 0130cae47..bfdd79e5f 100644
          return taskViewCount;
      }
  
-@@ -1199,9 +1183,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -1198,9 +1182,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
              // Add an empty view for now until the task plan is loaded and applied
              final TaskView taskView = mTaskViewPool.getView();
              addView(taskView, mTaskViewStartIndex);
@@ -296,7 +296,7 @@ index 0130cae47..bfdd79e5f 100644
              // The temporary running task is only used for the duration between the start of the
              // gesture and the task list is loaded and applied
              mTmpRunningTask = Task.from(new TaskKey(runningTaskInfo), runningTaskInfo, false);
-@@ -1538,7 +1519,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -1539,7 +1520,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
                      removeViewInLayout(taskView);
  
                      if (getTaskViewCount() == 0) {
@@ -304,7 +304,7 @@ index 0130cae47..bfdd79e5f 100644
                          startHome();
                      } else {
                          snapToPageImmediately(pageToSnapTo);
-@@ -1677,7 +1657,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -1678,7 +1658,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
                  child.setStableAlpha(alpha);
              }
          }
@@ -312,7 +312,7 @@ index 0130cae47..bfdd79e5f 100644
          int alphaInt = Math.round(alpha * 255);
          mEmptyMessagePaint.setAlpha(alphaInt);
          mEmptyIcon.setAlpha(alphaInt);
-@@ -1740,10 +1719,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -1741,10 +1720,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
          setLayoutDirection(mIsRtl
                  ? View.LAYOUT_DIRECTION_RTL
                  : View.LAYOUT_DIRECTION_LTR);
@@ -323,7 +323,7 @@ index 0130cae47..bfdd79e5f 100644
          mActivity.getDragLayer().recreateControllers();
          boolean isInLandscape = mOrientationState.getTouchRotation() != ROTATION_0
                  || mOrientationState.getRecentsActivityRotation() != ROTATION_0;
-@@ -1963,15 +1938,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -1968,15 +1943,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
      }
  
      private void updateDeadZoneRects() {
@@ -339,7 +339,7 @@ index 0130cae47..bfdd79e5f 100644
          // Get the deadzone rect between the task views
          mTaskViewDeadZoneRect.setEmpty();
          int count = getTaskViewCount();
-@@ -2304,10 +2270,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
+@@ -2309,10 +2275,6 @@ public abstract class RecentsView<T extends StatefulActivity> extends PagedView
          return super.computeMaxScroll();
      }
  
@@ -442,5 +442,5 @@ index fc06ba057..000000000
 -    />
 \ No newline at end of file
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From b726459d1fdfaf837ba26a614732ac219521a526 Mon Sep 17 00:00:00 2001
+From 9daf1872888c0860ba90cfddb2ada33441455f4c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 18:55:45 +0200
-Subject: [PATCH 011/170] slightly tune QS panel
+Subject: [PATCH 011/169] slightly tune QS panel
 
 	modified:   packages/SystemUI/res/values/config.xml
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 011/170] slightly tune QS panel
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 4166df94f95..58c25180a24 100644
+index d86f3fa277f..a01551fa1de 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -106,7 +106,7 @@
@@ -22,5 +22,5 @@ index 4166df94f95..58c25180a24 100644
  
      <!-- The minimum number of tiles to display in QuickSettings -->
 -- 
-2.17.1
+2.30.2
 

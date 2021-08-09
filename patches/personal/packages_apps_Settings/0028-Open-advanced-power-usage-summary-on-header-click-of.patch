@@ -1,4 +1,4 @@
-From fd6c3d87781a9a8b6688c1ff5cee777c82d0be15 Mon Sep 17 00:00:00 2001
+From 6132da0fcbe14559917b0134b18bee69101ef8c3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:33:58 -0500
 Subject: [PATCH 28/45] Open advanced power usage summary on header click of

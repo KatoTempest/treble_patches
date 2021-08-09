@@ -1,4 +1,4 @@
-From 1082231d90265a4220db0aec64e60ecdf7b98e1e Mon Sep 17 00:00:00 2001
+From 00910d9aa9668cc66657357ead01170a60437989 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:53:03 -0500
 Subject: [PATCH 31/45] Settings: disable all bugreport settings
@@ -13,7 +13,7 @@ Change-Id: I350e592e6a7ed0b93f3935b06ef9dae97e3a1f74
  2 files changed, 9 insertions(+), 9 deletions(-)
 
 diff --git a/res/xml/development_settings.xml b/res/xml/development_settings.xml
-index 4e39f17ec6..5b59089962 100644
+index 7f9abb8446..62d00437e9 100644
 --- a/res/xml/development_settings.xml
 +++ b/res/xml/development_settings.xml
 @@ -30,16 +30,16 @@
@@ -37,7 +37,7 @@ index 4e39f17ec6..5b59089962 100644
  
          <Preference
              android:key="system_server_heap_dump"
-@@ -178,10 +178,10 @@
+@@ -167,10 +167,10 @@
              android:title="@string/enable_terminal_title"
              android:summary="@string/enable_terminal_summary" />
  

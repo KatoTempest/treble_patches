@@ -1,7 +1,7 @@
-From bd0773e70bde8b0bc70d66d98f7da89a167554a6 Mon Sep 17 00:00:00 2001
+From 31e440d9bebe5517ad126458f57e65655ec00edd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:33:50 -0500
-Subject: [PATCH 059/170] Force disable PlayServices OTA checks
+Subject: [PATCH 059/169] Force disable PlayServices OTA checks
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/2cf1ace03b7beb1355f00efbd2aa80873baf017c
@@ -37,5 +37,5 @@ index 2a168ca145a..144dbb00a3d 100644
               * IMPORTANT: Do not add any more upgrade steps here as the global,
               * secure, and system settings are no longer stored in a database
 -- 
-2.17.1
+2.30.2
 

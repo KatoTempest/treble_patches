@@ -1,7 +1,7 @@
-From 59cad829e764bcf133db16f1abd26a57d4db186b Mon Sep 17 00:00:00 2001
+From 09a6b4c7cd69e1835c391a4673ee03124205b9cb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 03:30:21 -0500
-Subject: [PATCH 069/170] Screenrecord: add blinking stop dot and low quality
+Subject: [PATCH 069/169] Screenrecord: add blinking stop dot and low quality
  options
 
   from
@@ -603,5 +603,5 @@ index dc47ab4dff6..4589bdae2bd 100644
          PendingIntent stopIntent = PendingIntent.getService(userContext,
                  RecordingService.REQUEST_CODE,
 -- 
-2.17.1
+2.30.2
 

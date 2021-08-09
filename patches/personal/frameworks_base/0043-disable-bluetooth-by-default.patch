@@ -1,7 +1,7 @@
-From 6257d1aebd938c8ebd325504a7fa062a6e7d33ca Mon Sep 17 00:00:00 2001
+From 9e2abaa71096b01e9932f258b65d6ec72c40b32f Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Tue, 4 Dec 2018 00:34:24 -0500
-Subject: [PATCH 043/170] disable bluetooth by default
+Subject: [PATCH 043/169] disable bluetooth by default
 
 	and location too
 ---
@@ -27,5 +27,5 @@ index a3eb4d37c70..18a91026c8f 100644
      <bool name="def_netstats_enabled">true</bool>
      <bool name="def_usb_mass_storage_enabled">true</bool>
 -- 
-2.17.1
+2.30.2
 

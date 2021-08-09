@@ -1,7 +1,7 @@
-From db50a92c69946ccd0926ee9fd3612a05d4d5c661 Mon Sep 17 00:00:00 2001
+From 4820b3e0110ac5791c553301a771d9153c369c86 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 10:37:46 -0400
-Subject: [PATCH 046/170] SettingsLib: use Cloudflare DNS servers as hints
+Subject: [PATCH 046/169] SettingsLib: use Cloudflare DNS servers as hints
 
 Cloudflare DNS has a better privacy policy than Google Public DNS while
 still supporting DNS over TLS.
@@ -26,5 +26,5 @@ index a5501368945..63a784b354d 100644
      <string name="wifi_gateway_hint" translatable="false">192.168.1.1</string>
      <!-- Hint text for network prefix length -->
 -- 
-2.17.1
+2.30.2
 

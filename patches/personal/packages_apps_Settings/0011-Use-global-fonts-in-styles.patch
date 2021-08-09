@@ -1,4 +1,4 @@
-From b70b403d5c8b044d634b3d01924f9e14465cb994 Mon Sep 17 00:00:00 2001
+From 7c42065e40b3cdb9e876ce163134b0716bd31df6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Mar 2020 22:28:12 +0200
 Subject: [PATCH 11/45] Use global fonts in styles

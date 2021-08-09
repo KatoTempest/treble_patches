@@ -1,7 +1,7 @@
-From f1fdf59f20c687ceef230022a476bb9fb8e09d21 Mon Sep 17 00:00:00 2001
+From d61b435bfd21be216f465fddfe1d2365f7dd309f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 06:56:43 -0400
-Subject: [PATCH 001/170] Revert "SystemUI: allow to limit the max framerate of
+Subject: [PATCH 001/169] Revert "SystemUI: allow to limit the max framerate of
  built-in screen recorder"
 
 This reverts commit 2807f50ea5f5263bb23039c42fa0c9dc1d736bf6.
@@ -11,16 +11,18 @@ This reverts commit 2807f50ea5f5263bb23039c42fa0c9dc1d736bf6.
  2 files changed, 9 deletions(-)
 
 diff --git a/packages/SystemUI/res/values/lineage_config.xml b/packages/SystemUI/res/values/lineage_config.xml
-index 9a7ca11004a..8fa6fbecb53 100644
+index 6554fd54f11..4982f8f8d61 100644
 --- a/packages/SystemUI/res/values/lineage_config.xml
 +++ b/packages/SystemUI/res/values/lineage_config.xml
-@@ -24,7 +24,4 @@
-          the sensor embedded in the power key and listening all the time
+@@ -25,9 +25,6 @@
           causes a poor experience. -->
      <bool name="config_fingerprintWakeAndUnlock">true</bool>
--
+ 
 -    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
 -    <integer name="config_screenRecorderMaxFramerate">0</integer>
+-
+     <!-- Whether usage of the proximity sensor during doze is supported -->
+     <bool name="doze_proximity_sensor_supported">true</bool>
  </resources>
 diff --git a/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java b/packages/SystemUI/src/com/android/systemui/screenrecord/ScreenMediaRecorder.java
 index 330475a4189..5f2d84242d3 100644
@@ -61,5 +63,5 @@ index 330475a4189..5f2d84242d3 100644
                  * VIDEO_FRAME_RATE_TO_RESOLUTION_RATIO;
          mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From bc86af4ecef3cb437e82fb9b63f70e671d60d126 Mon Sep 17 00:00:00 2001
+From 8eaa76a163755c64bf3a0e04c64e7b492cdeb9bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:52:44 -0500
-Subject: [PATCH 065/170] Add missing STORAGE_INTERNAL permission for
+Subject: [PATCH 065/169] Add missing STORAGE_INTERNAL permission for
  BackupRestoreConfirmation
 
   from
@@ -23,5 +23,5 @@ index e67b3be43ea..aede4590b62 100644
      <application android:allowClearUserData="false"
                   android:allowBackup="false"
 -- 
-2.17.1
+2.30.2
 

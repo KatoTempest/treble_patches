@@ -1,4 +1,4 @@
-From bf32b4fc48084fda0f6536eb97ac159659a4ccc4 Mon Sep 17 00:00:00 2001
+From 08fb62a9666d2af5a7f3eee4a54959b75b56a8f2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 05:34:34 -0500
 Subject: [PATCH 10/33] rework securize tweak
@@ -8,10 +8,10 @@ Subject: [PATCH 10/33] rework securize tweak
  1 file changed, 35 insertions(+), 33 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index b794959..6ccf462 100644
+index e0ee345..b0a4595 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -644,40 +644,42 @@ fi
+@@ -650,40 +650,42 @@ fi
  
  setprop ctl.stop console
  dmesg -n 1

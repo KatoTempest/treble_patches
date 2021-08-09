@@ -1,7 +1,7 @@
-From c43756a3d6c1cdb5b450e12fa1e7a1ff850b7b0c Mon Sep 17 00:00:00 2001
+From 6dde8c294de01b5969aaa83f15769d171d8c5cdc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 09:20:02 -0400
-Subject: [PATCH 052/170] rework speed UI overlays
+Subject: [PATCH 052/169] rework speed UI overlays
 
 Change-Id: Iff6e8540d68647d7f0478b2e63fad39423190b63
 ---
@@ -44,5 +44,5 @@ index a68a9303609..97715bbe89a 100644
 +    <bool name="config_supportsRoundedCornersOnWindows">true</bool>
  </resources>
 -- 
-2.17.1
+2.30.2
 

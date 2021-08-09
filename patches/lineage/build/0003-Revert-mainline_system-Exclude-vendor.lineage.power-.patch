@@ -1,8 +1,8 @@
-From 1d4b4ac2d51f88bb6efa74d5d6da3ee1cd38bb5a Mon Sep 17 00:00:00 2001
+From 6457a09c1fb1b276b80811f75231b890e00bf5db Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 20 Feb 2021 02:55:27 -0500
-Subject: [PATCH 03/10] Revert "mainline_system: Exclude
- vendor.lineage.power@1.0 from artifact path requirements"
+Subject: [PATCH 3/3] Revert "mainline_system: Exclude vendor.lineage.power@1.0
+ from artifact path requirements"
 
 This reverts commit 78c28df40f72fdcbe3f82a83828060ad19765fa1.
 ---
@@ -27,5 +27,5 @@ index e9f9dde13..a787707a0 100644
  _my_paths := \
    $(TARGET_COPY_OUT_ROOT)/ \
 -- 
-2.17.1
+2.30.2
 

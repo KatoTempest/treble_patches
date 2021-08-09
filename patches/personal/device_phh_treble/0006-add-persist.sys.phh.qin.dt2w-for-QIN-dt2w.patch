@@ -1,4 +1,4 @@
-From 1536bb3611ed01b9906ed2bcf52d7ce000fbb8d8 Mon Sep 17 00:00:00 2001
+From 30668c3b0a48dccb79dffc165087c3c129bb32b3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 6 Oct 2020 14:26:50 -0400
 Subject: [PATCH 06/33] add persist.sys.phh.qin.dt2w for QIN dt2w

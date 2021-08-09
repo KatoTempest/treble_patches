@@ -1,4 +1,4 @@
-From 54e64fcf7877bc0f0cac5e1f38b705102a8e2b12 Mon Sep 17 00:00:00 2001
+From bba52fa9d6ddee2e080fd4d3417007002928bdc7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 16:14:09 -0500
 Subject: [PATCH 42/45] removing not needed anymore options

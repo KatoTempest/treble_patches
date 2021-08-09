@@ -1,4 +1,4 @@
-From 315811979c64686de3cbd21a682a8ef93bdceac1 Mon Sep 17 00:00:00 2001
+From 58bfd1429c1b7321c4c1266e03505a628c4f78a7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 2 Feb 2020 17:27:20 +0200
 Subject: [PATCH 06/45] disable legacy suggestions

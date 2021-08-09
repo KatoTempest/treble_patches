@@ -1,7 +1,7 @@
-From 70f79780380118735bbc1975fd0c8003440c30c8 Mon Sep 17 00:00:00 2001
+From 23ada5e237e689ef1b231d05f827c3781cd390fa Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:30:39 -0500
-Subject: [PATCH 056/170] SystemUI: remove black bg from power menu
+Subject: [PATCH 056/169] SystemUI: remove black bg from power menu
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/e132c4f16d086e88856465eb2d00ddc3d4bf6cbb
@@ -11,10 +11,10 @@ Subject: [PATCH 056/170] SystemUI: remove black bg from power menu
  2 files changed, 1 insertion(+), 7 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
-index 2c4fbd0b44f..cf8fe62167d 100644
+index f8f94b0bff6..c6ccdadc75c 100644
 --- a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
 +++ b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
-@@ -2570,7 +2570,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
+@@ -2696,7 +2696,7 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
              initializeWalletView();
              if (mBackgroundDrawable == null) {
                  mBackgroundDrawable = new ScrimDrawable();
@@ -23,7 +23,7 @@ index 2c4fbd0b44f..cf8fe62167d 100644
              }
              getWindow().setBackgroundDrawable(mBackgroundDrawable);
          }
-@@ -2607,7 +2607,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
+@@ -2733,7 +2733,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
              if (!(mBackgroundDrawable instanceof ScrimDrawable)) {
                  return;
              }
@@ -49,5 +49,5 @@ index 0445c9879ac..8018d5aaa5a 100644
  
          // Make blur be 0 if it is necessary to stop blur effect.
 -- 
-2.17.1
+2.30.2
 

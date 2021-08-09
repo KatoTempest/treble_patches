@@ -1,7 +1,7 @@
-From e37d48bc723e3a579278ba0e86d9598d21fe81bd Mon Sep 17 00:00:00 2001
+From 54e1b95abfc8ccec5af2f6e14b445bebc67ca01d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 8 Oct 2020 15:10:16 -0400
-Subject: [PATCH 042/170] add 4x2 QS panel overlay
+Subject: [PATCH 042/169] add 4x2 QS panel overlay
 
 Change-Id: Ibaaee7732c84473c5b25fa7570943d73b7b0831f
 ---
@@ -123,5 +123,5 @@ index 00000000000..0a82179e758
 +    <integer name="quick_settings_max_rows">2</integer>
 +</resources>
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From c6846a3f9cf72fb4bdc16c1a157bc62ef4aeca08 Mon Sep 17 00:00:00 2001
+From b8a21437855d1b5d7ff513e59f81c4149768a4aa Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Aug 2020 12:44:27 -0400
-Subject: [PATCH 040/170] add statusbar padding overlays
+Subject: [PATCH 040/169] add statusbar padding overlays
 
 Change-Id: I8cc5e5f03c1eddd8cd3208623a7219e8a17353aa
 ---
@@ -578,5 +578,5 @@ index 00000000000..6d30dfab1fa
 +    <dimen name="status_bar_padding_end">28dp</dimen>
 +</resources>
 -- 
-2.17.1
+2.30.2
 
