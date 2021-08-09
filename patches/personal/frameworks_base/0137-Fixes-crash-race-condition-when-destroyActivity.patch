@@ -1,7 +1,7 @@
-From ada699d445ff51da698532abc44be8fc1849f988 Mon Sep 17 00:00:00 2001
+From 93f99abf774095fedca61b374ffd2e05f6c4a183 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:06:14 -0500
-Subject: [PATCH 137/210] Fixes crash/race condition when destroyActivity
+Subject: [PATCH 137/212] Fixes crash/race condition when destroyActivity
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/a5a4384a973bc1065792026fa66f3a42d02d16e8
@@ -10,7 +10,7 @@ Subject: [PATCH 137/210] Fixes crash/race condition when destroyActivity
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/core/java/android/app/ActivityThread.java b/core/java/android/app/ActivityThread.java
-index b47d44d6079..2235c4b5abf 100644
+index 4cc486a0b9b..d523c550124 100644
 --- a/core/java/android/app/ActivityThread.java
 +++ b/core/java/android/app/ActivityThread.java
 @@ -3622,7 +3622,7 @@ public final class ActivityThread extends ClientTransactionHandler {
@@ -23,5 +23,5 @@ index b47d44d6079..2235c4b5abf 100644
          }
          SparseIntArray horizontal = new SparseIntArray();
 -- 
-2.17.1
+2.30.2
 

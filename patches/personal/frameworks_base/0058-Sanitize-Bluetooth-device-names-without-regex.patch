@@ -1,7 +1,7 @@
-From 59b417492cda7a5ed083f70d31b565d0edfe89db Mon Sep 17 00:00:00 2001
+From 0426510321691f37e0006a85d6af1d1efea75439 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:25:27 -0500
-Subject: [PATCH 058/210] Sanitize Bluetooth device names without regex
+Subject: [PATCH 058/212] Sanitize Bluetooth device names without regex
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/8d1bef4679aa4f3011da53e83e9b97ab9730d901
@@ -27,5 +27,5 @@ index 594e5ffa77a..dc7d05300d4 100644
              return null;
          } catch (RemoteException e) {
 -- 
-2.17.1
+2.30.2
 

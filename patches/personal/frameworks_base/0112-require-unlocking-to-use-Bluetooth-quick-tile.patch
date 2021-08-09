@@ -1,7 +1,7 @@
-From 4462522a5cc20edceb43ac8987f3c88c34279874 Mon Sep 17 00:00:00 2001
+From 6fa369c1dfcabdddfe36e36a5d63d4ad14aa5f65 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:54:10 -0500
-Subject: [PATCH 112/210] require unlocking to use Bluetooth quick tile
+Subject: [PATCH 112/212] require unlocking to use Bluetooth quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/8b0665c66ba5d9f23c527f9fed0d159c33083edd
@@ -93,5 +93,5 @@ index 888c7ab2c31..cee9392bb75 100644
          if (!mState.value) {
              mController.setBluetoothEnabled(true);
 -- 
-2.17.1
+2.30.2
 

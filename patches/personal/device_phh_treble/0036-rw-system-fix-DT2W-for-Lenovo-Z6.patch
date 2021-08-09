@@ -1,0 +1,35 @@
+From eab6c49047919868499e46f2b5c1a538be5fcc99 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 16 May 2021 14:29:20 -0400
+Subject: [PATCH 36/37] rw-system: fix DT2W for Lenovo Z6
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+  (thanks user Игорь from tg group)
+---
+ rw-system.sh | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/rw-system.sh b/rw-system.sh
+index 24f9999..9bc7c4a 100644
+--- a/rw-system.sh
++++ b/rw-system.sh
+@@ -192,9 +192,12 @@ changeKeylayout() {
+     if getprop ro.vendor.build.fingerprint |grep -iq -E -e '^Lenovo/' && [ -f /sys/devices/virtual/touch/tp_dev/gesture_on ];then
+         cp /system/phh/lenovo-synaptics_dsx.kl /mnt/phh/keylayout/synaptics_dsx.kl
+         chmod 0644 /mnt/phh/keylayout/synaptics_dsx.kl
+-        cp /system/phh/lenovo-synaptics_dsx.kl /mnt/phh/keylayout/fts_ts.kl
+-        chmod 0644 /mnt/phh/keylayout/fts_ts.kl
+         changed=true
++        if ! getprop ro.vendor.build.fingerprint |grep -iq -E -e '^Lenovo/jd20/'; then
++          cp /system/phh/lenovo-synaptics_dsx.kl /mnt/phh/keylayout/fts_ts.kl
++          chmod 0644 /mnt/phh/keylayout/fts_ts.kl
++          changed=true
++        fi
+     fi
+ 
+     if getprop ro.build.overlay.deviceid |grep -q -e RMX1931 -e RMX1941 -e CPH1859 -e CPH1861 -e RMX2185;then
+-- 
+2.30.2
+

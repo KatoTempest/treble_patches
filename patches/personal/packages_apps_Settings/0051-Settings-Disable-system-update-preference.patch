@@ -1,7 +1,7 @@
-From c0685d0c0b8e2e2b68b0089441a4d408fd169ed5 Mon Sep 17 00:00:00 2001
+From 534882aa7bda619d667b3b899b4c8525d323b52d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:47:40 -0500
-Subject: [PATCH 51/62] Settings: Disable system update preference
+Subject: [PATCH 51/63] Settings: Disable system update preference
 
   from
   https://github.com/nitrogen-project/android_packages_apps_Settings/commit/93aad4cb7756761ad798d5d0f60aa88e51c45a46
@@ -25,5 +25,5 @@ index c0c9ed43e8..7a6f78edc3 100755
      <!-- Whether device_model should be shown or not. -->
      <bool name="config_show_device_model">true</bool>
 -- 
-2.17.1
+2.30.2
 

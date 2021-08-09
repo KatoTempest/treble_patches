@@ -1,7 +1,7 @@
-From a98f302696bcc4cbfd19d9d0c032536f6004cf7c Mon Sep 17 00:00:00 2001
+From ddf8d30c3ded4048664fff898a6f58444d8d730b Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Jan 2017 18:51:57 -0500
-Subject: [PATCH 041/210] hide sensitive information while locked by default
+Subject: [PATCH 041/212] hide sensitive information while locked by default
 
 ---
  packages/SettingsProvider/res/values/defaults.xml | 2 +-
@@ -21,5 +21,5 @@ index 18a91026c8f..42b350c96a6 100644
      <!-- Default for Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1==on -->
      <integer name="def_heads_up_enabled">1</integer>
 -- 
-2.17.1
+2.30.2
 

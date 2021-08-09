@@ -1,7 +1,7 @@
-From 1e2e7075b360c41ab5281fdb4b54eb8611374f32 Mon Sep 17 00:00:00 2001
+From 2f1d7fb75ef948d5ebf0ec3cc5fbf2c8eceb086a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 03:52:40 -0500
-Subject: [PATCH 33/62] add ROM type info
+Subject: [PATCH 33/63] add ROM type info
 
 Change-Id: Iae053e3680c90fff3e29a8cbbfda46657ad725cd
 ---
@@ -52,5 +52,5 @@ index 02463266b3..6840a90917 100644
      <Preference
          android:key="security_key"
 -- 
-2.17.1
+2.30.2
 

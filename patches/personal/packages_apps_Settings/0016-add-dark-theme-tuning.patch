@@ -1,7 +1,7 @@
-From 8b3db9f3fbaa9a8385194151b808d9ff7dcf6c31 Mon Sep 17 00:00:00 2001
+From 77bb526769600c876cac9e2b0ec26796e8027744 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 00:31:56 +0300
-Subject: [PATCH 16/62] add dark theme tuning
+Subject: [PATCH 16/63] add dark theme tuning
 
 Change-Id: I2e6517e97eb8b5b4579544f35be4a4e5e8dc97cd
 ---
@@ -73,5 +73,5 @@ index 0a98bff7ea..d8e0f4f86d 100644
                  "android.theme.customization.statusbar"));
          controllers.add(new OverlayCategoryPreferenceController(context,
 -- 
-2.17.1
+2.30.2
 

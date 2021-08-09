@@ -1,7 +1,7 @@
-From fedba1216f195903c5b31c7ea833e78510b66eb2 Mon Sep 17 00:00:00 2001
+From 4713e11a42a6cf8ede386de9b3ae0031f1ca965d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 21 Jul 2020 03:03:30 +0300
-Subject: [PATCH 093/210] add QS tile to show volume panel
+Subject: [PATCH 093/212] add QS tile to show volume panel
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/4ac0ff666e2ffbe28103d550a6d77f7a7a3fddbe
@@ -59,7 +59,7 @@ index 87f181bf071..2a52ce2f639 100644
 +    <string name="quick_settings_volume_panel_label">Панель громкости</string>
  </resources>
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index f238dadcafb..90696f78a5d 100644
+index 0687235c5ae..72799dceee4 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -114,7 +114,7 @@
@@ -226,5 +226,5 @@ index a6d725936f0..0fd36555736 100644
    }
  }
 -- 
-2.17.1
+2.30.2
 

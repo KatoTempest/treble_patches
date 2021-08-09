@@ -1,14 +1,14 @@
-From 8096be02d480b1c7962a4e4d62838a271ba1e042 Mon Sep 17 00:00:00 2001
+From 1e77623e42679903726379db1c77f32b93fb3e55 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:50:14 -0500
-Subject: [PATCH 22/33] tweak for CUBOT KINGKONG MINI2 (overlay.devinputjack)
+Subject: [PATCH 22/37] tweak for CUBOT KINGKONG MINI2 (overlay.devinputjack)
 
 ---
  rw-system.sh | 7 ++++++-
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 55cbece..fa9f8bf 100644
+index 60cc379..d7d74c7 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -376,11 +376,16 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel
@@ -27,8 +27,8 @@ index 55cbece..fa9f8bf 100644
 +fi
 +
  #Realme 6
- if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151;then
+ if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151 -e RMX2111 -e RMX2111L1;then
      setprop persist.sys.phh.fingerprint.nocleanup true
 -- 
-2.17.1
+2.30.2
 

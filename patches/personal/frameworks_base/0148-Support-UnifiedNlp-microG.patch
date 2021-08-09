@@ -1,7 +1,7 @@
-From bab592122aadf4633f841336c576d53d52f9f9bc Mon Sep 17 00:00:00 2001
+From 81ef47bde8bc23e7bbe2fab2137c3b07648862c6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:49:34 -0500
-Subject: [PATCH 148/210] Support UnifiedNlp (microG)
+Subject: [PATCH 148/212] Support UnifiedNlp (microG)
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/6ce5ffc2279d0fa5a615e75711b716361cdad644
@@ -10,7 +10,7 @@ Subject: [PATCH 148/210] Support UnifiedNlp (microG)
  1 file changed, 2 insertions(+)
 
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index 7b9dedcd538..6c62d25d249 100644
+index 6fdaa3a64d7..6273ca8f1fe 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -1659,6 +1659,8 @@
@@ -23,5 +23,5 @@ index 7b9dedcd538..6c62d25d249 100644
  
      <!-- This string array can be overriden to enable test location providers initially. -->
 -- 
-2.17.1
+2.30.2
 

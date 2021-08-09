@@ -1,7 +1,7 @@
-From d5188df3bf69487d5b7e9aa38adebcd0eb383bc4 Mon Sep 17 00:00:00 2001
+From c4dddf22e6b0841f03327a44b531ec34c9cc7793 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:49:30 -0500
-Subject: [PATCH 45/62] Gestures: allow to set back swipe deadzone [2/2]
+Subject: [PATCH 45/63] Gestures: allow to set back swipe deadzone [2/2]
 
   based on
   https://github.com/ezio84/abc_packages_apps_Settings/commit/a00e620ae5b3015400af20c10d349d5eaa68029e
@@ -132,5 +132,5 @@ index 2753f7edc4..2e3440ff16 100644
          int length = array.length();
          float[] floatArray = new float[length];
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 41bda9847b9bad5f85b79e7b5884d2a7dfdba4ef Mon Sep 17 00:00:00 2001
+From e69174cc69caf62c7b24e4bc72b75206eaf6dd8d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:32:34 -0400
-Subject: [PATCH] disable debugging
+Subject: [PATCH 4/5] disable debugging
 
 Change-Id: I12ea3e16cd53026d381c59af0fb443474ff95de0
 ---
@@ -83,7 +83,7 @@ index 9d67acff85..87b9f504f5 100644
      shared_libs: [
          "libnativehelper",
 diff --git a/dex2oat/Android.bp b/dex2oat/Android.bp
-index afeadc547d..c2ce8acf07 100644
+index 2e0d86c5cb..b3a7dee966 100644
 --- a/dex2oat/Android.bp
 +++ b/dex2oat/Android.bp
 @@ -16,7 +16,7 @@
@@ -199,5 +199,5 @@ index fe077cb5e2..b3eb77174c 100644
          "art_gtest_defaults",
      ],
 -- 
-2.17.1
+2.30.2
 

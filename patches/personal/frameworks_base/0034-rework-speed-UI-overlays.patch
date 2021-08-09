@@ -1,7 +1,7 @@
-From 33b37081baf109dbb25336c60dc801a14a92a644 Mon Sep 17 00:00:00 2001
+From ebeae2008ad5cbbb985737c564c31251734db975 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 10 Jul 2020 06:40:36 +0300
-Subject: [PATCH 034/210] rework speed UI overlays
+Subject: [PATCH 034/212] rework speed UI overlays
 
 ---
  core/res/res/values/config.xml                |  4 +++
@@ -45,7 +45,7 @@ Subject: [PATCH 034/210] rework speed UI overlays
  create mode 100644 packages/overlays/Level7SpeedUIOverlay/res/values/config.xml
 
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index e79ef422105..a35c515c861 100644
+index f70a4dbc4c0..773f0615705 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -103,6 +103,10 @@
@@ -60,7 +60,7 @@ index e79ef422105..a35c515c861 100644
           connected.  If you use the ims apn DCT will block
           any other apn from connecting until ims apn is connected-->
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index bc4785f35ce..56ce530e5ef 100644
+index 60a66bcd1bf..a27d1fb1e85 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -22,7 +22,7 @@
@@ -681,5 +681,5 @@ index 00000000000..a68a9303609
 +    <bool name="config_supportsRoundedCornersOnWindows">false</bool>
 +</resources>
 -- 
-2.17.1
+2.30.2
 

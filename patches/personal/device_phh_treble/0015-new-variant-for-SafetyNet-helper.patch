@@ -1,7 +1,7 @@
-From fc25b49a0f7c84cc80c3046adef79885ee12ca71 Mon Sep 17 00:00:00 2001
+From 98ef27c8ecb58feebe915e3afa149bc66b9f2501 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH 15/33] new variant for SafetyNet helper
+Subject: [PATCH 15/37] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-
@@ -56,10 +56,10 @@ index b7d7177..0000000
 -mount -o remount,ro $MOUNTPOINT
 -#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 83008d5..d0a9fc0 100644
+index 735b40b..47490ee 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -193,3 +193,17 @@ if [ "$1" == "persist.sys.phh.root" ]; then
+@@ -213,3 +213,17 @@ if [ "$1" == "persist.sys.phh.root" ]; then
      fi
      exit
  fi
@@ -114,5 +114,5 @@ index 2bc1c6b..0894a3f 100644
      start ril-proxy
  
 -- 
-2.17.1
+2.30.2
 

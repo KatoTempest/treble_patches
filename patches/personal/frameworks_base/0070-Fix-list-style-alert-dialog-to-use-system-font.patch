@@ -1,7 +1,7 @@
-From 80c7d9bfdf206134e88b65d0f3f05b7af55a8a15 Mon Sep 17 00:00:00 2001
+From e9eabe9d5e6548ae07e31b9dae7384214e0a4e64 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:42:45 -0500
-Subject: [PATCH 070/210] Fix list style alert dialog to use system font
+Subject: [PATCH 070/212] Fix list style alert dialog to use system font
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/6e402fb09e9f134a05edc58e1dff6bc0251c2bf5
@@ -30,5 +30,5 @@ index 1afaf4f7f18..c6dccf2885d 100644
          <!-- Button styles -->
          <item name="buttonCornerRadius">@dimen/config_buttonCornerRadius</item>
 -- 
-2.17.1
+2.30.2
 

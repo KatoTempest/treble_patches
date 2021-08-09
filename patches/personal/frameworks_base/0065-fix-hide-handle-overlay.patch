@@ -1,7 +1,7 @@
-From e7527115811fdfd17a0e2fcdfeb32bcad66c265a Mon Sep 17 00:00:00 2001
+From 36242ce6a3c6795d4fa17a9511cfeff6d5086e43 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 14:14:13 -0500
-Subject: [PATCH 065/210] fix hide handle overlay
+Subject: [PATCH 065/212] fix hide handle overlay
 
   based on
   https://github.com/Evolution-X/frameworks_base/commit/5dae6c827b308e35794a0d0d73e4e2a8a57344b5
@@ -146,5 +146,5 @@ index 00000000000..8c3e5baab3e
 +    <integer name="config_navBarOpacityMode">2</integer>
 +</resources>
 -- 
-2.17.1
+2.30.2
 

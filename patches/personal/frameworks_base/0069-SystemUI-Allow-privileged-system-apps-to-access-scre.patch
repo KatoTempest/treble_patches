@@ -1,7 +1,7 @@
-From cdda7423406382f81b7ba9ae1275950bd6e54427 Mon Sep 17 00:00:00 2001
+From 8bdb13af2116988433a1c839ee2774ce34c200cc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:41:16 -0500
-Subject: [PATCH 069/210] SystemUI: Allow privileged system apps to access
+Subject: [PATCH 069/212] SystemUI: Allow privileged system apps to access
  screenshot service
 
   from
@@ -25,5 +25,5 @@ index ce1eea0a715..c6918565740 100644
          <!-- Called from PhoneWindowManager -->
          <receiver android:name=".screenshot.ScreenshotServiceErrorReceiver"
 -- 
-2.17.1
+2.30.2
 

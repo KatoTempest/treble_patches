@@ -1,7 +1,7 @@
-From 6d9f78a19b995b163daabd5d8c604e5fd7167ded Mon Sep 17 00:00:00 2001
+From 22180084b209828d8d93b959878343d36253dea3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 22:17:46 +0300
-Subject: [PATCH 047/210] add call recording support
+Subject: [PATCH 047/212] add call recording support
 
 ---
  data/etc/com.android.dialer.xml | 1 +
@@ -19,5 +19,5 @@ index 405279f8b1a..02ae63d5d44 100644
      </privapp-permissions>
  </permissions>
 -- 
-2.17.1
+2.30.2
 

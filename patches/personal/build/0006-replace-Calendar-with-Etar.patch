@@ -1,7 +1,7 @@
-From f055a204749154be29d5be8b0153a1a8caac976c Mon Sep 17 00:00:00 2001
+From 81bde9b357513c1109d326c7d602c2e38b3d90e3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 7 Jul 2020 21:01:41 +0300
-Subject: [PATCH 06/15] replace Calendar with Etar
+Subject: [PATCH 06/14] replace Calendar with Etar
 
 ---
  target/product/handheld_product.mk | 2 +-
@@ -21,5 +21,5 @@ index 4f2d0e357..dc7ddba15 100644
      Contacts \
      DeskClock \
 -- 
-2.17.1
+2.30.2
 

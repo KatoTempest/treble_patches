@@ -1,7 +1,7 @@
-From 2600b3ca3d85825294873bc6f4e0f6712f68a862 Mon Sep 17 00:00:00 2001
+From c4ef4c9bb43443d8dca0fb0259202f6f01c3ff51 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:05:15 -0500
-Subject: [PATCH 136/210] Add synchronization for invokeForAllObservers call
+Subject: [PATCH 136/212] Add synchronization for invokeForAllObservers call
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/16389e5ef29f914f3339558788dc35092d3786fa
@@ -23,5 +23,5 @@ index c0a425d813d..8322db096b4 100644
          try {
              for (int i = 0; i < length; i++) {
 -- 
-2.17.1
+2.30.2
 

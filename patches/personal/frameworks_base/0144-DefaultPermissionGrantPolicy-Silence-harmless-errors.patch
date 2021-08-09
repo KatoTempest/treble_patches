@@ -1,7 +1,7 @@
-From 3f9abec1afc6647fc88a53e8e2a0a9b6430b0f10 Mon Sep 17 00:00:00 2001
+From 367b62ee84423fd9785907d4ac81cf749a813cfe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:27:23 -0500
-Subject: [PATCH 144/210] DefaultPermissionGrantPolicy: Silence harmless errors
+Subject: [PATCH 144/212] DefaultPermissionGrantPolicy: Silence harmless errors
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/98b8eddc6a642c6dacacbc8301272851c2102e82
@@ -22,5 +22,5 @@ index 9f65add8643..a7085d9cb0d 100644
              }
          }
 -- 
-2.17.1
+2.30.2
 

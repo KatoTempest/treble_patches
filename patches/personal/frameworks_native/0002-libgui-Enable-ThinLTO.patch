@@ -1,7 +1,7 @@
-From 0aa0b320d39556405713bd73312032480294378e Mon Sep 17 00:00:00 2001
+From 189d8e604f698e7a1533adc4b5d967646f97bb55 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:17:15 -0400
-Subject: [PATCH 2/9] libgui: Enable ThinLTO
+Subject: [PATCH 02/12] libgui: Enable ThinLTO
 
   from
   https://github.com/crdroidandroid/android_frameworks_native/commit/ede73f17482616dd8906bfd0b71e069d287209a5
@@ -27,5 +27,5 @@ index 4a4510e04..ea22f05f6 100644
  
  // Used by media codec services exclusively as a static lib for
 -- 
-2.17.1
+2.30.2
 

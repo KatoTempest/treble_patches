@@ -1,7 +1,7 @@
-From 33e3456352d0dfd5195aced1522b296988b23d08 Mon Sep 17 00:00:00 2001
+From 703431a99c81d83c3b14fdbb8d5088036ba13a4b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:36:27 -0500
-Subject: [PATCH 063/210] base: allow disable of screenshot shutter sound [1/2]
+Subject: [PATCH 063/212] base: allow disable of screenshot shutter sound [1/2]
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/654e14f72ecac22c68dadc96d341997aa3a9cb26
@@ -66,5 +66,5 @@ index c558bcf61fc..5d50226f367 100644
                  mScreenshotPreview.setLayerType(View.LAYER_TYPE_HARDWARE, null);
                  mScreenshotPreview.buildLayer();
 -- 
-2.17.1
+2.30.2
 

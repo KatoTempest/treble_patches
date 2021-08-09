@@ -1,7 +1,7 @@
-From eb38a94ed27484a5a165f56b78bee7a8f90d11c4 Mon Sep 17 00:00:00 2001
+From 0a18ce66a6d1fcd7136ec1d48d421caa31021f73 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:10:45 -0500
-Subject: [PATCH 084/210] PackageManager: allow build-time disabling of
+Subject: [PATCH 084/212] PackageManager: allow build-time disabling of
  components
 
   * based on
@@ -87,7 +87,7 @@ index 82f44125a11..78180dd8d7d 100644
 +    <java-symbol type="array" name="config_forceEnabledComponents" />
  </resources>
 diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
-index deca1f4c3c6..9ef65a91397 100644
+index bf01c2251df..5f048b1e098 100644
 --- a/services/core/java/com/android/server/pm/PackageManagerService.java
 +++ b/services/core/java/com/android/server/pm/PackageManagerService.java
 @@ -1479,6 +1479,8 @@ public class PackageManagerService extends IPackageManager.Stub
@@ -117,8 +117,8 @@ index deca1f4c3c6..9ef65a91397 100644
              // If this is first boot after an OTA, and a normal boot, then
              // we need to clear code cache directories.
              // Note that we do *not* clear the application profiles. These remain valid
-@@ -3662,6 +3675,29 @@ public class PackageManagerService extends IPackageManager.Stub
-         Slog.i(TAG, "Fix for b/169414761 is applied");
+@@ -3660,6 +3673,29 @@ public class PackageManagerService extends IPackageManager.Stub
+         mServiceStartWithDelay = SystemClock.uptimeMillis() + (60 * 1000L);
      }
  
 +    private void enableComponents(String[] components, boolean enable) {
@@ -147,7 +147,7 @@ index deca1f4c3c6..9ef65a91397 100644
      /**
       * Uncompress and install stub applications.
       * <p>In order to save space on the system partition, some applications are shipped in a
-@@ -20973,6 +21009,12 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -20990,6 +21026,12 @@ public class PackageManagerService extends IPackageManager.Stub
      public void setComponentEnabledSetting(ComponentName componentName,
              int newState, int flags, int userId) {
          if (!mUserManager.exists(userId)) return;
@@ -161,5 +161,5 @@ index deca1f4c3c6..9ef65a91397 100644
                  componentName.getClassName(), newState, flags, userId, null);
      }
 -- 
-2.17.1
+2.30.2
 

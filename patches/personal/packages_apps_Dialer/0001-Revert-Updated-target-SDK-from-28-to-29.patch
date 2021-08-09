@@ -1,7 +1,7 @@
-From c65837bd51e5d8159b54d35780dc7179c6478f3f Mon Sep 17 00:00:00 2001
+From 5bc6d50668a5063a040e9c37ee03b6d9b79b258a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 15:25:58 -0500
-Subject: [PATCH 1/7] Revert "Updated target SDK from 28 to 29."
+Subject: [PATCH 1/8] Revert "Updated target SDK from 28 to 29."
 
 This reverts commit 03409a448d43c11a76171f96ceca7d9d19793830.
 ---
@@ -248,5 +248,5 @@ index ccd89a9a5..d39dfee83 100644
    <!-- Applications using this module should merge these permissions using android_manifest_merge -->
  
 -- 
-2.17.1
+2.30.2
 

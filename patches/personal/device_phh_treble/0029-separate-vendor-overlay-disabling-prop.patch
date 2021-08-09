@@ -1,7 +1,7 @@
-From 3d63dc60d654418882689ca72bd7c78dfc3e177c Mon Sep 17 00:00:00 2001
+From 8aeddcd88e136c1c3254a1d7ed7cb2cf61da3b6b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 00:20:50 -0400
-Subject: [PATCH 29/33] separate vendor overlay disabling prop
+Subject: [PATCH 29/37] separate vendor overlay disabling prop
 
 ---
  phh-on-data.sh | 7 ++++++-
@@ -33,5 +33,5 @@ index 3c112ed..bc977f0 100644
  minijailSrc64=/system/system_ext/apex/com.android.vndk.v28/lib64/libminijail.so
  if [ "$vndk" = 27 ]; then
 -- 
-2.17.1
+2.30.2
 

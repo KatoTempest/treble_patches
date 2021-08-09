@@ -1,7 +1,7 @@
-From 06b332531e31740d38f025738204a4db0f1f8a4c Mon Sep 17 00:00:00 2001
+From 1a8883916d69e30694cdfe5a3eaeb08060a28418 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 00:18:12 +0200
-Subject: [PATCH 004/210] remove led blinking if battery low
+Subject: [PATCH 004/212] remove led blinking if battery low
 
 	modified:   services/core/java/com/android/server/BatteryService.java
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 004/210] remove led blinking if battery low
  1 file changed, 4 deletions(-)
 
 diff --git a/services/core/java/com/android/server/BatteryService.java b/services/core/java/com/android/server/BatteryService.java
-index 8dd4fa6d8fd..5a1f8be0ad3 100644
+index c9ba58a5fef..5784b3fd475 100644
 --- a/services/core/java/com/android/server/BatteryService.java
 +++ b/services/core/java/com/android/server/BatteryService.java
 @@ -1110,10 +1110,6 @@ public final class BatteryService extends SystemService {
@@ -24,5 +24,5 @@ index 8dd4fa6d8fd..5a1f8be0ad3 100644
              } else if (status == BatteryManager.BATTERY_STATUS_CHARGING
                      || status == BatteryManager.BATTERY_STATUS_FULL) {
 -- 
-2.17.1
+2.30.2
 

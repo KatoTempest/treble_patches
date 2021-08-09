@@ -1,7 +1,7 @@
-From 6a7d3819f581cfd5c8847d99327c46e843674df0 Mon Sep 17 00:00:00 2001
+From 61232cbe71aeb67e25dd1b2b92e08cf628cd1d58 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:45:29 -0500
-Subject: [PATCH 072/210] base: add more notification channels to blockable
+Subject: [PATCH 072/212] base: add more notification channels to blockable
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/ead8c1b900765877a4d6216e53dedbbbc607a176
@@ -30,5 +30,5 @@ index 0b868a903e6..5cb1aa57183 100644
  
          NotificationChannel foregroundChannel = new NotificationChannel(
 -- 
-2.17.1
+2.30.2
 

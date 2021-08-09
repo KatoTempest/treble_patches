@@ -1,7 +1,7 @@
-From 70f7391744863bfb4e4ba56bf24acd3378d94345 Mon Sep 17 00:00:00 2001
+From 754ae1a8a3a9f46d2ef528d78bee4e12e9deb2a3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Mar 2021 07:52:26 -0400
-Subject: [PATCH 24/33] include 'app' to vendor blocking
+Subject: [PATCH 24/37] include 'app' to vendor blocking
 
 ---
  phh-on-data.sh | 11 ++++++-----
@@ -44,5 +44,5 @@ index 472d16e..3c112ed 100644
      mount $minijailSrc /vendor/lib/libminijail_vendor.so
      mount $minijailSrc64 /system/lib64/vndk-28/libminijail.so
 -- 
-2.17.1
+2.30.2
 

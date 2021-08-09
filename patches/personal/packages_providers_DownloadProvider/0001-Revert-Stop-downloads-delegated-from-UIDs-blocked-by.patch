@@ -1,0 +1,71 @@
+From 9efdaef54e7f74004f61e95015d475c9f6cb6399 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 26 May 2021 05:31:01 -0400
+Subject: [PATCH] Revert "Stop downloads delegated from UIDs blocked by network
+ policy"
+
+This reverts commit 1b788a886eeac894e04193b55adc5451d9178a28.
+---
+ .../android/providers/downloads/DownloadThread.java   | 11 -----------
+ 1 file changed, 11 deletions(-)
+
+diff --git a/src/com/android/providers/downloads/DownloadThread.java b/src/com/android/providers/downloads/DownloadThread.java
+index c3be4087..7dd121b9 100644
+--- a/src/com/android/providers/downloads/DownloadThread.java
++++ b/src/com/android/providers/downloads/DownloadThread.java
+@@ -23,7 +23,6 @@ import static android.provider.Downloads.Impl.COLUMN_DELETED;
+ import static android.provider.Downloads.Impl.COLUMN_STATUS;
+ import static android.provider.Downloads.Impl.CONTROL_PAUSED;
+ import static android.provider.Downloads.Impl.STATUS_BAD_REQUEST;
+-import static android.provider.Downloads.Impl.STATUS_BLOCKED;
+ import static android.provider.Downloads.Impl.STATUS_CANCELED;
+ import static android.provider.Downloads.Impl.STATUS_CANNOT_RESUME;
+ import static android.provider.Downloads.Impl.STATUS_FILE_ERROR;
+@@ -59,7 +58,6 @@ import android.content.Intent;
+ import android.drm.DrmManagerClient;
+ import android.drm.DrmOutputStream;
+ import android.net.ConnectivityManager;
+-import android.net.IConnectivityManager;
+ import android.net.INetworkPolicyListener;
+ import android.net.Network;
+ import android.net.NetworkCapabilities;
+@@ -69,7 +67,6 @@ import android.net.TrafficStats;
+ import android.net.Uri;
+ import android.os.ParcelFileDescriptor;
+ import android.os.Process;
+-import android.os.ServiceManager;
+ import android.os.SystemClock;
+ import android.os.storage.StorageManager;
+ import android.provider.Downloads;
+@@ -124,7 +121,6 @@ public class DownloadThread extends Thread {
+     private final Context mContext;
+     private final SystemFacade mSystemFacade;
+     private final DownloadNotifier mNotifier;
+-    private final IConnectivityManager mConnectivityManager;
+     private final NetworkPolicyManager mNetworkPolicy;
+     private final StorageManager mStorage;
+ 
+@@ -259,8 +255,6 @@ public class DownloadThread extends Thread {
+         mSystemFacade = Helpers.getSystemFacade(mContext);
+         mNotifier = Helpers.getDownloadNotifier(mContext);
+         mNetworkPolicy = mContext.getSystemService(NetworkPolicyManager.class);
+-        mConnectivityManager = IConnectivityManager.Stub.asInterface(
+-                    ServiceManager.getService(Context.CONNECTIVITY_SERVICE));
+         mStorage = mContext.getSystemService(StorageManager.class);
+ 
+         mJobService = service;
+@@ -305,11 +299,6 @@ public class DownloadThread extends Thread {
+                         "No network associated with requesting UID");
+             }
+ 
+-            if (mConnectivityManager.isUidIsolated(mInfo.mUid)) {
+-                throw new StopRequestException(STATUS_BLOCKED,
+-                        "Download blocked by network policy for requesting UID");
+-            }
+-
+             // Remember which network this download started on; used to
+             // determine if errors were due to network changes.
+             final NetworkInfo info = mSystemFacade.getNetworkInfo(mNetwork, mInfo.mUid,
+-- 
+2.17.1
+

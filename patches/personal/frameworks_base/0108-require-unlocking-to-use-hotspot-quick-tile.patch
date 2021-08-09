@@ -1,7 +1,7 @@
-From da98c6e878c94ef6219260a43d55d5dcabf081ed Mon Sep 17 00:00:00 2001
+From 0ccf3ac13ab117bf88c97ba870cfbf6b0ecced4c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:40:09 -0500
-Subject: [PATCH 108/210] require unlocking to use hotspot quick tile
+Subject: [PATCH 108/212] require unlocking to use hotspot quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/20727a78e79480af383d127d3afe20f07f91bac0
@@ -90,5 +90,5 @@ index 1ab77f3f752..330caa07764 100644
      public CharSequence getTileLabel() {
          return mContext.getString(R.string.quick_settings_hotspot_label);
 -- 
-2.17.1
+2.30.2
 

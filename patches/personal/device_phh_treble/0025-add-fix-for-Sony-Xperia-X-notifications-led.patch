@@ -1,17 +1,17 @@
-From e9c22909c62d2d2c9ce62d5b6eef604b1f326f99 Mon Sep 17 00:00:00 2001
+From a18be5ad8967270e0186ec72b88b444ad64f2b2b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 16:36:59 -0400
-Subject: [PATCH 25/33] add fix for Sony Xperia X notifications led
+Subject: [PATCH 25/37] add fix for Sony Xperia X notifications led
 
 ---
  rw-system.sh | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 180fe70..63c757d 100644
+index a8bca8c..58ed6f5 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -645,6 +645,10 @@ if getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && [ "$vndk" -ge
+@@ -653,6 +653,10 @@ if getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && [ "$vndk" -ge
      fi
  fi
  
@@ -23,5 +23,5 @@ index 180fe70..63c757d 100644
  if getprop ro.vendor.build.fingerprint | grep -q -e nubia/NX669; then
      umount /vendor/etc/audio
 -- 
-2.17.1
+2.30.2
 

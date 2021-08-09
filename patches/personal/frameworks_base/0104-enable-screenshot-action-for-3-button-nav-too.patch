@@ -1,7 +1,7 @@
-From 8ded96599fabfe262a119e2ee262abf922e1d552 Mon Sep 17 00:00:00 2001
+From 77c4202c399403fb4e4c1e04cd963f9776a15523 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:12:09 -0500
-Subject: [PATCH 104/210] enable screenshot action for 3 button nav too
+Subject: [PATCH 104/212] enable screenshot action for 3 button nav too
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/aa33bfdb52753a2b4c287a5d6f0d10edcfefb942
@@ -51,5 +51,5 @@ index 515e9e4e43a..70030b3a7d6 100644
          public boolean onLongPress() {
              if (FeatureFlagUtils.isEnabled(mContext, FeatureFlagUtils.SCREENRECORD_LONG_PRESS)) {
 -- 
-2.17.1
+2.30.2
 

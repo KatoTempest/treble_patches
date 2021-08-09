@@ -1,7 +1,7 @@
-From 899125c65b19e35e71b10a6e7adecc0daf2d92b5 Mon Sep 17 00:00:00 2001
+From 55da41d909576a4162592f7e08505b9e03085373 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 08:16:22 -0500
-Subject: [PATCH 2/7] merge massive Russian translation
+Subject: [PATCH 2/8] merge massive Russian translation
 
   from
   https://github.com/LineageOS/android_packages_apps_Dialer/tree/lineage-17.1
@@ -139,5 +139,5 @@ index 000000000..eb48944d3
 +    <string name="recent_calls_no_items_in_range">В журнале вызовов нет записей за указанный период времени.</string>
 +</resources>
 -- 
-2.17.1
+2.30.2
 

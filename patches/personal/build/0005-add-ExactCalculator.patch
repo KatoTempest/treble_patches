@@ -1,7 +1,7 @@
-From cb575bde34e001c3c3b1319d18307f848741e7f8 Mon Sep 17 00:00:00 2001
+From f4971e281bd0359aa2f27f1d6f69201c2903473d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Feb 2020 21:04:29 +0200
-Subject: [PATCH 05/15] add ExactCalculator
+Subject: [PATCH 05/14] add ExactCalculator
 
 	modified:   target/product/handheld_product.mk
 ---
@@ -21,5 +21,5 @@ index ab9ad84cc..4f2d0e357 100644
      OneTimeInitializer \
      preinstalled-packages-platform-handheld-product.xml \
 -- 
-2.17.1
+2.30.2
 

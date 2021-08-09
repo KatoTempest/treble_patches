@@ -1,14 +1,14 @@
-From f4f02ee284ed8562fcb208b056bc8e7d8dfb4c90 Mon Sep 17 00:00:00 2001
+From a7a2a2c889a05e7552bda4d70e6dc2b8484d146f Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Sun, 17 Mar 2019 19:11:12 -0400
-Subject: [PATCH 040/210] SystemUI: enable NFC quick settings tile
+Subject: [PATCH 040/212] SystemUI: enable NFC quick settings tile
 
 ---
  packages/SystemUI/res/values/config.xml | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 56ce530e5ef..8f00d58753c 100644
+index a27d1fb1e85..eeb884b0a17 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -114,7 +114,7 @@
@@ -21,5 +21,5 @@ index 56ce530e5ef..8f00d58753c 100644
  
      <!-- The tiles to display in QuickSettings -->
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 954ee4319623e0256b4e02533be57f00cdb6956a Mon Sep 17 00:00:00 2001
+From 7665f5de1e7c2ace6f2d65d4a401c05ebe1bf50b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 7 Dec 2019 16:38:50 +0200
-Subject: [PATCH 02/15] remove some apps
+Subject: [PATCH 02/14] remove some apps
 
 	modified:   target/product/handheld_product.mk
 	modified:   target/product/mainline_arm64.mk
@@ -32,5 +32,5 @@ index 2199c570a..8d3a618e1 100644
      frameworks-base-overlays
  
 -- 
-2.17.1
+2.30.2
 

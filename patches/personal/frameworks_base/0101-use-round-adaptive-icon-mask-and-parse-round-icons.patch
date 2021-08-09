@@ -1,7 +1,7 @@
-From 4dbaaa6bafc674c878a4a7861cb5bf5b95898b40 Mon Sep 17 00:00:00 2001
+From a0a16ecce9e4f9cb9ea2dc6d6894d3b86bb81801 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:00:25 -0500
-Subject: [PATCH 101/210] use round adaptive icon mask and parse round icons
+Subject: [PATCH 101/212] use round adaptive icon mask and parse round icons
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/4435f0efe4fb8165ec55fc2ec0f30aa0e5cd8cb7
@@ -10,7 +10,7 @@ Subject: [PATCH 101/210] use round adaptive icon mask and parse round icons
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index ff29505390f..7b9dedcd538 100644
+index a4a3ceca7bd..6fdaa3a64d7 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -3411,7 +3411,7 @@
@@ -32,5 +32,5 @@ index ff29505390f..7b9dedcd538 100644
      <!-- The component name, flattened to a string, for the default accessibility service to be
           enabled by the accessibility shortcut. This service must be trusted, as it can be activated
 -- 
-2.17.1
+2.30.2
 

@@ -1,4 +1,4 @@
-From b6681e070f32dc91ffc86a92be1d348a075c1a3c Mon Sep 17 00:00:00 2001
+From cbe4c2e6978ff62449a4d6b3616c3c0bebb9a5d6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 28 Mar 2021 10:59:42 -0400
 Subject: [PATCH 11/13] rework 'lavender' overlay
@@ -365,5 +365,5 @@ index 17bd39a..0000000
 -</device>
 \ No newline at end of file
 -- 
-2.17.1
+2.30.2
 

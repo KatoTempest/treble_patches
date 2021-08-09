@@ -1,7 +1,7 @@
-From bc2c92fc02d7ab21f75b30ceefb43fcc071bf56e Mon Sep 17 00:00:00 2001
+From f8c32fcd570db98d253113cf1c6cfcaf9aebbbab Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 21 Dec 2020 04:32:23 -0500
-Subject: [PATCH 3/7] Dialer: handle database downgrade from lineage-16.0
+Subject: [PATCH 3/8] Dialer: handle database downgrade from lineage-16.0
 
   from
   https://github.com/LineageOS/android_packages_apps_Dialer/commit/06a730400ca3ef7b13c17bdab7cc1f1a85fb680f
@@ -49,5 +49,5 @@ index 719492e69..41d3f3577 100644
    public void setProperty(String key, String value) {
      setProperty(getWritableDatabase(), key, value);
 -- 
-2.17.1
+2.30.2
 

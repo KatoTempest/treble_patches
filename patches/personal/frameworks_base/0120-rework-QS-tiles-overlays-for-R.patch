@@ -1,7 +1,7 @@
-From a39783450e5613838232df69c40e5bb6a5cd3eb9 Mon Sep 17 00:00:00 2001
+From eab9a01f8191028df7bdc92f3cfc16c8836bfe50 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:01:39 -0500
-Subject: [PATCH 120/210] rework QS tiles overlays for R
+Subject: [PATCH 120/212] rework QS tiles overlays for R
 
   ugly quick solution
 ---
@@ -15,7 +15,7 @@ Subject: [PATCH 120/210] rework QS tiles overlays for R
  7 files changed, 7 insertions(+), 7 deletions(-)
 
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 5c86d882884..6e20339bf7d 100644
+index d2ca5e5f15a..1087a183539 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -99,7 +99,7 @@
@@ -94,5 +94,5 @@ index d6c037675e3..860013b1fe9 100644
 +    <integer name="quick_settings_max_rows">6</integer>
  </resources>
 -- 
-2.17.1
+2.30.2
 

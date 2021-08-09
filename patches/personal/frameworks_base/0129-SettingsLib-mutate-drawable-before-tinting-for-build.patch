@@ -1,7 +1,7 @@
-From 6362fe61f2194aee714bd90e750c4cc2b90dbfc9 Mon Sep 17 00:00:00 2001
+From c73cfec74630c4ba221a27e69b75a2a42f3a7329 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:45:09 -0500
-Subject: [PATCH 129/210] SettingsLib: mutate drawable before tinting for
+Subject: [PATCH 129/212] SettingsLib: mutate drawable before tinting for
  buildBtRainbowDrawable
 
   from
@@ -27,5 +27,5 @@ index df2f973e85c..4103ac178fc 100644
  
          return adaptiveIcon;
 -- 
-2.17.1
+2.30.2
 

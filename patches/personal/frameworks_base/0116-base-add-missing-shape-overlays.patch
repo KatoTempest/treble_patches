@@ -1,7 +1,7 @@
-From 1877099d5d1a28e3d757ded81a7b6229e8ed1394 Mon Sep 17 00:00:00 2001
+From f2aced7a889ea0133a1651fdc88b4316b6d03270 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:24:48 -0500
-Subject: [PATCH 116/210] base: add missing shape overlays
+Subject: [PATCH 116/212] base: add missing shape overlays
 
   from
   https://github.com/omnirom/android_frameworks_base/commit/70a976d9b46bf2b57d327c0612a1758f688c35e5
@@ -23,5 +23,5 @@ index 988b883d494..7ec262b5f26 100644
  	QSPanel33Overlay \
  	QSPanel34Overlay \
 -- 
-2.17.1
+2.30.2
 

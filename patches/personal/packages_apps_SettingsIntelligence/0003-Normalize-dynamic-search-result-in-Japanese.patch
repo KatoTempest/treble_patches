@@ -1,7 +1,7 @@
-From 4580ab339c16cea8fe99fbdb85b1b2b19dd29059 Mon Sep 17 00:00:00 2001
+From badbf0bf005d192fe5bd99ca41ed9f8ae86fa182 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:53:01 -0500
-Subject: [PATCH 3/4] Normalize dynamic search result in Japanese
+Subject: [PATCH 3/3] Normalize dynamic search result in Japanese
 
   from
   https://github.com/ezio84/abc_packages_apps_SettingsIntelligence/commit/1e5b9ff4672c2d193ec301fbbb863dda4be6979b
@@ -46,5 +46,5 @@ index d7011ee..96611c6 100644
          final char[] resultTokens = resultName.toLowerCase().toCharArray();
          final int resultLength = resultTokens.length;
 -- 
-2.17.1
+2.30.2
 

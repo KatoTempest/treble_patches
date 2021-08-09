@@ -1,7 +1,7 @@
-From d16da422aa544681fc2391fb2149e60cdd4eb522 Mon Sep 17 00:00:00 2001
+From 72d560f396617537074fa55201f023c8349e0483 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 4 Apr 2020 00:39:14 +0300
-Subject: [PATCH 4/7] Incoming call screen & incall screen: contact name on 2
+Subject: [PATCH 4/8] Incoming call screen & incall screen: contact name on 2
  lines
 
   * from
@@ -64,5 +64,5 @@ index 9cc599dc7..e69b77218 100644
            app:autoResizeText_minTextSize="28sp"
            tools:ignore="Deprecated"
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 4cad4a0d4cfca966c4c5e148186a2fad89688dd1 Mon Sep 17 00:00:00 2001
+From 503e64dcd1bb37e7eddc581996589750981a6ce7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 08:04:36 -0500
-Subject: [PATCH 59/62] Allow hiding notification headers [2/2]
+Subject: [PATCH 59/63] Allow hiding notification headers [2/2]
 
   based on https://github.com/SuperiorOS/android_packages_apps_SuperiorSettings/commit/c803b14329437b82334fb1c825c8c8d43c7f1218
 ---
@@ -52,5 +52,5 @@ index 0d2e1e2a6f..a1e59ca781 100644
          android:key="theme_customization_category"
          android:title="@string/theme_customization_category"
 -- 
-2.17.1
+2.30.2
 

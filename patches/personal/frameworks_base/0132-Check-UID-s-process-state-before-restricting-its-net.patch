@@ -1,7 +1,7 @@
-From 33f4bd26efb2701f8611ca40e32baab3f60aaa52 Mon Sep 17 00:00:00 2001
+From 2f2481a7d9713491f7e95f8b64548732ddac4699 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:50:20 -0500
-Subject: [PATCH 132/210] Check UID's process state before restricting its
+Subject: [PATCH 132/212] Check UID's process state before restricting its
  network
 
   from
@@ -11,10 +11,10 @@ Subject: [PATCH 132/210] Check UID's process state before restricting its
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
-index 52fc2c7e705..98ccfc0a356 100644
+index 2a5025b8692..10022d9e4c8 100644
 --- a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
 +++ b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
-@@ -3894,7 +3894,7 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
+@@ -3890,7 +3890,7 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
                          // quick check: if this uid doesn't have INTERNET permission, it
                          // doesn't have network access anyway, so it is a waste to mess
                          // with it here.
@@ -24,5 +24,5 @@ index 52fc2c7e705..98ccfc0a356 100644
                          }
                      }
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 5bd3a584db7135ac60a2d42ac4e0ed7f79e32b03 Mon Sep 17 00:00:00 2001
+From b0ce7214d6cc7efbff277c074c5a08fac3e4ebde Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 29 Dec 2019 17:28:08 +0200
-Subject: [PATCH 04/15] replace Gallery2 app
+Subject: [PATCH 04/14] replace Gallery2 app
 
 Change-Id: I6809a04c8c0d624c2c5f739fd93d2c0db57ed8e4
 ---
@@ -26,5 +26,5 @@ index 8d3a618e1..ab9ad84cc 100644
  
  PRODUCT_PACKAGES_DEBUG += \
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 459f72bab48667a67744a629fdc15f006fa231da Mon Sep 17 00:00:00 2001
+From a4edaf6d61d6db055b7243be084303813914468f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 21 Dec 2020 04:13:13 -0500
-Subject: [PATCH 5/7] adaptation for enhanced root
+Subject: [PATCH 5/9] adaptation for enhanced root
 
 ---
  libcutils/fs_config.cpp | 3 +++
@@ -35,5 +35,5 @@ index 6d518dcb3..288c5273c 100644
      ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
      ln -sf /data/user_de/0/com.android.shell/files/bugreports $(TARGET_ROOT_OUT)/bugreports; \
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 85ecc9520c465d878818867d54dcfddcd6de8afc Mon Sep 17 00:00:00 2001
+From 76e381f2c5fe616743e633010d467d0af3453da5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:23:00 -0500
-Subject: [PATCH 124/210] ActivityManagerService: dont be so hectic on cpu
+Subject: [PATCH 124/212] ActivityManagerService: dont be so hectic on cpu
  battery stats
 
   from
@@ -11,10 +11,10 @@ Subject: [PATCH 124/210] ActivityManagerService: dont be so hectic on cpu
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/services/core/java/com/android/server/am/ActivityManagerService.java b/services/core/java/com/android/server/am/ActivityManagerService.java
-index 19c0c0aa26d..4804a0111dd 100644
+index 07fd9ba7984..12a47a24058 100644
 --- a/services/core/java/com/android/server/am/ActivityManagerService.java
 +++ b/services/core/java/com/android/server/am/ActivityManagerService.java
-@@ -451,11 +451,11 @@ public class ActivityManagerService extends IActivityManager.Stub
+@@ -452,11 +452,11 @@ public class ActivityManagerService extends IActivityManager.Stub
      private static final String SHELL_APP_PACKAGE = "com.android.shell";
  
      /** Control over CPU and battery monitoring */
@@ -31,5 +31,5 @@ index 19c0c0aa26d..4804a0111dd 100644
      static final long MONITOR_CPU_MAX_TIME = 0x0fffffff;
      static final boolean MONITOR_THREAD_CPU_USAGE = false;
 -- 
-2.17.1
+2.30.2
 

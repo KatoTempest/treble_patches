@@ -1,7 +1,7 @@
-From ddeb3c30593ab23e5a3e5dde178b1286bc3f5a7d Mon Sep 17 00:00:00 2001
+From 8a7398d977b023b3297be480aa380aa53aa71885 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 17:41:58 -0500
-Subject: [PATCH 38/62] expand menus
+Subject: [PATCH 38/63] expand menus
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/b0418ff6dd397a230047e1cec912b07bd8698db1
@@ -41,5 +41,5 @@ index 6bf6dbaccf..60f88ba719 100644
      <PreferenceCategory
          android:key="multi_network_header"
 -- 
-2.17.1
+2.30.2
 

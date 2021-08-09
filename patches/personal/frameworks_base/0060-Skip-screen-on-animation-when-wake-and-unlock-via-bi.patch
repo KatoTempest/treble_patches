@@ -1,7 +1,7 @@
-From 38e4626839c8e09ca0b9d4533d58daa10df9a80e Mon Sep 17 00:00:00 2001
+From 4ddcf91bdb1120f90ce74bc3ba49a096336e7835 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:30:02 -0500
-Subject: [PATCH 060/210] Skip screen on animation when wake and unlock via
+Subject: [PATCH 060/212] Skip screen on animation when wake and unlock via
  biometrics
 
   from
@@ -25,5 +25,5 @@ index f125b7d1003..018bd0c3b31 100644
          if (mBouncerShowing) {
              // Bouncer needs the front scrim when it's on top of an activity,
 -- 
-2.17.1
+2.30.2
 

@@ -1,0 +1,26 @@
+From 9cd6ff7ef067902f611c664f48d24c4e0e8978c5 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 3 Apr 2021 06:45:49 -0400
+Subject: [PATCH 202/212] fix low battery led issue
+
+---
+ services/core/java/com/android/server/BatteryService.java | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/services/core/java/com/android/server/BatteryService.java b/services/core/java/com/android/server/BatteryService.java
+index 5784b3fd475..5735aca1b27 100644
+--- a/services/core/java/com/android/server/BatteryService.java
++++ b/services/core/java/com/android/server/BatteryService.java
+@@ -1110,6 +1110,9 @@ public final class BatteryService extends SystemService {
+                 if (status == BatteryManager.BATTERY_STATUS_CHARGING) {
+                     // Solid red when battery is charging
+                     mBatteryLight.setColor(mBatteryLowARGB);
++                } else {
++                    // No need lights if not charging and battery low
++                    mBatteryLight.turnOff();
+                 }
+             } else if (status == BatteryManager.BATTERY_STATUS_CHARGING
+                     || status == BatteryManager.BATTERY_STATUS_FULL) {
+-- 
+2.30.2
+

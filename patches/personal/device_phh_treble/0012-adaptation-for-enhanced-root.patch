@@ -1,7 +1,7 @@
-From e08f1052027c4e4227caf6c1285050c19057bbd4 Mon Sep 17 00:00:00 2001
+From d8557b9eceb141f1d52493f900e1d02f70b3a56f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 09:38:07 -0500
-Subject: [PATCH 12/33] adaptation for enhanced root
+Subject: [PATCH 12/37] adaptation for enhanced root
 
 ---
  generate.sh              |   6 +++++-
@@ -6395,5 +6395,5 @@ index 0000000..3efeee7
 +service zerodaemon /system/bin/zerodaemon --daemon
 +    class main
 -- 
-2.17.1
+2.30.2
 

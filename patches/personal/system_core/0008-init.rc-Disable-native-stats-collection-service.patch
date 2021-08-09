@@ -1,7 +1,7 @@
-From aac6168daaf987ceff70e3c39e6c97af51396fc6 Mon Sep 17 00:00:00 2001
+From 59a96bbc7c60f592a428659f5fb8051aef33e5a9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:37:42 -0400
-Subject: [PATCH] init.rc: Disable native stats collection service
+Subject: [PATCH 8/9] init.rc: Disable native stats collection service
 
   from
   https://github.com/crdroidandroid/android_system_core/commit/667574891fe34cfbe99ee7a9744dbadfec04bf4d
@@ -38,5 +38,5 @@ index b136f1059..92cd18ca4 100644
      start zygote
      start zygote_secondary
 -- 
-2.17.1
+2.30.2
 

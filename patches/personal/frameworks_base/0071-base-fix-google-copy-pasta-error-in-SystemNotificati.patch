@@ -1,7 +1,7 @@
-From f8672ef13fe2772e20d9d0831a64e2cf771c351b Mon Sep 17 00:00:00 2001
+From 84ea29261cd74d0f2cb72015e5f201c035081b47 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:44:00 -0500
-Subject: [PATCH 071/210] base: fix google copy pasta error in
+Subject: [PATCH 071/212] base: fix google copy pasta error in
  SystemNotificationChannels :)
 
   from
@@ -24,5 +24,5 @@ index 41be5c493d9..0b868a903e6 100644
  
          final NotificationChannel updates = new NotificationChannel(
 -- 
-2.17.1
+2.30.2
 

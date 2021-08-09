@@ -1,7 +1,7 @@
-From cf253091feb99897eb1f40a6ee518c224a3bd98d Mon Sep 17 00:00:00 2001
+From c246008a7fcaf88a6b8824723af13204f5388326 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:29:49 -0500
-Subject: [PATCH 145/210] BatteryStats: Fix Another SystemUI crash
+Subject: [PATCH 145/212] BatteryStats: Fix Another SystemUI crash
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/282c3a76a63955fa198970c3b073beac29e4e5e6
@@ -27,5 +27,5 @@ index 27c166d1a04..241977dc8bf 100644
          // At this point, we've sorted the list so we are guaranteed the max values are at the top.
          // We have only added real powers so far.
 -- 
-2.17.1
+2.30.2
 

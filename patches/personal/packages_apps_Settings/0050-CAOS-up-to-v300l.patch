@@ -1,7 +1,7 @@
-From 7678754e5b2a5f747744adb3dea17b30c505f7a2 Mon Sep 17 00:00:00 2001
+From 7deb025605384fe4a2bd03c58bb4c0fc302d1085 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 16:47:04 -0500
-Subject: [PATCH 50/62] CAOS: up to v300l
+Subject: [PATCH 50/63] CAOS: up to v300l
 
 Change-Id: I26f81d379df66e76041a384585472826bc42901b
 ---
@@ -22,5 +22,5 @@ index be0f001411..64bf19aea1 100644
      <!-- Hotspot VPN sharing -->
      <string name="tethering_allow_vpn_upstreams_title">Allow clients to use VPNs</string>
 -- 
-2.17.1
+2.30.2
 

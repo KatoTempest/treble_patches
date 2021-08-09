@@ -1,7 +1,7 @@
-From 44fef324e8b3389364fc37352c42679b3884f0ca Mon Sep 17 00:00:00 2001
+From 836abbcd510abe8c920080452e862e11fb22b848 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:51:46 -0500
-Subject: [PATCH 2/4] Scrolling search results and autorotate cause crash
+Subject: [PATCH 2/3] Scrolling search results and autorotate cause crash
 
   from
   https://github.com/ezio84/abc_packages_apps_SettingsIntelligence/commit/c03f2c93b9b3846d7575eab20a47cb2b38f6a572
@@ -31,5 +31,5 @@ index 4642b16..c76eda3 100644
  
          if (mResultsRecyclerView != null) {
 -- 
-2.17.1
+2.30.2
 

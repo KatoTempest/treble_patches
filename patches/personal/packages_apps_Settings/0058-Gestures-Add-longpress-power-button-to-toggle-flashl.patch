@@ -1,7 +1,7 @@
-From 7c38145a2c8fb8f7f200af928390fe3fe79910f4 Mon Sep 17 00:00:00 2001
+From df5b6e9dc2af5b4c6ae9796ec63ff440f8a42354 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 08:39:05 -0500
-Subject: [PATCH 58/62] Gestures: Add "longpress power button" to toggle
+Subject: [PATCH 58/63] Gestures: Add "longpress power button" to toggle
  flashlight [2/2]
 
   from
@@ -16051,5 +16051,5 @@ index 0000000000..93d38b8b9f
 +            };
 +}
 -- 
-2.17.1
+2.30.2
 

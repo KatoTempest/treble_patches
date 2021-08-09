@@ -1,7 +1,7 @@
-From c02988b5a723a3d0729a350e8747be68d3f292b1 Mon Sep 17 00:00:00 2001
+From 9d0a092440d770dfad6d8f94d149888c2607b23a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:43:19 -0500
-Subject: [PATCH 36/62] Settings: per-app cellular data, vpn and wifi
+Subject: [PATCH 36/63] Settings: per-app cellular data, vpn and wifi
  restrictions
 
   from
@@ -371,5 +371,5 @@ index 92b2ef9a70..64b1bd6929 100644
          if (newPolicy == POLICY_NONE) {
              mUidPolicies.delete(uid);
 -- 
-2.17.1
+2.30.2
 

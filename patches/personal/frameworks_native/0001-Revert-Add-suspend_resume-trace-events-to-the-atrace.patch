@@ -1,7 +1,7 @@
-From 9a710c542c5c724f15ce745956ec28aa24540e6c Mon Sep 17 00:00:00 2001
+From 6e5d669de3a39f25c019e9ded07755e900f93fea Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 18 Apr 2020 21:22:26 +0300
-Subject: [PATCH 1/9] Revert "Add suspend_resume trace events to the atrace
+Subject: [PATCH 01/12] Revert "Add suspend_resume trace events to the atrace
  'freq' category."
 
 This reverts commit 581c22f979af05e48ad4843cdfa9605186d286da.
@@ -39,5 +39,5 @@ index f442dae66..3fb58275e 100644
      chmod 0666 /sys/kernel/tracing/events/cpufreq_interactive/enable
      chmod 0666 /sys/kernel/debug/tracing/events/vmscan/mm_vmscan_direct_reclaim_begin/enable
 -- 
-2.17.1
+2.30.2
 

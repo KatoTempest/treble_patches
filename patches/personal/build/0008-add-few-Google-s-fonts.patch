@@ -1,7 +1,7 @@
-From fa7de205c5fefb410b877e2245f811611032edbc Mon Sep 17 00:00:00 2001
+From b46310f0195c508eba1e57308e1dfe4843fd1444 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 12:06:03 +0200
-Subject: [PATCH 08/15] add few Google's fonts
+Subject: [PATCH 08/14] add few Google's fonts
 
 	modified:   target/product/handheld_system.mk
 
@@ -27,5 +27,5 @@ index 173cf5871..c87f87a1a 100644
  $(call inherit-product-if-exists, external/roboto-fonts/fonts.mk)
  $(call inherit-product-if-exists, external/hyphenation-patterns/patterns.mk)
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 7477359b22e23cfdcf70a1e6cf6df1460abffd95 Mon Sep 17 00:00:00 2001
+From 996d93b310164b50755e36a7845750cb55c75a5c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:47:16 -0500
-Subject: [PATCH 111/210] require unlocking to use airplane mode quick tile
+Subject: [PATCH 111/212] require unlocking to use airplane mode quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/30060d040f34d73b7637d7f67f034c860631b2a4
@@ -83,5 +83,5 @@ index b24fdbfc562..2065800a401 100644
          final ConnectivityManager mgr =
                  (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
 -- 
-2.17.1
+2.30.2
 

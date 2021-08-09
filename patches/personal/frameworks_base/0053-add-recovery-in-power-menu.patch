@@ -1,7 +1,7 @@
-From 1d6b6b48facf1221fd2acf07d3a14c5a5f1d8536 Mon Sep 17 00:00:00 2001
+From 4f0d4f7223ff52570a056606267da04aad486e90 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Dec 2019 09:03:53 +0200
-Subject: [PATCH 053/210] add recovery in power menu
+Subject: [PATCH 053/212] add recovery in power menu
 
 ---
  core/java/android/os/IPowerManager.aidl       |  1 +
@@ -110,7 +110,7 @@ index 00000000000..3de0dd55558
 +    <string name="global_action_recovery">Рекавери</string>
 +</resources>
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index bf675c9f716..1e82c16e3e6 100644
+index 1c11bc941a3..757427db15f 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -2785,6 +2785,7 @@
@@ -284,7 +284,7 @@ index b55b29a8041..8398c05ef54 100644
              return null;
          }
 diff --git a/services/core/java/com/android/server/policy/WindowManagerPolicy.java b/services/core/java/com/android/server/policy/WindowManagerPolicy.java
-index b9431a6968f..5cc8a7d1759 100644
+index cffeaf3f476..4c3d36841a1 100644
 --- a/services/core/java/com/android/server/policy/WindowManagerPolicy.java
 +++ b/services/core/java/com/android/server/policy/WindowManagerPolicy.java
 @@ -525,6 +525,7 @@ public interface WindowManagerPolicy extends WindowManagerPolicyConstants {
@@ -395,7 +395,7 @@ index 39e839dfc7e..168e80ba953 100644
      public void onGlobalActionsShown() {
          enforceStatusBarService();
 diff --git a/services/core/java/com/android/server/wm/WindowManagerService.java b/services/core/java/com/android/server/wm/WindowManagerService.java
-index 1f2c79811bb..561e510ea99 100644
+index 84a40f95c32..7a4e4f68128 100644
 --- a/services/core/java/com/android/server/wm/WindowManagerService.java
 +++ b/services/core/java/com/android/server/wm/WindowManagerService.java
 @@ -3299,6 +3299,14 @@ public class WindowManagerService extends IWindowManager.Stub
@@ -414,5 +414,5 @@ index 1f2c79811bb..561e510ea99 100644
      @Override
      public void rebootSafeMode(boolean confirm) {
 -- 
-2.17.1
+2.30.2
 

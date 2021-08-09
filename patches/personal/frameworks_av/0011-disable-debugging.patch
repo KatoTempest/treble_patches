@@ -1,7 +1,7 @@
-From a645f813476eb032ffe711788cdd4259e2b5491e Mon Sep 17 00:00:00 2001
+From fadaebc2adbd5915c5cb0e7962cd5dabe1e791dc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:34:57 -0400
-Subject: [PATCH] disable debugging
+Subject: [PATCH 11/11] disable debugging
 
 ---
  camera/Android.bp                                  |  2 +-
@@ -1470,5 +1470,5 @@ index b482258488..6634e224f0 100644
  
  cc_defaults {
 -- 
-2.17.1
+2.30.2
 

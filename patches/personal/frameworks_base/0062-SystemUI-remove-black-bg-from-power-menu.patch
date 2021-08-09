@@ -1,7 +1,7 @@
-From 8241eae853265e73aed1da1a4b353461990f1f8d Mon Sep 17 00:00:00 2001
+From 5b8bb7a9d40ac1c291933d3b6d3109c14cfba31d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 04:30:39 -0500
-Subject: [PATCH 062/210] SystemUI: remove black bg from power menu
+Subject: [PATCH 062/212] SystemUI: remove black bg from power menu
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/e132c4f16d086e88856465eb2d00ddc3d4bf6cbb
@@ -49,5 +49,5 @@ index 0445c9879ac..8018d5aaa5a 100644
  
          // Make blur be 0 if it is necessary to stop blur effect.
 -- 
-2.17.1
+2.30.2
 

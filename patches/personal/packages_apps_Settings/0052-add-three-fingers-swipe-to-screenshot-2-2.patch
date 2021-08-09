@@ -1,7 +1,7 @@
-From a4af08610a4ca731fc39e237948eb6cfc11840ad Mon Sep 17 00:00:00 2001
+From 40e6321b36934ba6600b6b7f926106bdd0581d8f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Mar 2020 20:20:05 +0200
-Subject: [PATCH 52/62] add three-fingers-swipe to screenshot [2/2]
+Subject: [PATCH 52/63] add three-fingers-swipe to screenshot [2/2]
 
   * based on
   https://github.com/Evolution-X/packages_apps_Evolver/commit/1b64fadf5debcda66382763312d77867bbb8be78
@@ -71,5 +71,5 @@ index 0f407f4363..c292e40bcc 100644
 +        android:defaultValue="false" />
  </PreferenceScreen>
 -- 
-2.17.1
+2.30.2
 

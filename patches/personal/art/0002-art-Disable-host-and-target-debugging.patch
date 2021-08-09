@@ -1,7 +1,7 @@
-From 492e8a4acf6dc13bec3cd2f69b2e57e1b1770c57 Mon Sep 17 00:00:00 2001
+From eb277d2e95b7a045d08a782e5a6908881a9c7ea8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 30 Apr 2021 18:53:52 -0400
-Subject: [PATCH 2/3] art: Disable host and target debugging
+Subject: [PATCH 2/5] art: Disable host and target debugging
 
   from
   https://github.com/crdroidandroid/android_art/commit/d00a3eb02f006930f49277d1a2105fe77040f16d
@@ -28,5 +28,5 @@ index 08962526dd..8b2763afb7 100644
  ifeq ($(ART_BUILD_TARGET_NDEBUG),false)
  $(info Disabling ART_BUILD_TARGET_NDEBUG)
 -- 
-2.17.1
+2.30.2
 

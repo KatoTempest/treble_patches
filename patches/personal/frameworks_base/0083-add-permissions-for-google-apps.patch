@@ -1,7 +1,7 @@
-From 222030adc745cbeabbf52d48b1d164172ae55605 Mon Sep 17 00:00:00 2001
+From 8c054116931fd2f0b289675a83ed00ed9aa6ea2c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:53:13 -0500
-Subject: [PATCH 083/210] add permissions for google apps
+Subject: [PATCH 083/212] add permissions for google apps
 
   based on file
   https://github.com/Corvus-ROM/android_frameworks_base/commit/6e69477ae7efc840b11783cc6a388103f6b73e99#diff-433b438dd16415e35ca034bb5ee9dce76917f1af97a3161f5e505bd3c99ac2c0R870
@@ -53,5 +53,5 @@ index cd53fb9ba52..35a66bcae68 100644
  
      private String getDefaultSystemHandlerActivityPackageForCategory(PackageManagerWrapper pm,
 -- 
-2.17.1
+2.30.2
 

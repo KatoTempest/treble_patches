@@ -1,7 +1,7 @@
-From e1eba6b4deb2aaf63b31e9cc1163ea8776c1741d Mon Sep 17 00:00:00 2001
+From be45d332476849c48e4e1b029a206ca1b2fcb178 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 06:03:33 -0500
-Subject: [PATCH 2/7] Revert "Do not create /sbin"
+Subject: [PATCH 2/9] Revert "Do not create /sbin"
 
 This reverts commit 3ec821fcfb092adb5bf1606d8261435f19543ff5.
 ---
@@ -36,5 +36,5 @@ index 7d383f522..6d518dcb3 100644
      ln -sf /system/bin $(TARGET_ROOT_OUT)/bin; \
      ln -sf /system/etc $(TARGET_ROOT_OUT)/etc; \
 -- 
-2.17.1
+2.30.2
 

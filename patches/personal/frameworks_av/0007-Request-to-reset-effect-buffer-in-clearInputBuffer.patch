@@ -1,7 +1,7 @@
-From 7b58f300dc84dadc07a0bdd9a221d069c1c9a581 Mon Sep 17 00:00:00 2001
+From 99fc9cb7bf0f1e7c7236e719f2077ad6b72e0549 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 6 Mar 2021 18:50:24 -0500
-Subject: [PATCH 7/9] Request to reset effect buffer in clearInputBuffer
+Subject: [PATCH 07/11] Request to reset effect buffer in clearInputBuffer
 
   from
   https://github.com/LineageOS/android_frameworks_av/commit/3f216b8bc2a08b147fa20ccd86205d00cb1728f9
@@ -25,5 +25,5 @@ index 3dfeb83a4c..ff1f9ac136 100644
  
  // Must be called with EffectChain::mLock locked
 -- 
-2.17.1
+2.30.2
 

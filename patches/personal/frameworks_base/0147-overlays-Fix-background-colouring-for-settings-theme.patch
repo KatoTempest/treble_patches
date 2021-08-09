@@ -1,7 +1,7 @@
-From b448767e1c8fd2fe591f88f9a6af9d1b924bf81c Mon Sep 17 00:00:00 2001
+From a3a4d31d4e6e929fb3ceca894fefe577f414501a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:43:15 -0500
-Subject: [PATCH 147/210] overlays: Fix background colouring for settings
+Subject: [PATCH 147/212] overlays: Fix background colouring for settings
  themed icons
 
   from
@@ -8107,5 +8107,5 @@ index f2ab3be234d..6ccd34281bd 100644
  </vector>
 \ No newline at end of file
 -- 
-2.17.1
+2.30.2
 

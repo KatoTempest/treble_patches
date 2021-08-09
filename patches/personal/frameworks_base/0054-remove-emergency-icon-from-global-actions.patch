@@ -1,7 +1,7 @@
-From 96c5451c348da9438f28cba162f2b17ed53640b6 Mon Sep 17 00:00:00 2001
+From d34612a4dc6b27cb4eb016589cbdaaba8856cdfe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:09:13 -0500
-Subject: [PATCH 054/210] remove emergency icon from global actions
+Subject: [PATCH 054/212] remove emergency icon from global actions
 
 ---
  .../com/android/systemui/globalactions/GlobalActionsDialog.java | 2 --
@@ -21,5 +21,5 @@ index ada39bb3484..02e2ff81ae2 100644
                  Log.e(TAG, "Invalid global action key " + actionKey);
              }
 -- 
-2.17.1
+2.30.2
 

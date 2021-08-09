@@ -1,4 +1,4 @@
-From 5b55c25b2004c2f7426108cbb4fc11f23b006ab7 Mon Sep 17 00:00:00 2001
+From 4601930fa4fca6f69e6d4a4d3cdc965df466eb48 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 12:39:33 -0500
 Subject: [PATCH 07/13] initial overlay for Realme C2 (RMX1941)
@@ -392,5 +392,5 @@ index d0b2a43..e40dc97 100644
 +</device>
 \ No newline at end of file
 -- 
-2.17.1
+2.30.2
 

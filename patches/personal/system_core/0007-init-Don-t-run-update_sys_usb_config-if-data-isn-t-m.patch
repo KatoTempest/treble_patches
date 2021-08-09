@@ -1,7 +1,7 @@
-From 5d782bcfd6b99221634b29a64c04039fdd2bd386 Mon Sep 17 00:00:00 2001
+From cd11bd8a087faa34b4feb31a6cbf07460f2d7f6a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 20 Mar 2021 16:02:18 -0400
-Subject: [PATCH 7/7] init: Don't run update_sys_usb_config if /data isn't
+Subject: [PATCH 7/9] init: Don't run update_sys_usb_config if /data isn't
  mounted
 
   from
@@ -26,5 +26,5 @@ index ce83605da..019955b16 100644
  
  bool LoadPropertyInfoFromFile(const std::string& filename,
 -- 
-2.17.1
+2.30.2
 

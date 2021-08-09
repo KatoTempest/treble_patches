@@ -1,7 +1,7 @@
-From 3d7e05aa798dd4394d1ebdeb3f53dce3860b4843 Mon Sep 17 00:00:00 2001
+From be0a4eab1002a05eba85254830c7f9759fd2ca72 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:43:40 -0500
-Subject: [PATCH 4/9] Fix high battery drain after using flashlight
+Subject: [PATCH 04/11] Fix high battery drain after using flashlight
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/070aba7caf9ef00cd6f44ea8edd229f7615b4160
@@ -23,5 +23,5 @@ index e629cdd798..15b2632c79 100644
      return OK;
  }
 -- 
-2.17.1
+2.30.2
 

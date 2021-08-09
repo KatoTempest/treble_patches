@@ -1,7 +1,7 @@
-From 0ef53f3a5e5fb2808a7d724f2982e0dad1a76d15 Mon Sep 17 00:00:00 2001
+From 93078ea8dc250cfddc65c62fe4c9981b5e559bad Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:21:41 -0400
-Subject: [PATCH 9/9] disable debugging
+Subject: [PATCH 09/12] disable debugging
 
 ---
  cmds/surfacereplayer/replayer/Android.bp |  4 ++--
@@ -466,5 +466,5 @@ index b2716202a..27ae5bead 100644
      export_include_dirs: [
          ".",
 -- 
-2.17.1
+2.30.2
 

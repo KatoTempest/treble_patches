@@ -1,7 +1,7 @@
-From 2c66ce5f1d18b4c0bd2c683ff1d98d8c150ed5f6 Mon Sep 17 00:00:00 2001
+From 5f0194986d7b350b00976a81d4ada91c481156a5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:59:06 -0500
-Subject: [PATCH 48/62] Settings: Fix bluetooth pan memory leakage
+Subject: [PATCH 48/63] Settings: Fix bluetooth pan memory leakage
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/3c7add4a5b289c253ee6cafb8f13756a05fd3003
@@ -29,5 +29,5 @@ index 26c699b0d5..b312cdd918 100644
      };
  
 -- 
-2.17.1
+2.30.2
 

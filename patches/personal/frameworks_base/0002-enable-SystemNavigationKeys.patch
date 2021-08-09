@@ -1,7 +1,7 @@
-From 2455dbef14e94b04f433f21e0f2572631edf5c38 Mon Sep 17 00:00:00 2001
+From a3cb7926abe506939b26d385a6c519c19af11d57 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 18 Dec 2019 14:52:32 +0200
-Subject: [PATCH 002/210] enable SystemNavigationKeys
+Subject: [PATCH 002/212] enable SystemNavigationKeys
 
 	modified:   core/res/res/values/config.xml
 ---
@@ -9,7 +9,7 @@ Subject: [PATCH 002/210] enable SystemNavigationKeys
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/core/res/res/values/config.xml b/core/res/res/values/config.xml
-index ac81d6ba18d..f0c51491004 100644
+index 76cb385c007..c9448433a55 100644
 --- a/core/res/res/values/config.xml
 +++ b/core/res/res/values/config.xml
 @@ -3413,7 +3413,7 @@
@@ -22,5 +22,5 @@ index ac81d6ba18d..f0c51491004 100644
      <!-- emergency call number for the emergency affordance -->
      <string name="config_emergency_call_number" translatable="false">112</string>
 -- 
-2.17.1
+2.30.2
 

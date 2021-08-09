@@ -1,7 +1,7 @@
-From 47c71f841a12853bed21c1187acf3f23fc83a068 Mon Sep 17 00:00:00 2001
+From 0b2c255058b5753cbdf3fe6f317f1d8de6f12d3e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:27:07 -0500
-Subject: [PATCH 088/210] fw/b: Squash of app fw restriction commits
+Subject: [PATCH 088/212] fw/b: Squash of app fw restriction commits
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/86c28d0da0497ba17211cba10339340d1aa03e62
@@ -287,7 +287,7 @@ index 0ddfa1c16a0..c0a425d813d 100644
      public void setAllowOnlyVpnForUids(boolean add, UidRange[] uidRanges)
              throws ServiceSpecificException {
 diff --git a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
-index f6bcdf77881..52fc2c7e705 100644
+index f7de2b0f78c..2a5025b8692 100644
 --- a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
 +++ b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
 @@ -60,6 +60,9 @@ import static android.net.NetworkPolicyManager.MASK_METERED_NETWORKS;
@@ -300,7 +300,7 @@ index f6bcdf77881..52fc2c7e705 100644
  import static android.net.NetworkPolicyManager.RULE_ALLOW_ALL;
  import static android.net.NetworkPolicyManager.RULE_ALLOW_METERED;
  import static android.net.NetworkPolicyManager.RULE_NONE;
-@@ -4322,6 +4325,17 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
+@@ -4318,6 +4321,17 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
          final int oldRule = oldUidRules & MASK_METERED_NETWORKS;
          int newRule = RULE_NONE;
  
@@ -319,5 +319,5 @@ index f6bcdf77881..52fc2c7e705 100644
          if (isRestrictedByAdmin) {
              newRule = RULE_REJECT_METERED;
 -- 
-2.17.1
+2.30.2
 

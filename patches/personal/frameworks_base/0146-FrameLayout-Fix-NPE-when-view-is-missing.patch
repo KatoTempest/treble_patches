@@ -1,7 +1,7 @@
-From 65a44f8782db5b6e854a2b79b625d40c38d5bba5 Mon Sep 17 00:00:00 2001
+From a3248d666788aa5e321889f5e4a899801a816a5d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:30:56 -0500
-Subject: [PATCH 146/210] FrameLayout: Fix NPE when view is missing
+Subject: [PATCH 146/212] FrameLayout: Fix NPE when view is missing
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/c71bf809745bf857becd346874c4e18132e24efc
@@ -32,5 +32,5 @@ index 92e9a96e489..9721ccb5055 100644
  
                  final int width = child.getMeasuredWidth();
 -- 
-2.17.1
+2.30.2
 

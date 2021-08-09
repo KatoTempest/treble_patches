@@ -1,7 +1,7 @@
-From e288d6c103bf74007bdbabb404600a724d65b260 Mon Sep 17 00:00:00 2001
+From c9fc6eb4d9b22aa340ff048ebf2214505b192ad3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:28:23 -0400
-Subject: [PATCH 3/3] art: Enable compiler/dalvikvm/dex2oat/runtime -O3
+Subject: [PATCH 3/5] art: Enable compiler/dalvikvm/dex2oat/runtime -O3
 
   from
   https://github.com/crdroidandroid/android_art/commit/6a063a034b5001a8cf5742c7907e52d0658340bc
@@ -79,7 +79,7 @@ index 8cd88199e6..9d67acff85 100644
      shared_libs: [
          "libnativehelper",
 diff --git a/dex2oat/Android.bp b/dex2oat/Android.bp
-index fb76dd99d0..afeadc547d 100644
+index b2ae48db33..2e0d86c5cb 100644
 --- a/dex2oat/Android.bp
 +++ b/dex2oat/Android.bp
 @@ -16,6 +16,7 @@
@@ -183,5 +183,5 @@ index 7e750160fb..fe077cb5e2 100644
          "art_gtest_defaults",
      ],
 -- 
-2.17.1
+2.30.2
 

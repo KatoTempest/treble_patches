@@ -1,0 +1,34 @@
+From 1e368e186df5f480c3d0cb8ffe2d0483b6b4dbf3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 19 Jul 2021 18:31:49 +0000
+Subject: [PATCH 11/12] Properly scale touch input window through resolution
+ changes
+
+  from
+  https://github.com/crdroidandroid/android_frameworks_native/commit/ed2228209cffc4c51ac8adf6271d53f0908a0d50
+---
+ services/inputflinger/reader/mapper/TouchInputMapper.cpp | 7 +------
+ 1 file changed, 1 insertion(+), 6 deletions(-)
+
+diff --git a/services/inputflinger/reader/mapper/TouchInputMapper.cpp b/services/inputflinger/reader/mapper/TouchInputMapper.cpp
+index 99a572a5f..4177e5c2c 100644
+--- a/services/inputflinger/reader/mapper/TouchInputMapper.cpp
++++ b/services/inputflinger/reader/mapper/TouchInputMapper.cpp
+@@ -3653,13 +3653,8 @@ void TouchInputMapper::rotateAndScale(float& x, float& y) {
+ }
+ 
+ bool TouchInputMapper::isPointInsideSurface(int32_t x, int32_t y) {
+-    const float xScaled = (x - mRawPointerAxes.x.minValue) * mXScale;
+-    const float yScaled = (y - mRawPointerAxes.y.minValue) * mYScale;
+-
+     return x >= mRawPointerAxes.x.minValue && x <= mRawPointerAxes.x.maxValue &&
+-            xScaled >= mSurfaceLeft && xScaled <= mSurfaceRight &&
+-            y >= mRawPointerAxes.y.minValue && y <= mRawPointerAxes.y.maxValue &&
+-            yScaled >= mSurfaceTop && yScaled <= mSurfaceBottom;
++           y >= mRawPointerAxes.y.minValue && y <= mRawPointerAxes.y.maxValue;
+ }
+ 
+ const TouchInputMapper::VirtualKey* TouchInputMapper::findVirtualKeyHit(int32_t x, int32_t y) {
+-- 
+2.30.2
+

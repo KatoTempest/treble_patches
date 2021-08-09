@@ -1,7 +1,7 @@
-From 14c69da613a907ecadfc96e2f346b4c67ffff167 Mon Sep 17 00:00:00 2001
+From a348e175b36b5a8f572ea66e8a63b884907e5283 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 13:08:27 +0200
-Subject: [PATCH 03/62] hide vertical dividers in settings
+Subject: [PATCH 03/63] hide vertical dividers in settings
 
 	modified:   res/values/colors.xml
 ---
@@ -22,5 +22,5 @@ index 4904160b9e..83adccc0a2 100644
      <color name="setup_lock_pattern_view_regular_color_light">
          @color/lock_pattern_view_regular_color
 -- 
-2.17.1
+2.30.2
 

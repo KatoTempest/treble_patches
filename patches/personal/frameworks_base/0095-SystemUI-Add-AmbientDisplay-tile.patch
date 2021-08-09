@@ -1,7 +1,7 @@
-From 45f22fca9107a9e38261980a6e4dbcdc65fbc9de Mon Sep 17 00:00:00 2001
+From f25fe289aa7514c625d5180de874a1a5847f3880 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 05:43:20 -0500
-Subject: [PATCH 095/210] SystemUI: Add AmbientDisplay tile
+Subject: [PATCH 095/212] SystemUI: Add AmbientDisplay tile
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/78e8bfc0268cdc70a7b338e187d235579cebbaa4
@@ -90,7 +90,7 @@ index 26874841390..707267fbc62 100644
 +    <string name="accessibility_quick_settings_ambient_display_changed_on">Индикация событий экраном была включена</string>
  </resources>
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index c009eb5ff70..5c86d882884 100644
+index 7cc0e19eaad..d2ca5e5f15a 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -114,7 +114,7 @@
@@ -312,5 +312,5 @@ index d6ad19e7df2..f5a07192894 100644
    }
  }
 -- 
-2.17.1
+2.30.2
 

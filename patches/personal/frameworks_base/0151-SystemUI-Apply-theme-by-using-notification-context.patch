@@ -1,7 +1,7 @@
-From 2a1c189d0a9588ac15c46d0f61acf6e508a76c16 Mon Sep 17 00:00:00 2001
+From 52fafd645dba068310513e99efd9789add8ab650 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:17:21 -0500
-Subject: [PATCH 151/210] SystemUI: Apply theme by using notification context
+Subject: [PATCH 151/212] SystemUI: Apply theme by using notification context
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/e4d4c16609500739261e67a43a0e791c7175ee03
@@ -10,10 +10,10 @@ Subject: [PATCH 151/210] SystemUI: Apply theme by using notification context
  1 file changed, 9 insertions(+), 4 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarIconView.java b/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarIconView.java
-index 8cf8a229992..01d31039a74 100644
+index db9afd6ea79..412d3426117 100644
 --- a/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarIconView.java
 +++ b/packages/SystemUI/src/com/android/systemui/statusbar/StatusBarIconView.java
-@@ -390,17 +390,21 @@ public class StatusBarIconView extends AnimatedImageView implements StatusIconDi
+@@ -417,17 +417,21 @@ public class StatusBarIconView extends AnimatedImageView implements StatusIconDi
      }
  
      private Drawable getIcon(StatusBarIcon icon) {
@@ -38,7 +38,7 @@ index 8cf8a229992..01d31039a74 100644
          int userId = statusBarIcon.user.getIdentifier();
          if (userId == UserHandle.USER_ALL) {
              userId = UserHandle.USER_SYSTEM;
-@@ -409,7 +413,8 @@ public class StatusBarIconView extends AnimatedImageView implements StatusIconDi
+@@ -436,7 +440,8 @@ public class StatusBarIconView extends AnimatedImageView implements StatusIconDi
          Drawable icon = statusBarIcon.icon.loadDrawableAsUser(context, userId);
  
          TypedValue typedValue = new TypedValue();
@@ -49,5 +49,5 @@ index 8cf8a229992..01d31039a74 100644
  
          // No need to scale the icon, so return it as is.
 -- 
-2.17.1
+2.30.2
 

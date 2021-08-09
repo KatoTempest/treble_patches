@@ -1,7 +1,7 @@
-From 2a47f62027c7d7b209aeca39c05039db2208ad54 Mon Sep 17 00:00:00 2001
+From 9349d0a27b29d79dfc1a47095188679fd9cda895 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 05:42:57 -0500
-Subject: [PATCH 26/62] add gestural navbar's handle tuning
+Subject: [PATCH 26/63] add gestural navbar's handle tuning
 
   based on
   https://github.com/StatiXOS/android_packages_apps_Settings/commit/3346cb7276465d6a33075fe75433689dc6274148
@@ -235,5 +235,5 @@ index 95f4daa4c6..25a35a410d 100644
  
      private static float[] getFloatArray(TypedArray array) {
 -- 
-2.17.1
+2.30.2
 

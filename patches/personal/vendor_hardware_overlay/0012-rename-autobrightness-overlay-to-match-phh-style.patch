@@ -1,4 +1,4 @@
-From cbd59187782d884ad34dd5941403419ea815ee3c Mon Sep 17 00:00:00 2001
+From fdeeb5a407fc42737964f0e85e59a0ce2c77cc5e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 00:33:37 -0400
 Subject: [PATCH 12/13] rename autobrightness overlay to match phh style
@@ -34,10 +34,10 @@ index f251f14..5919d1a 100644
          android:versionName="1.0">
          <overlay android:targetPackage="android"
 diff --git a/overlay.mk b/overlay.mk
-index de6ae81..9907b80 100755
+index dd2e98d..4625229 100755
 --- a/overlay.mk
 +++ b/overlay.mk
-@@ -12,7 +12,6 @@ PRODUCT_PACKAGES += \
+@@ -13,7 +13,6 @@ PRODUCT_PACKAGES += \
  	treble-overlay-asus-zenfonelivel1za550kl \
  	treble-overlay-asus-zenfonemaxm2 \
  	treble-overlay-asus-zenfonemaxshot \
@@ -45,8 +45,8 @@ index de6ae81..9907b80 100755
  	treble-overlay-blackview-bv6900 \
  	treble-overlay-blackview-bv9500plus \
  	treble-overlay-bq-jeice \
-@@ -55,6 +54,7 @@ PRODUCT_PACKAGES += \
- 	treble-overlay-lg-velvet \
+@@ -62,6 +61,7 @@ PRODUCT_PACKAGES += \
+ 	treble-overlay-meizu-m2181-systemui \
  	treble-overlay-misc-aod \
  	treble-overlay-misc-aod-systemui \
 +	treble-overlay-misc-autobright \
@@ -54,5 +54,5 @@ index de6ae81..9907b80 100755
  	treble-overlay-misc-minimal-brightness \
  	treble-overlay-moto-e5 \
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 9fbfe698b89e4409b14d91446734efe296676044 Mon Sep 17 00:00:00 2001
+From 7b0dd9f1a2f022d0e4cd4dd92cb8306e3829e895 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 8 Mar 2020 15:26:13 +0200
-Subject: [PATCH 012/210] play with QS
+Subject: [PATCH 012/212] play with QS
 
 	modified:   packages/SystemUI/res/values/config.xml
 	modified:   packages/SystemUI/res/values/dimens.xml
@@ -47,7 +47,7 @@ index 966066ffe56..00000000000
 -</resources>
 \ No newline at end of file
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 0384c003d02..bc4785f35ce 100644
+index 3355f9b7fc6..60a66bcd1bf 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -96,10 +96,10 @@
@@ -77,5 +77,5 @@ index 2c7832b34a2..0191d392762 100644
      <dimen name="qs_detail_header_text_padding">16dp</dimen>
      <dimen name="qs_data_usage_text_size">14sp</dimen>
 -- 
-2.17.1
+2.30.2
 

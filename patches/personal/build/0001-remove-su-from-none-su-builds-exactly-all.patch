@@ -1,7 +1,7 @@
-From bbbb4a5d9af404de4a63b0c00475a52d24dcb6f2 Mon Sep 17 00:00:00 2001
+From cef2164455f5327e443484754fa778eac49b46d3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 14 Dec 2019 23:46:34 +0200
-Subject: [PATCH 01/15] remove 'su' from none-su builds (exactly, all)
+Subject: [PATCH 01/14] remove 'su' from none-su builds (exactly, all)
 
   * quickfix, need another way to implement checking
 
@@ -23,5 +23,5 @@ index 4569bceff..f38eb2b99 100644
      tracepath \
      tracepath6 \
 -- 
-2.17.1
+2.30.2
 

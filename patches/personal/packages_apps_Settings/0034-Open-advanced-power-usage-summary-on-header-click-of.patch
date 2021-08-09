@@ -1,7 +1,7 @@
-From ccb4ba0dce33213b124d2cb8bc94763b82dbf549 Mon Sep 17 00:00:00 2001
+From ca24d4669159ee3780855c1ddb15f0689bd21557 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:33:58 -0500
-Subject: [PATCH 34/62] Open advanced power usage summary on header click of
+Subject: [PATCH 34/63] Open advanced power usage summary on header click of
  battery
 
   * from
@@ -59,5 +59,5 @@ index 57949db473..8763976e36 100644
      public int getMetricsCategory() {
          return SettingsEnums.FUELGAUGE_POWER_USAGE_SUMMARY_V2;
 -- 
-2.17.1
+2.30.2
 

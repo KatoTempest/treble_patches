@@ -1,7 +1,7 @@
-From c8f27e5d7fc5c8be77b5037eb9c4a3146386107c Mon Sep 17 00:00:00 2001
+From 69c5d5cc76f8cb0b1bb5f19ef33cf3085e3f5fea Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:20:08 -0500
-Subject: [PATCH 01/33] Revert "Use ext4 share duplicate blocks, it is sadly
+Subject: [PATCH 01/37] Revert "Use ext4 share duplicate blocks, it is sadly
  needed to attain acceptable partition size, because of duplication made by
  apexes"
 
@@ -20,5 +20,5 @@ index 0da1061..4739954 100644
  BOARD_ROOT_EXTRA_FOLDERS += bt_firmware sec_storage efs
 +BOARD_EXT4_SHARE_DUP_BLOCKS := false
 -- 
-2.17.1
+2.30.2
 

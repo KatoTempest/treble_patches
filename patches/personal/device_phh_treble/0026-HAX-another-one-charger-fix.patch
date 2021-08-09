@@ -1,7 +1,7 @@
-From 6f5fad8cb03bb77904833d25df034e123d39127c Mon Sep 17 00:00:00 2001
+From ee853986fdf11b335bd142fa36dea7886fe7c6b2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 15 Sep 2020 21:26:45 -0400
-Subject: [PATCH 26/33] HAX: another one charger fix
+Subject: [PATCH 26/37] HAX: another one charger fix
 
 ---
  sepolicy/gsicharger.te | 2 ++
@@ -17,5 +17,5 @@ index 0000000..bc63340
 +# temp ugly haxx
 +permissive charger;
 -- 
-2.17.1
+2.30.2
 

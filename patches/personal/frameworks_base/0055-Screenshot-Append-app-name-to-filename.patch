@@ -1,7 +1,7 @@
-From 2deef088f9de7ffea8d39ab7e8fcb643f2718e15 Mon Sep 17 00:00:00 2001
+From 59bf4a2fffc4811342ce7ccf2c27e9098437e575 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:16:50 -0500
-Subject: [PATCH 055/210] Screenshot: Append app name to filename
+Subject: [PATCH 055/212] Screenshot: Append app name to filename
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/299dc3ae8b378c52fd49adb5fe26219a0e7e8c1b
@@ -124,7 +124,7 @@ index c3c947bc40a..c558bcf61fc 100644
          if (mSaveInBgTask != null) {
              // just log success/failure for the pre-existing screenshot
 diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java b/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
-index df1d78953f4..4d768397913 100644
+index 8d74344834d..be396b26135 100644
 --- a/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
 +++ b/packages/SystemUI/src/com/android/systemui/screenshot/SaveImageInBackgroundTask.java
 @@ -17,6 +17,7 @@
@@ -162,5 +162,5 @@ index df1d78953f4..4d768397913 100644
  
          // Initialize screenshot notification smart actions provider.
 -- 
-2.17.1
+2.30.2
 

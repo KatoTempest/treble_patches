@@ -1,7 +1,7 @@
-From c706c7fe985f32fedd3f1b8aca7f318647e1da72 Mon Sep 17 00:00:00 2001
+From 8e0d1062dce62955fd75032d800d45cc146464cf Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 26 Nov 2020 13:52:24 -0500
-Subject: [PATCH 090/210] SystemUI: Disable heads up debugging on non eng
+Subject: [PATCH 090/212] SystemUI: Disable heads up debugging on non eng
  builds
 
   from
@@ -34,5 +34,5 @@ index 71f6dac4e23..eeb91b548d6 100644
      private static final String SETTING_HEADS_UP_TICKER = "ticker_gets_heads_up";
  
 -- 
-2.17.1
+2.30.2
 

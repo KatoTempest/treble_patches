@@ -1,7 +1,7 @@
-From 955f78f7e86f0512c02ba65010ca3f35b8d11e1e Mon Sep 17 00:00:00 2001
+From 733b2683c00af32decbf5993145aa66e1dda9e01 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:16:01 -0400
-Subject: [PATCH 8/9] inputflinger: Enable ThinLTO
+Subject: [PATCH 08/12] inputflinger: Enable ThinLTO
 
   from
   https://github.com/crdroidandroid/android_frameworks_native/commit/da46664951c0a896c76571b65545c5cc36b093d5
@@ -24,5 +24,5 @@ index 8ce6f28b5..4b4c79567 100644
  
  cc_library_shared {
 -- 
-2.17.1
+2.30.2
 

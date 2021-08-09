@@ -1,7 +1,7 @@
-From 68de8bb0c951de4b3a27c305400adf18d42d3aad Mon Sep 17 00:00:00 2001
+From f3855543f18aea485236ac7e417d3e970d292177 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:42:07 -0500
-Subject: [PATCH 2/9] nuplayer: Avoid crash when codec fails to load
+Subject: [PATCH 02/11] nuplayer: Avoid crash when codec fails to load
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/57a803dad25ae381ce7ab3c62e47cd9f94433009
@@ -24,5 +24,5 @@ index c1c4b55400..8a81ef118b 100644
      updateRebufferingTimer(true /* stopping */, true /* exiting */);
  
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 1ee0b232548c13d13852220dd381da145c458cc9 Mon Sep 17 00:00:00 2001
+From d2258c0833a17e61a89909ecc6472affc667f640 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:37:06 -0400
-Subject: [PATCH 7/9] SF: handle long waiting Layer sync point
+Subject: [PATCH 07/12] SF: handle long waiting Layer sync point
 
   from
   https://github.com/LineageOS/android_frameworks_native/commit/c02140b857db4dab853a596accf9c96b85ee3198
@@ -130,5 +130,5 @@ index 2c90c92f6..fb66a3d63 100644
      // Timestamp history for UIAutomation. Thread safe.
      FrameTracker mFrameTracker;
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 5fc46d43b2f93a4300089614a9f1dce2c1e808c1 Mon Sep 17 00:00:00 2001
+From 6751bc2c43ae008b331e203bebda4aeac1c03703 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 10:12:40 -0500
-Subject: [PATCH 10/15] HAXFIX: no time for that!
+Subject: [PATCH 10/14] HAXFIX: no time for that!
 
   Prebuilt apk found in PRODUCT_COPY_FILES: $(1), use BUILD_PREBUILT
   instead blablabla
@@ -26,5 +26,5 @@ index 3e748eb2d..f1020e957 100644
    $(if $(filter $(TARGET_COPY_OUT_SYSTEM)/etc/vintf/% \
                  $(TARGET_COPY_OUT_SYSTEM)/manifest.xml \
 -- 
-2.17.1
+2.30.2
 

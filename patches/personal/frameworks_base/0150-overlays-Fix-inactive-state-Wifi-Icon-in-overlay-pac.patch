@@ -1,7 +1,7 @@
-From 4963d218aab48b819bec8b75af42bebe2b62ec1f Mon Sep 17 00:00:00 2001
+From 521d61da1bec090a51baae9a0c150e90bf267794 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:14:10 -0500
-Subject: [PATCH 150/210] overlays: Fix inactive state Wifi Icon in overlay
+Subject: [PATCH 150/212] overlays: Fix inactive state Wifi Icon in overlay
  packs
 
   from
@@ -83,5 +83,5 @@ index c36d0f8fe85..6a2a1e38095 100644
 +  <path android:fillColor="@android:color/white" android:pathData="M1.62,7.94L0.63,6.82C10.98-2.33,20,3.76,23.39,6.8l-1,1.12C19.29,5.15,11.07-0.4,1.62,7.94z" android:strokeWidth="1"/>
 +</vector>
 -- 
-2.17.1
+2.30.2
 

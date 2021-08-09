@@ -1,7 +1,7 @@
-From e5a13a294aea55aac76f196778fc2a2a32b69d49 Mon Sep 17 00:00:00 2001
+From c615fef7904bca164184757d42e74f768f4496cd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 37/62] Settings: Reset battery stats [2/2]
+Subject: [PATCH 37/63] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918
@@ -114,5 +114,5 @@ index 8763976e36..911cd2462c 100644
                  new SubSettingLauncher(getContext())
                          .setDestination(PowerUsageAdvanced.class.getName())
 -- 
-2.17.1
+2.30.2
 

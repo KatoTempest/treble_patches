@@ -1,7 +1,7 @@
-From 7512740bf0ddc946c550283cab7892c8ac93ac46 Mon Sep 17 00:00:00 2001
+From eeee5c0b577b0ba254bf9c989f30ad0d5435b342 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 07:17:39 -0500
-Subject: [PATCH 16/33] add usefull busybox_phh links
+Subject: [PATCH 16/37] add usefull busybox_phh links
 
 	sadly, but this way not works
 ---
@@ -46,5 +46,5 @@ index 0000000..5ff60c3
 +
 +include $(BUILD_PHONY_PACKAGE)
 -- 
-2.17.1
+2.30.2
 

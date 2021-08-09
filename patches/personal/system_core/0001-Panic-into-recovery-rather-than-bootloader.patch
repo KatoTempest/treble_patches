@@ -1,7 +1,7 @@
-From 3159ba5f2f59c3af44d667b1265d28bd60f47e21 Mon Sep 17 00:00:00 2001
+From 02ae0175073287ac4fc6c2188c5845e2236658c7 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Wed, 4 Sep 2019 21:11:48 +0200
-Subject: [PATCH 1/7] Panic into recovery rather than bootloader
+Subject: [PATCH 1/9] Panic into recovery rather than bootloader
 
 Getting last_kmsg/pstore from bootloader isn't possible for other people
 than the OEM, but we have TWRP to access last_kmsg/pstore
@@ -34,5 +34,5 @@ index 76460a5df..5a12dd7af 100644
      start_pos += sizeof(kRebootTargetString) - 1;
  
 -- 
-2.17.1
+2.30.2
 

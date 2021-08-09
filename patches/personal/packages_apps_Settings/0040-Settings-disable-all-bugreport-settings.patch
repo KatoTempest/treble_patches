@@ -1,7 +1,7 @@
-From e4e7e2ec1bca3f3bc0899bca13d9998d4c128162 Mon Sep 17 00:00:00 2001
+From 199c4d55919596bf0838e5e082f6aab1aa8277d7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:53:03 -0500
-Subject: [PATCH 40/62] Settings: disable all bugreport settings
+Subject: [PATCH 40/63] Settings: disable all bugreport settings
 
   from
   https://github.com/omnirom/android_packages_apps_Settings/commit/2e59f165ca0f21eede3e7963cdb888173fe7b26a
@@ -75,5 +75,5 @@ index ac778849e5..fb5ccca470 100644
          controllers.add(new MockLocationAppPreferenceController(context, fragment));
          controllers.add(new DebugViewAttributesPreferenceController(context));
 -- 
-2.17.1
+2.30.2
 

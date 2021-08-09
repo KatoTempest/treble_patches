@@ -1,7 +1,7 @@
-From 6a1200aa0771cf9fe0266028556ce3280492ce7d Mon Sep 17 00:00:00 2001
+From eac49181e2488ed126d3ec15f27a47f42df5bf82 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 16:20:51 -0400
-Subject: [PATCH 7/7] fix wrong 'RU' translation
+Subject: [PATCH 7/8] fix wrong 'RU' translation
 
 ---
  java/com/android/dialer/main/impl/res/values-ru/strings.xml | 2 +-
@@ -21,5 +21,5 @@ index 4a60cfca5..a0c411169 100644
      <string name="main_call_history_tab_description" msgid="1705569872650796265">"Журнал звонков"</string>
      <string name="search" msgid="3570654445331155513">"@android:string/search_go"</string>
 -- 
-2.17.1
+2.30.2
 

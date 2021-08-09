@@ -1,7 +1,7 @@
-From 31ea0fa476b1a2f8dffe90aef563dc6cf95aa180 Mon Sep 17 00:00:00 2001
+From 6390df36543af824255d763410853f1793db9bc9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 11/33] add enhanced root solution
+Subject: [PATCH 11/37] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)
@@ -59,10 +59,10 @@ index 0000000..b7d7177
 +mount -o remount,ro $MOUNTPOINT
 +#reboot
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index c1810b5..83008d5 100644
+index 498cce6..735b40b 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -173,3 +173,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
+@@ -193,3 +193,23 @@ if [ "$1" == "persist.sys.phh.qin.dt2w" ];then
      echo "$prop_value" > /sys/devices/platform/soc/soc:ap-apb/70800000.i2c/i2c-3/3-0038/fts_gesture_mode
      exit
  fi
@@ -15678,5 +15678,5 @@ index 4066e14..2bc1c6b 100644
      start ril-proxy
  
 -- 
-2.17.1
+2.30.2
 

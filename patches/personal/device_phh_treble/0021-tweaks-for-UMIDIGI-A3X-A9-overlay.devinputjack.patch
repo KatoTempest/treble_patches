@@ -1,14 +1,14 @@
-From daf57d68efbede7b05a5accadffcb27dac60ed83 Mon Sep 17 00:00:00 2001
+From 532239b8bd57ece14145275f69cd57f14eb2d34c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:46:57 -0500
-Subject: [PATCH 21/33] tweaks for UMIDIGI A3X & A9 (overlay.devinputjack)
+Subject: [PATCH 21/37] tweaks for UMIDIGI A3X & A9 (overlay.devinputjack)
 
 ---
  rw-system.sh | 5 +++++
  1 file changed, 5 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 567dc83..55cbece 100644
+index 0d7e233..60cc379 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -376,6 +376,11 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel
@@ -21,8 +21,8 @@ index 567dc83..55cbece 100644
 +fi
 +
  #Realme 6
- if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151;then
+ if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151 -e RMX2111 -e RMX2111L1;then
      setprop persist.sys.phh.fingerprint.nocleanup true
 -- 
-2.17.1
+2.30.2
 

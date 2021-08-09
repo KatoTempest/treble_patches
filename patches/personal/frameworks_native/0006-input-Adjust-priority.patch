@@ -1,7 +1,7 @@
-From 3238db17c63adf427f55e9f873a8e7428012293b Mon Sep 17 00:00:00 2001
+From 8d769ae62f66b22ef7167908fd884ca183ede58e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:32:06 -0400
-Subject: [PATCH 6/9] input: Adjust priority
+Subject: [PATCH 06/12] input: Adjust priority
 
   from
   https://github.com/LineageOS/android_frameworks_native/commit/7e654fcc223f6d191528028b7781bb23254115d7
@@ -133,5 +133,5 @@ index 845bf50ad..8a0d51442 100644
  
  EventThread::~EventThread() {
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 941d8c92ab514562bdcb003f205776b0ba777e5b Mon Sep 17 00:00:00 2001
+From 41cd4ada74200241600695371bf2aedc07a0f752 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:52:15 -0500
-Subject: [PATCH 46/62] Settings: Remove all initialExpandedChildrenCount
+Subject: [PATCH 46/63] Settings: Remove all initialExpandedChildrenCount
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/ef2a6dc9a10671288910c7696aeb35a6ae903e24
@@ -312,5 +312,5 @@ index 6764e288d4..71ef61013b 100644
          <!-- DND duration settings -->
          <com.android.settings.notification.zen.ZenDurationDialogPreference
 -- 
-2.17.1
+2.30.2
 

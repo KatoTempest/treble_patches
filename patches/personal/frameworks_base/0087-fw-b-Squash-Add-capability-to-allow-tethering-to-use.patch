@@ -1,7 +1,7 @@
-From d181cbceaa5864981bac774b04b094992cf87b1f Mon Sep 17 00:00:00 2001
+From 772738668f7fb4c19e8749b7a124bbe189f53156 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 06:19:29 -0500
-Subject: [PATCH 087/210] fw/b: [Squash] Add capability to allow tethering to
+Subject: [PATCH 087/212] fw/b: [Squash] Add capability to allow tethering to
  use VPN upstreams
 
   from
@@ -155,5 +155,5 @@ index 320427c393a..bf0fcaee79d 100644
              Iterable<UpstreamNetworkState> netStates) {
          for (UpstreamNetworkState ns : netStates) {
 -- 
-2.17.1
+2.30.2
 

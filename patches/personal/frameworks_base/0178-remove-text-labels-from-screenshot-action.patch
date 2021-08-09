@@ -1,0 +1,48 @@
+From a63f5b3028266d7d83b7d063a56ea35fb155a022 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Tue, 9 Feb 2021 05:02:31 -0500
+Subject: [PATCH 178/212] remove text labels from screenshot action
+
+---
+ .../src/com/android/systemui/screenshot/GlobalScreenshot.java | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+index f4e602aefe0..a525dfb0b31 100644
+--- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
++++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
+@@ -952,7 +952,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+         for (Notification.Action smartAction : imageData.smartActions) {
+             ScreenshotActionChip actionChip = (ScreenshotActionChip) inflater.inflate(
+                     R.layout.global_screenshot_action_chip, mActionsView, false);
+-            actionChip.setText(smartAction.title);
+             actionChip.setIcon(smartAction.getIcon(), false);
+             actionChip.setPendingIntent(smartAction.actionIntent,
+                     () -> {
+@@ -966,7 +965,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+ 
+         ScreenshotActionChip shareChip = (ScreenshotActionChip) inflater.inflate(
+                 R.layout.global_screenshot_action_chip, mActionsView, false);
+-        shareChip.setText(imageData.shareAction.title);
+         shareChip.setIcon(imageData.shareAction.getIcon(), true);
+         shareChip.setPendingIntent(imageData.shareAction.actionIntent, () -> {
+             mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_SHARE_TAPPED);
+@@ -978,7 +976,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+ 
+         ScreenshotActionChip editChip = (ScreenshotActionChip) inflater.inflate(
+                 R.layout.global_screenshot_action_chip, mActionsView, false);
+-        editChip.setText(imageData.editAction.title);
+         editChip.setIcon(imageData.editAction.getIcon(), true);
+         editChip.setPendingIntent(imageData.editAction.actionIntent, () -> {
+             mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_EDIT_TAPPED);
+@@ -990,7 +987,6 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+ 
+         ScreenshotActionChip deleteChip = (ScreenshotActionChip) inflater.inflate(
+                 R.layout.global_screenshot_action_chip, mActionsView, false);
+-        deleteChip.setText(imageData.deleteAction.title);
+         deleteChip.setIcon(imageData.deleteAction.getIcon(), true);
+         deleteChip.setPendingIntent(imageData.deleteAction.actionIntent, () -> {
+             mUiEventLogger.log(ScreenshotEvent.SCREENSHOT_DELETE_TAPPED);
+-- 
+2.30.2
+

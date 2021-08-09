@@ -1,7 +1,7 @@
-From e59ccd472bd4597cafd7294beaf71b962c461f9b Mon Sep 17 00:00:00 2001
+From e5c0f4947fdefe9fd41935ad14dd7868f76af651 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:14:02 -0500
-Subject: [PATCH 121/210] add rounded corners overlays
+Subject: [PATCH 121/212] add rounded corners overlays
 
 ---
  .../systemui/theme/ThemeOverlayManager.java   |  8 ++++-
@@ -562,5 +562,5 @@ index 00000000000..99f5fb17a66
 +    <dimen name="rounded_corner_radius">28dp</dimen>
 +</resources>
 -- 
-2.17.1
+2.30.2
 

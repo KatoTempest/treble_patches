@@ -1,7 +1,7 @@
-From 00c8a8f2c9416d12ca791bab188429e2dcda4af4 Mon Sep 17 00:00:00 2001
+From adb29d800444bc17ca93b97afc0d1aef517aebe2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 06:48:59 -0500
-Subject: [PATCH 100/210] fix SystemUI crash from null stored in non-nullable
+Subject: [PATCH 100/212] fix SystemUI crash from null stored in non-nullable
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/645b62334fe5d1421adcf4304155bcbda2b42645
@@ -11,10 +11,10 @@ Subject: [PATCH 100/210] fix SystemUI crash from null stored in non-nullable
  1 file changed, 13 insertions(+), 9 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt b/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
-index 2be509a1381..122b13ff651 100644
+index 2d7aafc497d..42d3d708fce 100644
 --- a/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
 +++ b/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
-@@ -423,14 +423,16 @@ class MediaDataManager(
+@@ -424,14 +424,16 @@ class MediaDataManager(
                          artWorkIcon.type == Icon.TYPE_ADAPTIVE_BITMAP) {
                      artworkBitmap = artWorkIcon.bitmap
                  } else {
@@ -39,7 +39,7 @@ index 2be509a1381..122b13ff651 100644
                  }
              }
          }
-@@ -441,7 +443,9 @@ class MediaDataManager(
+@@ -442,7 +444,9 @@ class MediaDataManager(
          val app = builder.loadHeaderAppName()
  
          // App Icon
@@ -51,5 +51,5 @@ index 2be509a1381..122b13ff651 100644
          // Song name
          var song: CharSequence? = metadata?.getString(MediaMetadata.METADATA_KEY_DISPLAY_TITLE)
 -- 
-2.17.1
+2.30.2
 

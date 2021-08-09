@@ -1,7 +1,7 @@
-From 847f0bc6c996ab729b21ea5283b14bd691f8b008 Mon Sep 17 00:00:00 2001
+From 0e6e5e1ddf75463680d92fa6a76f38c2efc340e0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 1 May 2021 10:48:10 -0400
-Subject: [PATCH 32/33] allow Wellbeing for gapps
+Subject: [PATCH 32/37] allow Wellbeing for gapps
 
 ---
  overrides/Android.mk | 2 --
@@ -28,5 +28,5 @@ index 251e40e..b96ff89 100644
  	Photos \
  	Maps \
 -- 
-2.17.1
+2.30.2
 

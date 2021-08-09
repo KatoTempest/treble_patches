@@ -1,14 +1,14 @@
-From 2006ca92ae3ea6f1ebf9808a1c3629af63ed61cd Mon Sep 17 00:00:00 2001
+From 1f5dcb137862fea1ad8d8cf9b3ef79ce1da77938 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 1 May 2021 15:55:21 -0400
-Subject: [PATCH 33/33] rework daisy keylayout
+Subject: [PATCH 33/37] rework daisy keylayout
 
 ---
  rw-system.sh | 28 ++++++++++++++--------------
  1 file changed, 14 insertions(+), 14 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 0c0e4a4..37a59e0 100644
+index aa8c3e9..cb4e8fb 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -136,20 +136,6 @@ changeKeylayout() {
@@ -54,5 +54,5 @@ index 0c0e4a4..37a59e0 100644
          cp /system/phh/oneplus6-synaptics_s3320.kl /mnt/phh/keylayout/synaptics_s3320.kl
          chmod 0644 /mnt/phh/keylayout/synaptics_s3320.kl
 -- 
-2.17.1
+2.30.2
 

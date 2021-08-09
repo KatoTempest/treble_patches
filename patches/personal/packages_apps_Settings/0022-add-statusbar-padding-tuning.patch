@@ -1,7 +1,7 @@
-From ce59ccd2a079bc2ae18d38d718f47191efaf0ddb Mon Sep 17 00:00:00 2001
+From f72eaaf3eab00c364d84df561892fb6571619924 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 23 Aug 2020 12:53:10 -0400
-Subject: [PATCH 22/62] add statusbar padding tuning
+Subject: [PATCH 22/63] add statusbar padding tuning
 
 Change-Id: Ib31c6505d431da4f4a72888a85894d27e857ff3b
 ---
@@ -61,5 +61,5 @@ index 635f077af3..0984fd7d68 100644
                  "android.theme.customization.statusbar"));
          controllers.add(new OverlayCategoryPreferenceController(context,
 -- 
-2.17.1
+2.30.2
 

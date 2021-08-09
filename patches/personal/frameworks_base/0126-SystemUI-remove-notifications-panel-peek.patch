@@ -1,7 +1,7 @@
-From d7f5a96ea259d4969b5e20dbb14c684c0a0969fd Mon Sep 17 00:00:00 2001
+From 72c7d253e3f76252d3c384942fe89db90993326c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:39:57 -0500
-Subject: [PATCH 126/210] SystemUI: remove notifications panel peek
+Subject: [PATCH 126/212] SystemUI: remove notifications panel peek
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/42cc266530dd26f5a5ef3cf58334f67d06296684
@@ -10,10 +10,10 @@ Subject: [PATCH 126/210] SystemUI: remove notifications panel peek
  1 file changed, 14 deletions(-)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
-index e942d85790c..6231efdd5b6 100644
+index a4f9b06b86a..491a0dbb7f1 100644
 --- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
 +++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
-@@ -306,8 +306,6 @@ public abstract class PanelViewController {
+@@ -311,8 +311,6 @@ public abstract class PanelViewController {
      }
  
      private void startOpening(MotionEvent event) {
@@ -22,7 +22,7 @@ index e942d85790c..6231efdd5b6 100644
          notifyBarPanelExpansionChanged();
          maybeVibrateOnOpening();
  
-@@ -403,18 +401,6 @@ public abstract class PanelViewController {
+@@ -413,18 +411,6 @@ public abstract class PanelViewController {
              if (mUpdateFlingOnLayout) {
                  mUpdateFlingVelocity = vel;
              }
@@ -42,5 +42,5 @@ index e942d85790c..6231efdd5b6 100644
              boolean expands = onEmptySpaceClick(mInitialTouchX);
              onTrackingStopped(expands);
 -- 
-2.17.1
+2.30.2
 

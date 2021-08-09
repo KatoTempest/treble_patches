@@ -1,7 +1,7 @@
-From 4159c45d100d3ab7b56c2ca2de68e983411420a6 Mon Sep 17 00:00:00 2001
+From 91b44a87037394e79e0a91334a4c1b332739f98c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:21:36 -0400
-Subject: [PATCH 3/9] libs: gui: switch to -O3
+Subject: [PATCH 03/12] libs: gui: switch to -O3
 
 ---
  libs/gui/Android.bp | 5 +++++
@@ -50,5 +50,5 @@ index ea22f05f6..b318c1f5f 100644
                  "-DDEBUG_ONLY_CODE=1",
              ],
 -- 
-2.17.1
+2.30.2
 

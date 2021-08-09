@@ -1,7 +1,7 @@
-From 36199a315802cf2a6166bd7f32d662a27fd06c3b Mon Sep 17 00:00:00 2001
+From 21299eb97f4dd717a542330018e716def3890131 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 12 May 2020 20:15:52 +0300
-Subject: [PATCH 092/210] add headsup QS tile
+Subject: [PATCH 092/212] add headsup QS tile
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/7d687f5b144a60eb15a5c1f2f21e82c3e9cf70b4
@@ -75,7 +75,7 @@ index b1289629084..87f181bf071 100644
 +    <string name="accessibility_quick_settings_heads_up_changed_on">Всплывающие уведомления были включены</string>
  </resources>
 diff --git a/packages/SystemUI/res/values/config.xml b/packages/SystemUI/res/values/config.xml
-index 8f00d58753c..f238dadcafb 100644
+index eeb884b0a17..0687235c5ae 100644
 --- a/packages/SystemUI/res/values/config.xml
 +++ b/packages/SystemUI/res/values/config.xml
 @@ -114,7 +114,7 @@
@@ -287,5 +287,5 @@ index 3f712dd1492..a6d725936f0 100644
    }
  }
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From ce564230e298eca29b42908185bf5500b7c8a8fa Mon Sep 17 00:00:00 2001
+From 3abac251cfcf1824d39a3e06257d865cc3f16c6e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:48:06 -0500
-Subject: [PATCH 074/210] SystemUI: Fix MediaProjection cast crash
+Subject: [PATCH 074/212] SystemUI: Fix MediaProjection cast crash
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/c64cdf7bac57103f595c2061040c5a822503c8d0
@@ -23,5 +23,5 @@ index da1ef2f0f65..1c2c51057e6 100644
          if (DEBUG) Log.d(TAG, "startCasting: " + routeToString(route));
          mMediaRouter.selectRoute(ROUTE_TYPE_REMOTE_DISPLAY, route);
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 27268efdc660866181a42e8f3f68b70967dfb8dd Mon Sep 17 00:00:00 2001
+From 9e3be0ed640c24e57314f8230dad8a5e5c9f40fe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:21:33 -0500
-Subject: [PATCH 056/210] Download: Add support to manually pause/resume
+Subject: [PATCH 056/212] Download: Add support to manually pause/resume
  download
 
   from
@@ -107,5 +107,5 @@ index 48410a74876..214c71a0d1f 100644
           * This download couldn't be completed due to insufficient storage
           * space.  Typically, this is because the SD card is full.
 -- 
-2.17.1
+2.30.2
 

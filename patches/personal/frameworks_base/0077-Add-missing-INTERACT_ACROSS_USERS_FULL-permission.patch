@@ -1,7 +1,7 @@
-From db0a8b7a0d2cd4ac566b75866aca226ad516b9e0 Mon Sep 17 00:00:00 2001
+From 97d62cd8bbb87a3ff0d25628be0ff9c9616121ef Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:55:44 -0500
-Subject: [PATCH 077/210] Add missing INTERACT_ACROSS_USERS_FULL permission
+Subject: [PATCH 077/212] Add missing INTERACT_ACROSS_USERS_FULL permission
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/1d6d443f6def01cabac1212d73c96df1771a4810
@@ -24,5 +24,5 @@ index 04d3f948635..c678813c1d6 100644
                   android:label="@string/app_label"
                   android:process="system"
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 4b30dfc86709caf17946c3a8954ad2c0332d2940 Mon Sep 17 00:00:00 2001
+From e633ca30da7243b7f05c3883cbbd17b9a8178efc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:38:02 -0500
-Subject: [PATCH 118/210] base: remove weired qs icon config from
+Subject: [PATCH 118/212] base: remove weired qs icon config from
  IconShapeTaperedRectOverlay
 
   from
@@ -22,5 +22,5 @@ index 63ba20e779c..05ec716f842 100644
 -    <dimen name="config_qsTileStrokeWidthInactive">1dp</dimen>
  </resources>
 -- 
-2.17.1
+2.30.2
 

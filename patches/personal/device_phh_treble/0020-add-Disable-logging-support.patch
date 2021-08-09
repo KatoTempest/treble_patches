@@ -1,7 +1,7 @@
-From 6d79c4390cb6856c002cc9473b8360ebbd63ee89 Mon Sep 17 00:00:00 2001
+From f933d0f387de3cfc59b174d6c20b000b81d4c0d4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:06:02 -0500
-Subject: [PATCH 20/33] add Disable logging support
+Subject: [PATCH 20/37] add Disable logging support
 
 ---
  phh-prop-handler.sh | 18 ++++++++++++++++++
@@ -9,10 +9,10 @@ Subject: [PATCH 20/33] add Disable logging support
  2 files changed, 21 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index e9d4c9f..ff3d426 100644
+index fdee99d..639326f 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -221,3 +221,21 @@ if [ "$1" == "persist.sys.phh.autorun" ]; then
+@@ -241,3 +241,21 @@ if [ "$1" == "persist.sys.phh.autorun" ]; then
      /system/bin/sh /sdcard/phh/run
      exit
  fi
@@ -49,5 +49,5 @@ index c9bd378..779ad6b 100644
      start ril-proxy
  
 -- 
-2.17.1
+2.30.2
 

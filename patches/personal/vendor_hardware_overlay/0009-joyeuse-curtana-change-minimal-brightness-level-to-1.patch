@@ -1,4 +1,4 @@
-From af2ff120451615e0fd7db09913a27fde0d9defb9 Mon Sep 17 00:00:00 2001
+From d56a497c7f5997b0fd77a5724f040c4c5dc34dec Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 17 Mar 2021 01:47:39 -0400
 Subject: [PATCH 09/13] joyeuse,curtana: change minimal brightness level to 17
@@ -43,5 +43,5 @@ index 6f702d5..a627f0e 100644
      <integer name="config_bluetooth_idle_cur_ma">3</integer>
      <integer name="config_bluetooth_operating_voltage_mv">3700</integer>
 -- 
-2.17.1
+2.30.2
 

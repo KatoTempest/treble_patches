@@ -1,7 +1,7 @@
-From fdb4e571b496068d0d9e4895de7828b09195c290 Mon Sep 17 00:00:00 2001
+From 92564271eaa8e8fe4b0a1c5294a8f8850bd0e65a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 6 Mar 2021 18:51:33 -0500
-Subject: [PATCH 8/9] libstagefright: Fix memory leak due to lock timeout
+Subject: [PATCH 08/11] libstagefright: Fix memory leak due to lock timeout
 
   from
   https://github.com/LineageOS/android_frameworks_av/commit/3b925d38c2bfda63323ac14b7a01c8afbab41a29
@@ -29,5 +29,5 @@ index 259daf5990..f031816620 100644
  
      mDispatcher.clear();
 -- 
-2.17.1
+2.30.2
 

@@ -1,17 +1,17 @@
-From 1baf329885e1d97b3cdc5d45d09502ee7e97e697 Mon Sep 17 00:00:00 2001
+From 2db4ce31568ccc1c9521118a40acda56d14c800e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 28 Mar 2021 11:24:18 -0400
-Subject: [PATCH 27/33] add tweaks for Xiaomi Redmi Note 7 'lavender'
+Subject: [PATCH 27/37] add tweaks for Xiaomi Redmi Note 7 'lavender'
 
 ---
  rw-system.sh | 6 +++++-
  1 file changed, 5 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 63c757d..0c0e4a4 100644
+index 58ed6f5..aa8c3e9 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -528,12 +528,16 @@ fi
+@@ -534,12 +534,16 @@ fi
  
  if getprop ro.vendor.build.fingerprint | grep -iq -e xiaomi/daisy; then
      setprop debug.sf.latch_unsignaled 1
@@ -30,5 +30,5 @@ index 63c757d..0c0e4a4 100644
      p=/product/etc/nfc/libnfc_nxp_*_*.conf
      mount -o bind "$p" /system/etc/libnfc-nxp.conf ||
 -- 
-2.17.1
+2.30.2
 

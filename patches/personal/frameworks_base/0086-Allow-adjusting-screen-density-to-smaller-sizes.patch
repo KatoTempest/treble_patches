@@ -1,7 +1,7 @@
-From 4262b0ffe560b594a5661a8b43434908a58c326d Mon Sep 17 00:00:00 2001
+From f8ff04d5219760651e22eb25b4273e454b97d6ad Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:23:33 -0500
-Subject: [PATCH 086/210] Allow adjusting screen density to smaller sizes
+Subject: [PATCH 086/212] Allow adjusting screen density to smaller sizes
 
   * from
   https://github.com/ezio84/abc_frameworks_base/commit/27b7a6a0f6f786ebf5e668abe246710986066f6e
@@ -89,5 +89,5 @@ index a38091debb6..b2d6425b7a9 100644
  
      /**
 -- 
-2.17.1
+2.30.2
 

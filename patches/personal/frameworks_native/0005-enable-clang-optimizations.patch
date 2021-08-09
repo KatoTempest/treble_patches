@@ -1,7 +1,7 @@
-From 52b9b301570ac36f5dc15ca3d441c48f6c4cabd1 Mon Sep 17 00:00:00 2001
+From f7c823543cdfa967ad6761220191bea3ca74a276 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 25 Mar 2021 06:23:38 -0400
-Subject: [PATCH 5/9] enable clang optimizations
+Subject: [PATCH 05/12] enable clang optimizations
 
 ---
  cmds/surfacereplayer/replayer/Android.bp |  2 ++
@@ -310,5 +310,5 @@ index 8528898f3..b2716202a 100644
      export_include_dirs: [
          ".",
 -- 
-2.17.1
+2.30.2
 

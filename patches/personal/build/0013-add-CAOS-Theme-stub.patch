@@ -1,7 +1,7 @@
-From 52c001a9bd1ee7fa3d2d8e1ad8cbb657946306c5 Mon Sep 17 00:00:00 2001
+From 94b523868ead838799f269d939bca4e6972a3d17 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 13:13:38 -0500
-Subject: [PATCH 13/15] add CAOS Theme stub
+Subject: [PATCH 13/14] add CAOS Theme stub
 
 Change-Id: I09d75f116bdbc7c49f1d1320ab6aa26e4ffd6315
 ---
@@ -21,5 +21,5 @@ index afbee6ac6..0c4509ba6 100644
      FOSSBrowser \
      DeskClock \
 -- 
-2.17.1
+2.30.2
 

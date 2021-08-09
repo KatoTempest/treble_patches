@@ -1,0 +1,45 @@
+From b6938e10ec36f7887a362a620d5d52c4dcd61e38 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 19 Jul 2021 18:41:25 +0000
+Subject: [PATCH 12/12] SurfaceFlingerProperties: Use proper prop scope
+
+  from
+  https://github.com/ezio84/abc_frameworks_native/commit/70f2a6cbb78437e16361009076326b725aac3874
+---
+ .../surfaceflinger/sysprop/SurfaceFlingerProperties.sysprop | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/services/surfaceflinger/sysprop/SurfaceFlingerProperties.sysprop b/services/surfaceflinger/sysprop/SurfaceFlingerProperties.sysprop
+index cfc301bd2..7666f7f42 100644
+--- a/services/surfaceflinger/sysprop/SurfaceFlingerProperties.sysprop
++++ b/services/surfaceflinger/sysprop/SurfaceFlingerProperties.sysprop
+@@ -72,7 +72,7 @@ prop {
+ prop {
+     api_name: "max_graphics_width"
+     type: Integer
+-    scope: System
++    scope: Public
+     access: Readonly
+     prop_name: "ro.surface_flinger.max_graphics_width"
+ }
+@@ -82,7 +82,7 @@ prop {
+ prop {
+     api_name: "max_graphics_height"
+     type: Integer
+-    scope: System
++    scope: Public
+     access: Readonly
+     prop_name: "ro.surface_flinger.max_graphics_height"
+ }
+@@ -328,7 +328,7 @@ prop {
+ prop {
+     api_name: "refresh_rate_switching"
+     type: Boolean
+-    scope: System
++    scope: Public
+     access: Readonly
+     prop_name: "ro.surface_flinger.refresh_rate_switching"
+     deprecated: true
+-- 
+2.30.2
+
