@@ -1,7 +1,7 @@
-From 3f341364d14d3bef85106371e1c384db08c07485 Mon Sep 17 00:00:00 2001
+From 4686dc44d9f7a9b7698ed236f00a9b17a82a4784 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 13 Dec 2020 01:38:50 +0100
-Subject: [PATCH 28/40] Ignore DUN required and always use main APN
+Subject: [PATCH 28/41] Ignore DUN required and always use main APN
 
 ---
  .../android/networkstack/tethering/TetheringConfiguration.java  | 2 +-
@@ -21,5 +21,5 @@ index ef2ea3ad6d0..90eb638ec31 100644
          chooseUpstreamAutomatically = getResourceBoolean(
                  res, R.bool.config_tether_upstream_automatic, false /** defaultValue */);
 -- 
-2.17.1
+2.30.2
 

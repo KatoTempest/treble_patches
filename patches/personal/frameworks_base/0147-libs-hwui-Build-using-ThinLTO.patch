@@ -1,4 +1,4 @@
-From 388794abdf495c80b938aa6768c4a45823a1fad5 Mon Sep 17 00:00:00 2001
+From eeace9ff2c5240ccb99d0cd65a9970a065efec8e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:26:11 -0500
 Subject: [PATCH 147/169] libs: hwui: Build using ThinLTO

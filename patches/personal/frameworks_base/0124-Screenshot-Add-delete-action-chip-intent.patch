@@ -1,4 +1,4 @@
-From 25496a270676227cd97e6d71471835fb19388852 Mon Sep 17 00:00:00 2001
+From 29f3f7a7d0075a460f088dda63d7579ff361b23e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 07:16:10 -0500
 Subject: [PATCH 124/169] Screenshot: Add delete action chip intent

@@ -1,4 +1,4 @@
-From 83b0c3e09eda79698331624ca520dc0a5c1da253 Mon Sep 17 00:00:00 2001
+From 785f37a05dfd4fd970ab6ae35679f14be5aa4092 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 17:18:56 -0400
 Subject: [PATCH 161/169] Revert "SystemUI: Hide centered_area when showing

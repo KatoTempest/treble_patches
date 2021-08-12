@@ -1,4 +1,4 @@
-From a5f02748080c3f903077aff6ccedbb87d36ba4ee Mon Sep 17 00:00:00 2001
+From f072c3a2bd5e97a2447098182b564ad5c689d6fe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 23 Dec 2020 14:49:47 -0500
 Subject: [PATCH 116/169] Restore one-click to add/remove tiles

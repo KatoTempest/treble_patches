@@ -1,4 +1,4 @@
-From d3c776160a4d4dcdf4d3c9bbe39dfa3984bf22a3 Mon Sep 17 00:00:00 2001
+From 9b39b79c7fea1b489779e52d28287468495af3a8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:30:56 -0500
 Subject: [PATCH 100/169] FrameLayout: Fix NPE when view is missing

@@ -1,4 +1,4 @@
-From 89d00a1d568c5a0666616a2be3f4f4b5d0a93696 Mon Sep 17 00:00:00 2001
+From 7dc01cd0dd666160dc4099f59719738643e1cc5f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:50:11 -0500
 Subject: [PATCH 070/169] LED lights: Don't skip Dialer and other apps

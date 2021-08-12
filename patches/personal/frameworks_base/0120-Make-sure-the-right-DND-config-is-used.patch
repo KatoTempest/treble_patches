@@ -1,4 +1,4 @@
-From a718c7a952294a2fa40cae71f6d028fe4c712715 Mon Sep 17 00:00:00 2001
+From 6c0334735dde84214bb504dc63bc8ff40f28c1db Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:18:08 -0500
 Subject: [PATCH 120/169] Make sure the right DND config is used

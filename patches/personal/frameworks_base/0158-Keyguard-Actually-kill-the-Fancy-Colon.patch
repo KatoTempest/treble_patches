@@ -1,4 +1,4 @@
-From 3f1d99ac357a4636eb4527ba847f402a82b2b363 Mon Sep 17 00:00:00 2001
+From 5d0453cdee754aade095f14cd60a56b5d92f8fe1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:03:26 -0400
 Subject: [PATCH 158/169] Keyguard: Actually kill the Fancy Colon

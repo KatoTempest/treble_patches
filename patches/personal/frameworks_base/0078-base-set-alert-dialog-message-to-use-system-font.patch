@@ -1,4 +1,4 @@
-From 35297e31e634bea81c50171fb9686ecfc308d929 Mon Sep 17 00:00:00 2001
+From 192ae912fedfc1038f13def18115a882a77470a7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:47:13 -0500
 Subject: [PATCH 078/169] base: set alert dialog message to use system font

@@ -1,4 +1,4 @@
-From 3cacf39a6df3df684306ecc18a7cb1d2855e10b9 Mon Sep 17 00:00:00 2001
+From 79276e299bb6a5d31cf62deea862fd5173b1a183 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 18:53:10 +0200
 Subject: [PATCH 163/169] move network indicator

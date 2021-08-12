@@ -1,4 +1,4 @@
-From 3cd210369d67d543221ddc075fd4823a3b984145 Mon Sep 17 00:00:00 2001
+From 969d7208c141a7fff64f029d1ef85aaf9771e6f2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:34:29 -0500
 Subject: [PATCH 135/169] require unlocking to use battery saver tile

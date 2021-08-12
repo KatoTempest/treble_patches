@@ -1,4 +1,4 @@
-From dde840b9bc90973945b0d258290f9e3b9a91dacc Mon Sep 17 00:00:00 2001
+From 2b2904ef05f4accdea6243fe2a030ec52cba962c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 16:20:26 -0500
 Subject: [PATCH 117/169] remove custom options from ThemeOverlayManager

@@ -1,4 +1,4 @@
-From 5f7bcfeffdc4eed3f35e493b09fa63d1be5d3c6e Mon Sep 17 00:00:00 2001
+From 7512c86874f77059e33d32384ff1551d5274416d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:06:14 -0500
 Subject: [PATCH 093/169] Fixes crash/race condition when destroyActivity

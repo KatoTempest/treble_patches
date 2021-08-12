@@ -1,4 +1,4 @@
-From d61b435bfd21be216f465fddfe1d2365f7dd309f Mon Sep 17 00:00:00 2001
+From 1193a7e6248fae0e4adc471fe39f15ecd57aef6d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 06:56:43 -0400
 Subject: [PATCH 001/169] Revert "SystemUI: allow to limit the max framerate of

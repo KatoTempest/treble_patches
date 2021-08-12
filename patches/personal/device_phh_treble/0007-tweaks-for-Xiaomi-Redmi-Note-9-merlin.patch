@@ -1,7 +1,7 @@
-From fc7d5c7ea48234c69987786a023d420c2dfcf439 Mon Sep 17 00:00:00 2001
+From f9243607d3e063a2a4b21cdc81455de691b6d13f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 07/33] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 07/38] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)
@@ -10,10 +10,10 @@ Subject: [PATCH 07/33] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 0441635..16f5c0d 100644
+index 81972ba..e6836a4 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -367,10 +367,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
+@@ -374,10 +374,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
      -e xiaomi/nitrogen -e xiaomi/whyred -e xiaomi/platina \
      -e xiaomi/ysl -e nubia/nx60 -e nubia/nx61 -e xiaomi/tulip \
      -e xiaomi/lavender -e xiaomi/olive -e xiaomi/olivelite -e xiaomi/pine \
@@ -31,5 +31,5 @@ index 0441635..16f5c0d 100644
  if getprop ro.vendor.product.device |grep -iq -e RMX2001 -e RMX2151 -e RMX2111 -e RMX2111L1;then
      setprop persist.sys.phh.fingerprint.nocleanup true
 -- 
-2.17.1
+2.30.2
 

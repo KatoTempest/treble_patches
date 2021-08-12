@@ -1,4 +1,4 @@
-From e5e6c59895300729520f504ab61964fd730b099a Mon Sep 17 00:00:00 2001
+From 301a7da1a1563e0219b7afad0fd8ab9e5b06e69f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 15:04:34 -0500
 Subject: [PATCH 085/169] base: decrease keyguard delay

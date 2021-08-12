@@ -1,4 +1,4 @@
-From 1a1a1fb61cf51e5e2a4f7e28329dbb29f7a2dc23 Mon Sep 17 00:00:00 2001
+From f72f4b633b1b4130acaee2726e92e4e613e73db5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Mar 2020 19:45:55 +0200
 Subject: [PATCH 122/169] add three-fingers-swipe to screenshot [1/2]

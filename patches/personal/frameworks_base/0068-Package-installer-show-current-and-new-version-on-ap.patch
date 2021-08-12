@@ -1,4 +1,4 @@
-From 512128c289d568743e7ed0cf15faa912c0f73a68 Mon Sep 17 00:00:00 2001
+From 986fe54baca8dddf794d354aa050bdeda775831c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:42:16 -0500
 Subject: [PATCH 068/169] Package installer: show current and new version on

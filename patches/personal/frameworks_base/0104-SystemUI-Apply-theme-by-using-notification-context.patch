@@ -1,4 +1,4 @@
-From 57136e3208ab69dcba3dd6a5dafa0c78312ffcc0 Mon Sep 17 00:00:00 2001
+From 13c9bcfd60920df0d960a3ef9d57c51fd63a9d23 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:17:21 -0500
 Subject: [PATCH 104/169] SystemUI: Apply theme by using notification context

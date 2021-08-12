@@ -1,4 +1,4 @@
-From 85266049f0820ea97bcab24d9d5d24ea7843f2a7 Mon Sep 17 00:00:00 2001
+From 7b25bb59dd732d705a8f667886991e3dd7e592fd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:46:49 -0500
 Subject: [PATCH 112/169] Fix action bar font family on material themes

@@ -1,4 +1,4 @@
-From 35cc966ae8ef4a83c477354d9fb290e22a3ad053 Mon Sep 17 00:00:00 2001
+From a4faa4b9c20c3ab314c152f6df1f5f5062b68f96 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:56:04 -0500
 Subject: [PATCH 089/169] Fix SystemUI crash of BatteryStatsHelper

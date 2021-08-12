@@ -1,7 +1,7 @@
-From 87ee199d9b99f9a01e49229d8cd47d2ff1c0f0e7 Mon Sep 17 00:00:00 2001
+From c8ad126c3c0802876f92712c215462aa0ad1ab0f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 06:05:51 -0500
-Subject: [PATCH 3/6] Revert "Remove sbin from fs_config.cpp"
+Subject: [PATCH 3/8] Revert "Remove sbin from fs_config.cpp"
 
 This reverts commit 2f74a26a2dbe092d63f1e46e6471369d4a19adce.
 ---
@@ -29,5 +29,5 @@ index 5805a4d19..8175a219f 100644
      { 00755, AID_ROOT,      AID_SHELL,     0, "system/xbin/*" },
      { 00755, AID_ROOT,      AID_SHELL,     0, "system/apex/*/bin/*" },
 -- 
-2.17.1
+2.30.2
 

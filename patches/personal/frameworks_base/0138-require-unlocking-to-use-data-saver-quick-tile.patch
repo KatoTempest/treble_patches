@@ -1,4 +1,4 @@
-From 093ca8db4685092954873c14dcb166a2fd9806bb Mon Sep 17 00:00:00 2001
+From 6aa4b434bd9f0d924c0218fea47c9c03f25001b8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:42:29 -0500
 Subject: [PATCH 138/169] require unlocking to use data saver quick tile

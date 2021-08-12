@@ -1,4 +1,4 @@
-From 9d6acf10f82f3a007ff5cfb00da8f4b3d0d0cd4f Mon Sep 17 00:00:00 2001
+From a5b8d139b956764fcd41fc41b89ea5507d51cd19 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 4 Mar 2020 19:19:01 +0200
 Subject: [PATCH 016/169] hide vertical divider lines in Settings

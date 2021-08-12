@@ -1,4 +1,4 @@
-From 826bc72cc83c74d0da09e7ce731d3e40e2718a7c Mon Sep 17 00:00:00 2001
+From 8484f99012cb6307685864fd5001106e45acc74d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:29:49 -0500
 Subject: [PATCH 099/169] BatteryStats: Fix Another SystemUI crash

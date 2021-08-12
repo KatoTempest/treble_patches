@@ -1,4 +1,4 @@
-From 08f9eec97585afc9fcde46d4b9ba24cf7f59ddd1 Mon Sep 17 00:00:00 2001
+From 29a3aacb0415383ac5f2bbc07311ccc8b88d5d53 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:48:32 -0500
 Subject: [PATCH 088/169] Relax LOCATION_BACKGROUND_PERMISSION

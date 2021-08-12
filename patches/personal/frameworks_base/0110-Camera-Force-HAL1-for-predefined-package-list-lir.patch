@@ -1,4 +1,4 @@
-From 425f7d0f80c3fa1f5e962e19e353eceb122ca36c Mon Sep 17 00:00:00 2001
+From c88b06aae04750fc7be4be6b256318c33c8f5fbe Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:42:22 -0500
 Subject: [PATCH 110/169] Camera: Force HAL1 for predefined package list (lir)

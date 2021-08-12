@@ -1,4 +1,4 @@
-From 49e127c9441a5d563f1c92fd386f73717c425090 Mon Sep 17 00:00:00 2001
+From 924f6d1b3d40411a7a9f2107c5d00b5c4c2dc007 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 20 Dec 2020 21:50:15 -0500
 Subject: [PATCH 115/169] remove screenshot icon from global actions (lir)

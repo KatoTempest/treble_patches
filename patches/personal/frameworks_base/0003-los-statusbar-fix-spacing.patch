@@ -1,4 +1,4 @@
-From d1d062032464aea642967e7a16cc0bfc1dc3a498 Mon Sep 17 00:00:00 2001
+From 787372b74265878b76edd2da5808dd818ba728d8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 10 Feb 2020 22:35:26 +0200
 Subject: [PATCH 003/169] los statusbar fix spacing

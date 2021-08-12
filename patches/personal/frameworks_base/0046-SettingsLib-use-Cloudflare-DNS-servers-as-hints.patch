@@ -1,4 +1,4 @@
-From 4820b3e0110ac5791c553301a771d9153c369c86 Mon Sep 17 00:00:00 2001
+From 736436078003fcd46286050557f3727b15710b4f Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 10:37:46 -0400
 Subject: [PATCH 046/169] SettingsLib: use Cloudflare DNS servers as hints

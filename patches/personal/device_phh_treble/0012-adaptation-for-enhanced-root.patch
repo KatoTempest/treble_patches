@@ -1,7 +1,7 @@
-From 3c6f39ac7534ade85d141cc5a93781d9dc876373 Mon Sep 17 00:00:00 2001
+From be5468330ffca66fe14f56eaa490be07e4346ede Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 09:38:07 -0500
-Subject: [PATCH 12/33] adaptation for enhanced root
+Subject: [PATCH 12/38] adaptation for enhanced root
 
 ---
  generate.sh              |   6 +++++-
@@ -39,7 +39,7 @@ index c1494c7..59b2aa2 100644
  				part_suffix='a'
  				if [ "$part" == 'ab' ];then
 diff --git a/sepolicy/file_contexts b/sepolicy/file_contexts
-index 7ab5e91..0569a3f 100644
+index 5e39d5b..4492eda 100644
 --- a/sepolicy/file_contexts
 +++ b/sepolicy/file_contexts
 @@ -1,4 +1,5 @@
@@ -6395,5 +6395,5 @@ index 0000000..3efeee7
 +service zerodaemon /system/bin/zerodaemon --daemon
 +    class main
 -- 
-2.17.1
+2.30.2
 

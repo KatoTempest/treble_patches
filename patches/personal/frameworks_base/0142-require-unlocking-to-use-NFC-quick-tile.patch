@@ -1,4 +1,4 @@
-From 0e5ad6928e364591377c4883fd9ef5648cd13f49 Mon Sep 17 00:00:00 2001
+From a8309e340e63f3c350ac683490de3d1b474afc95 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:56:32 -0500
 Subject: [PATCH 142/169] require unlocking to use NFC quick tile

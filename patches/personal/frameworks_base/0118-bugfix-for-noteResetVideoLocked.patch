@@ -1,4 +1,4 @@
-From 0b09f27dadc0e01ac92eaf5581487a1d0bd3074c Mon Sep 17 00:00:00 2001
+From 64b721eb718830fb313be510634c38e0b9e51a01 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:15:52 -0500
 Subject: [PATCH 118/169] bugfix for noteResetVideoLocked

@@ -1,11 +1,11 @@
-From d93fba92b09a1ab085b56a89590da7855f266cc5 Mon Sep 17 00:00:00 2001
+From de6adf48f1d11d246c0b065f8b8b596459552e74 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 19 May 2021 15:27:50 -0400
 Subject: [PATCH 165/169] add PixelPropsUtils v3
 
   based on
   https://github.com/ProtonAOSP/android_frameworks_base/commit/c5a66dbeefe7c4f212d88768a72f897e69040d31
-  https://github.com/PixelExperience/frameworks_base/blob/ee9dabdf140d0aebeac5d63269db14b3388be388/core/java/com/android/internal/util/custom/PixelPropsUtils.java
+  https://github.com/PixelExperience/frameworks_base/blob/eleven/core/java/com/android/internal/util/custom/PixelPropsUtils.java
 
 Change-Id: I70380542305ef227b9787aa1131e7bdbd62f1eaa
 ---
@@ -103,14 +103,14 @@ index 721525d9af9..7b442b71060 100644
 +        propsToChange.put("DEVICE", "redfin");
 +        propsToChange.put("PRODUCT", "redfin");
 +        propsToChange.put("MODEL", "Pixel 5");
-+        propsToChange.put("FINGERPRINT", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
++        propsToChange.put("FINGERPRINT", "google/redfin/redfin:11/RQ3A.210805.001.A1/7474174:user/release-keys");
 +        propsToChangePixel3XL = new HashMap<>();
 +        propsToChangePixel3XL.put("BRAND", "google");
 +        propsToChangePixel3XL.put("MANUFACTURER", "Google");
 +        propsToChangePixel3XL.put("DEVICE", "crosshatch");
 +        propsToChangePixel3XL.put("PRODUCT", "crosshatch");
 +        propsToChangePixel3XL.put("MODEL", "Pixel 3 XL");
-+        propsToChangePixel3XL.put("FINGERPRINT", "google/crosshatch/crosshatch:11/RQ3A.210705.001/7380771:user/release-keys");
++        propsToChangePixel3XL.put("FINGERPRINT", "google/crosshatch/crosshatch:11/RQ3A.210805.001.A1/7474174:user/release-keys");
 +    }
 +
 +    private static void setProps(Application app) {

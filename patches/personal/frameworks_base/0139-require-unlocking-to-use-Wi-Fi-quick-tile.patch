@@ -1,4 +1,4 @@
-From d3974e8d10649079c1980dfcd77417f35f5dec8f Mon Sep 17 00:00:00 2001
+From fb4c1c03c9b9fb5996c312fa140a25c86556de57 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:44:59 -0500
 Subject: [PATCH 139/169] require unlocking to use Wi-Fi quick tile

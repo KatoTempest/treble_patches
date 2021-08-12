@@ -1,4 +1,4 @@
-From f8e7ad2ed20a7acab828c738b758ff138e83dcf9 Mon Sep 17 00:00:00 2001
+From d92098b9df69301a268c2ee2e1ded52ed9fe6036 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 05:02:31 -0500
 Subject: [PATCH 126/169] remove text labels from screenshot action

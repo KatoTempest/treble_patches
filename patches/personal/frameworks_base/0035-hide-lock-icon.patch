@@ -1,4 +1,4 @@
-From 4b84bce07c3f3132ccac0d9a92bd60610ef7c78a Mon Sep 17 00:00:00 2001
+From 7894c1a63f60d32eec8b6d864c0b775d7eef3799 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:32:30 +0300
 Subject: [PATCH 035/169] hide lock icon

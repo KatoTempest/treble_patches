@@ -1,4 +1,4 @@
-From acc2b142e682722588999fbb844c9713d51b004e Mon Sep 17 00:00:00 2001
+From bf73b93c158a440e12d8913ba41b750340f40dce Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:25:27 -0500
 Subject: [PATCH 106/169] data: permissions: update usage permissions

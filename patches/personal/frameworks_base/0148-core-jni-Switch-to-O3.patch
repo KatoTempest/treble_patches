@@ -1,4 +1,4 @@
-From d93c9638f02ca754b694eabfb532d6dbd6a2d0e9 Mon Sep 17 00:00:00 2001
+From 6cf67b305a4716f94f56603c161603b1f6d7a368 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:14:37 -0400
 Subject: [PATCH 148/169] core: jni: Switch to -O3

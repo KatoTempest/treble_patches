@@ -1,4 +1,4 @@
-From 9a95f5ecadc22e77a9034e7bdb11fb665888752f Mon Sep 17 00:00:00 2001
+From 303d6f55b535266d0652458aca444d63a66d8f51 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:45:09 -0500
 Subject: [PATCH 086/169] SettingsLib: mutate drawable before tinting for

@@ -1,7 +1,7 @@
-From e65181b1ca19f2ed63ca9b11b37abb330ddf60fa Mon Sep 17 00:00:00 2001
+From bfae3f432b3d9b0875cda73f91ea4bf8f4b69e59 Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 11 Aug 2019 10:30:37 +0200
-Subject: [PATCH 13/40] Add property to use linear brightness slider
+Subject: [PATCH 13/41] Add property to use linear brightness slider
 
 Change-Id: I1af7eb923779fa60c7a735904ba8fc82d0622c1d
 ---
@@ -34,5 +34,5 @@ index 4f86afaa995..f1fe73a6a1d 100644
          final float normalizedVal = MathUtils.norm(min, max, val) * 12;
          final float ret;
 -- 
-2.17.1
+2.30.2
 

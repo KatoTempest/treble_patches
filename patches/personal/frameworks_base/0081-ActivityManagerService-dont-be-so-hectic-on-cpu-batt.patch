@@ -1,4 +1,4 @@
-From e7d77de84d54361ea807e64b0a37ac8e840a6851 Mon Sep 17 00:00:00 2001
+From 38b39bd4f2d545fb60bc48df239bf86c88c9a007 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:23:00 -0500
 Subject: [PATCH 081/169] ActivityManagerService: dont be so hectic on cpu

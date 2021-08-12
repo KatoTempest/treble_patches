@@ -1,4 +1,4 @@
-From a65a1e9ed4fdeb14889dd36940916dfcbaf8f034 Mon Sep 17 00:00:00 2001
+From 8d292d1dfc41cbe7c79cebc2191230a114b53e85 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 8 Jul 2020 05:51:58 +0300
 Subject: [PATCH 036/169] settings: add 1.2x animation scales

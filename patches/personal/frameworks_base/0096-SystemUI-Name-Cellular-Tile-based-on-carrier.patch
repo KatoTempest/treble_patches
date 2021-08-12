@@ -1,4 +1,4 @@
-From 21e9423a3f6ff8b85df5ce8a8ededef44122c3b0 Mon Sep 17 00:00:00 2001
+From 78a37ec1ccfee7e1d2f8865aeb36ac37f5f3d7e1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:25:07 -0500
 Subject: [PATCH 096/169] SystemUI: Name Cellular Tile based on carrier

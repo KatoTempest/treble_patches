@@ -1,4 +1,4 @@
-From 335691a989df0a15c83d95c67724049842804251 Mon Sep 17 00:00:00 2001
+From bc3e568834558537053dbdf79ce9cab24e72eef3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:14:10 -0500
 Subject: [PATCH 103/169] overlays: Fix inactive state Wifi Icon in overlay

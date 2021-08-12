@@ -1,4 +1,4 @@
-From f9e07ca439115b7e750f089cdb2f8509f3cbe88e Mon Sep 17 00:00:00 2001
+From 2048cdf03a8792540cf90822f71d329ac951a1f4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:05:15 -0500
 Subject: [PATCH 092/169] Add synchronization for invokeForAllObservers call

@@ -1,4 +1,4 @@
-From a75c6982d61aa0219248545a41d2a829a8bad274 Mon Sep 17 00:00:00 2001
+From 37b1eb77d585c402425ebde73782bf1b09fd05ef Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:50:16 -0500
 Subject: [PATCH 113/169] SystemUI: remove media player top divider

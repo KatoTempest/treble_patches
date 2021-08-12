@@ -1,7 +1,7 @@
-From cec90e1f6a9231e5948413564875ef4f2910a5fb Mon Sep 17 00:00:00 2001
+From 351fb9518742d107295dd4bbea553740b0cd4631 Mon Sep 17 00:00:00 2001
 From: Peter Cai <peter@typeblog.net>
 Date: Thu, 2 Jan 2020 10:16:49 +0800
-Subject: [PATCH 16/40] fix crashing on devices with higher aspect ratio down
+Subject: [PATCH 16/41] fix crashing on devices with higher aspect ratio down
  to sw288dp
 
 * This is what the Qin 2 (Pro) is.
@@ -52,5 +52,5 @@ index 00000000000..40adc2e6879
 +
 +</resources>
 -- 
-2.17.1
+2.30.2
 

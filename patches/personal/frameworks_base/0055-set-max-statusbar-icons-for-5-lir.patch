@@ -1,4 +1,4 @@
-From 01b95c64343d496c5c457b851c85e76f3c54b004 Mon Sep 17 00:00:00 2001
+From d6134605aea02f1a37f5b70bb817e160e1d95cb1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:23:33 -0500
 Subject: [PATCH 055/169] set max statusbar icons for 5 (lir)

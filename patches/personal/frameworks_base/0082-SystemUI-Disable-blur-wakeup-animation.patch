@@ -1,4 +1,4 @@
-From bcb09e9f9f40eeb7d7a8750c161cf7ae81911222 Mon Sep 17 00:00:00 2001
+From c042d010a883ec3fee30468a6dd3c26721723220 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:34:48 -0500
 Subject: [PATCH 082/169] SystemUI: Disable blur wakeup animation

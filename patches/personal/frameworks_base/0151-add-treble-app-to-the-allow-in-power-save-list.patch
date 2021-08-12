@@ -1,4 +1,4 @@
-From 82105249b1376564f76b6a8488b2c5e84c08cc1f Mon Sep 17 00:00:00 2001
+From a069f29bc6be474896769e895529ab279d1951a0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:18:04 -0400
 Subject: [PATCH 151/169] add treble app to the allow-in-power-save list

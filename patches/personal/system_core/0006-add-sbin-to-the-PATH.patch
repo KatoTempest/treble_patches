@@ -1,13 +1,14 @@
-From 39764081aa6cac021ebf96fe91f19d8038f10409 Mon Sep 17 00:00:00 2001
+From 07be32eab19efa2ef905701bcd70d2e16b90e42a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 06:31:17 -0500
-Subject: [PATCH 6/7] add /sbin to the PATH
+Subject: [PATCH 6/8] add /sbin to the PATH
 
 ---
  rootdir/init.environ.rc.in | 1 +
+ 1 file changed, 1 insertion(+)
 
 diff --git a/rootdir/init.environ.rc.in b/rootdir/init.environ.rc.in
-index fdaaf1abe..b34145829 100644
+index fdaaf1abe..72ba861a8 100644
 --- a/rootdir/init.environ.rc.in
 +++ b/rootdir/init.environ.rc.in
 @@ -10,6 +10,7 @@ on early-init
@@ -19,5 +20,5 @@ index fdaaf1abe..b34145829 100644
      export DEX2OATBOOTCLASSPATH %DEX2OATBOOTCLASSPATH%
      export SYSTEMSERVERCLASSPATH %SYSTEMSERVERCLASSPATH%
 -- 
-2.17.1
+2.30.2
 

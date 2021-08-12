@@ -1,4 +1,4 @@
-From 5f5d56e8bfb4eab43e91dee74fbf6394d92f8a83 Mon Sep 17 00:00:00 2001
+From 9061548686aad9be565a2a8c5226d6df2c3a579c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:15:18 -0400
 Subject: [PATCH 149/169] libs: hwui: switch to -O3

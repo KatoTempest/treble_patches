@@ -1,4 +1,4 @@
-From c72e787ba7d0e39c2f4f2f7808d130340aacd199 Mon Sep 17 00:00:00 2001
+From e43b9a6c4aee9bc3ebcaa0eecc445a80d3482083 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:47:16 -0500
 Subject: [PATCH 140/169] require unlocking to use airplane mode quick tile

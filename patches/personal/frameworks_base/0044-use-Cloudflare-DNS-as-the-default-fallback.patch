@@ -1,4 +1,4 @@
-From f5551a09bb104883615a04641c5b8de6e33e959c Mon Sep 17 00:00:00 2001
+From f2ad5ad790431367cc20d49e01130af8b0cb5700 Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Apr 2018 12:59:51 -0400
 Subject: [PATCH 044/169] use Cloudflare DNS as the default fallback

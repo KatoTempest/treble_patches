@@ -1,4 +1,4 @@
-From 56328e3303be6b9f94ffe1519bd7d4c3d2504dd6 Mon Sep 17 00:00:00 2001
+From 7c2fc9d7368d75009626337f024d29b9ab06903f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 20 Jul 2021 08:42:46 +0000
 Subject: [PATCH 167/169] rework corners radius rules for shape icons

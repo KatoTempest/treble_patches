@@ -1,4 +1,4 @@
-From e3208289fd5bf737c88a6362f6677cb93c3abb36 Mon Sep 17 00:00:00 2001
+From e1fbc333426163dc9ad5f7b7f693ed24d9a56354 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 17:18:50 -0400
 Subject: [PATCH 160/169] Revert "SystemUI: Force left-to-right for network

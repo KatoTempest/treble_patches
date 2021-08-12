@@ -10,6 +10,7 @@ for d in ${assets}; do
     [ "$p" == build ] && p=build/make
     [ "$p" == vendor/hardware/overlay ] && p=vendor/hardware_overlay
     [ "$p" == vendor/partner/gms ] && p=vendor/partner_gms
+    [ "$p" == external/harfbuzz/ng ] && p=external/harfbuzz_ng
     echo
     pushd $p
       git clean -fdx

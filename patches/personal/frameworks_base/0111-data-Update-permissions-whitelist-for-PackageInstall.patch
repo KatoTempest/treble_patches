@@ -1,4 +1,4 @@
-From 6f812768396727cc2484ad932954787c9cf0fc63 Mon Sep 17 00:00:00 2001
+From 21ec5586a53421c3588da1432055188a8b715d76 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:44:45 -0500
 Subject: [PATCH 111/169] data: Update permissions whitelist for

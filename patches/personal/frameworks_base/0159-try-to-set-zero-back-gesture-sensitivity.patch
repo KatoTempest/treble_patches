@@ -1,4 +1,4 @@
-From 53ca6ec018569ca75af3045505d28495a3367d1e Mon Sep 17 00:00:00 2001
+From 443c4e9ee2d335fa68e5fed3b2cfe08f26f6d255 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:11:56 -0400
 Subject: [PATCH 159/169] try to set zero back gesture sensitivity

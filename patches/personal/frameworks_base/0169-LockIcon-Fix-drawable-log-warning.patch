@@ -1,4 +1,4 @@
-From 2a01d59dc90e193861e0f3a829d40f60c8eeb4dc Mon Sep 17 00:00:00 2001
+From 989e4d27a04a8ffdddf669d74cd463c3f9987f56 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Jul 2021 11:25:40 +0000
 Subject: [PATCH 169/169] LockIcon: Fix drawable log warning

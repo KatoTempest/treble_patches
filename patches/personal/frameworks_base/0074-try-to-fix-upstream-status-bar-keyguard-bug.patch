@@ -1,4 +1,4 @@
-From 7022a226bb0103ae316edb763c63ae4b2a8ed6fa Mon Sep 17 00:00:00 2001
+From c226f7de9205bd46f211fa3eea2eb5462a3a06ed Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:01:45 -0500
 Subject: [PATCH 074/169] try to fix upstream status bar+keyguard bug

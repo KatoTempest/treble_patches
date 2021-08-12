@@ -1,4 +1,4 @@
-From c8a2e66eab3576a6da02ea2d10719e8d4bf29186 Mon Sep 17 00:00:00 2001
+From 457955f35394b21620dbc11fd7d89d66a90277b2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:36:59 -0500
 Subject: [PATCH 145/169] change navbar overlay to the OneUI style

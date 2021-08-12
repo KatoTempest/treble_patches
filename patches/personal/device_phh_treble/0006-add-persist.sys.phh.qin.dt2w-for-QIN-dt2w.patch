@@ -1,7 +1,7 @@
-From 30668c3b0a48dccb79dffc165087c3c129bb32b3 Mon Sep 17 00:00:00 2001
+From 85c7295648a7ea27bbd16e972fb67ae9ffc9e409 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 6 Oct 2020 14:26:50 -0400
-Subject: [PATCH 06/33] add persist.sys.phh.qin.dt2w for QIN dt2w
+Subject: [PATCH 06/38] add persist.sys.phh.qin.dt2w for QIN dt2w
 
 ---
  phh-prop-handler.sh | 9 +++++++++
@@ -9,10 +9,10 @@ Subject: [PATCH 06/33] add persist.sys.phh.qin.dt2w for QIN dt2w
  2 files changed, 12 insertions(+)
 
 diff --git a/phh-prop-handler.sh b/phh-prop-handler.sh
-index 251f390..c1810b5 100644
+index a6c9765..498cce6 100644
 --- a/phh-prop-handler.sh
 +++ b/phh-prop-handler.sh
-@@ -164,3 +164,12 @@ if [ "$1" == "persist.sys.phh.backlight.scale" ];then
+@@ -184,3 +184,12 @@ if [ "$1" == "persist.sys.phh.backlight.scale" ];then
      fi
      exit
  fi
@@ -40,5 +40,5 @@ index 4adfe9e..4066e14 100644
      setprop persist.sys.phh.disable_a2dp_offload false
  
 -- 
-2.17.1
+2.30.2
 

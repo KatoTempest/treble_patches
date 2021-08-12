@@ -1,4 +1,4 @@
-From 70ccedf6685778d00b94c0a99558290866620513 Mon Sep 17 00:00:00 2001
+From 42fdfc9e4d7134e9ca1e2ebf8d736dc6ac86a7ac Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:54:10 -0500
 Subject: [PATCH 141/169] require unlocking to use Bluetooth quick tile

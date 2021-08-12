@@ -1,7 +1,7 @@
-From f38ce353890a290e8efba118783ec6bda96a5cc5 Mon Sep 17 00:00:00 2001
+From fe0584bd42bdc7fb9dc1bf1ae65c3b9e6518c76d Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 1 May 2018 17:47:36 +0200
-Subject: [PATCH 03/40] Also scan /system/overlay
+Subject: [PATCH 03/41] Also scan /system/overlay
 
 Change-Id: Ib0223560606b80cdaaa986b159b34b4db0154589
 ---
@@ -39,5 +39,5 @@ index 49d75dc35e6..d5f2317d7c0 100644
        && path.find("/../") == std::string::npos) {
      return true;
 -- 
-2.17.1
+2.30.2
 

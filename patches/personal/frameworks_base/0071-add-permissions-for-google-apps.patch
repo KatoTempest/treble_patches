@@ -1,4 +1,4 @@
-From 799015b7a6967c698505be5716069768290328dc Mon Sep 17 00:00:00 2001
+From 38e1ecee1314c4fd9dad86f13234704813728c8b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:53:13 -0500
 Subject: [PATCH 071/169] add permissions for google apps

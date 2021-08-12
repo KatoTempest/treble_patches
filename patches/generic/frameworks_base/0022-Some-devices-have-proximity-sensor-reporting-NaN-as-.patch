@@ -1,7 +1,7 @@
-From 42fa06802884c811abca81859d16a1de6777d5f3 Mon Sep 17 00:00:00 2001
+From cdd4b46710bbdb88e58c3abb86293741b22199db Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Tue, 29 Sep 2020 22:39:47 +0200
-Subject: [PATCH 22/40] Some devices have proximity sensor reporting NaN as max
+Subject: [PATCH 22/41] Some devices have proximity sensor reporting NaN as max
  range for some reason. Make them behave standard way by setting 5 cm
 
 Change-Id: I3c39e3e914a05903c140235702e0480d2d58a612
@@ -24,5 +24,5 @@ index a7f113f7248..be7da65ed4c 100644
          }
          mCurrentScreenBrightnessSetting = getScreenBrightnessSetting();
 -- 
-2.17.1
+2.30.2
 

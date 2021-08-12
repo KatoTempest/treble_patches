@@ -1,4 +1,4 @@
-From c0ae45fdd7f805e4a438d523971a47f1d9f8455a Mon Sep 17 00:00:00 2001
+From 16676934d6d363c2d01f7a99b46c6781bce27826 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:40:09 -0500
 Subject: [PATCH 137/169] require unlocking to use hotspot quick tile

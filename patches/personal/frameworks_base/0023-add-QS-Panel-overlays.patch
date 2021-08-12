@@ -1,4 +1,4 @@
-From 9b609803267d46288c221d6b9cffd755cb297c22 Mon Sep 17 00:00:00 2001
+From c32a31da2e79d1c7a0c8caa517fe9cef23456dfa Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 9 Apr 2020 23:32:22 +0300
 Subject: [PATCH 023/169] add QS Panel overlays

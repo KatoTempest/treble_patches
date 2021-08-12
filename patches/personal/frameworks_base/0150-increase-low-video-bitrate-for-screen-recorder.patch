@@ -1,4 +1,4 @@
-From 5444541f7eb057c6ac04b096966e5314e98b0768 Mon Sep 17 00:00:00 2001
+From 05271275acf6fff2a3b5ffd85f1e8a7364889712 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 19:18:57 -0400
 Subject: [PATCH 150/169] increase low video bitrate for screen recorder

@@ -1,4 +1,4 @@
-From 3e211b7b0712e03b8162e1b51d183c558749708f Mon Sep 17 00:00:00 2001
+From 89946d6508ddb9044bb82ea8bd39be370f725ffb Mon Sep 17 00:00:00 2001
 From: Daniel Micay <danielmicay@gmail.com>
 Date: Mon, 2 Jan 2017 18:51:57 -0500
 Subject: [PATCH 048/169] hide sensitive information while locked by default

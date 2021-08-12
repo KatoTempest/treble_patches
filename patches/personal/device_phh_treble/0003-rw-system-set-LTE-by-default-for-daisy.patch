@@ -1,7 +1,7 @@
-From 5c4db7dfd6defb717b185419977509f32297be2e Mon Sep 17 00:00:00 2001
+From 0ace727fdcd8b444459525044f6da94a74cf97e3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Jan 2020 17:31:17 +0200
-Subject: [PATCH 03/33] rw-system: set LTE by default for 'daisy'
+Subject: [PATCH 03/38] rw-system: set LTE by default for 'daisy'
 
 	modified:   rw-system.sh
 ---
@@ -9,10 +9,10 @@ Subject: [PATCH 03/33] rw-system: set LTE by default for 'daisy'
  1 file changed, 3 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 14c830f..f67aa26 100644
+index d93c938..b160fbf 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -520,6 +520,9 @@ fi
+@@ -528,6 +528,9 @@ fi
  if getprop ro.vendor.build.fingerprint | grep -iq -e xiaomi/daisy; then
      setprop debug.sf.latch_unsignaled 1
      setprop debug.sf.enable_hwc_vds 1
@@ -23,5 +23,5 @@ index 14c830f..f67aa26 100644
  
  if getprop ro.vendor.build.fingerprint | grep -iq -E -e 'huawei|honor' || getprop persist.sys.overlay.huawei | grep -iq -E -e 'true'; then
 -- 
-2.17.1
+2.30.2
 

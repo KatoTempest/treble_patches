@@ -1,4 +1,4 @@
-From 6247f1cb2b19ec881e354a9d31d1cec68ae4692f Mon Sep 17 00:00:00 2001
+From 10ae179971d90854b758e5457dc1f13dee2e8c2b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 3 Apr 2021 04:37:13 -0400
 Subject: [PATCH 154/169] set 0.5x animation scale as default

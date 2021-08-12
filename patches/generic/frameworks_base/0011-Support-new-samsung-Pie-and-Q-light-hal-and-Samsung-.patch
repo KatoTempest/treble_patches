@@ -1,7 +1,7 @@
-From 1debbe76d9b8f78f17af9c2279bcf8529f0e76e4 Mon Sep 17 00:00:00 2001
+From c6acdc38cd2dff4e8b7dcb7e997382194d934a6e Mon Sep 17 00:00:00 2001
 From: Pierre-Hugues Husson <phh@phh.me>
 Date: Sun, 24 Mar 2019 23:05:14 +0100
-Subject: [PATCH 11/40] Support new samsung Pie and Q light hal and Samsung
+Subject: [PATCH 11/41] Support new samsung Pie and Q light hal and Samsung
  Power HALs
 
 ---
@@ -171,5 +171,5 @@ index 61d53351af5..dcd33366a35 100644
  
  static void nativeSetAutoSuspend(JNIEnv* /* env */, jclass /* clazz */, jboolean enable) {
 -- 
-2.17.1
+2.30.2
 
