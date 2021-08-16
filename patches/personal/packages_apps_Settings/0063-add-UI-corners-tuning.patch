@@ -1,7 +1,7 @@
-From 5ce1152857b3de86c2043b44ed6c149e5831226c Mon Sep 17 00:00:00 2001
+From 2fd45f890e97b8e7015ac347235e8856cc4d9cb8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 18 Jul 2021 21:35:01 +0000
-Subject: [PATCH 63/63] add UI corners tuning
+Subject: [PATCH 63/64] add UI corners tuning
 
 ---
  res/values-ru/custom_strings.xml              | 1 +
@@ -24,7 +24,7 @@ index e9f3e220ee..bed91e9196 100644
      <string name="custom_google_sync_title">Восстановить резервную копию из Google Cloud</string>
      <string name="custom_google_sync_summary">Запустить вручную восстановление резервной копии из Google Cloud\nПримечание: нужны com.google.android.apps.restore и вход в учётную запись</string>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
-index 94fb05551c..7c5e31be4e 100644
+index 0bd1034219..47354061e6 100644
 --- a/res/values/custom_strings.xml
 +++ b/res/values/custom_strings.xml
 @@ -39,6 +39,7 @@

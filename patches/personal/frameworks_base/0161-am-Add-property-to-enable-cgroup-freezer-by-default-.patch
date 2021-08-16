@@ -1,7 +1,7 @@
-From f303c7d9dbac7416e15c267baf605883e10f2b85 Mon Sep 17 00:00:00 2001
+From c27975c13f6238c70554a69180d1fa4d6db3bfbf Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:53:17 -0500
-Subject: [PATCH 161/212] am: Add property to enable cgroup freezer by default
+Subject: [PATCH 161/220] am: Add property to enable cgroup freezer by default
  per device
 
   from

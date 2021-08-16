@@ -1,7 +1,7 @@
-From 6fa369c1dfcabdddfe36e36a5d63d4ad14aa5f65 Mon Sep 17 00:00:00 2001
+From 859110a1e63d97da75625616c7e27fccc18b6ce0 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:54:10 -0500
-Subject: [PATCH 112/212] require unlocking to use Bluetooth quick tile
+Subject: [PATCH 112/220] require unlocking to use Bluetooth quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/8b0665c66ba5d9f23c527f9fed0d159c33083edd

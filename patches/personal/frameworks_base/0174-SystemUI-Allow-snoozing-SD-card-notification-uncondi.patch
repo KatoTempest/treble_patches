@@ -1,7 +1,7 @@
-From 75e5e30062f592d4d20db281f3683e5d2dff495e Mon Sep 17 00:00:00 2001
+From 8e58f3194cf3e66ac90a1defdf5df79785206ac1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 17 Jan 2021 06:43:30 -0500
-Subject: [PATCH 174/212] SystemUI: Allow snoozing SD card notification
+Subject: [PATCH 174/220] SystemUI: Allow snoozing SD card notification
  unconditionally
 
   from

@@ -1,7 +1,7 @@
-From f5dafaf94919f247bff9b3b666e5c378d80a1b90 Mon Sep 17 00:00:00 2001
+From 0c483a510665d4fc979c167a059469fd7abafa42 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:36:59 -0500
-Subject: [PATCH 189/212] change navbar overlay to the OneUI style
+Subject: [PATCH 189/220] change navbar overlay to the OneUI style
 
   from
   https://github.com/crdroidandroid/android_vendor_addons/tree/11.0/themes/navbar/OneUiNavbarOverlay

@@ -1,7 +1,7 @@
-From 32e8290435135397e3b75c3ed8f1ac6c3e04d918 Mon Sep 17 00:00:00 2001
+From e6a402b59d019a6e333181a1354baccb670de1c3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 12:47:48 -0500
-Subject: [PATCH 114/212] Merge changes for launching wifidisplay from system
+Subject: [PATCH 114/220] Merge changes for launching wifidisplay from system
  settings
 
   from

@@ -1,7 +1,7 @@
-From 0afcdaf0948376fdee35fd0280eeca7341e31b8b Mon Sep 17 00:00:00 2001
+From c4d90c01fad1d8edbfcb149ee80f7a83f7af16ac Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 07:13:19 -0500
-Subject: [PATCH 175/212] SystemUI: make screenshot action chip to have correct
+Subject: [PATCH 175/220] SystemUI: make screenshot action chip to have correct
  primary colors in dark mode
 
   from

@@ -1,7 +1,7 @@
-From 9c61cce79ae3c28fa6e882ea1150fde5f7f46722 Mon Sep 17 00:00:00 2001
+From 31dbaef1730e8545c484a354d58abd67da7061b7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 20 Dec 2020 21:50:15 -0500
-Subject: [PATCH 163/212] remove screenshot icon from global actions
+Subject: [PATCH 163/220] remove screenshot icon from global actions
 
 ---
  .../com/android/systemui/globalactions/GlobalActionsDialog.java | 2 --

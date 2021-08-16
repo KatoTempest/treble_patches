@@ -1,7 +1,7 @@
-From debd6180b9685d336b5d02a27d4a0cefa2cf02f2 Mon Sep 17 00:00:00 2001
+From f899d0a0ace695392314f288d73f818ab0cdaf02 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 17 Feb 2021 15:37:37 -0500
-Subject: [PATCH 182/212] NfcTile: Don't create an error when editing tiles
+Subject: [PATCH 182/220] NfcTile: Don't create an error when editing tiles
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/dae817851caa7efa2a8c5e3cdfc7b649f55ee540

@@ -1,7 +1,7 @@
-From 7deb025605384fe4a2bd03c58bb4c0fc302d1085 Mon Sep 17 00:00:00 2001
+From faaacc39b379443d2a67425d21950b922a682d37 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 24 Dec 2020 16:47:04 -0500
-Subject: [PATCH 50/63] CAOS: up to v300l
+Subject: [PATCH 50/64] CAOS: up to v300l
 
 Change-Id: I26f81d379df66e76041a384585472826bc42901b
 ---

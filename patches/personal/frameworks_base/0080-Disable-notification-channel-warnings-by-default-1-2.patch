@@ -1,7 +1,7 @@
-From c3e795a40f32e6be09b134c6ff59e63afa5c17ca Mon Sep 17 00:00:00 2001
+From dcc4c07e6a40683d12a2e17c9e13bf573b50a026 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:48:35 -0500
-Subject: [PATCH 080/212] Disable notification channel warnings by default
+Subject: [PATCH 080/220] Disable notification channel warnings by default
  [1/2]
 
   from

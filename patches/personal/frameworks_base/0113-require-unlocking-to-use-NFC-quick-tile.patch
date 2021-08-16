@@ -1,7 +1,7 @@
-From f7b991594629ecfbbc026db09ad04abae1218688 Mon Sep 17 00:00:00 2001
+From f18dbca603bfa05ce35f7992f009848bcbe68f0c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:56:32 -0500
-Subject: [PATCH 113/212] require unlocking to use NFC quick tile
+Subject: [PATCH 113/220] require unlocking to use NFC quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/3c6071cdbce2a7305bf37fd8f5fdc6369a6ecc5a

@@ -1,7 +1,7 @@
-From 4fb8ba134f5372d16dad039c05f027e0f7fc15e9 Mon Sep 17 00:00:00 2001
+From afd9e666ba39ce8c8c684fe371fa78c7fe2e7e65 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 02:00:55 -0500
-Subject: [PATCH 135/212] base: Lower the internal audio capture restriction
+Subject: [PATCH 135/220] base: Lower the internal audio capture restriction
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/9a2a94b441edc7b274aef7a13f499ba9c6b3ae3f

@@ -1,7 +1,7 @@
-From 2f5f0c5ad0245108537e11ef315972bc113943e8 Mon Sep 17 00:00:00 2001
+From 31d677daea4252fe7acee0c2c28ee6e23bbf87ae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 4 Mar 2020 19:19:01 +0200
-Subject: [PATCH 011/212] hide vertical divider lines in Settings
+Subject: [PATCH 011/220] hide vertical divider lines in Settings
 
 	modified:   core/res/res/values/colors_device_defaults.xml
 	modified:   packages/SettingsLib/res/values/colors.xml

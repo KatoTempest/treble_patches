@@ -1,7 +1,7 @@
-From 2dda2c2eacb01df20f02afcc7c9c0b2aa6102d80 Mon Sep 17 00:00:00 2001
+From e51bdbff584568358af69ae63be37b769fd3e1cb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 03:30:21 -0500
-Subject: [PATCH 081/212] Screenrecord: add blinking stop dot and low quality
+Subject: [PATCH 081/220] Screenrecord: add blinking stop dot and low quality
  options
 
   from

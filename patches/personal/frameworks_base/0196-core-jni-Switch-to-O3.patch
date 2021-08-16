@@ -1,7 +1,7 @@
-From 2be7ace1fd203c33b91d8df97c0cf06476175d1a Mon Sep 17 00:00:00 2001
+From d6ca81acf2fbc0b28cf0d76d5ded416c934424a5 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:14:37 -0400
-Subject: [PATCH 196/212] core: jni: Switch to -O3
+Subject: [PATCH 196/220] core: jni: Switch to -O3
 
   from
   https://github.com/crdroidandroid/android_frameworks_base/commit/ce660e0b50275cca49f5a2e7a56f3b846d56c660

@@ -1,7 +1,7 @@
-From d103e31d8e2266978a9045831f89253c1a5144b0 Mon Sep 17 00:00:00 2001
+From a29a0eba5e759f2421370920fb215b96f7fab623 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 3 Apr 2021 04:37:13 -0400
-Subject: [PATCH 200/212] set 0.5x animation scale as default
+Subject: [PATCH 200/220] set 0.5x animation scale as default
 
 ---
  packages/SettingsProvider/res/values/defaults.xml             | 4 ++--

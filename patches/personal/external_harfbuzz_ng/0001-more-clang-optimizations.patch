@@ -1,0 +1,24 @@
+From 1fffab7db3d46ea1ed3d24f77f8ae80df959da45 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 12 Aug 2021 22:41:31 +0000
+Subject: [PATCH] more clang optimizations
+
+Change-Id: I0d0eaf2ad039d86a16f5e383e533b32b562e11b7
+---
+ Android.bp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Android.bp b/Android.bp
+index 9f29062e..135d6d40 100644
+--- a/Android.bp
++++ b/Android.bp
+@@ -141,5 +141,6 @@ cc_library {
+         "-Werror",
+         "-Wno-unused-parameter",
+         "-Wno-missing-field-initializers",
++        "-O3", "-g0",
+     ],
+ }
+-- 
+2.30.2
+

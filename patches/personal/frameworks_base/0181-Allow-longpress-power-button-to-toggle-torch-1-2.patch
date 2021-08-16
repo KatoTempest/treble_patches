@@ -1,7 +1,7 @@
-From 667063c9fc61af692f366d305d4f90d960d9c75b Mon Sep 17 00:00:00 2001
+From 887ed927984351a49d357872d70945d7f5e7c07f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 08:19:05 -0500
-Subject: [PATCH 181/212] Allow longpress power button to toggle torch [1/2]
+Subject: [PATCH 181/220] Allow longpress power button to toggle torch [1/2]
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/3cec8cfea49ca83839cee032bf04ca5ccad52322

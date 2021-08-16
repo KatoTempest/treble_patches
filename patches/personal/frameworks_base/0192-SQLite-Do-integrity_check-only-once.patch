@@ -1,7 +1,7 @@
-From 13d502723853104bb15ada442a58f1311502d787 Mon Sep 17 00:00:00 2001
+From d91d4923543ac21c3133726378ac2b0bfbc4cf5d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:33:54 -0500
-Subject: [PATCH 192/212] SQLite: Do integrity_check only once
+Subject: [PATCH 192/220] SQLite: Do integrity_check only once
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/36d0958e4ca38caf2553971087259f669c841b64

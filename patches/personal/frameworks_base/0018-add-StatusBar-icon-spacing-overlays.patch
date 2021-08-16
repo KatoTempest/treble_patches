@@ -1,7 +1,7 @@
-From 36ec47319d1fc2d852eb458130e1362dd1f3e87b Mon Sep 17 00:00:00 2001
+From cfaed4aa081c0c9f89300769b92f2f84ff2126c7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 02:59:51 +0300
-Subject: [PATCH 018/212] add StatusBar icon spacing overlays
+Subject: [PATCH 018/220] add StatusBar icon spacing overlays
 
 	modified:   packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayManager.java
 	modified:   packages/overlays/Android.mk

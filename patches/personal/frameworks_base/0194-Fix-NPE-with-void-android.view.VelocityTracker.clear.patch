@@ -1,7 +1,7 @@
-From 762dc78a1a835f9411330f0457d45dc5921c5c5d Mon Sep 17 00:00:00 2001
+From 8d112d2f309f583e25f45e344b80690fa0747a25 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:13:42 -0400
-Subject: [PATCH 194/212] Fix NPE with void
+Subject: [PATCH 194/220] Fix NPE with void
  android.view.VelocityTracker.clear()
 
   from

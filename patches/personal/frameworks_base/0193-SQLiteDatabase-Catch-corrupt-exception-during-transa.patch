@@ -1,7 +1,7 @@
-From 5ad7b5bfce1cb5c7ffc33ff6972db1211573b1ca Mon Sep 17 00:00:00 2001
+From c1bed1808bbaebee144cd3a39c6d0862db15505f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:35:57 -0500
-Subject: [PATCH 193/212] SQLiteDatabase: Catch corrupt exception during
+Subject: [PATCH 193/220] SQLiteDatabase: Catch corrupt exception during
  transaction
 
   from

@@ -1,7 +1,7 @@
-From 59bf4a2fffc4811342ce7ccf2c27e9098437e575 Mon Sep 17 00:00:00 2001
+From e24f6346d5b29fb65d06ea4f8df20bca11957f31 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 13 Nov 2020 13:16:50 -0500
-Subject: [PATCH 055/212] Screenshot: Append app name to filename
+Subject: [PATCH 055/220] Screenshot: Append app name to filename
 
   from
   https://github.com/LineageOS/android_frameworks_base/commit/299dc3ae8b378c52fd49adb5fe26219a0e7e8c1b

@@ -1,7 +1,7 @@
-From bc9e980ed920b43fd1ef502bff09ae84282f95d3 Mon Sep 17 00:00:00 2001
+From 914f41a431884ea45fb477e5260b32feecb11a5d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 6 Mar 2021 14:59:48 -0500
-Subject: [PATCH 185/212] add 5x3 QS panel overlay
+Subject: [PATCH 185/220] add 5x3 QS panel overlay
 
 ---
  packages/overlays/Android.mk                  |  1 +

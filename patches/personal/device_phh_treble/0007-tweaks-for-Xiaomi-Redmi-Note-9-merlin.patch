@@ -1,7 +1,7 @@
-From 5c2c62d1c7efc10f0b71955e4d634b01edb16f2b Mon Sep 17 00:00:00 2001
+From f9243607d3e063a2a4b21cdc81455de691b6d13f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 17 Oct 2020 06:58:04 -0400
-Subject: [PATCH 07/37] tweaks for Xiaomi Redmi Note 9 'merlin'
+Subject: [PATCH 07/38] tweaks for Xiaomi Redmi Note 9 'merlin'
 
   audiojack, brightness, fp touches
   (thanks Akitake for reports)
@@ -10,10 +10,10 @@ Subject: [PATCH 07/37] tweaks for Xiaomi Redmi Note 9 'merlin'
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 2a97ec2..265515b 100644
+index 81972ba..e6836a4 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
-@@ -367,10 +367,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
+@@ -374,10 +374,15 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \
      -e xiaomi/nitrogen -e xiaomi/whyred -e xiaomi/platina \
      -e xiaomi/ysl -e nubia/nx60 -e nubia/nx61 -e xiaomi/tulip \
      -e xiaomi/lavender -e xiaomi/olive -e xiaomi/olivelite -e xiaomi/pine \

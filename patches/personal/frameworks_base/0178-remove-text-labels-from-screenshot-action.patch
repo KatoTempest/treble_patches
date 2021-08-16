@@ -1,7 +1,7 @@
-From a63f5b3028266d7d83b7d063a56ea35fb155a022 Mon Sep 17 00:00:00 2001
+From ad8a395ddd891e33a49e3fa2f48e5a72e7bfd698 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 9 Feb 2021 05:02:31 -0500
-Subject: [PATCH 178/212] remove text labels from screenshot action
+Subject: [PATCH 178/220] remove text labels from screenshot action
 
 ---
  .../src/com/android/systemui/screenshot/GlobalScreenshot.java | 4 ----

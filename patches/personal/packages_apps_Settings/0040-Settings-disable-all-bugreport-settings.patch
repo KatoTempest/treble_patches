@@ -1,7 +1,7 @@
-From 199c4d55919596bf0838e5e082f6aab1aa8277d7 Mon Sep 17 00:00:00 2001
+From 46ebbdbe6d0c1149c6b33fffb12e85f91d5d76c6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:53:03 -0500
-Subject: [PATCH 40/63] Settings: disable all bugreport settings
+Subject: [PATCH 40/64] Settings: disable all bugreport settings
 
   from
   https://github.com/omnirom/android_packages_apps_Settings/commit/2e59f165ca0f21eede3e7963cdb888173fe7b26a

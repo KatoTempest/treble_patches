@@ -1,7 +1,7 @@
-From 14143f673d83891984c74b2715a748fadbb75782 Mon Sep 17 00:00:00 2001
+From 691ce4d1b0b19c31df2a73d584476d298ab5da83 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 15 Apr 2021 08:58:29 -0400
-Subject: [PATCH 203/212] have NfcTile get an NfcAdapter directly
+Subject: [PATCH 203/220] have NfcTile get an NfcAdapter directly
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/89732e20463f0b5996d948b58cf4e43a9aabcf72

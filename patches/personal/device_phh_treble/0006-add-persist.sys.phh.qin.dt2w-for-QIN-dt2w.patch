@@ -1,7 +1,7 @@
-From c880c2eeb5f6fffde9ec5484e04fe4b7a1288500 Mon Sep 17 00:00:00 2001
+From 85c7295648a7ea27bbd16e972fb67ae9ffc9e409 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 6 Oct 2020 14:26:50 -0400
-Subject: [PATCH 06/37] add persist.sys.phh.qin.dt2w for QIN dt2w
+Subject: [PATCH 06/38] add persist.sys.phh.qin.dt2w for QIN dt2w
 
 ---
  phh-prop-handler.sh | 9 +++++++++

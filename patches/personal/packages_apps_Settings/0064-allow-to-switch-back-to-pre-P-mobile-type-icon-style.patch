@@ -1,0 +1,58 @@
+From 97e97e58c81fbee7161ed0a9095820b75301a6dd Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 15 Aug 2021 09:17:58 +0000
+Subject: [PATCH 64/64] allow to switch back to pre P mobile type icon style
+ [2/2]
+
+  from
+  https://github.com/StagOS/android_packages_apps_Horns/commit/5f936ecc37503b1d190ed8beec55adcee986fdfd
+---
+ res/values-ru/custom_strings.xml | 3 +++
+ res/values/custom_strings.xml    | 3 +++
+ res/xml/display_settings.xml     | 6 ++++++
+ 3 files changed, 12 insertions(+)
+
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index bed91e9196..abb404b597 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -90,4 +90,7 @@
+     <string name="double_tap_sleep_gesture_title">Двойное касание статусбара для перехода в сон</string>
+     <!--Double Tap to Sleep Lockscreen-->
+     <string name="double_tap_sleep_lockscreen_title">Двойное касание экрана блокировки для перехода в сон</string>
++    <!-- P style network bar -->
++    <string name="use_old_mobiletype_title">Старый стиль иконок мобильной сети</string>
++    <string name="use_old_mobiletype_summary">Исользовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index 47354061e6..cf2749a758 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -88,4 +88,7 @@
+     <string name="double_tap_sleep_gesture_title">Double tap to sleep on status bar</string>
+     <!--Double Tap to Sleep Lockscreen-->
+     <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
++    <!-- P style network bar -->
++    <string name="use_old_mobiletype_title">Old mobiletype</string>
++    <string name="use_old_mobiletype_summary">Use pre-P mobiletype icons for signal\n(Reboot required)</string>
+ </resources>
+diff --git a/res/xml/display_settings.xml b/res/xml/display_settings.xml
+index e17b4bc9be..5bff3f217c 100644
+--- a/res/xml/display_settings.xml
++++ b/res/xml/display_settings.xml
+@@ -169,6 +169,12 @@
+         android:title="@string/display_vr_pref_title"
+         android:fragment="com.android.settings.display.VrDisplayPreferencePicker" />
+ 
++    <com.caos.settings.preference.SystemSettingSwitchPreference
++        android:key="use_old_mobiletype"
++        android:title="@string/use_old_mobiletype_title"
++        android:summary="@string/use_old_mobiletype_summary"
++        android:defaultValue="false" />
++
+     <com.caos.settings.preference.SystemSettingSwitchPreference
+         android:key="notification_headers"
+         android:title="@string/notification_headers_title"
+-- 
+2.30.2
+

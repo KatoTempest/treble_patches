@@ -1,7 +1,7 @@
-From 87573bc97925cdb9d9953cdc5498c787ed08d4c3 Mon Sep 17 00:00:00 2001
+From d7055da1e0a22f2da9e5ffcbbfab2bc548fa2909 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 14:31:22 -0500
-Subject: [PATCH 162/212] base: Introduce DataSwitchTile
+Subject: [PATCH 162/220] base: Introduce DataSwitchTile
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/615a975534dbc2be52382bca8af0ed93fa2199d7

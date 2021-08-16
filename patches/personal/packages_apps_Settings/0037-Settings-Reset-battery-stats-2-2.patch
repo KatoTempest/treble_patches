@@ -1,7 +1,7 @@
-From c615fef7904bca164184757d42e74f768f4496cd Mon Sep 17 00:00:00 2001
+From c6be1a0dfc13d7b5e7742836c360a678718f9d23 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 37/63] Settings: Reset battery stats [2/2]
+Subject: [PATCH 37/64] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918

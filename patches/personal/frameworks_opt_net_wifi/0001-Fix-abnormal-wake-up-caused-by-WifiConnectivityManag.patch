@@ -1,7 +1,7 @@
-From 356dc410f73826503758a5a48d5fb8cc165d8f39 Mon Sep 17 00:00:00 2001
+From a6aeeae5e4be18ebf4ece23d11ea61b2ee148287 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:27:31 -0400
-Subject: [PATCH] Fix abnormal wake up caused by WifiConnectivityManager
+Subject: [PATCH 1/2] Fix abnormal wake up caused by WifiConnectivityManager
 
   from
   https://github.com/crdroidandroid/android_frameworks_opt_net_wifi/commit/1590c968d37b78b8dfcd3cf21a80f380b7613166
@@ -48,5 +48,5 @@ index 77af65400..12c64b542 100644
          mOpenNetworkNotifier.clearPendingNotification(true /* resetRepeatDelay */);
          mLastConnectionAttemptBssid = null;
 -- 
-2.17.1
+2.30.2
 

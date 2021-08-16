@@ -1,7 +1,7 @@
-From 053716fabd8b181d121e5304c29e6dc3fa1567a4 Mon Sep 17 00:00:00 2001
+From d2f7fc7d539b18c75b6857be4e1076ebae511e33 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:15:52 -0500
-Subject: [PATCH 168/212] bugfix for noteResetVideoLocked
+Subject: [PATCH 168/220] bugfix for noteResetVideoLocked
 
   from
   https://gitlab.com/CalyxOS/platform_frameworks_base/-/commit/0a8ed2cac1fb15b8c99d2cf9b710f97e1c068d78

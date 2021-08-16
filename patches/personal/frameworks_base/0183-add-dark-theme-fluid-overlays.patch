@@ -1,7 +1,7 @@
-From 8433f121e3386fcf6bf8f9035606bb2508101ff1 Mon Sep 17 00:00:00 2001
+From 39b285cf8f0e8b9972a104bfe6ec89b0386aca72 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 3 Mar 2021 07:11:36 -0500
-Subject: [PATCH 183/212] add dark theme fluid overlays
+Subject: [PATCH 183/220] add dark theme fluid overlays
 
 ---
  packages/overlays/Android.mk                  |  4 ++

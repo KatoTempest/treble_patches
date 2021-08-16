@@ -1,7 +1,7 @@
-From 6390df36543af824255d763410853f1793db9bc9 Mon Sep 17 00:00:00 2001
+From 6475e56909f6355d88a495bb9c5568cd04be88b6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Nov 2020 03:13:16 -0500
-Subject: [PATCH 11/37] add enhanced root solution
+Subject: [PATCH 11/38] add enhanced root solution
 
   last changes:
   23.12.2020, bugfixes small issues (like race condition and perms)
@@ -16,10 +16,10 @@ Subject: [PATCH 11/37] add enhanced root solution
  create mode 100644 phh.superuser.apk
 
 diff --git a/base.mk b/base.mk
-index 43f3707..f56c8d1 100644
+index 52a5b85..5752a36 100644
 --- a/base.mk
 +++ b/base.mk
-@@ -61,6 +61,9 @@ PRODUCT_COPY_FILES += \
+@@ -67,6 +67,9 @@ PRODUCT_COPY_FILES += \
  	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
  	device/phh/treble/phh-on-data.sh:system/bin/phh-on-data.sh \
  	device/phh/treble/phh-prop-handler.sh:system/bin/phh-prop-handler.sh \

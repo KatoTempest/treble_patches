@@ -1,7 +1,7 @@
-From ad81701a2defc77cbbb15bd722eca212ff06d12f Mon Sep 17 00:00:00 2001
+From d62bfc46ceb71f9a2520b9f75cf697cacbc48c87 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 7 Mar 2021 02:18:19 -0500
-Subject: [PATCH 187/212] base: double tap to sleep on statusbar [1/2]
+Subject: [PATCH 187/220] base: double tap to sleep on statusbar [1/2]
 
   from
   https://github.com/ArrowOS/android_frameworks_base/commit/4e5beb5e66761d232b03250c16dc300ec8618940

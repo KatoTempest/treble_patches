@@ -1,7 +1,7 @@
-From 138ce5ab11c2483cc72c66eef371573383941853 Mon Sep 17 00:00:00 2001
+From 4946651796b4fc03e1ae526967c976b59f8c2afb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 08:23:44 -0400
-Subject: [PATCH 197/212] speed things up v5
+Subject: [PATCH 197/220] speed things up v5
 
   based on
   https://github.com/BootleggersROM/frameworks_base/commit/507f7de1f4cb6dca77ab8ea7d076fbadd637b5fe

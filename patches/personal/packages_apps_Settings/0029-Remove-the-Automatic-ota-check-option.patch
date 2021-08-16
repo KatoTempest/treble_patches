@@ -1,7 +1,7 @@
-From 6bc39408e0652bdacb6e467016f424689efb77ef Mon Sep 17 00:00:00 2001
+From 99468a54d0ee7ba5f7768863d5fc2c1a70940e81 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:36:24 -0500
-Subject: [PATCH 29/63] Remove the Automatic ota check option
+Subject: [PATCH 29/64] Remove the Automatic ota check option
 
   from
   https://github.com/ezio84/abc_packages_apps_Settings/commit/bd7b25acb0421bacdaec2df8c4de3ad29ff4c278

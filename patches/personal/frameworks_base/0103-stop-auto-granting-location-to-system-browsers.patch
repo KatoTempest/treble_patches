@@ -1,7 +1,7 @@
-From 8958a22e9239b414572b52911e6080ee7d153960 Mon Sep 17 00:00:00 2001
+From 68a300396a16797ffd9dc751be0d28bb2970d419 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:04:00 -0500
-Subject: [PATCH 103/212] stop auto-granting location to system browsers
+Subject: [PATCH 103/220] stop auto-granting location to system browsers
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/7e3e25fe2da2dc2851f8add0a505fa56ef8fb60d

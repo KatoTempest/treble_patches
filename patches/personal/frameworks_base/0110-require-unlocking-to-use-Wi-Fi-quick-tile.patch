@@ -1,7 +1,7 @@
-From 42644d7c6341d24ec39875b243fe618f8134a8fd Mon Sep 17 00:00:00 2001
+From 4092b3bc60c06c51362e55e9ca0a919e71b14849 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:44:59 -0500
-Subject: [PATCH 110/212] require unlocking to use Wi-Fi quick tile
+Subject: [PATCH 110/220] require unlocking to use Wi-Fi quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/f32d6df0e53ee4c9cb74f6efe8c1d4b17661c249

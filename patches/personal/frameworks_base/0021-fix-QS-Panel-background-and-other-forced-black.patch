@@ -1,7 +1,7 @@
-From d744b0b748b553ee924bf358f480363dc303fa88 Mon Sep 17 00:00:00 2001
+From 3fdd8c2209974b9e000863eb717131df2f53c67b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 19:40:56 +0300
-Subject: [PATCH 021/212] fix QS Panel background (and other forced black)
+Subject: [PATCH 021/220] fix QS Panel background (and other forced black)
 
 ---
  core/res/res/values-night/colors.xml           |  2 +-

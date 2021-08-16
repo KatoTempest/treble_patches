@@ -1,7 +1,7 @@
-From 226800885c866fcd8e483890170cfa2272c11f74 Mon Sep 17 00:00:00 2001
+From 11788e3d2dc377d146842658b157d3d318767295 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 7 Mar 2021 02:29:49 -0500
-Subject: [PATCH 188/212] base: Double tap to sleep on lockscreen [1/2]
+Subject: [PATCH 188/220] base: Double tap to sleep on lockscreen [1/2]
 
   based on
   https://github.com/ArrowOS/android_frameworks_base/commit/a2fa476740d52474d3d656ec614d7f731373aeae

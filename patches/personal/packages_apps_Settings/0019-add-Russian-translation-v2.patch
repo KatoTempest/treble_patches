@@ -1,7 +1,7 @@
-From 3d8805243d622f0d5eca4b1cca4a8a6be916a79d Mon Sep 17 00:00:00 2001
+From b2fdd33e6e5ec1daf62a25923c73373330d8f120 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 24 Apr 2020 09:53:34 +0300
-Subject: [PATCH 19/63] add Russian translation v2
+Subject: [PATCH 19/64] add Russian translation v2
 
 Change-Id: I84a908eee8dfb42120ea168c045d3b811697018f
 ---

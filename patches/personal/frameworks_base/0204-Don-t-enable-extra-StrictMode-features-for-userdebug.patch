@@ -1,7 +1,7 @@
-From f3e44733d95bd2e3ed12e432607602e4e6fd59a9 Mon Sep 17 00:00:00 2001
+From d16f05a41dbe5e9f6aa1e7f48dcf53994bfa48c4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 19 Apr 2021 07:39:04 -0400
-Subject: [PATCH 204/212] Don't enable extra StrictMode features for userdebug
+Subject: [PATCH 204/220] Don't enable extra StrictMode features for userdebug
  builds
 
   from

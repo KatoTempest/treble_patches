@@ -1,7 +1,7 @@
-From 81ef47bde8bc23e7bbe2fab2137c3b07648862c6 Mon Sep 17 00:00:00 2001
+From 709dd30822d5e81ecdb9c8933e89c63a0f6f0d4e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:49:34 -0500
-Subject: [PATCH 148/212] Support UnifiedNlp (microG)
+Subject: [PATCH 148/220] Support UnifiedNlp (microG)
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/6ce5ffc2279d0fa5a615e75711b716361cdad644
