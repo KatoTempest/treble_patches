@@ -1,7 +1,7 @@
-From ed7b757b20db65c677823c2d0b8440ca4c7b56e6 Mon Sep 17 00:00:00 2001
+From 707a27552d7c410ae12d243e2b18250e3f3b9972 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Mar 2021 04:26:46 -0400
-Subject: [PATCH 145/190] Extend reboot tile to add power off
+Subject: [PATCH 145/195] Extend reboot tile to add power off
 
   from
   https://github.com/crdroidandroid/android_frameworks_base/commit/8ddd6d18e9c69831d9aac52f67b2231c5e11cb16

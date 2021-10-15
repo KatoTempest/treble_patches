@@ -1,7 +1,7 @@
-From ffafe099b14b17da569f9e2a8bb2d0ce1b31b2b6 Mon Sep 17 00:00:00 2001
+From ad02a93c90c6ef052c5d35d783f7c8ee873426da Mon Sep 17 00:00:00 2001
 From: Andy CrossGate Yan <GeForce8800Ultra@gmail.com>
 Date: Sat, 2 Nov 2019 06:41:03 +0000
-Subject: [PATCH 175/190] Keyguard: Hide padlock
+Subject: [PATCH 175/195] Keyguard: Hide padlock
 
 It's just fking ugly.
 Please Google, stop your UI designers.

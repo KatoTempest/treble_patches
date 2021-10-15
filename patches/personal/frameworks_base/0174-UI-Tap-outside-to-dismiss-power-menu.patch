@@ -1,7 +1,7 @@
-From a63d930313766d9c4495c4a4d851f3641aed1c64 Mon Sep 17 00:00:00 2001
+From a8852464da47fd5d14e62f1df22985e9d576683e Mon Sep 17 00:00:00 2001
 From: Andy CrossGate Yan <GeForce8800Ultra@gmail.com>
 Date: Sat, 15 May 2021 10:15:12 +0000
-Subject: [PATCH 174/190] UI: Tap outside to dismiss power menu
+Subject: [PATCH 174/195] UI: Tap outside to dismiss power menu
 
 Change-Id: Id713b84a2edb3facc184394963f98291abe6ae2c
 ---

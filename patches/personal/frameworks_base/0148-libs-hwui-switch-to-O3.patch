@@ -1,7 +1,7 @@
-From 36c6cc3930e3c14884c9bcd56f49ca6200fe0688 Mon Sep 17 00:00:00 2001
+From f9f5516f3a7f21ac28222fd32fe361c8a1212998 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:15:18 -0400
-Subject: [PATCH 148/190] libs: hwui: switch to -O3
+Subject: [PATCH 148/195] libs: hwui: switch to -O3
 
 ---
  libs/hwui/Android.bp | 3 ++-

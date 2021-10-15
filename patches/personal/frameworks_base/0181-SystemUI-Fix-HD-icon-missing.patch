@@ -1,7 +1,7 @@
-From 2f54cfe04fe3f1373619435afaa1ae8d7833b780 Mon Sep 17 00:00:00 2001
+From 6b4e145008b48b7da840b30660f97baa3b11bf62 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Wed, 17 Oct 2018 16:46:28 +0800
-Subject: [PATCH 181/190] SystemUI: Fix HD icon missing
+Subject: [PATCH 181/195] SystemUI: Fix HD icon missing
 
 When SIM is changed to OOS, IMS Connection is closed and
 all the active callbacks are removed, so SystemUI can not

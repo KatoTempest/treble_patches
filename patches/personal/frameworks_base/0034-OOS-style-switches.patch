@@ -1,7 +1,7 @@
-From 929a452d1202bfd229d836d30ca6c6f0c686ecb4 Mon Sep 17 00:00:00 2001
+From 9e21b4bd948b9399e87e4d79bec1c5f91fd7779e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 23 May 2020 23:45:05 +0300
-Subject: [PATCH 034/190] OOS style switches
+Subject: [PATCH 034/195] OOS style switches
 
   * from
   https://github.com/Havoc-OS/android_frameworks_base/commit/19077416ce4ca8f06efff016a9d134ed05b7a851

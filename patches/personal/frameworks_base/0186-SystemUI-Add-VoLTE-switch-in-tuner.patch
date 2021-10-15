@@ -1,7 +1,7 @@
-From 5ee68cc7231fb88bd9d91aa7b37992782ee33ad3 Mon Sep 17 00:00:00 2001
+From fa20a4ba82c53cd8411d511a4c577e1173d5e8f8 Mon Sep 17 00:00:00 2001
 From: DennySPB <dennyspb@gmail.com>
 Date: Tue, 1 Oct 2019 12:15:46 +0300
-Subject: [PATCH 186/190] SystemUI: Add VoLTE switch in tuner
+Subject: [PATCH 186/195] SystemUI: Add VoLTE switch in tuner
 
   with some changes
 

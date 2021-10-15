@@ -1,7 +1,7 @@
-From e80d7a1eb82ccdfc524e8891d7e200c03d0c2021 Mon Sep 17 00:00:00 2001
+From 43728a3be0de5ecab46d747bf39941394ebb9997 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Sep 2021 20:19:03 +0000
-Subject: [PATCH 189/190] SystemUI: Add VoWiFi switch in tuner
+Subject: [PATCH 189/195] SystemUI: Add VoWiFi switch in tuner
 
   based on
   https://github.com/ArrowOS/android_frameworks_base/commit/2c06f5b664d1599b0bc6a1fe392f2041523593dc

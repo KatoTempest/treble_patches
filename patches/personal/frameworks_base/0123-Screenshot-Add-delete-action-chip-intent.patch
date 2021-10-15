@@ -1,7 +1,7 @@
-From 0c7dbdaa9f987532a6db067fcf3b96a4c8d094fe Mon Sep 17 00:00:00 2001
+From f4ee6d1b10b3d428b457dedd3fd72ef13a4d9d01 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 07:16:10 -0500
-Subject: [PATCH 123/190] Screenshot: Add delete action chip intent
+Subject: [PATCH 123/195] Screenshot: Add delete action chip intent
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/765636b2114a11517aed3ffa99e091436f111c28
@@ -11,10 +11,10 @@ Subject: [PATCH 123/190] Screenshot: Add delete action chip intent
  2 files changed, 14 insertions(+)
 
 diff --git a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
-index f18d431f558..9885064fc52 100644
+index 85268a32e72..776972e46b0 100644
 --- a/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
 +++ b/packages/SystemUI/src/com/android/systemui/screenshot/GlobalScreenshot.java
-@@ -1077,6 +1077,18 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
+@@ -1079,6 +1079,18 @@ public class GlobalScreenshot implements ViewTreeObserver.OnComputeInternalInset
          mActionsView.addView(editChip);
          chips.add(editChip);
  

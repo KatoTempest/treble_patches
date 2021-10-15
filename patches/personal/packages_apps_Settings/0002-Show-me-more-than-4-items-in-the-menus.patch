@@ -1,7 +1,7 @@
-From 561c3fa7cc0e6a5d5235c4a615227934819ecc76 Mon Sep 17 00:00:00 2001
+From 85cec147068f34e0ad9d49b1932dabf90d7559e1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 23 Dec 2019 12:51:06 +0200
-Subject: [PATCH 02/48] Show me more than 4 items in the menus!
+Subject: [PATCH 02/49] Show me more than 4 items in the menus!
 
   * from
   https://github.com/Havoc-OS/android_packages_apps_Settings/commit/6641ccb92ad01c7dbaaa31c45ca9aedc0e73be28

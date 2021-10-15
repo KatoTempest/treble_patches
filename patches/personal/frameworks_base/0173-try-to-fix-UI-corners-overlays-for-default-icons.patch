@@ -1,7 +1,7 @@
-From 1b2308fbf1bd8d221f6029acec399f6e7b93537d Mon Sep 17 00:00:00 2001
+From acda0ca9d9357981b6ea5a04084bb3d6f682936a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 10 Sep 2021 20:55:16 +0000
-Subject: [PATCH 173/190] try to fix UI corners overlays for default icons
+Subject: [PATCH 173/195] try to fix UI corners overlays for default icons
 
 Change-Id: I744da0e1b3a48f51718e3f667a5c2f23b1d1b916
 ---

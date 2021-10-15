@@ -1,7 +1,7 @@
-From fa8bd333ff56410a018c000d9602fef377a6b3ed Mon Sep 17 00:00:00 2001
+From 1a5b92f2ed7760cd41447ab4ecf76ad9d9c2b3bd Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:33:50 -0500
-Subject: [PATCH 067/190] SettingLib: Add deep sleep info to uptime preference
+Subject: [PATCH 067/195] SettingLib: Add deep sleep info to uptime preference
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/d8fa20ef971712a4222c045baf0e91208e7320fe

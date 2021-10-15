@@ -1,7 +1,7 @@
-From b2367a2f921d69a91879dde22a3919ef441e42d7 Mon Sep 17 00:00:00 2001
+From 2486495f9a6a3d60b87c3cd3f19cc4438536cd5b Mon Sep 17 00:00:00 2001
 From: Daniel Norman <danielnorman@google.com>
 Date: Fri, 1 Nov 2019 15:59:48 -0700
-Subject: [PATCH 184/190] ImsManager.Connector became FeatureConnector.
+Subject: [PATCH 184/195] ImsManager.Connector became FeatureConnector.
 
 See https://r.android.com/1132314
 

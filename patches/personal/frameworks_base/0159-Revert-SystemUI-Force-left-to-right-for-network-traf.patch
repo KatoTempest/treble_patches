@@ -1,7 +1,7 @@
-From d4cdf253727f9c05fd88489e98e3274d5b74682c Mon Sep 17 00:00:00 2001
+From aa2cc06e844c2b1fa338e2663e4d4d8609640a1d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 17:18:50 -0400
-Subject: [PATCH 159/190] Revert "SystemUI: Force left-to-right for network
+Subject: [PATCH 159/195] Revert "SystemUI: Force left-to-right for network
  traffic monitor holder"
 
 This reverts commit 029edb38dc90614d263da266ef6f8a3930038de1.

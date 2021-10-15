@@ -1,7 +1,7 @@
-From 67ee65a4f7045b944f60f1e032e235290cd54d71 Mon Sep 17 00:00:00 2001
+From 444a3363dd5a7c3f51aa08a334bfddb47efdb7e9 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Mon, 18 May 2020 19:25:54 +0800
-Subject: [PATCH 188/190] SystemUI: support VoWIFI icons
+Subject: [PATCH 188/195] SystemUI: support VoWIFI icons
 
 Show VoWIFI icon when VoWIFI is available
 Show VoWIFI call icon when voice call is over WIFI

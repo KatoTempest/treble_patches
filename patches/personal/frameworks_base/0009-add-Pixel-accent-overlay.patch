@@ -1,7 +1,7 @@
-From a276cfe0fd99275998ac3cec4dcbce285ee43c2c Mon Sep 17 00:00:00 2001
+From b9e8e3717875819940a5df5e125f07a66c14dce9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 19:20:17 +0200
-Subject: [PATCH 009/190] add Pixel accent overlay
+Subject: [PATCH 009/195] add Pixel accent overlay
 
 	new file:   packages/overlays/AccentColorPixelOverlay/Android.mk
 	new file:   packages/overlays/AccentColorPixelOverlay/AndroidManifest.xml

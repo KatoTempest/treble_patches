@@ -1,7 +1,7 @@
-From d1a0b98dd6172c8844719883e0b8905cc79b8c22 Mon Sep 17 00:00:00 2001
+From 1fb43b6048b4cebe83e2b3deb2c61804308c81b7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 18 Dec 2019 14:52:32 +0200
-Subject: [PATCH 002/190] enable SystemNavigationKeys
+Subject: [PATCH 002/195] enable SystemNavigationKeys
 
 	modified:   core/res/res/values/config.xml
 ---

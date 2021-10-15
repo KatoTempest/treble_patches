@@ -1,7 +1,7 @@
-From 4eece100e205db514229bcd22ea1234a6d5b21d5 Mon Sep 17 00:00:00 2001
+From b9b771f089d1ac7f73323a161fc4306fc53cbc23 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 18:53:10 +0200
-Subject: [PATCH 162/190] move network indicator
+Subject: [PATCH 162/195] move network indicator
 
 	modified:   packages/SystemUI/res/layout/status_bar.xml
 	modified:   packages/SystemUI/res/layout/system_icons.xml

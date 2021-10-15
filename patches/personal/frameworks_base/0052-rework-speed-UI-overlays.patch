@@ -1,7 +1,7 @@
-From 2b10119420d709e290d548717510e2c9ca2787f2 Mon Sep 17 00:00:00 2001
+From 60e507d36dae1225d3878405390286f2e8fe1f8e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Sep 2020 09:20:02 -0400
-Subject: [PATCH 052/190] rework speed UI overlays
+Subject: [PATCH 052/195] rework speed UI overlays
 
 Change-Id: Iff6e8540d68647d7f0478b2e63fad39423190b63
 ---

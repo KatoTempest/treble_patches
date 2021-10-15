@@ -1,7 +1,7 @@
-From 8440291d36782a11654bd5e3c11f6972a24cd825 Mon Sep 17 00:00:00 2001
+From 34b5993853a9afa8c1e7211d14e0f0726c1dbde4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 18 Jul 2021 15:23:22 +0000
-Subject: [PATCH 167/190] add UI corners overlays v2
+Subject: [PATCH 167/195] add UI corners overlays v2
 
 Change-Id: Ied3fe68bd0c3318d311d64706a81d071f2839d21
 ---

@@ -1,7 +1,7 @@
-From c48b2ecb55262a6085b42e622352f5942ceb2b93 Mon Sep 17 00:00:00 2001
+From 223e192691f487fe228ae1d48326700e7067b0c3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:03:26 -0400
-Subject: [PATCH 157/190] Keyguard: Actually kill the Fancy Colon
+Subject: [PATCH 157/195] Keyguard: Actually kill the Fancy Colon
 
   from
   https://github.com/crdroidandroid/android_frameworks_base/commit/6beb89e8de4e7f8cde9cf08cb1be1e950ef0fe9b

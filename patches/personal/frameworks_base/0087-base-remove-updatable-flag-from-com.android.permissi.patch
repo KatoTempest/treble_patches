@@ -1,7 +1,7 @@
-From 19b24918445b5edcf17f12dd8051a3ec67937a72 Mon Sep 17 00:00:00 2001
+From a976da379566bdbb35a4175051bea430566ea5f9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 01:46:11 -0500
-Subject: [PATCH 087/190] base: remove updatable flag from
+Subject: [PATCH 087/195] base: remove updatable flag from
  com.android.permission
 
   from

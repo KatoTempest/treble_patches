@@ -1,7 +1,7 @@
-From a339cb4b80d8027110ff03aaf022559256271335 Mon Sep 17 00:00:00 2001
+From 376bfb3277cf797232e99a83af40b89fd3bc8d0f Mon Sep 17 00:00:00 2001
 From: Qimeng Pan <qimengp@codeaurora.org>
 Date: Fri, 14 Dec 2018 13:42:28 +0800
-Subject: [PATCH 182/190] SystemUI: Query IMS state after CapabilityCallback is
+Subject: [PATCH 182/195] SystemUI: Query IMS state after CapabilityCallback is
  regisered
 
 Query IMS state after CapabilityCallback is regisered

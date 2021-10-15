@@ -1,7 +1,7 @@
-From 0cccc6f3a76e6c62b57086eee343d1babfb9c18c Mon Sep 17 00:00:00 2001
+From c980d6be8a9233a22522b16038ab2ed1846b45a3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Sep 2021 18:46:55 +0000
-Subject: [PATCH 40/40] add open source replacement for Qualcomm aptX libraries
+Subject: [PATCH 40/42] add open source replacement for Qualcomm aptX libraries
 
   from https://github.com/notmyst33d/libaptX
 ---

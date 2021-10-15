@@ -1,7 +1,7 @@
-From 87a045c13e0bbe87b04da16833d99ac43bb81e6c Mon Sep 17 00:00:00 2001
+From 38d9efbb0e911c250990a31d923303a3cc87bee2 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Thu, 25 Apr 2019 14:09:40 +0800
-Subject: [PATCH 183/190] SystemUI: Enhancement for volte icon
+Subject: [PATCH 183/195] SystemUI: Enhancement for volte icon
 
 SystemUI uses callback to get ims capabilities and then check whether
 ims is registered. If low layer updates ims registered later than

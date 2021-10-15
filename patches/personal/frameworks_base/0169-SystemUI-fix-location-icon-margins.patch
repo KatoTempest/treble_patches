@@ -1,7 +1,7 @@
-From 6090de4230864f01a84d680af7abae4c215d7763 Mon Sep 17 00:00:00 2001
+From da16355675044591b5c7a0efd4f0b5cd29684817 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Aug 2021 08:29:56 +0000
-Subject: [PATCH 169/190] SystemUI: fix location icon margins
+Subject: [PATCH 169/195] SystemUI: fix location icon margins
 
   from
   https://github.com/StatiXOS/android_frameworks_base/commit/d7abf3f8f727f19fc4ba799545e8445df6301e49

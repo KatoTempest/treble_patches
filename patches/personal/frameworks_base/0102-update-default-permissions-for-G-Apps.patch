@@ -1,7 +1,7 @@
-From 03c23b1c0f2c2618aea87ea4c470db014814173c Mon Sep 17 00:00:00 2001
+From 73799a7d1d0699c7959a3fd27fcd48045b84903d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:56:18 -0500
-Subject: [PATCH 102/190] update default permissions for (G)Apps
+Subject: [PATCH 102/195] update default permissions for (G)Apps
 
   based on
   https://github.com/syberia-project/platform_frameworks_base/commit/558bee06bc786214428541ed470a0fff2f52b1ae

@@ -1,7 +1,7 @@
-From 3b8b7d3eb726985662a586ae608ffafda0d24318 Mon Sep 17 00:00:00 2001
+From abcacfa5e771076e8ac27a169c3099b54a6adbf8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 13:30:56 -0500
-Subject: [PATCH 100/190] FrameLayout: Fix NPE when view is missing
+Subject: [PATCH 100/195] FrameLayout: Fix NPE when view is missing
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/c71bf809745bf857becd346874c4e18132e24efc

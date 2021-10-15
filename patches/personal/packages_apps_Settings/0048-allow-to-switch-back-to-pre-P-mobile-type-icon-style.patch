@@ -1,7 +1,7 @@
-From 58b139c15aea09676718105c267072d4a02e5b40 Mon Sep 17 00:00:00 2001
+From 336f6fa29c050b840e12823907cc733e82c1dc96 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Aug 2021 09:17:58 +0000
-Subject: [PATCH 48/48] allow to switch back to pre P mobile type icon style
+Subject: [PATCH 48/49] allow to switch back to pre P mobile type icon style
  [2/2]
 
   from
@@ -13,7 +13,7 @@ Subject: [PATCH 48/48] allow to switch back to pre P mobile type icon style
  3 files changed, 12 insertions(+)
 
 diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
-index 4fc677bbe2..f6f1df5706 100644
+index 4fc677bbe2..fd87a6bca8 100644
 --- a/res/values-ru/custom_strings.xml
 +++ b/res/values-ru/custom_strings.xml
 @@ -59,4 +59,7 @@
@@ -22,7 +22,7 @@ index 4fc677bbe2..f6f1df5706 100644
      <string name="notification_headers_summary">Показывать заголовки в списке уведомлений\nТребуется перезапуск SystemUI</string>
 +    <!-- P style network bar -->
 +    <string name="use_old_mobiletype_title">Старый стиль иконок мобильной сети</string>
-+    <string name="use_old_mobiletype_summary">Исользовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
++    <string name="use_old_mobiletype_summary">Использовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
  </resources>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
 index dd088697c0..69fa8fd52b 100644

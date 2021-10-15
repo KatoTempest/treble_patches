@@ -1,7 +1,7 @@
-From afaf2d9fb103f02e7ab5022ac2ba7fed29fe786f Mon Sep 17 00:00:00 2001
+From caec2dbcaa3e58ecb9a01e74a1b8e8a5c51b4dff Mon Sep 17 00:00:00 2001
 From: Steven Laver <lavers@google.com>
 Date: Tue, 18 Feb 2020 12:56:05 -0800
-Subject: [PATCH 185/190] MobileSignalController fix corresponding to upstream
+Subject: [PATCH 185/195] MobileSignalController fix corresponding to upstream
  FeatureConnector change
 
 FeatureConnector was changed upstream, in

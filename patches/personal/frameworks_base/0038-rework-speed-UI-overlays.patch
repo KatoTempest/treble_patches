@@ -1,7 +1,7 @@
-From c1be1c55a27ded36659a3c0dae799b01809d76ae Mon Sep 17 00:00:00 2001
+From 01ed005dea755449e8ff22ff46ba4d35e92babf9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 10 Jul 2020 06:40:36 +0300
-Subject: [PATCH 038/190] rework speed UI overlays
+Subject: [PATCH 038/195] rework speed UI overlays
 
 ---
  core/res/res/values/config.xml                |  4 +++

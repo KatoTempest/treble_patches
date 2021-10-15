@@ -1,7 +1,7 @@
-From f7cfc14f68ea34a0c308678a9b7f662616437a76 Mon Sep 17 00:00:00 2001
+From f9d0254a85f0d50f131dadfed23afbf7be689171 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Feb 2021 04:49:59 -0500
-Subject: [PATCH 129/190] disable vertical dividers
+Subject: [PATCH 129/195] disable vertical dividers
 
 Change-Id: I6e0b4271740f013c8eff6de69674145b700dafd8
 ---

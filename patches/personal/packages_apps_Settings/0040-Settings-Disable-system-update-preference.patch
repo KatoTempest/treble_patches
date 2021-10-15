@@ -1,7 +1,7 @@
-From a57117cd6afa2cbf322252192b9bf575200de295 Mon Sep 17 00:00:00 2001
+From 8d1976693d267ae68bca3b024a13cc7dd884e945 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:47:40 -0500
-Subject: [PATCH 40/48] Settings: Disable system update preference
+Subject: [PATCH 40/49] Settings: Disable system update preference
 
   from
   https://github.com/nitrogen-project/android_packages_apps_Settings/commit/93aad4cb7756761ad798d5d0f60aa88e51c45a46

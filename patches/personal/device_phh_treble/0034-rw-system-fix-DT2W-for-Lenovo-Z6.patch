@@ -1,7 +1,7 @@
-From 99dc9dd50f0f6e160e691188f591e50d9eb1025c Mon Sep 17 00:00:00 2001
+From 3af138f3025ff1a56ad161d0931cae01003d8ef4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 May 2021 14:29:20 -0400
-Subject: [PATCH 34/40] rw-system: fix DT2W for Lenovo Z6
+Subject: [PATCH 34/42] rw-system: fix DT2W for Lenovo Z6
 MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
@@ -12,7 +12,7 @@ Content-Transfer-Encoding: 8bit
  1 file changed, 5 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index d55dc3b..d3987ff 100644
+index e47c336..079d3e6 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -192,9 +192,12 @@ changeKeylayout() {

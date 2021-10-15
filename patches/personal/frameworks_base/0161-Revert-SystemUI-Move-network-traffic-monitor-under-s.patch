@@ -1,7 +1,7 @@
-From 94b49f1a21f524580f4b10e805879182b4976085 Mon Sep 17 00:00:00 2001
+From ce2f78b011d71a4b3d14b4dfbe4c5ad32a903d4c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 17:18:59 -0400
-Subject: [PATCH 161/190] Revert "SystemUI: Move network traffic monitor under
+Subject: [PATCH 161/195] Revert "SystemUI: Move network traffic monitor under
  same layout as clock"
 
 This reverts commit 5a28ff769b487f003dc72cbd0ede6e8da4e605b3.

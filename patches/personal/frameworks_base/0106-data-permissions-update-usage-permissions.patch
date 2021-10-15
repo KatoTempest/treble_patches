@@ -1,7 +1,7 @@
-From 61b437846b89cf255db527110a4ab4caa9f27490 Mon Sep 17 00:00:00 2001
+From 7a8b5008c8ff3546d822222829f78cdb9fc873bb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:25:27 -0500
-Subject: [PATCH 106/190] data: permissions: update usage permissions
+Subject: [PATCH 106/195] data: permissions: update usage permissions
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/a7ebc2ca14515b4c4cbc05070db7d2c5b90c441e

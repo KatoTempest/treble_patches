@@ -1,7 +1,7 @@
-From e6d6701bb33e47b127db2bcf5dd78f2830709294 Mon Sep 17 00:00:00 2001
+From 355ae8d62469ab0b1a54c5c84331d8c3874df625 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Tue, 28 Aug 2018 14:51:58 +0800
-Subject: [PATCH 178/190] SystemUI: Fix volte icon doesn't update in real time
+Subject: [PATCH 178/195] SystemUI: Fix volte icon doesn't update in real time
 
 SystemUI will clean and reinitialize the subscripiton state
 when active subscripitons are chagned, but telephony doesn't

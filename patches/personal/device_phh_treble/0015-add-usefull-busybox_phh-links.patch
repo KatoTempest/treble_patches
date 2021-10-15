@@ -1,7 +1,7 @@
-From 1e7cbe054e49e289bf9c3e1da4cb5743af615c23 Mon Sep 17 00:00:00 2001
+From c0a76839fa0d2143bf19bc7244ac7d1d311c9761 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 07:17:39 -0500
-Subject: [PATCH 15/40] add usefull busybox_phh links
+Subject: [PATCH 15/42] add usefull busybox_phh links
 
 	sadly, but this way not works
 ---

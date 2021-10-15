@@ -1,7 +1,7 @@
-From b73fb3bd0aa8f97cace030b2821405d633e9d339 Mon Sep 17 00:00:00 2001
+From af21259a5e1ba3064c07ba3bfa8bdc6922c49839 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:11:56 -0400
-Subject: [PATCH 158/190] try to set zero back gesture sensitivity
+Subject: [PATCH 158/195] try to set zero back gesture sensitivity
 
 ---
  core/res/res/values/config.xml | 2 +-

@@ -1,7 +1,7 @@
-From d8f6f88af209ba90617bfe254602d397f9252815 Mon Sep 17 00:00:00 2001
+From fa2744fd505ce54b0ad08c516f9cb394cfd0f13a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 02:03:00 -0500
-Subject: [PATCH 39/48] Settings: Display: font size in 5% steps from 80% to
+Subject: [PATCH 39/49] Settings: Display: font size in 5% steps from 80% to
  130%
 
   from

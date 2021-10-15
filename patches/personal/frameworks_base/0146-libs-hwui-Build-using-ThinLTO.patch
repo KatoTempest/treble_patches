@@ -1,7 +1,7 @@
-From 3ab3dc9c031c5c0aa6910d6f7a1497fb677c11d7 Mon Sep 17 00:00:00 2001
+From 84feb17a1c95b7f19190becee52de535d737e881 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:26:11 -0500
-Subject: [PATCH 146/190] libs: hwui: Build using ThinLTO
+Subject: [PATCH 146/195] libs: hwui: Build using ThinLTO
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/8fa7480f480404be14643776e0a353a61210a400

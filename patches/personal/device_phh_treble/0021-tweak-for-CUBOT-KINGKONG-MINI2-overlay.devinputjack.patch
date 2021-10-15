@@ -1,14 +1,14 @@
-From 55c24180647c5743e95361de2e454cfbc5c7f5c3 Mon Sep 17 00:00:00 2001
+From d354a0c2c43a52900792f7418f8516ef729fd3fc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Mar 2021 04:50:14 -0500
-Subject: [PATCH 21/40] tweak for CUBOT KINGKONG MINI2 (overlay.devinputjack)
+Subject: [PATCH 21/42] tweak for CUBOT KINGKONG MINI2 (overlay.devinputjack)
 
 ---
  rw-system.sh | 7 ++++++-
  1 file changed, 6 insertions(+), 1 deletion(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index f501a6e..73042dd 100644
+index 8d67a6b..5af5009 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -383,11 +383,16 @@ if getprop ro.vendor.build.fingerprint |grep -qi -e Redmi/merlin -e Redmi/lancel

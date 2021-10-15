@@ -1,7 +1,7 @@
-From ea22166b168675e7eab5d6dabecc00b1bcd4e9d7 Mon Sep 17 00:00:00 2001
+From 8b059d85b49a7c41ba8c647d13b8cceac53a87a4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:49:06 -0500
-Subject: [PATCH 072/190] frameworks: Reset battery stats [1/2]
+Subject: [PATCH 072/195] frameworks: Reset battery stats [1/2]
 
   from
   https://github.com/Evolution-X/frameworks_base/commit/6d69bf8143dd8de290e2d63a59d924e1b980ebde

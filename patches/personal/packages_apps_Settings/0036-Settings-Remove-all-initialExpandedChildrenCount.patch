@@ -1,7 +1,7 @@
-From 812d5744bbea2c9160f2bebc80ca056f025deb8a Mon Sep 17 00:00:00 2001
+From 8a2f2852a3bbec74dd5760fd3214792c80cfbc71 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:52:15 -0500
-Subject: [PATCH 36/48] Settings: Remove all initialExpandedChildrenCount
+Subject: [PATCH 36/49] Settings: Remove all initialExpandedChildrenCount
 
   from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/ef2a6dc9a10671288910c7696aeb35a6ae903e24
@@ -115,13 +115,13 @@ index ff1427b7d7..da87e23331 100644
          <!-- Default ringtone -->
          <com.android.settings.notification.app.NotificationSoundPreference
 diff --git a/res/xml/configure_notification_settings.xml b/res/xml/configure_notification_settings.xml
-index c339387907..a17a4034e5 100644
+index 2cd427a40b..6de435514a 100644
 --- a/res/xml/configure_notification_settings.xml
 +++ b/res/xml/configure_notification_settings.xml
-@@ -103,8 +103,7 @@
- 
+@@ -104,8 +104,7 @@
      <PreferenceCategory
          android:key="configure_notifications_advanced"
+         android:title="@string/advanced_notifications_title"
 -        android:order="15"
 -        settings:initialExpandedChildrenCount="100">
 +        android:order="15">

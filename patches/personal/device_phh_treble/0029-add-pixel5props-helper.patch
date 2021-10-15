@@ -1,7 +1,7 @@
-From 1b57a13fb761219e2a99b4f4c3a8cabb56a7843b Mon Sep 17 00:00:00 2001
+From 7fd4f722e6e1ce86222aee54e11559830c08dfe4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 23 Apr 2021 16:01:39 -0400
-Subject: [PATCH 29/40] add pixel5props helper
+Subject: [PATCH 29/42] add pixel5props helper
 
 ---
  phh-prop-handler.sh | 12 ++++++++++++

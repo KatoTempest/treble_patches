@@ -1,14 +1,14 @@
-From 5a45fc831e951ddc1ad0f61aec8a298e675db5a7 Mon Sep 17 00:00:00 2001
+From e6e6d8369111f93c4cac619bec5718111b6b9bb6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 16:36:59 -0400
-Subject: [PATCH 23/40] add fix for Sony Xperia X notifications led
+Subject: [PATCH 23/42] add fix for Sony Xperia X notifications led
 
 ---
  rw-system.sh | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 73042dd..0a3c320 100644
+index 5af5009..ce27fd1 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -664,6 +664,10 @@ if getprop ro.vendor.build.fingerprint | grep -qiE '^samsung/' && [ "$vndk" -ge

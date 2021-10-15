@@ -1,7 +1,7 @@
-From e5b1127103b65c6b9e0c9b5a1618b3e65418cbe7 Mon Sep 17 00:00:00 2001
+From 6ff4544e43f2365d6256c190671aa8ef4013eaa8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Apr 2020 03:07:14 +0300
-Subject: [PATCH 15/48] add statusbar icon spacing tuning
+Subject: [PATCH 15/49] add statusbar icon spacing tuning
 
 Change-Id: Ieb16c062fe330a071159494316ea4485ed90abf5
 ---

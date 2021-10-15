@@ -1,7 +1,7 @@
-From 97f6b2ed995a3f7b469abcaf985c9cde9f85cf45 Mon Sep 17 00:00:00 2001
+From 4a4aa5003da6a352f4a38d1870b22a9c218b0b3d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 18 Jul 2021 21:35:01 +0000
-Subject: [PATCH 46/48] add UI corners tuning
+Subject: [PATCH 46/49] add UI corners tuning
 
 ---
  res/values-ru/custom_strings.xml              | 1 +

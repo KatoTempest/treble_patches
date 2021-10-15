@@ -1,7 +1,7 @@
-From 78e8ed5fc35a2bad60e6f3edc8bad796830174de Mon Sep 17 00:00:00 2001
+From e71142374cc8f62885314d23e7a5759aae52a477 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 14 Sep 2021 20:07:03 +0000
-Subject: [PATCH 47/48] Revert "Settings: adaptive icon"
+Subject: [PATCH 47/49] Revert "Settings: adaptive icon"
 
 This reverts commit 1f11b8d60e5f5525769d0ddc61f56a3cdd45381d.
 ---
@@ -46,7 +46,7 @@ This reverts commit 1f11b8d60e5f5525769d0ddc61f56a3cdd45381d.
  create mode 100644 res/mipmap-xxxhdpi/ic_launcher_settings.png
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 5dfde10da9..560b2f43f8 100644
+index 3cf29c0b40..e5779f2d1f 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -109,7 +109,7 @@

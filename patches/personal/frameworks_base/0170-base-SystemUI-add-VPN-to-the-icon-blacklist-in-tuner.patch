@@ -1,7 +1,7 @@
-From fb47b743628f97c26e92f7550d0fafb441d7e443 Mon Sep 17 00:00:00 2001
+From 206c16f1e2adc023cb7f550c0a62a07586dab3b1 Mon Sep 17 00:00:00 2001
 From: maxwen <max.weninger@gmail.com>
 Date: Tue, 12 Dec 2017 13:29:35 +0100
-Subject: [PATCH 170/190] base: SystemUI: add VPN to the icon blacklist in
+Subject: [PATCH 170/195] base: SystemUI: add VPN to the icon blacklist in
  tuner
 
 Change-Id: I579d1ec7a6d66ac7055cce7d7e905bae7dc5cd9a

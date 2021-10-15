@@ -1,7 +1,7 @@
-From 763506657ab83cb61b8acfe14f1a2be548e8a125 Mon Sep 17 00:00:00 2001
+From 6eae400701051f301f7dc313e7738649d1b2ff26 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:50:11 -0500
-Subject: [PATCH 070/190] LED lights: Don't skip Dialer and other apps
+Subject: [PATCH 070/195] LED lights: Don't skip Dialer and other apps
 
   from
   https://github.com/Corvus-ROM/android_frameworks_base/commit/ac0ed966eb4fe01dc286d2082ea01c84846774b3
@@ -10,10 +10,10 @@ Subject: [PATCH 070/190] LED lights: Don't skip Dialer and other apps
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/services/core/java/com/android/server/notification/NotificationManagerService.java b/services/core/java/com/android/server/notification/NotificationManagerService.java
-index 87cfa7522fd..66b9334aaa8 100755
+index c80669eafb0..ea8692207e7 100755
 --- a/services/core/java/com/android/server/notification/NotificationManagerService.java
 +++ b/services/core/java/com/android/server/notification/NotificationManagerService.java
-@@ -7131,14 +7131,14 @@ public class NotificationManagerService extends SystemService {
+@@ -7137,14 +7137,14 @@ public class NotificationManagerService extends SystemService {
              return false;
          }
          // Suppressed because it's a silent update

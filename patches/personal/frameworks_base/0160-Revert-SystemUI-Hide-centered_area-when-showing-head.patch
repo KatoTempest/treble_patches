@@ -1,7 +1,7 @@
-From d844a5c0b878a9eac088bb52d8152f8dc38b7486 Mon Sep 17 00:00:00 2001
+From c1d0eac9ce09c663725d39640e489227bbd92cd7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 17:18:56 -0400
-Subject: [PATCH 160/190] Revert "SystemUI: Hide centered_area when showing
+Subject: [PATCH 160/195] Revert "SystemUI: Hide centered_area when showing
  heads up"
 
 This reverts commit 84c0117f46816f2d591e593856d430877eb5aee7.

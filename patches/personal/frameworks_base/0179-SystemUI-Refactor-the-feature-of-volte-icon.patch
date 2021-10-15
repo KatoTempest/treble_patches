@@ -1,7 +1,7 @@
-From cae79ff13f3ae69c7a438df1850e9229a8551387 Mon Sep 17 00:00:00 2001
+From 437cafa47e53b6811b857b54afdec6abb433ecb4 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Tue, 11 Sep 2018 18:02:21 +0800
-Subject: [PATCH 179/190] SystemUI: Refactor the feature of volte icon
+Subject: [PATCH 179/195] SystemUI: Refactor the feature of volte icon
 
 1. Move volte state to MobileState
 2. Notify UI to update only when it is necessary

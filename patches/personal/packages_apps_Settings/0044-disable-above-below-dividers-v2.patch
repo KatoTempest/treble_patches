@@ -1,7 +1,7 @@
-From 1e0d05649b5c2d14ec9ccd96a6318cad7d109d28 Mon Sep 17 00:00:00 2001
+From fc0c27dad83e08c4d5c1276d8cb0e29a85e6433b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Feb 2021 04:53:48 -0500
-Subject: [PATCH 44/48] disable above/below dividers v2
+Subject: [PATCH 44/49] disable above/below dividers v2
 
 Change-Id: If709afe7630199adc8eff8288f1d8019e4f2da06
 ---
@@ -509,7 +509,7 @@ index da87e23331..bc9a208d33 100644
  
      <com.android.settings.notification.app.NotificationFooterPreference
 diff --git a/res/xml/configure_notification_settings.xml b/res/xml/configure_notification_settings.xml
-index a17a4034e5..bccef25fc5 100644
+index 6de435514a..70a9a0f2e3 100644
 --- a/res/xml/configure_notification_settings.xml
 +++ b/res/xml/configure_notification_settings.xml
 @@ -30,7 +30,7 @@

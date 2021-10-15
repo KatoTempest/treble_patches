@@ -1,7 +1,7 @@
-From a92f093aa87c69213837f54615e9888e41f391ad Mon Sep 17 00:00:00 2001
+From 265f14a44095ea3aa03e824d9cf78ac2f2ec4f1c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 10 Sep 2021 20:38:37 +0000
-Subject: [PATCH 172/190] don't set model prop if gms
+Subject: [PATCH 172/195] don't set model prop if gms
 
   from
   https://github.com/PixelExperience/frameworks_base/commit/993e10547c7329657e48610c5a10cb99943b13c7

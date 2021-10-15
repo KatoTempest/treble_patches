@@ -1,7 +1,7 @@
-From 7bee7d8fa73f376204bb408222ee7e8d3847d310 Mon Sep 17 00:00:00 2001
+From bbc86552f96ffafb1f4d0f0e0acba85418b1130e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 00:20:50 -0400
-Subject: [PATCH 27/40] separate vendor overlay disabling prop
+Subject: [PATCH 27/42] separate vendor overlay disabling prop
 
 ---
  phh-on-data.sh | 7 ++++++-

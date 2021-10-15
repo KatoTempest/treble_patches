@@ -1,7 +1,7 @@
-From d2250c77429762026514fe3948d00d8370b03551 Mon Sep 17 00:00:00 2001
+From d99d9511b816b8b8976a12aeb8375449e67765e4 Mon Sep 17 00:00:00 2001
 From: Vachounet <vachounet@live.fr>
 Date: Thu, 17 Jun 2021 19:11:55 +0200
-Subject: [PATCH 171/190] SystemUI: allow to switch back to pre P mobile type
+Subject: [PATCH 171/195] SystemUI: allow to switch back to pre P mobile type
  icon style [1/2]
 
 *TO-DO Update icon for 5G

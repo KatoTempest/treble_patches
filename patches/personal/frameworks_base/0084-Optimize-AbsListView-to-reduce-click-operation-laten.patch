@@ -1,7 +1,7 @@
-From 5fb8453a5340248ecedaf1c97fc229f2a8e5d5ff Mon Sep 17 00:00:00 2001
+From 60cf26f164656111e505c5ad53432a7f3b44e497 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:42:40 -0500
-Subject: [PATCH 084/190] Optimize AbsListView to reduce click operation
+Subject: [PATCH 084/195] Optimize AbsListView to reduce click operation
  latency
 
   from

@@ -1,7 +1,7 @@
-From 40d7f7a40a0617f1418003ef9a0244654f82954c Mon Sep 17 00:00:00 2001
+From f2905bf750304ecf07ea01454c84cf6752a2f2a5 Mon Sep 17 00:00:00 2001
 From: Weijie Wang <weijiew@codeaurora.org>
 Date: Fri, 29 Jun 2018 17:54:25 +0800
-Subject: [PATCH 177/190] SystemUI: Add new configuration for displaying Volte
+Subject: [PATCH 177/195] SystemUI: Add new configuration for displaying Volte
  icon
 
 Add new configuration for displaying Volte icon

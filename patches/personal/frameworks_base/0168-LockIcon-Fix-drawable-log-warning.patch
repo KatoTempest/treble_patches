@@ -1,7 +1,7 @@
-From f9c797c7577a9c3d4905d94751f4c696185b2f8c Mon Sep 17 00:00:00 2001
+From 09ac7968768e015bb022d78de083b0b1bbc60567 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Jul 2021 11:25:40 +0000
-Subject: [PATCH 168/190] LockIcon: Fix drawable log warning
+Subject: [PATCH 168/195] LockIcon: Fix drawable log warning
 
   from
   https://github.com/crdroidandroid/android_frameworks_base/commit/9a220164296bb6b2ef33a915c14b01a5b2fa59ad

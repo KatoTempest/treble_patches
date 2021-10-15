@@ -1,7 +1,7 @@
-From 09aa34fb2527fcdd1222f0cf0fe7769c8cd7dff3 Mon Sep 17 00:00:00 2001
+From 6974d46310540d823e721b0813f41318f4d05fb2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 11 Sep 2021 18:35:52 +0000
-Subject: [PATCH 176/190] we need moar rounded corners
+Subject: [PATCH 176/195] we need moar rounded corners
 
   based on
   https://github.com/crdroidandroid/android_frameworks_base/commit/3e8e6ddb21dd4ae144ac0efc8eb1e4148ee3b581

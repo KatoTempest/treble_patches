@@ -1,7 +1,7 @@
-From 61d9c88367f846954d58de4fa3961cbb986b7693 Mon Sep 17 00:00:00 2001
+From 3bcce43444ed659ab00bd391866b22c83ca8458e Mon Sep 17 00:00:00 2001
 From: Bill Peckham <bpeckham@google.com>
 Date: Fri, 2 Nov 2018 16:46:03 -0700
-Subject: [PATCH 180/190] Adapt to IMS registration changes.
+Subject: [PATCH 180/195] Adapt to IMS registration changes.
 
 The upstream change
 https://keystone-qcom.googlesource.com/platform/frameworks/base/+/941c0a5cfd5cdfe8a19c2928486fab9efa489ada

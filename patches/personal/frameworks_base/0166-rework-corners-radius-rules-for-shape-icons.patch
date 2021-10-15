@@ -1,7 +1,7 @@
-From 26e51bd0194cedc33417b3074a15c9a40c004305 Mon Sep 17 00:00:00 2001
+From aa1e18d3b1495e546a3a2e0a99a8aab3bb4e392e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 20 Jul 2021 08:42:46 +0000
-Subject: [PATCH 166/190] rework corners radius rules for shape icons
+Subject: [PATCH 166/195] rework corners radius rules for shape icons
 
 ---
  packages/overlays/IconShapeHeartOverlay/res/values/config.xml | 4 ++--

@@ -1,14 +1,14 @@
-From 64dbe950d8d1029497a2066bbd08adb7313a6441 Mon Sep 17 00:00:00 2001
+From a052d993fa6c0365fe016c6eeab390a2ebc0c4f1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 16 May 2021 14:18:51 -0400
-Subject: [PATCH 33/40] rw-system: set LTE by default for 'lavender'
+Subject: [PATCH 33/42] rw-system: set LTE by default for 'lavender'
 
 ---
  rw-system.sh | 3 +++
  1 file changed, 3 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 6c8e63c..d55dc3b 100644
+index 42c82d5..e47c336 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -546,6 +546,9 @@ fi

@@ -1,7 +1,7 @@
-From 62557383454b44786d38ce8824b50d96d2aba4c3 Mon Sep 17 00:00:00 2001
+From 606a1a53dc6b65fbf343db214d8065b875a5b7e3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:54:16 -0500
-Subject: [PATCH 32/48] Settings: check ALL gesture preference controllers
+Subject: [PATCH 32/49] Settings: check ALL gesture preference controllers
 
   from
   https://github.com/omnirom/android_packages_apps_Settings/commit/2cf7834a348356018627a857dffa1652851221c0

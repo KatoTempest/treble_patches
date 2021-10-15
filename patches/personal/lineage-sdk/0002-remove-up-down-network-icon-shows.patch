@@ -1,4 +1,4 @@
-From 85cf7a906c67dc83928b6ecc5535298b8ab50420 Mon Sep 17 00:00:00 2001
+From 08938c7610000a5d625155e6e0dbae073e834d59 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 22 Feb 2020 23:05:23 +0200
 Subject: [PATCH 2/4] remove up+down network icon shows
@@ -24,5 +24,5 @@ index 2bc0bd45..ea18e649 100644
          } else if (mMode == MODE_DOWNSTREAM_ONLY) {
              drawableResId = R.drawable.stat_sys_network_traffic_down;
 -- 
-2.17.1
+2.30.2
 

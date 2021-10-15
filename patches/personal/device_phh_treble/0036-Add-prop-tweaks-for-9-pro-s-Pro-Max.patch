@@ -1,7 +1,7 @@
-From 77ecb6dd55711810ab2bf48a8cfa3f5d0bba4d5b Mon Sep 17 00:00:00 2001
+From 2e992b1c37972afca74244a0f6516fde6f8647bc Mon Sep 17 00:00:00 2001
 From: sooti <sooti85@gmail.com>
 Date: Sun, 1 Aug 2021 09:55:31 +0300
-Subject: [PATCH 36/40] Add prop tweaks for 9 pro/s/Pro Max
+Subject: [PATCH 36/42] Add prop tweaks for 9 pro/s/Pro Max
 
 * Add audio tweaks
 * Use vendor media camera
@@ -40,7 +40,7 @@ index bc977f0..16c3812 100644
  minijailSrc64=/system/system_ext/apex/com.android.vndk.v28/lib64/libminijail.so
  if [ "$vndk" = 27 ]; then
 diff --git a/rw-system.sh b/rw-system.sh
-index 987fe81..09db5b8 100644
+index 73ddcd3..af4353d 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -62,6 +62,15 @@ fi

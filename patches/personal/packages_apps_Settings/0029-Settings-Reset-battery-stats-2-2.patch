@@ -1,7 +1,7 @@
-From c8c2930a13fc039dd0872a4b4b9b24bd45e642d4 Mon Sep 17 00:00:00 2001
+From bf76b8bc248404b5eec96c8022294a1aff645bae Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 29/48] Settings: Reset battery stats [2/2]
+Subject: [PATCH 29/49] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918
@@ -15,7 +15,7 @@ Change-Id: Icf9816140f59f206003825c2c81666e39ce031ae
  4 files changed, 33 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index c17807bd13..5dfde10da9 100644
+index 41715ff8c4..3cf29c0b40 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -50,6 +50,7 @@

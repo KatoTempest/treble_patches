@@ -1,7 +1,7 @@
-From 9b0a1b5a6cada9b579aefc18413b28ac8f4c1115 Mon Sep 17 00:00:00 2001
+From c2654d2bb9e30eb2e3125ec9e6486cc30b65b981 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:45:29 -0500
-Subject: [PATCH 062/190] base: add more notification channels to blockable
+Subject: [PATCH 062/195] base: add more notification channels to blockable
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/ead8c1b900765877a4d6216e53dedbbbc607a176

@@ -1,7 +1,7 @@
-From 6b231c64d0a3a96f144e8a68f5d2a2664f3e0fca Mon Sep 17 00:00:00 2001
+From 6d73290411fe995273cdfefca85343ec1f594143 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 8 Aug 2020 05:46:22 -0400
-Subject: [PATCH 21/48] HACKFIX: Settings: animation scales
+Subject: [PATCH 21/49] HACKFIX: Settings: animation scales
 
 ---
  res/xml/development_settings.xml                            | 6 +++---
