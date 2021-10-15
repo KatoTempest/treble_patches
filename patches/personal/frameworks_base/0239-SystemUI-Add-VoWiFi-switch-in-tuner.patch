@@ -1,0 +1,85 @@
+From ad411a89edcac88dd08aaeb75a9d17e470a0c1b3 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 11 Sep 2021 20:19:03 +0000
+Subject: [PATCH 239/242] SystemUI: Add VoWiFi switch in tuner
+
+  based on
+  https://github.com/ArrowOS/android_frameworks_base/commit/2c06f5b664d1599b0bc6a1fe392f2041523593dc
+
+Change-Id: I02117b07df12e9d2ab3c3760f300a079facc945d
+---
+ packages/SystemUI/res/values/custom_strings.xml           | 1 +
+ packages/SystemUI/res/xml/tuner_prefs.xml                 | 5 +++++
+ .../systemui/statusbar/policy/MobileSignalController.java | 8 +++++++-
+ 3 files changed, 13 insertions(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/res/values/custom_strings.xml b/packages/SystemUI/res/values/custom_strings.xml
+index 3171234a74d..a917bc728a9 100644
+--- a/packages/SystemUI/res/values/custom_strings.xml
++++ b/packages/SystemUI/res/values/custom_strings.xml
+@@ -53,5 +53,6 @@
+     <string name="status_bar_microphone">Microphone</string>
+     <string name="status_bar_vpn">VPN</string>
+     <string name="status_bar_volte">VoLTE</string>
++    <string name="status_bar_vowifi">VoWiFi</string>
+ 
+ </resources>
+diff --git a/packages/SystemUI/res/xml/tuner_prefs.xml b/packages/SystemUI/res/xml/tuner_prefs.xml
+index 9bfc66696b8..df98b7a98a5 100644
+--- a/packages/SystemUI/res/xml/tuner_prefs.xml
++++ b/packages/SystemUI/res/xml/tuner_prefs.xml
+@@ -94,6 +94,11 @@
+             android:title="@string/status_bar_volte"
+             sysui:defValue="true" />
+ 
++        <com.android.systemui.tuner.TunerSwitch
++            android:key="vowifi"
++            android:title="@string/status_bar_vowifi"
++            sysui:defValue="true" />
++
+         <com.android.systemui.tuner.StatusBarSwitch
+             android:key="vpn"
+             android:title="@string/status_bar_vpn" />
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/MobileSignalController.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/MobileSignalController.java
+index e375994f475..1c497acde80 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/MobileSignalController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/MobileSignalController.java
+@@ -101,6 +101,7 @@ public class MobileSignalController extends SignalController<
+     private FeatureConnector<ImsManager> mFeatureConnector;
+     private int mCallState = TelephonyManager.CALL_STATE_IDLE;
+     private boolean mVolteIcon = true;
++    private boolean mVowifiIcon = true;
+ 
+     // TODO: Reduce number of vars passed in, if we have the NetworkController, probably don't
+     // need listener lists anymore.
+@@ -123,6 +124,7 @@ public class MobileSignalController extends SignalController<
+                 com.android.internal.R.string.lockscreen_carrier_default).toString();
+ 
+         Dependency.get(TunerService.class).addTunable(this, "volte");
++        Dependency.get(TunerService.class).addTunable(this, "vowifi");
+         mapIconSets();
+ 
+         String networkName = info.getCarrierName() != null ? info.getCarrierName().toString()
+@@ -172,6 +174,10 @@ public class MobileSignalController extends SignalController<
+                      mVolteIcon =
+                         TunerService.parseIntegerSwitch(newValue, false);
+                         notifyListenersIfNecessary();
++            case "vowifi":
++                     mVowifiIcon =
++                        TunerService.parseIntegerSwitch(newValue, false);
++                        notifyListenersIfNecessary();
+             default:
+                 break;
+         }
+@@ -524,7 +530,7 @@ public class MobileSignalController extends SignalController<
+         int volteIcon = mConfig.showVolteIcon && isVolteSwitchOn() && mVolteIcon
+                 ? getVolteResId() : 0;
+         MobileIconGroup vowifiIconGroup = getVowifiIconGroup();
+-        if (mConfig.showVowifiIcon && vowifiIconGroup != null) {
++        if (mConfig.showVowifiIcon && vowifiIconGroup != null && mVowifiIcon) {
+             typeIcon = vowifiIconGroup.mDataType;
+             statusIcon = new IconState(true,
+                     mCurrentState.enabled && !mCurrentState.airplaneMode? statusIcon.icon : 0,
+-- 
+2.30.2
+

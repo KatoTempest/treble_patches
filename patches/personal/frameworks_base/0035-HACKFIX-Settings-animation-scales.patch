@@ -1,7 +1,7 @@
-From e3ca26bbcb3cc12739cbf12c9251e4a95afa2056 Mon Sep 17 00:00:00 2001
+From 5580d25e963e0e47a05e28710afdbc8236916a46 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 22 Jul 2020 02:53:54 +0300
-Subject: [PATCH 035/220] HACKFIX: Settings: animation scales
+Subject: [PATCH 035/242] HACKFIX: Settings: animation scales
 
 ---
  packages/SettingsLib/res/values/arrays.xml | 66 +++++++++++-----------

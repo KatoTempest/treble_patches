@@ -1,7 +1,7 @@
-From dcc4c07e6a40683d12a2e17c9e13bf573b50a026 Mon Sep 17 00:00:00 2001
+From 75b74eabeb5db03f314b6f7f5f2d69218ee6354c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 02:48:35 -0500
-Subject: [PATCH 080/220] Disable notification channel warnings by default
+Subject: [PATCH 080/242] Disable notification channel warnings by default
  [1/2]
 
   from
@@ -11,10 +11,10 @@ Subject: [PATCH 080/220] Disable notification channel warnings by default
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/services/core/java/com/android/server/notification/NotificationManagerService.java b/services/core/java/com/android/server/notification/NotificationManagerService.java
-index 97dc3b2b89f..4ac9bfbde73 100755
+index dc551e14b97..a0fd1d6ace3 100755
 --- a/services/core/java/com/android/server/notification/NotificationManagerService.java
 +++ b/services/core/java/com/android/server/notification/NotificationManagerService.java
-@@ -5996,7 +5996,7 @@ public class NotificationManagerService extends SystemService {
+@@ -6005,7 +6005,7 @@ public class NotificationManagerService extends SystemService {
              };
  
      private void doChannelWarningToast(CharSequence toastText) {
@@ -23,7 +23,7 @@ index 97dc3b2b89f..4ac9bfbde73 100755
              final int defaultWarningEnabled = Build.IS_DEBUGGABLE ? 1 : 0;
              final boolean warningEnabled = Settings.Global.getInt(getContext().getContentResolver(),
                      Settings.Global.SHOW_NOTIFICATION_CHANNEL_WARNINGS, defaultWarningEnabled) != 0;
-@@ -6005,7 +6005,7 @@ public class NotificationManagerService extends SystemService {
+@@ -6014,7 +6014,7 @@ public class NotificationManagerService extends SystemService {
                          Toast.LENGTH_SHORT);
                  toast.show();
              }

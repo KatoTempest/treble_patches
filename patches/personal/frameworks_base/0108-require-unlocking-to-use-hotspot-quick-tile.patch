@@ -1,7 +1,7 @@
-From 22d0a90f64547ad20deddbe1746e751640aa15ba Mon Sep 17 00:00:00 2001
+From 58311634ef8d8cae73730c40f3df6408b98e2ac2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:40:09 -0500
-Subject: [PATCH 108/220] require unlocking to use hotspot quick tile
+Subject: [PATCH 108/242] require unlocking to use hotspot quick tile
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/20727a78e79480af383d127d3afe20f07f91bac0

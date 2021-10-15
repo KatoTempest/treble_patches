@@ -1,7 +1,7 @@
-From 496c45c17b478c38ee4d2c44c398a96b3e853193 Mon Sep 17 00:00:00 2001
+From 69a776d3c57ff2800fcaeaa54d419bb02990e540 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:54:39 -0500
-Subject: [PATCH 122/220] Gestures: allow to set back swipe deadzone [1/2]
+Subject: [PATCH 122/242] Gestures: allow to set back swipe deadzone [1/2]
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/c02d86aeef44afc821a99002b88bab56b0cbebcb

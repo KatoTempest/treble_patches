@@ -1,0 +1,31 @@
+From 6681503427e2d156c717cf4731534361e7d55da4 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 10 Sep 2021 20:38:37 +0000
+Subject: [PATCH 220/242] don't set model prop if gms
+
+  from
+  https://github.com/PixelExperience/frameworks_base/commit/993e10547c7329657e48610c5a10cb99943b13c7
+
+Change-Id: Ief36f0968dac6f17fe4a87f6b3476e443f37831e
+---
+ core/java/android/app/Instrumentation.java | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/core/java/android/app/Instrumentation.java b/core/java/android/app/Instrumentation.java
+index f3bca45f65b..7bd2e0870f5 100644
+--- a/core/java/android/app/Instrumentation.java
++++ b/core/java/android/app/Instrumentation.java
+@@ -1248,6 +1248,10 @@ public class Instrumentation {
+                 for (Map.Entry<String, Object> prop : propsToChange.entrySet()) {
+                     String key = prop.getKey();
+                     Object value = prop.getValue();
++                    // Don't set model if gms
++                    if (packageName.equals("com.google.android.gms") && key.equals("MODEL")){
++                        continue;
++                    }
+                     setPropValue(key, value);
+                 }
+             }
+-- 
+2.30.2
+

@@ -1,7 +1,7 @@
-From 9ef9ff34bd8f727010448773dd30b0b871f15dbc Mon Sep 17 00:00:00 2001
+From a93edccca02048ee523a7a2a3e1c9e7d61e51b51 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 25 Mar 2021 06:49:09 -0400
-Subject: [PATCH 10/11] enable clang optimizations
+Subject: [PATCH 10/19] enable clang optimizations
 
 ---
  camera/Android.bp                                   | 1 +

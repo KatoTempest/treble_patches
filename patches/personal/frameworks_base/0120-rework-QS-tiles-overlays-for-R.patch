@@ -1,7 +1,7 @@
-From b481bb9ae066ee90c9d3e3f52a9ac937cc26cb5a Mon Sep 17 00:00:00 2001
+From 98a2fc505d97ae1a1d6e7bc2a779417498735e08 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:01:39 -0500
-Subject: [PATCH 120/220] rework QS tiles overlays for R
+Subject: [PATCH 120/242] rework QS tiles overlays for R
 
   ugly quick solution
 ---

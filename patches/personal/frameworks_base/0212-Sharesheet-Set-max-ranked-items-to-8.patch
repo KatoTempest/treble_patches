@@ -1,0 +1,27 @@
+From 8eb0386ec28da68e59a889e903a6157d49e7ba03 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Mon, 19 Jul 2021 18:46:53 +0000
+Subject: [PATCH 212/242] Sharesheet: Set max ranked items to 8
+
+  from
+  https://github.com/LineageOS/android_frameworks_base/commit/e388fe787e4400e4bc427b359b0d659746d34250
+---
+ core/java/com/android/internal/app/ChooserActivity.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/java/com/android/internal/app/ChooserActivity.java b/core/java/com/android/internal/app/ChooserActivity.java
+index 796a557f45a..45714e4999a 100644
+--- a/core/java/com/android/internal/app/ChooserActivity.java
++++ b/core/java/com/android/internal/app/ChooserActivity.java
+@@ -2800,7 +2800,7 @@ public class ChooserActivity extends ResolverActivity implements
+ 
+     @Override // ChooserListCommunicator
+     public int getMaxRankedTargets() {
+-        return getMaxTargetsPerRow();
++        return MAX_TARGETS_PER_ROW_LANDSCAPE;
+     }
+ 
+     @Override // ChooserListCommunicator
+-- 
+2.30.2
+

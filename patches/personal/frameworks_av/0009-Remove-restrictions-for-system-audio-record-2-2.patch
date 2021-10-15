@@ -1,7 +1,7 @@
-From 52c061356c8fe4cc38e2a213d3b06b309fa97814 Mon Sep 17 00:00:00 2001
+From d78a38bdb8d986a5251e55470e2f3561443c3b6e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 6 Mar 2021 18:59:07 -0500
-Subject: [PATCH 09/11] Remove restrictions for system audio record [2/2]
+Subject: [PATCH 09/19] Remove restrictions for system audio record [2/2]
 
   from
   https://github.com/PixelExperience/frameworks_av/commit/71d98267160771e9efdc4eee7926fb7195dc2bc7

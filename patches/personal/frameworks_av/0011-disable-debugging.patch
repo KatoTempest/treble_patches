@@ -1,7 +1,7 @@
-From fadaebc2adbd5915c5cb0e7962cd5dabe1e791dc Mon Sep 17 00:00:00 2001
+From 74094e2c65e3debe7554afbda79cbb7ac2a16471 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:34:57 -0400
-Subject: [PATCH 11/11] disable debugging
+Subject: [PATCH 11/19] disable debugging
 
 ---
  camera/Android.bp                                  |  2 +-

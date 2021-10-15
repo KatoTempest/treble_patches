@@ -1,7 +1,7 @@
-From f3855543f18aea485236ac7e417d3e970d292177 Mon Sep 17 00:00:00 2001
+From 5c3f8b3adeb5d80fc326a219d7494b32998536ea Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:42:07 -0500
-Subject: [PATCH 02/11] nuplayer: Avoid crash when codec fails to load
+Subject: [PATCH 02/19] nuplayer: Avoid crash when codec fails to load
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/57a803dad25ae381ce7ab3c62e47cd9f94433009

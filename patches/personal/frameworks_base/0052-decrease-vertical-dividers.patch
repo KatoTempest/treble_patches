@@ -1,7 +1,7 @@
-From 3d42cc86531c71f757088b16da77dd10fefbb333 Mon Sep 17 00:00:00 2001
+From 87f10eda8bbaf902ce22bdaa8072ada1f21d47d3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 20 Dec 2019 02:39:13 +0200
-Subject: [PATCH 052/220] decrease vertical dividers
+Subject: [PATCH 052/242] decrease vertical dividers
 
 	modified:   packages/SystemUI/res/values/dimens.xml
 ---

@@ -1,7 +1,7 @@
-From 662f98bae6386d98f77d1f9d4521308c13beaa13 Mon Sep 17 00:00:00 2001
+From 9305764d432ecc8945df822ebdbfa624e9e4cbc9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 26 Oct 2020 14:23:12 -0400
-Subject: [PATCH 046/220] add navbar inversion logic
+Subject: [PATCH 046/242] add navbar inversion logic
 
   based on
   https://github.com/LineageOS/android_frameworks_base/commit/e1f96c674a2ed4f793b7d7ce61e31a4db585f146

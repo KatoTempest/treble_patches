@@ -1,7 +1,7 @@
-From 1ed7aed6c79d03f58beb7884b653251fad2b9083 Mon Sep 17 00:00:00 2001
+From 0a25aa2ab49e640aba7eafe5b0434d9a685a833e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 14:34:48 -0500
-Subject: [PATCH 125/220] SystemUI: Disable blur wakeup animation
+Subject: [PATCH 125/242] SystemUI: Disable blur wakeup animation
 
   from
   https://github.com/syberia-project/platform_frameworks_base/commit/13d76a60e57caa65f1fc760b5e646d33c661370a

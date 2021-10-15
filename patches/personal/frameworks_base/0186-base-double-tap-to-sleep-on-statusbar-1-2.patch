@@ -1,0 +1,320 @@
+From b9548e8a10f7c14a1c69ddecf3ff2b206e807a53 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sun, 7 Mar 2021 02:18:19 -0500
+Subject: [PATCH 186/242] base: double tap to sleep on statusbar [1/2]
+
+  from
+  https://github.com/ArrowOS/android_frameworks_base/commit/4e5beb5e66761d232b03250c16dc300ec8618940
+---
+ core/java/android/provider/Settings.java      |  7 ++++
+ .../settings/backup/SystemSettings.java       |  1 +
+ .../validators/SystemSettingsValidators.java  |  1 +
+ .../systemui/statusbar/DragDownHelper.java    | 37 +++++++++++++++++++
+ .../NotificationPanelViewController.java      | 29 +++++++++++++++
+ ...NotificationShadeWindowViewController.java | 12 ++++++
+ .../statusbar/phone/PanelViewController.java  |  4 +-
+ .../systemui/statusbar/phone/StatusBar.java   | 30 +++++++++++++++
+ 8 files changed, 120 insertions(+), 1 deletion(-)
+
+diff --git a/core/java/android/provider/Settings.java b/core/java/android/provider/Settings.java
+index 695f70916dc..cabf66c4db7 100755
+--- a/core/java/android/provider/Settings.java
++++ b/core/java/android/provider/Settings.java
+@@ -4804,6 +4804,12 @@ public final class Settings {
+          */
+         public static final String NOTIFICATION_HEADERS = "notification_headers";
+ 
++        /**
++         * Enable statusbar double tap gesture on to put device to sleep
++         * @hide
++         */
++        public static final String DOUBLE_TAP_SLEEP_GESTURE = "double_tap_sleep_gesture";
++
+         /**
+          * IMPORTANT: If you add a new public settings you also have to add it to
+          * PUBLIC_SETTINGS below. If the new setting is hidden you have to add
+@@ -4930,6 +4936,7 @@ public final class Settings {
+             PRIVATE_SETTINGS.add(EGG_MODE);
+             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
+             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
++            PRIVATE_SETTINGS.add(DOUBLE_TAP_SLEEP_GESTURE);
+         }
+ 
+         /**
+diff --git a/packages/SettingsProvider/src/android/provider/settings/backup/SystemSettings.java b/packages/SettingsProvider/src/android/provider/settings/backup/SystemSettings.java
+index 4c99188a054..a824a68be07 100644
+--- a/packages/SettingsProvider/src/android/provider/settings/backup/SystemSettings.java
++++ b/packages/SettingsProvider/src/android/provider/settings/backup/SystemSettings.java
+@@ -85,5 +85,6 @@ public class SystemSettings {
+         Settings.System.ALARM_ALERT,
+         Settings.System.NOTIFICATION_LIGHT_PULSE,
+         Settings.System.NOTIFICATION_HEADERS,
++        Settings.System.DOUBLE_TAP_SLEEP_GESTURE,
+     };
+ }
+diff --git a/packages/SettingsProvider/src/android/provider/settings/validators/SystemSettingsValidators.java b/packages/SettingsProvider/src/android/provider/settings/validators/SystemSettingsValidators.java
+index 5c77e28d7b6..2b42fb9e613 100644
+--- a/packages/SettingsProvider/src/android/provider/settings/validators/SystemSettingsValidators.java
++++ b/packages/SettingsProvider/src/android/provider/settings/validators/SystemSettingsValidators.java
+@@ -209,5 +209,6 @@ public class SystemSettingsValidators {
+         VALIDATORS.put(System.SHOW_BATTERY_PERCENT, BOOLEAN_VALIDATOR);
+         VALIDATORS.put(System.NOTIFICATION_LIGHT_PULSE, BOOLEAN_VALIDATOR);
+         VALIDATORS.put(System.NOTIFICATION_HEADERS, BOOLEAN_VALIDATOR);
++        VALIDATORS.put(System.DOUBLE_TAP_SLEEP_GESTURE, BOOLEAN_VALIDATOR);
+     }
+ }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/DragDownHelper.java b/packages/SystemUI/src/com/android/systemui/statusbar/DragDownHelper.java
+index e61e05a7dc2..1288e1338d5 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/DragDownHelper.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/DragDownHelper.java
+@@ -23,6 +23,8 @@ import android.animation.AnimatorListenerAdapter;
+ import android.animation.ObjectAnimator;
+ import android.animation.ValueAnimator;
+ import android.content.Context;
++import android.os.PowerManager;
++import android.util.Log;
+ import android.view.MotionEvent;
+ import android.view.View;
+ import android.view.ViewConfiguration;
+@@ -60,6 +62,12 @@ public class DragDownHelper implements Gefingerpoken {
+     private float mLastHeight;
+     private FalsingManager mFalsingManager;
+ 
++    private boolean mDoubleTapToSleepEnabled;
++    private int mStatusBarHeaderHeight;
++    private long mLastDownEvent = -1;
++    private long mDoubleTapTimeout;
++    private Runnable mGoToSleep;
++
+     public DragDownHelper(Context context, View host, ExpandHelper.Callback callback,
+             DragDownCallback dragDownCallback,
+             FalsingManager falsingManager) {
+@@ -72,6 +80,18 @@ public class DragDownHelper implements Gefingerpoken {
+         mDragDownCallback = dragDownCallback;
+         mHost = host;
+         mFalsingManager = falsingManager;
++        mDoubleTapTimeout = ViewConfiguration.get(context).getDoubleTapTimeout();
++        mStatusBarHeaderHeight = context
++                .getResources().getDimensionPixelSize(R.dimen.status_bar_header_height_keyguard);
++        mGoToSleep = new Runnable() {
++            @Override
++            public void run() {
++                PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
++                if(pm != null) {
++                    pm.goToSleep(mLastDownEvent);
++                }
++            }
++        };
+     }
+ 
+     @Override
+@@ -86,6 +106,20 @@ public class DragDownHelper implements Gefingerpoken {
+                 mStartingChild = null;
+                 mInitialTouchY = y;
+                 mInitialTouchX = x;
++
++                if (mDoubleTapToSleepEnabled && y < mStatusBarHeaderHeight) {
++                    long eventTime = event.getEventTime();
++                    if (mLastDownEvent != -1) {
++                        long diff = eventTime - mLastDownEvent;
++
++                        if (diff < mDoubleTapTimeout) {
++                            mGoToSleep.run();
++                        }
++                        mLastDownEvent = -1;
++                    } else {
++                        mLastDownEvent = eventTime;
++                    }
++                }
+                 break;
+ 
+             case MotionEvent.ACTION_MOVE:
+@@ -283,4 +317,7 @@ public class DragDownHelper implements Gefingerpoken {
+          */
+         boolean isDragDownAnywhereEnabled();
+     }
++    public void updateDoubleTapToSleep(boolean updateDoubleTapToSleep) {
++        mDoubleTapToSleepEnabled = updateDoubleTapToSleep;
++    }
+ }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
+index 53cbf02e57f..34545a580ef 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationPanelViewController.java
+@@ -30,6 +30,7 @@ import android.animation.ValueAnimator;
+ import android.app.ActivityManager;
+ import android.app.Fragment;
+ import android.app.StatusBarManager;
++import android.content.Context;
+ import android.content.pm.ResolveInfo;
+ import android.content.res.Configuration;
+ import android.graphics.Canvas;
+@@ -46,6 +47,7 @@ import android.os.PowerManager;
+ import android.os.SystemClock;
+ import android.util.Log;
+ import android.util.MathUtils;
++import android.view.GestureDetector;
+ import android.view.LayoutInflater;
+ import android.view.MotionEvent;
+ import android.view.VelocityTracker;
+@@ -475,6 +477,9 @@ public class NotificationPanelViewController extends PanelViewController {
+         }
+     };
+ 
++    private int mStatusBarHeaderHeight;
++    private GestureDetector mDoubleTapGesture;
++
+     @Inject
+     public NotificationPanelViewController(NotificationPanelView view,
+             InjectionInflationController injectionInflationController,
+@@ -560,6 +565,18 @@ public class NotificationPanelViewController extends PanelViewController {
+         mEntryManager = notificationEntryManager;
+         mConversationNotificationManager = conversationNotificationManager;
+ 
++
++        mDoubleTapGesture = new GestureDetector(mView.getContext(), new GestureDetector.SimpleOnGestureListener() {
++            @Override
++            public boolean onDoubleTap(MotionEvent e) {
++                PowerManager pm = (PowerManager) mView.getContext().getSystemService(Context.POWER_SERVICE);
++                if(pm != null) {
++                    pm.goToSleep(e.getEventTime());
++                }
++                return true;
++            }
++        });
++
+         mView.setBackgroundColor(Color.TRANSPARENT);
+         OnAttachStateChangeListener onAttachStateChangeListener = new OnAttachStateChangeListener();
+         mView.addOnAttachStateChangeListener(onAttachStateChangeListener);
+@@ -651,6 +668,8 @@ public class NotificationPanelViewController extends PanelViewController {
+                 com.android.internal.R.dimen.status_bar_height);
+         mHeadsUpInset = statusbarHeight + mResources.getDimensionPixelSize(
+                 R.dimen.heads_up_status_bar_padding);
++        mStatusBarHeaderHeight = mResources.getDimensionPixelSize(
++                R.dimen.status_bar_height);
+     }
+ 
+     /**
+@@ -3159,6 +3178,12 @@ public class NotificationPanelViewController extends PanelViewController {
+                     return false;
+                 }
+ 
++                if (!mQsExpanded
++                        && mDoubleTapToSleepEnabled
++                        && event.getY() < mStatusBarHeaderHeight) {
++                   mDoubleTapGesture.onTouchEvent(event);
++                }
++
+                 // Make sure the next touch won't the blocked after the current ends.
+                 if (event.getAction() == MotionEvent.ACTION_UP
+                         || event.getAction() == MotionEvent.ACTION_CANCEL) {
+@@ -3760,4 +3785,8 @@ public class NotificationPanelViewController extends PanelViewController {
+             return insets;
+         }
+     }
++
++    public void updateDoubleTapToSleep(boolean doubleTapToSleepEnabled) {
++        mDoubleTapToSleepEnabled = doubleTapToSleepEnabled;
++    }
+ }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationShadeWindowViewController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationShadeWindowViewController.java
+index 42222d72489..3d5955a3e1a 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationShadeWindowViewController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/NotificationShadeWindowViewController.java
+@@ -481,4 +481,16 @@ public class NotificationShadeWindowViewController {
+                 mTempLocation[1] + view.getHeight());
+         return mTempRect.contains(x, y);
+     }
++
++    public void updateSettings() {
++        boolean doubleTapToSleepEnabled = Settings.System.getIntForUser(
++                mView.getContext().getContentResolver(), Settings.System.DOUBLE_TAP_SLEEP_GESTURE, 0,
++                UserHandle.USER_CURRENT) == 1;
++        if (mNotificationPanelViewController != null) {
++            mNotificationPanelViewController.updateDoubleTapToSleep(doubleTapToSleepEnabled);
++        }
++        if (mDragDownHelper != null) {
++            mDragDownHelper.updateDoubleTapToSleep(doubleTapToSleepEnabled);
++        }
++    }
+ }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
+index 491a0dbb7f1..34004f9e1fa 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PanelViewController.java
+@@ -156,6 +156,8 @@ public abstract class PanelViewController {
+     protected final KeyguardStateController mKeyguardStateController;
+     protected final SysuiStatusBarStateController mStatusBarStateController;
+ 
++    protected boolean mDoubleTapToSleepEnabled;
++
+     protected void onExpandingFinished() {
+         mBar.onExpandingFinished();
+     }
+@@ -1245,7 +1247,7 @@ public abstract class PanelViewController {
+                         onTrackingStarted();
+                     }
+                     if (isFullyCollapsed() && !mHeadsUpManager.hasPinnedHeadsUp()
+-                            && !mStatusBar.isBouncerShowing()) {
++                            && !mStatusBar.isBouncerShowing() && !mDoubleTapToSleepEnabled) {
+                         startOpening(event);
+                     }
+                     break;
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+index 81a61817e1e..9679860c9aa 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBar.java
+@@ -73,6 +73,7 @@ import android.content.pm.IPackageManager;
+ import android.content.pm.PackageManager;
+ import android.content.pm.PackageManager.NameNotFoundException;
+ import android.content.res.Configuration;
++import android.database.ContentObserver;
+ import android.graphics.Point;
+ import android.graphics.PointF;
+ import android.media.AudioAttributes;
+@@ -646,6 +647,31 @@ public class StatusBar extends SystemUI implements DemoMode,
+ 
+     private ActivityIntentHelper mActivityIntentHelper;
+ 
++    private class CustomSettingsObserver extends ContentObserver {
++        CustomSettingsObserver(Handler handler) {
++            super(handler);
++        }
++
++        void observe() {
++            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
++                    Settings.System.DOUBLE_TAP_SLEEP_GESTURE),
++                    false, this, UserHandle.USER_ALL);
++        }
++
++        @Override
++        public void onChange(boolean selfChange) {
++            update();
++        }
++
++        public void update() {
++            if (mNotificationShadeWindowViewController != null) {
++                mNotificationShadeWindowViewController.updateSettings();
++            }
++        }
++    }
++
++    private CustomSettingsObserver mCustomSettingsObserver;
++
+     /**
+      * Public constructor for StatusBar.
+      *
+@@ -998,6 +1024,10 @@ public class StatusBar extends SystemUI implements DemoMode,
+                         }
+                     }
+                 }, OverlayPlugin.class, true /* Allow multiple plugins */);
++
++        mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
++        mCustomSettingsObserver.observe();
++        mCustomSettingsObserver.update();
+     }
+ 
+     // ================================================================================
+-- 
+2.30.2
+

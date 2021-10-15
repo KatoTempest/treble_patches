@@ -1,0 +1,35 @@
+From b1460ba9979d8ddb38e5c52db14fe58df7d30e36 Mon Sep 17 00:00:00 2001
+From: Deve <deveee@gmail.com>
+Date: Wed, 21 Apr 2021 11:33:59 +0200
+Subject: [PATCH 242/242] Fixed a crash in settings in tts engine selection
+ screen.
+
+The crash happens when you try to uninstall current tts
+engine and install a different one and then engine name
+may be null.
+
+If engine name is null then you can't select new engine
+because of that crash, so that whole tts feature becomes
+unusable.
+
+Change-Id: Ie31a947eb6444242e8536db2dae1452ef74cc1ce
+---
+ core/java/android/speech/tts/TtsEngines.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/core/java/android/speech/tts/TtsEngines.java b/core/java/android/speech/tts/TtsEngines.java
+index a8aea7c1eb5..3697b949494 100644
+--- a/core/java/android/speech/tts/TtsEngines.java
++++ b/core/java/android/speech/tts/TtsEngines.java
+@@ -498,7 +498,7 @@ public class TtsEngines {
+      * specific preference in the list.
+      */
+     private static String parseEnginePrefFromList(String prefValue, String engineName) {
+-        if (TextUtils.isEmpty(prefValue)) {
++        if (TextUtils.isEmpty(prefValue) || TextUtils.isEmpty(engineName)) {
+             return null;
+         }
+ 
+-- 
+2.30.2
+

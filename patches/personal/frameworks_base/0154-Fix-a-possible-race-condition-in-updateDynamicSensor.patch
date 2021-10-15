@@ -1,7 +1,7 @@
-From 306708d9677ce63df0d43b26ffcdd83480a585d6 Mon Sep 17 00:00:00 2001
+From b4c850d310853f5ef6c4b02756026f89490cbf53 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 17 Dec 2020 14:34:08 -0500
-Subject: [PATCH 154/220] Fix a possible race condition in
+Subject: [PATCH 154/242] Fix a possible race condition in
  updateDynamicSensorList()
 
   from

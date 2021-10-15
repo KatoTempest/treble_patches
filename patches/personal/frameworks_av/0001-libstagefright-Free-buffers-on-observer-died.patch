@@ -1,7 +1,7 @@
-From a30dc5a32ce59171f048a97bb4462cc2a3598515 Mon Sep 17 00:00:00 2001
+From 9725a6a01e701f96317fa47020e79c1e95f99481 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:41:25 -0500
-Subject: [PATCH 01/11] libstagefright: Free buffers on observer died
+Subject: [PATCH 01/19] libstagefright: Free buffers on observer died
 
   from
   https://github.com/ezio84/abc_frameworks_av/commit/57fde3dba0c731872877a1b3f1a8bf5e2809de00

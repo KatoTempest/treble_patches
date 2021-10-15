@@ -1,7 +1,7 @@
-From f97606f5ea1f6077092af3a9b4d365f641fac1bd Mon Sep 17 00:00:00 2001
+From 513a3522a3bada084f9f0a564f5c2b8e255189d9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 14 Dec 2019 14:14:32 +0200
-Subject: [PATCH 001/220] tuning statusbar looking
+Subject: [PATCH 001/242] tuning statusbar looking
 
 	modified:   core/res/res/values/dimens.xml
 	modified:   packages/SystemUI/res/drawable/stat_sys_alarm.xml

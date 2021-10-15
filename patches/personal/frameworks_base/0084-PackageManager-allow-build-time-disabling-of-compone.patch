@@ -1,7 +1,7 @@
-From c71d0ea03b3af6f14fdffb672d0d2ce8c46ae630 Mon Sep 17 00:00:00 2001
+From 9b352a0fde31bfdc18786348329f09013ca8c6f6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 05:10:45 -0500
-Subject: [PATCH 084/220] PackageManager: allow build-time disabling of
+Subject: [PATCH 084/242] PackageManager: allow build-time disabling of
  components
 
   * based on
@@ -87,7 +87,7 @@ index 82f44125a11..78180dd8d7d 100644
 +    <java-symbol type="array" name="config_forceEnabledComponents" />
  </resources>
 diff --git a/services/core/java/com/android/server/pm/PackageManagerService.java b/services/core/java/com/android/server/pm/PackageManagerService.java
-index bf01c2251df..5f048b1e098 100644
+index 24ff41af059..592e8b23ed5 100644
 --- a/services/core/java/com/android/server/pm/PackageManagerService.java
 +++ b/services/core/java/com/android/server/pm/PackageManagerService.java
 @@ -1479,6 +1479,8 @@ public class PackageManagerService extends IPackageManager.Stub
@@ -147,7 +147,7 @@ index bf01c2251df..5f048b1e098 100644
      /**
       * Uncompress and install stub applications.
       * <p>In order to save space on the system partition, some applications are shipped in a
-@@ -20990,6 +21026,12 @@ public class PackageManagerService extends IPackageManager.Stub
+@@ -20996,6 +21032,12 @@ public class PackageManagerService extends IPackageManager.Stub
      public void setComponentEnabledSetting(ComponentName componentName,
              int newState, int flags, int userId) {
          if (!mUserManager.exists(userId)) return;
