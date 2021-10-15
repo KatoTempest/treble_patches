@@ -1,0 +1,64 @@
+From a3dbdabf8db61e0de6a794b0b3368eb45042fcad Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Wed, 8 Jul 2020 05:51:58 +0300
+Subject: [PATCH 033/254] settings: add 1.2x animation scales
+
+---
+ packages/SettingsLib/res/values/arrays.xml | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/packages/SettingsLib/res/values/arrays.xml b/packages/SettingsLib/res/values/arrays.xml
+index 8b8c25c8e70..4ac8226de44 100644
+--- a/packages/SettingsLib/res/values/arrays.xml
++++ b/packages/SettingsLib/res/values/arrays.xml
+@@ -353,6 +353,7 @@
+         <item>Animation scale .5x</item>
+         <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
++        <item>Animation scale 1.2x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+         <item>Animation scale 5x</item>
+@@ -366,6 +367,7 @@
+         <item>.5</item>
+         <item>.8</item>
+         <item>1</item>
++        <item>1.2</item>
+         <item>1.5</item>
+         <item>2</item>
+         <item>5</item>
+@@ -379,6 +381,7 @@
+         <item>Animation scale .5x</item>
+         <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
++        <item>Animation scale 1.2x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+         <item>Animation scale 5x</item>
+@@ -392,6 +395,7 @@
+         <item>.5</item>
+         <item>.8</item>
+         <item>1</item>
++        <item>1.2</item>
+         <item>1.5</item>
+         <item>2</item>
+         <item>5</item>
+@@ -405,6 +409,7 @@
+         <item>Animation scale .5x</item>
+         <item>Animation scale .8x</item>
+         <item>Animation scale 1x</item>
++        <item>Animation scale 1.2x</item>
+         <item>Animation scale 1.5x</item>
+         <item>Animation scale 2x</item>
+         <item>Animation scale 5x</item>
+@@ -418,6 +423,7 @@
+         <item>.5</item>
+         <item>.8</item>
+         <item>1</item>
++        <item>1.2</item>
+         <item>1.5</item>
+         <item>2</item>
+         <item>5</item>
+-- 
+2.30.2
+

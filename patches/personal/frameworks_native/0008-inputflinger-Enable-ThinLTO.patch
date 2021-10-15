@@ -1,4 +1,4 @@
-From 733b2683c00af32decbf5993145aa66e1dda9e01 Mon Sep 17 00:00:00 2001
+From 6e6801c14350c38332ee59f6d79dc2a0ad292012 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 6 May 2021 14:16:01 -0400
 Subject: [PATCH 08/12] inputflinger: Enable ThinLTO

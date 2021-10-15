@@ -1,7 +1,7 @@
-From 384b34ac5aaff3901610533f196044cf8cf1b57c Mon Sep 17 00:00:00 2001
+From f64b80a3263b265a91a04cb83425da18d673ce93 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 19 May 2021 16:05:41 -0400
-Subject: [PATCH 35/40] rw-system: set setprop debug.sf.latch_unsignaled for
+Subject: [PATCH 35/42] rw-system: set setprop debug.sf.latch_unsignaled for
  (all)
 
   !!! EXPERIMENTAL !!!
@@ -10,7 +10,7 @@ Subject: [PATCH 35/40] rw-system: set setprop debug.sf.latch_unsignaled for
  1 file changed, 5 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index d3987ff..987fe81 100644
+index 079d3e6..73ddcd3 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -527,6 +527,11 @@ if busybox_phh unzip -p /vendor/app/ims/ims.apk classes.dex | grep -qF -e Landro

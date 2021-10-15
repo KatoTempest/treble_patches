@@ -1,4 +1,4 @@
-From 1e368e186df5f480c3d0cb8ffe2d0483b6b4dbf3 Mon Sep 17 00:00:00 2001
+From 8722c252be3e92f73c02ee9ea79d8d0145ccc0d6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 19 Jul 2021 18:31:49 +0000
 Subject: [PATCH 11/12] Properly scale touch input window through resolution
@@ -11,10 +11,10 @@ Subject: [PATCH 11/12] Properly scale touch input window through resolution
  1 file changed, 1 insertion(+), 6 deletions(-)
 
 diff --git a/services/inputflinger/reader/mapper/TouchInputMapper.cpp b/services/inputflinger/reader/mapper/TouchInputMapper.cpp
-index 99a572a5f..4177e5c2c 100644
+index decbea4c3..6a62c750f 100644
 --- a/services/inputflinger/reader/mapper/TouchInputMapper.cpp
 +++ b/services/inputflinger/reader/mapper/TouchInputMapper.cpp
-@@ -3653,13 +3653,8 @@ void TouchInputMapper::rotateAndScale(float& x, float& y) {
+@@ -3654,13 +3654,8 @@ void TouchInputMapper::rotateAndScale(float& x, float& y) {
  }
  
  bool TouchInputMapper::isPointInsideSurface(int32_t x, int32_t y) {

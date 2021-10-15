@@ -1,0 +1,144 @@
+From 283c392d78bd9797e47c3d055f55e875453366d1 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Sat, 9 Oct 2021 22:08:53 +0000
+Subject: [PATCH 254/254] rework network traffic indicator
+
+---
+ .../stat_sys_network_traffic_updown.xml       | 26 -------------------
+ .../SystemUI/res/values/custom_dimens.xml     |  4 +--
+ .../statusbar/policy/NetworkTrafficSB.java    | 26 +------------------
+ 3 files changed, 2 insertions(+), 54 deletions(-)
+ delete mode 100644 packages/SystemUI/res/drawable/stat_sys_network_traffic_updown.xml
+
+diff --git a/packages/SystemUI/res/drawable/stat_sys_network_traffic_updown.xml b/packages/SystemUI/res/drawable/stat_sys_network_traffic_updown.xml
+deleted file mode 100644
+index b6fc1288ee2..00000000000
+--- a/packages/SystemUI/res/drawable/stat_sys_network_traffic_updown.xml
++++ /dev/null
+@@ -1,26 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<!--
+-    Copyright (C) 2017 The Android Open Source Project
+-    Copyright (C) 2017 ABC rom
+-    Licensed under the Apache License, Version 2.0 (the "License");
+-    you may not use this file except in compliance with the License.
+-    You may obtain a copy of the License at
+-        http://www.apache.org/licenses/LICENSE-2.0
+-    Unless required by applicable law or agreed to in writing, software
+-    distributed under the License is distributed on an "AS IS" BASIS,
+-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+-    See the License for the specific language governing permissions and
+-    limitations under the License.
+--->
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-        android:width="5dp"
+-        android:height="17.0dp"
+-        android:viewportWidth="7.1"
+-        android:viewportHeight="24.0">
+-    <path
+-        android:fillColor="#ffffff"
+-        android:pathData="M3.6000004,10.8l3.5,0.0 -3.5,-7.3 0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0 -3.6,7.3z"/>
+-    <path
+-        android:fillColor="#ffffff"
+-        android:pathData="M3.6000004,13.2l-3.6,0.0 3.6,7.3 0.0,0.0 0.0,0.0 0.0,0.0 0.0,0.0 3.5,-7.3z"/>
+-</vector>
+diff --git a/packages/SystemUI/res/values/custom_dimens.xml b/packages/SystemUI/res/values/custom_dimens.xml
+index 67c057e782a..e3330525b99 100644
+--- a/packages/SystemUI/res/values/custom_dimens.xml
++++ b/packages/SystemUI/res/values/custom_dimens.xml
+@@ -17,8 +17,6 @@
+ -->
+ <resources>
+     <dimen name="screenrecord_dot_size">48dp</dimen>
+-
+     <!-- Network traffic monitor -->
+-    <dimen name="net_traffic_multi_text_size">8dp</dimen>
+-    <dimen name="net_traffic_txt_img_padding">2dp</dimen>
++    <dimen name="net_traffic_multi_text_size">7dp</dimen>
+ </resources>
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+index e528608a8d3..438bbeef212 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+@@ -64,7 +64,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+     private long totalTxBytes;
+     private long lastUpdateTime;
+     private int txtSize;
+-    private int txtImgPadding;
+     private int mAutoHideThreshold;
+     private int mTintColor;
+     private int mVisibleState = -1;
+@@ -111,6 +110,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+                 if (!output.contentEquals(getText())) {
+                     setGravity(Gravity.RIGHT | Gravity.CENTER_VERTICAL);
+                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
++                    setLineSpacing(0, 0.7f);
+                     setText(output);
+                 }
+                 mTrafficVisible = true;
+@@ -195,7 +195,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+         super(context, attrs, defStyle);
+         final Resources resources = getResources();
+         txtSize = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
+-        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_txt_img_padding);
+         mTintColor = resources.getColor(android.R.color.white);
+         Handler mHandler = new Handler();
+         SettingsObserver settingsObserver = new SettingsObserver(mHandler);
+@@ -262,7 +261,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+                 lastUpdateTime = SystemClock.elapsedRealtime();
+                 mTrafficHandler.sendEmptyMessage(1);
+             }
+-            updateTrafficDrawable();
+             return;
+         } else {
+             clearHandlerCallbacks();
+@@ -283,30 +281,10 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+         mTrafficHandler.removeMessages(1);
+     }
+ 
+-    private void updateTrafficDrawable() {
+-        int intTrafficDrawable;
+-        if (mIsEnabled) {
+-            intTrafficDrawable = R.drawable.stat_sys_network_traffic_updown;
+-        } else {
+-            intTrafficDrawable = 0;
+-        }
+-        if (intTrafficDrawable != 0) {
+-            Drawable d = getContext().getDrawable(intTrafficDrawable);
+-            d.setColorFilter(mTintColor, Mode.SRC_ATOP);
+-            setCompoundDrawablePadding(txtImgPadding);
+-            setCompoundDrawablesWithIntrinsicBounds(null, null, d, null);
+-        } else {
+-            setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+-        }
+-        setTextColor(mTintColor);
+-    }
+-
+     public void onDensityOrFontScaleChanged() {
+         final Resources resources = getResources();
+         txtSize = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
+-        txtImgPadding = resources.getDimensionPixelSize(R.dimen.net_traffic_multi_text_size);
+         setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
+-        setCompoundDrawablePadding(txtImgPadding);
+         setGravity(Gravity.RIGHT);
+     }
+ 
+@@ -314,7 +292,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+     public void onDarkChanged(Rect area, float darkIntensity, int tint) {
+         mTintColor = DarkIconDispatcher.getTint(area, this, tint);
+         setTextColor(mTintColor);
+-        updateTrafficDrawable();
+     }
+ 
+     @Override
+@@ -364,7 +341,6 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+     public void setStaticDrawableColor(int color) {
+         mTintColor = color;
+         setTextColor(mTintColor);
+-        updateTrafficDrawable();
+     }
+ 
+     @Override
+-- 
+2.30.2
+

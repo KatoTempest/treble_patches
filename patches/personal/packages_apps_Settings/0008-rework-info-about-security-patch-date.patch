@@ -1,7 +1,7 @@
-From fa9cf8fee0a458346b40ae060cf94e91455f39ae Mon Sep 17 00:00:00 2001
+From 2b43365d305958c9391c88991e50cce93a7b3c5c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 5 Feb 2020 14:33:45 +0200
-Subject: [PATCH 08/64] rework info about security patch date
+Subject: [PATCH 08/67] rework info about security patch date
 
   * based on
   https://github.com/LineageOS/android_packages_apps_Settings/commit/2fe6f351f98cb9456359182bcf902546b3dc638b#diff-fc3d9d607f2fdcc77bb9e90ba41e7389

@@ -1,7 +1,7 @@
-From ed2ddb1047c97ae0edfd991a4bc0efc22af950bc Mon Sep 17 00:00:00 2001
+From 677304fff3292d8c86ac6f0a9d57d43a5b3e73d1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 13 May 2021 13:29:00 -0400
-Subject: [PATCH 32/40] try to set building non-sparse image
+Subject: [PATCH 32/42] try to set building non-sparse image
 
 ---
  board-base.mk | 1 +

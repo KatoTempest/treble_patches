@@ -1,14 +1,14 @@
-From 6011ef612bacdb45ac993183c669506a979ca631 Mon Sep 17 00:00:00 2001
+From 8917b798e800287d4a90c86c4ba063c569845206 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 1 May 2021 15:55:21 -0400
-Subject: [PATCH 31/40] rework daisy keylayout
+Subject: [PATCH 31/42] rework daisy keylayout
 
 ---
  rw-system.sh | 28 ++++++++++++++--------------
  1 file changed, 14 insertions(+), 14 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index a1a88f0..6c8e63c 100644
+index 4ce2403..42c82d5 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -136,20 +136,6 @@ changeKeylayout() {

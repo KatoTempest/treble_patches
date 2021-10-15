@@ -1,7 +1,7 @@
-From b04a265ae5e54a8132c0e1abe46250aee04d9c40 Mon Sep 17 00:00:00 2001
+From 92e1cb9c3623717aa630c568b95a220ce5c0456e Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 19 Dec 2020 03:28:37 -0500
-Subject: [PATCH 14/64] Settings: Improve OverlayCategoryPreferenceController
+Subject: [PATCH 14/67] Settings: Improve OverlayCategoryPreferenceController
  for icon packs
 
   from

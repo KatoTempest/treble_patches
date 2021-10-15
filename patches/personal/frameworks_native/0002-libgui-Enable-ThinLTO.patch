@@ -1,4 +1,4 @@
-From 189d8e604f698e7a1533adc4b5d967646f97bb55 Mon Sep 17 00:00:00 2001
+From 1e1fb92891cdc7579ed1b5cabb581418c283ab44 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:17:15 -0400
 Subject: [PATCH 02/12] libgui: Enable ThinLTO

@@ -1,7 +1,7 @@
-From 21b41fbf5d456cf4d2883be290cadf3db0c7cbf4 Mon Sep 17 00:00:00 2001
+From aabdddd3c06fa1c3c07ef251fdb67246b37b8df3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 8 Feb 2021 06:06:02 -0500
-Subject: [PATCH 19/40] add Disable logging support
+Subject: [PATCH 19/42] add Disable logging support
 
 ---
  phh-prop-handler.sh | 18 ++++++++++++++++++

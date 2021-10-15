@@ -1,4 +1,4 @@
-From 91b44a87037394e79e0a91334a4c1b332739f98c Mon Sep 17 00:00:00 2001
+From bc068c006fa1f889b915162eb48edd74e6bf20dc Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:21:36 -0400
 Subject: [PATCH 03/12] libs: gui: switch to -O3

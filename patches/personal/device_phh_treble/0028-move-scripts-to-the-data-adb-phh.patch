@@ -1,7 +1,7 @@
-From 7b7103e0040e86a39a1ec179c5c38eea19040921 Mon Sep 17 00:00:00 2001
+From 4d6177756c73bed9f2a98979c0571ffe6f317bac Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 16 Apr 2021 09:06:32 -0400
-Subject: [PATCH 28/40] move scripts to the /data/adb/phh
+Subject: [PATCH 28/42] move scripts to the /data/adb/phh
 
   for security reason
 ---

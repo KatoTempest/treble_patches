@@ -1,0 +1,28 @@
+From cfe8a2e763da3afa738e06c7e078affa0813b804 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Thu, 17 Dec 2020 01:50:20 -0500
+Subject: [PATCH 133/254] Check UID's process state before restricting its
+ network
+
+  from
+  https://github.com/syberia-project/platform_frameworks_base/commit/63847da3e8c7a6bc5cbfb9cf70ac4e3e6c078b5d
+---
+ .../com/android/server/net/NetworkPolicyManagerService.java     | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
+index 4b494a41f74..d5c2d3be8c3 100644
+--- a/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
++++ b/services/core/java/com/android/server/net/NetworkPolicyManagerService.java
+@@ -3892,7 +3892,7 @@ public class NetworkPolicyManagerService extends INetworkPolicyManager.Stub {
+                         // quick check: if this uid doesn't have INTERNET permission, it
+                         // doesn't have network access anyway, so it is a waste to mess
+                         // with it here.
+-                        if (hasInternetPermissionUL(uid)) {
++                        if (hasInternetPermissionUL(uid) && !isUidForegroundOnRestrictPowerUL(uid)) {
+                             uidRules.put(uid, FIREWALL_RULE_DENY);
+                         }
+                     }
+-- 
+2.30.2
+

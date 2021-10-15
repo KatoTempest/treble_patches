@@ -1,0 +1,351 @@
+From d168a5051aebfd2f110a9b7e0db4ee5cc3a54168 Mon Sep 17 00:00:00 2001
+From: SpiritCroc <dev@spiritcroc.de>
+Date: Sun, 11 Nov 2018 13:01:56 +0000
+Subject: [PATCH 250/254] Add network traffic monitor properly to statusbar
+ icons
+
+Make it behave fine on devices that don't have much status bar space
+(e.g. because of a display cutout/"notch")
+
+Arrow edits:- nuke from status_bar.xml
+
+Change-Id: Icbb2715ae78ce06bd3b79dc23ff491db202985f2
+Signed-off-by: Josh Fox (XlxFoXxlX) <joshfox87@gmail.com>
+Signed-off-by: Arghya Chanda <arghyac35@gmail.com>
+Signed-off-by: Jayant-Deshmukh <jayantdeshmuk008@gmail.com>
+Signed-off-by: DennySPb <dennyspb@gmail.com>
+---
+ packages/SystemUI/res/layout/status_bar.xml   | 11 ---
+ .../phone/PhoneStatusBarTransitions.java      |  8 +-
+ .../phone/StatusBarIconController.java        | 17 +++++
+ .../statusbar/phone/StatusBarIconHolder.java  |  9 +++
+ .../statusbar/phone/StatusBarIconList.java    |  8 +-
+ .../statusbar/policy/NetworkTrafficSB.java    | 73 ++++++++++++++++++-
+ 6 files changed, 103 insertions(+), 23 deletions(-)
+
+diff --git a/packages/SystemUI/res/layout/status_bar.xml b/packages/SystemUI/res/layout/status_bar.xml
+index 0a7d3d6f2c7..1e37623258b 100644
+--- a/packages/SystemUI/res/layout/status_bar.xml
++++ b/packages/SystemUI/res/layout/status_bar.xml
+@@ -116,17 +116,6 @@
+             android:orientation="horizontal"
+             android:gravity="center_vertical|end"
+             >
+-
+-        <com.android.systemui.statusbar.policy.NetworkTrafficSB
+-            android:id="@+id/networkTraffic"
+-            android:layout_width="wrap_content"
+-            android:layout_height="match_parent"
+-            android:layout_marginStart="2dp"
+-            android:layout_marginEnd="2dp"
+-            android:singleLine="false"
+-            android:fontFamily="sans-serif-condensed"
+-            android:gravity="right|center_vertical"/>
+-
+             <include layout="@layout/system_icons" />
+         </com.android.keyguard.AlphaOptimizedLinearLayout>
+     </LinearLayout>
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBarTransitions.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBarTransitions.java
+index a0bf01833e6..2052ee6cdac 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBarTransitions.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/PhoneStatusBarTransitions.java
+@@ -31,7 +31,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
+ 
+     private final float mIconAlphaWhenOpaque;
+ 
+-    private View mLeftSide, mStatusIcons, mBattery, mNetworkTraffic;
++    private View mLeftSide, mStatusIcons, mBattery;
+     private Animator mCurrentAnimation;
+ 
+     /**
+@@ -44,7 +44,6 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
+         mLeftSide = statusBarView.findViewById(R.id.status_bar_left_side);
+         mStatusIcons = statusBarView.findViewById(R.id.statusIcons);
+         mBattery = statusBarView.findViewById(R.id.battery);
+-        mNetworkTraffic = mView.findViewById(R.id.networkTraffic);
+         applyModeBackground(-1, getMode(), false /*animate*/);
+         applyMode(getMode(), false /*animate*/);
+     }
+@@ -87,9 +86,7 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
+             anims.playTogether(
+                     animateTransitionTo(mLeftSide, newAlpha),
+                     animateTransitionTo(mStatusIcons, newAlpha),
+-                    animateTransitionTo(mBattery, newAlphaBC),
+-                    animateTransitionTo(mNetworkTraffic, newAlpha)
+-
++                    animateTransitionTo(mBattery, newAlphaBC)
+                     );
+             if (isLightsOut(mode)) {
+                 anims.setDuration(LIGHTS_OUT_DURATION);
+@@ -100,7 +97,6 @@ public final class PhoneStatusBarTransitions extends BarTransitions {
+             mLeftSide.setAlpha(newAlpha);
+             mStatusIcons.setAlpha(newAlpha);
+             mBattery.setAlpha(newAlphaBC);
+-            mNetworkTraffic.setAlpha(newAlpha);
+         }
+     }
+ }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
+index 93df14f18fd..2f1d659f9b9 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
+@@ -19,6 +19,7 @@ import static android.app.StatusBarManager.DISABLE_NONE;
+ 
+ import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_ICON;
+ import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_MOBILE;
++import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_NETWORK_TRAFFIC;
+ import static com.android.systemui.statusbar.phone.StatusBarIconHolder.TYPE_WIFI;
+ 
+ import android.content.Context;
+@@ -47,6 +48,7 @@ import com.android.systemui.statusbar.StatusBarWifiView;
+ import com.android.systemui.statusbar.StatusIconDisplayable;
+ import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.MobileIconState;
+ import com.android.systemui.statusbar.phone.StatusBarSignalPolicy.WifiIconState;
++import com.android.systemui.statusbar.policy.NetworkTrafficSB;
+ import com.android.systemui.util.Utils.DisableStateTracker;
+ 
+ import java.util.List;
+@@ -260,6 +262,9 @@ public interface StatusBarIconController {
+ 
+                 case TYPE_MOBILE:
+                     return addMobileIcon(index, slot, holder.getMobileState());
++
++                case TYPE_NETWORK_TRAFFIC:
++                    return addNetworkTraffic(index, slot);
+             }
+ 
+             return null;
+@@ -286,6 +291,12 @@ public interface StatusBarIconController {
+             return view;
+         }
+ 
++        protected NetworkTrafficSB addNetworkTraffic(int index, String slot) {
++            NetworkTrafficSB view = onCreateNetworkTraffic(slot);
++            mGroup.addView(view, index, onCreateLayoutParams());
++            return view;
++        }
++
+         @VisibleForTesting
+         protected StatusBarMobileView addMobileIcon(int index, String slot, MobileIconState state) {
+             StatusBarMobileView view = onCreateStatusBarMobileView(slot);
+@@ -312,6 +323,12 @@ public interface StatusBarIconController {
+             return view;
+         }
+ 
++        private NetworkTrafficSB onCreateNetworkTraffic(String slot) {
++            NetworkTrafficSB view = new NetworkTrafficSB(mContext);
++            view.setPadding(2, 0, 2, 0);
++            return view;
++        }
++
+         protected LinearLayout.LayoutParams onCreateLayoutParams() {
+             return new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, mIconSize);
+         }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconHolder.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconHolder.java
+index 88d0035b333..78dcb3ada23 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconHolder.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconHolder.java
+@@ -32,6 +32,7 @@ public class StatusBarIconHolder {
+     public static final int TYPE_ICON = 0;
+     public static final int TYPE_WIFI = 1;
+     public static final int TYPE_MOBILE = 2;
++    public static final int TYPE_NETWORK_TRAFFIC = 42;
+ 
+     private StatusBarIcon mIcon;
+     private WifiIconState mWifiState;
+@@ -70,6 +71,12 @@ public class StatusBarIconHolder {
+         return holder;
+     }
+ 
++    public static StatusBarIconHolder fromNetworkTraffic() {
++        StatusBarIconHolder holder = new StatusBarIconHolder();
++        holder.mType = TYPE_NETWORK_TRAFFIC;
++        return holder;
++    }
++
+     public int getType() {
+         return mType;
+     }
+@@ -105,6 +112,8 @@ public class StatusBarIconHolder {
+                 return mWifiState.visible;
+             case TYPE_MOBILE:
+                 return mMobileState.visible;
++            case TYPE_NETWORK_TRAFFIC:
++                return true;
+ 
+             default: return true;
+         }
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconList.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconList.java
+index c876c3228eb..40855820e78 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconList.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconList.java
+@@ -27,6 +27,8 @@ import java.io.PrintWriter;
+ import java.util.ArrayList;
+ import java.util.List;
+ 
++import com.android.systemui.statusbar.policy.NetworkTrafficSB;
++
+ public class StatusBarIconList {
+     private ArrayList<Slot> mSlots = new ArrayList<>();
+ 
+@@ -35,6 +37,8 @@ public class StatusBarIconList {
+         for (int i=0; i < N; i++) {
+             mSlots.add(new Slot(slots[i], null));
+         }
++        // Network traffic slot
++        mSlots.add(0, new Slot(NetworkTrafficSB.SLOT, StatusBarIconHolder.fromNetworkTraffic()));
+     }
+ 
+     public int getSlotIndex(String slot) {
+@@ -45,8 +49,8 @@ public class StatusBarIconList {
+                 return i;
+             }
+         }
+-        // Auto insert new items at the beginning.
+-        mSlots.add(0, new Slot(slot, null));
++        // Auto insert new items behind network traffic
++        mSlots.add(1, new Slot(slot, null));
+         return 0;
+     }
+ 
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+index 318858e5750..a304acf80e3 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+@@ -1,5 +1,9 @@
+ package com.android.systemui.statusbar.policy;
+ 
++import static com.android.systemui.statusbar.StatusBarIconView.STATE_DOT;
++import static com.android.systemui.statusbar.StatusBarIconView.STATE_HIDDEN;
++import static com.android.systemui.statusbar.StatusBarIconView.STATE_ICON;
++
+ import java.text.DecimalFormat;
+ 
+ import android.content.BroadcastReceiver;
+@@ -29,6 +33,7 @@ import com.android.systemui.Dependency;
+ import com.android.systemui.R;
+ import com.android.systemui.plugins.DarkIconDispatcher;
+ import com.android.systemui.plugins.DarkIconDispatcher.DarkReceiver;
++import com.android.systemui.statusbar.StatusIconDisplayable;
+ 
+ /*
+ *
+@@ -36,7 +41,9 @@ import com.android.systemui.plugins.DarkIconDispatcher.DarkReceiver;
+ * to only use it for a single boolean. 32-bits is plenty of room for what we need it to do.
+ *
+ */
+-public class NetworkTrafficSB extends TextView  implements DarkReceiver {
++public class NetworkTrafficSB extends TextView implements StatusIconDisplayable {
++
++    public static final String SLOT = "networktraffic";
+ 
+     private static final int INTERVAL = 1500; //ms
+     private static final int KB = 1024;
+@@ -59,6 +66,9 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+     private int txtImgPadding;
+     private int mAutoHideThreshold;
+     private int mTintColor;
++    private int mVisibleState = -1;
++    private boolean mTrafficVisible = false;
++    private boolean mSystemIconVisible = true;
+ 
+     private boolean mScreenOn = true;
+ 
+@@ -87,7 +97,7 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+ 
+             if (shouldHide(rxData, txData, timeDelta)) {
+                 setText("");
+-                setVisibility(View.GONE);
++                mTrafficVisible = false;
+             } else {
+                 // Get information for uplink ready so the line return can be added
+                 String output = formatOutput(timeDelta, txData, symbol);
+@@ -101,8 +111,9 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+                     setTextSize(TypedValue.COMPLEX_UNIT_PX, (float)txtSize);
+                     setText(output);
+                 }
+-                setVisibility(View.VISIBLE);
++                mTrafficVisible = true;
+             }
++            updateVisibility();
+ 
+             // Post delayed message to refresh in ~1000ms
+             totalRxBytes = newTotalRxBytes;
+@@ -242,6 +253,7 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+     }
+ 
+     private void updateSettings() {
++        updateVisibility();
+         if (mIsEnabled) {
+             if (mAttached) {
+                 totalRxBytes = TrafficStats.getTotalRxBytes();
+@@ -253,7 +265,6 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+         } else {
+             clearHandlerCallbacks();
+         }
+-        setVisibility(View.GONE);
+     }
+ 
+     private void setMode() {
+@@ -302,4 +313,58 @@ public class NetworkTrafficSB extends TextView  implements DarkReceiver {
+         setTextColor(mTintColor);
+         updateTrafficDrawable();
+     }
++
++    @Override
++    public String getSlot() {
++        return SLOT;
++    }
++
++    @Override
++    public boolean isIconVisible() {
++        return mIsEnabled;
++    }
++
++    @Override
++    public int getVisibleState() {
++        return mVisibleState;
++    }
++
++    @Override
++    public void setVisibleState(int state, boolean mIsEnabled) {
++        if (state == mVisibleState) {
++            return;
++        }
++        mVisibleState = state;
++
++        switch (state) {
++            case STATE_ICON:
++                mSystemIconVisible = true;
++                break;
++            case STATE_DOT:
++            case STATE_HIDDEN:
++            default:
++                mSystemIconVisible = false;
++                break;
++        }
++        updateVisibility();
++    }
++
++    private void updateVisibility() {
++        if (mIsEnabled && mTrafficVisible && mSystemIconVisible) {
++            setVisibility(View.VISIBLE);
++        } else {
++            setVisibility(View.GONE);
++        }
++    }
++
++    @Override
++    public void setStaticDrawableColor(int color) {
++        mTintColor = color;
++        setTextColor(mTintColor);
++        updateTrafficDrawable();
++    }
++
++    @Override
++    public void setDecorColor(int color) {
++    }
+ }
+-- 
+2.30.2
+

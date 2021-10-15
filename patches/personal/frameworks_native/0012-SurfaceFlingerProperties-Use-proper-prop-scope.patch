@@ -1,4 +1,4 @@
-From b6938e10ec36f7887a362a620d5d52c4dcd61e38 Mon Sep 17 00:00:00 2001
+From 84272820c49a80d77da80524f117402f13bcd726 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 19 Jul 2021 18:41:25 +0000
 Subject: [PATCH 12/12] SurfaceFlingerProperties: Use proper prop scope

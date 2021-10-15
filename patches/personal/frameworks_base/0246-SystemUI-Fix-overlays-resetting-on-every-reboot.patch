@@ -1,0 +1,59 @@
+From 33eeb232982bcb87e7fb092d1036171d34f7fca0 Mon Sep 17 00:00:00 2001
+From: SagarMakhar <sagarmakhar@gmail.com>
+Date: Sat, 7 Aug 2021 16:42:47 +0000
+Subject: [PATCH 246/254] SystemUI: Fix overlays resetting on every reboot
+
+Change-Id: I9cd16f3e7c22e5bf50a0fafaf926417f7acb4509
+Signed-off-by: SagarMakhar <sagarmakhar@gmail.com>
+---
+ .../systemui/theme/ThemeOverlayController.java      | 13 ++++++++++++-
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java b/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java
+index f31f8eb0b20..0061639b7f6 100644
+--- a/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java
++++ b/packages/SystemUI/src/com/android/systemui/theme/ThemeOverlayController.java
+@@ -37,6 +37,7 @@ import com.android.systemui.R;
+ import com.android.systemui.SystemUI;
+ import com.android.systemui.broadcast.BroadcastDispatcher;
+ import com.android.systemui.dagger.qualifiers.Background;
++import com.android.systemui.settings.CurrentUserTracker;
+ 
+ import com.google.android.collect.Sets;
+ 
+@@ -69,6 +70,8 @@ public class ThemeOverlayController extends SystemUI {
+     private BroadcastDispatcher mBroadcastDispatcher;
+     private final Handler mBgHandler;
+ 
++    private CurrentUserTracker mUserTracker;
++
+     @Inject
+     public ThemeOverlayController(Context context, BroadcastDispatcher broadcastDispatcher,
+             @Background Handler bgHandler) {
+@@ -87,7 +90,6 @@ public class ThemeOverlayController extends SystemUI {
+                 mContext.getString(R.string.launcher_overlayable_package),
+                 mContext.getString(R.string.themepicker_overlayable_package));
+         final IntentFilter filter = new IntentFilter();
+-        filter.addAction(Intent.ACTION_USER_SWITCHED);
+         filter.addAction(Intent.ACTION_MANAGED_PROFILE_ADDED);
+         mBroadcastDispatcher.registerReceiverWithHandler(new BroadcastReceiver() {
+             @Override
+@@ -111,6 +113,15 @@ public class ThemeOverlayController extends SystemUI {
+                     }
+                 },
+                 UserHandle.USER_ALL);
++
++        mUserTracker = new CurrentUserTracker(mBroadcastDispatcher) {
++            @Override
++            public void onUserSwitched(int newUserId) {
++                if (DEBUG) Log.d(TAG, "onUserSwitched");
++                updateThemeOverlays();
++            }
++        };
++        mUserTracker.startTracking();
+     }
+ 
+     private void updateThemeOverlays() {
+-- 
+2.30.2
+

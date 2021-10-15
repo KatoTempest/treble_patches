@@ -1,7 +1,7 @@
-From 2f2f706e89f5156d5d1fc3fdcc5934c6f955c0fc Mon Sep 17 00:00:00 2001
+From 89e0b1969c76a737278d5c5bdd16180eb0f75162 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 9 Aug 2021 18:45:43 +0000
-Subject: [PATCH 38/40] Compile libhwui in perf mode
+Subject: [PATCH 38/42] Compile libhwui in perf mode
 
   from
   https://github.com/ArrowOS-Devices/device_xiaomi_msm8953-common/commit/ba59d14e5cb64e3484525284929d59efeed2d4dd

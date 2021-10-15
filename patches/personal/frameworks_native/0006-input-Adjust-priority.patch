@@ -1,4 +1,4 @@
-From 8d769ae62f66b22ef7167908fd884ca183ede58e Mon Sep 17 00:00:00 2001
+From a56d1debe4bcb14b9ffcd16db5885c72b842a331 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 27 Mar 2021 03:32:06 -0400
 Subject: [PATCH 06/12] input: Adjust priority

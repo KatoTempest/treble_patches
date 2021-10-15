@@ -1,0 +1,25 @@
+From a0c6f9420c6e9b9994518b9c6ed67426d74a0be1 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 13 Nov 2020 13:09:13 -0500
+Subject: [PATCH 055/254] remove emergency icon from global actions
+
+---
+ .../com/android/systemui/globalactions/GlobalActionsDialog.java | 2 --
+ 1 file changed, 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
+index ada39bb3484..02e2ff81ae2 100644
+--- a/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
++++ b/packages/SystemUI/src/com/android/systemui/globalactions/GlobalActionsDialog.java
+@@ -659,8 +659,6 @@ public class GlobalActionsDialog implements DialogInterface.OnDismissListener,
+                         && currentUser.get().id != UserHandle.USER_SYSTEM) {
+                     addIfShouldShowAction(tempActions, new LogoutAction());
+                 }
+-            } else if (GLOBAL_ACTION_KEY_EMERGENCY.equals(actionKey)) {
+-                addIfShouldShowAction(tempActions, new EmergencyDialerAction());
+             } else {
+                 Log.e(TAG, "Invalid global action key " + actionKey);
+             }
+-- 
+2.30.2
+

@@ -1,4 +1,4 @@
-From d8176f0576794fe795f70a502b458753fc214e36 Mon Sep 17 00:00:00 2001
+From c58ccad21ff7d0e3d613f1bdd870a0118761f6a8 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 24 May 2021 08:42:18 -0400
 Subject: [PATCH 10/12] more clang optimizations

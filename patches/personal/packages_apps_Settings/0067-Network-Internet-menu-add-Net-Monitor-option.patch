@@ -1,0 +1,68 @@
+From fb6194d7f0c3f15aaae44b7fc282ec6a991b213f Mon Sep 17 00:00:00 2001
+From: ezio84 <brabus84@gmail.com>
+Date: Sun, 22 Nov 2020 20:14:51 +0100
+Subject: [PATCH 67/67] Network & Internet menu: add Net Monitor option
+
+  simplified for GSI mods
+
+Change-Id: Ifcba4178b5a54ffcdba9fea2c8022d77b0160c0b
+---
+ res/values-it/custom_strings.xml | 2 ++
+ res/values-ru/custom_strings.xml | 2 ++
+ res/values/custom_strings.xml    | 2 ++
+ res/xml/network_and_internet.xml | 6 ++++++
+ 4 files changed, 12 insertions(+)
+
+diff --git a/res/values-it/custom_strings.xml b/res/values-it/custom_strings.xml
+index b727f3641c..aff6d1c895 100644
+--- a/res/values-it/custom_strings.xml
++++ b/res/values-it/custom_strings.xml
+@@ -14,4 +14,6 @@
+     <string name="smallest_tick_label">Off</string>
+     <string name="greatest_tick_label">Metà schermo</string>
+     <string name="gesture_back_deadzone_label">Zona morta</string>
++    <!-- Statusbar net monitor -->
++    <string name="network_traffic_state_title">Attiva monitor di rete</string>
+ </resources>
+diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
+index c3e15c68ed..3b5117c98c 100644
+--- a/res/values-ru/custom_strings.xml
++++ b/res/values-ru/custom_strings.xml
+@@ -93,4 +93,6 @@
+     <!-- P style network bar -->
+     <string name="use_old_mobiletype_title">Старый стиль иконок мобильной сети</string>
+     <string name="use_old_mobiletype_summary">Использовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
++    <!-- Statusbar net monitor -->
++    <string name="network_traffic_state_title">Включить индикатор трафика</string>
+ </resources>
+diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
+index f3c4ab7417..fdf942482e 100644
+--- a/res/values/custom_strings.xml
++++ b/res/values/custom_strings.xml
+@@ -91,4 +91,6 @@
+     <!-- P style network bar -->
+     <string name="use_old_mobiletype_title">Old mobiletype</string>
+     <string name="use_old_mobiletype_summary">Use pre-P mobiletype icons for signal\n(Reboot required)</string>
++    <!-- Statusbar net monitor -->
++    <string name="network_traffic_state_title">Enable network monitor</string>
+ </resources>
+diff --git a/res/xml/network_and_internet.xml b/res/xml/network_and_internet.xml
+index 60f88ba719..2d25276d5b 100644
+--- a/res/xml/network_and_internet.xml
++++ b/res/xml/network_and_internet.xml
+@@ -51,6 +51,12 @@
+         settings:userRestriction="no_config_mobile_networks"
+         settings:useAdminDisabledSummary="true" />
+ 
++    <com.caos.settings.preference.SystemSettingSwitchPreference
++        android:key="network_traffic_state"
++        android:title="@string/network_traffic_state_title"
++        android:order="-7"
++        android:defaultValue="true" />
++
+     <com.android.settingslib.RestrictedSwitchPreference
+         android:key="airplane_mode"
+         android:title="@string/airplane_mode"
+-- 
+2.30.2
+

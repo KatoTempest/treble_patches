@@ -1,7 +1,7 @@
-From 70b3c8545837877ee6a19c8dbe4c29417ceb9942 Mon Sep 17 00:00:00 2001
+From 109c863d484c0ecb570f4176428576a8760ccc64 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 16 Jan 2021 14:34:41 -0500
-Subject: [PATCH 16/40] set dynamic root services disabled
+Subject: [PATCH 16/42] set dynamic root services disabled
 
 ---
  zerodaemon/zerodaemon.rc | 1 +

@@ -1,4 +1,4 @@
-From 55608063412efa77f6bd51e9794ef6d7b11724be Mon Sep 17 00:00:00 2001
+From 22fc304cf8b4e42d884dce67b5812d7eee4cb75c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 24 Mar 2021 08:24:45 -0400
 Subject: [PATCH 04/12] surfaceflinger: switch to -O3

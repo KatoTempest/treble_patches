@@ -1,4 +1,4 @@
-From 6e5d669de3a39f25c019e9ded07755e900f93fea Mon Sep 17 00:00:00 2001
+From 767160553cedd734570dc952a9f0ca6b4bfe62e9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 18 Apr 2020 21:22:26 +0300
 Subject: [PATCH 01/12] Revert "Add suspend_resume trace events to the atrace

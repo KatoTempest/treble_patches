@@ -1,7 +1,7 @@
-From ade871eb722d2e8543be5d24a2baded1d1f3a0d3 Mon Sep 17 00:00:00 2001
+From c1c25cdc35d4501c6394332b55f1dfcd94701508 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 11 Mar 2020 20:20:05 +0200
-Subject: [PATCH 52/64] add three-fingers-swipe to screenshot [2/2]
+Subject: [PATCH 52/67] add three-fingers-swipe to screenshot [2/2]
 
   * based on
   https://github.com/Evolution-X/packages_apps_Evolver/commit/1b64fadf5debcda66382763312d77867bbb8be78

@@ -1,7 +1,7 @@
-From c43e45580f4738d74e4b6422a64538f12dfaf07b Mon Sep 17 00:00:00 2001
+From 563bf9d7662ec74f14aa475621de379af4529efb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 18 Dec 2020 01:53:22 -0500
-Subject: [PATCH 57/64] Enable experimental features controller even on user
+Subject: [PATCH 57/67] Enable experimental features controller even on user
  builds
 
   from

@@ -1,0 +1,36 @@
+From 43f3ed6ccc5f8d3e771623d06c53010dc1a57d08 Mon Sep 17 00:00:00 2001
+From: ganeshi4u <ganeshvarmai4u@gmail.com>
+Date: Tue, 1 Oct 2019 10:41:33 +0200
+Subject: [PATCH 252/254] TrafficSB: Pass the animate bool
+
+- this should fix the indicator acting wonky according to this change
+  introduced here
+
+Refer:
+https://github.com/ArrowOS/android_frameworks_base/commit/620ea2c7550ea8817ae055dbf983bf5af525d6a4#diff-b4e0e9525d5c2d3dcd9c31861671714d
+
+Change-Id: I169f8586959a57e1b2b62a241800e107b5092902
+Signed-off-by: Josh Fox (XlxFoXxlX) <joshfox87@gmail.com>
+Signed-off-by: Arghya Chanda <arghyac35@gmail.com>
+Signed-off-by: Jayant-Deshmukh <jayantdeshmuk008@gmail.com>
+Signed-off-by: DennySPb <dennyspb@gmail.com>
+---
+ .../com/android/systemui/statusbar/policy/NetworkTrafficSB.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+index 88863c831da..e528608a8d3 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/policy/NetworkTrafficSB.java
+@@ -333,7 +333,7 @@ public class NetworkTrafficSB extends TextView implements StatusIconDisplayable
+     }
+ 
+     @Override
+-    public void setVisibleState(int state, boolean mIsEnabled) {
++    public void setVisibleState(int state, boolean animate) {
+         if (state == mVisibleState) {
+             return;
+         }
+-- 
+2.30.2
+

@@ -1,0 +1,55 @@
+From e34be450b346eeddb4fcc72826b098ba93ae7b45 Mon Sep 17 00:00:00 2001
+From: Victor Bo <bvoid@yandex.ru>
+Date: Fri, 27 Nov 2020 06:48:59 -0500
+Subject: [PATCH 101/254] fix SystemUI crash from null stored in non-nullable
+
+  from
+  https://github.com/GrapheneOS/platform_frameworks_base/commit/645b62334fe5d1421adcf4304155bcbda2b42645
+  https://github.com/GrapheneOS/platform_frameworks_base/commit/d3a1f5f34430c2f3aa42ff1f9ad0bc3f5e5d6f8f
+---
+ .../systemui/media/MediaDataManager.kt        | 22 +++++++++++--------
+ 1 file changed, 13 insertions(+), 9 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt b/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
+index 2d7aafc497d..42d3d708fce 100644
+--- a/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
++++ b/packages/SystemUI/src/com/android/systemui/media/MediaDataManager.kt
+@@ -424,14 +424,16 @@ class MediaDataManager(
+                         artWorkIcon.type == Icon.TYPE_ADAPTIVE_BITMAP) {
+                     artworkBitmap = artWorkIcon.bitmap
+                 } else {
+-                    val drawable: Drawable = artWorkIcon.loadDrawable(context)
+-                    artworkBitmap = Bitmap.createBitmap(
+-                            drawable.intrinsicWidth,
+-                            drawable.intrinsicHeight,
+-                            Bitmap.Config.ARGB_8888)
+-                    val canvas = Canvas(artworkBitmap)
+-                    drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
+-                    drawable.draw(canvas)
++                    val drawable: Drawable? = artWorkIcon.loadDrawable(context)
++                    if (drawable != null) {
++                        artworkBitmap = Bitmap.createBitmap(
++                                drawable.intrinsicWidth,
++                                drawable.intrinsicHeight,
++                                Bitmap.Config.ARGB_8888)
++                        val canvas = Canvas(artworkBitmap)
++                        drawable.setBounds(0, 0, drawable.intrinsicWidth, drawable.intrinsicHeight)
++                        drawable.draw(canvas)
++                    }
+                 }
+             }
+         }
+@@ -442,7 +444,9 @@ class MediaDataManager(
+         val app = builder.loadHeaderAppName()
+ 
+         // App Icon
+-        val smallIconDrawable: Drawable = sbn.notification.smallIcon.loadDrawable(context)
++        // TODO: Look into why context is not for the right user. If current user is a secondary
++        //  user, context.userId is still 0, not the id of the current user.
++        val smallIconDrawable: Drawable? = sbn.notification.smallIcon.loadDrawable(context)
+ 
+         // Song name
+         var song: CharSequence? = metadata?.getString(MediaMetadata.METADATA_KEY_DISPLAY_TITLE)
+-- 
+2.30.2
+

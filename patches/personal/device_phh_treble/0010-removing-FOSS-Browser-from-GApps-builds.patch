@@ -1,7 +1,7 @@
-From 32973d37fd3a6db4f4007fe707e9c946f9cfe4be Mon Sep 17 00:00:00 2001
+From 2031d3104d2f3513ca1cf109b761f53a9c0ee9f1 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 02:29:20 -0500
-Subject: [PATCH 10/40] removing FOSS Browser from GApps builds
+Subject: [PATCH 10/42] removing FOSS Browser from GApps builds
 
 ---
  overrides/Android.mk | 2 ++

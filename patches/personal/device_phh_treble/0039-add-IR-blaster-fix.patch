@@ -1,14 +1,14 @@
-From f7c2f10540baddd083a6cbde7b7da3f0e764c0a3 Mon Sep 17 00:00:00 2001
+From 09d9dc6e1743fd6d9c63d3293df9f63e2aa84582 Mon Sep 17 00:00:00 2001
 From: sooti <sooti85@gmail.com>
 Date: Tue, 20 Jul 2021 13:48:26 +0300
-Subject: [PATCH 39/40] add IR blaster fix
+Subject: [PATCH 39/42] add IR blaster fix
 
 ---
  rw-system.sh | 4 ++++
  1 file changed, 4 insertions(+)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index 6e97313..f6489bd 100644
+index 3e8ef52..db04871 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -631,6 +631,10 @@ if [ $(find /vendor/etc/audio -type f |wc -l) -le 3 ];then

@@ -1,7 +1,7 @@
-From 226dcd8f20377f3691b6f4e3f5ce2454eabf0b67 Mon Sep 17 00:00:00 2001
+From 4c2a3f0b4513721104bb4c4b96b5654d74b7016c Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 13 Apr 2021 19:29:04 -0400
-Subject: [PATCH 26/40] rework Z root v3
+Subject: [PATCH 26/42] rework Z root v3
 
 ---
  phh-prop-handler.sh | 8 +++++---

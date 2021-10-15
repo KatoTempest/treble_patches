@@ -1,0 +1,33 @@
+From 4db99b26e503b434a72647384c4ac2a42b35c887 Mon Sep 17 00:00:00 2001
+From: SpiritCroc <spiritcroc@gmail.com>
+Date: Sun, 10 Nov 2019 15:36:15 +0100
+Subject: [PATCH 253/254] Avoid casting network traffic to StatusBarIconView to
+ prevent crash
+
+Signed-off-by: xyyx <xyyx@mail.ru>
+Signed-off-by: DennySPb <dennyspb@gmail.com>
+Change-Id: I46515c1448ca849f3001712559317393ed6cbbb8
+---
+ .../systemui/statusbar/phone/StatusBarIconController.java   | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
+index 2f1d659f9b9..b3267fcdedd 100644
+--- a/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
++++ b/packages/SystemUI/src/com/android/systemui/statusbar/phone/StatusBarIconController.java
+@@ -146,8 +146,10 @@ public interface StatusBarIconController {
+ 
+         @Override
+         public void onSetIcon(int viewIndex, StatusBarIcon icon) {
+-            super.onSetIcon(viewIndex, icon);
+-            mDarkIconDispatcher.applyDark((DarkReceiver) mGroup.getChildAt(viewIndex));
++            View view = mGroup.getChildAt(viewIndex);
++            if (view instanceof StatusBarIconView) {
++                ((StatusBarIconView) view).set(icon);
++            }
+         }
+ 
+         @Override
+-- 
+2.30.2
+

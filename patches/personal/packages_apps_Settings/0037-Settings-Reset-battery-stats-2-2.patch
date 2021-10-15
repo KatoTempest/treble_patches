@@ -1,7 +1,7 @@
-From c6be1a0dfc13d7b5e7742836c360a678718f9d23 Mon Sep 17 00:00:00 2001
+From fa47d2d107f8078995b3622422422170e02627b6 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 25 Nov 2020 07:40:05 -0500
-Subject: [PATCH 37/64] Settings: Reset battery stats [2/2]
+Subject: [PATCH 37/67] Settings: Reset battery stats [2/2]
 
   from
   https://github.com/Evolution-X/packages_apps_Settings/commit/f18cb3c74d94581b32b003eba35434f869bb0918
@@ -15,7 +15,7 @@ Change-Id: Icf9816140f59f206003825c2c81666e39ce031ae
  4 files changed, 33 insertions(+), 1 deletion(-)
 
 diff --git a/AndroidManifest.xml b/AndroidManifest.xml
-index 0b4b75f440..3911f2aaea 100644
+index ab2fe05353..c32309a0a1 100644
 --- a/AndroidManifest.xml
 +++ b/AndroidManifest.xml
 @@ -50,6 +50,7 @@

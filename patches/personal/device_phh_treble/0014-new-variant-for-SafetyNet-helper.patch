@@ -1,7 +1,7 @@
-From a5d26f57020185e0469985694d13808b806a7de8 Mon Sep 17 00:00:00 2001
+From 33beda2530bdbd313349ba33a01a1255a51c280b Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 9 Jan 2021 16:58:01 -0500
-Subject: [PATCH 14/40] new variant for SafetyNet helper
+Subject: [PATCH 14/42] new variant for SafetyNet helper
 
 ---
  base.mk             |  2 +-

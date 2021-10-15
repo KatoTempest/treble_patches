@@ -1,7 +1,7 @@
-From 97e97e58c81fbee7161ed0a9095820b75301a6dd Mon Sep 17 00:00:00 2001
+From 9b070257b58db88dc4e328ca8d47bea0ce9e5ff2 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Aug 2021 09:17:58 +0000
-Subject: [PATCH 64/64] allow to switch back to pre P mobile type icon style
+Subject: [PATCH 64/67] allow to switch back to pre P mobile type icon style
  [2/2]
 
   from
@@ -13,7 +13,7 @@ Subject: [PATCH 64/64] allow to switch back to pre P mobile type icon style
  3 files changed, 12 insertions(+)
 
 diff --git a/res/values-ru/custom_strings.xml b/res/values-ru/custom_strings.xml
-index bed91e9196..abb404b597 100644
+index 9652f8cef7..c3e15c68ed 100644
 --- a/res/values-ru/custom_strings.xml
 +++ b/res/values-ru/custom_strings.xml
 @@ -90,4 +90,7 @@
@@ -22,10 +22,10 @@ index bed91e9196..abb404b597 100644
      <string name="double_tap_sleep_lockscreen_title">Двойное касание экрана блокировки для перехода в сон</string>
 +    <!-- P style network bar -->
 +    <string name="use_old_mobiletype_title">Старый стиль иконок мобильной сети</string>
-+    <string name="use_old_mobiletype_summary">Исользовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
++    <string name="use_old_mobiletype_summary">Использовать pre-P стиль для иконок сигнала\n(Требуется перезагрузка)</string>
  </resources>
 diff --git a/res/values/custom_strings.xml b/res/values/custom_strings.xml
-index 47354061e6..cf2749a758 100644
+index 348c0cfaf4..f3c4ab7417 100644
 --- a/res/values/custom_strings.xml
 +++ b/res/values/custom_strings.xml
 @@ -88,4 +88,7 @@
