@@ -1,7 +1,7 @@
-From cf42ccad2c48c637d2a783e5b3e2be719da33c71 Mon Sep 17 00:00:00 2001
+From 0531061c521b6edbb54eb6b05429f000b7566a10 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 21 Oct 2020 13:58:06 -0400
-Subject: [PATCH 08/38] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
+Subject: [PATCH 08/40] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
 
   from
   https://forum.xda-developers.com/showpost.php?p=83640257&postcount=365
@@ -10,7 +10,7 @@ Subject: [PATCH 08/38] tweaks for Xiaomi Redmi 9 (Prime) 'lancelot'
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/rw-system.sh b/rw-system.sh
-index e6836a4..7cd4d15 100644
+index c3b4c30..89f4cf7 100644
 --- a/rw-system.sh
 +++ b/rw-system.sh
 @@ -378,8 +378,8 @@ if getprop ro.vendor.build.fingerprint | grep -q -i \

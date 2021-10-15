@@ -1,7 +1,7 @@
-From a54cee0e261933d217b99e9470872f5e55418125 Mon Sep 17 00:00:00 2001
+From a57117cd6afa2cbf322252192b9bf575200de295 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Thu, 7 Jan 2021 14:47:40 -0500
-Subject: [PATCH 40/45] Settings: Disable system update preference
+Subject: [PATCH 40/48] Settings: Disable system update preference
 
   from
   https://github.com/nitrogen-project/android_packages_apps_Settings/commit/93aad4cb7756761ad798d5d0f60aa88e51c45a46
@@ -25,5 +25,5 @@ index 4942cdbf55..cd12555c65 100755
      <!-- Whether device_model should be shown or not. -->
      <bool name="config_show_device_model">true</bool>
 -- 
-2.17.1
+2.30.2
 

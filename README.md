@@ -6,11 +6,11 @@ This is GSI project, patches based on the Phh's and Andy Yan works
 apply-patches.sh to apply all patches
 	ex. usage:
 	cd /where/los/sources
-	bash ~/files/patches/los/v312/apply-patches.sh ~/files/patches/los/v312/
+	bash ~/files/patches/los/v313/apply-patches.sh ~/files/patches/los/v313/
 
 buildLir.sh for starting build process from zero
 	ex. usage:
-	cd ~/files/patches/los/v312
+	cd ~/files/patches/los/v313
 	bash buildLir.sh /where/los/sources
 
 Patches separated to the three category:

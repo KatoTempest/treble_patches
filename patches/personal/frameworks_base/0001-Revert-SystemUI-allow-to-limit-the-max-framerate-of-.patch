@@ -1,7 +1,7 @@
-From 1193a7e6248fae0e4adc471fe39f15ecd57aef6d Mon Sep 17 00:00:00 2001
+From b762e7905233a299c41ab3acf6f1dc411c3c095a Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 9 May 2021 06:56:43 -0400
-Subject: [PATCH 001/169] Revert "SystemUI: allow to limit the max framerate of
+Subject: [PATCH 001/190] Revert "SystemUI: allow to limit the max framerate of
  built-in screen recorder"
 
 This reverts commit 2807f50ea5f5263bb23039c42fa0c9dc1d736bf6.

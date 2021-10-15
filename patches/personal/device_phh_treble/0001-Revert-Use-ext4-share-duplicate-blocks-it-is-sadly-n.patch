@@ -1,7 +1,7 @@
-From 7ac423fafc9abc71e365f10cf9f6591de943b726 Mon Sep 17 00:00:00 2001
+From ef9d6f264da1141bbb7bbf55bda9c06c292b651d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 04:20:08 -0500
-Subject: [PATCH 01/38] Revert "Use ext4 share duplicate blocks, it is sadly
+Subject: [PATCH 01/40] Revert "Use ext4 share duplicate blocks, it is sadly
  needed to attain acceptable partition size, because of duplication made by
  apexes"
 

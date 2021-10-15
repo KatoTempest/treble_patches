@@ -1,7 +1,7 @@
-From 6207206ae4e43bd9bca63b0ed357a56e85f017d6 Mon Sep 17 00:00:00 2001
+From 1e0d05649b5c2d14ec9ccd96a6318cad7d109d28 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 21 Feb 2021 04:53:48 -0500
-Subject: [PATCH 44/45] disable above/below dividers v2
+Subject: [PATCH 44/48] disable above/below dividers v2
 
 Change-Id: If709afe7630199adc8eff8288f1d8019e4f2da06
 ---
@@ -325,11 +325,11 @@ index 2426516fe7..64b8cb789c 100644
  
  </PreferenceScreen>
 diff --git a/res/xml/auto_brightness_detail.xml b/res/xml/auto_brightness_detail.xml
-index 6b304efcaf..1ec438baed 100644
+index ae30f4c33b..9083c76e0d 100644
 --- a/res/xml/auto_brightness_detail.xml
 +++ b/res/xml/auto_brightness_detail.xml
-@@ -36,7 +36,7 @@
-         settings:controller="com.android.settings.display.AutoBrightnessDetailPreferenceController"
+@@ -46,7 +46,7 @@
+         settings:controller="com.android.settings.display.AutoBrightnessOneShotPreferenceController"
          settings:useAdminDisabledSummary="true"
          settings:userRestriction="no_config_brightness"
 -        settings:allowDividerAbove="true" />
@@ -1332,5 +1332,5 @@ index 71ef61013b..8a0b59f26f 100644
  
      <PreferenceCategory
 -- 
-2.17.1
+2.30.2
 

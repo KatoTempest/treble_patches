@@ -1,4 +1,4 @@
-From aa775432b7802b560a637bb1d39ccb3bbbd28fb6 Mon Sep 17 00:00:00 2001
+From 0a9bd10311342668e18e718956137cb0c2814093 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Sep 2020 06:46:11 -0400
 Subject: [PATCH 4/5] moar generic
@@ -9,10 +9,10 @@ Change-Id: I95510d74f368a627c6d0b00584a35f36807bb9f0
  1 file changed, 6 deletions(-)
 
 diff --git a/config/common.mk b/config/common.mk
-index 296ee514..8e3b264f 100644
+index 6ee754fd..3f0d9ef2 100644
 --- a/config/common.mk
 +++ b/config/common.mk
-@@ -97,12 +97,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+@@ -100,12 +100,6 @@ PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
  # Disable vendor restrictions
  PRODUCT_RESTRICT_VENDOR_FILES := false
  
@@ -26,5 +26,5 @@ index 296ee514..8e3b264f 100644
  PRODUCT_PACKAGES += \
      Terminal
 -- 
-2.17.1
+2.30.2
 

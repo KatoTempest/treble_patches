@@ -1,7 +1,7 @@
-From 6bde55951f5dfbd59a7c0357d67439f608b18cfb Mon Sep 17 00:00:00 2001
+From 8e7ef6dbe023f38a8a1151c9a9c555ea5a23b023 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:38:02 -0500
-Subject: [PATCH 077/169] base: remove weired qs icon config from
+Subject: [PATCH 077/190] base: remove weired qs icon config from
  IconShapeTaperedRectOverlay
 
   from

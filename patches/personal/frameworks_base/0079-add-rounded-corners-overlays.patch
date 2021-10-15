@@ -1,7 +1,7 @@
-From a62a214dfd036c099c8943cf0e83ccd03e792bce Mon Sep 17 00:00:00 2001
+From 932b181d2b1643f852a4f5a69f36e25152a8114d Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 08:14:02 -0500
-Subject: [PATCH 079/169] add rounded corners overlays
+Subject: [PATCH 079/190] add rounded corners overlays
 
 ---
  .../systemui/theme/ThemeOverlayManager.java   |  8 ++++-

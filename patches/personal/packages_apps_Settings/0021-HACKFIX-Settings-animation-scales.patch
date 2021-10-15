@@ -1,7 +1,7 @@
-From 95ad2dfb7c8e7511d394cdc658e6124c3b0e4343 Mon Sep 17 00:00:00 2001
+From 6b231c64d0a3a96f144e8a68f5d2a2664f3e0fca Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 8 Aug 2020 05:46:22 -0400
-Subject: [PATCH 21/45] HACKFIX: Settings: animation scales
+Subject: [PATCH 21/48] HACKFIX: Settings: animation scales
 
 ---
  res/xml/development_settings.xml                            | 6 +++---
@@ -119,5 +119,5 @@ index 4d8d3e8e72..4c8eba9397 100644
          ReflectionHelpers.setField(mController, "mWindowManager", mWindowManager);
          when(mScreen.findPreference(mController.getPreferenceKey())).thenReturn(mPreference);
 -- 
-2.17.1
+2.30.2
 

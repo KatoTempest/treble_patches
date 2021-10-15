@@ -1,7 +1,7 @@
-From 14eb119091f66077ee557f18668dd214b9f3016b Mon Sep 17 00:00:00 2001
+From 4c492de9813e0d42e75ebccf591b130edc44b458 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Mon, 16 Nov 2020 15:42:45 -0500
-Subject: [PATCH 060/169] Fix list style alert dialog to use system font
+Subject: [PATCH 060/190] Fix list style alert dialog to use system font
 
   from
   https://github.com/ezio84/abc_frameworks_base/commit/6e402fb09e9f134a05edc58e1dff6bc0251c2bf5

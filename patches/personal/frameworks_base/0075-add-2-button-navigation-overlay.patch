@@ -1,7 +1,7 @@
-From 0d3843073f8405f3604207f427531545e4d985af Mon Sep 17 00:00:00 2001
+From be10c374bbd5d7ff2b46ff7f57e3313aaea77feb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 27 Nov 2020 07:09:01 -0500
-Subject: [PATCH 075/169] add 2 button navigation overlay
+Subject: [PATCH 075/190] add 2 button navigation overlay
 
   from
   https://github.com/GrapheneOS/platform_frameworks_base/commit/e6fbb2cbe299cf89e7f9327227ff3742f3c695c8

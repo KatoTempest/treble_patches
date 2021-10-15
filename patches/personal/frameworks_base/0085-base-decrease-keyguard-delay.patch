@@ -1,7 +1,7 @@
-From 301a7da1a1563e0219b7afad0fd8ab9e5b06e69f Mon Sep 17 00:00:00 2001
+From 4bde2d7c2be05b0e75f9db317de17f67a4fc3f44 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Wed, 16 Dec 2020 15:04:34 -0500
-Subject: [PATCH 085/169] base: decrease keyguard delay
+Subject: [PATCH 085/190] base: decrease keyguard delay
 
   from https://github.com/syberia-project/platform_frameworks_base/commit/10e03595552854e04c4b37c232a9c0cd42231355
 ---

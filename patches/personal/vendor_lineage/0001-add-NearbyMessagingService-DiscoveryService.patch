@@ -1,4 +1,4 @@
-From 99033051bde443180b99744fef6d76375881e43b Mon Sep 17 00:00:00 2001
+From ceb8fa2813a16ed3496c5583b583e585cada82d4 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 25 Jul 2020 10:59:33 -0400
 Subject: [PATCH 1/5] add NearbyMessagingService & DiscoveryService
@@ -13,10 +13,10 @@ Change-Id: Idf0200a0b9ef2199b85e02bf0d2a5ccd2a081dc3
  1 file changed, 2 insertions(+)
 
 diff --git a/overlay/common/frameworks/base/core/res/res/values/config.xml b/overlay/common/frameworks/base/core/res/res/values/config.xml
-index 4f584480..44b8ea78 100644
+index 85e6badd..2aa95551 100644
 --- a/overlay/common/frameworks/base/core/res/res/values/config.xml
 +++ b/overlay/common/frameworks/base/core/res/res/values/config.xml
-@@ -33,6 +33,8 @@
+@@ -52,6 +52,8 @@
          <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateActivity</item>
          <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateGcmTaskService</item>
          <item>com.google.android.gms/com.google.android.gms.update.SystemUpdateService</item>
@@ -24,7 +24,7 @@ index 4f584480..44b8ea78 100644
 +        <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
      </string-array>
  
-     <string name="config_mms_user_agent">LineageOS</string>
+     <!-- Enable lockscreen rotation by default -->
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From bb7ad085d455103acc0ec529244d69f7eaadcce2 Mon Sep 17 00:00:00 2001
+From 86d524084add61d197559dcf94ed462ee77e2bb9 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 15 Mar 2020 09:53:26 +0200
-Subject: [PATCH 019/169] Lineage have own black accent
+Subject: [PATCH 019/190] Lineage have own black accent
 
 	modified:   packages/overlays/Android.mk
 

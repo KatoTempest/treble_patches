@@ -1,7 +1,7 @@
-From bdc19f13bbc6400c24fd1ad72e02002b5decf895 Mon Sep 17 00:00:00 2001
+From 7711944a737dedac016d1609ad7836e60fcc4feb Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:55:28 -0500
-Subject: [PATCH 33/45] Developer opts: set default notification channel
+Subject: [PATCH 33/48] Developer opts: set default notification channel
  warnings
 
   from
@@ -26,5 +26,5 @@ index 104fcde17d..19fa0aab03 100644
                  Settings.Global.SHOW_NOTIFICATION_CHANNEL_WARNINGS, defaultWarningEnabled);
          ((SwitchPreference) mPreference).setChecked(mode != SETTING_VALUE_OFF);
 -- 
-2.17.1
+2.30.2
 

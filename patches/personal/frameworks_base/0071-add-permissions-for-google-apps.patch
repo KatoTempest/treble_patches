@@ -1,7 +1,7 @@
-From 38e1ecee1314c4fd9dad86f13234704813728c8b Mon Sep 17 00:00:00 2001
+From e7a50eded317ce5a38e8b6a9e91c58121ee59124 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 17 Nov 2020 07:53:13 -0500
-Subject: [PATCH 071/169] add permissions for google apps
+Subject: [PATCH 071/190] add permissions for google apps
 
   based on file
   https://github.com/Corvus-ROM/android_frameworks_base/commit/6e69477ae7efc840b11783cc6a388103f6b73e99#diff-433b438dd16415e35ca034bb5ee9dce76917f1af97a3161f5e505bd3c99ac2c0R870

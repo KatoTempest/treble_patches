@@ -1,7 +1,7 @@
-From b9b801edadd7b2866f50f766cb9ec076437e4dc2 Mon Sep 17 00:00:00 2001
+From 037939b8ec51eb457db6db0041ffdcf077498925 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 12 Apr 2020 02:45:14 +0300
-Subject: [PATCH 17/45] add QS panel alpha tuning
+Subject: [PATCH 17/48] add QS panel alpha tuning
 
 Change-Id: Ia15d716451e7640bbd0370318b6c8f22413f75b0
 ---
@@ -73,5 +73,5 @@ index 2577567201..3886a983e1 100644
                  "android.theme.customization.qspanel"));
          return controllers;
 -- 
-2.17.1
+2.30.2
 

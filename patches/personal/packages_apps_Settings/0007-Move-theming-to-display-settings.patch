@@ -1,7 +1,7 @@
-From d566d6b627842441de0469573e0edb93d117c72f Mon Sep 17 00:00:00 2001
+From fd49d45ead0c8b4667de095a68704cd7bb1cdcc7 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Tue, 4 Feb 2020 11:09:32 +0200
-Subject: [PATCH 07/45] Move theming to display settings
+Subject: [PATCH 07/48] Move theming to display settings
 
   * from
   https://github.com/syberia-project/platform_packages_apps_Settings/commit/9356e92c7998684e1139bc7c8411bf39120125c4
@@ -14,7 +14,7 @@ Change-Id: If9486aa9ff7c72c368f75d83241ecc23a10e6586
  3 files changed, 31 insertions(+)
 
 diff --git a/res/values/strings.xml b/res/values/strings.xml
-index 282d58a678..f5cb494ff1 100644
+index bac479d99d..8d6fe5a3a0 100644
 --- a/res/values/strings.xml
 +++ b/res/values/strings.xml
 @@ -10656,6 +10656,14 @@
@@ -83,5 +83,5 @@ index 20a33f0a3f..a086f35742 100644
      }
  
 -- 
-2.17.1
+2.30.2
 

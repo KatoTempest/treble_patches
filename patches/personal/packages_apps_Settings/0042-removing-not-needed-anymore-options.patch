@@ -1,7 +1,7 @@
-From bba52fa9d6ddee2e080fd4d3417007002928bdc7 Mon Sep 17 00:00:00 2001
+From 062797675fa702b6473079c5a88fa33d8cdc0db3 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Fri, 25 Dec 2020 16:14:09 -0500
-Subject: [PATCH 42/45] removing not needed anymore options
+Subject: [PATCH 42/48] removing not needed anymore options
 
 Change-Id: I09a893abf8f72b75ae4bca3bb9583cabf906ecf4
 ---
@@ -52,5 +52,5 @@ index e89e2059da..691b095a65 100644
                  "android.theme.customization.darkui"));
          controllers.add(new OverlayCategoryPreferenceController(context,
 -- 
-2.17.1
+2.30.2
 

@@ -1,7 +1,7 @@
-From 4229b6709a27ca9f7c28235b5be12844eb8c8cb0 Mon Sep 17 00:00:00 2001
+From 8a9d0a4ef94ea06db1768f6ec26b2002e87d7611 Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sat, 25 Apr 2020 08:31:13 +0300
-Subject: [PATCH 031/169] qspanel: don't show the annoying build number
+Subject: [PATCH 031/190] qspanel: don't show the annoying build number
 
   * from
   https://github.com/ezio84/abc_frameworks_base/commit/0dfad8ec4dfe95b7cf81d64f3ede201d2d3d258c

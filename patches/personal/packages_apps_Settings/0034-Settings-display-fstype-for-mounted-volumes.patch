@@ -1,7 +1,7 @@
-From 512d63729d4495ef10b79572f699158e3b5e7524 Mon Sep 17 00:00:00 2001
+From 389e17eb98d1179259aa49dec701875b22a0e97f Mon Sep 17 00:00:00 2001
 From: Victor Bo <bvoid@yandex.ru>
 Date: Sun, 13 Dec 2020 07:56:43 -0500
-Subject: [PATCH 34/45] Settings: display fstype for mounted volumes
+Subject: [PATCH 34/48] Settings: display fstype for mounted volumes
 
   from
   https://github.com/omnirom/android_packages_apps_Settings/commit/fbd49f386dab103f133df3814d0d9db66ee01c08
@@ -34,5 +34,5 @@ index 6294ab90a1..cff5b2419f 100644
          Drawable icon;
          if (VolumeInfo.ID_PRIVATE_INTERNAL.equals(volume.getId())) {
 -- 
-2.17.1
+2.30.2
 
